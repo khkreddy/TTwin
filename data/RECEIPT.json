@@ -1,0 +1,32 @@
+{
+  "schema": "ttwin.ncert.chem.showcase.v1",
+  "built_utc": "2026-09-01T09:24:18Z",
+  "subject": "chemistry",
+  "board_home": "NCERT comprehensive map + Cambridge-tagged question bank",
+  "n_nodes": 21,
+  "n_hinges": 523,
+  "n_enrichment": 543,
+  "n_questions": 8475,
+  "n_complete_exam": 8027,
+  "n_stems": 8027,
+  "sources": {
+    "comprehensive_map": "reports/paper/data/NCERT_CHEMISTRY_MAP_COMPREHENSIVE.json",
+    "comprehensive_sha256": "10a7aa682c669abc34a2e4ed529d98e82d3f30dd4e32a7f707e14636db89d74e",
+    "public_map_sha256": "c6a6231f2523d8bb973ade9daba5a144020a359387a7d6dbbf68da1231c41f14",
+    "nav_items": "data/awm_product/generated/nav_mcq/items.jsonl",
+    "nav_sha256": "d22e10ea6379649944fafd1e102128671bd7623eca0f8a7bdaa170aab54b5bc8",
+    "enrichment": "reports/paper/data/supplement_ncert_hinges.jsonl",
+    "projection": "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json",
+    "exam_pack_sha256": "39646d1c79478bacf4cac6806ac5db8012f2717f30ee351429a5189b7bffc2b9"
+  },
+  "honesty": "Questions keep Cambridge syllabus coordinates (cam:9701:5 / AS_A:9701.x.y). NCERT join is node × grade_band via the projection table, not a rewrite of tags. Mx and enrichment are teacher-facing; they are not printed on the learner paper. ISO-GEN on this site authors CANDIDATE items from hinge packs; it does not rewrite frozen L20. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
+  "kimi": {
+    "model": "kimi-k3",
+    "endpoint": "https://api.moonshot.ai/v1/chat/completions",
+    "roles": [
+      "prompt_selector",
+      "isogen_author",
+      "lesson_prose"
+    ]
+  }
+}
