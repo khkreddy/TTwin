@@ -17,7 +17,7 @@
 
   async function chat(messages, extra) {
     const key = getKey();
-    if (!key) throw new Error("No Kimi API key. Open Settings and paste a Moonshot key. The key stays in this browser.");
+    if (!key) throw new Error("No AI API key. Open Settings and paste a key. It stays in this browser.");
     const url = endpoint();
     const body = Object.assign({
       model: MODEL,
@@ -31,11 +31,11 @@
     const txt = await r.text();
     let data;
     try { data = JSON.parse(txt); } catch (e) {
-      throw new Error("Kimi response was not JSON (" + r.status + "). If this is GitHub Pages, set a local proxy in Settings (python3 tools/serve.py).");
+      throw new Error("AI response was not JSON (" + r.status + "). If this is GitHub Pages, set a local proxy in Settings (python3 tools/serve.py).");
     }
     if (!r.ok) throw new Error((data.error && (data.error.message || data.error)) || txt.slice(0, 240));
     const content = (((data.choices || [])[0] || {}).message || {}).content || "";
-    if (!String(content).trim()) throw new Error("Empty Kimi response.");
+    if (!String(content).trim()) throw new Error("Empty AI response.");
     return content;
   }
 
@@ -45,7 +45,7 @@
     const raw = fence ? fence[1] : t;
     const start = raw.indexOf("{");
     const end = raw.lastIndexOf("}");
-    if (start < 0 || end <= start) throw new Error("Kimi did not return JSON.");
+    if (start < 0 || end <= start) throw new Error("AI did not return JSON.");
     return JSON.parse(raw.slice(start, end + 1));
   }
 

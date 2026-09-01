@@ -97,19 +97,18 @@
       "<p class='kicker'>TeacherTwin · NCERT chemistry</p>" +
       "<h1>One hinge is enough to assemble the packet.</h1>" +
       "<p class='sub'>Map, enrichment, and the tagged question bank are separate homes. " +
-      "A teacher request becomes a selector. Retrieve is deterministic. Kimi K3 infers fuzzy prompts and authors ISO-GEN candidates from hinge packs — never from the 46&nbsp;MB map.</p>";
+      "A teacher request becomes a selector. Retrieve is deterministic. AI infers fuzzy prompts and authors ISO-GEN candidates from hinge packs — never from the 46&nbsp;MB map.</p>";
     $("app").innerHTML = statsBar() +
       "<div class='claim'>" + esc(m.honesty || "") + "</div>" +
       "<div class='grid'>" +
-      card("#browse", "Browse", "Pack → node → Cambridge chapter → subtopic. The hard-earned cam:9701:5 tags stay.") +
+      card("#browse", "Browse", "Pack → node → chapter → subtopic. The hard-earned cam:9701:5 tags stay.") +
       card("#prompt", "Prompt retrieve", "“Chemical energetics at senior level” → selector → questions + hinge packs.") +
-      card("#lesson", "Lesson planner", "Teacher digest from the enrichment layer, optional Kimi prose.") +
+      card("#lesson", "Lesson planner", "Teacher digest from the enrichment layer, optional AI prose.") +
       card("#paper", "Test maker", "Set N, seed, and a selector. Same inputs, same paper.") +
       card("#isogen", "ISO-GEN", "New MCQ from a hinge pack. CANDIDATE. Frozen L20 is not rewritten.") +
       card("#map", "Map explorer", "523 NCERT hinges, mx, mastery, LoK, gaming pockets.") +
       "</div>" +
-      "<p class='muted'>Kimi model " + esc((m.kimi && m.kimi.model) || "kimi-k3") +
-      ". API key is entered under Settings and never committed.</p>";
+      "<p class='muted'>AI is optional (Settings). Browse, retrieve, and papers work without it.</p>";
   }
 
   function card(href, title, body) {
@@ -125,7 +124,7 @@
       "</select></div>" +
       "<div><label>Big idea (map node)</label><select id='" + prefix + "-node'><option value=''>any</option>" +
       nodeOptions() + "</select></div>" +
-      "<div><label>Cambridge chapter</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
+      "<div><label>Chapter</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
       "<div><label>Subtopic</label><select id='" + prefix + "-sub'><option value=''>any</option></select></div>" +
       "</div></div>";
   }
@@ -224,11 +223,11 @@
   function renderPrompt() {
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Prompt retrieve</p><h1>Teacher language → packets</h1>" +
-      "<p class='sub'>Aliases compile without a model (“chemical energetics at senior level”). Fuzzy prompts use Kimi K3 to emit a selector JSON. Retrieve itself never calls a provider.</p>" +
+      "<p class='sub'>Aliases compile without a model (“chemical energetics at senior level”). Fuzzy prompts can use AI to emit a selector JSON. Retrieve itself never calls a provider.</p>" +
       "<div class='card'><label>Teacher prompt</label>" +
       "<textarea id='pr-text'>chemical energetics at senior level</textarea>" +
       "<p style='margin-top:10px'><button id='pr-go' type='button'>Retrieve</button> " +
-      "<button class='sec' id='pr-kimi' type='button'>Infer selector with Kimi</button></p>" +
+      "<button class='sec' id='pr-kimi' type='button'>Infer selector with AI</button></p>" +
       "<pre class='dump' id='pr-sel'></pre></div><div id='pr-out'></div>";
     function show(sel, via) {
       $("pr-sel").textContent = (via ? via + "\n" : "") + JSON.stringify(sel, null, 2);
@@ -261,7 +260,7 @@
       try {
         const sel = await TTwinKimi.inferSelector($("pr-text").value, S.nodes.map((n) => ({ id: "chem:" + n.id })));
         if (sel.error) throw new Error(sel.ask || sel.error);
-        show(sel, "Kimi K3 selector");
+        show(sel, "AI selector");
       } catch (e) {
         $("pr-out").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
       }
@@ -301,10 +300,10 @@
     $("hero").classList.add("hidden");
     const preset = (S.carry && S.carry.sel) || TTwinRag.parsePromptDeterministic("chemical energetics at senior level", S.projection);
     $("app").innerHTML = "<p class='kicker'>Lesson planner</p><h1>Digest from the enrichment layer</h1>" +
-      "<p class='sub'>Planning types first (caution, misconception, difficulty, sequencing). Citations from ChemEd X documents. Kimi may write prose from this view; it must not invent URLs.</p>" +
+      "<p class='sub'>Planning types first (caution, misconception, difficulty, sequencing). Citations from ChemEd X documents. AI may write prose from this view; it must not invent URLs.</p>" +
       filtersHTML("ls") +
       "<p><button id='ls-go' type='button'>Build digest</button> " +
-      "<button class='sec' id='ls-kimi' type='button'>Kimi prose</button></p>" +
+      "<button class='sec' id='ls-kimi' type='button'>AI prose</button></p>" +
       "<div id='ls-out'></div>";
     if (preset.pack) $("ls-pack").value = preset.pack;
     if (preset.nodes && preset.nodes[0]) $("ls-node").value = preset.nodes[0];
@@ -332,7 +331,7 @@
       $("ls-kimi").disabled = true;
       try {
         const prose = await TTwinKimi.lessonProse(S.lastDigest);
-        $("ls-prose").innerHTML = "<div class='card'><h2>Kimi lesson prose</h2><p>" +
+        $("ls-prose").innerHTML = "<div class='card'><h2>AI lesson prose</h2><p>" +
           esc(prose).replace(/\n\n/g, "</p><p>").replace(/\n/g, "<br>") + "</p></div>";
       } catch (e) {
         $("ls-prose").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
@@ -383,6 +382,7 @@
         subtitle: (sel.nodes || []).join(" ") + " · " + (sel.pack || ""),
         seed,
       }, items);
+      TTwinPaper.mount($("tm-out"));
     };
   }
 
@@ -395,11 +395,11 @@
   function renderIsogen() {
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>ISO-GEN</p><h1>Author from a hinge pack</h1>" +
-      "<p class='sub'>The frozen Lamport-20 engine is not rewritten. This tray authors a CANDIDATE item from <code>hinge_pack(unit_id)</code> using Kimi K3. Specification exists before the stem. Nothing enters the live exam pool.</p>" +
+      "<p class='sub'>The frozen Lamport-20 engine is not rewritten. This tray authors a CANDIDATE item from <code>hinge_pack(unit_id)</code> using AI. Specification exists before the stem. Nothing enters the live exam pool.</p>" +
       "<div class='card'><label>Teacher prompt or hinge id</label>" +
       "<textarea id='iso-text'>science/grade_11/chem_ch_105/H009</textarea>" +
       "<p><button id='iso-pack' type='button'>Load hinge pack</button> " +
-      "<button class='sec' id='iso-go' type='button'>Author with Kimi</button></p></div>" +
+      "<button class='sec' id='iso-go' type='button'>Author with AI</button></p></div>" +
       "<div id='iso-out'></div>";
     $("iso-pack").onclick = () => {
       const text = $("iso-text").value.trim();
@@ -445,6 +445,7 @@
         $("iso-item").innerHTML = "<div class='notice'>CANDIDATE · serve_eligible=false · spec " + specHash.slice(0, 12) + "…</div>" +
           TTwinPaper.itemHTML({ uid: "isogen:" + specHash.slice(0, 8), stem: item.stem, options: item.options }, 0) +
           "<p class='muted'>Correct " + esc(item.correct) + " · " + esc(item.rationale || "") + "</p>";
+        TTwinPaper.mount($("iso-item"));
       } catch (e) {
         $("iso-item").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
       }
@@ -485,11 +486,11 @@
 
   function renderSettings() {
     $("hero").classList.add("hidden");
-    $("app").innerHTML = "<p class='kicker'>Settings</p><h1>Kimi K3</h1>" +
-      "<div class='card'><p>Model <code>" + esc(TTwinKimi.MODEL) + "</code>. The key is stored in <code>localStorage</code> on this machine only.</p>" +
-      "<label>Moonshot API key</label><input id='st-key' type='password' placeholder='sk-…' value='" + esc(TTwinKimi.getKey()) + "'>" +
+    $("app").innerHTML = "<p class='kicker'>Settings</p><h1>AI</h1>" +
+      "<div class='card'><p>The key is stored in <code>localStorage</code> on this machine only. Browse and papers work without it.</p>" +
+      "<label>AI API key</label><input id='st-key' type='password' placeholder='sk-…' value='" + esc(TTwinKimi.getKey()) + "'>" +
       "<label>Proxy URL (optional)</label><input id='st-proxy' placeholder='leave blank for direct API, or /kimi on local serve.py' value='" + esc(TTwinKimi.getProxy()) + "'>" +
-      "<p class='muted'>GitHub Pages cannot keep a secret. For ISO-GEN on github.io either paste a key (may fail CORS) or run <code>python3 tools/serve.py</code> and set proxy to that origin + <code>/kimi</code>.</p>" +
+      "<p class='muted'>GitHub Pages cannot keep a secret. For AI features on github.io paste a key (CORS may block) or run <code>python3 tools/serve.py</code> and set the proxy to that origin + <code>/kimi</code>.</p>" +
       "<p><button id='st-save' type='button'>Save</button> <button class='sec' id='st-clear' type='button'>Clear key</button></p>" +
       "<p class='muted' id='st-ep'></p></div>";
     $("st-ep").textContent = "Active endpoint: " + TTwinKimi.endpoint();

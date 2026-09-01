@@ -140,6 +140,23 @@ def load_docs() -> dict:
     return raw if isinstance(raw, dict) else {}
 
 
+def extract_tikz(o: dict) -> tuple[str | None, list[str]]:
+    """Return (tikz source, extra TeX packages). Never copy SMILES."""
+    fig = o.get("figure") if isinstance(o.get("figure"), dict) else {}
+    enc = o.get("encoding") if isinstance(o.get("encoding"), dict) else {}
+    tj = fig.get("tikz") if isinstance(fig.get("tikz"), dict) else None
+    if not (tj and tj.get("code")):
+        tj = enc.get("tikz") if isinstance(enc.get("tikz"), dict) else None
+    if not (tj and isinstance(tj.get("code"), str) and tj["code"].strip()):
+        return None, []
+    pkgs = []
+    for raw in tj.get("preamble_packages") or []:
+        name = str(raw).split("[", 1)[0].strip()
+        if name and name not in {"tikz", "amsmath", "amssymb"} and name not in pkgs:
+            pkgs.append(name)
+    return tj["code"], pkgs
+
+
 def load_exam_index(uids: set[str]) -> dict:
     found = {}
     paths = [EXAM]
@@ -168,18 +185,25 @@ def load_exam_index(uids: set[str]) -> dict:
                         stmts.append({"n": s.get("n"), "text": s.get("text")})
                     elif s:
                         stmts.append({"text": str(s)})
-                found[uid] = {
+                tikz, tikz_packages = extract_tikz(o)
+                rec = {
                     "stem": o.get("complete_stem") or o.get("stem_lead") or "",
                     "stem_lead": o.get("stem_lead") or "",
                     "item_type": o.get("item_type"),
                     "options": options,
                     "statements": stmts,
                     "has_figure": bool(o.get("has_drawn_figure") or o.get("options_are_figure")),
+                    "options_are_figure": bool(o.get("options_are_figure")),
                     "equations": [
                         (e.get("text") if isinstance(e, dict) else e)
                         for e in (o.get("equations") or [])[:4]
                     ],
                 }
+                if tikz:
+                    rec["tikz"] = tikz
+                    if tikz_packages:
+                        rec["tikz_packages"] = tikz_packages
+                found[uid] = rec
                 if len(found) == len(uids):
                     return found
     return found
