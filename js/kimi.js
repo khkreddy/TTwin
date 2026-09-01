@@ -107,12 +107,28 @@ Laws:
     return extractJson(content);
   }
 
-  const LESSON_SYS = `You are Kimi-k3 writing a teacher lesson digest.
-You receive a deterministic enrichment view (citations included).
-Write 350-500 words for a teacher about to teach this topic.
-Use only the supplied evidence. If a URL is null, do not invent a DOI.
-Label CANDIDATE misconceptions as unverified.
-Return plain prose, not JSON.`;
+  const LESSON_SYS = `You write a teacher briefing in the manner of William Zinsser (On Writing Well).
+Short sentences. Concrete verbs. No clutter, no throat-clearing, no jargon for its own sake.
+The reader is a chemistry teacher with twenty minutes before class.
+Return plain prose, not JSON.
+
+You receive three packs. Use all of them that are present:
+1. map — NCERT hinges (decision, mechanism, CANDIDATE mx).
+2. enrichment — classroom evidence with citations.
+3. teacher_overlay — this teacher's own journal notes already mapped to those hinges.
+
+Order:
+1. What the student must decide (the hinge). One short paragraph.
+2. Where they usually go wrong. Only from supplied mx. Mark CANDIDATE as unverified.
+3. What to do in class today. Three to six numbered actions.
+4. What to leave out.
+
+Rules:
+- Use only the supplied packs. Do not invent facts, hinges, or citations.
+- If a citation URL is null, do not invent a DOI or link.
+- Weave overlay notes in as the teacher's prior, not as published evidence.
+- Do not name models, file paths, or internal ids except hinge unit_id if it helps the teacher find the topic.
+- 350–500 words.`;
 
   async function lessonProse(digest) {
     return chat([
@@ -121,8 +137,29 @@ Return plain prose, not JSON.`;
     ]);
   }
 
+  const JOURNAL_SYS = `You map a teacher's note onto NCERT chemistry hinges.
+Return ONLY JSON:
+{"bindings":[{"unit_id":"science/grade_11/chem_ch_105/H009","node":"C6","why":"one short clause"}]}
+Rules:
+- unit_id must be copied from the supplied hinge list.
+- 1 to 4 bindings. If none fit: {"bindings":[],"ask":"what topic or chapter?"}.
+- Do not invent hinges. Do not dump mx or write a lesson.`;
+
+  async function mapJournalNote(text, hinges) {
+    const catalog = (hinges || []).slice(0, 523).map((h) => ({
+      unit_id: h.unit_id,
+      node: h.node,
+      hinge: h.decision_hinge,
+    }));
+    const content = await chat([
+      { role: "system", content: JOURNAL_SYS },
+      { role: "user", content: JSON.stringify({ note: text, hinges: catalog }) },
+    ]);
+    return extractJson(content);
+  }
+
   g.TTwinKimi = {
     getKey, setKey, getProxy, setProxy, endpoint, chat,
-    inferSelector, authorItem, lessonProse, extractJson, MODEL,
+    inferSelector, authorItem, lessonProse, mapJournalNote, extractJson, MODEL,
   };
 })(window);

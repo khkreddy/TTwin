@@ -10,10 +10,12 @@
     ["prompt", "Prompt"],
     ["lesson", "Lesson"],
     ["paper", "Test maker"],
+    ["journal", "Journal"],
     ["isogen", "ISO-GEN"],
     ["map", "Map"],
     ["settings", "Settings"],
   ];
+  const JOURNAL_KEY = "ttwin.journal.v1";
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return TTwinPaper.esc(s); }
@@ -103,8 +105,9 @@
       "<div class='grid'>" +
       card("#browse", "Browse", "Pack → node → chapter → subtopic. Questions render as exam items with figures.") +
       card("#prompt", "Prompt retrieve", "“Chemical energetics at senior level” → selector → questions + hinge packs.") +
-      card("#lesson", "Lesson planner", "Teacher digest from the enrichment layer, optional AI prose.") +
+      card("#lesson", "Lesson planner", "Map + enrichment + your journal notes. AI prose in Zinsser style.") +
       card("#paper", "Test maker", "Set N, seed, and a selector. Same inputs, same paper.") +
+      card("#journal", "Journal", "Notes and links, mapped onto hinges. They reappear on the matching lesson.") +
       card("#isogen", "ISO-GEN", "New MCQ from a hinge pack. CANDIDATE. Frozen L20 is not rewritten.") +
       card("#map", "Map explorer", "523 NCERT hinges, mx, mastery, LoK, gaming pockets.") +
       "</div>" +
@@ -255,6 +258,38 @@
     $("pr-go").click();
   }
 
+  function loadJournal() {
+    try { return JSON.parse(localStorage.getItem(JOURNAL_KEY) || "[]"); }
+    catch (e) { return []; }
+  }
+  function saveJournal(rows) {
+    localStorage.setItem(JOURNAL_KEY, JSON.stringify(rows));
+  }
+  function mapPackFor(r) {
+    const ids = ((r && r.hinge_unit_ids) || []).filter((u) => String(u).indexOf("science/") === 0).slice(0, 8);
+    return ids.map((id) => {
+      const h = S.hinges.find((x) => x.unit_id === id);
+      if (!h) return { unit_id: id };
+      return {
+        unit_id: h.unit_id,
+        node: h.node,
+        chapter: h.chapter_title || h.chapter,
+        decision_hinge: h.decision_hinge,
+        mechanism: h.mechanism,
+        mx: (h.mx || []).slice(0, 4).map((m) => ({ type: m.type, cwo: m.cwo, status: m.status })),
+        pedagogy: h.pedagogy
+          ? { mastery_signal: h.pedagogy.mastery_signal, lok_folk: h.pedagogy.lok_folk }
+          : null,
+      };
+    });
+  }
+  function overlayFor(sel, r) {
+    const units = new Set((r && r.hinge_unit_ids) || []);
+    const nodes = (sel.nodes || []).map((n) => String(n).replace(/^chem:/, ""));
+    return loadJournal().filter((note) => (note.bindings || []).some((b) =>
+      units.has(b.unit_id) || nodes.indexOf(String(b.node || "").replace(/^chem:/, "")) >= 0
+    ));
+  }
   function digestFromSelector(sel, r) {
     const unitIds = (r && r.hinge_unit_ids) || [];
     const nodes = sel.nodes || [];
@@ -265,10 +300,31 @@
     });
     const rank = { teaching_caution: 0, misconception: 1, student_difficulty: 2, sequencing_insight: 3 };
     rows.sort((a, b) => (rank[a.type] ?? 9) - (rank[b.type] ?? 9) || String(a.item_id).localeCompare(b.item_id));
-    rows = rows.slice(0, 12);
+    rows = rows.slice(0, 8);
+    const overlay = overlayFor(sel, r).slice(0, 8);
     return {
       schema: "awm.teacher_digest.v1",
       selector: sel,
+      map: mapPackFor(r),
+      enrichment: {
+        n_returned: rows.length,
+        rows: rows.map((e) => ({
+          item_id: e.item_id,
+          evidence_type: e.type,
+          statement: e.statement,
+          classroom_readiness: e.readiness,
+          attested: e.attested,
+          citation: e.citation,
+          node: e.node,
+        })),
+      },
+      teacher_overlay: overlay.map((n) => ({
+        id: n.id,
+        text: n.text,
+        url: n.url,
+        bindings: n.bindings,
+        utc: n.utc,
+      })),
       n_returned: rows.length,
       rows: rows.map((e) => ({
         item_id: e.item_id,
@@ -285,8 +341,8 @@
   function renderLesson() {
     $("hero").classList.add("hidden");
     const preset = (S.carry && S.carry.sel) || TTwinRag.parsePromptDeterministic("chemical energetics at senior level", S.projection);
-    $("app").innerHTML = "<p class='kicker'>Lesson planner</p><h1>Digest from the enrichment layer</h1>" +
-      "<p class='sub'>Planning types first (caution, misconception, difficulty, sequencing). Citations from ChemEd X documents. AI may write prose from this view; it must not invent URLs.</p>" +
+    $("app").innerHTML = "<p class='kicker'>Lesson planner</p><h1>Digest from map, enrichment, and your notes</h1>" +
+      "<p class='sub'>AI prose is Zinsser-style and sees the hinge pack, enrichment, and journal overlay for this selection. Citations stay as given; null URLs stay null.</p>" +
       filtersHTML("ls") +
       "<p><button id='ls-go' type='button'>Build digest</button> " +
       "<button class='sec' id='ls-kimi' type='button'>AI prose</button></p>" +
@@ -298,8 +354,26 @@
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const d = digestFromSelector(sel, r);
       S.lastDigest = d;
-      $("ls-out").innerHTML = "<div class='card'><h2>Deterministic digest</h2>" +
-        "<p class='muted'>" + d.n_returned + " enrichment rows · node " + esc((sel.nodes || []).join(", ")) + "</p>" +
+      const overlay = d.teacher_overlay || [];
+      const mapRows = d.map || [];
+      $("ls-out").innerHTML =
+        "<p class='muted'>AI pack: " + mapRows.length + " map hinges · " +
+        (d.n_returned || 0) + " enrichment · " + overlay.length + " journal notes</p>" +
+        (overlay.length
+          ? "<div class='card'><h2>Your overlay</h2>" + overlay.map((n) =>
+            "<div class='q'><p>" + esc(n.text) + "</p>" +
+            (n.url ? "<p class='muted'><a href='" + esc(n.url) + "' target='_blank' rel='noopener'>" + esc(n.url) + "</a></p>" : "") +
+            "<p class='muted'>" + (n.bindings || []).map((b) => esc(b.unit_id)).join(" · ") + "</p></div>"
+          ).join("") + "</div>"
+          : "") +
+        "<div class='card'><h2>Map hinges</h2>" +
+        (mapRows.length
+          ? mapRows.map((h) => "<div class='q'><div class='uid'>" + esc(h.unit_id) + "</div><p>" +
+            esc(h.decision_hinge || "") + "</p></div>").join("")
+          : "<p class='muted'>No NCERT hinges in this selector cap.</p>") +
+        "</div>" +
+        "<div class='card'><h2>Enrichment</h2>" +
+        "<p class='muted'>" + (d.n_returned || 0) + " rows · node " + esc((sel.nodes || []).join(", ")) + "</p>" +
         d.rows.map((row) => "<div class='q'><span class='tag'>" + esc(row.evidence_type || "") + "</span>" +
           (row.attested ? "<span class='tag'>attested</span>" : "") +
           "<p>" + esc(row.statement || "") + "</p>" +
@@ -378,6 +452,63 @@
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode(str)).then((buf) =>
       Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("")
     );
+  }
+
+  function renderJournal() {
+    $("hero").classList.add("hidden");
+    function paint() {
+      const rows = loadJournal();
+      $("jn-list").innerHTML = rows.length ? rows.map((n) =>
+        "<div class='card' style='margin:10px 0'><p>" + esc(n.text) + "</p>" +
+        (n.url ? "<p class='muted'><a href='" + esc(n.url) + "' target='_blank' rel='noopener'>" + esc(n.url) + "</a></p>" : "") +
+        "<p class='muted'>" + ((n.bindings || []).length
+          ? (n.bindings || []).map((b) => esc(b.unit_id) + (b.why ? " — " + esc(b.why) : "")).join("<br>")
+          : "Not yet mapped to a hinge") + "</p>" +
+        "<p><button class='sec' data-del='" + esc(n.id) + "' type='button'>Delete</button></p></div>"
+      ).join("") : "<p class='muted'>No notes yet.</p>";
+      $("jn-list").querySelectorAll("[data-del]").forEach((btn) => {
+        btn.onclick = () => {
+          saveJournal(loadJournal().filter((n) => n.id !== btn.getAttribute("data-del")));
+          paint();
+        };
+      });
+    }
+    $("app").innerHTML = "<p class='kicker'>Journal</p><h1>Teacher overlay</h1>" +
+      "<p class='sub'>Write a comment or paste a link. AI maps the note onto NCERT hinges. Those notes then appear on the Lesson tab for that hinge, and they go into the AI briefing pack.</p>" +
+      "<div class='card'><label>Note</label><textarea id='jn-text' placeholder='Students keep mixing ΔH with activation energy on pathway diagrams.'></textarea>" +
+      "<label>Link (optional)</label><input id='jn-url' placeholder='https://…'>" +
+      "<p style='margin-top:10px'><button id='jn-save' type='button'>Save and map with AI</button> " +
+      "<button class='sec' id='jn-plain' type='button'>Save without mapping</button></p></div>" +
+      "<div id='jn-list'></div>";
+    paint();
+    async function add(mapIt) {
+      const text = ($("jn-text").value || "").trim();
+      if (!text) return;
+      const url = ($("jn-url").value || "").trim();
+      const note = {
+        id: "jn-" + Date.now(),
+        text, url: url || null,
+        utc: new Date().toISOString(),
+        bindings: [],
+      };
+      if (mapIt) {
+        $("jn-save").disabled = true;
+        try {
+          const mapped = await TTwinKimi.mapJournalNote(text, S.hinges);
+          note.bindings = mapped.bindings || [];
+          if (mapped.ask && !note.bindings.length) note.ask = mapped.ask;
+        } catch (e) {
+          note.ask = e.message;
+        }
+        $("jn-save").disabled = false;
+      }
+      saveJournal([note].concat(loadJournal()));
+      $("jn-text").value = "";
+      $("jn-url").value = "";
+      paint();
+    }
+    $("jn-save").onclick = () => add(true);
+    $("jn-plain").onclick = () => add(false);
   }
 
   function renderIsogen() {
@@ -496,6 +627,7 @@
     prompt: renderPrompt,
     lesson: renderLesson,
     paper: renderPaper,
+    journal: renderJournal,
     isogen: renderIsogen,
     map: renderMap,
     settings: renderSettings,

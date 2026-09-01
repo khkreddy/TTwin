@@ -10,9 +10,6 @@
       .replace(/&lt;sub&gt;/gi, "<sub>").replace(/&lt;\/sub&gt;/gi, "</sub>")
       .replace(/&lt;sup&gt;/gi, "<sup>").replace(/&lt;\/sup&gt;/gi, "</sup>");
   }
-  function looksLikeDisplayed(text) {
-    return /displayed structure|structure of/i.test(String(text || ""));
-  }
   function tableHTML(t) {
     if (!t) return "";
     const headers = t.headers || [];
@@ -46,17 +43,30 @@
     }
     return '<div class="eq">' + chem(raw) + "</div>";
   }
-  function molCard(st) {
-    const lab = st.label ? "<div class='lab'>" + esc(st.label) + "</div>" : "";
+  function optionLetter(lab) {
+    if (lab == null || lab === "") return null;
+    const u = String(lab).trim().toUpperCase();
+    return /^[A-D]$/.test(u) ? u : null;
+  }
+  function partitionStructures(it) {
+    const stem = [];
+    const byOpt = { A: [], B: [], C: [], D: [] };
+    (it.structures || []).forEach((s) => {
+      const L = optionLetter(s.label);
+      if (L) byOpt[L].push(s);
+      else stem.push(s);
+    });
+    return { stem, byOpt };
+  }
+  function molCard(st, showLabel) {
+    const lab = showLabel && st.label ? "<div class='lab'>" + esc(st.label) + "</div>" : "";
     return "<div class='smiles-card'>" + lab +
       "<svg class='mol' data-smiles='" + esc(st.smiles) + "' width='200' height='140'></svg></div>";
   }
   function structuresHTML(it) {
-    const sts = it.structures || [];
-    if (!sts.length) return "";
-    const asOptions = sts.every((s) => s.label && /^[A-D]$/i.test(String(s.label)));
-    if (asOptions) return "";
-    return "<div class='smiles-row'>" + sts.map(molCard).join("") + "</div>";
+    const { stem } = partitionStructures(it);
+    if (!stem.length) return "";
+    return "<div class='smiles-row'>" + stem.map((s) => molCard(s, true)).join("") + "</div>";
   }
   function figHTML(it) {
     const code = String(it.tikz || "").trim();
@@ -84,26 +94,26 @@
   function optionsHTML(it) {
     const o = it.options || {};
     const keys = ["A", "B", "C", "D"].filter((k) => o[k] != null && o[k] !== "");
-    const sts = it.structures || [];
-    const byLab = {};
-    sts.forEach((s) => { if (s.label) byLab[String(s.label).toUpperCase()] = s; });
-    const structOpts = keys.length && keys.every((k) => byLab[k]);
+    const { byOpt } = partitionStructures(it);
+    const hasOptStructs = keys.some((k) => (byOpt[k] || []).length);
     if (it.tikz && it.options_are_figure) {
       return "<ul class='options'>" + keys.map((k) =>
         "<li><span class='lab'>" + esc(k) + "</span></li>").join("") + "</ul>";
     }
-    if (structOpts) {
-      return "<ul class='options'>" + keys.map((k) =>
-        "<li><span class='lab'>" + esc(k) + "</span>" + molCard(byLab[k]) + "</li>"
-      ).join("") + "</ul>";
+    if (hasOptStructs) {
+      return "<ul class='options'>" + keys.map((k) => {
+        const mols = byOpt[k] || [];
+        const drawings = mols.length
+          ? "<div class='smiles-row'>" + mols.map((s) => molCard(s, false)).join("") + "</div>"
+          : "";
+        const text = mols.length ? "" : "<span>" + chem(o[k]) + "</span>";
+        return "<li><span class='lab'>" + esc(k) + "</span> " + drawings + text + "</li>";
+      }).join("") + "</ul>";
     }
     if (!keys.length) return "";
-    return "<ul class='options'>" + keys.map((k) => {
-      const txt = looksLikeDisplayed(o[k]) && byLab[k]
-        ? molCard(byLab[k])
-        : "<span>" + chem(o[k]) + "</span>";
-      return "<li><span class='lab'>" + esc(k) + "</span> " + txt + "</li>";
-    }).join("") + "</ul>";
+    return "<ul class='options'>" + keys.map((k) =>
+      "<li><span class='lab'>" + esc(k) + "</span> <span>" + chem(o[k]) + "</span></li>"
+    ).join("") + "</ul>";
   }
   function itemHTML(it, i, opts) {
     const n = i == null ? "" : (i + 1);

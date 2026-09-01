@@ -12,7 +12,8 @@ Enable Pages: GitHub → **khkreddy/TTwin** → **Settings → Pages → Build a
 |---|---|
 | **Browse** | Pack → node → chapter → subtopic. Questions and hinge packs. |
 | **Prompt retrieve** | “Chemical energetics at senior level” compiles to a selector (aliases, no model). Fuzzy prompts can use **AI**. Retrieve is deterministic (`provider_calls: 0`). |
-| **Lesson planner** | Teacher digest from enrichment (caution / mx / difficulty / sequencing) with ChemEd X citations. Optional AI prose; null URLs must not become invented DOIs. |
+| **Lesson planner** | Map hinges + enrichment + journal overlay. AI prose is Zinsser-style and uses all three packs. |
+| **Journal** | Teacher notes/links, mapped to hinges. They reappear on the matching lesson and go into the AI pack. |
 | **Test maker** | N + seed → paper. Drawn figures compile in the browser from TikZ (no stored PNGs). Learner sheet has no mx, no examiner comments, no crops. |
 | **ISO-GEN** | New MCQ from `hinge_pack(unit_id)` via AI. CANDIDATE, `serve_eligible=false`. Does **not** rewrite frozen Lamport-20. |
 | **Map** | 523 NCERT hinges with mechanism, CANDIDATE mx, mastery / LoK / gaming pockets from the comprehensive map. |
