@@ -39,6 +39,8 @@ python3 tools/build_data.py
 
 Under `data/`: nodes, 523 hinges (slim pedagogy + mx), 543 enrichment items, projection table, tagged chemistry nav rows, typeset stems and TikZ source for complete-exam MCQs.
 
+Deploy issues and checks: `DEPLOYMENT_WIKI.md`.
+
 Not in this repo: the 46 MB comprehensive map blob, live V15, frozen exam.jsonl, API keys, pre-rendered figure PNGs.
 
 ## License
