@@ -1,0 +1,33 @@
+.paper{
+  background:#fffef9;border:1px solid #c9c0b2;padding:18mm 16mm 20mm;
+  max-width:210mm;margin:18px auto 28px;box-shadow:0 10px 28px rgba(40,30,10,.16);
+  color:#111;font:11.5pt/1.35 "Liberation Serif","Times New Roman",Times,serif;
+}
+.paper .hdr{text-align:center;margin:0 0 10px}
+.paper .hdr .board{font-size:13.5pt;font-weight:700}
+.paper .hdr .subj{font-size:16pt;font-weight:700;margin:2px 0}
+.paper .hdr .papername{font-size:12.5pt}
+.paper .rule{border:0;border-top:1.2px solid #111;margin:8px 0}
+.paper .q{margin:18px 0 0;position:relative;padding-right:1.5em}
+.paper .qnum{font-weight:700;margin-right:.6em}
+.paper .stem{white-space:pre-wrap;margin:0 0 .6em;text-align:justify}
+.paper .eq{text-align:center;margin:12px 0;font-size:12.5pt}
+.paper ol.stmts{list-style:none;padding:4px 0 8px;margin:0}
+.paper ol.stmts li{margin:0 0 .55em;padding:0 0 0 1.6em;position:relative}
+.paper .fig{margin:12px auto;text-align:center;overflow-x:auto;max-width:100%}
+.paper .fig svg{max-width:100%;height:auto}
+.paper table.exam{border-collapse:collapse;margin:10px auto;font-size:11pt}
+.paper table.exam th,.paper table.exam td{border:1px solid #333;padding:4px 10px;text-align:left}
+.paper .options{list-style:none;padding:8px 0 0 0;margin:0}
+.paper .options li{margin:0 0 .45em;display:flex;gap:.5em;align-items:flex-start}
+.paper .options .lab{font-weight:700;min-width:1.2em}
+.paper .smiles-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:12px 0}
+.paper .smiles-card{text-align:center;font-size:10.5pt}
+.paper .smiles-card svg,.paper .smiles-card canvas{max-width:200px;height:140px}
+.paper .cap{font-size:10pt;color:#444;margin-top:4px}
+.tikz-wait{font-style:italic;color:#666;font-size:10.5pt}
+@media print{
+  nav.top,.no-print,footer.site,.hero{display:none !important}
+  body{background:#fff}
+  .paper{box-shadow:none;border:0;margin:0;padding:12mm}
+}

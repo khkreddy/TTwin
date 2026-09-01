@@ -101,7 +101,7 @@
     $("app").innerHTML = statsBar() +
       "<div class='claim'>" + esc(m.honesty || "") + "</div>" +
       "<div class='grid'>" +
-      card("#browse", "Browse", "Pack → node → chapter → subtopic. The hard-earned cam:9701:5 tags stay.") +
+      card("#browse", "Browse", "Pack → node → chapter → subtopic. Questions render as exam items with figures.") +
       card("#prompt", "Prompt retrieve", "“Chemical energetics at senior level” → selector → questions + hinge packs.") +
       card("#lesson", "Lesson planner", "Teacher digest from the enrichment layer, optional AI prose.") +
       card("#paper", "Test maker", "Set N, seed, and a selector. Same inputs, same paper.") +
@@ -186,34 +186,20 @@
     $("app").innerHTML = "<p class='kicker'>Browse</p><h1>Five-click retrieve</h1>" +
       "<p class='sub'>Pack and node are map language. Chapter and subtopic are the Cambridge coordinates already on the tagged corpus.</p>" +
       filtersHTML("br") + "<div id='br-out'></div>";
-    const go = () => {
+    const go = async () => {
       const sel = selectorFromFilters("br");
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
-      const uids = r.question_uids.slice(0, 40);
-      const by = Object.fromEntries(S.nav.map((x) => [x.uid, x]));
+      const uids = r.question_uids.slice(0, 8);
+      const items = await itemsForUids(uids);
       $("br-out").innerHTML =
         "<div class='banner'><span class='stat'><b>" + r.receipt.n_questions + "</b> questions</span>" +
-        "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges before cap</span>" +
-        "<span class='stat'><b>" + r.hinge_unit_ids.length + "</b> packs (cap " + TTwinRag.CAP + ")</span></div>" +
-        "<div class='split'><div class='card'><h2>Questions</h2>" +
-        uids.map((u) => {
-          const it = by[u] || {};
-          return "<div class='q'><div class='uid'>" + esc(u) + (it.complete_exam ? "" : " · not typeset") +
-            "</div><span class='tag'>" + esc(it.node || "") + "</span>" +
-            "<span class='tag'>" + esc(it.chapter_label || it.chapter_id || "") + "</span>" +
-            "<span class='tag'>" + esc(it.subtopic_label || "") + "</span></div>";
-        }).join("") +
-        (r.question_uids.length > 40 ? "<p class='muted'>First 40 of " + r.question_uids.length + ".</p>" : "") +
-        "</div><div class='card'><h2>Hinge packs</h2>" +
-        r.hinge_unit_ids.map((u) => {
-          const h = S.hinges.find((x) => x.unit_id === u);
-          return "<div class='q'><div class='uid'>" + esc(u) + "</div><p>" +
-            esc((h && h.decision_hinge) || "(Cambridge / V15 unit)") + "</p></div>";
-        }).join("") +
-        (r.receipt.truncated ? "<p class='notice'>Cap truncated " + r.receipt.n_hinge_unit_ids_before_cap + " → " + TTwinRag.CAP + ".</p>" : "") +
-        "</div></div>";
+        "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges</span>" +
+        "<span class='stat'>preview <b>" + items.length + "</b></span></div>" +
+        TTwinPaper.paperHTML({ title: "Question preview", subtitle: (sel.nodes || []).join(" ") }, items) +
+        (r.question_uids.length > 8 ? "<p class='muted no-print'>Showing 8 of " + r.question_uids.length + ". Use Test maker for a full paper.</p>" : "");
+      TTwinPaper.mount($("br-out"));
     };
-    bindFilters("br", go);
+    bindFilters("br", () => { go(); });
     $("br-pack").value = "senior_11_12_as_a";
     $("br-node").value = "chem:C6";
     fillChapters("br");
@@ -360,7 +346,8 @@
       "<div class='card'><div class='row'>" +
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
       "<div><label>Seed (empty = uid order)</label><input id='tm-seed' placeholder='optional'></div>" +
-      "<div><label>Title</label><input id='tm-title' value='NCERT chemistry check'></div>" +
+      "<div><label>Jump to uid</label><input id='tm-jump' placeholder='9701_m16_qp_12:q5'></div>" +
+      "<div><label>Title</label><input id='tm-title' value='Chemistry paper'></div>" +
       "</div><p style='margin-top:10px'><button id='tm-go' type='button'>Make paper</button> " +
       "<button class='sec no-print' onclick='window.print()'>Print</button></p></div>" +
       "<div id='tm-out'></div>";
@@ -371,11 +358,12 @@
       fillChapters("tm");
     }
     $("tm-go").onclick = async () => {
+      const jump = ($("tm-jump").value || "").trim();
       const sel = selectorFromFilters("tm");
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const n = Math.max(1, Math.min(40, Number($("tm-n").value || 10)));
       const seed = $("tm-seed").value;
-      const ordered = TTwinRag.seededShuffle(r.question_uids, seed).slice(0, n);
+      const ordered = jump ? [jump] : TTwinRag.seededShuffle(r.question_uids, seed).slice(0, n);
       const items = await itemsForUids(ordered);
       $("tm-out").innerHTML = TTwinPaper.paperHTML({
         title: $("tm-title").value,

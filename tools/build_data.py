@@ -140,6 +140,48 @@ def load_docs() -> dict:
     return raw if isinstance(raw, dict) else {}
 
 
+def slim_tables(tables) -> list:
+    out = []
+    for t in tables or []:
+        if not isinstance(t, dict):
+            continue
+        out.append(
+            {
+                "headers": t.get("headers") or [],
+                "rows": t.get("rows") or [],
+                "row_labels": t.get("row_labels") or [],
+                "caption": t.get("caption"),
+            }
+        )
+    return out
+
+
+def extract_structures(o: dict) -> list:
+    """SMILES for drawing only. Learner paper must not print the SMILES string."""
+    fig = o.get("figure") if isinstance(o.get("figure"), dict) else {}
+    enc = o.get("encoding") if isinstance(o.get("encoding"), dict) else {}
+    raw = fig.get("structures") or enc.get("structures") or []
+    out = []
+    if isinstance(raw, list):
+        for s in raw:
+            if isinstance(s, dict) and s.get("smiles"):
+                out.append({"label": s.get("label"), "smiles": s.get("smiles")})
+            elif isinstance(s, str) and s.strip():
+                out.append({"label": None, "smiles": s.strip()})
+    if out:
+        return out
+    sm = fig.get("smiles") or enc.get("smiles") or []
+    if isinstance(sm, str) and sm.strip():
+        sm = [sm]
+    labs = list("ABCD")
+    if isinstance(sm, list):
+        for i, x in enumerate(sm):
+            if isinstance(x, str) and x.strip():
+                lab = labs[i] if i < 4 else str(i + 1)
+                out.append({"label": lab, "smiles": x.strip()})
+    return out
+
+
 def extract_tikz(o: dict) -> tuple[str | None, list[str]]:
     """Return (tikz source, extra TeX packages). Never copy SMILES."""
     fig = o.get("figure") if isinstance(o.get("figure"), dict) else {}
@@ -198,11 +240,17 @@ def load_exam_index(uids: set[str]) -> dict:
                         (e.get("text") if isinstance(e, dict) else e)
                         for e in (o.get("equations") or [])[:4]
                     ],
+                    "tables": slim_tables(o.get("tables")),
+                    "structures": extract_structures(o),
                 }
                 if tikz:
                     rec["tikz"] = tikz
                     if tikz_packages:
                         rec["tikz_packages"] = tikz_packages
+                if not rec["tables"]:
+                    rec.pop("tables")
+                if not rec["structures"]:
+                    rec.pop("structures")
                 found[uid] = rec
                 if len(found) == len(uids):
                     return found
