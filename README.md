@@ -2,7 +2,9 @@
 
 Static GitHub Pages instrument for the NCERT chemistry **comprehensive map**, **enrichment layer**, and the **tagged question bank** (Cursor Wave 3.5: Cambridge coordinates kept, RAG join via projection + ancestor closure).
 
-Live site (after Pages is enabled): **https://khkreddy.github.io/TTwin/**
+Live site (after one Settings click): **https://khkreddy.github.io/TTwin/**
+
+Enable Pages: GitHub → **khkreddy/TTwin** → **Settings → Pages → Build and deployment**. Source **Deploy from a branch**. Branch **main**, folder **/ (root)**. Save. Wait a minute.
 
 ## What it tests
 
