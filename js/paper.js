@@ -133,7 +133,7 @@
   function paperHTML(meta, items) {
     const title = meta.title || "Chemistry";
     const head =
-      "<div class='hdr'><div class='board'>TeacherTwin</div>" +
+      "<div class='hdr'><div class='board'>Teacher's Twin</div>" +
       "<div class='subj'>Chemistry</div>" +
       "<div class='papername'>" + esc(title) + "</div>" +
       "<p class='cap'>" + esc(meta.subtitle || "") + " · " + items.length + " questions" +

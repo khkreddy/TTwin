@@ -5,7 +5,6 @@
   };
 
   const ROUTES = [
-    ["home", "Home"],
     ["browse", "Browse"],
     ["prompt", "Prompt"],
     ["lesson", "Lesson"],
@@ -27,7 +26,7 @@
   }
 
   async function boot() {
-    $("app").innerHTML = "<p class='muted'>Loading NCERT chemistry pack…</p>";
+    $("app").innerHTML = "<p class='muted'>Loading…</p>";
     try {
       const [meta, nodes, hinges, enrichment, projection, nav] = await Promise.all([
         jget("data/meta.json"),
@@ -62,22 +61,11 @@
   function navHTML() {
     const hash = (location.hash || "#home").slice(1).split("/")[0] || "home";
     return "<nav class='top'>" +
-      "<a class='brand' href='#home'>TWIN</a>" +
+      "<a class='brand" + (hash === "home" ? " active" : "") + "' href='#home'>Teacher's Twin</a>" +
       ROUTES.map(([id, lab]) =>
         "<a href='#" + id + "' class='" + (hash === id ? "active" : "") + "'>" + lab + "</a>"
       ).join("") +
       "</nav>";
-  }
-
-  function statsBar() {
-    const m = S.meta || {};
-    return "<div class='banner'>" +
-      "<span class='stat'><b>" + (m.n_nodes || 0) + "</b> nodes</span>" +
-      "<span class='stat'><b>" + (m.n_hinges || 0) + "</b> NCERT hinges</span>" +
-      "<span class='stat'><b>" + (m.n_enrichment || 0) + "</b> enrichment</span>" +
-      "<span class='stat'><b>" + (m.n_questions || 0) + "</b> tagged questions</span>" +
-      "<span class='stat'><b>" + (m.n_stems || 0) + "</b> typeset stems</span>" +
-      "</div>";
   }
 
   function nodeOptions(selected) {
@@ -93,29 +81,31 @@
   }
 
   function renderHome() {
-    const m = S.meta || {};
     $("hero").classList.remove("hidden");
     $("hero-inner").innerHTML =
-      "<p class='kicker'>TeacherTwin · NCERT chemistry</p>" +
-      "<h1>One hinge is enough to assemble the packet.</h1>" +
-      "<p class='sub'>Map, enrichment, and the tagged question bank are separate homes. " +
-      "A teacher request becomes a selector. Retrieve is deterministic. AI infers fuzzy prompts and authors ISO-GEN candidates from hinge packs — never from the 46&nbsp;MB map.</p>";
-    $("app").innerHTML = statsBar() +
-      "<div class='claim'>" + esc(m.honesty || "") + "</div>" +
-      "<div class='grid'>" +
-      card("#browse", "Browse", "Pack → node → chapter → subtopic. Questions render as exam items with figures.") +
-      card("#prompt", "Prompt retrieve", "“Chemical energetics at senior level” → selector → questions + hinge packs.") +
-      card("#lesson", "Lesson planner", "Map + enrichment + your journal notes. AI prose in Zinsser style.") +
-      card("#paper", "Test maker", "Set N, seed, and a selector. Same inputs, same paper.") +
-      card("#journal", "Journal", "Notes and links, mapped onto hinges. They reappear on the matching lesson.") +
-      card("#isogen", "ISO-GEN", "Describe the question you want. AI maps the idea to a hinge, then authors a CANDIDATE item.") +
-      card("#map", "Map explorer", "523 NCERT hinges, mx, mastery, LoK, gaming pockets.") +
+      "<p class='kicker'>Chemistry for teachers</p>" +
+      "<h1>Teacher's Twin</h1>" +
+      "<p class='sub'>A working copy of how you think. You bring the idea. The twin finds the questions, the lesson, and the mix-ups.</p>";
+    $("app").innerHTML =
+      "<div class='home-lede'>" +
+      "<p>This is a chemistry resource for teachers. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
+      "<p>The twin is organised around what the student must decide. That decision is the same whether you teach NCERT, Cambridge, or another board.</p>" +
+      "<p>AI is optional. Browse, retrieve, and papers work without it.</p>" +
       "</div>" +
-      "<p class='muted'>AI is optional (Settings). Browse, retrieve, and papers work without it.</p>";
+      "<h2 class='modules-head'>What it does</h2>" +
+      "<div class='modules'>" +
+      card("#browse", "Browse", "Walk the question bank by idea and year group. Items typeset as they would on a paper. Figures draw on the page.") +
+      card("#prompt", "Prompt", "Say what you want in ordinary language. The twin returns the matching questions and the ideas they test.") +
+      card("#lesson", "Lesson", "A briefing for class: the decision the student must make, the usual mix-ups, your notes, and a short plan.") +
+      card("#paper", "Test maker", "Cut a paper. Same settings, same paper. The learner never sees examiner talk or your notes.") +
+      card("#journal", "Journal", "Keep notes and links. They attach to the idea you were teaching and come back on the lesson.") +
+      card("#isogen", "ISO-GEN", "Describe the question you want, even if the idea is fuzzy. The twin drafts a candidate. It stays out of the exam pool until you accept it.") +
+      card("#map", "Map", "Read the chemistry ideas themselves. What the student must decide. How it works. Where they usually go wrong.") +
+      "</div>";
   }
 
   function card(href, title, body) {
-    return "<a class='card' href='" + href + "' style='text-decoration:none;color:inherit'><h2>" +
+    return "<a class='card module' href='" + href + "'><h2>" +
       esc(title) + "</h2><p>" + esc(body) + "</p></a>";
   }
 
