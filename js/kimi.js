@@ -77,25 +77,165 @@ Rules:
     return extractJson(content);
   }
 
-  const ISO_SYS = `You are Kimi-k3, ISO-GEN author for TeacherTwin.
-You receive hinge_pack JSON (mechanism, decision_hinge, mx CANDIDATE, enrichment).
-Author ONE new multiple-choice item that tests the decision hinge.
+  const ISO_SCOPE_SYS = `A chemistry teacher described an idea for a new question. They do not know system ids, hinge codes, or node lists. Their language is often fuzzy.
+Restate their intent in teacher language, then name the map nodes the idea belongs to.
+Return ONLY JSON:
+{"intent":"one sentence, teacher language",
+ "grade":"SECONDARY"|"SENIOR_SECONDARY"|null,
+ "nodes":["C6"],
+ "ask":null}
+Rules:
+- nodes must be copied from the closed node list (id field only). 1–3 nodes.
+- Prefer the most specific node (a hub over its parent origin when the idea is that hub).
+- grade: SECONDARY = grades 9–10; SENIOR_SECONDARY = grades 11–12 / AS–A / senior / class 11 or 12. Infer from the idea's demand if they did not say a year group. If still unclear, null.
+- If the idea is too vague to place: nodes [], ask one clarifying question in teacher language.
+- Never put node ids, unit_ids, or file paths in intent or ask.`;
+
+  const ISO_PICK_SYS = `You pick the ONE NCERT hinge a new question should test.
+The teacher idea is already restated. The hinge list is already narrowed to that topic.
+Return ONLY JSON:
+{"primary":{"unit_id":"...","why":"one clause in teacher language"},
+ "related":[{"unit_id":"...","why":"..."}],
+ "ask":null}
+Rules:
+- unit_id must be copied from the supplied list. Do not invent ids.
+- related: 0–2 extras only if the idea truly spans them.
+- why is for the teacher: no unit_ids, no node codes.
+- If none fit: primary null, ask one clarifying question in teacher language.`;
+
+  function underNode(hNode, want) {
+    const a = String(hNode || "").replace(/^chem:/, "");
+    const b = String(want || "").replace(/^chem:/, "");
+    if (!a || !b) return false;
+    return a === b || a.startsWith(b + "/");
+  }
+
+  function slimMech(m) {
+    if (!m) return null;
+    if (typeof m === "string") return m;
+    return {
+      law: m.law || null,
+      causal_direction: m.causal_direction || null,
+      boundary_conditions: (m.boundary_conditions || []).slice(0, 4),
+    };
+  }
+
+  async function inferIsoIntent(prompt, hinges, nodes, aliasHint) {
+    const nodeList = (nodes || []).map((n) => ({
+      id: String(n.id || n).replace(/^chem:/, ""),
+      title: n.title || "",
+      mechanism: n.mechanism || "",
+    }));
+    const chapters = Array.from(new Set(
+      (hinges || []).map((h) => h.chapter_title).filter((t) => t && String(t).indexOf("science/") !== 0)
+    )).sort();
+    const hintNodes = (aliasHint && aliasHint.nodes) || [];
+    const hint = aliasHint && (hintNodes.length || aliasHint.pack || aliasHint.grade_band)
+      ? { nodes: hintNodes, pack: aliasHint.pack || null, grade_band: aliasHint.grade_band || null }
+      : null;
+    const scope = extractJson(await chat([
+      { role: "system", content: ISO_SCOPE_SYS },
+      { role: "user", content: JSON.stringify({ teacher_idea: prompt, nodes: nodeList, chapters, alias_hint: hint }) },
+    ]));
+    const wantNodes = (scope.nodes || []).map((n) => String(n).replace(/^chem:/, "")).filter(Boolean);
+    if (scope.ask && !wantNodes.length) {
+      return { intent: scope.intent || null, grade: scope.grade || null, primary: null, related: [], ask: scope.ask };
+    }
+    if (!wantNodes.length) {
+      return {
+        intent: scope.intent || prompt,
+        grade: scope.grade || null,
+        primary: null,
+        related: [],
+        ask: scope.ask || "Which topic is this, and what should the student have to decide?",
+      };
+    }
+    let pool = (hinges || []).filter((h) => wantNodes.some((n) => underNode(h.node, n)));
+    if (scope.grade) {
+      const graded = pool.filter((h) => !h.grade_band || h.grade_band === scope.grade);
+      if (graded.length) pool = graded;
+    }
+    if (!pool.length) {
+      return {
+        intent: scope.intent || prompt,
+        grade: scope.grade || null,
+        primary: null,
+        related: [],
+        ask: "I can see the topic but not a precise hinge. What must the student decide?",
+      };
+    }
+    if (pool.length === 1) {
+      return {
+        intent: scope.intent || prompt,
+        grade: scope.grade || pool[0].grade_band || null,
+        primary: { unit_id: pool[0].unit_id, why: "this is the matching decision for that idea" },
+        related: [],
+        ask: null,
+      };
+    }
+    const catalog = pool.map((h) => ({
+      unit_id: h.unit_id,
+      chapter: h.chapter_title || h.chapter,
+      grade: h.grade_band === "SENIOR_SECONDARY" ? "grades 11-12" : "grades 9-10",
+      hinge: h.decision_hinge,
+    }));
+    const pick = extractJson(await chat([
+      { role: "system", content: ISO_PICK_SYS },
+      { role: "user", content: JSON.stringify({
+        teacher_idea: prompt,
+        intent: scope.intent,
+        grade: scope.grade,
+        hinges: catalog,
+      }) },
+    ]));
+    const allowed = new Set(pool.map((h) => h.unit_id));
+    const primaryId = pick.primary && pick.primary.unit_id;
+    if (!primaryId || !allowed.has(primaryId)) {
+      return {
+        intent: scope.intent || prompt,
+        grade: scope.grade || null,
+        primary: null,
+        related: [],
+        ask: pick.ask || "Which decision should the student make? Add a bit more about the situation.",
+      };
+    }
+    const related = (pick.related || [])
+      .filter((x) => x && allowed.has(x.unit_id) && x.unit_id !== primaryId)
+      .slice(0, 2);
+    return {
+      intent: scope.intent || prompt,
+      grade: scope.grade || null,
+      primary: { unit_id: primaryId, why: pick.primary.why || null },
+      related,
+      ask: null,
+    };
+  }
+
+  const ISO_SYS = `You author ONE new multiple-choice chemistry item.
+The teacher described an idea in ordinary language. You have already mapped that idea to a hinge pack (mechanism, decision hinge, CANDIDATE mx, enrichment).
 Return ONLY JSON:
 {"stem":"...","options":{"A":"...","B":"...","C":"...","D":"..."},"correct":"A"|"B"|"C"|"D",
  "rationale":"one sentence","mx_targeted":"confusion_type or null"}
 Laws:
-- Specification is the hinge pack. Do not invent a different mechanism.
+- Honour the teacher's framing (level, context, species) without leaving the hinge.
+- The specification is the hinge pack. Do not invent a different mechanism.
 - Do not copy enrichment verbatim as the stem.
 - Distractors should be realizable wrong outputs, not "student is confused".
 - Status of mx is CANDIDATE; do not stamp VALIDATED.
-- No SMILES. No examiner comments.`;
+- Do not print SMILES, hinge ids, or node codes in the stem or options.
+- No examiner comments.`;
 
-  async function authorItem(pack) {
+  async function authorItem(pack, teacherIntent) {
+    const st = pack.statement || {};
     const slim = {
-      unit_id: pack.unit_id,
-      decision_hinge: pack.statement && pack.statement.decision_hinge,
-      mechanism: pack.statement && pack.statement.mechanism,
-      mx: ((pack.statement && pack.statement.mx) || []).slice(0, 4),
+      teacher_intent: teacherIntent || null,
+      decision_hinge: st.decision_hinge,
+      mechanism: slimMech(st.mechanism),
+      chapter: st.chapter_title || st.chapter,
+      grade: st.grade_band,
+      mx: (st.mx || []).slice(0, 4).map((m) => ({
+        type: m.type, cwo: m.cwo, status: m.status,
+      })),
       enrichment: ((pack.enrichment && pack.enrichment.items) || []).slice(0, 3).map((e) => ({
         type: e.type, statement: e.statement,
       })),
@@ -160,6 +300,6 @@ Rules:
 
   g.TTwinKimi = {
     getKey, setKey, getProxy, setProxy, endpoint, chat,
-    inferSelector, authorItem, lessonProse, mapJournalNote, extractJson, MODEL,
+    inferSelector, inferIsoIntent, authorItem, lessonProse, mapJournalNote, extractJson, MODEL,
   };
 })(window);

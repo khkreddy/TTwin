@@ -108,7 +108,7 @@
       card("#lesson", "Lesson planner", "Map + enrichment + your journal notes. AI prose in Zinsser style.") +
       card("#paper", "Test maker", "Set N, seed, and a selector. Same inputs, same paper.") +
       card("#journal", "Journal", "Notes and links, mapped onto hinges. They reappear on the matching lesson.") +
-      card("#isogen", "ISO-GEN", "New MCQ from a hinge pack. CANDIDATE. Frozen L20 is not rewritten.") +
+      card("#isogen", "ISO-GEN", "Describe the question you want. AI maps the idea to a hinge, then authors a CANDIDATE item.") +
       card("#map", "Map explorer", "523 NCERT hinges, mx, mastery, LoK, gaming pockets.") +
       "</div>" +
       "<p class='muted'>AI is optional (Settings). Browse, retrieve, and papers work without it.</p>";
@@ -511,49 +511,81 @@
     $("jn-plain").onclick = () => add(false);
   }
 
+  function hingePlain(h) {
+    if (!h) return "";
+    const band = h.grade_band === "SENIOR_SECONDARY" ? "Grades 11–12" : "Grades 9–10";
+    const ch = h.chapter_title || "";
+    return (ch && ch.indexOf("science/") !== 0 ? ch : "Chemistry") + " · " + band;
+  }
+  function teacherFacing(s) {
+    return String(s || "")
+      .replace(/science\/grade_\d+\/[^\s,;]+\/H\d+/g, "")
+      .replace(/\bchem:[A-Z][A-Z0-9/\-]+/g, "")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+  }
   function renderIsogen() {
     $("hero").classList.add("hidden");
-    $("app").innerHTML = "<p class='kicker'>ISO-GEN</p><h1>Author from a hinge pack</h1>" +
-      "<p class='sub'>The frozen Lamport-20 engine is not rewritten. This tray authors a CANDIDATE item from <code>hinge_pack(unit_id)</code> using AI. Specification exists before the stem. Nothing enters the live exam pool.</p>" +
-      "<div class='card'><label>Teacher prompt or hinge id</label>" +
-      "<textarea id='iso-text'>science/grade_11/chem_ch_105/H009</textarea>" +
-      "<p><button id='iso-pack' type='button'>Load hinge pack</button> " +
-      "<button class='sec' id='iso-go' type='button'>Author with AI</button></p></div>" +
+    $("app").innerHTML = "<p class='kicker'>ISO-GEN</p><h1>Start from what you want to ask</h1>" +
+      "<p class='sub'>Write the idea in ordinary language — it can be fuzzy. AI infers the intent, maps it to a curriculum hinge, then authors a CANDIDATE item. You do not need codes or lists. Nothing enters the live exam pool. Frozen ISO-GEN L20 is not rewritten.</p>" +
+      "<div class='card'><label>What question do you want?</label>" +
+      "<textarea id='iso-text' placeholder='A senior question on reaction profiles where they mix up ΔH with activation energy.'></textarea>" +
+      "<p style='margin-top:10px'><button id='iso-go' type='button'>Author question</button></p></div>" +
       "<div id='iso-out'></div>";
-    $("iso-pack").onclick = () => {
-      const text = $("iso-text").value.trim();
-      let unit = (text.match(/science\/grade_\d+\/[^\s]+\/H\d+/) || [])[0];
-      if (!unit) {
-        const sel = TTwinRag.parsePromptDeterministic(text, S.projection);
-        const r = TTwinRag.assemble(sel, S.nav, S.projection);
-        unit = r.hinge_unit_ids.find((u) => u.startsWith("science/")) || r.hinge_unit_ids[0];
-      }
-      if (!unit) { $("iso-out").innerHTML = "<div class='notice err'>No hinge resolved.</div>"; return; }
-      const pack = TTwinRag.hingePack(unit, S.hinges, S.enrichment);
-      S.lastPack = pack;
-      const st = pack.statement || {};
-      $("iso-out").innerHTML = "<div class='card'><h2>Specification · " + esc(unit) + "</h2>" +
-        "<p>" + esc(st.decision_hinge || "") + "</p>" +
-        "<p class='muted'>" + esc(st.mechanism || "") + "</p>" +
-        "<h3 class='muted'>CANDIDATE mx</h3>" +
-        (st.mx || []).map((m) => "<div class='mx'><b>" + esc(m.type || "") + "</b> " + esc(m.cwo || "") + "</div>").join("") +
-        "<h3 class='muted'>Enrichment (" + pack.enrichment.n_in_packet + ")</h3>" +
-        (pack.enrichment.items || []).map((e) => "<div class='q'>" + esc(e.statement || "") + "</div>").join("") +
-        "</div><div id='iso-item'></div>";
-    };
     $("iso-go").onclick = async () => {
-      if (!S.lastPack) $("iso-pack").click();
-      if (!S.lastPack) return;
+      const idea = ($("iso-text").value || "").trim();
+      if (!idea) {
+        $("iso-out").innerHTML = "<div class='notice'>Say what you want the student to face — topic, year group if you have one, and the mix-up if you can see it.</div>";
+        return;
+      }
       $("iso-go").disabled = true;
+      $("iso-out").innerHTML = "<p class='muted'>Reading the idea…</p>";
       try {
+        let inferred = null;
+        const pasted = (idea.match(/science\/grade_\d+\/[^\s]+\/H\d+/) || [])[0];
+        if (pasted && S.hinges.some((h) => h.unit_id === pasted)) {
+          inferred = { intent: teacherFacing(idea) || idea, primary: { unit_id: pasted, why: null }, related: [], ask: null };
+        } else {
+          inferred = await TTwinKimi.inferIsoIntent(
+            idea,
+            S.hinges,
+            S.nodes,
+            TTwinRag.parsePromptDeterministic(idea, S.projection)
+          );
+        }
+        if (!inferred || !(inferred.primary && inferred.primary.unit_id)) {
+          $("iso-out").innerHTML = "<div class='notice'>" + esc(teacherFacing((inferred && inferred.ask) || "") || "Say a bit more: topic, year group, and what the student must decide.") + "</div>";
+          $("iso-go").disabled = false;
+          return;
+        }
+        const unit = inferred.primary.unit_id;
+        const h = S.hinges.find((x) => x.unit_id === unit);
+        if (!h) throw new Error("That idea did not land on a curriculum hinge. Try another wording.");
+        const pack = TTwinRag.hingePack(unit, S.hinges, S.enrichment);
+        S.lastPack = pack;
+        const st = pack.statement || {};
+        const relatedBits = (inferred.related || []).map((x) => {
+          const rh = S.hinges.find((z) => z.unit_id === x.unit_id);
+          return teacherFacing((rh && rh.decision_hinge) || "");
+        }).filter(Boolean);
+        $("iso-out").innerHTML =
+          "<div class='card'><h2>What we heard</h2><p>" + esc(teacherFacing(inferred.intent || idea)) + "</p>" +
+          "<p><b>The student must:</b> " + esc(st.decision_hinge || "") + "</p>" +
+          "<p class='muted'>" + esc(hingePlain(h)) +
+          (inferred.primary.why ? " · " + esc(teacherFacing(inferred.primary.why)) : "") + "</p>" +
+          (relatedBits.length ? "<p class='muted'>Also related: " + relatedBits.map(esc).join(" · ") + "</p>" : "") +
+          "<h3 class='muted'>Likely mix-ups (unverified)</h3>" +
+          (st.mx || []).map((m) => "<div class='mx'><b>" + esc(m.type || "") + "</b> " + esc(m.cwo || "") + "</div>").join("") +
+          "</div><p class='muted'>Authoring the question from that hinge…</p><div id='iso-item'></div>";
         const specHash = await shaHex(JSON.stringify(S.lastPack.statement));
-        const item = await TTwinKimi.authorItem(S.lastPack);
+        const item = await TTwinKimi.authorItem(S.lastPack, inferred.intent || idea);
         const ev = {
           schema: "ttwin.isogen.candidate.v1",
           serve_eligible: false,
           owner_ratified: false,
           unit_id: S.lastPack.unit_id,
           spec_sha256: specHash,
+          teacher_intent: inferred.intent || idea,
           item,
           model: TTwinKimi.MODEL,
           utc: new Date().toISOString(),
@@ -561,12 +593,13 @@
         const tray = JSON.parse(localStorage.getItem("ttwin.isogen.tray") || "[]");
         tray.unshift(ev);
         localStorage.setItem("ttwin.isogen.tray", JSON.stringify(tray.slice(0, 20)));
-        $("iso-item").innerHTML = "<div class='notice'>CANDIDATE · serve_eligible=false · spec " + specHash.slice(0, 12) + "…</div>" +
-          TTwinPaper.itemHTML({ uid: "isogen:" + specHash.slice(0, 8), stem: item.stem, options: item.options }, 0) +
+        $("iso-item").innerHTML = "<div class='notice'>CANDIDATE · not in the live exam pool · spec " + specHash.slice(0, 12) + "…</div>" +
+          TTwinPaper.itemHTML({ uid: "isogen:" + specHash.slice(0, 8), stem: item.stem, options: item.options }, 0, { showUid: false }) +
           "<p class='muted'>Correct " + esc(item.correct) + " · " + esc(item.rationale || "") + "</p>";
         TTwinPaper.mount($("iso-item"));
       } catch (e) {
-        $("iso-item").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
+        const slot = $("iso-item") || $("iso-out");
+        slot.innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
       }
       $("iso-go").disabled = false;
     };

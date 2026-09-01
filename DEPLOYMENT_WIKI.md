@@ -90,11 +90,24 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 ---
 
+## D9 · ISO-GEN started from hinge codes, not the teacher’s idea
+
+**Symptom.** Textarea defaulted to `science/grade_11/chem_ch_105/H009`. Button said “Load hinge pack”. Teachers had to carry unit ids.
+
+**Root cause.** ISO-GEN treated `hinge_pack(unit_id)` as the *teacher* start. Codes, node lists, and the 523-hinge catalog are system-facing. A teacher arrives with a fuzzy idea.
+
+**Solution.** One box: ordinary language. AI (1) restates intent against the 21 map nodes + chapter titles — no unit ids in that call; (2) picks `unit_id` from the **filtered** hinge list; (3) authors from that pack, honouring the teacher’s framing. Pasted `unit_id` is a shortcut only. Teacher surface shows “What we heard” + decision hinge + chapter/band — not codes. CANDIDATE, `serve_eligible=false`. Frozen L20 untouched. Cache-bust `?v=6`.
+
+**Deploy check.** ISO-GEN has no prefilled `H009`, no “Load hinge pack”. A prompt like “senior reaction profiles, mix up ΔH with activation energy” yields a mapped hinge in teacher language, then an item.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles.
+3. Bump `?v=` on `index.html` scripts/styles (ISO-GEN teacher-prompt is `v=6`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
+7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.

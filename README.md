@@ -15,7 +15,7 @@ Enable Pages: GitHub → **khkreddy/TTwin** → **Settings → Pages → Build a
 | **Lesson planner** | Map hinges + enrichment + journal overlay. AI prose is Zinsser-style and uses all three packs. |
 | **Journal** | Teacher notes/links, mapped to hinges. They reappear on the matching lesson and go into the AI pack. |
 | **Test maker** | N + seed → paper. Drawn figures compile in the browser from TikZ (no stored PNGs). Learner sheet has no mx, no examiner comments, no crops. |
-| **ISO-GEN** | New MCQ from `hinge_pack(unit_id)` via AI. CANDIDATE, `serve_eligible=false`. Does **not** rewrite frozen Lamport-20. |
+| **ISO-GEN** | Teacher writes an idea (often fuzzy). AI restates intent, maps internally to a hinge pack, authors a CANDIDATE MCQ. Hinge codes stay system-facing. Frozen Lamport-20 is not rewritten. |
 | **Map** | 523 NCERT hinges with mechanism, CANDIDATE mx, mastery / LoK / gaming pockets from the comprehensive map. |
 
 Join law: a hinge `unit_id` pulls map mx + enrichment (`serves_statement_ids`). Questions keep `cam:9701:5` / `AS_A:9701.x.y`. Cross-map retrieve is `node × grade_band` via the projection table. A question tagged at a higher node is retrieved by any descendant selector.
