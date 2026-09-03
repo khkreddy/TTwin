@@ -59,13 +59,10 @@
   }
   function parseCam(fid) {
     const s = String(fid || "").trim();
-    let m = s.match(/^cam:(\d{4}):(\d+)(?:\.(\d+))?$/);
-    if (m) return ["cam", m[1], m[2]].concat(m[3] ? [m[3]] : []);
-    m = s.match(/^(IGCSE:0620|AS_A:9701)\.(\d+)(?:\.(\d+))?/);
-    if (m) {
-      const code = m[1].includes("0620") ? "0620" : "9701";
-      return ["cam", code, m[2]].concat(m[3] ? [m[3]] : []);
-    }
+    let m = s.match(/^cam:(\d{4}):(.+)$/);
+    if (m) return ["cam", m[1]].concat(String(m[2]).split(/[.:]/).filter(Boolean));
+    m = s.match(/^(IGCSE|AS_A):(\d{4})\.(.+)$/);
+    if (m) return ["cam", m[2]].concat(String(m[3]).split(".").filter(Boolean));
     return null;
   }
   function parseNcert(fid) {
@@ -285,7 +282,7 @@
   function parsePromptDeterministic(text, table) {
     const raw = String(text || "");
     const low = raw.toLowerCase();
-    const sel = { subject: "chemistry", maps: ["ncert", "cambridge"], nodes: [], families: [] };
+    const sel = { subject: (table && table.subject) || "chemistry", maps: ["ncert", "cambridge"], nodes: [], families: [] };
     const aliases = (table && table.aliases) || {};
     const keys = Object.keys(aliases).sort((a, b) => b.length - a.length);
     for (const k of keys) {

@@ -25,6 +25,38 @@ NAV = AWM / "data/awm_product/generated/nav_mcq/items.jsonl"
 PROJ = AWM / "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json"
 EXAM = AWM / "data/chem_curriculum/item_envelope/exam_json/items.jsonl"
 CORPUS = AWM / "data/awm_product/generated/exam_v1_corpus/items.jsonl"
+VOCAB_DIR = AWM / "data/awm_product/generated/nav_mcq/vocab"
+
+SUBJECT_ORDER = ["chemistry", "biology", "physics", "maths"]
+SUBJECT_LABEL = {
+    "chemistry": "Chemistry",
+    "biology": "Biology",
+    "physics": "Physics",
+    "maths": "Mathematics",
+}
+VOCAB_FILE = {
+    "chemistry": VOCAB_DIR / "big_ideas_chem.json",
+    "biology": VOCAB_DIR / "big_ideas_bio.json",
+    "physics": VOCAB_DIR / "big_ideas_phy.json",
+    "maths": VOCAB_DIR / "big_ideas_math.json",
+}
+PACK_SLUG = {
+    "igcse_9_10": "igcse",
+    "senior_11_12_as_a": "senior",
+    "olympiad_iit": "olympiad",
+}
+PACK_LABEL = {
+    "igcse_9_10": "A · Grades 9–10 / IGCSE",
+    "senior_11_12_as_a": "B · Grades 11–12 / AS–A",
+    "olympiad_iit": "C · Olympiad / IIT",
+}
+FIVE_IDS = ("pack", "subject", "big_idea_id", "chapter_id", "subtopic_id")
+LEGACY_QUESTION_FILES = (
+    "questions-igcse.json",
+    "questions-senior.json",
+    "questions-olympiad.json",
+    "nav.json",
+)
 
 CHAPTER_TITLES = {
     "science/grade_09/ch_01": "Matter in Our Surroundings",
@@ -72,7 +104,40 @@ def dump(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
     path.write_text(text, encoding="utf-8")
-    print(f"  {path.name:28s} {path.stat().st_size:9d} B")
+    rel = path.relative_to(OUT) if path.is_relative_to(OUT) else path.name
+    print(f"  {str(rel):40s} {path.stat().st_size:9d} B")
+
+
+def completely_tagged(row: dict) -> bool:
+    return all(row.get(k) not in (None, "") for k in FIVE_IDS)
+
+
+def slim_vocab(path: Path) -> dict:
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    ideas = []
+    for idea in raw.get("ideas") or []:
+        if not isinstance(idea, dict):
+            continue
+        ideas.append(
+            {
+                "id": idea.get("id"),
+                "title": idea.get("label") or idea.get("title"),
+                "kind": idea.get("kind"),
+                "mechanism": idea.get("mechanism"),
+            }
+        )
+    return {
+        "schema": "ttwin.vocab.v1",
+        "subject": raw.get("subject"),
+        "namespace": raw.get("namespace"),
+        "n": len(ideas),
+        "ideas": ideas,
+    }
+
+
+def question_relpath(subject: str, pack: str) -> str:
+    slug = PACK_SLUG.get(pack, pack.replace("_", "-"))
+    return f"questions/{subject}-{slug}.json"
 
 
 def chapter_family(unit_id: str) -> str:
@@ -294,6 +359,10 @@ def slim_projection(proj: dict) -> dict:
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "questions").mkdir(exist_ok=True)
+    (OUT / "nav").mkdir(exist_ok=True)
+    (OUT / "vocab").mkdir(exist_ok=True)
+
     print("loading comprehensive map…")
     comp = json.loads(COMP.read_text(encoding="utf-8"))
     nodes_src = comp.get("nodes") or {}
@@ -364,18 +433,25 @@ def main() -> int:
                 }
             )
 
-    print("loading nav tags…")
-    nav_rows = []
-    uids = set()
+    print("loading nav tags (all subjects)…")
+    by_subject: dict[str, list] = {s: [] for s in SUBJECT_ORDER}
+    skipped = 0
+    uids: set[str] = set()
     with NAV.open(encoding="utf-8") as f:
         for line in f:
             o = json.loads(line)
-            if o.get("subject") != "chemistry":
+            if not completely_tagged(o):
+                skipped += 1
+                continue
+            subject = o.get("subject")
+            if subject not in by_subject:
+                skipped += 1
                 continue
             uid = o.get("item_uid")
             fam = o.get("family_ids") if isinstance(o.get("family_ids"), dict) else {}
             rec = {
                 "uid": uid,
+                "subject": subject,
                 "pack": o.get("pack"),
                 "grade_band": o.get("grade_band"),
                 "node": o.get("big_idea_id"),
@@ -387,39 +463,125 @@ def main() -> int:
                 "cam_family": fam.get("cambridge_chapter"),
                 "ncert_family": fam.get("ncert_chapter"),
             }
-            nav_rows.append(rec)
+            by_subject[subject].append(rec)
             if rec["complete_exam"]:
                 uids.add(uid)
+
+    n_tagged = sum(len(v) for v in by_subject.values())
+    print(f"  tagged {n_tagged}  skipped {skipped}  complete_exam uids {len(uids)}")
+    for s in SUBJECT_ORDER:
+        n = len(by_subject[s])
+        nce = sum(1 for r in by_subject[s] if r.get("complete_exam"))
+        print(f"    {s:12s} tagged={n:5d} complete_exam={nce:5d}")
 
     print(f"joining {len(uids)} complete exam stems…")
     stems = load_exam_index(uids)
     missing = [u for u in uids if u not in stems]
     print(f"  stems found {len(stems)} missing {len(missing)}")
 
-    by_pack = defaultdict(list)
-    for row in nav_rows:
-        uid = row["uid"]
-        body = stems.get(uid)
-        item = dict(row)
-        if body:
-            item.update(body)
-        by_pack[row.get("pack") or "unknown"].append(item)
-
     print("loading projection…")
     proj = json.loads(PROJ.read_text(encoding="utf-8"))
     projection = slim_projection(proj)
 
+    print("writing vocab / nav / questions…")
+    catalog = []
+    n_stems_total = 0
+    n_tikz = 0
+    n_struct = 0
+    n_table = 0
+    question_files: list[str] = []
+
+    for subject in SUBJECT_ORDER:
+        rows = by_subject[subject]
+        rows.sort(key=lambda r: (r.get("pack") or "", r.get("uid") or ""))
+        vocab = slim_vocab(VOCAB_FILE[subject])
+        dump(OUT / "vocab" / f"{subject}.json", vocab)
+        dump(OUT / "nav" / f"{subject}.json", rows)
+
+        packs_present: dict[str, list] = defaultdict(list)
+        for row in rows:
+            uid = row["uid"]
+            body = stems.get(uid)
+            item = dict(row)
+            if body:
+                item.update(body)
+                n_stems_total += 1
+                if item.get("tikz"):
+                    n_tikz += 1
+                if item.get("structures"):
+                    n_struct += 1
+                if item.get("tables"):
+                    n_table += 1
+            packs_present[row.get("pack") or "unknown"].append(item)
+
+        pack_entries = []
+        for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit"):
+            items = packs_present.get(pack) or []
+            if not items:
+                continue
+            rel = question_relpath(subject, pack)
+            dump(OUT / rel, items)
+            question_files.append("data/" + rel)
+            pack_entries.append(
+                {
+                    "id": pack,
+                    "label": PACK_LABEL.get(pack, pack),
+                    "questions": "data/" + rel,
+                    "n": len(items),
+                    "n_complete_exam": sum(1 for it in items if it.get("complete_exam")),
+                    "n_stems": sum(1 for it in items if (it.get("stem") or "").strip()),
+                }
+            )
+
+        catalog.append(
+            {
+                "id": subject,
+                "label": SUBJECT_LABEL[subject],
+                "nav": f"data/nav/{subject}.json",
+                "vocab": f"data/vocab/{subject}.json",
+                "has_map": subject == "chemistry",
+                "n_tagged": len(rows),
+                "n_complete_exam": sum(1 for r in rows if r.get("complete_exam")),
+                "packs": pack_entries,
+                "default_node": (vocab["ideas"][0]["id"] if vocab["ideas"] else ""),
+                "default_pack": pack_entries[0]["id"] if pack_entries else "",
+            }
+        )
+
+    subjects_doc = {
+        "schema": "ttwin.subjects.v1",
+        "default": "chemistry",
+        "subjects": catalog,
+    }
+
     meta = {
-        "schema": "ttwin.ncert.chem.showcase.v1",
+        "schema": "ttwin.showcase.v2",
         "built_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "subject": "chemistry",
-        "board_home": "NCERT comprehensive map + Cambridge-tagged question bank",
+        "subjects": SUBJECT_ORDER,
+        "board_home": "NCERT comprehensive chemistry map + Cambridge-tagged question bank (four subjects)",
         "n_nodes": len(nodes),
         "n_hinges": len(hinges),
         "n_enrichment": len(enrich),
-        "n_questions": len(nav_rows),
-        "n_complete_exam": sum(1 for r in nav_rows if r.get("complete_exam")),
-        "n_stems": len(stems),
+        "n_questions": n_tagged,
+        "n_complete_exam": sum(s["n_complete_exam"] for s in catalog),
+        "n_stems": n_stems_total,
+        "n_tikz": n_tikz,
+        "n_structures": n_struct,
+        "n_tables": n_table,
+        "by_subject": {
+            s["id"]: {
+                "n_tagged": s["n_tagged"],
+                "n_complete_exam": s["n_complete_exam"],
+                "packs": {p["id"]: p["n"] for p in s["packs"]},
+            }
+            for s in catalog
+        },
+        "files": {
+            "subjects": "data/subjects.json",
+            "questions": question_files,
+            "nav": [f"data/nav/{s}.json" for s in SUBJECT_ORDER],
+            "vocab": [f"data/vocab/{s}.json" for s in SUBJECT_ORDER],
+        },
         "sources": {
             "comprehensive_map": str(COMP.relative_to(AWM)),
             "comprehensive_sha256": sha256_file(COMP),
@@ -431,10 +593,11 @@ def main() -> int:
             "exam_pack_sha256": sha256_file(EXAM),
         },
         "honesty": (
-            "Questions keep Cambridge syllabus coordinates (cam:9701:5 / AS_A:9701.x.y). "
-            "NCERT join is node × grade_band via the projection table, not a rewrite of tags. "
-            "Mx and enrichment are teacher-facing; they are not printed on the learner paper. "
-            "ISO-GEN on this site authors CANDIDATE items from hinge packs; it does not rewrite frozen L20. "
+            "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). "
+            "NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. "
+            "Biology, physics, and maths browse nodes are frozen nav vocab, not a V15-style map. "
+            "Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. "
+            "ISO-GEN on this site authors CANDIDATE chemistry items from hinge packs; it does not rewrite frozen L20. "
             "Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
         ),
         "kimi": {
@@ -444,24 +607,23 @@ def main() -> int:
         },
     }
 
-    print("writing…")
+    print("writing catalog…")
+    dump(OUT / "subjects.json", subjects_doc)
     dump(OUT / "meta.json", meta)
     dump(OUT / "nodes.json", nodes)
     dump(OUT / "hinges.json", hinges)
     dump(OUT / "enrichment.json", enrich)
     dump(OUT / "projection.json", projection)
-    dump(OUT / "nav.json", nav_rows)
-    for pack, items in by_pack.items():
-        slug = {
-            "igcse_9_10": "questions-igcse.json",
-            "senior_11_12_as_a": "questions-senior.json",
-            "olympiad_iit": "questions-olympiad.json",
-        }.get(pack, f"questions-{pack}.json")
-        dump(OUT / slug, items)
-
     (OUT / "RECEIPT.json").write_text(
         json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
+
+    for name in LEGACY_QUESTION_FILES:
+        p = OUT / name
+        if p.is_file():
+            p.unlink()
+            print(f"  removed legacy {name}")
+
     print("done")
     return 0
 

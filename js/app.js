@@ -1,8 +1,11 @@
 (function () {
   const S = {
-    meta: null, nodes: [], hinges: [], enrichment: [], projection: null, nav: [],
+    meta: null, catalog: null, subject: "chemistry",
+    nodes: [], hinges: [], enrichment: [], projection: null,
+    vocab: { ideas: [] }, nav: [],
     stems: {}, loadedPacks: {},
   };
+  const SUBJECT_KEY = "ttwin.subject";
 
   const ROUTES = [
     ["browse", "Browse"],
@@ -25,29 +28,52 @@
     return r.json();
   }
 
+  function specOf(id) {
+    return (S.catalog || []).find((s) => s.id === id) || null;
+  }
+
   async function boot() {
     $("app").innerHTML = "<p class='muted'>Loading…</p>";
     try {
-      const [meta, nodes, hinges, enrichment, projection, nav] = await Promise.all([
+      const [meta, subjects, nodes, hinges, enrichment, projection] = await Promise.all([
         jget("data/meta.json"),
+        jget("data/subjects.json"),
         jget("data/nodes.json"),
         jget("data/hinges.json"),
         jget("data/enrichment.json"),
         jget("data/projection.json"),
-        jget("data/nav.json"),
       ]);
-      S.meta = meta; S.nodes = nodes; S.hinges = hinges;
-      S.enrichment = enrichment; S.projection = projection; S.nav = nav;
+      S.meta = meta;
+      S.catalog = subjects.subjects || [];
+      S.nodes = nodes; S.hinges = hinges;
+      S.enrichment = enrichment; S.projection = projection;
+      const wanted = sessionStorage.getItem(SUBJECT_KEY) || subjects.default || "chemistry";
+      await loadSubject(wanted);
       route();
     } catch (e) {
       $("app").innerHTML = "<div class='notice err'>Could not load data: " + esc(e.message) + "</div>";
     }
   }
 
+  async function loadSubject(id) {
+    const spec = specOf(id) || specOf("chemistry") || (S.catalog || [])[0];
+    if (!spec) throw new Error("No subjects in catalog");
+    S.subject = spec.id;
+    try { sessionStorage.setItem(SUBJECT_KEY, spec.id); } catch (e) {}
+    const [vocab, nav] = await Promise.all([jget(spec.vocab), jget(spec.nav)]);
+    S.vocab = vocab || { ideas: [] };
+    S.nav = nav || [];
+    S.stems = {};
+    S.loadedPacks = {};
+    S.spec = spec;
+    return spec;
+  }
+
   async function ensurePack(pack) {
-    const file = pack === "senior_11_12_as_a" ? "data/questions-senior.json"
-      : pack === "olympiad_iit" ? "data/questions-olympiad.json"
-      : "data/questions-igcse.json";
+    const spec = S.spec || specOf(S.subject);
+    const entry = ((spec && spec.packs) || []).find((p) => p.id === pack);
+    const file = entry && entry.questions;
+    if (!file) return;
     if (S.loadedPacks[file]) return;
     try {
       const rows = await jget(file);
@@ -60,20 +86,53 @@
 
   function navHTML() {
     const hash = (location.hash || "#home").slice(1).split("/")[0] || "home";
+    const opts = (S.catalog || []).map((s) =>
+      "<option value='" + esc(s.id) + "'" + (s.id === S.subject ? " selected" : "") + ">" +
+      esc(s.label) + "</option>"
+    ).join("");
     return "<nav class='top'>" +
       "<a class='brand" + (hash === "home" ? " active" : "") + "' href='#home'>Teacher's Twin</a>" +
+      "<label class='nav-subject-lab'>Subject <select id='nav-subject' class='nav-subject'>" + opts + "</select></label>" +
       ROUTES.map(([id, lab]) =>
         "<a href='#" + id + "' class='" + (hash === id ? "active" : "") + "'>" + lab + "</a>"
       ).join("") +
       "</nav>";
   }
 
+  function bindNavSubject() {
+    const sel = $("nav-subject");
+    if (!sel) return;
+    sel.value = S.subject;
+    sel.onchange = async () => {
+      const next = sel.value;
+      if (next === S.subject) return;
+      $("app").innerHTML = "<p class='muted'>Loading " + esc(next) + "…</p>";
+      try {
+        await loadSubject(next);
+        route();
+      } catch (e) {
+        $("app").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
+      }
+    };
+  }
+
   function nodeOptions(selected) {
-    return S.nodes.map((n) => {
-      const id = "chem:" + n.id;
+    return (S.vocab.ideas || []).map((n) => {
+      const id = n.id;
       return "<option value='" + esc(id) + "'" + (selected === id ? " selected" : "") + ">" +
-        esc(n.id + " — " + (n.title || "")) + "</option>";
+        esc(id + " — " + (n.title || "")) + "</option>";
     }).join("");
+  }
+
+  function packOptions(selected) {
+    const packs = (S.spec && S.spec.packs) || [];
+    if (!packs.length) {
+      return "<option value='igcse_9_10'>A · Grades 9–10 / IGCSE</option>";
+    }
+    return packs.map((p) =>
+      "<option value='" + esc(p.id) + "'" + (p.id === selected ? " selected" : "") + ">" +
+      esc(p.label) + " (" + p.n + ")</option>"
+    ).join("");
   }
 
   function unique(arr) {
@@ -82,15 +141,19 @@
 
   function renderHome() {
     $("hero").classList.remove("hidden");
+    const counts = (S.catalog || []).map((s) =>
+      "<span class='stat'><b>" + s.n_tagged + "</b> " + esc(s.label) + "</span>"
+    ).join("");
     $("hero-inner").innerHTML =
-      "<p class='kicker'>Chemistry for teachers</p>" +
+      "<p class='kicker'>A resource for teachers</p>" +
       "<h1>Teacher's Twin</h1>" +
-      "<p class='sub'>A working copy of how you think. You bring the idea. The twin finds the questions, the lesson, and the mix-ups.</p>";
+      "<p class='sub'>A working copy of how you think. Pick a subject. You bring the idea. The twin finds the questions, the lesson, and the mix-ups.</p>";
     $("app").innerHTML =
+      "<div class='banner'>" + counts + "</div>" +
       "<div class='home-lede'>" +
-      "<p>This is a chemistry resource for teachers. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
+      "<p>Use the subject menu for chemistry, biology, physics, or mathematics. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
       "<p>The twin is organised around what the student must decide. That decision is the same whether you teach NCERT, Cambridge, or another board.</p>" +
-      "<p>AI is optional. Browse, retrieve, and papers work without it.</p>" +
+      "<p>AI is optional. Browse, retrieve, and papers work without it. The NCERT hinge map on Lesson / Map / ISO-GEN is chemistry; other subjects browse the tagged question bank.</p>" +
       "</div>" +
       "<h2 class='modules-head'>What it does</h2>" +
       "<div class='modules'>" +
@@ -111,11 +174,15 @@
 
   function filtersHTML(prefix) {
     return "<div class='card'><div class='row'>" +
-      "<div><label>Pack</label><select id='" + prefix + "-pack'>" +
-      "<option value='igcse_9_10'>A · Grades 9–10 / IGCSE</option>" +
-      "<option value='senior_11_12_as_a'>B · Grades 11–12 / AS–A</option>" +
+      "<div><label>Subject</label><select id='" + prefix + "-subject'>" +
+      (S.catalog || []).map((s) =>
+        "<option value='" + esc(s.id) + "'" + (s.id === S.subject ? " selected" : "") + ">" +
+        esc(s.label) + "</option>"
+      ).join("") +
       "</select></div>" +
-      "<div><label>Big idea (map node)</label><select id='" + prefix + "-node'><option value=''>any</option>" +
+      "<div><label>Pack</label><select id='" + prefix + "-pack'>" +
+      packOptions() + "</select></div>" +
+      "<div><label>Big idea</label><select id='" + prefix + "-node'><option value=''>any</option>" +
       nodeOptions() + "</select></div>" +
       "<div><label>Chapter</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
       "<div><label>Subtopic</label><select id='" + prefix + "-sub'><option value=''>any</option></select></div>" +
@@ -155,7 +222,7 @@
   function selectorFromFilters(prefix) {
     const sel = {
       pack: $(prefix + "-pack").value,
-      subject: "chemistry",
+      subject: ($(prefix + "-subject") && $(prefix + "-subject").value) || S.subject,
       maps: ["ncert", "cambridge"],
     };
     const node = $(prefix + "-node").value;
@@ -167,6 +234,21 @@
     return sel;
   }
   function bindFilters(prefix, onchange) {
+    const subjEl = $(prefix + "-subject");
+    if (subjEl) {
+      subjEl.addEventListener("change", async () => {
+        const next = subjEl.value;
+        if (next !== S.subject) {
+          await loadSubject(next);
+          const navSel = $("nav-subject");
+          if (navSel) navSel.value = next;
+          $(prefix + "-pack").innerHTML = packOptions();
+          $(prefix + "-node").innerHTML = "<option value=''>any</option>" + nodeOptions();
+        }
+        fillChapters(prefix);
+        onchange();
+      });
+    }
     ["pack", "node", "ch"].forEach((id) => {
       $(prefix + "-" + id).addEventListener("change", () => { fillChapters(prefix); onchange(); });
     });
@@ -176,8 +258,9 @@
 
   function renderBrowse() {
     $("hero").classList.add("hidden");
-    $("app").innerHTML = "<p class='kicker'>Browse</p><h1>Five-click retrieve</h1>" +
-      "<p class='sub'>Pack and node are map language. Chapter and subtopic are the Cambridge coordinates already on the tagged corpus.</p>" +
+    const spec = S.spec || specOf(S.subject);
+    $("app").innerHTML = "<p class='kicker'>Browse · " + esc((spec && spec.label) || S.subject) + "</p><h1>Five-click retrieve</h1>" +
+      "<p class='sub'>Subject, pack, and big idea. Chapter and subtopic are the Cambridge coordinates already on the tagged corpus.</p>" +
       filtersHTML("br") + "<div id='br-out'></div>";
     const go = async () => {
       const sel = selectorFromFilters("br");
@@ -188,13 +271,13 @@
         "<div class='banner'><span class='stat'><b>" + r.receipt.n_questions + "</b> questions</span>" +
         "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges</span>" +
         "<span class='stat'>preview <b>" + items.length + "</b></span></div>" +
-        TTwinPaper.paperHTML({ title: "Question preview", subtitle: (sel.nodes || []).join(" ") }, items) +
+        TTwinPaper.paperHTML({ title: "Question preview", subject: (S.spec && S.spec.label) || sel.subject, subtitle: [sel.subject, (sel.nodes || []).join(" ")].join(" · ") }, items) +
         (r.question_uids.length > 8 ? "<p class='muted no-print'>Showing 8 of " + r.question_uids.length + ". Use Test maker for a full paper.</p>" : "");
       TTwinPaper.mount($("br-out"));
     };
     bindFilters("br", () => { go(); });
-    $("br-pack").value = "senior_11_12_as_a";
-    $("br-node").value = "chem:C6";
+    if (spec && spec.default_pack) $("br-pack").value = spec.default_pack;
+    if (spec && spec.default_node) $("br-node").value = spec.default_node;
     fillChapters("br");
     go();
   }
@@ -231,13 +314,20 @@
       $("pr-lesson").onclick = () => { S.carry = { sel, r }; location.hash = "lesson"; };
     }
     $("pr-go").onclick = () => {
-      const sel = TTwinRag.parsePromptDeterministic($("pr-text").value, S.projection);
+      const table = Object.assign({}, S.projection || {}, { subject: S.subject });
+      const sel = TTwinRag.parsePromptDeterministic($("pr-text").value, table);
+      sel.subject = S.subject;
       show(sel, "deterministic alias compile");
     };
     $("pr-kimi").onclick = async () => {
       $("pr-kimi").disabled = true;
       try {
-        const sel = await TTwinKimi.inferSelector($("pr-text").value, S.nodes.map((n) => ({ id: "chem:" + n.id })));
+        const sel = await TTwinKimi.inferSelector(
+          $("pr-text").value,
+          (S.vocab.ideas || []).map((n) => ({ id: n.id })),
+          S.subject
+        );
+        if (sel && !sel.subject) sel.subject = S.subject;
         if (sel.error) throw new Error(sel.ask || sel.error);
         show(sel, "AI selector");
       } catch (e) {
@@ -392,13 +482,12 @@
   }
 
   async function itemsForUids(uids) {
-    const need = { igcse_9_10: false, senior_11_12_as_a: false };
+    const need = {};
     uids.forEach((u) => {
       const row = S.nav.find((r) => r.uid === u);
-      if (row) need[row.pack] = true;
+      if (row && row.pack) need[row.pack] = true;
     });
-    if (need.igcse_9_10) await ensurePack("igcse_9_10");
-    if (need.senior_11_12_as_a) await ensurePack("senior_11_12_as_a");
+    for (const pack of Object.keys(need)) await ensurePack(pack);
     return uids.map((u) => S.stems[u] || S.nav.find((r) => r.uid === u) || { uid: u });
   }
 
@@ -411,7 +500,7 @@
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
       "<div><label>Seed (empty = uid order)</label><input id='tm-seed' placeholder='optional'></div>" +
       "<div><label>Jump to uid</label><input id='tm-jump' placeholder='9701_m16_qp_12:q5'></div>" +
-      "<div><label>Title</label><input id='tm-title' value='Chemistry paper'></div>" +
+      "<div><label>Title</label><input id='tm-title' value='" + esc((S.spec && S.spec.label) || "Subject") + " paper'></div>" +
       "</div><p style='margin-top:10px'><button id='tm-go' type='button'>Make paper</button> " +
       "<button class='sec no-print' onclick='window.print()'>Print</button></p></div>" +
       "<div id='tm-out'></div>";
@@ -431,6 +520,7 @@
       const items = await itemsForUids(ordered);
       $("tm-out").innerHTML = TTwinPaper.paperHTML({
         title: $("tm-title").value,
+        subject: (S.spec && S.spec.label) || sel.subject,
         subtitle: (sel.nodes || []).join(" ") + " · " + (sel.pack || ""),
         seed,
       }, items);
@@ -597,9 +687,19 @@
 
   function renderMap() {
     $("hero").classList.add("hidden");
+    if (S.subject !== "chemistry") {
+      $("app").innerHTML = "<p class='kicker'>Map</p><h1>NCERT comprehensive map is chemistry</h1>" +
+        "<p class='sub'>The 523-hinge map, mx, and pedagogy on this tab are the NCERT chemistry comprehensive map. Switch the subject menu to Chemistry to read it. " +
+        esc((S.spec && S.spec.label) || S.subject) + " currently has a tagged question bank (" +
+        ((S.spec && S.spec.n_tagged) || 0) + " items) and browse vocab, not this hinge map.</p>" +
+        "<p><a href='#browse'>Browse " + esc((S.spec && S.spec.label) || S.subject) + " questions</a></p>";
+      return;
+    }
+    const chemVocab = (S.vocab.ideas || []).length ? S.vocab.ideas : S.nodes.map((n) => ({ id: "chem:" + n.id, title: n.title }));
     $("app").innerHTML = "<p class='kicker'>NCERT comprehensive map</p><h1>Hinges, mx, pedagogy</h1>" +
       "<p class='sub'>523 NCERT statements. Big idea is a layer above the hinge. Pedagogy is joined from chapter intelligence; mx are CANDIDATE (v2).</p>" +
-      "<div class='card'><div class='row'><div><label>Node</label><select id='mp-node'>" + nodeOptions() +
+      "<div class='card'><div class='row'><div><label>Node</label><select id='mp-node'>" +
+      chemVocab.map((n) => "<option value='" + esc(n.id) + "'>" + esc(n.id + " — " + (n.title || "")) + "</option>").join("") +
       "</select></div><div><label>Band</label><select id='mp-band'>" +
       "<option value=''>any</option><option value='SECONDARY'>Secondary</option>" +
       "<option value='SENIOR_SECONDARY' selected>Senior secondary</option></select></div></div></div>" +
@@ -620,7 +720,7 @@
           "</div>";
       }).join("");
     };
-    $("mp-node").value = "chem:C6";
+    $("mp-node").value = (S.spec && S.spec.default_node) || "chem:C6";
     $("mp-node").onchange = go;
     $("mp-band").onchange = go;
     go();
@@ -658,6 +758,7 @@
 
   function route() {
     document.getElementById("navhost").innerHTML = navHTML();
+    bindNavSubject();
     const name = (location.hash || "#home").slice(1).split("/")[0] || "home";
     (VIEWS[name] || renderHome)();
     window.scrollTo(0, 0);

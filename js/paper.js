@@ -131,10 +131,11 @@
     );
   }
   function paperHTML(meta, items) {
-    const title = meta.title || "Chemistry";
+    const title = meta.title || "Paper";
+    const subj = meta.subject || "Questions";
     const head =
       "<div class='hdr'><div class='board'>Teacher's Twin</div>" +
-      "<div class='subj'>Chemistry</div>" +
+      "<div class='subj'>" + esc(subj) + "</div>" +
       "<div class='papername'>" + esc(title) + "</div>" +
       "<p class='cap'>" + esc(meta.subtitle || "") + " · " + items.length + " questions" +
       (meta.seed ? " · seed " + esc(meta.seed) : "") + "</p></div><hr class='rule'/>";

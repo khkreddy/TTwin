@@ -49,29 +49,32 @@
     return JSON.parse(raw.slice(start, end + 1));
   }
 
-  const SELECTOR_SYS = `You are Kimi-k3, selector compiler for TeacherTwin NCERT chemistry RAG.
+  function selectorSys(subject) {
+    const subj = subject || "chemistry";
+    return `You are Kimi-k3, selector compiler for TeacherTwin RAG.
 Return ONLY a JSON object. No prose.
 The JSON schema:
-{"pack":"igcse_9_10"|"senior_11_12_as_a"|null,
- "subject":"chemistry",
- "nodes":["chem:C6",...],
+{"pack":"igcse_9_10"|"senior_11_12_as_a"|"olympiad_iit"|null,
+ "subject":"${subj}",
+ "nodes":[],
  "families":[],
  "unit_id":null,
  "maps":["ncert","cambridge"],
  "related_lower_grain":false}
 Rules:
-- pack A = grades 9-10 / IGCSE; pack B = grades 11-12 / AS-A / senior.
-- nodes must be from the closed chem: list you are given.
+- pack A = grades 9-10 / IGCSE; pack B = grades 11-12 / AS-A / senior; pack C = olympiad/IIT.
+- subject is "${subj}". Do not switch subject.
+- nodes must be from the closed list you are given.
 - Do not emit question uids.
 - Do not dump hinges or mx.
 - Unknown topic → {"error":"unknown_phrase","ask":"..."}.
-- Cross-hinge (acids AND equilibrium AND buffers) puts multiple nodes and families pH-buffer.
 - A specific hinge id in the prompt goes in unit_id.`;
+  }
 
-  async function inferSelector(prompt, nodes) {
+  async function inferSelector(prompt, nodes, subject) {
     const list = (nodes || []).map((n) => n.id || n).join(", ");
     const content = await chat([
-      { role: "system", content: SELECTOR_SYS },
+      { role: "system", content: selectorSys(subject) },
       { role: "user", content: "Closed nodes: " + list + "\n\nTeacher prompt:\n" + prompt },
     ]);
     return extractJson(content);

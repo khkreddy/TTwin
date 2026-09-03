@@ -55,6 +55,24 @@ nav.top a {
   padding: 4px 2px;
 }
 nav.top a[aria-current="page"], nav.top a.active { color: #fff; font-weight: 650 }
+nav.top .nav-subject-lab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #c5d4ce;
+  font-size: 12px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  margin: 0 8px 0 0;
+}
+nav.top select.nav-subject {
+  width: auto;
+  min-width: 140px;
+  padding: 4px 8px;
+  font-size: 13px;
+  background: #1a2623;
+  color: #fff;
+  border-color: #2c3c38;
+}
 .wrap { max-width: 1120px; margin: 0 auto; padding: 22px 22px 64px }
 h1 { font-size: 30px; margin: 8px 0 8px; letter-spacing: -0.02em }
 h2 { font-size: 19px; margin: 0 0 8px }

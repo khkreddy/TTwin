@@ -1,6 +1,6 @@
-# TeacherTwin — NCERT chemistry showcase
+# TeacherTwin — tagged question bank (four subjects)
 
-Static GitHub Pages instrument for the NCERT chemistry **comprehensive map**, **enrichment layer**, and the **tagged question bank** (Cursor Wave 3.5: Cambridge coordinates kept, RAG join via projection + ancestor closure).
+Static GitHub Pages instrument for the NCERT chemistry **comprehensive map**, **enrichment layer**, and the **Cambridge-tagged question bank** across chemistry, biology, physics, and mathematics. Pick a subject from the menu. Questions keep Cambridge `chapter_id` / `subtopic_id`. Chemistry still joins NCERT hinges at query time via the projection table.
 
 Live site (after one Settings click): **https://khkreddy.github.io/TTwin/**
 
@@ -37,7 +37,15 @@ python3 tools/build_data.py
 
 ## Data (derived, committed)
 
-Under `data/`: nodes, 523 hinges (slim pedagogy + mx), 543 enrichment items, projection table, tagged chemistry nav rows, typeset stems and TikZ source for complete-exam MCQs.
+```
+data/
+  subjects.json              catalog (packs, counts, file paths)
+  meta.json / RECEIPT.json
+  vocab/{chemistry,biology,physics,maths}.json
+  nav/{chemistry,biology,physics,maths}.json
+  questions/{subject}-{igcse|senior|olympiad}.json
+  nodes.json hinges.json enrichment.json projection.json   # chemistry map
+```
 
 Deploy issues and checks: `DEPLOYMENT_WIKI.md`.
 
