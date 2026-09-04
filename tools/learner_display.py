@@ -367,6 +367,100 @@ def options_are_parse_debris(options: dict[str, str]) -> bool:
     return False
 
 
+_SUP = str.maketrans("0123456789+-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻")
+SCI_TIMES = re.compile(r"(×\s*10)\s+([–−-]?)(\d{1,2})\b")
+SCI_NEG10 = re.compile(r"\b(10)\s+([–−-])(\d{1,2})\b")
+UNIT_EXP = re.compile(
+    r"\b(m s|mol dm|ms|cm|mm|µm|μm|nm|kg|Hz|Ω|Ω)\s+([–−-])(\d)\b"
+)
+DUMP_LINE = re.compile(
+    r"^(displacement|distance|time|velocity|speed|extension|force|voltage|"
+    r"current|temperature|pressure|volume|field|graph|energy|"
+    r"wave [A-ZXYRS]|0(?:\s+time)?)$",
+    re.I,
+)
+UNIT_HEADER = re.compile(
+    r"([A-Za-z][A-Za-z0-9 ]*?)\s*/\s*([A-Za-zµμ°0-9²³⁻]+(?:\s*[A-Za-zµμ°⁻0-9]+)*?)"
+    r"(?=(?:\s+[A-Za-z][A-Za-z0-9 ]*\s*/)|$)"
+)
+
+
+def _super_exp(sign: str, digits: str) -> str:
+    pref = "⁻" if sign and sign in "-–−" else ""
+    return pref + digits.translate(_SUP)
+
+
+def repair_scientific_notation(text: str) -> str:
+    """Chemistry already ships 7.00 × 10⁻³; physics CMS still has '× 10 7' and 'm s –1'."""
+    if not text:
+        return text
+
+    def times(m: re.Match) -> str:
+        return m.group(1) + _super_exp(m.group(2), m.group(3))
+
+    t = SCI_TIMES.sub(times, text)
+    t = SCI_NEG10.sub(lambda m: m.group(1) + _super_exp(m.group(2), m.group(3)), t)
+    t = UNIT_EXP.sub(lambda m: m.group(1) + _super_exp(m.group(2), m.group(3)), t)
+    return t
+
+
+def strip_figure_dump_runs(stem: str) -> str:
+    """Drop axis/wave labels that extraction dumped as their own lines between sentences."""
+    lines = (stem or "").split("\n")
+    dump = [bool(ln.strip()) and bool(DUMP_LINE.match(ln.strip())) for ln in lines]
+    drop = [False] * len(lines)
+    i = 0
+    while i < len(lines):
+        if dump[i]:
+            j = i
+            while j < len(lines) and dump[j]:
+                j += 1
+            if j - i >= 2:
+                for k in range(i, j):
+                    drop[k] = True
+            i = j
+        else:
+            i += 1
+    kept = [ln for ln, gone in zip(lines, drop) if not gone]
+    return "\n".join(kept)
+
+
+def join_wrapped_prose(stem: str) -> str:
+    """Join PDF column-wraps: 'It emits light of\\nfrequency 4.57…'."""
+    out: list[str] = []
+    for raw in (stem or "").split("\n"):
+        s = raw.strip()
+        if not out:
+            out.append(s)
+            continue
+        prev = out[-1]
+        if (
+            prev
+            and not re.search(r"[.?!:]$", prev)
+            and s
+            and s[0].islower()
+            and len(prev) >= 28
+            and not DUMP_LINE.match(s)
+        ):
+            out[-1] = prev + " " + s
+        else:
+            out.append(s)
+    # collapse extra blanks
+    text = "\n".join(out)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def parse_column_headers(header_lines: list[str], ncell: int) -> list[str]:
+    last = header_lines[-1] if header_lines else ""
+    parts = UNIT_HEADER.findall(last)
+    if len(parts) == ncell:
+        return [f"{a.strip()} / {b.strip()}" for a, b in parts]
+    toks = [t for t in last.split() if t != "/"]
+    if len(toks) == ncell and all(len(t) <= 24 for t in toks):
+        return toks
+    return [""] * ncell
+
+
 def find_inline_span(stem: str, options: dict[str, str]) -> tuple[int, int] | None:
     if options_are_parse_debris(options):
         return None
@@ -399,12 +493,15 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
     stem = strip_leading_question_number(stem, uid)
     stem = strip_page_furniture(stem)
     stem = DEGREE_CID.sub("°", stem)
+    stem = strip_figure_dump_runs(stem)
+    stem = join_wrapped_prose(stem)
     after_qnum = stem
 
     if out.get("options_are_figure") or options_are_parse_debris(options):
+        stem = repair_scientific_notation(stem)
         out["stem"] = stem
         out["stem_lead"] = stem
-        out["options"] = options
+        out["options"] = {k: repair_scientific_notation(str(v)) for k, v in options.items()}
         return out
 
     legend = parse_legend(stem + "\n" + "\n".join(str(v) for v in options.values()))
@@ -424,12 +521,6 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
         end = extend_block_end(lines, d, uid)
         header_lines = [ln.strip() for ln in lines[hs:a] if ln.strip()]
         headers: list[str] = []
-        if header_lines:
-            # last header line is the column labels when it is a short token row
-            last = header_lines[-1]
-            toks = last.split()
-            if 2 <= len(toks) <= 6 and all(len(t) <= 24 for t in toks):
-                headers = toks
 
         row_cells: list[list[str]] = []
         for let in "ABCD":
@@ -448,10 +539,7 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
         if row_cells and len({len(r) for r in row_cells}) == 1:
             ncell = len(row_cells[0])
             if ncell >= 2:
-                if headers and len(headers) != ncell:
-                    headers = []
-                if not headers:
-                    headers = [""] * ncell
+                headers = parse_column_headers(header_lines, ncell)
                 already = any(
                     (t.get("row_labels") or [])[:4] == list("ABCD") for t in tables if isinstance(t, dict)
                 )
@@ -488,6 +576,10 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
     if not (stem or "").strip() and (after_qnum or original).strip():
         stem = after_qnum or original
 
+    stem = repair_scientific_notation(stem)
+    for k, v in list(options.items()):
+        options[k] = repair_scientific_notation(str(v))
+
     out["stem"] = stem
     out["stem_lead"] = stem
     out["options"] = options
@@ -520,8 +612,63 @@ def _selftest() -> None:
     assert not r["stem"].startswith("22 "), r["stem"][:40]
     assert "A 1 f" not in r["stem"], r["stem"]
     assert "½" in r["options"]["A"], r["options"]
-    assert "A 1 f" not in r["stem"]
     assert r["options"]["B"].count("½") >= 1, r["options"]
+
+    q22_dump = {
+        "stem": (
+            "22 The graph shows the variation with time of the displacement of two separate waves X and Y.\n"
+            "displacement\nwave Y\n0\n0 time\nwave X\n"
+            "Wave X has frequency f and amplitude A .\n"
+            "What is the frequency and what is the amplitude of wave Y?\n"
+            "frequency amplitude\n"
+            "A 1 f 1 A\n2 2\nB 1 f 2 A\n2\nC 2 f 1 A\n2\nD 2 f 2 A\n12"
+        ),
+        "options": {"A": "1 f 1 A", "B": "1 f 2 A", "C": "2 f 1 A", "D": "2 f 2 A"},
+    }
+    r = sanitize_item("9702_m16_qp_12:q22", q22_dump)
+    assert "\nwave Y\n" not in "\n" + r["stem"] + "\n"
+    assert "0 time" not in r["stem"]
+    assert "Wave X has frequency" in r["stem"]
+    assert r["stem"].count("\n") <= 3, r["stem"]
+
+    q21 = {
+        "stem": (
+            "21 A distant star is receding from the Earth with a speed of 1.40 × 10 7 m s –1 . It emits light of\n"
+            "frequency 4.57 × 10 14 Hz. The speed of light is 3.00 × 10 8 m s –1 .\n"
+            "What will be the frequency of this light when detected on Earth?\n"
+            "A 2.04 × 10 13 Hz\nB 4.37 × 10 14 Hz\nC 4.57 × 10 14 Hz\nD 4.79 × 10 14 Hz"
+        ),
+        "options": {
+            "A": "2.04 × 10 13 Hz",
+            "B": "4.37 × 10 14 Hz",
+            "C": "4.57 × 10 14 Hz",
+            "D": "4.79 × 10 14 Hz",
+        },
+    }
+    r = sanitize_item("9702_m16_qp_12:q21", q21)
+    assert "× 10⁷" in r["stem"], r["stem"]
+    assert "m s⁻¹" in r["stem"], r["stem"]
+    assert "× 10¹⁴" in r["stem"], r["stem"]
+    assert "of\nfrequency" not in r["stem"]
+    assert "× 10¹³" in r["options"]["A"], r["options"]
+
+    q24 = {
+        "stem": (
+            "24 The diagram shows two waves R and S.\n"
+            "displacement\nwave R\n0\n0 time\nwave S\n"
+            "Wave R has an amplitude of 8 cm and a period of 30 ms.\n"
+            "What are the amplitude and the period of wave S?\n"
+            "amplitude / cm period / ms\n"
+            "A 2 10\nB 2 90\nC 4 10\nD 4 90\n12"
+        ),
+        "options": {"A": "2 10", "B": "2 90", "C": "4 10", "D": "4 90"},
+    }
+    r = sanitize_item("9702_m17_qp_12:q24", q24)
+    assert "\nwave R\n" not in "\n" + r["stem"] + "\n"
+    assert "0 time" not in r["stem"]
+    assert "amplitude / cm" not in r["stem"]
+    tbl = r.get("tables") or []
+    assert tbl and "amplitude" in " ".join(tbl[0].get("headers") or []), tbl
 
     q26 = {
         "stem": (

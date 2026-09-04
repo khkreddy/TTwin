@@ -110,7 +110,7 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 **Solution.** Deploy-time overlay `tools/learner_display.py` (does **not** rewrite frozen exam.v1 or CMS). Gate leading-number strip on `:qN`. Peel the A–D block from the stem when options already exist. Rebuild stacked ½ fractions and cid tick/cross matrices to the chemistry shape (table + `frequency ½ f; amplitude ½ A`). `(cid:1)` after a number is °, not a tick. Refuse to strip when A–D in the stem are figure labels (`A , B , C and D`).
 
-**Deploy check.** `9702_m16_qp_12:q22` — no leading `22`; one frequency/amplitude table; options `½ f` / `½ A`. `9702_m17_qp_12:q26` — A–D not repeated in the stem. Chemistry `10 g of ammonium nitrate` unchanged.
+**Deploy check.** `9702_m16_qp_12:q22` — no leading `22`; no dumped axis labels (`displacement` / `wave Y`); one frequency/amplitude table; options `½ f` / `½ A`. `9702_m16_qp_12:q21` — `1.40 × 10⁷ m s⁻¹` not `10 7 m s –1`. Chemistry `10 g of ammonium nitrate` unchanged.
 
 ---
 
