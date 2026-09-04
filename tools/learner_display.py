@@ -664,6 +664,120 @@ def normalize_tikz_source(code: str) -> str:
     return "\\begin{tikzpicture}\n" + t + "\n\\end{tikzpicture}"
 
 
+def _skip_bracket_opts(s: str, j: int) -> int:
+    if j >= len(s) or s[j] != "[":
+        return j
+    depth = 0
+    k = j
+    while k < len(s):
+        ch = s[k]
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                return k + 1
+        k += 1
+    return j
+
+
+def _find_env(s: str, name: str, start: int = 0) -> tuple[int, int, str, str] | None:
+    token = "\\begin{" + name + "}"
+    i = s.find(token, start)
+    if i < 0:
+        return None
+    j = _skip_bracket_opts(s, i + len(token))
+    endtok = "\\end{" + name + "}"
+    e = s.find(endtok, j)
+    if e < 0:
+        return None
+    end = e + len(endtok)
+    return i, end, s[i:j], s[j:e]
+
+
+def _strip_axis_placement(header: str) -> str:
+    """Drop at=/anchor= so a split graph sits in its own picture, not on top of Fig. 1."""
+    if "[" not in header:
+        return header
+    pre, rest = header.split("[", 1)
+    if not rest.endswith("]"):
+        return header
+    inner = rest[:-1]
+    inner = re.sub(r"\bat\s*=\s*\{[^{}]*\}\s*,?", "", inner)
+    inner = re.sub(r"\banchor\s*=\s*[^,\[\]]+\s*,?", "", inner)
+    inner = re.sub(r",\s*,", ",", inner).strip(" ,")
+    return pre + "[" + inner + "]" if inner else pre.rstrip()
+
+
+def _split_axis_from_picture(block: str) -> list[str]:
+    """One tikzpicture that holds a drawing AND a pgfplots axis → two pictures."""
+    found = _find_env(block, "tikzpicture") or _find_env(block, "circuitikz")
+    if not found:
+        return [block]
+    _i, _e, header, body = found
+    env = "circuitikz" if "circuitikz" in header[:24] else "tikzpicture"
+    opt_m = re.match(r"\\begin\{(?:tikzpicture|circuitikz)\}(\[.*\])?\s*$", header, re.S)
+    opts = opt_m.group(1) if opt_m and opt_m.group(1) else ""
+    axes: list[tuple[int, int, str, str]] = []
+    pos = 0
+    while True:
+        ax = _find_env(body, "axis", pos)
+        if not ax:
+            break
+        axes.append(ax)
+        pos = ax[1]
+    if not axes:
+        return [block]
+    other = body
+    for a0, a1, _h, _b in reversed(axes):
+        other = other[:a0] + other[a1:]
+    if not re.search(r"\\(draw|node|foreach|fill|path)\b", other):
+        return [block]
+    parts: list[str] = []
+    before = body[: axes[0][0]].strip()
+    if before:
+        parts.append("\\begin{" + env + "}" + opts + "\n" + before + "\n\\end{" + env + "}")
+    for n, (a0, a1, aheader, abody) in enumerate(axes):
+        nxt = axes[n + 1][0] if n + 1 < len(axes) else len(body)
+        tail = body[a1:nxt].strip()
+        pic = _strip_axis_placement(aheader) + abody + "\\end{axis}"
+        if tail:
+            pic += "\n" + tail
+        parts.append("\\begin{tikzpicture}\n" + pic + "\n\\end{tikzpicture}")
+    return parts or [block]
+
+
+def split_tikz_figures(code: str) -> list[str]:
+    """Guardrail: two printed figures must not share one overlapping coordinate system."""
+    t = normalize_tikz_source(code or "")
+    if not t:
+        return []
+    blocks: list[str] = []
+    pos = 0
+    while pos < len(t):
+        nxt = None
+        for name in ("tikzpicture", "circuitikz"):
+            hit = _find_env(t, name, pos)
+            if hit and (nxt is None or hit[0] < nxt[0]):
+                nxt = hit
+        if nxt is None:
+            break
+        i, e, _h, _b = nxt
+        blocks.append(t[i:e])
+        pos = e
+    if not blocks:
+        return [t]
+    out: list[str] = []
+    for b in blocks:
+        out.extend(_split_axis_from_picture(b))
+    return out
+
+
+def separate_tikz_figures(code: str) -> str:
+    parts = split_tikz_figures(code)
+    return "\n\n".join(parts) if parts else (code or "")
+
+
 def parse_column_headers(header_lines: list[str], ncell: int) -> list[str]:
     header_lines = [h for h in header_lines if h and not re.fullmatch(r"[\d\s]+", h)]
     last = header_lines[-1] if header_lines else ""
@@ -970,6 +1084,20 @@ def _selftest() -> None:
     assert infer_tikz_packages("x", ["circuitikz (options: european,straightvoltages)"]) == ["circuitikz"]
     assert "circuitikz" not in infer_tikz_packages("\\begin{tikzpicture}\\draw (0,0)--(1,0);\\end{tikzpicture}", ["tikz"])
     assert normalize_tikz_source("\\begin{circuitikz}\\draw (0,0);\\end{circuitikz}").startswith("\\begin{circuitikz}")
+    q3_tikz = (
+        "\\begin{tikzpicture}[font=\\sffamily]\\draw[thick] (-2.8,4.1)--(2.8,5.0); "
+        "\\node{Fig. 3.1}; "
+        "\\begin{axis}[at={(-1.35,-2.4)},anchor=south west,width=7.2cm] "
+        "\\addplot coordinates {(7,0.3)}; \\end{axis} "
+        "\\node{Fig. 3.2};\\end{tikzpicture}"
+    )
+    parts = split_tikz_figures(q3_tikz)
+    assert len(parts) == 2, parts
+    assert "Fig. 3.1" in parts[0] and "axis" not in parts[0]
+    assert "\\begin{axis}" in parts[1] and "at={(-1.35,-2.4)}" not in parts[1]
+    assert "Fig. 3.2" in parts[1]
+    joined = separate_tikz_figures(q3_tikz)
+    assert joined.count("\\begin{tikzpicture}") == 2
     assert "\\begin{tikzpicture}" in normalize_tikz_source("\\draw (0,0)--(1,0);")
 
     q29 = {

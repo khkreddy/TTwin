@@ -13,7 +13,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from learner_display import infer_tikz_packages, normalize_tikz_source, sanitize_item
+from learner_display import infer_tikz_packages, normalize_tikz_source, sanitize_item, separate_tikz_figures
 
 AWM = Path("/home/harik/awm_build")
 OUT = Path(__file__).resolve().parents[1] / "data"
@@ -261,7 +261,7 @@ def extract_tikz(o: dict) -> tuple[str | None, list[str]]:
         return None, []
     code = tj["code"]
     pkgs = infer_tikz_packages(code, tj.get("preamble_packages") or [])
-    return normalize_tikz_source(code), pkgs
+    return separate_tikz_figures(normalize_tikz_source(code)), pkgs
 
 
 def load_exam_index(uids: set[str]) -> dict:

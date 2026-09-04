@@ -142,15 +142,28 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D13 · Two figures in one TikZ picture overlap
+
+**Symptom.** `9702_m17_qp_22:q3`: Fig. 3.1 (car on a slope) and Fig. 3.2 (F_D vs v graph) render on top of each other.
+
+**Root cause.** One `\begin{tikzpicture}` holds the car drawing and a `\begin{axis}` placed with `at={(-1.35,-2.4)}` whose height collides with the car. The printed paper stacks them. Display inherited the encoding’s overlapping coordinates.
+
+**Solution.** Overlay `split_tikz_figures` / `separate_tikz_figures` (does **not** rewrite frozen exam.v1). If a picture contains both ordinary draws and a pgfplots axis, emit two `tikzpicture`s. Strip `at=` / `anchor=` on the split graph. Renderer mounts each block in its own TikZJax slot with vertical gap. Corpus-wide at TTwin pack time and internal figure review.
+
+**Deploy check.** `9702_m17_qp_22:q3` — two stacked figures, car not on the graph. Cache-bust `?v=12`.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles (circuitikz pack is `v=11`).
+3. Bump `?v=` on `index.html` scripts/styles (two-figure split is `v=12`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
 5c. Spot: `0625_m16_qp_12:q32` (circuit draws), `0625_m16_qp_22:q23` (one-sentence stem).
 5d. Internal review only: Modify tab Apply uses `temperature: 1`; the figure redraws. Not a Pages check.
+5e. Spot: `9702_m17_qp_22:q3` — Fig. 3.1 and Fig. 3.2 stacked, not overlapping.
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.

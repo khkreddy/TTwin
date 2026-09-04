@@ -68,6 +68,19 @@
     if (!stem.length) return "";
     return "<div class='smiles-row'>" + stem.map((s) => molCard(s, true)).join("") + "</div>";
   }
+  function forTikzJax(code) {
+    return String(code || "")
+      .replace(/\\begin\{circuitikz\}/g, "\\begin{tikzpicture}")
+      .replace(/\\end\{circuitikz\}/g, "\\end{tikzpicture}");
+  }
+  function splitTikzBlocks(code) {
+    const t = forTikzJax(code);
+    const blocks = [];
+    const re = /\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/g;
+    let m;
+    while ((m = re.exec(t))) blocks.push(m[0]);
+    return blocks.length ? blocks : (t ? [t] : []);
+  }
   function figHTML(it) {
     const code = String(it.tikz || "").trim();
     if (!code) return "";
@@ -75,12 +88,14 @@
     const pkgAttr = pkgs.length
       ? " data-packages='" + esc(JSON.stringify(Object.fromEntries(pkgs.map((p) => [p, ""])))) + "'"
       : "";
-    return (
-      "<div class='fig tikz-slot'" + pkgAttr + ">" +
-      "<pre class='tikz-src' hidden>" + esc(code) + "</pre>" +
-      "<p class='muted tikz-wait'>Drawing figure…</p>" +
-      "</div>"
-    );
+    return splitTikzBlocks(code).map(function (one) {
+      return (
+        "<div class='fig tikz-slot'" + pkgAttr + ">" +
+        "<pre class='tikz-src' hidden>" + esc(one) + "</pre>" +
+        "<p class='muted tikz-wait'>Drawing figure…</p>" +
+        "</div>"
+      );
+    }).join("");
   }
   function statementsHTML(it) {
     const s = it.statements || [];
@@ -150,7 +165,7 @@
       s.type = "text/tikz";
       const pkgs = slot.getAttribute("data-packages");
       if (pkgs) s.setAttribute("data-tex-packages", pkgs);
-      s.textContent = pre.textContent;
+      s.textContent = forTikzJax(pre.textContent);
       const wait = slot.querySelector(".tikz-wait");
       if (wait) wait.remove();
       pre.remove();
