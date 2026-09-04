@@ -136,7 +136,9 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 **Solution.** Send `temperature: 1` (or omit the field). Do not send `top_p`. Unwrap accidental `\begin{tikzpicture}…\begin{circuitikz}`. Public TTwin still does not display “Kimi”.
 
-**Deploy check.** Modify a circuit (`0625_m16_qp_12:q32`): prompt, Apply, right pane shows the new diagram. Revert restores the packed TikZ.
+Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch never returns. Figure Modify uses `reasoning_effort: "low"`, 4096 completion tokens, a 90s abort, and an elapsed-second status. Typical 20–60s.
+
+**Deploy check.** Modify a circuit (`0625_m16_qp_12:q32`): prompt, Apply, right pane shows the new diagram. Revert restores the packed TikZ. Status must not sit on “editing…” past 90s.
 
 ---
 
