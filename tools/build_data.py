@@ -13,6 +13,8 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from learner_display import sanitize_item
+
 AWM = Path("/home/harik/awm_build")
 OUT = Path(__file__).resolve().parents[1] / "data"
 
@@ -210,14 +212,15 @@ def slim_tables(tables) -> list:
     for t in tables or []:
         if not isinstance(t, dict):
             continue
-        out.append(
-            {
-                "headers": t.get("headers") or [],
-                "rows": t.get("rows") or [],
-                "row_labels": t.get("row_labels") or [],
-                "caption": t.get("caption"),
-            }
-        )
+        row = {
+            "headers": t.get("headers") or [],
+            "rows": t.get("rows") or [],
+            "row_labels": t.get("row_labels") or [],
+            "caption": t.get("caption"),
+        }
+        if t.get("is_option_table"):
+            row["is_option_table"] = True
+        out.append(row)
     return out
 
 
@@ -316,6 +319,9 @@ def load_exam_index(uids: set[str]) -> dict:
                     rec.pop("tables")
                 if not rec["structures"]:
                     rec.pop("structures")
+                rec = sanitize_item(uid, rec)
+                if not rec.get("tables"):
+                    rec.pop("tables", None)
                 found[uid] = rec
                 if len(found) == len(uids):
                     return found

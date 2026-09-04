@@ -102,6 +102,18 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 ---
 
+## D10 · Source question numbers, duplicated A–D, smashed option matrices (phy / bio / maths)
+
+**Symptom.** `9702_m16_qp_12:q22`: stem still starts with `22`, the frequency/amplitude matrix is flattened (`A 1 f 1 A` / `2 2`), and A–D then print again as options. `9702_m17_qp_12:q26`: the M/N list is in the stem **and** as options. Same furniture across physics and biology. Chemistry was already clean.
+
+**Root cause.** Chemistry extract strips the printed question number (only when it matches the source number — `10 g of ammonium nitrate` is content, see `stage1_cleanup.py`) and stores A–D once, with tick matrices as tables of ✓/✗. Physics/biology CMS stems are still page transcriptions. TTwin then rendered stem + options.
+
+**Solution.** Deploy-time overlay `tools/learner_display.py` (does **not** rewrite frozen exam.v1 or CMS). Gate leading-number strip on `:qN`. Peel the A–D block from the stem when options already exist. Rebuild stacked ½ fractions and cid tick/cross matrices to the chemistry shape (table + `frequency ½ f; amplitude ½ A`). `(cid:1)` after a number is °, not a tick. Refuse to strip when A–D in the stem are figure labels (`A , B , C and D`).
+
+**Deploy check.** `9702_m16_qp_12:q22` — no leading `22`; one frequency/amplitude table; options `½ f` / `½ A`. `9702_m17_qp_12:q26` — A–D not repeated in the stem. Chemistry `10 g of ammonium nitrate` unchanged.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
@@ -109,5 +121,6 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 3. Bump `?v=` on `index.html` scripts/styles (ISO-GEN teacher-prompt is `v=6`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
+5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.
