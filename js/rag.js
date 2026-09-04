@@ -325,6 +325,13 @@
     }
     return out;
   }
+  function solutionOf(uid, sha, byUid) {
+    if (!uid || !byUid) return null;
+    const rec = byUid[uid];
+    if (!rec) return null;
+    if (sha && rec.item_sha256 && rec.item_sha256 !== sha) return null;
+    return rec;
+  }
   g.TTwinRag = {
     assemble,
     hingePack,
@@ -333,6 +340,7 @@
     bandForPack,
     nodesComparable,
     seededShuffle,
+    solutionOf,
     CAP,
     PACK_BAND,
   };

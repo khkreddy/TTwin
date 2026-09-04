@@ -10,24 +10,49 @@
       .replace(/&lt;sub&gt;/gi, "<sub>").replace(/&lt;\/sub&gt;/gi, "</sub>")
       .replace(/&lt;sup&gt;/gi, "<sup>").replace(/&lt;\/sup&gt;/gi, "</sup>");
   }
-  function tableHTML(t) {
+  function optionTableOf(it) {
+    return ((it && it.tables) || []).find((t) => t && t.is_option_table) || null;
+  }
+  function tableHTML(t, opts) {
     if (!t) return "";
+    opts = opts || {};
     const headers = t.headers || [];
     const rows = t.rows || [];
     const labels = t.row_labels || [];
     const showLab = labels.length > 0;
-    return '<div class="fig"><table class="exam"><thead><tr>' +
-      (showLab ? "<th></th>" : "") +
-      headers.map((h) => "<th>" + chem(h) + "</th>").join("") +
-      "</tr></thead><tbody>" +
-      rows.map((row, i) => {
-        return "<tr>" + (showLab ? "<th>" + chem(labels[i] || "") + "</th>" : "") +
-          (row || []).map((c) => "<td>" + chem(c) + "</td>").join("") +
-          "</tr>";
-      }).join("") +
-      "</tbody></table>" +
+    const interactive = !!opts.interactive;
+    const chosen = optionLetter(opts.chosen);
+    const reveal = !!opts.reveal;
+    const key = optionLetter(opts.correct);
+    const showHead = headers.some((h) => String(h || "").trim());
+    const thead = showHead
+      ? "<thead><tr>" + (showLab ? "<th></th>" : "") +
+        headers.map((h) => "<th>" + chem(h) + "</th>").join("") + "</tr></thead>"
+      : "";
+    const body = rows.map((row, i) => {
+      const L = optionLetter(labels[i]) || "";
+      const cls = [];
+      if (interactive && L) cls.push("opt-row");
+      if (chosen && L && chosen === L) cls.push("sel");
+      if (reveal && key && L === key) cls.push("key");
+      if (reveal && chosen && L && chosen === L && key && chosen !== key) cls.push("miss");
+      const attrs = [];
+      if (cls.length) attrs.push("class='" + cls.join(" ") + "'");
+      if (interactive && L) {
+        attrs.push("data-opt='" + L + "'");
+        attrs.push("tabindex='0'");
+        attrs.push("role='button'");
+        if (chosen === L) attrs.push("aria-pressed='true'");
+      }
+      return "<tr" + (attrs.length ? " " + attrs.join(" ") : "") + ">" +
+        (showLab ? "<th>" + chem(labels[i] || "") + "</th>" : "") +
+        (row || []).map((c) => "<td>" + chem(c) + "</td>").join("") +
+        "</tr>";
+    }).join("");
+    const cls = "exam" + (t.is_option_table ? " opt-table" : "");
+    return '<div class="fig">' +
       (t.caption ? '<div class="cap">' + chem(t.caption) + "</div>" : "") +
-      "</div>";
+      "<table class='" + cls + "'>" + thead + "<tbody>" + body + "</tbody></table></div>";
   }
   function eqHTML(text) {
     const raw = String(text == null ? "" : text);
@@ -117,6 +142,7 @@
   }
   function optionsHTML(it, opts) {
     opts = opts || {};
+    if (optionTableOf(it)) return "";
     const o = it.options || {};
     let keys = ["A", "B", "C", "D"].filter((k) =>
       (o[k] != null && o[k] !== "") ||
@@ -164,13 +190,16 @@
     const n = i == null ? "" : (i + 1);
     const uid = it.uid || it.item_uid || "";
     const eqs = (it.equations || []).map(eqHTML).join("");
-    const tables = (it.tables || []).map(tableHTML).join("");
     const chosen = opts.responses ? opts.responses[uid] : opts.chosen;
     const optOpts = {
       interactive: opts.interactive,
       chosen: chosen,
       reveal: opts.reveal,
+      correct: it.correct,
     };
+    const stemTables = ((it.tables || []).filter((t) => !t.is_option_table)).map((t) => tableHTML(t)).join("");
+    const optTable = optionTableOf(it);
+    const optTableHtml = optTable ? tableHTML(optTable, optOpts) : "";
     return (
       "<article class='q' id='q-" + esc(uid) + "' data-uid='" + esc(uid) + "'>" +
       "<div><span class='qnum'>" + esc(n) + "</span>" +
@@ -178,11 +207,52 @@
       (it.modified && opts.showUid !== false ? " <span class='tag'>modified</span>" : "") +
       "</div>" +
       "<p class='stem'>" + chem(it.stem || it.stem_lead || "(no stem — tagged only)") + "</p>" +
-      eqs + tables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
-      optionsHTML(it, optOpts) +
+      eqs + stemTables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
+      optTableHtml + optionsHTML(it, optOpts) +
       toolsHTML(it, opts) +
       "</article>"
     );
+  }
+  function analysisHTML(it, i) {
+    const a = it.analysis;
+    if (!a) return "";
+    const n = i + 1;
+    const uid = it.uid || it.item_uid || "";
+    const opts = a.options || {};
+    const letters = ["A", "B", "C", "D"].filter((k) => opts[k] || (it.options && it.options[k]));
+    const mapBits = [];
+    if (a.map && a.map.chapter_title) mapBits.push(a.map.chapter_title);
+    if (a.map && a.map.decision) mapBits.push(a.map.decision);
+    return "<article class='key-q'>" +
+      "<div><span class='qnum'>" + esc(n) + "</span> " +
+      "<span class='tag'>" + esc(a.correct || it.correct || "?") + "</span> " +
+      "<span class='uid'>" + esc(uid) + "</span></div>" +
+      (a.rationale ? "<p>" + esc(a.rationale) + "</p>" : "") +
+      (mapBits.length ? "<p class='muted'>" + mapBits.map(esc).join(" · ") + "</p>" : "") +
+      letters.map((k) => {
+        const row = opts[k] || {};
+        const mx = (row.mx || []).map((m) => esc((m.type || "") + (m.cwo ? " — " + m.cwo : ""))).join("; ");
+        const enr = (row.enrichment || []).map((e) => esc(e.statement || e.item_id || "")).join(" ");
+        return "<div class='mx'><b>" + esc(k) + " · " + esc(row.role || "") + "</b> " +
+          esc(row.why || "") +
+          (mx ? "<div class='muted'>mx (unverified): " + mx + "</div>" : "") +
+          (enr ? "<div class='muted'>enrichment: " + enr + "</div>" : "") +
+          "</div>";
+      }).join("") +
+      (a.honesty ? "<p class='muted'>" + esc(a.honesty) + "</p>" : "") +
+      "</article>";
+  }
+  function answerKeyHTML(meta, items) {
+    const title = (meta && meta.title) || "Paper";
+    const head =
+      "<div class='hdr'><div class='board'>Teacher's Twin</div>" +
+      "<div class='subj'>Answer key</div>" +
+      "<div class='papername'>" + esc(title) + "</div>" +
+      "<p class='cap'>Teacher sheet · not a published mark scheme · mix-ups unverified · not printed on the learner paper</p></div><hr class='rule'/>";
+    const rows = (items || []).map((it, i) => analysisHTML(it, i)).join("");
+    return "<div class='paper answer-key'>" + head +
+      (rows || "<p class='muted'>No stored analysis yet.</p>") +
+      "</div>";
   }
   function paperHTML(meta, items, opts) {
     opts = opts || {};
@@ -195,7 +265,9 @@
       "<p class='cap'>" + esc(meta.subtitle || "") + " · " + items.length + " questions" +
       (meta.seed ? " · seed " + esc(meta.seed) : "") + "</p></div><hr class='rule'/>";
     const itemOpts = Object.assign({ showUid: true }, opts);
-    return "<div class='paper'>" + head + items.map((it, i) => itemHTML(it, i, itemOpts)).join("") + "</div>";
+    const learner = "<div class='paper'>" + head + items.map((it, i) => itemHTML(it, i, itemOpts)).join("") + "</div>";
+    const key = opts && opts.withKey && !opts.interactive ? answerKeyHTML(meta, items) : "";
+    return learner + key;
   }
   function mountTikz(root) {
     root.querySelectorAll(".tikz-slot").forEach((slot) => {
@@ -241,5 +313,5 @@
     mountTikz(root);
     mountSmiles(root);
   }
-  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, mount, optionLetter };
+  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, answerKeyHTML, mount, optionLetter, optionTableOf };
 })(window);

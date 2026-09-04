@@ -511,9 +511,64 @@ Rules:
     return extractJson(content);
   }
 
+  function analyzeSys(subject) {
+    const lab = subjectLabel(subject);
+    return `You write a teacher answer-key analysis for ${lab} multiple-choice items.
+There is NO published mark scheme. Say so in honesty.
+Return ONLY JSON:
+{"items":[{"item_uid":"...","correct":"A"|"B"|"C"|"D",
+  "rationale":"one short paragraph for the key",
+  "map":{"unit_ids":[],"nodes":[],"chapter_title":null,"decision":"one clause"},
+  "options":{
+    "A":{"role":"key"|"distractor","why":"one clause","mx":[{"type":null,"cwo":null}],"enrichment":[{"item_id":null,"statement":null}]},
+    "B":{"role":"key"|"distractor","why":"one clause","mx":[],"enrichment":[]},
+    "C":{"role":"key"|"distractor","why":"one clause","mx":[],"enrichment":[]},
+    "D":{"role":"key"|"distractor","why":"one clause","mx":[],"enrichment":[]}
+  }}]}
+Laws:
+- item_uid must be copied from the payload.
+- correct is your best letter. Recalculate from stem and options.
+- Map unit_ids and nodes must be copied from the supplied map slice. Do not invent ids.
+- Mix-up (mx) rows must be copied from the supplied mx list (type + cwo). Status is CANDIDATE / unverified. If none fit, mx [].
+- Enrichment statements must be copied from the supplied enrichment. If none fit, enrichment [].
+- Do not dump the map. Do not write examiner comments onto a learner stem.
+- honesty is always: not a published mark scheme.`;
+  }
+
+  async function analyzeSolutions(items, slices, ctx) {
+    ctx = ctx || {};
+    const payload = {
+      subject: ctx.subject || "chemistry",
+      map_status: ctx.mapStatus || null,
+      honesty: "not a published mark scheme",
+      items: (items || []).map((it) => {
+        const uid = it.uid || it.item_uid;
+        const sl = (slices && slices[uid]) || {};
+        const tab = ((it.tables || []).find((t) => t && t.is_option_table)) || null;
+        return {
+          item_uid: uid,
+          stem: String(it.stem || it.stem_lead || "").slice(0, 900),
+          options: it.options || {},
+          option_table: tab ? { headers: tab.headers || [], rows: tab.rows || [], caption: tab.caption || "" } : null,
+          node: it.node || null,
+          chapter_label: it.chapter_label || null,
+          map: sl.units || [],
+          mx: sl.mx || [],
+          enrichment: sl.enrichment || [],
+        };
+      }),
+    };
+    const content = await chat([
+      { role: "system", content: analyzeSys(ctx.subject) },
+      { role: "user", content: JSON.stringify(payload) },
+    ], { reasoning_effort: "low", max_tokens: 4096, timeout_ms: 90000, onTick: ctx.onTick });
+    const out = extractJson(content);
+    return out.items || [];
+  }
+
   g.TTwinKimi = {
     getKey, setKey, getProxy, setProxy, endpoint, chat,
     inferSelector, inferIsoIntent, authorItem, modifyItem, inferKeys, gradePaper,
-    lessonProse, mapJournalNote, extractJson, MODEL,
+    analyzeSolutions, lessonProse, mapJournalNote, extractJson, MODEL,
   };
 })(window);

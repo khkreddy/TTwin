@@ -45,6 +45,7 @@
         jget("data/enrichment.json"),
         jget("data/projection.json"),
       ]);
+      if (window.TTwinSolutions) await TTwinSolutions.boot();
       S.meta = meta;
       S.catalog = subjects.subjects || [];
       S.nodes = nodes; S.hinges = hinges;
@@ -516,6 +517,85 @@
     return uids.map((u) => S.stems[u] || S.nav.find((r) => r.uid === u) || { uid: u });
   }
 
+  function mapSliceForItem(it) {
+    const node = it.node || it.node_id;
+    const units = mapUnits().filter((h) =>
+      !node || TTwinRag.nodesComparable(h.node_id || h.node, node)
+    ).slice(0, 6);
+    const mx = [];
+    units.forEach((h) => {
+      (h.mx || []).slice(0, 3).forEach((m) => {
+        if (mx.length < 8) mx.push({ type: m.type, cwo: m.cwo, status: m.status, unit_id: h.unit_id });
+      });
+    });
+    const unitIds = new Set(units.map((h) => h.unit_id));
+    const enrichment = (S.enrichment || []).filter((e) =>
+      (e.serves || []).some((u) => unitIds.has(u)) || (node && TTwinRag.nodesComparable(e.node, node))
+    ).slice(0, 4).map((e) => ({
+      item_id: e.item_id, type: e.type, statement: e.statement, node: e.node,
+    }));
+    return {
+      units: units.map((h) => ({
+        unit_id: h.unit_id,
+        node: h.node || h.node_id,
+        chapter_title: h.chapter_title || h.chapter,
+        decision_hinge: h.decision_hinge,
+        status: h.status || null,
+      })),
+      mx,
+      enrichment,
+    };
+  }
+
+  async function ensureAnalyses(items, statusEl) {
+    if (window.TTwinSolutions) await TTwinSolutions.boot();
+    const missing = [];
+    let nRag = 0;
+    for (const it of items) {
+      const uid = it.uid || it.item_uid;
+      const sha = window.TTwinSolutions ? await TTwinSolutions.fingerprint(it) : "";
+      it.item_sha256 = sha;
+      const rec = window.TTwinSolutions ? TTwinSolutions.get(uid, sha) : null;
+      if (rec) {
+        it.analysis = rec;
+        if (rec.correct && !it.correct) it.correct = rec.correct;
+        nRag += 1;
+      } else {
+        missing.push(it);
+      }
+    }
+    if (!missing.length) return { n_new: 0, n_rag: nRag };
+    if (statusEl) statusEl.textContent = "Writing answer-key analysis for " + missing.length + " new item(s)…";
+    const slices = {};
+    missing.forEach((it) => { slices[it.uid || it.item_uid] = mapSliceForItem(it); });
+    let written = [];
+    try {
+      written = await TTwinKimi.analyzeSolutions(missing, slices, {
+        subject: S.subject,
+        mapStatus: S.mapStatus,
+        onTick: (s) => { if (statusEl) statusEl.textContent = "Writing answer-key analysis… " + s + "s"; },
+      });
+    } catch (e) {
+      if (statusEl) statusEl.textContent = "Paper assembled. Analysis not written: " + e.message;
+      return { n_new: 0, n_rag: nRag, error: e.message };
+    }
+    for (const rec of written) {
+      if (!rec || !rec.item_uid) continue;
+      rec.schema = "awm.solution_analysis.v1";
+      rec.honesty = rec.honesty || "not a published mark scheme";
+      rec.utc = new Date().toISOString();
+      rec.model = TTwinKimi.MODEL;
+      const it = missing.find((x) => (x.uid || x.item_uid) === rec.item_uid);
+      if (it) rec.item_sha256 = it.item_sha256;
+      if (window.TTwinSolutions) await TTwinSolutions.put(rec);
+      if (it) {
+        it.analysis = rec;
+        if (rec.correct) it.correct = rec.correct;
+      }
+    }
+    return { n_new: written.length, n_rag: nRag };
+  }
+
   function cloneItem(it) {
     return JSON.parse(JSON.stringify(it));
   }
@@ -532,6 +612,7 @@
       interactive: student,
       reveal: !!p.result,
       responses: p.responses || {},
+      withKey: !student,
     };
   }
   function paintPaper() {
@@ -633,6 +714,8 @@
       next.correct = edited.correct;
       next.rationale = edited.rationale;
       next.modified = true;
+      next.analysis = null;
+      next.item_sha256 = null;
       if (!edited.tikz_unchanged) {
         next.tikz = edited.tikz;
         next.tikz_packages = edited.tikz_packages;
@@ -716,7 +799,7 @@
     host.addEventListener("click", (e) => {
       const p = S.paper;
       if (!p) return;
-      const opt = e.target.closest("button.opt[data-opt]");
+      const opt = e.target.closest("button.opt[data-opt], tr.opt-row[data-opt]");
       if (opt && p.mode === "student" && !p.result) {
         const art = opt.closest("article.q");
         const uid = art && (art.getAttribute("data-uid") || (art.id || "").replace(/^q-/, ""));
@@ -727,6 +810,11 @@
           b.setAttribute("aria-pressed", on ? "true" : "false");
           const li = b.closest("li");
           if (li) li.classList.toggle("sel", on);
+        });
+        art.querySelectorAll("tr.opt-row[data-opt]").forEach((tr) => {
+          const on = tr.getAttribute("data-opt") === p.responses[uid];
+          tr.classList.toggle("sel", on);
+          tr.setAttribute("aria-pressed", on ? "true" : "false");
         });
         return;
       }
@@ -768,12 +856,12 @@
   function renderPaper() {
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Test maker</p><h1>Assemble a question paper</h1>" +
-      "<p class='sub'>Dropdown selector or a carried prompt retrieve. Shuffle is mulberry32 on the seed. Modify rewrites the whole item (stem, options, figure if needed) with ISO-GEN — text questions included. Take as student records A–D. Learner paper has no mx, no examiner comments, no crops.</p>" +
+      "<p class='sub'>Dropdown selector or a carried prompt retrieve. Shuffle is mulberry32 on the seed. Assembly also writes an answer key: first time a question is used, AI maps it onto the subject map and stores distractor analysis by uid; later papers retrieve that analysis with no provider call. Table options stay a table (student selects a row). Learner paper has no mx.</p>" +
       filtersHTML("tm") +
       "<div class='card'><div class='row'>" +
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
       "<div><label>Seed (empty = uid order)</label><input id='tm-seed' placeholder='optional'></div>" +
-      "<div><label>Jump to uid</label><input id='tm-jump' placeholder='9701_m16_qp_12:q5'></div>" +
+      "<div><label>Jump to uid</label><input id='tm-jump' placeholder='9702_m18_qp_12:q23'></div>" +
       "<div><label>Title</label><input id='tm-title' value='" + esc((S.spec && S.spec.label) || "Subject") + " paper'></div>" +
       "</div><p style='margin-top:10px'><button id='tm-go' type='button'>Make paper</button> " +
       "<button class='sec no-print' onclick='window.print()'>Print</button></p>" +
@@ -781,7 +869,8 @@
       "<label class='toggle'><input id='tm-student' type='checkbox'> Take this paper as a student</label> " +
       "<button id='tm-finish' class='sec hidden' type='button'>Finish and score</button> " +
       "<span class='muted' id='tm-grade-status'></span>" +
-      "<p class='muted'>Student mode hides Modify and records A–B–C–D. Score uses Modify keys where you rewrote an item; otherwise keys are AI-inferred, not a published mark scheme.</p>" +
+      "<p class='muted'>Student mode hides Modify, the answer key, and mix-up notes. Table items: select a row. Score uses stored analysis keys where present. Not a published mark scheme.</p>" +
+      "<p><button class='sec' id='tm-export' type='button'>Download new analyses</button></p>" +
       "</div></div>" +
       "<div id='tm-score'></div>" +
       "<div id='tm-out'></div>";
@@ -814,7 +903,32 @@
         result: null,
       };
       paintPaper();
+      const st = $("tm-grade-status");
+      const stats = await ensureAnalyses(S.paper.items, st);
+      S.paper.analysis_stats = stats;
+      paintPaper();
+      if (st && !stats.error) {
+        st.textContent = (stats.n_rag || 0) + " from stored analysis · " +
+          (stats.n_new || 0) + " newly written";
+      }
     };
+    const exp = $("tm-export");
+    if (exp) {
+      exp.onclick = () => {
+        const body = window.TTwinSolutions ? TTwinSolutions.exportJsonl() : "";
+        if (!body.trim()) {
+          const st = $("tm-grade-status");
+          if (st) st.textContent = "No new analyses in this browser yet.";
+          return;
+        }
+        const blob = new Blob([body], { type: "application/jsonl" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "ttwin-solutions.jsonl";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      };
+    }
     $("tm-student").onchange = () => {
       if (!S.paper) return;
       S.paper.mode = $("tm-student").checked ? "student" : "teacher";

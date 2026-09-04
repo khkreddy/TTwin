@@ -31,7 +31,8 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def do_OPTIONS(self):
-        if self.path.rstrip("/") == "/kimi":
+        path = self.path.rstrip("/")
+        if path in ("/kimi", "/solution"):
             self.send_response(204)
             self.send_header("Access-Control-Allow-Origin", "*")
             self.send_header("Access-Control-Allow-Headers", "Content-Type, X-Kimi-Key")
@@ -41,7 +42,11 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_error(404)
 
     def do_POST(self):
-        if self.path.rstrip("/") != "/kimi":
+        path = self.path.rstrip("/")
+        if path == "/solution":
+            self._save_solution()
+            return
+        if path != "/kimi":
             self.send_error(404)
             return
         n = int(self.headers.get("Content-Length") or 0)
@@ -70,6 +75,47 @@ class Handler(SimpleHTTPRequestHandler):
                 self.wfile.write(body)
         except Exception as ex:
             self._json(502, {"error": str(ex)[:400]})
+
+    def _save_solution(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        raw = self.rfile.read(n)
+        try:
+            rec = json.loads(raw.decode("utf-8"))
+        except Exception:
+            self._json(400, {"error": "invalid json"})
+            return
+        uid = rec.get("item_uid")
+        if not uid:
+            self._json(400, {"error": "missing item_uid"})
+            return
+        rec.setdefault("schema", "awm.solution_analysis.v1")
+        sol = ROOT / "data" / "solutions"
+        sol.mkdir(parents=True, exist_ok=True)
+        jsonl = sol / "items.jsonl"
+        with jsonl.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, ensure_ascii=False, separators=(",", ":")) + "\n")
+        by = {}
+        if jsonl.is_file():
+            for line in jsonl.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    row = json.loads(line)
+                except Exception:
+                    continue
+                u = row.get("item_uid")
+                if u:
+                    by[u] = row
+        index = {
+            "schema": "ttwin.solutions.v1",
+            "n": len(by),
+            "by_uid": by,
+        }
+        (sol / "index.json").write_text(
+            json.dumps(index, ensure_ascii=False, separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        self._json(200, {"ok": True, "item_uid": uid, "n": len(by)})
 
     def _json(self, code: int, obj: dict):
         body = json.dumps(obj).encode()

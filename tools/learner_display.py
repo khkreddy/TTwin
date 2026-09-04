@@ -322,6 +322,101 @@ def split_numeric_cells(text: str) -> list[str] | None:
     return None
 
 
+SCI_TOKEN = re.compile(r"10[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+")
+EM_NAMES = (
+    "visible light",
+    "radio waves",
+    "gamma rays",
+    "γ-rays",
+    "γ rays",
+    "x-rays",
+    "x rays",
+    "infra-red",
+    "infrared",
+    "ultra-violet",
+    "ultraviolet",
+    "microwaves",
+    "sound waves",
+    "gamma-rays",
+)
+
+
+def normalize_em_names(text: str) -> str:
+    t = text or ""
+    t = re.sub(r"γ\s*-?\s*rays", "γ-rays", t, flags=re.I)
+    t = re.sub(r"\bgamma\s*-?\s*rays\b", "γ-rays", t, flags=re.I)
+    t = re.sub(r"\bx\s*-?\s*rays\b", "X-rays", t, flags=re.I)
+    t = re.sub(r"\binfra\s*-?\s*red\b", "infra-red", t, flags=re.I)
+    t = re.sub(r"\bultra\s*-?\s*violet\b", "ultraviolet", t, flags=re.I)
+    t = re.sub(r"\bvisible\s+light\b", "visible light", t, flags=re.I)
+    return t
+
+
+def split_sci_cells(text: str) -> list[str] | None:
+    t = repair_scientific_notation(text or "")
+    cells = SCI_TOKEN.findall(t)
+    return cells if len(cells) >= 2 else None
+
+
+def split_named_cells(text: str) -> list[str] | None:
+    t = normalize_em_names(repair_scientific_notation(text or "")).strip()
+    if not t:
+        return None
+    low = t.lower()
+    cells: list[str] = []
+    i = 0
+    while i < len(t):
+        while i < len(t) and t[i].isspace():
+            i += 1
+        if i >= len(t):
+            break
+        hit = None
+        for name in sorted(EM_NAMES, key=len, reverse=True):
+            if low.startswith(name, i):
+                hit = t[i : i + len(name)]
+                i += len(name)
+                break
+        if hit:
+            cells.append(re.sub(r"\s+", " ", hit).strip())
+            continue
+        m = re.match(r"[^\s]+", t[i:])
+        if not m:
+            break
+        cells.append(m.group(0))
+        i += len(m.group(0))
+    if not (2 <= len(cells) <= 4):
+        return None
+    named = {n.lower() for n in EM_NAMES}
+    if any(c.lower() in named for c in cells):
+        return cells
+    if len(cells) == 2 and all(re.search(r"[A-Za-zγμµ]", c) and not SCI_TOKEN.search(c) for c in cells):
+        return cells
+    return None
+
+
+RATIO_STACK = re.compile(
+    r"(?im)^(The ratio)\s*\n"
+    r"([^\n=]+?)\s*\n"
+    r"=\s*([^\n]+?)\s*\n"
+    r"([^\n=]+?)(?=\n|$)"
+)
+
+
+def repair_stacked_ratio(stem: str) -> str:
+    """CMS stacks a printed fraction: numerator, = value, denominator."""
+
+    def repl(m: re.Match) -> str:
+        num = m.group(2).strip().rstrip(".")
+        den = m.group(4).strip().rstrip(".")
+        val = repair_scientific_notation(m.group(3).strip().rstrip("."))
+        qty = r"wavelength|frequency|energy|speed|period|intensity"
+        if re.search(qty, num, re.I) and re.search(qty, den, re.I):
+            return f"{m.group(1)} ({num}) / ({den}) = {val}."
+        return m.group(0)
+
+    return RATIO_STACK.sub(repl, stem or "")
+
+
 def split_qty_cells(text: str) -> list[str] | None:
     toks = (text or "").split()
     cells: list[str] = []
@@ -422,6 +517,12 @@ def repair_scientific_notation(text: str) -> str:
     t = SCI_TIMES.sub(times, text)
     t = SCI_NEG10.sub(lambda m: m.group(1) + _super_exp(m.group(2), m.group(3)), t)
     t = UNIT_EXP.sub(lambda m: m.group(1) + _super_exp(m.group(2), m.group(3)), t)
+    # CMS "10 5" / "10 2" next to other 10ⁿ dumps, not "10 g".
+    t = re.sub(
+        r"\b(10)\s+(\d{1,2})(?!\s*[A-Za-zµμ])",
+        lambda m: m.group(1) + m.group(2).translate(_SUP),
+        t,
+    )
     return t
 
 
@@ -521,9 +622,14 @@ def is_chrome_line(s: str) -> bool:
         return True
     if t.endswith((".", "?", "!")):
         return False
+    # "wavelength of M" is a ratio numerator, not an axis dump.
+    if re.search(r"\bof\b", t, re.I) and re.search(
+        r"\b(wavelength|frequency|energy|speed|period|intensity)\b", t, re.I
+    ):
+        return False
     words = t.split()
     if len(words) <= 3 and not re.search(
-        r"\b(the|which|what|how|show|define|connected|diagram|when|across|between|resistor|circuit)\b",
+        r"\b(the|which|what|how|show|define|connected|diagram|when|across|between|resistor|circuit|ratio)\b",
         t,
         re.I,
     ):
@@ -825,6 +931,7 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
     original = stem
     stem = strip_leading_question_number(stem, uid)
     stem = strip_page_furniture(stem)
+    stem = repair_stacked_ratio(stem)
     stem = DEGREE_CID.sub("°", stem)
     stem = attach_orphan_subscripts(stem)
     # Chrome/wrap only the prose prefix so option-matrix rows (½ fractions, headers)
@@ -888,7 +995,12 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
             cells = option_cells(rest, legend)
             if cells is None:
                 repaired = options.get(let) or rest
-                cells = split_numeric_cells(repaired) or split_qty_cells(repaired)
+                cells = (
+                    split_sci_cells(repaired)
+                    or split_named_cells(repaired)
+                    or split_numeric_cells(repaired)
+                    or split_qty_cells(repaired)
+                )
             if cells is None:
                 toks = (options.get(let) or rest).split()
                 if 2 <= len(toks) <= 4 and all(len(t) <= 16 and not t.endswith(".") for t in toks):
@@ -906,12 +1018,19 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
                     (t.get("row_labels") or [])[:4] == list("ABCD") for t in tables if isinstance(t, dict)
                 )
                 if not already:
+                    caption = ""
+                    for hl in header_lines:
+                        if "/" in hl and not headers:
+                            caption = hl
+                            break
+                        if re.search(r"wavelength\s*/", hl, re.I):
+                            caption = hl
                     tables.append(
                         {
                             "headers": headers,
                             "rows": row_cells,
                             "row_labels": list("ABCD"),
-                            "caption": "",
+                            "caption": caption,
                             "is_option_table": True,
                         }
                     )
@@ -1184,6 +1303,10 @@ def _selftest() -> None:
     q26 = {
         "stem": (
             "26 M and N are two electromagnetic waves.\n"
+            "The ratio\n"
+            "wavelength of M\n"
+            "= 10 5 .\n"
+            "wavelength of N\n"
             "What could M and N be?\n"
             "M N\n"
             "A microwaves visible light\n"
@@ -1202,6 +1325,45 @@ def _selftest() -> None:
     assert not r["stem"].startswith("26 "), r["stem"][:40]
     assert "A microwaves" not in r["stem"], r["stem"]
     assert "What could M and N be?" in r["stem"]
+    assert "wavelength of M" in r["stem"], r["stem"]
+    assert "wavelength of N" in r["stem"], r["stem"]
+    assert "10⁵" in r["stem"] or "10^5" in r["stem"], r["stem"]
+    tab = next((t for t in (r.get("tables") or []) if t.get("is_option_table")), None)
+    assert tab, r
+    assert "M" in (tab.get("headers") or []), tab
+    assert any("visible light" in " ".join(row) for row in tab["rows"]), tab
+
+    q23 = {
+        "stem": (
+            "23 The table lists possible orders of magnitude of the wavelengths of some of the principal radiations\n"
+            "of the electromagnetic spectrum.\n"
+            "Which row shows the correct orders of magnitude of the wavelengths?\n"
+            "wavelength / m\n"
+            "microwaves infra-red ultraviolet X-rays\n"
+            "A 10 –6 10 –10 10 –12 10 –14\n"
+            "B 10 –4 10 –8 10 –10 10 –12\n"
+            "C 10 –2 10 –6 10 –8 10 –10\n"
+            "D 10 2 10 –4 10 –6 10 –8\n"
+            "13"
+        ),
+        "options": {
+            "A": "10 –6 10 –10 10 –12 10 –14",
+            "B": "10 –4 10 –8 10 –10 10 –12",
+            "C": "10 –2 10 –6 10 –8 10 –10",
+            "D": "10 2 10 –4 10 –6 10 –8 13",
+        },
+    }
+    r = sanitize_item("9702_m18_qp_12:q23", q23)
+    assert r["stem"].startswith("The table lists"), r["stem"][:80]
+    assert "Which row shows the correct orders" in r["stem"]
+    assert "A 10" not in r["stem"], r["stem"]
+    assert "microwaves infra-red" not in r["stem"], r["stem"]
+    tab = next((t for t in (r.get("tables") or []) if t.get("is_option_table")), None)
+    assert tab, r
+    assert tab["row_labels"] == ["A", "B", "C", "D"]
+    assert len(tab["rows"][0]) == 4, tab
+    assert any("micro" in h.lower() for h in (tab.get("headers") or [])), tab
+    assert "10²" in tab["rows"][3] or "10²" in r["options"]["D"], (tab, r["options"])
 
     chem = {
         "stem": "10 g of ammonium nitrate is added to water at 25 °C and the mixture stirred.",

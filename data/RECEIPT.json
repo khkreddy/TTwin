@@ -1,6 +1,6 @@
 {
   "schema": "ttwin.showcase.v2",
-  "built_utc": "2026-09-04T08:05:48Z",
+  "built_utc": "2026-09-04T10:30:02Z",
   "subjects": [
     "chemistry",
     "biology",
@@ -16,7 +16,7 @@
   "n_stems": 20792,
   "n_tikz": 3991,
   "n_structures": 573,
-  "n_tables": 5182,
+  "n_tables": 5216,
   "by_subject": {
     "chemistry": {
       "n_tagged": 9472,
@@ -77,7 +77,8 @@
       "data/hinges.json",
       "data/maps/biology.json",
       "data/maps/physics.json"
-    ]
+    ],
+    "solutions": "data/solutions/index.json"
   },
   "sources": {
     "comprehensive_map": "reports/paper/data/NCERT_CHEMISTRY_MAP_COMPREHENSIVE.json",
@@ -89,7 +90,7 @@
     "projection": "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json",
     "exam_pack_sha256": "39646d1c79478bacf4cac6806ac5db8012f2717f30ee351429a5189b7bffc2b9"
   },
-  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Physics and biology Map is the published NCERT chapter list (syllabus_interim): Class 9–10 Science chapters plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. Maths has browse vocab only. Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a published mark scheme. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
+  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Physics and biology Map is the published NCERT chapter list (syllabus_interim): Class 9–10 Science chapters plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. Maths has browse vocab only. Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a published mark scheme. Solution analysis is a sub-layer of the question bank (item_uid × item_sha256): first assembly writes it; later assemblies retrieve it with zero provider calls. Mix-ups stay off the learner paper. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
   "kimi": {
     "model": "kimi-k3",
     "endpoint": "https://api.moonshot.ai/v1/chat/completions",
@@ -98,7 +99,9 @@
       "isogen_author",
       "lesson_prose",
       "item_modify",
-      "paper_grade"
+      "paper_grade",
+      "solution_analysis"
     ]
-  }
+  },
+  "n_solutions": 0
 }

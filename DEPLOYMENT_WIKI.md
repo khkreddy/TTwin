@@ -169,11 +169,35 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D15 · Option matrices must stay tables; student selects a row
+
+**Symptom.** `9702_m18_qp_12:q23` asked “which row…” but A–D printed as flattened strings (`10⁻⁶ 10⁻¹⁰ …`). `9702_m17_qp_12:q26` (M and N, λ_M / λ_N = 10⁵) split “visible light” / “γ-rays” into extra columns and dropped the stacked ratio.
+
+**Root cause.** Overlay built an `is_option_table` only from tick/cid matrices or 2–4 raw tokens. Scientific-notation cells (`10 –6`) and two-word labels did not parse. Renderer always also printed `ul.options`, so even a good table was duplicated as prose. Student-take clicked letters, not rows.
+
+**Solution.** Overlay: reconstruct stacked “The ratio / numerator / = value / denominator”; split 10ⁿ cells and named EM pairs; peel leftover header lines after the question into the option table. Renderer: `is_option_table` **is** the options (not also A–D prose). Student mode: the row is the select target.
+
+**Deploy check.** Jump `9702_m18_qp_12:q23` — four columns (microwaves … X-rays), D is 10² not `10 2`. Jump `9702_m17_qp_12:q26` — stem has (wavelength of M)/(wavelength of N)=10⁵; table columns M, N; “visible light” one cell.
+
+---
+
+## D16 · Answer key + solution-analysis sub-layer (write once, RAG later)
+
+**Symptom.** Assembled papers printed the questions and no key. Each sitting re-asked the model for letters. Distractor talk was not stored on the item.
+
+**Root cause.** Packed exam.v1 has no mark scheme. Analysis was treated as a chat, not a corpus layer.
+
+**Solution.** On Test maker assemble: for each uid, fingerprint stem+options+option-table (`item_sha256`). If `data/solutions/index.json` (or local overlay) has that uid+sha, retrieve with **zero** provider calls. Else one LLM write: map slice (capped), CANDIDATE mx, enrichment → stored analysis (key, rationale, per-option why, mx/enrichment copies). Home: `data/solutions/items.jsonl` + `index.json`. Local `serve.py` POST `/solution` appends. GitHub Pages cannot write; browser keeps a local overlay and **Download new analyses** for the next site push. Learner paper still has no mx. Teacher answer key is a second sheet (page-break). Honesty: not a published mark scheme.
+
+**Deploy check.** Assemble `9702_m18_qp_12:q23` twice. First time may call AI (key in Settings). Second time status “1 from stored analysis · 0 newly written”. Print: question paper then answer key. Student toggle hides the key.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles (test-maker Modify / student-take / phy-bio syllabus map is `v=13`).
+3. Bump `?v=` on `index.html` scripts/styles (option tables + solution analysis is `v=14`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
@@ -182,5 +206,6 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 5e. Spot: `9702_m17_qp_22:q3` — Fig. 3.1 and Fig. 3.2 stacked, not overlapping.
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required. Physics/biology ISO-GEN sits on the syllabus-interim chapter list.
-8. Test maker: **Modify** on a text item rewrites stem + A–D. **Take as student** records letters; Finish shows score + feedback. Print still has no mx.
+8. Test maker: **Modify** on a text item rewrites stem + A–D. **Take as student** records letters or table rows; Finish shows score + feedback. Print still has no mx on the learner sheet; teacher answer key is a second page.
 9. Map: Chemistry hinges unchanged. Physics/biology = published NCERT chapters, mx empty.
+10. Jump `9702_m18_qp_12:q23` (option table) and `9702_m17_qp_12:q26` (M/N ratio table). Second assemble of the same uid must RAG the stored analysis.

@@ -19,6 +19,13 @@
 .paper .tikz-slot + .tikz-slot{margin-top:22px}
 .paper table.exam{border-collapse:collapse;margin:10px auto;font-size:11pt}
 .paper table.exam th,.paper table.exam td{border:1px solid #333;padding:4px 10px;text-align:left}
+.paper table.opt-table tr.opt-row{cursor:pointer}
+.paper table.opt-table tr.opt-row:hover{background:#f4f1ea}
+.paper table.opt-table tr.sel{background:#e7f2ef}
+.paper table.opt-table tr.key{background:#e7f4ea}
+.paper table.opt-table tr.miss{background:#f8e8e8}
+.paper.answer-key{page-break-before:always}
+.paper.answer-key .key-q{margin:14px 0;padding-bottom:10px;border-bottom:1px solid #e3ddd0}
 .paper .options{list-style:none;padding:8px 0 0 0;margin:0}
 .paper .options li{margin:0 0 .8em;display:flex;gap:.5em;align-items:flex-start;flex-wrap:wrap}
 .paper .options .smiles-row{margin:0;justify-content:flex-start}
@@ -52,4 +59,5 @@
   body{background:#fff}
   .paper{box-shadow:none;border:0;margin:0;padding:12mm}
   .paper .options button.opt{border:0;background:transparent;padding:0;border-radius:0}
+  .paper.answer-key{page-break-before:always;box-shadow:none;border:0}
 }

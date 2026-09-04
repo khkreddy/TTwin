@@ -786,6 +786,7 @@ def main() -> int:
             "maps": [
                 s.get("map") for s in catalog if s.get("map")
             ],
+            "solutions": "data/solutions/index.json",
         },
         "sources": {
             "comprehensive_map": str(COMP.relative_to(AWM)),
@@ -807,14 +808,42 @@ def main() -> int:
             "Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. "
             "ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and "
             "does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a "
-            "published mark scheme. Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
+            "published mark scheme. Solution analysis is a sub-layer of the question bank (item_uid × item_sha256): "
+            "first assembly writes it; later assemblies retrieve it with zero provider calls. Mix-ups stay off the learner paper. "
+            "Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
         ),
         "kimi": {
             "model": "kimi-k3",
             "endpoint": "https://api.moonshot.ai/v1/chat/completions",
-            "roles": ["prompt_selector", "isogen_author", "lesson_prose", "item_modify", "paper_grade"],
+            "roles": ["prompt_selector", "isogen_author", "lesson_prose", "item_modify", "paper_grade", "solution_analysis"],
         },
     }
+
+    print("packing solution analysis index…")
+    sol_dir = OUT / "solutions"
+    sol_dir.mkdir(parents=True, exist_ok=True)
+    by_sol: dict = {}
+    idx_path = sol_dir / "index.json"
+    if idx_path.is_file():
+        try:
+            by_sol = json.loads(idx_path.read_text(encoding="utf-8")).get("by_uid") or {}
+        except Exception:
+            by_sol = {}
+    jsonl = sol_dir / "items.jsonl"
+    if jsonl.is_file():
+        for line in jsonl.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+            except Exception:
+                continue
+            uid = row.get("item_uid")
+            if uid:
+                by_sol[uid] = row
+    sol_doc = {"schema": "ttwin.solutions.v1", "n": len(by_sol), "by_uid": by_sol}
+    dump(sol_dir / "index.json", sol_doc)
+    meta["n_solutions"] = len(by_sol)
 
     print("writing catalog…")
     dump(OUT / "subjects.json", subjects_doc)
