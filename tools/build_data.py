@@ -42,6 +42,10 @@ VOCAB_FILE = {
     "physics": VOCAB_DIR / "big_ideas_phy.json",
     "maths": VOCAB_DIR / "big_ideas_math.json",
 }
+CHAPTER_VOCAB = {
+    "physics": VOCAB_DIR / "chapters_phy.json",
+    "biology": VOCAB_DIR / "chapters_bio.json",
+}
 PACK_SLUG = {
     "igcse_9_10": "igcse",
     "senior_11_12_as_a": "senior",
@@ -145,6 +149,183 @@ def question_relpath(subject: str, pack: str) -> str:
 def chapter_family(unit_id: str) -> str:
     parts = (unit_id or "").split("/")
     return "/".join(parts[:3]) if len(parts) >= 3 else unit_id
+
+
+# Published NCERT chapter titles. Interim map only — not a hinge/mx freeze.
+NCERT_SYLLABUS = {
+    "physics": [
+        (9, "SECONDARY", "ch_08", "Motion", "phy:P1"),
+        (9, "SECONDARY", "ch_09", "Force and Laws of Motion", "phy:P1"),
+        (9, "SECONDARY", "ch_10", "Gravitation", "phy:P5"),
+        (9, "SECONDARY", "ch_11", "Work and Energy", "phy:P2"),
+        (9, "SECONDARY", "ch_12", "Sound", "phy:P3"),
+        (10, "SECONDARY", "ch_10", "Light — Reflection and Refraction", "phy:P3"),
+        (10, "SECONDARY", "ch_11", "The Human Eye and the Colourful World", "phy:P3"),
+        (10, "SECONDARY", "ch_12", "Electricity", "phy:P4"),
+        (10, "SECONDARY", "ch_13", "Magnetic Effects of Electric Current", "phy:P5"),
+        (10, "SECONDARY", "ch_14", "Sources of Energy", "phy:P2"),
+        (11, "SENIOR_SECONDARY", "phy_ch_101", "Units and Measurements", "phy:P1/H-VECTORS"),
+        (11, "SENIOR_SECONDARY", "phy_ch_102", "Motion in a Straight Line", "phy:P1"),
+        (11, "SENIOR_SECONDARY", "phy_ch_103", "Motion in a Plane", "phy:P1"),
+        (11, "SENIOR_SECONDARY", "phy_ch_104", "Laws of Motion", "phy:P1"),
+        (11, "SENIOR_SECONDARY", "phy_ch_105", "Work, Energy and Power", "phy:P2"),
+        (11, "SENIOR_SECONDARY", "phy_ch_106", "System of Particles and Rotational Motion", "phy:P1"),
+        (11, "SENIOR_SECONDARY", "phy_ch_107", "Gravitation", "phy:P5"),
+        (11, "SENIOR_SECONDARY", "phy_ch_201", "Mechanical Properties of Solids", "phy:B3"),
+        (11, "SENIOR_SECONDARY", "phy_ch_202", "Mechanical Properties of Fluids", "phy:B3"),
+        (11, "SENIOR_SECONDARY", "phy_ch_203", "Thermal Properties of Matter", "phy:P6"),
+        (11, "SENIOR_SECONDARY", "phy_ch_204", "Thermodynamics", "phy:P6"),
+        (11, "SENIOR_SECONDARY", "phy_ch_205", "Kinetic Theory", "phy:P6"),
+        (11, "SENIOR_SECONDARY", "phy_ch_206", "Oscillations", "phy:P3/H-SHM"),
+        (11, "SENIOR_SECONDARY", "phy_ch_207", "Waves", "phy:P3"),
+        (12, "SENIOR_SECONDARY", "phy_ch_101", "Electric Charges and Fields", "phy:P5"),
+        (12, "SENIOR_SECONDARY", "phy_ch_102", "Electrostatic Potential and Capacitance", "phy:P5"),
+        (12, "SENIOR_SECONDARY", "phy_ch_103", "Current Electricity", "phy:P4"),
+        (12, "SENIOR_SECONDARY", "phy_ch_104", "Moving Charges and Magnetism", "phy:P5"),
+        (12, "SENIOR_SECONDARY", "phy_ch_105", "Magnetism and Matter", "phy:P5"),
+        (12, "SENIOR_SECONDARY", "phy_ch_106", "Electromagnetic Induction", "phy:P5/H-INDUCTION"),
+        (12, "SENIOR_SECONDARY", "phy_ch_107", "Alternating Current", "phy:P5/H-INDUCTION"),
+        (12, "SENIOR_SECONDARY", "phy_ch_108", "Electromagnetic Waves", "phy:P5"),
+        (12, "SENIOR_SECONDARY", "phy_ch_201", "Ray Optics and Optical Instruments", "phy:P3"),
+        (12, "SENIOR_SECONDARY", "phy_ch_202", "Wave Optics", "phy:P3/H-SUPERPOSITION"),
+        (12, "SENIOR_SECONDARY", "phy_ch_203", "Dual Nature of Radiation and Matter", "phy:P8"),
+        (12, "SENIOR_SECONDARY", "phy_ch_204", "Atoms", "phy:P7"),
+        (12, "SENIOR_SECONDARY", "phy_ch_205", "Nuclei", "phy:P7"),
+        (12, "SENIOR_SECONDARY", "phy_ch_206", "Semiconductor Electronics", "phy:B4"),
+    ],
+    "biology": [
+        (9, "SECONDARY", "ch_05", "The Fundamental Unit of Life", "bio:L1"),
+        (9, "SECONDARY", "ch_06", "Tissues", "bio:L1"),
+        (9, "SECONDARY", "ch_07", "Diversity in Living Organisms", "bio:L2"),
+        (9, "SECONDARY", "ch_13", "Why Do We Fall Ill", "bio:L5"),
+        (9, "SECONDARY", "ch_14", "Natural Resources", "bio:L6"),
+        (9, "SECONDARY", "ch_15", "Improvement in Food Resources", "bio:L6"),
+        (10, "SECONDARY", "ch_06", "Life Processes", "bio:L3"),
+        (10, "SECONDARY", "ch_07", "Control and Coordination", "bio:L4"),
+        (10, "SECONDARY", "ch_08", "How do Organisms Reproduce", "bio:L4"),
+        (10, "SECONDARY", "ch_09", "Heredity and Evolution", "bio:L4"),
+        (10, "SECONDARY", "ch_15", "Our Environment", "bio:L6"),
+        (10, "SECONDARY", "ch_16", "Management of Natural Resources", "bio:L6"),
+        (11, "SENIOR_SECONDARY", "bio_ch_101", "The Living World", "bio:L2"),
+        (11, "SENIOR_SECONDARY", "bio_ch_102", "Biological Classification", "bio:L2"),
+        (11, "SENIOR_SECONDARY", "bio_ch_103", "Plant Kingdom", "bio:L2"),
+        (11, "SENIOR_SECONDARY", "bio_ch_104", "Animal Kingdom", "bio:L2"),
+        (11, "SENIOR_SECONDARY", "bio_ch_105", "Morphology of Flowering Plants", "bio:L2"),
+        (11, "SENIOR_SECONDARY", "bio_ch_106", "Anatomy of Flowering Plants", "bio:L1"),
+        (11, "SENIOR_SECONDARY", "bio_ch_107", "Structural Organisation in Animals", "bio:L1"),
+        (11, "SENIOR_SECONDARY", "bio_ch_108", "Cell: The Unit of Life", "bio:L1"),
+        (11, "SENIOR_SECONDARY", "bio_ch_109", "Biomolecules", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_110", "Cell Cycle and Cell Division", "bio:L1"),
+        (11, "SENIOR_SECONDARY", "bio_ch_111", "Photosynthesis in Higher Plants", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_112", "Respiration in Plants", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_113", "Plant Growth and Development", "bio:L4"),
+        (11, "SENIOR_SECONDARY", "bio_ch_114", "Breathing and Exchange of Gases", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_115", "Body Fluids and Circulation", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_116", "Excretory Products and their Elimination", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_117", "Locomotion and Movement", "bio:L3"),
+        (11, "SENIOR_SECONDARY", "bio_ch_118", "Neural Control and Coordination", "bio:L4"),
+        (11, "SENIOR_SECONDARY", "bio_ch_119", "Chemical Coordination and Integration", "bio:L4"),
+        (12, "SENIOR_SECONDARY", "bio_ch_101", "Sexual Reproduction in Flowering Plants", "bio:L4"),
+        (12, "SENIOR_SECONDARY", "bio_ch_102", "Human Reproduction", "bio:L4"),
+        (12, "SENIOR_SECONDARY", "bio_ch_103", "Reproductive Health", "bio:L5"),
+        (12, "SENIOR_SECONDARY", "bio_ch_104", "Principles of Inheritance and Variation", "bio:L4"),
+        (12, "SENIOR_SECONDARY", "bio_ch_105", "Molecular Basis of Inheritance", "bio:L4"),
+        (12, "SENIOR_SECONDARY", "bio_ch_106", "Evolution", "bio:L2"),
+        (12, "SENIOR_SECONDARY", "bio_ch_107", "Human Health and Disease", "bio:L5"),
+        (12, "SENIOR_SECONDARY", "bio_ch_108", "Microbes in Human Welfare", "bio:L5"),
+        (12, "SENIOR_SECONDARY", "bio_ch_109", "Biotechnology: Principles and Processes", "bio:L5"),
+        (12, "SENIOR_SECONDARY", "bio_ch_110", "Biotechnology and its Applications", "bio:L5"),
+        (12, "SENIOR_SECONDARY", "bio_ch_111", "Organisms and Populations", "bio:L6"),
+        (12, "SENIOR_SECONDARY", "bio_ch_112", "Ecosystem", "bio:L6"),
+        (12, "SENIOR_SECONDARY", "bio_ch_113", "Biodiversity and Conservation", "bio:L6"),
+    ],
+}
+
+
+def _syllabus_row(subject: str, grade: int, band: str, slug: str, ch_title: str, node: str, vocab_ideas: list) -> dict:
+    mech = {i.get("id"): i.get("mechanism") for i in vocab_ideas if isinstance(i, dict)}
+    title = {i.get("id"): i.get("title") for i in vocab_ideas if isinstance(i, dict)}
+    ns = f"science/grade_{grade}/{slug}"
+    return {
+        "unit_id": f"ncert/grade_{grade:02d}/{subject}/{slug}",
+        "node": node.split(":")[-1] if ":" in node else node,
+        "node_id": node,
+        "grade_band": band,
+        "grade": grade,
+        "chapter": ns,
+        "chapter_title": ch_title,
+        "decision_hinge": f"Work a question inside NCERT Class {grade} “{ch_title}”.",
+        "mechanism": mech.get(node) or title.get(node) or "",
+        "mx": [],
+        "n_mx_na": 0,
+        "pedagogy": {},
+        "status": "syllabus_interim",
+    }
+
+
+def _slug_index(subject: str) -> dict[str, tuple]:
+    out = {}
+    for grade, band, slug, ch_title, node in NCERT_SYLLABUS.get(subject, []):
+        out[slug] = (grade, band, ch_title, node)
+        out[f"science/grade_{grade}/{slug}"] = (grade, band, ch_title, node)
+    return out
+
+
+def syllabus_map(subject: str, vocab_ideas: list) -> list[dict]:
+    """Interim NCERT chapter map. Not a hinge freeze; mx empty until a complete map exists.
+
+    Class 11–12 titles come from the existing nav vocab
+    (`ncert_chapter_candidates_pack_c`). Class 9–10 are the published Science
+    book chapters for that subject. Do not copy candidate chapter_intelligence.
+    """
+    idx = _slug_index(subject)
+    rows: list[dict] = []
+    seen: set[str] = set()
+
+    for grade, band, slug, ch_title, node in NCERT_SYLLABUS.get(subject, []):
+        if grade >= 11:
+            continue
+        rec = _syllabus_row(subject, grade, band, slug, ch_title, node, vocab_ideas)
+        rows.append(rec)
+        seen.add(rec["chapter"])
+
+    path = CHAPTER_VOCAB.get(subject)
+    if path and path.is_file():
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        for cand in raw.get("ncert_chapter_candidates_pack_c") or []:
+            if not isinstance(cand, dict):
+                continue
+            ns = (cand.get("chapter_namespace") or "").strip()
+            if not ns or ns in seen:
+                continue
+            parts = ns.split("/")
+            slug = parts[-1] if parts else ""
+            try:
+                grade = int(parts[1].split("_")[-1]) if len(parts) >= 2 else 11
+            except ValueError:
+                grade = 11
+            meta = idx.get(ns) or idx.get(slug)
+            band = "SENIOR_SECONDARY" if grade >= 11 else "SECONDARY"
+            ch_title = (cand.get("label") or "").strip()
+            node = ""
+            if meta:
+                grade, band, fallback_title, node = meta
+                ch_title = ch_title or fallback_title
+            rec = _syllabus_row(subject, grade, band, slug, ch_title or slug, node, vocab_ideas)
+            rows.append(rec)
+            seen.add(rec["chapter"])
+    else:
+        for grade, band, slug, ch_title, node in NCERT_SYLLABUS.get(subject, []):
+            if grade < 11:
+                continue
+            rec = _syllabus_row(subject, grade, band, slug, ch_title, node, vocab_ideas)
+            if rec["chapter"] in seen:
+                continue
+            rows.append(rec)
+            seen.add(rec["chapter"])
+
+    rows.sort(key=lambda r: (r.get("grade") or 0, r.get("chapter") or ""))
+    return rows
 
 
 def slim_mx(rows) -> list:
@@ -365,6 +546,7 @@ def main() -> int:
     (OUT / "questions").mkdir(exist_ok=True)
     (OUT / "nav").mkdir(exist_ok=True)
     (OUT / "vocab").mkdir(exist_ok=True)
+    (OUT / "maps").mkdir(exist_ok=True)
 
     print("loading comprehensive map…")
     comp = json.loads(COMP.read_text(encoding="utf-8"))
@@ -536,13 +718,30 @@ def main() -> int:
                 }
             )
 
+        map_path = None
+        map_status = None
+        n_map_units = 0
+        if subject == "chemistry":
+            map_path = "data/hinges.json"
+            map_status = "comprehensive"
+            n_map_units = len(hinges)
+        elif subject in ("physics", "biology"):
+            mrows = syllabus_map(subject, vocab.get("ideas") or [])
+            dump(OUT / "maps" / f"{subject}.json", mrows)
+            map_path = f"data/maps/{subject}.json"
+            map_status = "syllabus_interim"
+            n_map_units = len(mrows)
+
         catalog.append(
             {
                 "id": subject,
                 "label": SUBJECT_LABEL[subject],
                 "nav": f"data/nav/{subject}.json",
                 "vocab": f"data/vocab/{subject}.json",
-                "has_map": subject == "chemistry",
+                "has_map": bool(map_path),
+                "map": map_path,
+                "map_status": map_status,
+                "n_map_units": n_map_units,
                 "n_tagged": len(rows),
                 "n_complete_exam": sum(1 for r in rows if r.get("complete_exam")),
                 "packs": pack_entries,
@@ -561,7 +760,7 @@ def main() -> int:
         "schema": "ttwin.showcase.v2",
         "built_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "subjects": SUBJECT_ORDER,
-        "board_home": "NCERT comprehensive chemistry map + Cambridge-tagged question bank (four subjects)",
+        "board_home": "NCERT comprehensive chemistry map + NCERT syllabus-interim physics/biology + Cambridge-tagged question bank",
         "n_nodes": len(nodes),
         "n_hinges": len(hinges),
         "n_enrichment": len(enrich),
@@ -584,6 +783,9 @@ def main() -> int:
             "questions": question_files,
             "nav": [f"data/nav/{s}.json" for s in SUBJECT_ORDER],
             "vocab": [f"data/vocab/{s}.json" for s in SUBJECT_ORDER],
+            "maps": [
+                s.get("map") for s in catalog if s.get("map")
+            ],
         },
         "sources": {
             "comprehensive_map": str(COMP.relative_to(AWM)),
@@ -598,15 +800,19 @@ def main() -> int:
         "honesty": (
             "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). "
             "NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. "
-            "Biology, physics, and maths browse nodes are frozen nav vocab, not a V15-style map. "
+            "Physics and biology Map is the published NCERT chapter list (syllabus_interim): Class 9–10 Science chapters "
+            "plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete "
+            "hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. "
+            "Maths has browse vocab only. "
             "Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. "
-            "ISO-GEN on this site authors CANDIDATE chemistry items from hinge packs; it does not rewrite frozen L20. "
-            "Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
+            "ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and "
+            "does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a "
+            "published mark scheme. Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
         ),
         "kimi": {
             "model": "kimi-k3",
             "endpoint": "https://api.moonshot.ai/v1/chat/completions",
-            "roles": ["prompt_selector", "isogen_author", "lesson_prose"],
+            "roles": ["prompt_selector", "isogen_author", "lesson_prose", "item_modify", "paper_grade"],
         },
     }
 

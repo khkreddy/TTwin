@@ -106,46 +106,86 @@
       return "<li>" + (n !== "" ? "<span class='n'>" + esc(n) + "</span> " : "") + chem(t) + "</li>";
     }).join("") + "</ol>";
   }
-  function optionsHTML(it) {
+  function optionInner(it, k, o, byOpt) {
+    const mols = (byOpt && byOpt[k]) || [];
+    if (it.tikz && it.options_are_figure) return "";
+    if (mols.length) {
+      return "<div class='smiles-row'>" + mols.map((s) => molCard(s, false)).join("") + "</div>";
+    }
+    if (o[k] != null && o[k] !== "") return "<span>" + chem(o[k]) + "</span>";
+    return "";
+  }
+  function optionsHTML(it, opts) {
+    opts = opts || {};
     const o = it.options || {};
-    const keys = ["A", "B", "C", "D"].filter((k) => o[k] != null && o[k] !== "");
-    const { byOpt } = partitionStructures(it);
-    const hasOptStructs = keys.some((k) => (byOpt[k] || []).length);
-    if (it.tikz && it.options_are_figure) {
-      return "<ul class='options'>" + keys.map((k) =>
-        "<li><span class='lab'>" + esc(k) + "</span></li>").join("") + "</ul>";
-    }
-    if (hasOptStructs) {
-      return "<ul class='options'>" + keys.map((k) => {
-        const mols = byOpt[k] || [];
-        const drawings = mols.length
-          ? "<div class='smiles-row'>" + mols.map((s) => molCard(s, false)).join("") + "</div>"
-          : "";
-        const text = mols.length ? "" : "<span>" + chem(o[k]) + "</span>";
-        return "<li><span class='lab'>" + esc(k) + "</span> " + drawings + text + "</li>";
-      }).join("") + "</ul>";
-    }
+    let keys = ["A", "B", "C", "D"].filter((k) =>
+      (o[k] != null && o[k] !== "") ||
+      ((it.structures || []).some((s) => optionLetter(s.label) === k))
+    );
+    if (!keys.length && it.tikz && it.options_are_figure) keys = ["A", "B", "C", "D"];
     if (!keys.length) return "";
-    return "<ul class='options'>" + keys.map((k) =>
-      "<li><span class='lab'>" + esc(k) + "</span> <span>" + chem(o[k]) + "</span></li>"
-    ).join("") + "</ul>";
+    const { byOpt } = partitionStructures(it);
+    const interactive = !!opts.interactive;
+    const chosen = optionLetter(opts.chosen);
+    const reveal = !!opts.reveal;
+    const key = optionLetter(it.correct);
+    const ulClass = interactive ? "options pick" : "options";
+    return "<ul class='" + ulClass + "'>" + keys.map((k) => {
+      const cls = [];
+      if (interactive) cls.push("pick");
+      if (chosen === k) cls.push("sel");
+      if (reveal && key === k) cls.push("key");
+      if (reveal && chosen === k && key && chosen !== key) cls.push("miss");
+      const inner = optionInner(it, k, o, byOpt);
+      const lab = "<span class='lab'>" + esc(k) + "</span> ";
+      const body = interactive
+        ? "<button type='button' class='opt' data-opt='" + k + "'" +
+          (reveal ? " disabled" : "") + (chosen === k ? " aria-pressed='true'" : "") + ">" +
+          lab + inner + "</button>"
+        : lab + inner;
+      return "<li" + (cls.length ? " class='" + cls.join(" ") + "'" : "") + ">" + body + "</li>";
+    }).join("") + "</ul>";
+  }
+  function toolsHTML(it, opts) {
+    if (!opts || !opts.teacherTools) return "";
+    const uid = it.uid || it.item_uid || "";
+    return "<div class='q-tools no-print'>" +
+      "<button type='button' class='sec q-mod-open' data-uid='" + esc(uid) + "'>Modify</button>" +
+      (it.modified ? "<span class='tag'>modified</span>" : "") +
+      "<div class='q-mod hidden'>" +
+      "<label>How should this item change?</label>" +
+      "<textarea class='q-mod-text' placeholder='Change the numbers, the species, the figure, or the mix-up. Stem and all four options will be rewritten to match.'></textarea>" +
+      "<p><button type='button' class='q-mod-go' data-uid='" + esc(uid) + "'>Apply modify</button> " +
+      "<button type='button' class='sec q-mod-revert' data-uid='" + esc(uid) + "'>Revert</button> " +
+      "<span class='muted q-mod-status'></span></p></div></div>";
   }
   function itemHTML(it, i, opts) {
+    opts = opts || {};
     const n = i == null ? "" : (i + 1);
     const uid = it.uid || it.item_uid || "";
     const eqs = (it.equations || []).map(eqHTML).join("");
     const tables = (it.tables || []).map(tableHTML).join("");
+    const chosen = opts.responses ? opts.responses[uid] : opts.chosen;
+    const optOpts = {
+      interactive: opts.interactive,
+      chosen: chosen,
+      reveal: opts.reveal,
+    };
     return (
-      "<article class='q' id='q-" + esc(uid) + "'>" +
+      "<article class='q' id='q-" + esc(uid) + "' data-uid='" + esc(uid) + "'>" +
       "<div><span class='qnum'>" + esc(n) + "</span>" +
-      (opts && opts.showUid === false ? "" : "<span class='uid'>" + esc(uid) + "</span>") +
+      (opts.showUid === false ? "" : "<span class='uid'>" + esc(uid) + "</span>") +
+      (it.modified && opts.showUid !== false ? " <span class='tag'>modified</span>" : "") +
       "</div>" +
       "<p class='stem'>" + chem(it.stem || it.stem_lead || "(no stem — tagged only)") + "</p>" +
-      eqs + tables + figHTML(it) + structuresHTML(it) + statementsHTML(it) + optionsHTML(it) +
+      eqs + tables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
+      optionsHTML(it, optOpts) +
+      toolsHTML(it, opts) +
       "</article>"
     );
   }
-  function paperHTML(meta, items) {
+  function paperHTML(meta, items, opts) {
+    opts = opts || {};
     const title = meta.title || "Paper";
     const subj = meta.subject || "Questions";
     const head =
@@ -154,7 +194,8 @@
       "<div class='papername'>" + esc(title) + "</div>" +
       "<p class='cap'>" + esc(meta.subtitle || "") + " · " + items.length + " questions" +
       (meta.seed ? " · seed " + esc(meta.seed) : "") + "</p></div><hr class='rule'/>";
-    return "<div class='paper'>" + head + items.map((it, i) => itemHTML(it, i, { showUid: true })).join("") + "</div>";
+    const itemOpts = Object.assign({ showUid: true }, opts);
+    return "<div class='paper'>" + head + items.map((it, i) => itemHTML(it, i, itemOpts)).join("") + "</div>";
   }
   function mountTikz(root) {
     root.querySelectorAll(".tikz-slot").forEach((slot) => {
@@ -200,5 +241,5 @@
     mountTikz(root);
     mountSmiles(root);
   }
-  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, mount };
+  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, mount, optionLetter };
 })(window);

@@ -154,11 +154,26 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D14 · Test maker Modify is ISO-GEN on the whole item; student-take; phy/bio syllabus map
+
+**Symptom.** Test maker could assemble a paper but not change an item. Figure-only Modify (internal review) left stem and options stale. Physics/biology Map was a wall: “NCERT comprehensive map is chemistry.”
+
+**Root cause.** Packed exam items have no published key. ISO-GEN authored new chemistry items from hinge packs, not edits of an existing stem+options(+figure). Phy/bio have no V15 hinge freeze; candidate chapter_intelligence is not a complete map.
+
+**Solution.**
+- **Modify** on every Test maker item (text and figure). Teacher prompt → ISO-GEN rewrite of stem **and** all four options; TikZ only if the change needs it. Session-only; frozen exam.v1 is not rewritten. Public UI says “AI”, never “Kimi”.
+- **Take as student**: A–D become select buttons; responses recorded; Finish scores. Keys from Modify when present; otherwise AI-inferred with honesty *not a published mark scheme*. Feedback is AI prose to the student.
+- **Physics / biology Map**: published NCERT chapter list (`syllabus_interim`). Class 11–12 titles from existing `ncert_chapter_candidates_pack_c`; Class 9–10 from the Science book chapters for that subject. Mx empty. Do not copy candidate chapter_intelligence, do not dump the chemistry comprehensive map.
+
+**Deploy check.** Cache-bust `?v=13`. Map on Physics shows Class 11 Units and Measurement. Test maker: Modify a text item — options change with the stem. Toggle student, pick letters, Finish shows a score.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles (two-figure split is `v=12`).
+3. Bump `?v=` on `index.html` scripts/styles (test-maker Modify / student-take / phy-bio syllabus map is `v=13`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
@@ -166,4 +181,6 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 5d. Internal review only: Modify tab Apply uses `temperature: 1`; the figure redraws. Not a Pages check.
 5e. Spot: `9702_m17_qp_22:q3` — Fig. 3.1 and Fig. 3.2 stacked, not overlapping.
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
-7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.
+7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required. Physics/biology ISO-GEN sits on the syllabus-interim chapter list.
+8. Test maker: **Modify** on a text item rewrites stem + A–D. **Take as student** records letters; Finish shows score + feedback. Print still has no mx.
+9. Map: Chemistry hinges unchanged. Physics/biology = published NCERT chapters, mx empty.

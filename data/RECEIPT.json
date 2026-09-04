@@ -1,13 +1,13 @@
 {
   "schema": "ttwin.showcase.v2",
-  "built_utc": "2026-09-04T07:25:19Z",
+  "built_utc": "2026-09-04T08:05:48Z",
   "subjects": [
     "chemistry",
     "biology",
     "physics",
     "maths"
   ],
-  "board_home": "NCERT comprehensive chemistry map + Cambridge-tagged question bank (four subjects)",
+  "board_home": "NCERT comprehensive chemistry map + NCERT syllabus-interim physics/biology + Cambridge-tagged question bank",
   "n_nodes": 21,
   "n_hinges": 523,
   "n_enrichment": 543,
@@ -72,6 +72,11 @@
       "data/vocab/biology.json",
       "data/vocab/physics.json",
       "data/vocab/maths.json"
+    ],
+    "maps": [
+      "data/hinges.json",
+      "data/maps/biology.json",
+      "data/maps/physics.json"
     ]
   },
   "sources": {
@@ -84,14 +89,16 @@
     "projection": "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json",
     "exam_pack_sha256": "39646d1c79478bacf4cac6806ac5db8012f2717f30ee351429a5189b7bffc2b9"
   },
-  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Biology, physics, and maths browse nodes are frozen nav vocab, not a V15-style map. Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. ISO-GEN on this site authors CANDIDATE chemistry items from hinge packs; it does not rewrite frozen L20. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
+  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Physics and biology Map is the published NCERT chapter list (syllabus_interim): Class 9–10 Science chapters plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. Maths has browse vocab only. Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a published mark scheme. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
   "kimi": {
     "model": "kimi-k3",
     "endpoint": "https://api.moonshot.ai/v1/chat/completions",
     "roles": [
       "prompt_selector",
       "isogen_author",
-      "lesson_prose"
+      "lesson_prose",
+      "item_modify",
+      "paper_grade"
     ]
   }
 }
