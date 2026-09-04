@@ -124,6 +124,20 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 **Deploy check.** `0625_m16_qp_12:q32` draws the parallel resistors. `0625_m16_qp_22:q23` stem is one question sentence. Packed `tikz_packages` includes `circuitikz` on circuit items. Cache-bust `?v=11`.
 
+**Internal review (not the public site).** Pack lives at `data/awm_product/generated/figure_review_phybio`, served `0.0.0.0:8775`. Prefer `visual_assets/source_crops` over `rendered/` — `9702_m17_qp_22:q3` rendered PNG is a distorted composite (car on the graph, 29 KB); the exam-page crop is 149 KB. Python 3.12 `http.server` BufferedWriter (~8 KiB) reset small HTML/CSS/JS; send the full HTTP/1.0 response with `connection.sendall`. Crops stay off GitHub Pages.
+
+---
+
+## D12 · Kimi K3 figure Modify: `invalid temperature`
+
+**Symptom.** Internal review **Apply with Kimi K3** returns `invalid temperature: only 1 is allowed for this model`. The encoded pane never redraws.
+
+**Root cause.** `kimi-k3` is a thinking model. Moonshot pins `temperature=1` (also `top_p`, `n`, penalties). Any other value is HTTP 400. Review JS sent `temperature: 0.3`. TeacherTwin `js/kimi.js` already uses `1`. After a successful edit, the new TikZ must be mounted as `script[type=text/tikz]` so TikZJax draws it (session only; frozen exam.v1 is not rewritten).
+
+**Solution.** Send `temperature: 1` (or omit the field). Do not send `top_p`. Unwrap accidental `\begin{tikzpicture}…\begin{circuitikz}`. Public TTwin still does not display “Kimi”.
+
+**Deploy check.** Modify a circuit (`0625_m16_qp_12:q32`): prompt, Apply, right pane shows the new diagram. Revert restores the packed TikZ.
+
 ---
 
 ## Deploy checklist
@@ -135,5 +149,6 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
 5c. Spot: `0625_m16_qp_12:q32` (circuit draws), `0625_m16_qp_22:q23` (one-sentence stem).
+5d. Internal review only: Modify tab Apply uses `temperature: 1`; the figure redraws. Not a Pages check.
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.
