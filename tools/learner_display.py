@@ -127,8 +127,10 @@ def cid_to_mark(cid: str, legend: dict[str, str]) -> str:
 def peel_legend_suffix(rest: str) -> tuple[str, dict[str, str]]:
     legend = parse_legend(rest)
     cleaned = LEGEND_PAIR.sub("", rest)
+    had_key = bool(KEY_WORD.search(cleaned))
     cleaned = KEY_WORD.sub("", cleaned)
-    cleaned = re.sub(r"\s+=\s+[^\n]*$", "", cleaned).strip()
+    if legend or had_key:
+        cleaned = re.sub(r"\s+=\s+[^\n]*$", "", cleaned).strip()
     cleaned = re.sub(r"\s{2,}", " ", cleaned).strip()
     return cleaned, legend
 
@@ -147,14 +149,20 @@ def option_cells(rest: str, legend: dict[str, str]) -> list[str] | None:
 
 
 def is_prose_option_line(rest: str) -> bool:
-    words = rest.split()
-    if len(words) >= 14:
+    # Operators in V + V = I ( R + R ) must not count as "14 words of prose".
+    words = [w for w in (rest or "").split() if re.search(r"[A-Za-z]{3,}", w)]
+    if len(words) >= 8:
         return True
     if rest.endswith(".") and re.search(r"\b(is|are|has|have|was|were|shows|shown)\b", rest, re.I):
         return True
-    if len(words) >= 8 and rest.endswith("."):
+    if len(words) >= 5 and rest.endswith("."):
         return True
     return False
+
+
+def _plain_subscripts(s: str) -> str:
+    t = (s or "").translate(str.maketrans("", "", "₀₁₂₃₄₅₆₇₈₉"))
+    return re.sub(r"\s+", " ", t).strip()
 
 
 def rest_matches_option(rest: str, opt: str) -> bool:
@@ -164,6 +172,7 @@ def rest_matches_option(rest: str, opt: str) -> bool:
         return True
     if not o:
         return not is_prose_option_line(r)
+    r, o = _plain_subscripts(r), _plain_subscripts(o)
     if o in r or r in o:
         return True
     r0, o0 = r.split()[:3], o.split()[:3]
@@ -181,7 +190,11 @@ def find_letter_lines(lines: list[str], options: dict[str, str] | None = None) -
         if let in found:
             continue
         if is_prose_option_line(rest):
-            continue
+            opt = str(options.get(let) or "")
+            # Real A–D sentences ("When switch S is closed…") must still peel.
+            # "A distant star is receding…" is stem prose and does not match option A.
+            if not (opt and rest_matches_option(rest, opt)):
+                continue
         # A line that already contains B C D is the inline form, not a matrix row.
         if let == "A" and re.search(r"\sB\s.+\sC\s.+\sD\s", rest):
             continue
@@ -360,6 +373,8 @@ def strip_trailing_page_token(options: dict[str, str], uid: str) -> dict[str, st
 
 def options_are_parse_debris(options: dict[str, str]) -> bool:
     vals = [str(options.get(k) or "").strip() for k in "ABCD"]
+    if any(v == "" for v in vals):
+        return False
     if any(len(v) < 2 for v in vals):
         return True
     if any(v in {",", "and", "&", "A", "B", "C", "D"} for v in vals):
@@ -375,10 +390,16 @@ UNIT_EXP = re.compile(
 )
 DUMP_LINE = re.compile(
     r"^(displacement|distance|time|velocity|speed|extension|force|voltage|"
-    r"current|temperature|pressure|volume|field|graph|energy|"
-    r"wave [A-ZXYRS]|0(?:\s+time)?)$",
+    r"current|temperature|pressure|volume|field|graph|energy|image|object|lens|slope|"
+    r"wave [A-ZXYRS]|0(?:\s+time)?|"
+    r"[PQRSVWXYZ](?:\s+[PQRSVWXYZ])?|"
+    r"\d+\s*Ω|"
+    r"\d+\s*V|"
+    r"Fig\.\s*\d+(?:\.\d+)?)$",
     re.I,
 )
+_SUB_DIGITS = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+_ISOLATED_VAR = re.compile(r"(?<![A-Za-z0-9.])([A-Z])(?![A-Za-z.])")
 UNIT_HEADER = re.compile(
     r"([A-Za-z][A-Za-z0-9 ]*?)\s*/\s*([A-Za-zµμ°0-9²³⁻]+(?:\s*[A-Za-zµμ°⁻0-9]+)*?)"
     r"(?=(?:\s+[A-Za-z][A-Za-z0-9 ]*\s*/)|$)"
@@ -404,53 +425,247 @@ def repair_scientific_notation(text: str) -> str:
     return t
 
 
-def strip_figure_dump_runs(stem: str) -> str:
-    """Drop axis/wave labels that extraction dumped as their own lines between sentences."""
+def _is_dump_var_line(s: str) -> bool:
+    """Circuit-crop leftovers like '2 R R 3', not 'V , V and V ,'."""
+    t = (s or "").strip()
+    if not t:
+        return True
+    if re.search(r",|\band\b|[.?!]", t, re.I):
+        return False
+    toks = t.split()
+    return len(toks) <= 8 and all(re.fullmatch(r"[A-Z]{1,2}|\d+[.]?\d*|Ω|Ω", tok) for tok in toks)
+
+
+def _var_matches_for_subscripts(s: str, ndigits: int) -> list[re.Match]:
+    matches: list[re.Match] = []
+    for m in _ISOLATED_VAR.finditer(s):
+        if m.group(1) == "A" and re.match(r"\s+[a-z]", s[m.end() :]):
+            continue
+        matches.append(m)
+    if re.match(r"^[A-D]\s", (s or "").lstrip()) and matches:
+        first = matches[0]
+        if first.start() <= 2 and first.group(1) in "ABCD":
+            matches = matches[1:]
+    if len(matches) == ndigits:
+        return matches
+    no_i = [m for m in matches if m.group(1) != "I"]
+    if len(no_i) == ndigits:
+        return no_i
+    return []
+
+
+def _apply_subscripts(s: str, matches: list[re.Match], digits: list[str]) -> str:
+    out: list[str] = []
+    last = 0
+    for m, d in zip(matches, digits):
+        out.append(s[last : m.end()])
+        out.append(d.translate(_SUB_DIGITS))
+        last = m.end()
+    out.append(s[last:])
+    return "".join(out)
+
+
+def attach_orphan_subscripts(stem: str) -> str:
+    """'V , V and V ,' + next line '1 2 3' → V₁, V₂ and V₃."""
     lines = (stem or "").split("\n")
-    dump = [bool(ln.strip()) and bool(DUMP_LINE.match(ln.strip())) for ln in lines]
-    drop = [False] * len(lines)
+    out: list[str] = []
     i = 0
     while i < len(lines):
-        if dump[i]:
-            j = i
-            while j < len(lines) and dump[j]:
-                j += 1
-            if j - i >= 2:
-                for k in range(i, j):
-                    drop[k] = True
-            i = j
-        else:
+        s = lines[i]
+        nxt = lines[i + 1].strip() if i + 1 < len(lines) else ""
+        digits = nxt.split() if nxt and re.fullmatch(r"\d(?:\s+\d){0,8}", nxt) else []
+        dump = _is_dump_var_line(s)
+        if len(digits) >= 2 and not (dump and any(ch.isdigit() for ch in s)):
+            matches = _var_matches_for_subscripts(s, len(digits))
+            if matches:
+                out.append(_apply_subscripts(s, matches, digits))
+                i += 2
+                continue
+        out.append(s)
+        i += 1
+    return "\n".join(out)
+
+
+def is_chrome_line(s: str) -> bool:
+    t = (s or "").strip()
+    if not t:
+        return False
+    if re.fullmatch(r"\[\d+\]", t):
+        return False
+    if re.match(r"^\([a-zivx]+\)", t, re.I):
+        return False
+    if re.match(r"^[A-D](?:[.)]|\s)\s+\S.{10,}", t):
+        return False
+    mnu = re.match(r"^(\d{1,3})\s+(.+)$", t)
+    if mnu and _looks_like_nuclide(mnu.group(2)):
+        return False
+    if DUMP_LINE.match(t):
+        return True
+    if re.fullmatch(r"[\d.]+(?:\s+[\d.]+){2,}", t):
+        nums = t.split()
+        if any("." in n for n in nums):
+            return True
+        try:
+            vals = [int(n) for n in nums]
+            diffs = [vals[i + 1] - vals[i] for i in range(len(vals) - 1)]
+            if diffs and diffs[0] in (1, -1) and all(d == diffs[0] for d in diffs):
+                return True
+        except (ValueError, OverflowError):
+            pass
+    toks = t.split()
+    if (
+        2 <= len(toks) <= 6
+        and all(re.fullmatch(r"[A-Z]{1,2}|\d+[.]?\d*|Ω|Ω|V|A", tok) for tok in toks)
+        and (len(toks) <= 2 or (any(tok[:1].isdigit() for tok in toks) and any(tok[:1].isalpha() for tok in toks)))
+    ):
+        return True
+    if t.endswith((".", "?", "!")):
+        return False
+    words = t.split()
+    if len(words) <= 3 and not re.search(
+        r"\b(the|which|what|how|show|define|connected|diagram|when|across|between|resistor|circuit)\b",
+        t,
+        re.I,
+    ):
+        return True
+    return False
+
+
+def strip_figure_dump_runs(stem: str) -> str:
+    """Drop axis/wave/circuit labels extraction dumped between sentences. Not inherited from the crop."""
+    lines = [ln.rstrip() for ln in (stem or "").split("\n")]
+    keep: list[str] = []
+    i = 0
+    protect = False
+    while i < len(lines):
+        s = lines[i]
+        if re.match(r"^\([a-zivx]+\)", (s or "").strip(), re.I):
+            protect = False
+        if protect:
+            keep.append(s)
             i += 1
-    kept = [ln for ln, gone in zip(lines, drop) if not gone]
-    return "\n".join(kept)
+            continue
+        if is_chrome_line(s):
+            j = i
+            while j < len(lines) and (not lines[j].strip() or is_chrome_line(lines[j])):
+                j += 1
+            i = j
+            continue
+        keep.append(s)
+        if re.search(r"tick one box", s, re.I):
+            protect = True
+        i += 1
+    return "\n".join(keep)
 
 
-def join_wrapped_prose(stem: str) -> str:
-    """Join PDF column-wraps: 'It emits light of\\nfrequency 4.57…'."""
+def clip_label_tail_after_question(stem: str) -> str:
+    if "?" not in (stem or ""):
+        return stem
+    head, tail = stem.rsplit("?", 1)
+    tail_lines = [ln.strip() for ln in tail.split("\n") if ln.strip()]
+    if tail_lines and all(
+        is_chrome_line(ln) or re.fullmatch(r"[A-D]", ln) or ln.isdigit() for ln in tail_lines
+    ):
+        return head.strip() + "?"
+    return stem
+
+
+_HANGING = re.compile(
+    r"\b(the|a|an|of|and|as|to|is|are|in|for|with|by|from|that|than|or|its|their)$",
+    re.I,
+)
+
+
+def _ends_sentence(s: str) -> bool:
+    return bool(re.search(r"[.?!](?:\s*\[[\d.]+\])?['\"]?$", s or ""))
+
+
+def _is_option_start(s: str, options: dict[str, str] | None) -> bool:
+    om = re.match(r"^([A-D])(?:[.)]\s+|\s+)(\S.*)$", s or "")
+    if not om:
+        return False
+    rest = om.group(2)
+    opt = str((options or {}).get(om.group(1)) or "")
+    if not is_prose_option_line(rest):
+        return True
+    return bool(opt and rest_matches_option(rest, opt))
+
+
+def join_wrapped_prose(stem: str, options: dict[str, str] | None = None) -> str:
+    """One grammatical sentence → one line. Do not keep PDF/crop column wraps."""
+    lines = [ln.strip() for ln in (stem or "").split("\n")]
     out: list[str] = []
-    for raw in (stem or "").split("\n"):
-        s = raw.strip()
-        if not out:
+    buf: list[str] = []
+
+    def flush() -> None:
+        if buf:
+            out.append(" ".join(buf))
+            buf.clear()
+
+    for s in lines:
+        if not s:
+            flush()
+            if out and out[-1] != "":
+                out.append("")
+            continue
+        if re.match(r"^\([a-zivx]+\)", s, re.I):
+            flush()
             out.append(s)
             continue
-        prev = out[-1]
-        if (
-            prev
-            and not re.search(r"[.?!:]$", prev)
-            and s
-            and s[0].islower()
-            and len(prev) >= 28
-            and not DUMP_LINE.match(s)
-        ):
-            out[-1] = prev + " " + s
-        else:
-            out.append(s)
-    # collapse extra blanks
-    text = "\n".join(out)
-    return re.sub(r"\n{3,}", "\n\n", text).strip()
+        if _is_option_start(s, options):
+            flush()
+            om = re.match(r"^([A-D])(?:[.)]\s+|\s+)(\S.*)$", s)
+            rest = om.group(2) if om else s
+            opt = str((options or {}).get(om.group(1) if om else "") or "")
+            if is_prose_option_line(rest) or is_prose_option_line(opt):
+                buf.append(s)
+                if _ends_sentence(s):
+                    flush()
+            else:
+                out.append(s)
+            continue
+        buf.append(s)
+        if _ends_sentence(s):
+            flush()
+            continue
+        # "charge" / "current" tick labels are complete, not a wrapped sentence.
+        if len(s.split()) <= 4 and not _HANGING.search(s):
+            flush()
+    flush()
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
+
+
+def infer_tikz_packages(code: str, pkgs: list[str] | None = None) -> list[str]:
+    """Exam JSON often lists only 'tikz' even when the body is circuitikz/pgfplots."""
+    out: list[str] = []
+    for raw in pkgs or []:
+        m = re.match(r"[A-Za-z]+", str(raw).strip())
+        name = m.group(0) if m else ""
+        if name and name not in {"tikz", "amsmath", "amssymb"} and name not in out:
+            out.append(name)
+    c = code or ""
+    if "\\begin{circuitikz}" in c or "to[R" in c or "european resistor" in c or "battery1" in c:
+        if "circuitikz" not in out:
+            out.append("circuitikz")
+    if "\\begin{axis}" in c or "\\addplot" in c:
+        if "pgfplots" not in out:
+            out.append("pgfplots")
+    if "\\chemfig" in c and "chemfig" not in out:
+        out.append("chemfig")
+    return out
+
+
+def normalize_tikz_source(code: str) -> str:
+    t = (code or "").strip()
+    if not t:
+        return t
+    if "\\begin{circuitikz}" in t or "\\begin{tikzpicture}" in t:
+        return t
+    return "\\begin{tikzpicture}\n" + t + "\n\\end{tikzpicture}"
 
 
 def parse_column_headers(header_lines: list[str], ncell: int) -> list[str]:
+    header_lines = [h for h in header_lines if h and not re.fullmatch(r"[\d\s]+", h)]
     last = header_lines[-1] if header_lines else ""
     parts = UNIT_HEADER.findall(last)
     if len(parts) == ncell:
@@ -458,13 +673,17 @@ def parse_column_headers(header_lines: list[str], ncell: int) -> list[str]:
     toks = [t for t in last.split() if t != "/"]
     if len(toks) == ncell and all(len(t) <= 24 for t in toks):
         return toks
+    if ncell >= 2 and len(toks) == 2 * ncell and all(len(t) <= 24 for t in toks):
+        return [" ".join(toks[i : i + 2]) for i in range(0, len(toks), 2)]
     return [""] * ncell
 
 
 def find_inline_span(stem: str, options: dict[str, str]) -> tuple[int, int] | None:
     if options_are_parse_debris(options):
         return None
-    vals = [str(options[k]).strip() for k in "ABCD"]
+    vals = [str(options.get(k) or "").strip() for k in "ABCD"]
+    if any(not v for v in vals):
+        return None
     pat = (
         r"(?:^|\n)[ \t]*A\s+"
         + re.escape(vals[0])
@@ -493,10 +712,27 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
     stem = strip_leading_question_number(stem, uid)
     stem = strip_page_furniture(stem)
     stem = DEGREE_CID.sub("°", stem)
-    stem = strip_figure_dump_runs(stem)
-    stem = join_wrapped_prose(stem)
+    stem = attach_orphan_subscripts(stem)
+    # Chrome/wrap only the prose prefix so option-matrix rows (½ fractions, headers)
+    # are not eaten as figure labels.
+    lines0 = stem.splitlines()
+    found0 = find_letter_lines(lines0, options)
+    if found0:
+        cut = header_start(lines0, found0["A"])
+        prefix = "\n".join(lines0[:cut])
+        block = "\n".join(lines0[cut:])
+        prefix = strip_figure_dump_runs(prefix)
+        prefix = clip_label_tail_after_question(prefix)
+        prefix = join_wrapped_prose(prefix, options)
+        stem = join_wrapped_prose(prefix + (("\n" + block) if block else ""), options)
+    else:
+        stem = strip_figure_dump_runs(stem)
+        stem = clip_label_tail_after_question(stem)
+        stem = join_wrapped_prose(stem, options)
     after_qnum = stem
 
+    if options_are_parse_debris(options):
+        out["options_are_figure"] = True
     if out.get("options_are_figure") or options_are_parse_debris(options):
         stem = repair_scientific_notation(stem)
         out["stem"] = stem
@@ -506,12 +742,20 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
 
     legend = parse_legend(stem + "\n" + "\n".join(str(v) for v in options.values()))
     for k, v in list(options.items()):
-        options[k] = tidy_option_text(str(v), legend)
+        options[k] = tidy_option_text(join_wrapped_prose(str(v)), legend)
     options = strip_trailing_page_token(options, uid)
 
     lines = stem.splitlines()
     found = find_letter_lines(lines, options)
     if found:
+        for let in "ABCD":
+            raw = lines[found[let]].strip()
+            m = LETTER.match(raw)
+            rest = m.group(2).strip() if m else ""
+            if rest and any(ch in rest for ch in "₀₁₂₃₄₅₆₇₈₉"):
+                options[let] = rest
+            elif rest and is_prose_option_line(rest) and len(rest) > len(str(options.get(let) or "")):
+                options[let] = rest
         options = repair_stacked_fractions(lines, found, options)
         for k, v in list(options.items()):
             options[k] = tidy_option_text(str(v), legend)
@@ -531,6 +775,10 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
             if cells is None:
                 repaired = options.get(let) or rest
                 cells = split_numeric_cells(repaired) or split_qty_cells(repaired)
+            if cells is None:
+                toks = (options.get(let) or rest).split()
+                if 2 <= len(toks) <= 4 and all(len(t) <= 16 and not t.endswith(".") for t in toks):
+                    cells = toks
             if cells is None:
                 row_cells = []
                 break
@@ -560,6 +808,8 @@ def sanitize_item(uid: str, rec: dict[str, Any]) -> dict[str, Any]:
         keep = lines[:hs] if used_headers else lines[:a]
         stem = "\n".join(keep).strip()
         stem = strip_page_furniture(stem)
+        stem = strip_figure_dump_runs(stem)
+        stem = join_wrapped_prose(stem, options)
     else:
         span = find_inline_span(stem, options)
         if span:
@@ -669,6 +919,139 @@ def _selftest() -> None:
     assert "amplitude / cm" not in r["stem"]
     tbl = r.get("tables") or []
     assert tbl and "amplitude" in " ".join(tbl[0].get("headers") or []), tbl
+
+    q21b = {
+        "stem": (
+            "21 A distant star is receding from the Earth with a speed of 1.40 × 10 7 m s –1 . It emits light of\n"
+            "frequency 4.57 × 10 14 Hz. The speed of light is 3.00 × 10 8 m s –1 .\n"
+            "The Doppler effect formula can be used with light waves.\n"
+            "What will be the frequency of this light when detected on Earth?"
+        ),
+        "options": {"A": "2.04 × 10 13 Hz", "B": "x", "C": "y", "D": "z"},
+    }
+    r = sanitize_item("9702_m16_qp_12:q21", q21b)
+    assert "of frequency" in r["stem"]
+    assert "of\nfrequency" not in r["stem"]
+
+    q23 = {
+        "stem": (
+            "23 Which diagram shows how a converging lens is used as a magnifying glass?\n"
+            "image\nF\nA\nobject F\nlens\nimage\nF F\nB\nobject\nlens\n12"
+        ),
+        "options": {"A": "A", "B": "B", "C": "C", "D": "D"},
+        "options_are_figure": True,
+    }
+    r = sanitize_item("0625_m16_qp_22:q23", q23)
+    assert r["stem"].endswith("glass?") or "magnifying glass?" in r["stem"], r["stem"]
+    assert "object F" not in r["stem"]
+
+    q34 = {
+        "stem": (
+            "34 Three cells with e.m.f.s V , V and V , have negligible internal resistance. These cells are\n"
+            "1 2 3\n"
+            "connected to three resistors with resistances R , R and R , as shown.\n"
+            "1 2 3\n"
+            "The current in the circuit is I ."
+        ),
+        "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+    }
+    r = sanitize_item("9702_m16_qp_12:q34", q34)
+    assert "V₁" in r["stem"] and "V₂" in r["stem"], r["stem"]
+    assert "R₁" in r["stem"]
+    assert "\n1 2 3\n" not in r["stem"]
+    assert "These cells are connected" in r["stem"]
+
+    assert not is_chrome_line("1 1 1 1")
+    assert is_chrome_line("7 8 9 10 11")
+    is_chrome_line("9" * 40 + " 1")  # must not overflow
+
+    assert infer_tikz_packages("\\begin{circuitikz}\\draw (0,0) to[R] (1,0);\\end{circuitikz}", ["tikz"]) == ["circuitikz"]
+    assert infer_tikz_packages("\\begin{tikzpicture}\\begin{axis}\\end{axis}\\end{tikzpicture}", ["tikz"]) == ["pgfplots"]
+    assert infer_tikz_packages("x", ["circuitikz (options: european,straightvoltages)"]) == ["circuitikz"]
+    assert "circuitikz" not in infer_tikz_packages("\\begin{tikzpicture}\\draw (0,0)--(1,0);\\end{tikzpicture}", ["tikz"])
+    assert normalize_tikz_source("\\begin{circuitikz}\\draw (0,0);\\end{circuitikz}").startswith("\\begin{circuitikz}")
+    assert "\\begin{tikzpicture}" in normalize_tikz_source("\\draw (0,0)--(1,0);")
+
+    q29 = {
+        "stem": (
+            "29 A battery is connected to two crocodile clips and a lamp.\n"
+            "There is a gap between the crocodile clips.\n"
+            "crocodile clips\n"
+            "Four cylinders W, X, Y and Z are made of the same metal but have different dimensions. The\n"
+            "cylinders are connected in turn, by their ends, between the crocodile clips. The diagrams of the\n"
+            "cylinders are all drawn to the same scale.\n"
+            "W\nX\nY\nZ\n"
+            "Which cylinder makes the lamp glow most brightly and which cylinder makes the lamp glow least\n"
+            "brightly?"
+        ),
+        "options": {"A": "W Y", "B": "W Z", "C": "X Y", "D": "X Z"},
+    }
+    r = sanitize_item("0625_m15_qp_12:q29", q29)
+    assert "crocodile clips\n" not in r["stem"]
+    assert "The\ncylinders" not in r["stem"]
+    assert "least\nbrightly" not in r["stem"]
+    assert "lamp glow least brightly?" in r["stem"]
+
+    q7 = {
+        "stem": (
+            "7 The electric circuit in Fig. 7.1 consists of a battery, two lamps and a switch. A voltmeter is connected\n"
+            "across one of the lamps.\n"
+            "12 V\nA B\nV\nFig. 7.1\n"
+            "(a) Which quantity does the voltmeter measure? Tick one box.\n"
+            "charge\ncurrent\npotential difference\npower [1]\n"
+            "(b) The switch is closed so that there is a current in the lamps."
+        ),
+        "options": {"A": "", "B": "", "C": "", "D": ""},
+    }
+    r = sanitize_item("0625_m15_qp_22:q7", q7)
+    assert "12 V" not in r["stem"]
+    assert r["stem"].count("Fig. 7.1") == 1
+    assert "connected across one of the lamps." in r["stem"]
+    assert "charge" in r["stem"] and "current" in r["stem"]
+
+    q36 = {
+        "stem": (
+            "36 A potential divider circuit is constructed with one variable resistor X and one fixed resistor Y, as\n"
+            "shown.\n"
+            "V\nX\nX\nV\nY\nY\n"
+            "The potential difference across resistor X is V and the potential difference of resistor Y is V ."
+        ),
+        "options": {"A": "falls rises", "B": "falls stays the same", "C": "rises falls", "D": "rises stays the same"},
+    }
+    r = sanitize_item("9702_m18_qp_12:q36", q36)
+    assert "as shown." in r["stem"]
+    assert "as The potential" not in r["stem"]
+
+    q34b = {
+        "stem": (
+            "34 Three cells with e.m.f.s V , V and V , have negligible internal resistance. These cells are\n"
+            "1 2 3\n"
+            "connected to three resistors with resistances R , R and R , as shown.\n"
+            "1 2 3\n"
+            "V\nR 1\nI\n1\nV V\n2 R R 3\n2 3\n"
+            "The current in the circuit is I .\n"
+            "Which equation is correct?\n"
+            "A V + V + V = I ( R + R + R )\n"
+            "1 2 3 1 2 3\n"
+            "B V + V – V = I ( R + R + R )\n"
+            "1 2 3 1 2 3\n"
+            "C V – V + V = I ( R + R + R )\n"
+            "1 2 3 1 2 3\n"
+            "D V – V – V = I ( R + R + R )\n"
+            "1 2 3 1 2 3"
+        ),
+        "options": {
+            "A": "V + V + V = I ( R + R + R )",
+            "B": "V + V – V = I ( R + R + R )",
+            "C": "V – V + V = I ( R + R + R )",
+            "D": "V – V – V = I ( R + R + R )",
+        },
+    }
+    r = sanitize_item("9702_m16_qp_12:q34", q34b)
+    assert "V₁" in r["stem"] and "R₁" in r["stem"]
+    assert "2 R" not in r["stem"]
+    assert "A V +" not in r["stem"]
+    assert "V₁" in r["options"]["A"] or "V₁" in r["stem"]
 
     q26 = {
         "stem": (

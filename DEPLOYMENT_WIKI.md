@@ -114,13 +114,26 @@ Issues found while standing up the GitHub Pages chemistry showcase. Sort these *
 
 ---
 
+## D11 · Circuit diagrams blank; crop line-breaks inherited in the stem
+
+**Symptom.** `0625_m15_qp_12:q29` and other circuit items: encoded figure missing on the paper. `0625_m16_qp_22:q23`: stem still has `image` / `F` / `lens` wraps from the crop. `9702_m17_qp_22:q3`: left-hand figure is a distorted composite (car sitting on the graph).
+
+**Root cause.** Exam JSON `preamble_packages` is often only `["tikz"]` even when the body is `\begin{circuitikz}` or `\begin{axis}`. Overlay wrapped non-`tikzpicture` bodies in `\begin{tikzpicture}…`, which nests `circuitikz` and TikZJax draws nothing. Stem overlay copied OCR/crop line-breaks inside a single sentence. Review pack used `visual_assets/rendered/` (failed encoding PNG) instead of `source_crops/`.
+
+**Solution.** `infer_tikz_packages` + `normalize_tikz_source` at pack time (`circuitikz` / `pgfplots` from the body; never wrap `circuitikz` in `tikzpicture`). `join_wrapped_prose` joins a grammatical sentence; figure-label dumps are not inherited from the crop. Internal figure review prefers `source_crops`, exposes a Modify tab (Kimi K3 edits TikZ for that session). Public TTwin still does not display “Kimi”.
+
+**Deploy check.** `0625_m16_qp_12:q32` draws the parallel resistors. `0625_m16_qp_22:q23` stem is one question sentence. Packed `tikz_packages` includes `circuitikz` on circuit items. Cache-bust `?v=11`.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles (ISO-GEN teacher-prompt is `v=6`).
+3. Bump `?v=` on `index.html` scripts/styles (circuitikz pack is `v=11`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
+5c. Spot: `0625_m16_qp_12:q32` (circuit draws), `0625_m16_qp_22:q23` (one-sentence stem).
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required.
