@@ -44,14 +44,18 @@ data/
   vocab/{chemistry,biology,physics,maths}.json
   nav/{chemistry,biology,physics,maths}.json
   questions/{subject}-{igcse|senior|olympiad}.json
-  nodes.json hinges.json enrichment.json projection.json   # chemistry map
+  maps/chemistry.json        comprehensive NCERT chemistry map (523 hinges)
+  maps/{biology,physics}.json  syllabus-interim chapter lists
+  enrichment/{chemistry,biology,physics,maths}.json
+                             per-subject enrichment; every row has `subject`
+  nodes.json projection.json
 ```
 
 Agent harnesses for the live site (Teacher Model and Student Model, instructional invariants, when not to call AI): `harness/`. Start at `harness/README.md`. Six teacher slots, one student slot (post-score feedback). Deterministic retrieve / typeset / score first.
 
 Deploy issues and checks: `DEPLOYMENT_WIKI.md`.
 
-Not in this repo: the 46 MB comprehensive map blob, live V15, frozen exam.jsonl, API keys, pre-rendered figure PNGs.
+The live chemistry map is packed from the NCERT comprehensive map into `data/maps/chemistry.json` (523 statements). The 46 MB source blob, live V15, frozen exam.jsonl, API keys, and pre-rendered figure PNGs stay out of this repo.
 
 ## License
 

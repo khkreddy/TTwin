@@ -247,6 +247,7 @@ def _syllabus_row(subject: str, grade: int, band: str, slug: str, ch_title: str,
     title = {i.get("id"): i.get("title") for i in vocab_ideas if isinstance(i, dict)}
     ns = f"science/grade_{grade}/{slug}"
     return {
+        "subject": subject,
         "unit_id": f"ncert/grade_{grade:02d}/{subject}/{slug}",
         "node": node.split(":")[-1] if ":" in node else node,
         "node_id": node,
@@ -326,6 +327,41 @@ def syllabus_map(subject: str, vocab_ideas: list) -> list[dict]:
 
     rows.sort(key=lambda r: (r.get("grade") or 0, r.get("chapter") or ""))
     return rows
+
+
+def pack_map_doc(subject: str, status: str, units: list, *, nodes: list | None = None, extra: dict | None = None) -> dict:
+    rows = []
+    for u in units or []:
+        rec = dict(u)
+        rec["subject"] = subject
+        rows.append(rec)
+    doc = {
+        "schema": "ttwin.map.v1",
+        "subject": subject,
+        "label": SUBJECT_LABEL.get(subject, subject),
+        "map_status": status,
+        "n": len(rows),
+        "nodes": nodes or [],
+        "units": rows,
+    }
+    if extra:
+        doc.update(extra)
+    return doc
+
+
+def pack_enrichment_doc(subject: str, items: list) -> dict:
+    stamped = []
+    for it in items or []:
+        rec = dict(it)
+        rec["subject"] = subject
+        stamped.append(rec)
+    return {
+        "schema": "ttwin.enrichment.v1",
+        "subject": subject,
+        "label": SUBJECT_LABEL.get(subject, subject),
+        "n": len(stamped),
+        "items": stamped,
+    }
 
 
 def slim_mx(rows) -> list:
@@ -541,12 +577,28 @@ def slim_projection(proj: dict) -> dict:
     }
 
 
+def write_enrichment_dir(enrich: list) -> None:
+    (OUT / "enrichment").mkdir(parents=True, exist_ok=True)
+    by_enr = {s: [] for s in SUBJECT_ORDER}
+    for row in enrich:
+        by_enr.setdefault(row.get("subject") or "chemistry", []).append(row)
+    for s in SUBJECT_ORDER:
+        dump(OUT / "enrichment" / f"{s}.json", pack_enrichment_doc(s, by_enr.get(s) or []))
+    for stale in ("hinges.json", "enrichment.json"):
+        p = OUT / stale
+        if p.is_file():
+            p.unlink()
+            print(f"  removed legacy {stale}")
+
+
 def main() -> int:
+    maps_only = "--maps-only" in sys.argv
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "questions").mkdir(exist_ok=True)
     (OUT / "nav").mkdir(exist_ok=True)
     (OUT / "vocab").mkdir(exist_ok=True)
     (OUT / "maps").mkdir(exist_ok=True)
+    (OUT / "enrichment").mkdir(exist_ok=True)
 
     print("loading comprehensive map…")
     comp = json.loads(COMP.read_text(encoding="utf-8"))
@@ -571,6 +623,7 @@ def main() -> int:
         ch = chapter_family(uid or "")
         hinges.append(
             {
+                "subject": "chemistry",
                 "unit_id": uid,
                 "node": s.get("node"),
                 "grade_band": s.get("grade_band"),
@@ -602,6 +655,7 @@ def main() -> int:
             url = doc.get("url") or doc.get("source_url")
             enrich.append(
                 {
+                    "subject": "chemistry",
                     "item_id": o.get("item_id"),
                     "type": ev.get("type"),
                     "statement": ev.get("statement"),
@@ -617,6 +671,73 @@ def main() -> int:
                     },
                 }
             )
+
+    if maps_only:
+        print("maps-only: writing maps + enrichment, leaving question packs untouched")
+        dump(
+            OUT / "maps" / "chemistry.json",
+            pack_map_doc(
+                "chemistry",
+                "comprehensive",
+                hinges,
+                nodes=nodes,
+                extra={
+                    "source": str(COMP.relative_to(AWM)),
+                    "source_sha256": sha256_file(COMP),
+                    "honesty": "Derived from the NCERT chemistry comprehensive map (523 statements). The 46 MB source blob is not copied into Pages; this file is the live map.",
+                },
+            ),
+        )
+        dump(OUT / "nodes.json", nodes)
+        for subject in ("physics", "biology"):
+            vocab = slim_vocab(VOCAB_FILE[subject])
+            mrows = syllabus_map(subject, vocab.get("ideas") or [])
+            dump(
+                OUT / "maps" / f"{subject}.json",
+                pack_map_doc(
+                    subject,
+                    "syllabus_interim",
+                    mrows,
+                    extra={
+                        "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
+                    },
+                ),
+            )
+        write_enrichment_dir(enrich)
+        subj_path = OUT / "subjects.json"
+        subjects_doc = json.loads(subj_path.read_text(encoding="utf-8"))
+        for s in subjects_doc.get("subjects") or []:
+            sid = s.get("id")
+            s["enrichment"] = f"data/enrichment/{sid}.json"
+            if sid == "chemistry":
+                s["map"] = "data/maps/chemistry.json"
+                s["map_status"] = "comprehensive"
+                s["n_map_units"] = len(hinges)
+                s["has_map"] = True
+        dump(subj_path, subjects_doc)
+        meta_path = OUT / "meta.json"
+        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.is_file() else {}
+        meta["n_nodes"] = len(nodes)
+        meta["n_hinges"] = len(hinges)
+        meta["n_enrichment"] = len(enrich)
+        files = dict(meta.get("files") or {})
+        files["maps"] = [
+            s.get("map") for s in subjects_doc.get("subjects") or [] if s.get("map")
+        ]
+        files["enrichment"] = [f"data/enrichment/{s}.json" for s in SUBJECT_ORDER]
+        meta["files"] = files
+        sources = dict(meta.get("sources") or {})
+        sources["comprehensive_map"] = str(COMP.relative_to(AWM))
+        sources["comprehensive_sha256"] = sha256_file(COMP)
+        sources["enrichment"] = str(ENRICH.relative_to(AWM))
+        meta["sources"] = sources
+        meta["built_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        dump(OUT / "meta.json", meta)
+        (OUT / "RECEIPT.json").write_text(
+            json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+        print("done (maps-only)")
+        return 0
 
     print("loading nav tags (all subjects)…")
     by_subject: dict[str, list] = {s: [] for s in SUBJECT_ORDER}
@@ -722,12 +843,36 @@ def main() -> int:
         map_status = None
         n_map_units = 0
         if subject == "chemistry":
-            map_path = "data/hinges.json"
+            dump(
+                OUT / "maps" / "chemistry.json",
+                pack_map_doc(
+                    "chemistry",
+                    "comprehensive",
+                    hinges,
+                    nodes=nodes,
+                    extra={
+                        "source": str(COMP.relative_to(AWM)),
+                        "source_sha256": sha256_file(COMP),
+                        "honesty": "Derived from the NCERT chemistry comprehensive map (523 statements). The 46 MB source blob is not copied into Pages; this file is the live map.",
+                    },
+                ),
+            )
+            map_path = "data/maps/chemistry.json"
             map_status = "comprehensive"
             n_map_units = len(hinges)
         elif subject in ("physics", "biology"):
             mrows = syllabus_map(subject, vocab.get("ideas") or [])
-            dump(OUT / "maps" / f"{subject}.json", mrows)
+            dump(
+                OUT / "maps" / f"{subject}.json",
+                pack_map_doc(
+                    subject,
+                    "syllabus_interim",
+                    mrows,
+                    extra={
+                        "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
+                    },
+                ),
+            )
             map_path = f"data/maps/{subject}.json"
             map_status = "syllabus_interim"
             n_map_units = len(mrows)
@@ -740,6 +885,7 @@ def main() -> int:
                 "vocab": f"data/vocab/{subject}.json",
                 "has_map": bool(map_path),
                 "map": map_path,
+                "enrichment": f"data/enrichment/{subject}.json",
                 "map_status": map_status,
                 "n_map_units": n_map_units,
                 "n_tagged": len(rows),
@@ -786,6 +932,7 @@ def main() -> int:
             "maps": [
                 s.get("map") for s in catalog if s.get("map")
             ],
+            "enrichment": [f"data/enrichment/{s}.json" for s in SUBJECT_ORDER],
             "solutions": "data/solutions/index.json",
         },
         "sources": {
@@ -805,7 +952,9 @@ def main() -> int:
             "plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete "
             "hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. "
             "Maths has browse vocab only. "
-            "Mx and enrichment are teacher-facing chemistry map layers; they are not printed on the learner paper. "
+            "Chemistry map lives at data/maps/chemistry.json (loaded from the comprehensive map). "
+            "Enrichment is per-subject under data/enrichment/{subject}.json; every row carries subject. "
+            "Mx and enrichment are teacher-facing; they are not printed on the learner paper. "
             "ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and "
             "does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a "
             "published mark scheme. Solution analysis is a sub-layer of the question bank (item_uid × item_sha256): "
@@ -849,9 +998,8 @@ def main() -> int:
     dump(OUT / "subjects.json", subjects_doc)
     dump(OUT / "meta.json", meta)
     dump(OUT / "nodes.json", nodes)
-    dump(OUT / "hinges.json", hinges)
-    dump(OUT / "enrichment.json", enrich)
     dump(OUT / "projection.json", projection)
+    write_enrichment_dir(enrich)
     (OUT / "RECEIPT.json").write_text(
         json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )

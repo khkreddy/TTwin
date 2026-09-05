@@ -1,7 +1,7 @@
 (function () {
   const S = {
     meta: null, catalog: null, subject: "chemistry",
-    nodes: [], hinges: [], enrichment: [], projection: null,
+    nodes: [], enrichment: [], projection: null,
     vocab: { ideas: [] }, nav: [],
     stems: {}, loadedPacks: {},
     map: [], mapStatus: null,
@@ -29,6 +29,19 @@
     if (!r.ok) throw new Error("failed " + path);
     return r.json();
   }
+  function unwrapMap(doc) {
+    if (!doc) return [];
+    if (Array.isArray(doc)) return doc;
+    return doc.units || doc.items || [];
+  }
+  function unwrapEnrichment(doc) {
+    if (!doc) return [];
+    if (Array.isArray(doc)) return doc;
+    return doc.items || [];
+  }
+  function enrichmentOfSubject(rows, subject) {
+    return (rows || []).filter((e) => !e.subject || e.subject === subject);
+  }
 
   function specOf(id) {
     return (S.catalog || []).find((s) => s.id === id) || null;
@@ -37,19 +50,15 @@
   async function boot() {
     $("app").innerHTML = "<p class='muted'>Loading…</p>";
     try {
-      const [meta, subjects, nodes, hinges, enrichment, projection] = await Promise.all([
+      const [meta, subjects, projection] = await Promise.all([
         jget("data/meta.json"),
         jget("data/subjects.json"),
-        jget("data/nodes.json"),
-        jget("data/hinges.json"),
-        jget("data/enrichment.json"),
         jget("data/projection.json"),
       ]);
       if (window.TTwinSolutions) await TTwinSolutions.boot();
       S.meta = meta;
       S.catalog = subjects.subjects || [];
-      S.nodes = nodes; S.hinges = hinges;
-      S.enrichment = enrichment; S.projection = projection;
+      S.projection = projection;
       const wanted = sessionStorage.getItem(SUBJECT_KEY) || subjects.default || "chemistry";
       await loadSubject(wanted);
       route();
@@ -64,18 +73,27 @@
     S.subject = spec.id;
     try { sessionStorage.setItem(SUBJECT_KEY, spec.id); } catch (e) {}
     const jobs = [jget(spec.vocab), jget(spec.nav)];
-    const loadMap = spec.map && spec.id !== "chemistry";
+    const loadMap = !!spec.map;
+    const loadEnr = !!spec.enrichment;
     if (loadMap) jobs.push(jget(spec.map));
+    if (loadEnr) jobs.push(jget(spec.enrichment));
     const got = await Promise.all(jobs);
     S.vocab = got[0] || { ideas: [] };
     S.nav = got[1] || [];
+    let i = 2;
+    const mapDoc = loadMap ? got[i++] : null;
+    const enrDoc = loadEnr ? got[i++] : null;
     S.stems = {};
     S.loadedPacks = {};
     S.spec = spec;
     S.mapStatus = spec.map_status || (spec.has_map ? "comprehensive" : null);
-    if (spec.id === "chemistry") S.map = S.hinges;
-    else if (loadMap) S.map = got[2] || [];
-    else S.map = [];
+    S.map = unwrapMap(mapDoc);
+    if (mapDoc && !Array.isArray(mapDoc) && Array.isArray(mapDoc.nodes) && mapDoc.nodes.length) {
+      S.nodes = mapDoc.nodes;
+    } else if (spec.id !== "chemistry") {
+      S.nodes = [];
+    }
+    S.enrichment = enrichmentOfSubject(unwrapEnrichment(enrDoc), spec.id);
     return spec;
   }
 
@@ -356,9 +374,7 @@
     localStorage.setItem(JOURNAL_KEY, JSON.stringify(rows));
   }
   function mapUnits() {
-    if (S.map && S.map.length) return S.map;
-    if (S.subject === "chemistry") return S.hinges || [];
-    return [];
+    return S.map || [];
   }
   function isoNodes() {
     if (S.subject === "chemistry" && (S.nodes || []).length) return S.nodes;
@@ -1064,7 +1080,7 @@
         const unit = inferred.primary.unit_id;
         const h = units.find((x) => x.unit_id === unit);
         if (!h) throw new Error("That idea did not land on a curriculum unit. Try another wording.");
-        const pack = TTwinRag.hingePack(unit, units, S.subject === "chemistry" ? S.enrichment : []);
+        const pack = TTwinRag.hingePack(unit, units, S.enrichment || []);
         S.lastPack = pack;
         const st = pack.statement || {};
         const relatedBits = (inferred.related || []).map((x) => {

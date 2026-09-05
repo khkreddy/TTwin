@@ -30,6 +30,6 @@ TTwin ships 22,091 five-ID tagged items; **20,792** have stems. Catalog: `awm_bu
 | PHYBench | 500 derivation | 0 MCQ | no |
 | Cambridge maths 0580/0606/0607/9709/9231 | in exam pack | not TTwin-tagged | no |
 
-Chemistry map: 523 hinges, 543 enrichment. Physics/biology Map: published NCERT chapter list (`syllabus_interim`), mx empty. That list is not a V15 freeze and does not copy candidate chapter_intelligence.
+Chemistry map: `data/maps/chemistry.json` (523 hinges packed from the comprehensive map; 46 MB source blob not copied). Enrichment: `data/enrichment/{subject}.json`, every row carries `subject`. Physics/biology Map: published NCERT chapter list (`syllabus_interim`), mx empty. That list is not a V15 freeze and does not copy candidate chapter_intelligence.
 
 Crops stay off GitHub Pages.

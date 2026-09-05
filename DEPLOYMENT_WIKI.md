@@ -213,11 +213,21 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D19 · Chemistry map and enrichment live under subject folders
+
+**Symptom.** GitHub `data/maps/` only showed physics and biology. Chemistry was a loose `data/hinges.json`. Enrichment was a single unlabelled `data/enrichment.json`.
+
+**Solution.** Pack the comprehensive chemistry map to `data/maps/chemistry.json` (`schema: ttwin.map.v1`, `subject: chemistry`, 523 units). Enrichment is `data/enrichment/{chemistry,biology,physics,maths}.json`; every row carries `subject`. Phy/bio/maths enrichment files exist with `n: 0` until those layers exist. Site loads map + enrichment per subject (`?v=15`). Legacy `data/hinges.json` and `data/enrichment.json` removed.
+
+**Deploy check.** GitHub `data/maps/` lists chemistry.json. Map tab on Chemistry still shows 523 hinges. Lesson planner still sees enrichment for chemistry only.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
 2. Confirm counts: tikz ~1255, structures ~487, tables ~2408.
-3. Bump `?v=` on `index.html` scripts/styles (option tables + solution analysis is `v=14`).
+3. Bump `?v=` on `index.html` scripts/styles (maps + per-subject enrichment is `v=15`).
 4. `git push` `main`. Hard-refresh TTwin Pages.
 5. Spot: `9701_m16_qp_12:q5` (TikZ four panels), `q27` (diol + four options once), `q30` (pairs).
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
