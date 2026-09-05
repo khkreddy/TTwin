@@ -47,6 +47,8 @@ data/
   nodes.json hinges.json enrichment.json projection.json   # chemistry map
 ```
 
+Agent harnesses for the live site (teacher model / student model, instructional invariants, when not to call AI): `harness/`. Start at `harness/README.md`.
+
 Deploy issues and checks: `DEPLOYMENT_WIKI.md`.
 
 Not in this repo: the 46 MB comprehensive map blob, live V15, frozen exam.jsonl, API keys, pre-rendered figure PNGs.

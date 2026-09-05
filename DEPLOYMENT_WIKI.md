@@ -193,6 +193,26 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D17 · Question corpus master (not a Pages pack)
+
+**Symptom.** Banks lived in several trees (freeze, exam pack, nav, MathNet, Phy-500, CMS). Easy to treat TTwin’s 22,091 as “the whole corpus”.
+
+**Solution.** Catalog only: `/home/harik/awm_build/data/question_corpus/` (`STATUS.md`, `MANIFEST.json`, `sets/` relative symlinks). Freeze bytes stay at pin paths. TTwin `/data` is `sets/90_ttwin_derived_pack`. Do not move `exam_json/items.jsonl`.
+
+**Deploy check.** Not a Pages check. `ls data/question_corpus/sets` from `awm_build`.
+
+---
+
+## D18 · Teacher / student harness docs
+
+**Symptom.** Live TTwin had surfaces but no agent law for a go-live harness: when to call AI, what the student may see, which IIP invariants ship now.
+
+**Solution.** `harness/` on this repo: Teacher Model (four AI slots), Student Model (one slot: post-score feedback), shared kernel, packet caps, invariant table, ledger, failure modes. Deterministic retrieve/typeset/score first. Public UI says AI.
+
+**Deploy check.** `harness/README.md` on `main`. No vendor name in public copy (`harness/95_STRINGS.md`).
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
