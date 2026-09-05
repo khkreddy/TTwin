@@ -205,11 +205,11 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ## D18 · Teacher / student harness docs
 
-**Symptom.** Live TTwin had surfaces but no agent law for a go-live harness: when to call AI, what the student may see, which IIP invariants ship now.
+**Symptom.** Live TTwin had surfaces but no agent law for a go-live harness: when to call AI, what the student may see, which IIP invariants ship now. A first pass undercounted slots as four teacher + one student.
 
-**Solution.** `harness/` on this repo: Teacher Model (four AI slots), Student Model (one slot: post-score feedback), shared kernel, packet caps, invariant table, ledger, failure modes. Deterministic retrieve/typeset/score first. Public UI says AI.
+**Solution.** `harness/` on this repo is agent law, not a second runtime. Teacher Model (`20_TEACHER_MODEL.md`) and Student Model (`30_STUDENT_MODEL.md`) are first-class. Seven legal AI slots (`15_SLOTS.md`): T-SEL, T-UNIT (ISO intent ⊕ journal bind), T-AUTHOR, T-MOD, T-SOLVE (first-write analysis; bare-letter keys folded in), T-BRIEF, S-FEED (sole student slot, post-Finish). IIP-2.0 including I17 mapped ENFORCE NOW / DEGRADE HONESTLY / DEFER / DARK. Dark layers bannered (`91_DARK.md`). Deterministic retrieve / typeset / score / lookup first. Public UI says AI. TRACE-OR-LABEL: every learner string is a lookup, a whitelist field, or a labeled AI draft.
 
-**Deploy check.** `harness/README.md` on `main`. No vendor name in public copy (`harness/95_STRINGS.md`).
+**Deploy check.** `harness/README.md` on `main`. No vendor name in public copy (`harness/95_STRINGS.md`). An agent that has not read `15_SLOTS.md` may not call AI.
 
 ---
 
