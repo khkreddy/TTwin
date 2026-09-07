@@ -741,6 +741,50 @@ def join_wrapped_prose(stem: str, options: dict[str, str] | None = None) -> str:
     return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
 
 
+_ADDPLOT_COORDS = re.compile(
+    r"\\addplot\b[^;]*?coordinates\s*\{([^}]+)\}",
+    re.S,
+)
+
+
+def pgfplots_spectrum_to_tikz(code: str) -> str | None:
+    """TikZJax cannot reliably compile pgfplots IR axes. Emit a native tikz plot.
+
+    Does not rewrite exam.v1; pack-time overlay only.
+    """
+    t = code or ""
+    if "\\begin{axis}" not in t or "\\addplot" not in t:
+        return None
+    blob = t.lower()
+    if "wavenumber" not in blob and "cm" not in blob and "transmittance" not in blob:
+        return None
+    m = _ADDPLOT_COORDS.search(t)
+    if not m:
+        return None
+    pts = re.findall(r"\(\s*([0-9.]+)\s*,\s*([0-9.]+)\s*\)", m.group(1))
+    if len(pts) < 8:
+        return None
+    coord = " ".join(f"({x},{y})" for x, y in pts)
+    return (
+        r"\begin{tikzpicture}[x=-0.00205cm,y=0.048cm,font=\sffamily\small,"
+        r"line cap=round,line join=round]"
+        "\n"
+        r"\draw (4000,0)--(4000,100)--(400,100)--(400,0)--cycle;"
+        "\n"
+        r"\foreach \x/\t in {4000/4000,3000/3000,2000/2000,1500/1500,1000/1000,500/500}"
+        r"{\draw (\x,0)--++(0,-2.2) node[below]{\t};}"
+        "\n"
+        r"\foreach \y/\t in {0/0,50/50,100/100}{\draw (4000,\y)--++(-45,0) node[left]{\t};}"
+        "\n"
+        r"\node[align=center] at (4680,50){transmittance / \%};"
+        r"\node at (2200,-14){wavenumber / cm$^{-1}$};"
+        "\n"
+        r"\draw plot[smooth] coordinates {" + coord + r"};"
+        "\n"
+        r"\end{tikzpicture}"
+    )
+
+
 def infer_tikz_packages(code: str, pkgs: list[str] | None = None) -> list[str]:
     """Exam JSON often lists only 'tikz' even when the body is circuitikz/pgfplots."""
     out: list[str] = []
@@ -1197,6 +1241,19 @@ def _selftest() -> None:
     assert not is_chrome_line("1 1 1 1")
     assert is_chrome_line("7 8 9 10 11")
     is_chrome_line("9" * 40 + " 1")  # must not overflow
+
+    ir = (
+        r"\begin{tikzpicture}\pgfplotsset{compat=1.18}\begin{axis}["
+        r"xmin=400,xmax=4000,x dir=reverse,xlabel={wavenumber / cm$^{-1}$},"
+        r"ylabel={transmittance}]\addplot[black] coordinates "
+        r"{(4000,81)(3500,20)(3000,50)(2500,69)(2000,80)(1500,82)"
+        r"(1100,25)(800,80)(400,27)};\end{axis}\end{tikzpicture}"
+    )
+    native = pgfplots_spectrum_to_tikz(ir)
+    assert native and "\\begin{axis}" not in native
+    assert "\\addplot" not in native
+    assert "plot[smooth] coordinates" in native
+    assert pgfplots_spectrum_to_tikz("\\begin{tikzpicture}\\draw (0,0)--(1,0);\\end{tikzpicture}") is None
 
     assert infer_tikz_packages("\\begin{circuitikz}\\draw (0,0) to[R] (1,0);\\end{circuitikz}", ["tikz"]) == ["circuitikz"]
     assert infer_tikz_packages("\\begin{tikzpicture}\\begin{axis}\\end{axis}\\end{tikzpicture}", ["tikz"]) == ["pgfplots"]

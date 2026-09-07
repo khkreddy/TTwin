@@ -75,14 +75,20 @@
     const jobs = [jget(spec.vocab), jget(spec.nav)];
     const loadMap = !!spec.map;
     const loadEnr = !!spec.enrichment;
+    const loadProj = !!spec.projection;
     if (loadMap) jobs.push(jget(spec.map));
     if (loadEnr) jobs.push(jget(spec.enrichment));
+    if (loadProj) jobs.push(jget(spec.projection));
     const got = await Promise.all(jobs);
     S.vocab = got[0] || { ideas: [] };
     S.nav = got[1] || [];
     let i = 2;
     const mapDoc = loadMap ? got[i++] : null;
     const enrDoc = loadEnr ? got[i++] : null;
+    const projDoc = loadProj ? got[i++] : null;
+    if (projDoc) {
+      S.projection = Object.assign({}, projDoc, { subject: spec.id });
+    }
     S.stems = {};
     S.loadedPacks = {};
     S.spec = spec;

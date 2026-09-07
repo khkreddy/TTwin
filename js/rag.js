@@ -32,6 +32,14 @@
     if (i > 0 && ["phy", "bio", "math"].includes(s.slice(0, i))) return s.slice(i + 1);
     return s;
   }
+  function prefixNode(sel, table, node) {
+    const bare = normNode(node);
+    const s = String((sel && sel.subject) || (table && table.subject) || "chemistry").toLowerCase();
+    if (s === "physics" || s === "phy") return "phy:" + bare;
+    if (s === "biology" || s === "bio") return "bio:" + bare;
+    if (s === "maths" || s === "mathematics" || s === "math") return "math:" + bare;
+    return "chem:" + bare;
+  }
   function nodeChain(n) {
     const bare = normNode(n);
     if (!bare) return [];
@@ -161,7 +169,7 @@
     let nodes = (sel.nodes || []).map(String).filter(Boolean);
     if (sel.unit_id && !nodes.length) {
       for (const rec of (table && table.ncert) || []) {
-        if (rec.unit_id === sel.unit_id) { nodes = ["chem:" + rec.node]; break; }
+        if (rec.unit_id === sel.unit_id) { nodes = [prefixNode(sel, table, rec.node)]; break; }
       }
     }
     for (const node of nodes) {
@@ -211,7 +219,7 @@
     let nodes = (sel.nodes || []).map(String).filter(Boolean);
     if (sel.unit_id && !nodes.length) {
       for (const rec of table.ncert || []) {
-        if (rec.unit_id === sel.unit_id) { nodes = ["chem:" + rec.node]; break; }
+        if (rec.unit_id === sel.unit_id) { nodes = [prefixNode(sel, table, rec.node)]; break; }
       }
     }
     const bands = band ? [band] : [];

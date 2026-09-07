@@ -8,12 +8,19 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from learner_display import infer_tikz_packages, normalize_tikz_source, sanitize_item, separate_tikz_figures
+from learner_display import (
+    infer_tikz_packages,
+    normalize_tikz_source,
+    pgfplots_spectrum_to_tikz,
+    sanitize_item,
+    separate_tikz_figures,
+)
 
 AWM = Path("/home/harik/awm_build")
 OUT = Path(__file__).resolve().parents[1] / "data"
@@ -24,9 +31,17 @@ PUBLIC = AWM / "reports/paper/data/NCERT_CHEMISTRY_MAP_PUBLIC.json"
 ENRICH = AWM / "reports/paper/data/supplement_ncert_hinges.jsonl"
 DOCS = AWM / "data/chem_curriculum/supplement/documents.json"
 NAV = AWM / "data/awm_product/generated/nav_mcq/items.jsonl"
+NAV_MATHS_CAM = AWM / "data/awm_product/generated/nav_mcq/items_maths_cambridge.jsonl"
 PROJ = AWM / "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json"
 EXAM = AWM / "data/chem_curriculum/item_envelope/exam_json/items.jsonl"
 CORPUS = AWM / "data/awm_product/generated/exam_v1_corpus/items.jsonl"
+CHEM_JOINED = AWM / "data/awm_product/generated/exam_v1_chem_joined/items.jsonl"
+MATH_MAP = AWM / "data/intelligence/MATHEMATICS_MAP.json"
+PHY_MAP = AWM / "data/intelligence/PHYSICS_MAP.json"
+BIO_MAP = AWM / "data/intelligence/BIOLOGY_MAP.json"
+MATHNET_ROOT = AWM / "data/corpus_intelligence/awm_corpus/mathnet_v1"
+JEEBENCH = AWM / "data/corpus_intelligence/awm_corpus/jeebench-dataset.json"
+MATH_V1_INDEX = AWM / "data/corpus_intelligence/awm_corpus/math_v1/INDEX.json"
 VOCAB_DIR = AWM / "data/awm_product/generated/nav_mcq/vocab"
 
 SUBJECT_ORDER = ["chemistry", "biology", "physics", "maths"]
@@ -477,8 +492,311 @@ def extract_tikz(o: dict) -> tuple[str | None, list[str]]:
     if not (tj and isinstance(tj.get("code"), str) and tj["code"].strip()):
         return None, []
     code = tj["code"]
+    native = pgfplots_spectrum_to_tikz(code)
+    if native:
+        return native, []
     pkgs = infer_tikz_packages(code, tj.get("preamble_packages") or [])
     return separate_tikz_figures(normalize_tikz_source(code)), pkgs
+
+
+MATH_SYL_PACK = {
+    "0580": ("igcse_9_10", "SECONDARY"),
+    "0606": ("igcse_9_10", "SECONDARY"),
+    "0607": ("igcse_9_10", "SECONDARY"),
+    "9709": ("senior_11_12_as_a", "SENIOR_SECONDARY"),
+    "9231": ("senior_11_12_as_a", "SENIOR_SECONDARY"),
+}
+
+
+def _tokens(s: str) -> set[str]:
+    return set(re.findall(r"[a-z]{3,}", (s or "").lower()))
+
+
+def _mechanism_text(mech) -> str:
+    if isinstance(mech, dict):
+        return str(mech.get("law") or "")
+    return str(mech or "")
+
+
+def reconcile_map_node(subject: str, node: str, recon) -> str:
+    bare = str(node or "")
+    if subject == "biology" and isinstance(recon, list):
+        for row in recon:
+            if isinstance(row, dict) and row.get("constructed") == bare:
+                frozen = str(row.get("frozen") or "")
+                if ":" in frozen:
+                    return frozen.split(":", 1)[-1]
+                if frozen:
+                    return frozen
+    return bare
+
+
+def slim_subject_map(path: Path, subject: str) -> tuple[list[dict], list[dict], dict]:
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    recon = (raw.get("node_layer") or {}).get("frozen_vocab_reconciliation")
+    ch_meta = raw.get("chapters") or {}
+    nodes_src = raw.get("nodes") or {}
+    nodes = []
+    for nid, n in nodes_src.items():
+        shown = reconcile_map_node(subject, nid, recon)
+        if isinstance(n, dict):
+            nodes.append(
+                {
+                    "id": shown,
+                    "title": n.get("title") or n.get("label") or shown,
+                    "kind": n.get("kind"),
+                    "mechanism": n.get("mechanism") or n.get("title"),
+                    "map_id": nid,
+                }
+            )
+        else:
+            nodes.append({"id": shown, "title": str(n), "map_id": nid})
+    units = []
+    proj_ncert = []
+    proj_cam = []
+    for s in raw.get("statements") or []:
+        uid = s.get("unit_id")
+        node = reconcile_map_node(subject, s.get("node"), recon)
+        ch = s.get("chapter") or chapter_family(uid or "")
+        title = s.get("chapter_title")
+        if not title and isinstance(ch_meta.get(ch), dict):
+            title = ch_meta[ch].get("title") or ch_meta[ch].get("chapter_title")
+        band = s.get("grade_band")
+        if band in {"CORE", "EXTENDED", "AS", "A_LEVEL", "CAMBRIDGE_IGCSE_CORE", "CAMBRIDGE_IGCSE_SUPPLEMENT"}:
+            band = "SECONDARY" if str(s.get("syllabus") or "").startswith("CAMBRIDGE_IGCSE") else "SENIOR_SECONDARY"
+        if band not in {"SECONDARY", "SENIOR_SECONDARY"}:
+            g = s.get("grade")
+            band = "SENIOR_SECONDARY" if isinstance(g, int) and g >= 11 else (s.get("grade_band") or "SECONDARY")
+            if band not in {"SECONDARY", "SENIOR_SECONDARY"}:
+                band = "SENIOR_SECONDARY" if str(ch).find("grade_1") >= 0 else "SECONDARY"
+        units.append(
+            {
+                "subject": subject,
+                "unit_id": uid,
+                "node": node,
+                "grade_band": band if band in {"SECONDARY", "SENIOR_SECONDARY"} else "SECONDARY",
+                "chapter": ch,
+                "chapter_title": title or ch,
+                "decision_hinge": s.get("decision_hinge") or s.get("statement"),
+                "mechanism": _mechanism_text(s.get("mechanism")),
+                "cognitive_operation": s.get("cognitive_operation"),
+                "board": s.get("board"),
+                "mx": slim_mx(s.get("mx")),
+                "n_mx_na": len(s.get("mx_dispositions") or []) if isinstance(s.get("mx_dispositions"), list) else 0,
+                "status": raw.get("map_status") or "hinge_map_candidate",
+            }
+        )
+        rec = {
+            "unit_id": uid,
+            "node": node,
+            "grade_band": units[-1]["grade_band"],
+            "chapter_family": ch,
+        }
+        if s.get("board") == "CAMBRIDGE" or str(uid).startswith(("IGCSE:", "AS_A:")):
+            rec["chapter_prefix"] = ".".join(str(uid).split(".")[:2]) if "." in str(uid) else str(uid)
+            proj_cam.append(rec)
+        else:
+            proj_ncert.append(rec)
+    ns = {"biology": "bio", "physics": "phy", "maths": "math", "mathematics": "math"}.get(subject, "chem")
+    projection = {
+        "schema": f"ttwin.projection.{ns}.v1",
+        "subject": "maths" if subject == "mathematics" else subject,
+        "ncert": proj_ncert,
+        "cambridge": proj_cam,
+        "honesty": "Derived from the hinge-map candidate. Does not rewrite question tags.",
+    }
+    return units, nodes, projection
+
+
+def load_math_bank_stems(uids: set[str]) -> dict:
+    found = {}
+    want_mn = {u for u in uids if u.startswith("mathnet:")}
+    want_jee = {u for u in uids if u.startswith("jeebench:")}
+    for shard in ("m1", "m2", "m3", "m4"):
+        recdir = MATHNET_ROOT / shard / "records"
+        if not recdir.is_dir():
+            continue
+        for uid in list(want_mn):
+            slug = uid.split(":", 1)[-1]
+            path = recdir / f"mathnet_{slug}.json"
+            if not path.is_file():
+                continue
+            d = json.loads(path.read_text(encoding="utf-8"))
+            stem = ((d.get("presentation") or {}).get("stem") or "").strip()
+            if not stem:
+                continue
+            found[uid] = sanitize_item(
+                uid,
+                {
+                    "stem": stem,
+                    "stem_lead": stem,
+                    "item_type": "open_response",
+                    "options": {},
+                    "statements": [],
+                    "has_figure": False,
+                    "options_are_figure": False,
+                    "equations": [],
+                },
+            )
+            want_mn.discard(uid)
+        if not want_mn:
+            break
+    if want_jee and JEEBENCH.is_file():
+        rows = json.loads(JEEBENCH.read_text(encoding="utf-8"))
+        by_uid = {}
+        for rec in rows:
+            subj = rec.get("subject") or ""
+            desc = rec.get("description") or ""
+            idx = rec.get("index")
+            slug = re.sub(r"[^a-z0-9]+", "_", desc.lower()).strip("_")
+            json_u = f"jeebench:srcjson:{subj}:{slug}:q{idx}"
+            by_uid[json_u] = rec
+            if subj in {"math", "mathematics"}:
+                by_uid[f"jeebench:srcjson:math:{slug}:q{idx}"] = rec
+        for uid in want_jee:
+            rec = by_uid.get(uid)
+            if not rec:
+                continue
+            stem = (rec.get("question") or "").strip()
+            if not stem:
+                continue
+            gold = rec.get("gold")
+            found[uid] = sanitize_item(
+                uid,
+                {
+                    "stem": stem,
+                    "stem_lead": stem,
+                    "item_type": "mcq",
+                    "options": {},
+                    "statements": [],
+                    "has_figure": False,
+                    "options_are_figure": False,
+                    "equations": [],
+                    "correct": gold if gold in {"A", "B", "C", "D"} else None,
+                },
+            )
+    return found
+
+
+def tag_cambridge_maths(existing: set[str]) -> list[dict]:
+    if not MATH_MAP.is_file() or not CORPUS.is_file():
+        return []
+    raw = json.loads(MATH_MAP.read_text(encoding="utf-8"))
+    cam_stmts = [s for s in (raw.get("statements") or []) if s.get("board") == "CAMBRIDGE"]
+    buckets: dict[str, list[tuple[set[str], dict]]] = defaultdict(list)
+    for s in cam_stmts:
+        uid = str(s.get("unit_id") or "")
+        m = re.match(r"^(?:IGCSE|AS_A):(\d{4})\.", uid)
+        if not m:
+            continue
+        syl = m.group(1)
+        blob = " ".join(
+            [
+                str(s.get("chapter_title") or ""),
+                str(s.get("decision_hinge") or s.get("statement") or ""),
+                str((s.get("mechanism") or {}).get("law") if isinstance(s.get("mechanism"), dict) else s.get("mechanism") or ""),
+            ]
+        )
+        buckets[syl].append((_tokens(blob), s))
+    index_topics = {}
+    usable = set()
+    if MATH_V1_INDEX.is_file():
+        idx = json.loads(MATH_V1_INDEX.read_text(encoding="utf-8"))
+        for it in idx.get("items") or []:
+            uid = it.get("item_uid")
+            if not uid:
+                continue
+            if it.get("usable"):
+                usable.add(uid)
+            topics = it.get("topics") or []
+            index_topics[uid] = " ".join(topics if isinstance(topics, list) else [str(topics)])
+    rows = []
+    with CORPUS.open(encoding="utf-8") as f:
+        for line in f:
+            o = json.loads(line)
+            uid = o.get("item_uid") or ""
+            if uid in existing:
+                continue
+            m = re.match(r"^(\d{4})_", uid)
+            if not m or m.group(1) not in MATH_SYL_PACK:
+                continue
+            syl = m.group(1)
+            itype = str(o.get("item_type") or "")
+            keep = itype.startswith("mcq") or uid in usable
+            if not keep:
+                continue
+            stem = (o.get("complete_stem") or o.get("stem_lead") or "").strip()
+            if not stem:
+                continue
+            pack, band = MATH_SYL_PACK[syl]
+            qtok = _tokens(index_topics.get(uid, "") + " " + stem[:400])
+            best, best_n = None, 0
+            for tok, stmt in buckets.get(syl) or []:
+                n = len(qtok & tok)
+                if n > best_n:
+                    best, best_n = stmt, n
+            node = "M1"
+            chapter_id = f"cam:{syl}"
+            chapter_label = "Mathematics"
+            subtopic_id = f"cam:{syl}"
+            subtopic_label = chapter_label
+            if best:
+                node = best.get("node") or node
+                lo = str(best.get("unit_id") or "")
+                parts = lo.split(":")[-1].split(".") if lo else []
+                topic = parts[1] if len(parts) > 1 else parts[0] if parts else ""
+                if topic:
+                    chapter_id = f"cam:{syl}:{topic}"
+                    subtopic_id = lo if lo.startswith(("IGCSE:", "AS_A:")) else f"cam:{syl}:{topic}"
+                chapter_label = best.get("chapter_title") or chapter_label
+                subtopic_label = (best.get("decision_hinge") or chapter_label)[:80]
+            rec = {
+                "schema": "awm.nav.mcq.v1",
+                "item_uid": uid,
+                "status": "tagged",
+                "subject": "maths",
+                "pack": pack,
+                "grade_band": band,
+                "big_idea_id": f"math:{node}",
+                "chapter_id": chapter_id,
+                "chapter_label": chapter_label,
+                "subtopic_id": subtopic_id,
+                "subtopic_label": subtopic_label,
+                "complete_exam": True,
+                "family_ids": {"cambridge_chapter": chapter_id},
+                "origin": {"bank": "exam_v1_corpus", "syllabus_code": syl, "board": "Cambridge"},
+                "provenance": {
+                    "assigned_by": "tag_maths_from_map",
+                    "source": "MATHEMATICS_MAP.json",
+                    "map_lo": (best or {}).get("unit_id"),
+                    "score": best_n,
+                },
+            }
+            rows.append(rec)
+    return rows
+
+
+def nav_record(o: dict) -> dict | None:
+    if not completely_tagged(o):
+        return None
+    subject = o.get("subject")
+    if subject not in SUBJECT_ORDER:
+        return None
+    fam = o.get("family_ids") if isinstance(o.get("family_ids"), dict) else {}
+    return {
+        "uid": o.get("item_uid"),
+        "subject": subject,
+        "pack": o.get("pack"),
+        "grade_band": o.get("grade_band"),
+        "node": o.get("big_idea_id"),
+        "chapter_id": o.get("chapter_id"),
+        "chapter_label": o.get("chapter_label"),
+        "subtopic_id": o.get("subtopic_id"),
+        "subtopic_label": o.get("subtopic_label"),
+        "complete_exam": bool(o.get("complete_exam")),
+        "cam_family": fam.get("cambridge_chapter"),
+        "ncert_family": fam.get("ncert_chapter"),
+    }
 
 
 def load_exam_index(uids: set[str]) -> dict:
@@ -486,6 +804,8 @@ def load_exam_index(uids: set[str]) -> dict:
     paths = [EXAM]
     if CORPUS.is_file():
         paths.append(CORPUS)
+    if CHEM_JOINED.is_file():
+        paths.append(CHEM_JOINED)
     for path in paths:
         with path.open(encoding="utf-8") as f:
             for line in f:
@@ -689,20 +1009,37 @@ def main() -> int:
             ),
         )
         dump(OUT / "nodes.json", nodes)
-        for subject in ("physics", "biology"):
-            vocab = slim_vocab(VOCAB_FILE[subject])
-            mrows = syllabus_map(subject, vocab.get("ideas") or [])
-            dump(
-                OUT / "maps" / f"{subject}.json",
-                pack_map_doc(
-                    subject,
-                    "syllabus_interim",
-                    mrows,
-                    extra={
-                        "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
-                    },
-                ),
-            )
+        for subject, mpath in (("physics", PHY_MAP), ("biology", BIO_MAP)):
+            if mpath.is_file():
+                mrows, mnodes, _proj = slim_subject_map(mpath, subject)
+                dump(
+                    OUT / "maps" / f"{subject}.json",
+                    pack_map_doc(
+                        subject,
+                        "hinge_map_candidate",
+                        mrows,
+                        nodes=mnodes,
+                        extra={
+                            "source": str(mpath.relative_to(AWM)),
+                            "source_sha256": sha256_file(mpath),
+                            "honesty": "Slim pack of the hinge-map candidate. Source blob is not copied. Mix-ups are teacher-facing CANDIDATE.",
+                        },
+                    ),
+                )
+            else:
+                vocab = slim_vocab(VOCAB_FILE[subject])
+                mrows = syllabus_map(subject, vocab.get("ideas") or [])
+                dump(
+                    OUT / "maps" / f"{subject}.json",
+                    pack_map_doc(
+                        subject,
+                        "syllabus_interim",
+                        mrows,
+                        extra={
+                            "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
+                        },
+                    ),
+                )
         write_enrichment_dir(enrich)
         subj_path = OUT / "subjects.json"
         subjects_doc = json.loads(subj_path.read_text(encoding="utf-8"))
@@ -742,48 +1079,48 @@ def main() -> int:
     print("loading nav tags (all subjects)…")
     by_subject: dict[str, list] = {s: [] for s in SUBJECT_ORDER}
     skipped = 0
-    uids: set[str] = set()
+    seen: set[str] = set()
     with NAV.open(encoding="utf-8") as f:
         for line in f:
             o = json.loads(line)
-            if not completely_tagged(o):
+            rec = nav_record(o)
+            if not rec:
                 skipped += 1
                 continue
-            subject = o.get("subject")
-            if subject not in by_subject:
-                skipped += 1
-                continue
-            uid = o.get("item_uid")
-            fam = o.get("family_ids") if isinstance(o.get("family_ids"), dict) else {}
-            rec = {
-                "uid": uid,
-                "subject": subject,
-                "pack": o.get("pack"),
-                "grade_band": o.get("grade_band"),
-                "node": o.get("big_idea_id"),
-                "chapter_id": o.get("chapter_id"),
-                "chapter_label": o.get("chapter_label"),
-                "subtopic_id": o.get("subtopic_id"),
-                "subtopic_label": o.get("subtopic_label"),
-                "complete_exam": bool(o.get("complete_exam")),
-                "cam_family": fam.get("cambridge_chapter"),
-                "ncert_family": fam.get("ncert_chapter"),
-            }
-            by_subject[subject].append(rec)
-            if rec["complete_exam"]:
-                uids.add(uid)
+            by_subject[rec["subject"]].append(rec)
+            seen.add(rec["uid"])
+
+    print("tagging Cambridge maths from MATHEMATICS_MAP + exam pack…")
+    math_extra = tag_cambridge_maths(seen)
+    if math_extra:
+        NAV_MATHS_CAM.parent.mkdir(parents=True, exist_ok=True)
+        with NAV_MATHS_CAM.open("w", encoding="utf-8") as fh:
+            for row in math_extra:
+                fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+        print(f"  wrote {len(math_extra)} {NAV_MATHS_CAM.relative_to(AWM)}")
+        for o in math_extra:
+            rec = nav_record(o)
+            if rec:
+                by_subject["maths"].append(rec)
+                seen.add(rec["uid"])
+
+    uids = {r["uid"] for rows in by_subject.values() for r in rows}
 
     n_tagged = sum(len(v) for v in by_subject.values())
-    print(f"  tagged {n_tagged}  skipped {skipped}  complete_exam uids {len(uids)}")
+    print(f"  tagged {n_tagged}  skipped {skipped}  stem-join uids {len(uids)}")
     for s in SUBJECT_ORDER:
         n = len(by_subject[s])
         nce = sum(1 for r in by_subject[s] if r.get("complete_exam"))
-        print(f"    {s:12s} tagged={n:5d} complete_exam={nce:5d}")
+        print(f"    {s:12s} tagged={n:5d} complete_exam_flag={nce:5d}")
 
-    print(f"joining {len(uids)} complete exam stems…")
+    print(f"joining exam stems for {len(uids)} tagged uids…")
     stems = load_exam_index(uids)
+    print(f"  exam stems {len(stems)}")
+    bank = load_math_bank_stems(uids - set(stems))
+    stems.update(bank)
+    print(f"  + math-bank stems {len(bank)}  total {len(stems)}")
     missing = [u for u in uids if u not in stems]
-    print(f"  stems found {len(stems)} missing {len(missing)}")
+    print(f"  still missing {len(missing)}")
 
     print("loading projection…")
     proj = json.loads(PROJ.read_text(encoding="utf-8"))
@@ -811,6 +1148,7 @@ def main() -> int:
             item = dict(row)
             if body:
                 item.update(body)
+                item["complete_exam"] = True
                 n_stems_total += 1
                 if item.get("tikz"):
                     n_tikz += 1
@@ -860,22 +1198,49 @@ def main() -> int:
             map_path = "data/maps/chemistry.json"
             map_status = "comprehensive"
             n_map_units = len(hinges)
-        elif subject in ("physics", "biology"):
-            mrows = syllabus_map(subject, vocab.get("ideas") or [])
-            dump(
-                OUT / "maps" / f"{subject}.json",
-                pack_map_doc(
-                    subject,
-                    "syllabus_interim",
-                    mrows,
-                    extra={
-                        "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
-                    },
-                ),
-            )
-            map_path = f"data/maps/{subject}.json"
-            map_status = "syllabus_interim"
-            n_map_units = len(mrows)
+        elif subject in ("physics", "biology", "maths"):
+            mpath = {"physics": PHY_MAP, "biology": BIO_MAP, "maths": MATH_MAP}[subject]
+            map_subj = "mathematics" if subject == "maths" else subject
+            if mpath.is_file():
+                mrows, mnodes, proj = slim_subject_map(mpath, map_subj)
+                dump(
+                    OUT / "maps" / f"{subject}.json",
+                    pack_map_doc(
+                        subject,
+                        "hinge_map_candidate",
+                        mrows,
+                        nodes=mnodes,
+                        extra={
+                            "source": str(mpath.relative_to(AWM)),
+                            "source_sha256": sha256_file(mpath),
+                            "honesty": "Slim pack of the hinge-map candidate. Source blob is not copied.",
+                        },
+                    ),
+                )
+                dump(OUT / "projection" / f"{subject}.json", proj)
+                map_path = f"data/maps/{subject}.json"
+                map_status = "hinge_map_candidate"
+                n_map_units = len(mrows)
+            elif subject in ("physics", "biology"):
+                mrows = syllabus_map(subject, vocab.get("ideas") or [])
+                dump(
+                    OUT / "maps" / f"{subject}.json",
+                    pack_map_doc(
+                        subject,
+                        "syllabus_interim",
+                        mrows,
+                        extra={
+                            "honesty": "Published NCERT chapter list. Mix-ups empty until a complete hinge map exists.",
+                        },
+                    ),
+                )
+                map_path = f"data/maps/{subject}.json"
+                map_status = "syllabus_interim"
+                n_map_units = len(mrows)
+            else:
+                map_path = None
+                map_status = None
+                n_map_units = 0
 
         catalog.append(
             {
@@ -889,7 +1254,11 @@ def main() -> int:
                 "map_status": map_status,
                 "n_map_units": n_map_units,
                 "n_tagged": len(rows),
-                "n_complete_exam": sum(1 for r in rows if r.get("complete_exam")),
+                "n_complete_exam": sum(p.get("n_complete_exam") or 0 for p in pack_entries),
+                "projection": (
+                    "data/projection.json" if subject == "chemistry"
+                    else f"data/projection/{subject}.json"
+                ),
                 "packs": pack_entries,
                 "default_node": (vocab["ideas"][0]["id"] if vocab["ideas"] else ""),
                 "default_pack": pack_entries[0]["id"] if pack_entries else "",
@@ -906,7 +1275,7 @@ def main() -> int:
         "schema": "ttwin.showcase.v2",
         "built_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "subjects": SUBJECT_ORDER,
-        "board_home": "NCERT comprehensive chemistry map + NCERT syllabus-interim physics/biology + Cambridge-tagged question bank",
+        "board_home": "NCERT chemistry map + physics/biology/mathematics hinge-map candidates + Cambridge-tagged question bank",
         "n_nodes": len(nodes),
         "n_hinges": len(hinges),
         "n_enrichment": len(enrich),
@@ -948,10 +1317,10 @@ def main() -> int:
         "honesty": (
             "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). "
             "NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. "
-            "Physics and biology Map is the published NCERT chapter list (syllabus_interim): Class 9–10 Science chapters "
-            "plus the existing ncert_chapter_candidates_pack_c titles for Class 11–12. Mx is empty until a complete "
-            "hinge map exists. That list is not a V15 freeze and does not copy candidate chapter_intelligence. "
-            "Maths has browse vocab only. "
+            "Physics, biology and mathematics Maps are slim packs of hinge-map candidates (not the 60–140 MB source blobs). "
+            "Existing five-ID tags are not rewritten. Cambridge maths items are tagged from the mathematics map + exam pack. "
+            "Chemistry stems missing from the all-subject pack are joined from exam_v1_chem_joined. "
+            "IR spectra using pgfplots are redrawn as native TikZ at pack time so TikZJax can display them. "
             "Chemistry map lives at data/maps/chemistry.json (loaded from the comprehensive map). "
             "Enrichment is per-subject under data/enrichment/{subject}.json; every row carries subject. "
             "Mx and enrichment are teacher-facing; they are not printed on the learner paper. "
