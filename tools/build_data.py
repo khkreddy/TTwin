@@ -36,6 +36,8 @@ PROJ = AWM / "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json"
 EXAM = AWM / "data/chem_curriculum/item_envelope/exam_json/items.jsonl"
 CORPUS = AWM / "data/awm_product/generated/exam_v1_corpus/items.jsonl"
 CHEM_JOINED = AWM / "data/awm_product/generated/exam_v1_chem_joined/items.jsonl"
+TM_QUESTIONS = AWM / "data/corpus_intelligence/awm_corpus/testmaker_v1/index/questions.jsonl"
+EXAMINER_JOIN = AWM / "data/awm_product/generated/examiner_join/items.jsonl"
 MATH_MAP = AWM / "data/intelligence/MATHEMATICS_MAP.json"
 PHY_MAP = AWM / "data/intelligence/PHYSICS_MAP.json"
 BIO_MAP = AWM / "data/intelligence/BIOLOGY_MAP.json"
@@ -776,6 +778,113 @@ def tag_cambridge_maths(existing: set[str]) -> list[dict]:
     return rows
 
 
+MCQ_LETTERS = {"A", "B", "C", "D"}
+MS_STATUS_MAP = {
+    "available": "available",
+    "source_provided": "available",
+    "mark_scheme_not_present": "mark_scheme_not_present",
+    "not_present_in_source": "mark_scheme_not_present",
+    "matching_answer_entry_not_detected": "matching_answer_entry_not_detected",
+}
+
+
+def load_comment_sha() -> dict[str, str]:
+    out: dict[str, str] = {}
+    if not EXAMINER_JOIN.is_file():
+        return out
+    with EXAMINER_JOIN.open(encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            rec = json.loads(line)
+            uid = rec.get("uid")
+            sha = rec.get("comment_sha256")
+            if uid and sha:
+                out[uid] = sha
+    return out
+
+
+def load_testmaker_assessment(comment_sha: dict[str, str]) -> dict[str, dict]:
+    """Join extracted MS + examiner comments. Keyed by bare uid (tm: stripped)."""
+    out: dict[str, dict] = {}
+    if not TM_QUESTIONS.is_file():
+        print("  WARNING: testmaker questions.jsonl missing — assessment will be empty")
+        return out
+    with TM_QUESTIONS.open(encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            rec = json.loads(line)
+            uid = (rec.get("uid") or "").replace("tm:", "", 1)
+            if not uid:
+                continue
+            raw = (rec.get("ms_text") or "").strip()
+            status_raw = rec.get("ms_available")
+            status = MS_STATUS_MAP.get(str(status_raw) if status_raw is not None else "", "not_applicable")
+            letter = raw if raw in MCQ_LETTERS else None
+            prose = raw if raw and raw not in MCQ_LETTERS else None
+            if letter or prose:
+                key_source = "cambridge_extract"
+                key_status = "available"
+            else:
+                key_source = "none"
+                key_status = status if status != "available" else "matching_answer_entry_not_detected"
+            mark_scheme = None
+            if prose:
+                marks = rec.get("marks_total")
+                try:
+                    marks_i = int(marks) if marks is not None else None
+                except (TypeError, ValueError):
+                    marks_i = None
+                mark_scheme = {"text": prose}
+                if marks_i is not None:
+                    mark_scheme["total_marks"] = marks_i
+            ex_text = (rec.get("examiner_comment") or "").strip()
+            if rec.get("has_examiner_comment") and ex_text:
+                examiner: dict = {"present": True, "text": ex_text}
+                sha = comment_sha.get(uid)
+                if sha:
+                    examiner["comment_sha256"] = sha
+            else:
+                examiner = {"present": False}
+            out[uid] = {
+                "key_source": key_source,
+                "key_status": key_status,
+                "mcq_key": letter,
+                "mark_scheme": mark_scheme,
+                "examiner_comment": examiner,
+            }
+    return out
+
+
+def assessment_for(uid: str, gold: str | None, extracted: dict | None) -> dict:
+    """ttwin.question.v1 assessment object. Always present. Never invent a key."""
+    gold_L = gold if gold in MCQ_LETTERS else None
+    if extracted:
+        rec = dict(extracted)
+        if rec.get("key_source") == "none" and gold_L:
+            rec["key_source"] = "olympiad_gold"
+            rec["key_status"] = "available"
+            rec["mcq_key"] = gold_L
+            rec["mark_scheme"] = None
+        return rec
+    if gold_L:
+        return {
+            "key_source": "olympiad_gold",
+            "key_status": "available",
+            "mcq_key": gold_L,
+            "mark_scheme": None,
+            "examiner_comment": {"present": False},
+        }
+    return {
+        "key_source": "none",
+        "key_status": "not_applicable",
+        "mcq_key": None,
+        "mark_scheme": None,
+        "examiner_comment": {"present": False},
+    }
+
+
 def nav_record(o: dict) -> dict | None:
     if not completely_tagged(o):
         return None
@@ -1126,12 +1235,20 @@ def main() -> int:
     proj = json.loads(PROJ.read_text(encoding="utf-8"))
     projection = slim_projection(proj)
 
+    print("loading extracted assessment (MS + examiner comments)…")
+    comment_sha = load_comment_sha()
+    tm_assess = load_testmaker_assessment(comment_sha)
+    print(f"  testmaker assessment rows {len(tm_assess)}  comment sha {len(comment_sha)}")
+
     print("writing vocab / nav / questions…")
     catalog = []
     n_stems_total = 0
     n_tikz = 0
     n_struct = 0
     n_table = 0
+    n_mcq_key = 0
+    n_mark_scheme = 0
+    n_examiner = 0
     question_files: list[str] = []
 
     for subject in SUBJECT_ORDER:
@@ -1156,6 +1273,15 @@ def main() -> int:
                     n_struct += 1
                 if item.get("tables"):
                     n_table += 1
+            gold = item.pop("correct", None)
+            item["assessment"] = assessment_for(uid, gold, tm_assess.get(uid))
+            a = item["assessment"]
+            if a.get("mcq_key"):
+                n_mcq_key += 1
+            if a.get("mark_scheme"):
+                n_mark_scheme += 1
+            if (a.get("examiner_comment") or {}).get("present"):
+                n_examiner += 1
             packs_present[row.get("pack") or "unknown"].append(item)
 
         pack_entries = []
@@ -1265,6 +1391,10 @@ def main() -> int:
             }
         )
 
+    print(
+        f"  assessment attached  mcq_key={n_mcq_key}  mark_scheme={n_mark_scheme}  examiner_comment={n_examiner}"
+    )
+
     subjects_doc = {
         "schema": "ttwin.subjects.v1",
         "default": "chemistry",
@@ -1285,6 +1415,10 @@ def main() -> int:
         "n_tikz": n_tikz,
         "n_structures": n_struct,
         "n_tables": n_table,
+        "n_mcq_key": n_mcq_key,
+        "n_mark_scheme": n_mark_scheme,
+        "n_examiner_comment": n_examiner,
+        "question_schema": "data/schema/ttwin.question.v1.json",
         "by_subject": {
             s["id"]: {
                 "n_tagged": s["n_tagged"],
@@ -1303,6 +1437,7 @@ def main() -> int:
             ],
             "enrichment": [f"data/enrichment/{s}.json" for s in SUBJECT_ORDER],
             "solutions": "data/solutions/index.json",
+            "question_schema": "data/schema/ttwin.question.v1.json",
         },
         "sources": {
             "comprehensive_map": str(COMP.relative_to(AWM)),
@@ -1325,9 +1460,14 @@ def main() -> int:
             "Enrichment is per-subject under data/enrichment/{subject}.json; every row carries subject. "
             "Mx and enrichment are teacher-facing; they are not printed on the learner paper. "
             "ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and "
-            "does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a "
-            "published mark scheme. Solution analysis is a sub-layer of the question bank (item_uid × item_sha256): "
-            "first assembly writes it; later assemblies retrieve it with zero provider calls. Mix-ups stay off the learner paper. "
+            "does not rewrite frozen exam.v1. Each question JSON carries an assessment object: extracted Cambridge "
+            "mark-scheme letter or prose, and verbatim examiner comments when the extract has them. "
+            "Those fields are teacher/Finish only — the learner paper renderer does not print them. "
+            "key_source cambridge_extract is a published mark-scheme extract, not an AI guess. "
+            "olympiad_gold is a provided gold letter, not a Cambridge mark scheme. "
+            "Items with no extract have key_source none; Finish treats them as unscored, not wrong. "
+            "AI solution analysis remains a sub-layer for items without an extract and for teacher rationale. "
+            "Mix-ups stay off the learner paper. "
             "Cambridge wording is for retrieval demonstration, not a republished past-paper pack."
         ),
         "kimi": {

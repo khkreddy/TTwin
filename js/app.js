@@ -582,6 +582,8 @@
         it.analysis = rec;
         if (rec.correct && !it.correct) it.correct = rec.correct;
         nRag += 1;
+      } else if (window.TTwinPaper && TTwinPaper.extractedKey && TTwinPaper.extractedKey(it)) {
+        /* Extracted Cambridge/gold letter is already on the pack. */
       } else {
         missing.push(it);
       }
@@ -689,12 +691,16 @@
         : "") +
       "</div>";
   }
+  function itemKey(it) {
+    if (window.TTwinPaper && TTwinPaper.extractedKey) return TTwinPaper.extractedKey(it);
+    return optionLetter(it && it.correct);
+  }
   function scoreItems(items, responses) {
     let right = 0, blank = 0, nokey = 0;
     items.forEach((it) => {
       const uid = it.uid || it.item_uid;
       const ch = optionLetter(responses[uid]);
-      const key = optionLetter(it.correct);
+      const key = itemKey(it);
       if (!ch) { blank += 1; return; }
       if (!key) { nokey += 1; return; }
       if (ch === key) right += 1;
@@ -766,8 +772,9 @@
     const status = $("tm-grade-status");
     if (btn) btn.disabled = true;
     try {
-      const missing = p.items.filter((it) => !optionLetter(it.correct));
+      const missing = p.items.filter((it) => !itemKey(it));
       let honesty = null;
+      const nExtract = p.items.filter((it) => it.assessment && it.assessment.key_source === "cambridge_extract" && itemKey(it)).length;
       if (missing.length) {
         if (status) status.textContent = "Inferring keys for scoring (not a published mark scheme)…";
         try {
@@ -790,6 +797,10 @@
         } catch (e) {
           honesty = "Could not infer keys (" + e.message + "). Score uses only items that already had a key from Modify.";
         }
+      } else if (nExtract) {
+        honesty = p.items.some((it) => it.modified)
+          ? "Extracted mark-scheme letters where present; modified items use the session key."
+          : "Keys are extracted from the published mark scheme where present.";
       } else {
         honesty = p.items.some((it) => it.modified)
           ? "Keys come from ISO-GEN Modify on this paper. Frozen exam papers are not a mark scheme."

@@ -73,6 +73,14 @@
     const u = String(lab).trim().toUpperCase();
     return /^[A-D]$/.test(u) ? u : null;
   }
+  function extractedKey(it) {
+    const a = it && it.assessment;
+    if (a && a.key_status === "available") {
+      const k = optionLetter(a.mcq_key);
+      if (k) return k;
+    }
+    return optionLetter(it && it.correct);
+  }
   function partitionStructures(it) {
     const stem = [];
     const byOpt = { A: [], B: [], C: [], D: [] };
@@ -154,7 +162,7 @@
     const interactive = !!opts.interactive;
     const chosen = optionLetter(opts.chosen);
     const reveal = !!opts.reveal;
-    const key = optionLetter(it.correct);
+    const key = extractedKey(it);
     const ulClass = interactive ? "options pick" : "options";
     return "<ul class='" + ulClass + "'>" + keys.map((k) => {
       const cls = [];
@@ -195,7 +203,7 @@
       interactive: opts.interactive,
       chosen: chosen,
       reveal: opts.reveal,
-      correct: it.correct,
+      correct: extractedKey(it),
     };
     const stemTables = ((it.tables || []).filter((t) => !t.is_option_table)).map((t) => tableHTML(t)).join("");
     const optTable = optionTableOf(it);
@@ -213,9 +221,37 @@
       "</article>"
     );
   }
+  function assessmentSheetHTML(it, i) {
+    const a = it && it.assessment;
+    const n = i + 1;
+    const uid = it.uid || it.item_uid || "";
+    const letter = extractedKey(it);
+    const src = a && a.key_source === "cambridge_extract"
+      ? "extracted mark scheme"
+      : a && a.key_source === "olympiad_gold"
+        ? "provided gold · not a Cambridge mark scheme"
+        : "no extracted key";
+    let body = "";
+    if (a && a.mark_scheme && a.mark_scheme.text) {
+      body += "<pre class='ms'>" + esc(a.mark_scheme.text) + "</pre>";
+    }
+    if (a && a.examiner_comment && a.examiner_comment.present && a.examiner_comment.text) {
+      body += "<p class='ex'><b>Examiner comment</b></p><p>" +
+        esc(a.examiner_comment.text).replace(/\n/g, "<br>") + "</p>";
+    }
+    if (!letter && !body) {
+      body = "<p class='muted'>No extracted key or examiner comment for this item.</p>";
+    }
+    return "<article class='key-q'>" +
+      "<div><span class='qnum'>" + esc(n) + "</span> " +
+      "<span class='tag'>" + esc(letter || "—") + "</span> " +
+      "<span class='uid'>" + esc(uid) + "</span></div>" +
+      "<p class='muted'>" + esc(src) + "</p>" + body +
+      "</article>";
+  }
   function analysisHTML(it, i) {
     const a = it.analysis;
-    if (!a) return "";
+    if (!a) return assessmentSheetHTML(it, i);
     const n = i + 1;
     const uid = it.uid || it.item_uid || "";
     const opts = a.options || {};
@@ -223,10 +259,19 @@
     const mapBits = [];
     if (a.map && a.map.chapter_title) mapBits.push(a.map.chapter_title);
     if (a.map && a.map.decision) mapBits.push(a.map.decision);
+    const letter = a.correct || extractedKey(it) || "?";
+    const extractBits = [];
+    if (it.assessment && it.assessment.key_source === "cambridge_extract") {
+      extractBits.push("extracted mark scheme");
+    }
+    if (it.assessment && it.assessment.examiner_comment && it.assessment.examiner_comment.present) {
+      extractBits.push("examiner comment on pack");
+    }
     return "<article class='key-q'>" +
       "<div><span class='qnum'>" + esc(n) + "</span> " +
-      "<span class='tag'>" + esc(a.correct || it.correct || "?") + "</span> " +
+      "<span class='tag'>" + esc(letter) + "</span> " +
       "<span class='uid'>" + esc(uid) + "</span></div>" +
+      (extractBits.length ? "<p class='muted'>" + esc(extractBits.join(" · ")) + "</p>" : "") +
       (a.rationale ? "<p>" + esc(a.rationale) + "</p>" : "") +
       (mapBits.length ? "<p class='muted'>" + mapBits.map(esc).join(" · ") + "</p>" : "") +
       letters.map((k) => {
@@ -240,6 +285,11 @@
           "</div>";
       }).join("") +
       (a.honesty ? "<p class='muted'>" + esc(a.honesty) + "</p>" : "") +
+      (it.assessment && it.assessment.mark_scheme && it.assessment.mark_scheme.text
+        ? "<pre class='ms'>" + esc(it.assessment.mark_scheme.text) + "</pre>" : "") +
+      (it.assessment && it.assessment.examiner_comment && it.assessment.examiner_comment.present
+        ? "<p class='ex'><b>Examiner comment</b></p><p>" +
+          esc(it.assessment.examiner_comment.text).replace(/\n/g, "<br>") + "</p>" : "") +
       "</article>";
   }
   function answerKeyHTML(meta, items) {
@@ -248,10 +298,10 @@
       "<div class='hdr'><div class='board'>Teacher's Twin</div>" +
       "<div class='subj'>Answer key</div>" +
       "<div class='papername'>" + esc(title) + "</div>" +
-      "<p class='cap'>Teacher sheet · not a published mark scheme · mix-ups unverified · not printed on the learner paper</p></div><hr class='rule'/>";
+      "<p class='cap'>Teacher sheet · extracted mark scheme and examiner comments where present · mix-ups unverified · not printed on the learner paper</p></div><hr class='rule'/>";
     const rows = (items || []).map((it, i) => analysisHTML(it, i)).join("");
     return "<div class='paper answer-key'>" + head +
-      (rows || "<p class='muted'>No stored analysis yet.</p>") +
+      (rows || "<p class='muted'>No extracted key or stored analysis yet.</p>") +
       "</div>";
   }
   function paperHTML(meta, items, opts) {
@@ -313,5 +363,5 @@
     mountTikz(root);
     mountSmiles(root);
   }
-  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, answerKeyHTML, mount, optionLetter, optionTableOf };
+  g.TTwinPaper = { esc, chem, itemHTML, paperHTML, answerKeyHTML, mount, optionLetter, extractedKey, optionTableOf };
 })(window);

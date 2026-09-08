@@ -1,6 +1,6 @@
 {
   "schema": "ttwin.showcase.v2",
-  "built_utc": "2026-09-07T10:21:53Z",
+  "built_utc": "2026-09-08T15:31:28Z",
   "subjects": [
     "chemistry",
     "biology",
@@ -17,6 +17,10 @@
   "n_tikz": 4554,
   "n_structures": 582,
   "n_tables": 5325,
+  "n_mcq_key": 21124,
+  "n_mark_scheme": 2736,
+  "n_examiner_comment": 7096,
+  "question_schema": "data/schema/ttwin.question.v1.json",
   "by_subject": {
     "chemistry": {
       "n_tagged": 9472,
@@ -89,7 +93,8 @@
       "data/enrichment/physics.json",
       "data/enrichment/maths.json"
     ],
-    "solutions": "data/solutions/index.json"
+    "solutions": "data/solutions/index.json",
+    "question_schema": "data/schema/ttwin.question.v1.json"
   },
   "sources": {
     "comprehensive_map": "reports/paper/data/NCERT_CHEMISTRY_MAP_COMPREHENSIVE.json",
@@ -101,7 +106,7 @@
     "projection": "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json",
     "exam_pack_sha256": "39646d1c79478bacf4cac6806ac5db8012f2717f30ee351429a5189b7bffc2b9"
   },
-  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Physics, biology and mathematics Maps are slim packs of hinge-map candidates (not the 60–140 MB source blobs). Existing five-ID tags are not rewritten. Cambridge maths items are tagged from the mathematics map + exam pack. Chemistry stems missing from the all-subject pack are joined from exam_v1_chem_joined. IR spectra using pgfplots are redrawn as native TikZ at pack time so TikZJax can display them. Chemistry map lives at data/maps/chemistry.json (loaded from the comprehensive map). Enrichment is per-subject under data/enrichment/{subject}.json; every row carries subject. Mx and enrichment are teacher-facing; they are not printed on the learner paper. ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and does not rewrite frozen exam.v1. Student-take keys for unmodified exam items are AI-inferred, not a published mark scheme. Solution analysis is a sub-layer of the question bank (item_uid × item_sha256): first assembly writes it; later assemblies retrieve it with zero provider calls. Mix-ups stay off the learner paper. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
+  "honesty": "Questions keep Cambridge syllabus coordinates (chapter_id / subtopic_id). NCERT join for chemistry is node × grade_band via the projection table, not a rewrite of tags. Physics, biology and mathematics Maps are slim packs of hinge-map candidates (not the 60–140 MB source blobs). Existing five-ID tags are not rewritten. Cambridge maths items are tagged from the mathematics map + exam pack. Chemistry stems missing from the all-subject pack are joined from exam_v1_chem_joined. IR spectra using pgfplots are redrawn as native TikZ at pack time so TikZJax can display them. Chemistry map lives at data/maps/chemistry.json (loaded from the comprehensive map). Enrichment is per-subject under data/enrichment/{subject}.json; every row carries subject. Mx and enrichment are teacher-facing; they are not printed on the learner paper. ISO-GEN authors CANDIDATE items; it does not rewrite frozen L20. Test-maker Modify is session-only and does not rewrite frozen exam.v1. Each question JSON carries an assessment object: extracted Cambridge mark-scheme letter or prose, and verbatim examiner comments when the extract has them. Those fields are teacher/Finish only — the learner paper renderer does not print them. key_source cambridge_extract is a published mark-scheme extract, not an AI guess. olympiad_gold is a provided gold letter, not a Cambridge mark scheme. Items with no extract have key_source none; Finish treats them as unscored, not wrong. AI solution analysis remains a sub-layer for items without an extract and for teacher rationale. Mix-ups stay off the learner paper. Cambridge wording is for retrieval demonstration, not a republished past-paper pack.",
   "kimi": {
     "model": "kimi-k3",
     "endpoint": "https://api.moonshot.ai/v1/chat/completions",

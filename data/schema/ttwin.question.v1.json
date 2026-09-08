@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ttwin.question.v1",
+  "title": "TTwin question pack item",
+  "description": "Shipped per-item contract. Learner paper is the top-level stem/options/figures. Answer key and examiner comments live only under assessment. Frozen exam.v1 is not rewritten. Join key is uid (bare item_uid, never tm:).",
+  "type": "object",
+  "required": ["uid", "subject", "pack", "node", "chapter_id", "subtopic_id", "stem", "item_type", "assessment"],
+  "properties": {
+    "uid": {
+      "type": "string",
+      "description": "Bare item_uid join key, e.g. 9701_m16_qp_12:q1. Never tm:-prefixed."
+    },
+    "subject": { "type": "string", "enum": ["chemistry", "biology", "physics", "maths"] },
+    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit"] },
+    "grade_band": { "type": ["string", "null"] },
+    "node": { "type": "string" },
+    "chapter_id": { "type": "string" },
+    "chapter_label": { "type": ["string", "null"] },
+    "subtopic_id": { "type": "string" },
+    "subtopic_label": { "type": ["string", "null"] },
+    "complete_exam": { "type": "boolean" },
+    "cam_family": { "type": ["string", "null"] },
+    "ncert_family": { "type": ["string", "null"] },
+    "stem": { "type": "string" },
+    "stem_lead": { "type": ["string", "null"] },
+    "item_type": {
+      "type": "string",
+      "enum": ["mcq", "mcq_diagram", "mcq_table", "three_statement", "structured", "open_response"]
+    },
+    "options": { "type": "object" },
+    "statements": { "type": "array" },
+    "has_figure": { "type": "boolean" },
+    "options_are_figure": { "type": "boolean" },
+    "equations": { "type": "array" },
+    "tables": { "type": "array" },
+    "structures": { "type": "array" },
+    "tikz": { "type": ["string", "array"] },
+    "tikz_packages": { "type": "array", "items": { "type": "string" } },
+    "assessment": {
+      "type": "object",
+      "description": "Teacher-only. Learner renderer must not descend here.",
+      "required": ["key_source", "key_status", "examiner_comment"],
+      "properties": {
+        "key_source": {
+          "type": "string",
+          "enum": ["cambridge_extract", "olympiad_gold", "none"]
+        },
+        "key_status": {
+          "type": "string",
+          "enum": ["available", "mark_scheme_not_present", "matching_answer_entry_not_detected", "not_applicable"]
+        },
+        "mcq_key": {
+          "type": ["string", "null"],
+          "enum": ["A", "B", "C", "D", null]
+        },
+        "mark_scheme": {
+          "type": ["object", "null"],
+          "properties": {
+            "text": { "type": "string", "minLength": 1 },
+            "total_marks": { "type": ["integer", "null"] }
+          },
+          "required": ["text"]
+        },
+        "examiner_comment": {
+          "type": "object",
+          "required": ["present"],
+          "properties": {
+            "present": { "type": "boolean" },
+            "text": { "type": "string", "minLength": 1 },
+            "comment_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+          }
+        }
+      }
+    }
+  }
+}
