@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Construct learn-by-solve banks and Mx modify seeds for a keyed MCQ.
 
-Pack-time overlay. Does not rewrite freeze exam.v1. Mix-up type names are
-teacher-key fields; follow-up stems never print mx_type.
+Follow-ups zoom onto the scientific contrast between the keyed option and
+that wrong option (spectroscopy pattern), not onto mix-up taxonomy.
+Pack-time overlay. Does not rewrite freeze exam.v1. mx_type is teacher-only.
 """
 from __future__ import annotations
 
+import hashlib
+import json
 import re
-from typing import Any
+from pathlib import Path
 
 MX = (
     "term_substitution",
@@ -40,10 +43,38 @@ REV = (
     ("gain", "loss"),
     ("absorb", "releas"),
     ("contract", "expand"),
-    ("solid", "liquid"),
     ("artery", "vein"),
     ("xylem", "phloem"),
+    ("hot", "cold"),
+    ("faster", "slower"),
 )
+INLINE_OPT = re.compile(r"(?:\(([A-D])\)|\[([A-D])\])\s*", re.I)
+STAMP_SOLVE = "The keyed choice is"
+STAMP_STEM = (
+    "What did they drop?",
+    "Which description of that error",
+    "What kind of boundary error",
+    "Which description fits?",
+    "What mixed two processes?",
+    "A directed relation (cause/effect",
+    "Over- or under-extending which cases",
+)
+
+_ROOT = Path(__file__).resolve().parents[1]
+
+
+def _preserve_uids() -> set[str]:
+    p = _ROOT / "data" / "spectra" / "lbs.json"
+    if not p.is_file():
+        return set()
+    try:
+        doc = json.loads(p.read_text(encoding="utf-8"))
+        return set((doc.get("items") or {}).keys())
+    except Exception:
+        return set()
+
+
+PRESERVE_UIDS = _preserve_uids()
 
 
 def clip(s: str, n: int = 110) -> str:
@@ -57,18 +88,13 @@ def tokens(s: str) -> set[str]:
     return set(TOK.findall((s or "").lower()))
 
 
-def option_letters(options: dict) -> list[str]:
-    present = [L for L in LETTERS if options.get(L) not in (None,)]
-    return present or list(LETTERS)
-
-
 def looks_numeric(s: str) -> bool:
     t = (s or "").strip()
-    if not t:
+    if not t or not any(ch.isdigit() for ch in t):
         return False
-    if NUMISH.match(t) and any(ch.isdigit() for ch in t):
+    if NUMISH.match(t):
         return True
-    return bool(re.search(r"\d", t)) and len(t) <= 24
+    return len(t) <= 24
 
 
 def hinge(stem: str) -> str:
@@ -78,154 +104,278 @@ def hinge(stem: str) -> str:
         return clip(m.group(1), 180)
     q = s.find("?")
     if q >= 0:
-        start = max(0, q - 160)
-        return clip(s[start : q + 1], 180)
+        return clip(s[max(0, q - 160) : q + 1], 180)
     return clip(s, 180)
 
 
-def classify(stem: str, options: dict, key: str, letter: str) -> tuple[str, str]:
-    w = str(options.get(letter) or "").strip()
-    r = str(options.get(key) or "").strip()
+def parse_inline_options(stem: str) -> tuple[str, dict[str, str]]:
+    matches = list(INLINE_OPT.finditer(stem or ""))
+    if len(matches) < 4:
+        return stem or "", {}
+    opts: dict[str, str] = {}
+    for i, m in enumerate(matches[:4]):
+        start = m.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(stem)
+        letter = (m.group(1) or m.group(2) or "").upper()
+        opts[letter] = re.sub(r"\s+", " ", stem[start:end]).strip()
+    if any(not opts.get(L) for L in LETTERS):
+        return stem or "", {}
+    rest = (stem[: matches[0].start()]).strip()
+    return rest, opts
+
+
+def option_from_table(item: dict, letter: str) -> str:
+    for table in item.get("tables") or []:
+        if not isinstance(table, dict) or not table.get("is_option_table"):
+            continue
+        labels = [str(x).strip().upper()[:1] for x in (table.get("row_labels") or [])]
+        rows = table.get("rows") or []
+        if letter in labels:
+            i = labels.index(letter)
+            cells = rows[i] if i < len(rows) else []
+            return " ".join(str(c) for c in cells).strip()
+    return ""
+
+
+def lift_options(item: dict) -> bool:
+    """If A–D live in the stem (olympiad) or a table, copy them into options."""
+    opts = dict(item.get("options") or {})
+    nonempty = [L for L in LETTERS if str(opts.get(L) or "").strip()]
+    if len(nonempty) >= 2:
+        return False
+    stem = item.get("stem") or item.get("stem_lead") or ""
+    rest, parsed = parse_inline_options(stem)
+    if len(parsed) == 4:
+        item["options"] = parsed
+        item["stem"] = rest
+        item["stem_lead"] = rest
+        return True
+    tabled = {L: option_from_table(item, L) for L in LETTERS}
+    if sum(1 for v in tabled.values() if v) >= 2:
+        item["options"] = {L: tabled[L] for L in LETTERS if tabled[L]}
+        return True
+    return False
+
+
+def option_text(item: dict, letter: str) -> str:
+    opts = item.get("options") or {}
+    t = str(opts.get(letter) or "").strip()
+    if t:
+        return t
+    return option_from_table(item, letter)
+
+
+def option_letters(item: dict) -> list[str]:
+    present = [L for L in LETTERS if option_text(item, L)]
+    return present or list(LETTERS)
+
+
+def clauses(text: str) -> list[str]:
+    t = re.sub(r"\s+", " ", (text or "").strip())
+    parts = re.split(r"\s*;\s*|\s+\|\s+|\s+/\s+|\s+→\s+|\s+->\s+", t)
+    parts = [p.strip() for p in parts if p.strip()]
+    return parts or [t]
+
+
+def first_diff(a: str, b: str) -> tuple[str, str]:
+    ca, cb = clauses(a), clauses(b)
+    n = min(len(ca), len(cb))
+    for i in range(n):
+        if ca[i].lower() != cb[i].lower():
+            return ca[i], cb[i]
+    if (a or "").lower() != (b or "").lower():
+        return (a or "").strip(), (b or "").strip()
+    return (a or "").strip(), (b or "").strip()
+
+
+def parse_123(s: str) -> set[int]:
+    sl = re.sub(r"\s+", " ", (s or "").lower())
+    if re.search(r"1\s*,\s*2\s*and\s*3", sl) or sl in {"1,2 and 3", "all three"}:
+        return {1, 2, 3}
+    got = set()
+    if re.search(r"\b1\b", sl):
+        got.add(1)
+    if re.search(r"\b2\b", sl):
+        got.add(2)
+    if re.search(r"\b3\b", sl):
+        got.add(3)
+    return got
+
+
+def classify(item: dict, key: str, letter: str) -> tuple[str, str, str, str]:
+    w = option_text(item, letter)
+    r = option_text(item, key)
+    k_c, w_c = first_diff(r, w)
     wl, rl = w.lower(), r.lower()
     if THREE.match(w) and THREE.match(r):
-        if "1, 2 and 3" in wl.replace(" ", "") or wl.startswith("1,2 and 3") or "1, 2 and 3" in w.lower():
+        extra = parse_123(w) - parse_123(r)
+        missing = parse_123(r) - parse_123(w)
+        if extra:
             return (
                 "scope_error",
-                f"Student treated every numbered statement as true and picked {letter} ({clip(w, 60)}) instead of {key} ({clip(r, 60)}).",
+                f"including statement {sorted(extra)[0]} which the keyed set rejects",
+                k_c,
+                w_c,
             )
-        return (
-            "condition_omission",
-            f"Student dropped or added a numbered statement, picking {letter} ({clip(w, 60)}) instead of {key} ({clip(r, 60)}).",
-        )
+        if missing:
+            return (
+                "condition_omission",
+                f"dropping statement {sorted(missing)[0]} which the keyed set still requires",
+                k_c,
+                w_c,
+            )
+        return ("scope_error", "picking a different subset of the numbered statements", k_c, w_c)
     if looks_numeric(w) and looks_numeric(r) and w != r:
         return (
             "operation_confusion",
-            f"Student used the wrong operation, operand or rounding and obtained {clip(w, 40)} instead of {clip(r, 40)}.",
+            f"computing {clip(w, 40)} instead of the required {clip(r, 40)}",
+            r,
+            w,
         )
     for a, b in REV:
         if (a in wl and b in rl) or (b in wl and a in rl):
             return (
                 "relationship_reversal",
-                f"Student reversed a directed relation, writing {clip(w, 60)} where the key is {clip(r, 60)}.",
+                f"reversing the directed relation ({clip(w_c, 50)} vs {clip(k_c, 50)})",
+                k_c,
+                w_c,
             )
-    st = tokens(stem)
+    st = tokens(item.get("stem") or "")
     wt, rt = tokens(w), tokens(r)
     if w and r and wt and rt:
         jacc = len(wt & rt) / max(1, len(wt | rt))
         if st & wt and not (wt & rt) and jacc < 0.25:
             return (
                 "surface_feature_capture",
-                f"Student matched a salient stem word and chose {letter} ({clip(w, 60)}) instead of the operative criterion that yields {key}.",
+                f"matching a salient stem word and choosing “{clip(w_c, 50)}” instead of “{clip(k_c, 50)}”",
+                k_c,
+                w_c,
             )
         if jacc < 0.28:
             return (
                 "term_substitution",
-                f"Student swapped a named term for a sibling: {clip(w, 60)} instead of {clip(r, 60)}.",
+                f"swapping the sibling term “{clip(w_c, 50)}” for the required “{clip(k_c, 50)}”",
+                k_c,
+                w_c,
             )
     if any(k in wl and k not in rl for k in ("because", "due to", "caused by", "so that")):
         return (
             "mechanism_conflation",
-            f"Student named a neighbour mechanism in {letter} ({clip(w, 60)}) that does not apply to this item.",
-        )
-    if not w:
-        return (
-            "surface_feature_capture",
-            f"Student picked figure/letter {letter} from a surface feature instead of the criterion that selects {key}.",
+            f"naming a neighbour process in “{clip(w, 50)}” instead of “{clip(r, 50)}”",
+            k_c,
+            w_c,
         )
     return (
         "condition_omission",
-        f"Student dropped a stated condition that still holds, so {letter} ({clip(w, 60)}) looked possible.",
+        f"dropping a stated condition so “{clip(w_c, 50)}” looked possible instead of “{clip(k_c, 50)}”",
+        k_c,
+        w_c,
     )
 
 
-def followup(stem: str, options: dict, key: str, letter: str, mx: str, pathway: str) -> dict:
-    w = clip(str(options.get(letter) or f"option {letter}"), 90)
-    r = clip(str(options.get(key) or f"option {key}"), 90)
-    others = [L for L in option_letters(options) if L not in (key, letter)]
-    o1 = clip(str(options.get(others[0]) or f"option {others[0]}"), 70) if others else "an unrelated distractor"
-    h = hinge(stem)
-    probes = {
-        "term_substitution": (
-            f"{h}\n\nA student wrote {w} in place of {r}. These names are siblings. Which one meets the item's criterion?",
-            {"A": r, "B": w, "C": o1, "D": "Either name is acceptable here"},
-            "A",
-            f"{r} is the keyed term. {w} is a sibling substitution.",
-        ),
-        "condition_omission": (
-            f"{h}\n\nSomeone chose: {w}\nThe key is: {r}\nWhat did they drop?",
-            {
-                "A": "A stated condition that still applies, so the key remains " + r,
-                "B": "Nothing — " + w + " is also allowed",
-                "C": "The whole stem, which can be ignored",
-                "D": "Units only",
-            },
-            "A",
-            f"The stated condition still holds; that is why {r} is keyed and {w} is not.",
-        ),
-        "relationship_reversal": (
-            f"{h}\n\nCompare {w} with {r}. What is the error in the first?",
-            {
-                "A": "A directed relation (cause/effect, greater/lesser, or process direction) was reversed",
-                "B": "A unit prefix was misread",
-                "C": "An extra numbered statement was included",
-                "D": "The figure was blank",
-            },
-            "A",
-            f"{w} reverses the directed relation that {r} keeps.",
-        ),
-        "scope_error": (
-            f"{h}\n\nA student selected {w} rather than {r}. What kind of boundary error is that?",
-            {
-                "A": "Over- or under-extending which cases/statements the criterion covers",
-                "B": "A pure arithmetic slip with the same cases",
-                "C": "Ignoring the question entirely",
-                "D": "Treating the key as unofficial",
-            },
-            "A",
-            f"{w} changes the scope of the true statements relative to {r}.",
-        ),
-        "surface_feature_capture": (
-            f"{h}\n\nWhy is {w} tempting but not keyed, while {r} is?",
-            {
-                "A": "A salient word, colour, symbol or visible change replaced the operative criterion",
-                "B": "The key uses a different syllabus",
-                "C": "The numbers were rounded twice",
-                "D": "The stem has no criterion",
-            },
-            "A",
-            f"{w} tracks a surface cue; {r} tracks the operative criterion.",
-        ),
-        "mechanism_conflation": (
-            f"{h}\n\nOption {letter} says: {w}\nThe key says: {r}\nWhat mixed two processes?",
-            {
-                "A": "A neighbour mechanism was named as if it were this one",
-                "B": "Only the units differ",
-                "C": "The option is identical to the key",
-                "D": "No process is named in either",
-            },
-            "A",
-            f"{w} imports a neighbour mechanism; {r} stays on this item's process.",
-        ),
-        "operation_confusion": (
-            f"The keyed value is {r}. A student obtained {w}. Which description fits?",
-            {
-                "A": "The wrong operation, operand, formula step or rounding was used",
-                "B": "The key is an estimate and both are accepted",
-                "C": "The stem forbids calculation",
-                "D": f"Significant figures are the only issue and {r} equals {w}",
-            },
-            "A",
-            f"{w} is a procedural mix-up; {r} is the result of the required steps.",
-        ),
-    }
-    st, opts, k, why = probes.get(mx) or probes["condition_omission"]
-    return {"stem": st, "options": opts, "key": k, "why": why}
+def place(uid: str, letter: str, correct: str, distractors: list[str]) -> tuple[dict[str, str], str]:
+    seen = {correct.strip().lower()}
+    deds: list[str] = []
+    for x in distractors:
+        t = (x or "").strip()
+        if not t:
+            continue
+        k = t.lower()
+        if k in seen:
+            continue
+        seen.add(k)
+        deds.append(t)
+        if len(deds) == 3:
+            break
+    pad = [
+        "the stem does not decide between these claims",
+        "both claims are required at once",
+        "neither claim can be true",
+    ]
+    for p in pad:
+        if len(deds) >= 3:
+            break
+        if p.lower() not in seen:
+            deds.append(p)
+            seen.add(p.lower())
+    while len(deds) < 3:
+        deds.append("an unrelated claim not used in this item")
+    idx = int(hashlib.md5(f"{uid}:{letter}".encode("utf-8")).hexdigest(), 16) % 4
+    slots = [""] * 4
+    slots[idx] = correct
+    j = 0
+    for i in range(4):
+        if i == idx:
+            continue
+        slots[i] = deds[j]
+        j += 1
+    opts = {LETTERS[i]: slots[i] for i in range(4)}
+    return opts, LETTERS[idx]
 
 
-def solve_line(stem: str, options: dict, key: str) -> str:
-    r = clip(str(options.get(key) or f"option {key}"), 120)
-    h = hinge(stem)
-    return f"{h} The keyed choice is {key}: {r}."
+def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict:
+    uid = str(item.get("uid") or "")
+    h = hinge(item.get("stem") or item.get("stem_lead") or "")
+    r = option_text(item, key)
+    w = option_text(item, letter)
+    others = [option_text(item, L) for L in option_letters(item) if L not in (key, letter)]
+    other_bit = ""
+    if others and others[0]:
+        _, other_bit = first_diff(r, others[0])
+
+    if THREE.match(w) and THREE.match(r):
+        extra = parse_123(w) - parse_123(r)
+        missing = parse_123(r) - parse_123(w)
+        n = sorted(extra or missing)[0] if (extra or missing) else 3
+        need = "Yes" if n in parse_123(r) else "No"
+        stem = (
+            f"{h}\n\n"
+            f"A student chose “{clip(w, 70)}” rather than “{clip(r, 70)}”. "
+            f"Is numbered statement {n} required for the keyed answer?"
+        )
+        opts, fu_key = place(uid, letter, need, ["Yes" if need == "No" else "No", "Only if the other statements are false", "The stem does not number statements"])
+        why = f"Statement {n} is {'required' if need == 'Yes' else 'not required'}. That is the difference between {key} and {letter}."
+        return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+
+    if looks_numeric(w) and looks_numeric(r) and w != r:
+        stem = (
+            f"{h}\n\n"
+            f"A working that is consistent with this item gives {clip(r, 40)}. "
+            f"A student instead obtained {clip(w, 40)}. Which value is required?"
+        )
+        opts, fu_key = place(uid, letter, clip(r, 40), [clip(w, 40), clip(others[0], 40) if others else "0", "the stem gives no numerical value"])
+        why = f"The required value is {clip(r, 40)}. {clip(w, 40)} is the result of a different operation or operand."
+        return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+
+    stem = (
+        f"{h}\n\n"
+        f"A student used this claim: {clip(w_c, 90)}\n"
+        f"Which claim does the item actually require?"
+    )
+    correct = clip(k_c, 90) or clip(r, 90)
+    distractors = [
+        clip(w_c, 90) or clip(w, 90),
+        clip(other_bit, 90) if other_bit else "a different unrelated quantity",
+        "the stem does not decide between these claims",
+    ]
+    opts, fu_key = place(uid, letter, correct, distractors)
+    why = f"The item requires “{correct}”. “{clip(w_c, 80)}” is the claim in option {letter}."
+    return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+
+
+def solve_line(item: dict, key: str) -> str:
+    h = hinge(item.get("stem") or item.get("stem_lead") or "")
+    r = option_text(item, key)
+    bits = [f"{h} Required: {key} — {clip(r, 120)}."]
+    for L in option_letters(item):
+        if L == key:
+            continue
+        k_c, w_c = first_diff(r, option_text(item, L))
+        if k_c and w_c and k_c.lower() != w_c.lower():
+            bits.append(f"{L} would need “{clip(w_c, 70)}”, but the item needs “{clip(k_c, 70)}”.")
+        else:
+            bits.append(f"{L} ({clip(option_text(item, L), 70)}) does not meet that criterion.")
+    return " ".join(bits)
 
 
 def construct_lbs(item: dict) -> dict | None:
@@ -233,24 +383,26 @@ def construct_lbs(item: dict) -> dict | None:
     key = a.get("mcq_key")
     if key not in LETTERS:
         return None
-    options = item.get("options") or {}
-    present = option_letters(options)
-    if key not in present:
-        present = list(LETTERS)
-    stem = item.get("stem") or item.get("stem_lead") or ""
+    present = option_letters(item)
+    if key not in present and not option_text(item, key):
+        return None
+    if not any(option_text(item, L) for L in present if L != key):
+        return None
     wrong = {}
     for L in present:
         if L == key:
             continue
-        mx, pathway = classify(stem, options, key, L)
+        if not option_text(item, L) and not option_text(item, key):
+            continue
+        mx, pathway, k_c, w_c = classify(item, key, L)
         wrong[L] = {
             "mx_type": mx,
             "pathway": pathway,
-            "followup": followup(stem, options, key, L, mx, pathway),
+            "followup": followup(item, key, L, mx, k_c, w_c),
         }
     if not wrong:
         return None
-    return {"solve": solve_line(stem, options, key), "wrong": wrong, "key": key}
+    return {"solve": solve_line(item, key), "wrong": wrong, "key": key}
 
 
 def seeds_from_lbs(lbs: dict | None, key: str | None) -> list[dict]:
@@ -259,7 +411,8 @@ def seeds_from_lbs(lbs: dict | None, key: str | None) -> list[dict]:
         return out
     for L, row in (lbs.get("wrong") or {}).items():
         mx = row.get("mx_type") or "condition_omission"
-        pathway = row.get("pathway") or ""
+        pathway = (row.get("pathway") or "").rstrip(".")
+        pathway = re.sub(r"^(Student|student)\s+", "", pathway)
         out.append(
             {
                 "id": f"{L}:{mx}",
@@ -267,20 +420,22 @@ def seeds_from_lbs(lbs: dict | None, key: str | None) -> list[dict]:
                 "mx_type": mx,
                 "label": f"If {L} · {mx.replace('_', ' ')}",
                 "instruction": (
-                    f"Rewrite this item so a student who still {pathway.rstrip('.')} "
-                    f"would pick {L}. Change the numbers, species or wording; rewrite the stem "
-                    f"and all four options as one coherent item. Do not print mix-up labels "
-                    f"on the learner stem. Recalculate the key."
+                    f"Rewrite this item so option {L} remains the trap for a student {pathway}. "
+                    f"Change the numbers, species or wording; rewrite the stem and all four options "
+                    f"as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
                 ),
             }
         )
     return out
 
 
-def lbs_complete(lbs: dict | None, key: str, options: dict) -> bool:
+def lbs_complete(lbs: dict | None, key: str, options: dict | None = None, item: dict | None = None) -> bool:
     if not lbs or key not in LETTERS:
         return False
-    present = option_letters(options)
+    if item is not None:
+        present = option_letters(item)
+    else:
+        present = [L for L in LETTERS if (options or {}).get(L) not in (None, "")] or list(LETTERS)
     expect = set(present) - {key}
     if not expect:
         expect = set(LETTERS) - {key}
@@ -289,28 +444,60 @@ def lbs_complete(lbs: dict | None, key: str, options: dict) -> bool:
         return False
     for L in expect:
         fu = (wrong.get(L) or {}).get("followup") or {}
-        if not fu.get("stem") or not fu.get("key") or not (fu.get("options") or {}):
+        if not fu.get("stem") or fu.get("key") not in LETTERS or not (fu.get("options") or {}):
             return False
     return True
 
 
+def is_stamp_lbs(lbs: dict | None) -> bool:
+    if not lbs:
+        return True
+    solve = lbs.get("solve") or ""
+    if STAMP_SOLVE in solve:
+        return True
+    keys = []
+    for row in (lbs.get("wrong") or {}).values():
+        fu = row.get("followup") or {}
+        stem = fu.get("stem") or ""
+        if any(s in stem for s in STAMP_STEM):
+            return True
+        keys.append(fu.get("key"))
+    return False
+
+
 def ensure_item(item: dict) -> bool:
-    """Attach LBS + modify seeds if this is a keyed MCQ. Preserve complete LBS."""
+    """Attach or replace LBS + modify seeds for a keyed MCQ.
+
+    Hand-authored spectroscopy rows (not stamps) are kept. Stamp banks are rebuilt.
+    """
     a = dict(item.get("assessment") or {})
     key = a.get("mcq_key")
     if key not in LETTERS or a.get("key_status") != "available":
         return False
-    options = item.get("options") or {}
+    lifted = lift_options(item)
+    uid = item.get("uid") or ""
     lbs = a.get("learn_by_solve")
-    changed = False
-    if not lbs_complete(lbs, key, options):
+    preserve = (
+        uid in PRESERVE_UIDS
+        and lbs_complete(lbs, key, item.get("options") or {}, item)
+        and not is_stamp_lbs(lbs)
+    )
+    changed = lifted
+    if not preserve:
         built = construct_lbs(item)
         if built:
             a["learn_by_solve"] = built
             lbs = built
             changed = True
-    if lbs and not a.get("modify_seeds"):
+        elif lbs and is_stamp_lbs(lbs):
+            a.pop("learn_by_solve", None)
+            lbs = None
+            changed = True
+    if lbs:
         a["modify_seeds"] = seeds_from_lbs(lbs, key)
+        changed = True
+    elif a.get("modify_seeds"):
+        a.pop("modify_seeds", None)
         changed = True
     if changed:
         item["assessment"] = a

@@ -19,29 +19,34 @@ def census_item(it: dict) -> dict:
     a = it.get("assessment") or {}
     k = a.get("mcq_key")
     keyed = k in LETTERS and a.get("key_status") == "available"
+    n_opt = sum(1 for L in LETTERS if str((it.get("options") or {}).get(L) or "").strip())
+    eligible = keyed and n_opt >= 2
     lbs = a.get("learn_by_solve")
     seeds = a.get("modify_seeds") or []
     ex = (a.get("examiner_comment") or {}).get("present")
-    complete = bool(keyed and lbs_complete(lbs, k, it.get("options") or {}))
+    complete = bool(eligible and lbs_complete(lbs, k, it.get("options") or {}, it))
     return {
         "keyed": keyed,
+        "eligible": eligible,
         "lbs_complete": complete,
-        "modify_seeds": bool(keyed and seeds),
+        "modify_seeds": bool(complete and seeds),
         "examiner": bool(ex),
     }
 
 
 def census_items(items: list) -> dict:
-    n_mcq_key = n_lbs = n_mod = n_ex = 0
+    n_mcq_key = n_el = n_lbs = n_mod = n_ex = 0
     for it in items:
         c = census_item(it)
         n_mcq_key += int(c["keyed"])
+        n_el += int(c.get("eligible") or False)
         n_lbs += int(c["lbs_complete"])
         n_mod += int(c["modify_seeds"])
         n_ex += int(c["examiner"])
     return {
         "n": len(items),
         "n_mcq_key": n_mcq_key,
+        "n_mcq_eligible": n_el,
         "n_lbs_complete": n_lbs,
         "n_modify_seeds": n_mod,
         "n_examiner_present": n_ex,
@@ -68,7 +73,7 @@ def join_file(path: Path) -> dict:
 def join_all(root: Path | None = None) -> dict:
     qdir = (root or TTWIN) / "data" / "questions"
     by = {}
-    tot = {"n": 0, "n_mcq_key": 0, "n_lbs_complete": 0, "n_modify_seeds": 0, "n_examiner_present": 0, "n_updated": 0}
+    tot = {"n": 0, "n_mcq_key": 0, "n_mcq_eligible": 0, "n_lbs_complete": 0, "n_modify_seeds": 0, "n_examiner_present": 0, "n_updated": 0}
     for path in sorted(qdir.glob("*.json")):
         stats = join_file(path)
         by[path.name] = stats
