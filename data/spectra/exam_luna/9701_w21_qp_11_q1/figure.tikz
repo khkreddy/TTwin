@@ -1,20 +1,18 @@
-\begin{tikzpicture}[x=2.4000cm,y=0.0500cm,font=\sffamily\small,line cap=round]
-\draw (19.0,0)--(23.0,0);
-\draw (19.0,0)--(19.0,120.0);
-\draw (19,0)--++(0,-0.12cm) node[below]{\footnotesize 19};
-\draw (20,0)--++(0,-0.12cm) node[below]{\footnotesize 20};
-\draw (21,0)--++(0,-0.12cm) node[below]{\footnotesize 21};
-\draw (22,0)--++(0,-0.12cm) node[below]{\footnotesize 22};
-\draw (23,0)--++(0,-0.12cm) node[below]{\footnotesize 23};
-\draw (19.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (19.0,60)--++(-0.12cm,0) node[left]{\footnotesize 60};
-\draw (19.0,120)--++(-0.12cm,0) node[left]{\footnotesize 120};
-\node[rotate=90,align=center] at (18.4,60.0){relative intensity};
-\node at (21.0,-14.40){$m/e$};
-\draw[line width=1.35pt] (20.0,0)--(20.0,100.0);
-\node[above,font=\sffamily\scriptsize] at (20.0,100.0){100};
-\draw[line width=1.35pt] (21.0,0)--(21.0,0.3);
-\node[above,font=\sffamily\scriptsize] at (21.0,0.3){0.3};
-\draw[line width=1.35pt] (22.0,0)--(22.0,8.0);
-\node[above,font=\sffamily\scriptsize] at (22.0,8.0){8};
+\begin{tikzpicture}[x=1.150cm,y=0.048cm,font=\sffamily\small,line cap=round]
+\draw (19.45,0)--(22.00,0);
+\draw (19.45,0)--(19.45,115);
+\draw (20,0)--(20,-4) node[below]{20};
+\draw (21,0)--(21,-4) node[below]{21};
+\draw (22,0)--(22,-4) node[below]{22};
+\draw (19.45,0)--(19.20,0) node[left]{0};
+\draw (19.45,57)--(19.20,57) node[left]{57};
+\draw (19.45,114)--(19.20,114) node[left]{114};
+\node[rotate=90] at (18.10,57){abundance};
+\node at (20.73,-11){m/e};
+\draw[line width=1.4pt] (20.0,0)--(20.0,100.0);
+\node[above] at (20.0,100.0){100};
+\draw[line width=1.4pt] (21.0,0)--(21.0,0.3);
+\node[above] at (21.0,0.3){0.3};
+\draw[line width=1.4pt] (22.0,0)--(22.0,8.0);
+\node[above] at (22.0,8.0){8};
 \end{tikzpicture}

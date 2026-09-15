@@ -1,16 +1,16 @@
-\begin{tikzpicture}[x=2.4000cm,y=0.6667cm,font=\sffamily\small,line cap=round]
-\draw (62.0,0)--(66.0,0);
-\draw (62.0,0)--(62.0,9.0);
-\draw (62,0)--++(0,-0.12cm) node[below]{\footnotesize 62};
-\draw (63,0)--++(0,-0.12cm) node[below]{\footnotesize 63};
-\draw (64,0)--++(0,-0.12cm) node[below]{\footnotesize 64};
-\draw (65,0)--++(0,-0.12cm) node[below]{\footnotesize 65};
-\draw (66,0)--++(0,-0.12cm) node[below]{\footnotesize 66};
-\draw (62.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (62.0,4)--++(-0.12cm,0) node[left]{\footnotesize 4};
-\draw (62.0,9)--++(-0.12cm,0) node[left]{\footnotesize 9};
-\node[rotate=90,align=center] at (61.4,4.5){relative intensity};
-\node at (64.0,-1.08){$m/e$};
-\draw[line width=1.35pt] (63.0,0)--(63.0,7.0);
-\draw[line width=1.35pt] (65.0,0)--(65.0,3.0);
+\begin{tikzpicture}[x=1.150cm,y=0.048cm,font=\sffamily\small,line cap=round]
+\draw (62.00,0)--(66.00,0);
+\draw (62.00,0)--(62.00,8);
+\draw (62,0)--(62,-4) node[below]{62};
+\draw (63,0)--(63,-4) node[below]{63};
+\draw (64,0)--(64,-4) node[below]{64};
+\draw (65,0)--(65,-4) node[below]{65};
+\draw (66,0)--(66,-4) node[below]{66};
+\draw (62.00,0)--(61.75,0) node[left]{0};
+\draw (62.00,4)--(61.75,4) node[left]{4};
+\draw (62.00,8)--(61.75,8) node[left]{8};
+\node[rotate=90] at (60.65,4){abundance};
+\node at (64.00,-11){m/e};
+\draw[line width=1.4pt] (63.0,0)--(63.0,7.0);
+\draw[line width=1.4pt] (65.0,0)--(65.0,3.0);
 \end{tikzpicture}

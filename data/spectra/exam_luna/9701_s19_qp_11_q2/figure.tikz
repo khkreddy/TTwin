@@ -1,21 +1,21 @@
-\begin{tikzpicture}[x=2.4000cm,y=0.1000cm,font=\sffamily\small,line cap=round]
-\draw (111.0,0)--(116.0,0);
-\draw (111.0,0)--(111.0,60.0);
-\draw (111,0)--++(0,-0.12cm) node[below]{\footnotesize 111};
-\draw (112,0)--++(0,-0.12cm) node[below]{\footnotesize 112};
-\draw (113,0)--++(0,-0.12cm) node[below]{\footnotesize 113};
-\draw (114,0)--++(0,-0.12cm) node[below]{\footnotesize 114};
-\draw (115,0)--++(0,-0.12cm) node[below]{\footnotesize 115};
-\draw (116,0)--++(0,-0.12cm) node[below]{\footnotesize 116};
-\draw (111.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (111.0,30)--++(-0.12cm,0) node[left]{\footnotesize 30};
-\draw (111.0,60)--++(-0.12cm,0) node[left]{\footnotesize 60};
-\node[rotate=90,align=center] at (110.4,30.0){\% abundance};
-\node at (113.5,-7.20){$m/e$};
-\draw[line width=1.35pt] (112.0,0)--(112.0,3.0);
-\node[above,font=\sffamily\scriptsize] at (112.0,3.0){3%};
-\draw[line width=1.35pt] (114.0,0)--(114.0,56.0);
-\node[above,font=\sffamily\scriptsize] at (114.0,56.0){56%};
-\draw[line width=1.35pt] (115.0,0)--(115.0,41.0);
-\node[above,font=\sffamily\scriptsize] at (115.0,41.0){41%};
+\begin{tikzpicture}[x=1.150cm,y=0.048cm,font=\sffamily\small,line cap=round]
+\draw (111.00,0)--(116.00,0);
+\draw (111.00,0)--(111.00,60);
+\draw (111,0)--(111,-4) node[below]{111};
+\draw (112,0)--(112,-4) node[below]{112};
+\draw (113,0)--(113,-4) node[below]{113};
+\draw (114,0)--(114,-4) node[below]{114};
+\draw (115,0)--(115,-4) node[below]{115};
+\draw (116,0)--(116,-4) node[below]{116};
+\draw (111.00,0)--(110.75,0) node[left]{0};
+\draw (111.00,30)--(110.75,30) node[left]{30};
+\draw (111.00,60)--(110.75,60) node[left]{60};
+\node[rotate=90] at (109.65,30){% abundance};
+\node at (113.50,-11){m/e};
+\draw[line width=1.4pt] (112.0,0)--(112.0,3.0);
+\node[above] at (112.0,3.0){3\%};
+\draw[line width=1.4pt] (114.0,0)--(114.0,56.0);
+\node[above] at (114.0,56.0){56\%};
+\draw[line width=1.4pt] (115.0,0)--(115.0,41.0);
+\node[above] at (115.0,41.0){41\%};
 \end{tikzpicture}

@@ -1,20 +1,18 @@
-\begin{tikzpicture}[x=2.0000cm,y=0.1000cm,font=\sffamily\small,line cap=round]
-\draw (89.0,0)--(95.0,0);
-\draw (89.0,0)--(89.0,60.0);
-\draw (89,0)--++(0,-0.12cm) node[below]{\footnotesize 89};
-\draw (90,0)--++(0,-0.12cm) node[below]{\footnotesize 90};
-\draw (91,0)--++(0,-0.12cm) node[below]{\footnotesize 91};
-\draw (92,0)--++(0,-0.12cm) node[below]{\footnotesize 92};
-\draw (93,0)--++(0,-0.12cm) node[below]{\footnotesize 93};
-\draw (94,0)--++(0,-0.12cm) node[below]{\footnotesize 94};
-\draw (95,0)--++(0,-0.12cm) node[below]{\footnotesize 95};
-\draw (89.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (89.0,30)--++(-0.12cm,0) node[left]{\footnotesize 30};
-\draw (89.0,60)--++(-0.12cm,0) node[left]{\footnotesize 60};
-\node[rotate=90,align=center] at (88.28,30.0){relative intensity};
-\node at (92.0,-7.20){$m/e$};
-\draw[line width=1.35pt] (90.0,0)--(90.0,50.0);
-\draw[line width=1.35pt] (91.0,0)--(91.0,10.0);
-\draw[line width=1.35pt] (92.0,0)--(92.0,20.0);
-\draw[line width=1.35pt] (94.0,0)--(94.0,20.0);
+\begin{tikzpicture}[x=1.150cm,y=0.048cm,font=\sffamily\small,line cap=round]
+\draw (89.45,0)--(94.00,0);
+\draw (89.45,0)--(89.45,57);
+\draw (90,0)--(90,-4) node[below]{90};
+\draw (91,0)--(91,-4) node[below]{91};
+\draw (92,0)--(92,-4) node[below]{92};
+\draw (93,0)--(93,-4) node[below]{93};
+\draw (94,0)--(94,-4) node[below]{94};
+\draw (89.45,0)--(89.20,0) node[left]{0};
+\draw (89.45,28)--(89.20,28) node[left]{28};
+\draw (89.45,57)--(89.20,57) node[left]{57};
+\node[rotate=90] at (88.10,29){abundance};
+\node at (91.72,-11){m/e};
+\draw[line width=1.4pt] (90.0,0)--(90.0,50.0);
+\draw[line width=1.4pt] (91.0,0)--(91.0,10.0);
+\draw[line width=1.4pt] (92.0,0)--(92.0,20.0);
+\draw[line width=1.4pt] (94.0,0)--(94.0,20.0);
 \end{tikzpicture}
