@@ -1,15 +1,17 @@
-\begin{tikzpicture}[x=1.5000cm,y=0.0600cm,font=\sffamily\small,line cap=round]
-\draw (64.0,0)--(67.0,0);
-\draw (64.0,0)--(64.0,100.0);
+\begin{tikzpicture}[x=2.4000cm,y=0.1200cm,font=\sffamily\small,line cap=round]
+\draw (63.0,0)--(68.0,0);
+\draw (63.0,0)--(63.0,50.0);
+\draw (63,0)--++(0,-0.12cm) node[below]{\footnotesize 63};
 \draw (64,0)--++(0,-0.12cm) node[below]{\footnotesize 64};
 \draw (65,0)--++(0,-0.12cm) node[below]{\footnotesize 65};
 \draw (66,0)--++(0,-0.12cm) node[below]{\footnotesize 66};
 \draw (67,0)--++(0,-0.12cm) node[below]{\footnotesize 67};
-\draw (64.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (64.0,50)--++(-0.12cm,0) node[left]{\footnotesize 50};
-\draw (64.0,100)--++(-0.12cm,0) node[left]{\footnotesize 100};
-\node[rotate=90,align=center] at (63.04,50.0){relative abundance / %};
-\node at (65.5,-12.00){Aᵣ};
+\draw (68,0)--++(0,-0.12cm) node[below]{\footnotesize 68};
+\draw (63.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
+\draw (63.0,25)--++(-0.12cm,0) node[left]{\footnotesize 25};
+\draw (63.0,50)--++(-0.12cm,0) node[left]{\footnotesize 50};
+\node[rotate=90,align=center] at (62.4,25.0){relative intensity};
+\node at (65.5,-6.00){$m/e$};
 \draw[line width=1.35pt] (64.0,0)--(64.0,40.0);
 \draw[line width=1.35pt] (66.0,0)--(66.0,30.0);
 \draw[line width=1.35pt] (67.0,0)--(67.0,30.0);

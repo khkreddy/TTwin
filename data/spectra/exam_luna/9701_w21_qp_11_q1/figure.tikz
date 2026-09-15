@@ -1,14 +1,16 @@
-\begin{tikzpicture}[x=1.5000cm,y=0.0600cm,font=\sffamily\small,line cap=round]
-\draw (20.0,0)--(22.0,0);
-\draw (20.0,0)--(20.0,100.0);
+\begin{tikzpicture}[x=2.4000cm,y=0.0500cm,font=\sffamily\small,line cap=round]
+\draw (19.0,0)--(23.0,0);
+\draw (19.0,0)--(19.0,120.0);
+\draw (19,0)--++(0,-0.12cm) node[below]{\footnotesize 19};
 \draw (20,0)--++(0,-0.12cm) node[below]{\footnotesize 20};
 \draw (21,0)--++(0,-0.12cm) node[below]{\footnotesize 21};
 \draw (22,0)--++(0,-0.12cm) node[below]{\footnotesize 22};
-\draw (20.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (20.0,50)--++(-0.12cm,0) node[left]{\footnotesize 50};
-\draw (20.0,100)--++(-0.12cm,0) node[left]{\footnotesize 100};
-\node[rotate=90,align=center] at (19.04,50.0){percentage abundance or relative intensity};
-\node at (21.0,-12.00){m/e or m/z};
+\draw (23,0)--++(0,-0.12cm) node[below]{\footnotesize 23};
+\draw (19.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
+\draw (19.0,60)--++(-0.12cm,0) node[left]{\footnotesize 60};
+\draw (19.0,120)--++(-0.12cm,0) node[left]{\footnotesize 120};
+\node[rotate=90,align=center] at (18.4,60.0){relative intensity};
+\node at (21.0,-14.40){$m/e$};
 \draw[line width=1.35pt] (20.0,0)--(20.0,100.0);
 \node[above,font=\sffamily\scriptsize] at (20.0,100.0){100};
 \draw[line width=1.35pt] (21.0,0)--(21.0,0.3);

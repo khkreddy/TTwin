@@ -1,16 +1,17 @@
-\begin{tikzpicture}[x=1.5000cm,y=0.0932cm,font=\sffamily\small,line cap=round]
-\draw (112.0,0)--(116.0,0);
-\draw (112.0,0)--(112.0,64.39999999999999);
+\begin{tikzpicture}[x=2.4000cm,y=0.1000cm,font=\sffamily\small,line cap=round]
+\draw (111.0,0)--(116.0,0);
+\draw (111.0,0)--(111.0,60.0);
+\draw (111,0)--++(0,-0.12cm) node[below]{\footnotesize 111};
 \draw (112,0)--++(0,-0.12cm) node[below]{\footnotesize 112};
 \draw (113,0)--++(0,-0.12cm) node[below]{\footnotesize 113};
 \draw (114,0)--++(0,-0.12cm) node[below]{\footnotesize 114};
 \draw (115,0)--++(0,-0.12cm) node[below]{\footnotesize 115};
 \draw (116,0)--++(0,-0.12cm) node[below]{\footnotesize 116};
-\draw (112.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
-\draw (112.0,32)--++(-0.12cm,0) node[left]{\footnotesize 32};
-\draw (112.0,64.39999999999999)--++(-0.12cm,0) node[left]{\footnotesize 64.39999999999999};
-\node[rotate=90,align=center] at (111.04,32.199999999999996){percentage abundance};
-\node at (114.0,-7.73){m/e};
+\draw (111.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
+\draw (111.0,30)--++(-0.12cm,0) node[left]{\footnotesize 30};
+\draw (111.0,60)--++(-0.12cm,0) node[left]{\footnotesize 60};
+\node[rotate=90,align=center] at (110.4,30.0){\% abundance};
+\node at (113.5,-7.20){$m/e$};
 \draw[line width=1.35pt] (112.0,0)--(112.0,3.0);
 \node[above,font=\sffamily\scriptsize] at (112.0,3.0){3%};
 \draw[line width=1.35pt] (114.0,0)--(114.0,56.0);
