@@ -150,11 +150,29 @@
     };
   }
 
+  function ideaTitle(id) {
+    if (!id) return "";
+    const n = (S.vocab.ideas || []).find((x) => x.id === id);
+    return (n && n.title) || "";
+  }
+  function packLabel(id) {
+    const p = ((S.spec && S.spec.packs) || []).find((x) => x.id === id);
+    return (p && p.label) || "";
+  }
+  function looksLikeCode(s) {
+    const t = String(s || "").trim();
+    if (!t) return true;
+    return /^(chem|phy|bio|math):/i.test(t) ||
+      /^(cam:|IGCSE:|AS_A:)/i.test(t) ||
+      /^[A-Z]\d+(\/|$)/.test(t);
+  }
   function nodeOptions(selected) {
     return (S.vocab.ideas || []).map((n) => {
+      const title = (n.title || "").trim();
+      if (!title) return "";
       const id = n.id;
       return "<option value='" + esc(id) + "'" + (selected === id ? " selected" : "") + ">" +
-        esc(id + " — " + (n.title || "")) + "</option>";
+        esc(title) + "</option>";
     }).join("");
   }
 
@@ -218,8 +236,8 @@
       packOptions() + "</select></div>" +
       "<div><label>Big idea</label><select id='" + prefix + "-node'><option value=''>any</option>" +
       nodeOptions() + "</select></div>" +
-      "<div><label>Chapter</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
-      "<div><label>Subtopic</label><select id='" + prefix + "-sub'><option value=''>any</option></select></div>" +
+      "<div><label>Concept</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
+      "<div><label>Sub-concept</label><select id='" + prefix + "-sub'><option value=''>any</option></select></div>" +
       "</div></div>";
   }
 
@@ -227,13 +245,21 @@
     const pack = $(prefix + "-pack").value;
     const node = $(prefix + "-node").value;
     const rows = S.nav.filter((r) => r.pack === pack && (!node || TTwinRag.nodesComparable(r.node, node)));
-    const ch = unique(rows.map((r) => r.chapter_id + "||" + (r.chapter_label || "")));
+    const seen = {};
+    const ch = [];
+    rows.forEach((r) => {
+      const id = r.chapter_id;
+      const lab = (r.chapter_label || "").trim();
+      if (!id || seen[id] || !lab || looksLikeCode(lab)) return;
+      seen[id] = true;
+      ch.push({ id: id, lab: lab });
+    });
+    ch.sort((a, b) => a.lab.localeCompare(b.lab));
     const sel = $(prefix + "-ch");
     const keep = sel.value;
-    sel.innerHTML = "<option value=''>any</option>" + ch.map((x) => {
-      const [id, lab] = x.split("||");
-      return "<option value='" + esc(id) + "'>" + esc(id + " · " + lab) + "</option>";
-    }).join("");
+    sel.innerHTML = "<option value=''>any</option>" + ch.map((x) =>
+      "<option value='" + esc(x.id) + "'>" + esc(x.lab) + "</option>"
+    ).join("");
     if (keep && [...sel.options].some((o) => o.value === keep)) sel.value = keep;
     fillSubs(prefix);
   }
@@ -244,13 +270,21 @@
     const rows = S.nav.filter((r) => r.pack === pack &&
       (!node || TTwinRag.nodesComparable(r.node, node)) &&
       (!ch || r.chapter_id === ch));
-    const subs = unique(rows.map((r) => r.subtopic_id + "||" + (r.subtopic_label || "")));
+    const seen = {};
+    const subs = [];
+    rows.forEach((r) => {
+      const id = r.subtopic_id;
+      const lab = (r.subtopic_label || "").trim();
+      if (!id || seen[id] || !lab || looksLikeCode(lab)) return;
+      seen[id] = true;
+      subs.push({ id: id, lab: lab });
+    });
+    subs.sort((a, b) => a.lab.localeCompare(b.lab));
     const sel = $(prefix + "-sub");
     const keep = sel.value;
-    sel.innerHTML = "<option value=''>any</option>" + subs.map((x) => {
-      const [id, lab] = x.split("||");
-      return "<option value='" + esc(id) + "'>" + esc((lab || id)) + "</option>";
-    }).join("");
+    sel.innerHTML = "<option value=''>any</option>" + subs.map((x) =>
+      "<option value='" + esc(x.id) + "'>" + esc(x.lab) + "</option>"
+    ).join("");
     if (keep && [...sel.options].some((o) => o.value === keep)) sel.value = keep;
   }
   function selectorFromFilters(prefix) {
@@ -294,7 +328,7 @@
     $("hero").classList.add("hidden");
     const spec = S.spec || specOf(S.subject);
     $("app").innerHTML = "<p class='kicker'>Browse · " + esc((spec && spec.label) || S.subject) + "</p><h1>Five-click retrieve</h1>" +
-      "<p class='sub'>Subject, pack, and big idea. Chapter and subtopic are the Cambridge coordinates already on the tagged corpus.</p>" +
+      "<p class='sub'>Pick a subject, year group, big idea, concept, and sub-concept by name. Codes stay inside the system.</p>" +
       filtersHTML("br") + "<div id='br-out'></div>";
     const go = async () => {
       const sel = selectorFromFilters("br");
@@ -305,7 +339,7 @@
         "<div class='banner'><span class='stat'><b>" + r.receipt.n_questions + "</b> questions</span>" +
         "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges</span>" +
         "<span class='stat'>preview <b>" + items.length + "</b></span></div>" +
-        TTwinPaper.paperHTML({ title: "Question preview", subject: (S.spec && S.spec.label) || sel.subject, subtitle: [sel.subject, (sel.nodes || []).join(" ")].join(" · ") }, items) +
+        TTwinPaper.paperHTML({ title: "Question preview", subject: (S.spec && S.spec.label) || sel.subject, subtitle: [sel.subject, (sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · ")].filter(Boolean).join(" · ") }, items) +
         (r.question_uids.length > 8 ? "<p class='muted no-print'>Showing 8 of " + r.question_uids.length + ". Use Test maker for a full paper.</p>" : "");
       TTwinPaper.mount($("br-out"));
     };
@@ -338,9 +372,13 @@
         r.question_uids.slice(0, 25).map((u) => {
           const it = by[u] || {};
           return "<div class='q'><span class='uid'>" + esc(u) + "</span> " +
-            "<span class='tag'>" + esc(it.subtopic_label || it.chapter_id || "") + "</span></div>";
+            "<span class='tag'>" + esc(it.subtopic_label || it.chapter_label || "") + "</span></div>";
         }).join("") + "</div><div class='card'><h2>Hinges</h2>" +
-        r.hinge_unit_ids.map((u) => "<div class='q'><span class='uid'>" + esc(u) + "</span></div>").join("") +
+        r.hinge_unit_ids.map((u) => {
+          const h = mapUnits().find((x) => x.unit_id === u) || {};
+          const name = h.decision_hinge || h.chapter_title || h.chapter || "";
+          return name ? "<div class='q'>" + esc(name) + "</div>" : "";
+        }).join("") +
         "</div></div>" +
         "<p><button class='sec' id='pr-paper' type='button'>Send to test maker</button> " +
         "<button class='sec' id='pr-lesson' type='button'>Send to lesson planner</button></p>";
@@ -494,14 +532,17 @@
           : "") +
         "<div class='card'><h2>Map hinges</h2>" +
         (mapRows.length
-          ? mapRows.map((h) => "<div class='q'><div class='uid'>" + esc(h.unit_id) + "</div><p>" +
+          ? mapRows.map((h) => "<div class='q'><div class='uid'>" + esc(h.chapter_title || h.chapter || "") + "</div><p>" +
             esc(h.decision_hinge || "") + "</p></div>").join("")
           : "<p class='muted'>No map units in this selector cap." +
             (S.mapStatus === "syllabus_interim" ? " Physics/biology Map is the published NCERT chapter list." : "") +
             "</p>") +
         "</div>" +
         "<div class='card'><h2>Enrichment</h2>" +
-        "<p class='muted'>" + (d.n_returned || 0) + " rows · node " + esc((sel.nodes || []).join(", ")) + "</p>" +
+        "<p class='muted'>" + (d.n_returned || 0) + " rows" +
+          ((sel.nodes || []).map(ideaTitle).filter(Boolean).length
+            ? " · " + esc((sel.nodes || []).map(ideaTitle).filter(Boolean).join(", "))
+            : "") + "</p>" +
         d.rows.map((row) => "<div class='q'><span class='tag'>" + esc(row.evidence_type || "") + "</span>" +
           (row.attested ? "<span class='tag'>attested</span>" : "") +
           "<p>" + esc(row.statement || "") + "</p>" +
@@ -656,7 +697,12 @@
     if (mode) mode.classList.remove("hidden");
     if (studentBox) studentBox.checked = p.mode === "student";
     if (finish) finish.classList.toggle("hidden", p.mode !== "student" || !!p.result);
-    host.innerHTML = TTwinPaper.paperHTML(p.meta, p.items, paperOpts());
+    const opts = paperOpts();
+    host.innerHTML =
+      (opts.interactive && !opts.reveal
+        ? "<p class='notice lbs-note no-print'>Choose A, B, C or D. If a choice is not the answer, a follow-up appears on the idea behind that choice. Mix-up names are not shown.</p>"
+        : "") +
+      TTwinPaper.paperHTML(p.meta, p.items, opts);
     TTwinPaper.mount(host);
     paintScore();
   }
@@ -723,6 +769,8 @@
       art.outerHTML = html;
       const next = host.querySelector(sel);
       TTwinPaper.mount(next || host);
+      const box = host.querySelector(sel + " .lbs");
+      if (box && box.scrollIntoView) box.scrollIntoView({ behavior: "smooth", block: "nearest" });
     } else {
       paintPaper();
     }
@@ -927,7 +975,7 @@
   function renderPaper() {
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Test maker</p><h1>Assemble a question paper</h1>" +
-      "<p class='sub'>Dropdown selector or a carried prompt retrieve. Shuffle is mulberry32 on the seed. Assembly also writes an answer key: first time a question is used, AI maps it onto the subject map and stores distractor analysis by uid; later papers retrieve that analysis with no provider call. Table options stay a table (student selects a row). Learner paper has no mx.</p>" +
+      "<p class='sub'>Choose a big idea, concept, and sub-concept by name, then assemble. Take as a student to sit the paper: a wrong A–D opens a follow-up on that idea. Mix-up names stay off the learner paper.</p>" +
       filtersHTML("tm") +
       "<div class='card'><div class='row'>" +
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
@@ -940,7 +988,7 @@
       "<label class='toggle'><input id='tm-student' type='checkbox'> Take this paper as a student</label> " +
       "<button id='tm-finish' class='sec hidden' type='button'>Finish and score</button> " +
       "<span class='muted' id='tm-grade-status'></span>" +
-      "<p class='muted'>Student mode hides Modify, the answer key, and mix-up notes. Table items: select a row. Score uses stored analysis keys where present. Not a published mark scheme.</p>" +
+      "<p class='muted'>Student mode hides Modify, the answer key, and mix-up notes. Pick A–D (or a table row). A miss opens a short follow-up on that choice; the original key is not shown until that follow-up is done. Score uses extracted keys where present.</p>" +
       "<p><button class='sec' id='tm-export' type='button'>Download new analyses</button></p>" +
       "</div></div>" +
       "<div id='tm-score'></div>" +
@@ -964,7 +1012,7 @@
         meta: {
           title: $("tm-title").value,
           subject: (S.spec && S.spec.label) || sel.subject,
-          subtitle: (sel.nodes || []).join(" ") + " · " + (sel.pack || ""),
+          subtitle: [(sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · "), packLabel(sel.pack)].filter(Boolean).join(" · "),
           seed,
         },
         items,
@@ -1214,10 +1262,7 @@
           const rows = byGrade[g];
           const label = typeof g === "number" || /^\d+$/.test(String(g)) ? "Class " + g : String(g);
           return "<div class='card' style='margin:10px 0'><h2>" + esc(label) + " · " + rows.length + "</h2>" +
-            rows.map((h) => "<div class='q'><span class='uid'>" + esc(h.unit_id) + "</span> " +
-              "<b>" + esc(h.chapter_title || h.chapter) + "</b>" +
-              (h.node_id ? " <span class='tag'>" + esc(h.node_id) + "</span>" : "") +
-              "</div>").join("") +
+            rows.map((h) => "<div class='q'><b>" + esc(h.chapter_title || h.chapter) + "</b></div>").join("") +
             "</div>";
         }).join("");
       return;
@@ -1225,8 +1270,8 @@
     const chemVocab = (S.vocab.ideas || []).length ? S.vocab.ideas : S.nodes.map((n) => ({ id: "chem:" + n.id, title: n.title }));
     $("app").innerHTML = "<p class='kicker'>NCERT comprehensive map</p><h1>Hinges, mx, pedagogy</h1>" +
       "<p class='sub'>523 NCERT statements. Big idea is a layer above the hinge. Pedagogy is joined from chapter intelligence; mx are CANDIDATE (v2).</p>" +
-      "<div class='card'><div class='row'><div><label>Node</label><select id='mp-node'>" +
-      chemVocab.map((n) => "<option value='" + esc(n.id) + "'>" + esc(n.id + " — " + (n.title || "")) + "</option>").join("") +
+      "<div class='card'><div class='row'><div><label>Big idea</label><select id='mp-node'>" +
+      chemVocab.map((n) => "<option value='" + esc(n.id) + "'>" + esc(n.title || "") + "</option>").join("") +
       "</select></div><div><label>Band</label><select id='mp-band'>" +
       "<option value=''>any</option><option value='SECONDARY'>Secondary</option>" +
       "<option value='SENIOR_SECONDARY' selected>Senior secondary</option></select></div></div></div>" +
@@ -1237,8 +1282,8 @@
       const rows = units.filter((h) => TTwinRag.nodesComparable(h.node_id || ("chem:" + h.node), node) && (!band || h.grade_band === band));
       $("mp-out").innerHTML = "<p class='muted'>" + rows.length + " hinges</p>" + rows.map((h) => {
         const ped = h.pedagogy || {};
-        return "<div class='card' style='margin:10px 0'><div class='uid'>" + esc(h.unit_id) +
-          " · " + esc(h.chapter_title || h.chapter) + "</div>" +
+        return "<div class='card' style='margin:10px 0'><div class='uid'>" +
+          esc(h.chapter_title || h.chapter) + "</div>" +
           "<p><b>" + esc(h.decision_hinge || "") + "</b></p>" +
           "<p class='muted'>" + esc(typeof h.mechanism === "string" ? h.mechanism : "") + "</p>" +
           (ped.mastery_signal ? "<p><span class='tag'>mastery</span> " + esc(ped.mastery_signal) + "</p>" : "") +

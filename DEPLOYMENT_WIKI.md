@@ -246,7 +246,7 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 Construction: `tools/lbs_construct.py`. Join: `tools/join_lbs.py` (also called from `build_data.py`). Structured / open items with no MCQ key stay complete without fabricated A–D follow-ups.
 
-**Deploy check.** Census `n_lbs_complete == n_mcq_key` and `n_modify_seeds == n_mcq_key`. Student-take HTML for a follow-up does not contain `mx_type`. Teacher answer key lists solve, per-wrong follow-up, and mx type. Modify panel shows seed buttons that fill the T-MOD instruction.
+**Deploy check.** Census `n_lbs_complete == n_mcq_eligible`. Student-take: a wrong A–D opens the follow-up in place (no mx_type). Teacher answer key lists solve, per-wrong follow-up, and mx type. Modify panel shows seed buttons. Filter menus show big-idea / concept / sub-concept **names only** (no C6, B1, `cam:` codes).
 
 ---
 

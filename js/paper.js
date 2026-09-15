@@ -269,8 +269,8 @@
       extra += "<p class='lbs-prompt'>Original question: the key is <b>" + esc(orig || "—") + "</b>.</p>";
       if (lbs.solve) extra += "<p class='lbs-solve'>" + esc(lbs.solve) + "</p>";
     }
-    return "<div class='lbs'>" +
-      "<p class='lbs-prompt'>Not that option. Think about this first:</p>" +
+    return "<div class='lbs' id='lbs-" + esc(uid) + "'>" +
+      "<p class='lbs-prompt'>That choice is not the answer. Think about this first:</p>" +
       "<p class='stem'>" + chem(fu.stem || "") + "</p>" +
       "<ul class='options pick'>" + lis + "</ul>" + extra + "</div>";
   }
