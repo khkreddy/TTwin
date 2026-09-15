@@ -58,6 +58,9 @@ STAMP_STEM = (
     "What mixed two processes?",
     "A directed relation (cause/effect",
     "Over- or under-extending which cases",
+    "Which claim does the item actually require?",
+    "Which value is required?",
+    "A working that is consistent with this item gives",
 )
 
 _ROOT = Path(__file__).resolve().parents[1]
@@ -177,15 +180,41 @@ def clauses(text: str) -> list[str]:
     return parts or [t]
 
 
-def first_diff(a: str, b: str) -> tuple[str, str]:
+def all_diffs(a: str, b: str) -> list[tuple[int, str, str]]:
     ca, cb = clauses(a), clauses(b)
-    n = min(len(ca), len(cb))
+    n = max(len(ca), len(cb))
+    diffs: list[tuple[int, str, str]] = []
     for i in range(n):
-        if ca[i].lower() != cb[i].lower():
-            return ca[i], cb[i]
-    if (a or "").lower() != (b or "").lower():
-        return (a or "").strip(), (b or "").strip()
-    return (a or "").strip(), (b or "").strip()
+        x = ca[i] if i < len(ca) else ""
+        y = cb[i] if i < len(cb) else ""
+        if x.lower() != y.lower():
+            diffs.append((i, x, y))
+    if not diffs and (a or "").lower() != (b or "").lower():
+        diffs.append((0, (a or "").strip(), (b or "").strip()))
+    return diffs
+
+
+def unique_diff(item: dict, key: str, letter: str) -> tuple[str, str]:
+    """Differing clause distinctive to this wrong option, not only the first mismatch."""
+    r = option_text(item, key)
+    w = option_text(item, letter)
+    diffs = all_diffs(r, w)
+    if not diffs:
+        return (r or "").strip(), (w or "").strip()
+    others = [L for L in option_letters(item) if L not in (key, letter)]
+
+    def shared(diff: tuple[int, str, str]) -> int:
+        i, _kx, wx = diff
+        n = 0
+        for L in others:
+            for j, _ok, ow in all_diffs(r, option_text(item, L)):
+                if j == i and ow.lower() == wx.lower():
+                    n += 1
+        return n
+
+    diffs.sort(key=lambda d: (shared(d), -d[0]))
+    _i, kx, wx = diffs[0]
+    return kx, wx
 
 
 def parse_123(s: str) -> set[int]:
@@ -205,7 +234,7 @@ def parse_123(s: str) -> set[int]:
 def classify(item: dict, key: str, letter: str) -> tuple[str, str, str, str]:
     w = option_text(item, letter)
     r = option_text(item, key)
-    k_c, w_c = first_diff(r, w)
+    k_c, w_c = unique_diff(item, key, letter)
     wl, rl = w.lower(), r.lower()
     if THREE.match(w) and THREE.match(r):
         extra = parse_123(w) - parse_123(r)
@@ -233,7 +262,7 @@ def classify(item: dict, key: str, letter: str) -> tuple[str, str, str, str]:
             w,
         )
     for a, b in REV:
-        if (a in wl and b in rl) or (b in wl and a in rl):
+        if (_has_pole(a, w) and _has_pole(b, r)) or (_has_pole(b, w) and _has_pole(a, r)):
             return (
                 "relationship_reversal",
                 f"reversing the directed relation ({clip(w_c, 50)} vs {clip(k_c, 50)})",
@@ -313,54 +342,176 @@ def place(uid: str, letter: str, correct: str, distractors: list[str]) -> tuple[
     return opts, LETTERS[idx]
 
 
+def _has_pole(p: str, text: str) -> bool:
+    t = text or ""
+    if p in ("oxid", "reduc", "hot", "cold"):
+        return re.search(r"\b" + re.escape(p), t, re.I) is not None
+    return re.search(r"\b" + re.escape(p) + r"\b", t, re.I) is not None
+
+
+def _pole(k_c: str, w_c: str) -> tuple[str, str, bool] | None:
+    for a, b in REV:
+        if _has_pole(a, k_c) and _has_pole(b, w_c):
+            return a, b, True
+        if _has_pole(b, k_c) and _has_pole(a, w_c):
+            return a, b, False
+    return None
+
+
+def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
+    sl = (item.get("stem") or "").lower()
+    if any(s in sl for s in ("relative atomic", "abundance", "isotop")):
+        q = "How should the relative atomic mass be obtained from the peaks?"
+        correct = "weighted mean: Σ(mass × abundance) / Σ(abundance)"
+        distractors = [
+            "simple mean of the mass numbers, ignoring abundances",
+            "the mass number of the tallest peak only",
+            "product of the mass numbers divided by the number of peaks",
+        ]
+    elif any(s in sl for s in ("efficiency", "useful output", "electrical power")):
+        q = "Which expression is required for efficiency?"
+        correct = "useful output energy (or power) ÷ total input energy (or power)"
+        distractors = [
+            "total input ÷ useful output",
+            "useful output × total input",
+            "useful output − total input",
+        ]
+    elif "density" in sl:
+        q = "Which expression is required for density?"
+        correct = "mass ÷ volume"
+        distractors = ["volume ÷ mass", "mass × volume", "mass + volume"]
+    else:
+        q = (
+            "A student obtained a different numerical value from the working this item requires. "
+            "Which check is required?"
+        )
+        correct = "Repeat the operations the stem requires, without reversing a ratio or dropping a term"
+        distractors = [
+            "Average the four option values",
+            "Invert every quantity in the stem",
+            "Treat the first given number as the answer",
+        ]
+    opts, fu_key = place(uid, letter, correct, distractors)
+    why = f"Option {letter} ({clip(w, 40)}) is a different operation or operand, not the required working."
+    return {"stem": q, "options": opts, "key": fu_key, "why": why}
+
+
+_POLE_Q = {
+    ("hot", "cold"): (
+        "In the process this item describes, is the change faster in hotter conditions or colder conditions?",
+        "faster in hotter conditions",
+        "faster in colder conditions",
+    ),
+    ("higher", "lower"): (
+        "Under the change described, does the quantity go higher or lower?",
+        "higher",
+        "lower",
+    ),
+    ("faster", "slower"): (
+        "If the temperature of this system is raised, how do the particles move?",
+        "they move faster",
+        "they move slower",
+    ),
+    ("increase", "decrease"): (
+        "Does the quantity in this item increase or decrease under the stated change?",
+        "it increases",
+        "it decreases",
+    ),
+    ("exothermic", "endothermic"): (
+        "Does the reaction in this item give out energy or take in energy?",
+        "gives out energy (exothermic)",
+        "takes in energy (endothermic)",
+    ),
+    ("oxid", "reduc"): (
+        "Is the species in this item oxidised or reduced?",
+        "oxidised",
+        "reduced",
+    ),
+    ("anode", "cathode"): (
+        "Which electrode does the stem require?",
+        "anode",
+        "cathode",
+    ),
+    ("xylem", "phloem"): (
+        "Which tissue does the stem ask about?",
+        "xylem",
+        "phloem",
+    ),
+    ("artery", "vein"): (
+        "Which vessel does the stem require?",
+        "artery",
+        "vein",
+    ),
+}
+
+
 def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict:
     uid = str(item.get("uid") or "")
-    h = hinge(item.get("stem") or item.get("stem_lead") or "")
     r = option_text(item, key)
     w = option_text(item, letter)
-    others = [option_text(item, L) for L in option_letters(item) if L not in (key, letter)]
-    other_bit = ""
-    if others and others[0]:
-        _, other_bit = first_diff(r, others[0])
+    decoy = [
+        "this quantity is unchanged",
+        "the stem does not determine a direction",
+        "both directions at once",
+    ]
 
     if THREE.match(w) and THREE.match(r):
         extra = parse_123(w) - parse_123(r)
         missing = parse_123(r) - parse_123(w)
         n = sorted(extra or missing)[0] if (extra or missing) else 3
         need = "Yes" if n in parse_123(r) else "No"
-        stem = (
-            f"{h}\n\n"
-            f"A student chose “{clip(w, 70)}” rather than “{clip(r, 70)}”. "
-            f"Is numbered statement {n} required for the keyed answer?"
+        stem = f"Is numbered statement {n} required?"
+        opts, fu_key = place(
+            uid,
+            letter,
+            need,
+            ["Yes" if need == "No" else "No", "Only if the other statements are false", "The stem does not number statements"],
         )
-        opts, fu_key = place(uid, letter, need, ["Yes" if need == "No" else "No", "Only if the other statements are false", "The stem does not number statements"])
-        why = f"Statement {n} is {'required' if need == 'Yes' else 'not required'}. That is the difference between {key} and {letter}."
+        why = f"Statement {n} is {'required' if need == 'Yes' else 'not required'}; that is how {letter} differs from {key}."
         return {"stem": stem, "options": opts, "key": fu_key, "why": why}
 
     if looks_numeric(w) and looks_numeric(r) and w != r:
-        stem = (
-            f"{h}\n\n"
-            f"A working that is consistent with this item gives {clip(r, 40)}. "
-            f"A student instead obtained {clip(w, 40)}. Which value is required?"
-        )
-        opts, fu_key = place(uid, letter, clip(r, 40), [clip(w, 40), clip(others[0], 40) if others else "0", "the stem gives no numerical value"])
-        why = f"The required value is {clip(r, 40)}. {clip(w, 40)} is the result of a different operation or operand."
-        return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+        return _numeric_method(item, uid, letter, w, r)
 
-    stem = (
-        f"{h}\n\n"
-        f"A student used this claim: {clip(w_c, 90)}\n"
-        f"Which claim does the item actually require?"
-    )
-    correct = clip(k_c, 90) or clip(r, 90)
-    distractors = [
-        clip(w_c, 90) or clip(w, 90),
-        clip(other_bit, 90) if other_bit else "a different unrelated quantity",
-        "the stem does not decide between these claims",
-    ]
+    pole = _pole(k_c, w_c)
+    if pole:
+        a, b, key_has_a = pole
+        spec = _POLE_Q.get((a, b)) or _POLE_Q.get((b, a))
+        if spec:
+            q, ans_a, ans_b = spec
+            correct = ans_a if key_has_a else ans_b
+            wrong_p = ans_b if key_has_a else ans_a
+            opts, fu_key = place(uid, letter, correct, [wrong_p, decoy[0], decoy[1]])
+            why = f"Option {letter} used “{clip(w_c, 60)}”; the item needs “{clip(k_c, 60)}”."
+            return {"stem": q, "options": opts, "key": fu_key, "why": why}
+
+    if mx == "term_substitution":
+        q = "The stem names a specific species or process. Which rule is required?"
+        correct = "Match the named species or process; do not swap a sibling name"
+        distractors = [
+            "Swap in a neighbouring name from the option list",
+            "Ignore names and pick the longest option",
+            "Any sibling name is acceptable",
+        ]
+    elif mx == "surface_feature_capture":
+        q = "A word or symbol in the stem is easy to spot. Which rule is required?"
+        correct = "Use the operative criterion in the stem, not a salient surface word"
+        distractors = [
+            "Match the most visible word or colour and stop",
+            "Ignore the stem once one familiar word appears",
+            "Surface features override the stated criterion",
+        ]
+    else:
+        q = "A student answered as if a different condition held. Which check is required?"
+        correct = "Keep the stem's stated conditions; do not reverse or drop them"
+        distractors = [
+            "Reverse the stated direction",
+            "Drop the stated condition and guess",
+            "Ignore the stem and pick the longest option",
+        ]
     opts, fu_key = place(uid, letter, correct, distractors)
-    why = f"The item requires “{correct}”. “{clip(w_c, 80)}” is the claim in option {letter}."
-    return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+    why = f"Option {letter} used “{clip(w_c, 60)}”; the item needs “{clip(k_c, 60)}”."
+    return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
 
 def solve_line(item: dict, key: str) -> str:
@@ -370,7 +521,7 @@ def solve_line(item: dict, key: str) -> str:
     for L in option_letters(item):
         if L == key:
             continue
-        k_c, w_c = first_diff(r, option_text(item, L))
+        k_c, w_c = unique_diff(item, key, L)
         if k_c and w_c and k_c.lower() != w_c.lower():
             bits.append(f"{L} would need “{clip(w_c, 70)}”, but the item needs “{clip(k_c, 70)}”.")
         else:

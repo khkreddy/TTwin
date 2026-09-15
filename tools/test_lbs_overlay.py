@@ -19,12 +19,16 @@ from lbs_construct import (  # noqa: E402
 )
 
 FIXTURE = Path(__file__).resolve().parent / "fixtures" / "lbs_item.json"
+NUMERIC = Path(__file__).resolve().parent / "fixtures" / "lbs_numeric.json"
 STAMP_SOLVE = "The keyed choice is"
 STAMP_STEMS = (
     "What did they drop?",
     "Which description of that error",
     "What kind of boundary error",
     "Which description fits?",
+    "Which claim does the item actually require?",
+    "Which value is required?",
+    "A working that is consistent with this item gives",
 )
 
 
@@ -43,13 +47,15 @@ def _assert_quality(lbs: dict, item: dict, packed: bool = False) -> list[str]:
         assert fu.get("key") in LETTERS
         assert "mx_type" not in stem
         fu_keys.append(fu["key"])
-        # follow-up must mention a fragment of the keyed or wrong option
-        ktxt = str((item.get("options") or {}).get(item["assessment"]["mcq_key"]) or "")
-        wtxt = str((item.get("options") or {}).get(L) or "")
-        joined = stem + " " + blob
-        if not packed:
-            assert (ktxt[:8] in joined) or (wtxt[:8] in joined) or "required" in joined.lower(), joined[:200]
+        key_txt = str((item.get("options") or {}).get(item["assessment"]["mcq_key"]) or "").strip()
+        if looks_num(key_txt):
+            assert key_txt not in stem, (L, "key leaked in follow-up stem", stem)
+            assert key_txt not in blob, (L, "key leaked in follow-up options", blob)
     return fu_keys
+
+
+def looks_num(s: str) -> bool:
+    return bool(s) and any(ch.isdigit() for ch in s) and len(s) <= 24
 
 
 def test_join_fixture() -> dict:
@@ -118,6 +124,29 @@ def test_replaces_stamps() -> None:
     lbs = item["assessment"]["learn_by_solve"]
     assert not is_stamp_lbs(lbs)
     _assert_quality(lbs, item)
+
+
+def test_numeric_no_key_leak() -> None:
+    item = json.loads(NUMERIC.read_text(encoding="utf-8"))
+    lbs = construct_lbs(item)
+    assert lbs
+    key_txt = item["options"][item["assessment"]["mcq_key"]]
+    for L, row in lbs["wrong"].items():
+        fu = row["followup"]
+        blob = fu["stem"] + " " + " ".join((fu.get("options") or {}).values())
+        assert key_txt not in fu["stem"], fu["stem"]
+        assert key_txt not in blob, blob
+        assert "Which value is required" not in fu["stem"]
+        assert "efficiency" in fu["stem"].lower() or "expression" in fu["stem"].lower() or "÷" in blob or "useful" in blob.lower()
+
+
+def test_distinct_wrong_letter_followups() -> None:
+    item = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    lbs = construct_lbs(item)
+    stems = {L: lbs["wrong"][L]["followup"]["stem"] for L in lbs["wrong"]}
+    assert stems["A"] != stems["B"], stems
+    assert "hotter" in stems["A"].lower() or "colder" in stems["A"].lower() or "temperature" in stems["A"].lower()
+    assert "particle" in stems["B"].lower() or "move" in stems["B"].lower()
 
 
 def test_followup_keys_not_always_a() -> None:
@@ -212,6 +241,8 @@ if __name__ == "__main__":
     html_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("/tmp")
     html_dir.mkdir(parents=True, exist_ok=True)
     test_replaces_stamps()
+    test_numeric_no_key_leak()
+    test_distinct_wrong_letter_followups()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
     result = test_join_fixture()
