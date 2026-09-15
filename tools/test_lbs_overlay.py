@@ -39,6 +39,12 @@ STAMP_STEMS = (
     "This option claims",
     "Is that true for the situation in the stem?",
     "match this requirement:",
+    "fit this requirement",
+    "correctly answer this",
+    "A working produced",
+    "Which combination of the stem quantities",
+    "is exactly what is required",
+    "does not meet that requirement",
 )
 
 
@@ -53,6 +59,8 @@ def _assert_quality(lbs: dict, item: dict, packed: bool = False) -> list[str]:
             assert p not in stem, (L, p, stem[:120])
         blob = " ".join((fu.get("options") or {}).values())
         assert "A stated condition that still applies" not in blob
+        assert "is exactly what is required" not in blob
+        assert "does not meet that requirement" not in blob
         assert "A directed relation (cause/effect" not in blob
         assert fu.get("key") in LETTERS
         assert "mx_type" not in stem
@@ -184,8 +192,12 @@ def test_xylem_unlock_not_claims_template() -> None:
         assert "This option claims" not in stem, stem
         assert "Is that true for the situation" not in stem, stem
         assert "carried by the xylem" in stem.lower() or "carried by" in stem.lower(), stem
+        assert "fit this requirement" not in stem
         opt = item["options"][L]
         assert opt.lower() in stem.lower() or opt[:5].lower() in stem.lower(), (L, stem)
+        blob = " ".join(row["followup"]["options"].values())
+        assert "does not meet that requirement" not in blob
+        assert "is exactly what is required" not in blob
 
 
 def test_npk_row_is_relevant() -> None:
@@ -210,7 +222,120 @@ def test_npk_row_is_relevant() -> None:
     for L in ("A", "B", "D"):
         stem = lbs["wrong"][L]["followup"]["stem"]
         assert "This option claims" not in stem
+        assert "fit this requirement" not in stem
         assert "fertiliser" in stem.lower() or "fertilizer" in stem.lower()
+        blob = " ".join(lbs["wrong"][L]["followup"]["options"].values())
+        assert "does not meet that requirement" not in blob
+
+
+def test_bony_fish_tick_unlock() -> None:
+    item = {
+        "uid": "fixture:bio:fish:q2",
+        "stem": "Which characteristics do bony fish have?",
+        "options": {
+            "A": "backbone ✓; scales ✓; hair ✗",
+            "B": "backbone ✓; scales ✗; hair ✓",
+            "C": "backbone ✗; scales ✗; hair ✓",
+            "D": "backbone ✗; scales ✓; hair ✗",
+        },
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "C",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs and lbs_relevant(item, lbs, "C")
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        blob = " ".join(row["followup"]["options"].values())
+        assert "fit this requirement" not in stem, stem
+        assert "does not meet that requirement" not in blob
+        assert "backbone" in stem.lower() or "scales" in stem.lower() or "hair" in stem.lower()
+        assert "✓" in stem or "✗" in stem or "mark" in stem.lower()
+
+
+def test_rank_not_numeric_wrapper() -> None:
+    item = {
+        "uid": "fixture:bio:nerve:q22",
+        "stem": (
+            "When the nervous system responds to a stimulus there are several stages.\n"
+            "1 The central nervous system processes the information.\n"
+            "2 The receptors detect the stimulus.\n"
+            "3 A nerve impulse is sent to the central nervous system.\n"
+            "4 A response is produced.\n"
+            "5 A nerve impulse is sent to the muscles.\n"
+            "What is the correct order of the stages?"
+        ),
+        "options": {
+            "A": "2, 3, 1, 5, 4",
+            "B": "2, 3, 5, 1, 4",
+            "C": "3, 2, 1, 5, 4",
+            "D": "3, 2, 5, 1, 4",
+        },
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "A",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs and lbs_relevant(item, lbs, "A")
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        blob = " ".join(row["followup"]["options"].values())
+        assert "A working produced" not in stem, stem
+        assert "Which combination of the stem quantities" not in stem, stem
+        assert "stage" in stem.lower() or "position" in stem.lower(), stem
+        assert "Use the definition of that quantity" not in blob
+
+
+def test_wrapper_stems_fail_relevant() -> None:
+    item = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    item["assessment"]["learn_by_solve"] = {
+        "solve": "Required: C — colour spreads faster in hot water.",
+        "wrong": {
+            "A": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Does “cold water” fit this requirement: row is correct?",
+                    "options": {
+                        "A": "No — “cold water” does not meet that requirement",
+                        "B": "Yes — “cold water” is exactly what is required",
+                        "C": "y",
+                        "D": "w",
+                    },
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "B": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "A working produced 2, 3, 5, 1, 4. Which combination of the stem quantities matches the definition of the quantity being asked?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "D": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Does “hot” correctly answer this: Which row is correct?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+        },
+    }
+    assert is_stamp_lbs(item["assessment"]["learn_by_solve"])
+    assert not lbs_relevant(item)
 
 
 def test_followup_keys_not_always_a() -> None:
@@ -561,6 +686,9 @@ if __name__ == "__main__":
     test_distinct_wrong_letter_followups()
     test_xylem_unlock_not_claims_template()
     test_npk_row_is_relevant()
+    test_bony_fish_tick_unlock()
+    test_rank_not_numeric_wrapper()
+    test_wrapper_stems_fail_relevant()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
     test_olympiad_bracket_options()

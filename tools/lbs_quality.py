@@ -44,6 +44,10 @@ STAMP_STEM = (
     "Does that choice satisfy:",
     "A student chose",
     "match this requirement:",
+    "fit this requirement",
+    "correctly answer this",
+    "A working produced",
+    "Which combination of the stem quantities",
 )
 META_OPTION = (
     "A stated condition that still applies",
@@ -59,6 +63,14 @@ META_OPTION = (
     "Surface features override the stated criterion",
     "the stem does not decide between these claims",
     "an unrelated claim not used in this item",
+    "is exactly what is required",
+    "does not meet that requirement",
+    "would be correct only if the stem asked a different question",
+    "and every other option are equally valid",
+    "Use the definition of that quantity",
+    "Average the four listed option values",
+    "Invert every quantity in the stem",
+    "as given in the stem and stop",
 )
 
 

@@ -124,12 +124,53 @@ def looks_numeric(s: str) -> bool:
     t = (s or "").strip()
     if not t or not any(ch.isdigit() for ch in t):
         return False
+    # ranking / order lists ("2, 3, 5, 1, 4") are not calculated values
+    if re.fullmatch(r"\d+(?:\s*,\s*\d+){2,}", t):
+        return False
+    if t.count(",") >= 2 and not re.search(r"\d\.\d", t):
+        return False
     if NUMISH.match(t):
         return True
-    # scientific / percent / unit-stripped numbers only — not formulae or genotypes
     if re.fullmatch(r"[\d.,+\-×xX/^eE\s%μµukmMGiga°−–]+", t):
         return True
     return False
+
+
+def parse_ticks(s: str) -> list[tuple[str, str]]:
+    rows = []
+    for p in re.split(r"\s*;\s*", s or ""):
+        p = p.strip()
+        if not p:
+            continue
+        m = re.match(r"^(.*?)(?:\s+)([✓✔✗✘]|yes|no|true|false)\s*$", p, re.I)
+        if m:
+            rows.append((m.group(1).strip(), m.group(2)))
+    return rows
+
+
+def parse_rank(s: str) -> list[int] | None:
+    t = (s or "").strip()
+    if not re.fullmatch(r"\d+(?:\s*,\s*\d+){2,}", t):
+        return None
+    return [int(x) for x in re.findall(r"\d+", t)]
+
+
+def _stem_stages(stem: str) -> dict[int, str]:
+    found: dict[int, str] = {}
+    for m in re.finditer(r"(?m)^\s*(\d+)\s+(.+?)\s*$", stem or ""):
+        found[int(m.group(1))] = re.sub(r"\s+", " ", m.group(2)).strip()
+    if len(found) >= 3:
+        return found
+    for m in re.finditer(
+        r"(\d+)\s+([A-Z][^0-9]{6,90}?)(?=\s+\d+\s+[A-Z]|$)",
+        re.sub(r"\s+", " ", stem or ""),
+    ):
+        found[int(m.group(1))] = m.group(2).strip().rstrip(".")
+    return found
+
+
+def _tick_yes(mark: str) -> bool:
+    return bool(re.match(r"^(?:[✓✔]|yes|true)$", mark or "", re.I))
 
 
 def hinge(stem: str) -> str:
@@ -594,7 +635,7 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
     sl = (item.get("stem") or "").lower()
     wv = clip(w, 28)
     if any(s in sl for s in ("relative atomic", "abundance", "isotop")):
-        q = f"A working produced {wv}. How should relative atomic mass be obtained from the peaks?"
+        q = f"The value {wv} is not the relative atomic mass. How should relative atomic mass be obtained from the peaks?"
         correct = "weighted mean: Σ(mass × abundance) / Σ(abundance)"
         distractors = [
             "simple mean of the mass numbers, ignoring abundances",
@@ -614,19 +655,16 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
         correct = "mass ÷ volume"
         distractors = ["volume ÷ mass", "mass × volume", "mass + volume"]
     elif any(s in sl for s in ("magnification", "actual size", "image size")):
-        q = f"A working produced {wv}. Magnification is which ratio?"
+        q = f"The value {wv} is not the magnification. Magnification is which ratio?"
         correct = "image size ÷ actual size"
         distractors = ["actual size ÷ image size", "image size × actual size", "image size − actual size"]
     else:
-        q = (
-            f"A working produced {wv}. Which combination of the stem quantities "
-            f"matches the definition of the quantity being asked?"
-        )
-        correct = "Use the definition of that quantity; do not drop a factor or invert the ratio"
+        q = f"The value {wv} is a distractor. Which operation on the stem data does this item actually ask for?"
+        correct = "the product, quotient, difference or weighted mean named in the stem"
         distractors = [
-            f"Treat {wv} as given in the stem and stop",
-            "Average the four listed option values",
-            "Invert every quantity in the stem",
+            f"report {wv} because it is listed among the options",
+            "add every number printed in the stem",
+            "take the first number in the stem as the answer",
         ]
     opts, fu_key = place(uid, letter, correct, distractors)
     why = f"Option {letter} ({clip(w, 40)}) is a different operation or operand, not the required working."
@@ -682,8 +720,8 @@ _POLE_Q = {
 }
 
 
-def _apply_stem_to_option(hinge_q: str, w_show: str) -> str:
-    """Turn the stem's criterion into an unlocking question about this option."""
+def _unlock_q(hinge_q: str, w_show: str) -> str:
+    """Unlocking question about this option's content — never a wrapper restatement."""
     hm = re.sub(r"\s+", " ", hinge_q or "").strip()
     hm = re.sub(r"^(?:Which of the following|Which one)\s+", "Which ", hm, flags=re.I)
     m = re.match(r"What is carried by (.+)\?\s*$", hm, re.I)
@@ -701,10 +739,12 @@ def _apply_stem_to_option(hinge_q: str, w_show: str) -> str:
     m = re.match(r"What (?:is|are) (.+)\?\s*$", hm, re.I)
     if m:
         return f"Is “{w_show}” {clip(m.group(1), 120)}?"
+    m = re.match(r"Which (.+?) would (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"Would “{w_show}” {m.group(2)}?"
     m = re.match(r"Which (.+)\?\s*$", hm, re.I)
     if m:
-        body = m.group(1).strip()
-        body = re.sub(r"^(?:of the following\s+)", "", body, flags=re.I)
+        body = re.sub(r"^(?:of the following\s+)", "", m.group(1).strip(), flags=re.I)
         agree = {
             "contains": "contain",
             "contain": "contain",
@@ -725,11 +765,103 @@ def _apply_stem_to_option(hinge_q: str, w_show: str) -> str:
             vm = re.match(rf"^(.+?)\s+({verb})\s+(.+)$", body, re.I)
             if vm:
                 return f"Does “{w_show}” {inf} {clip(vm.group(3), 110)}?"
-        return f"Does “{w_show}” fit this requirement: {clip(body, 120)}?"
+        dm = re.search(r"\bdo (.+?) have\b", body, re.I)
+        if dm:
+            return f"Does “{w_show}” describe what {dm.group(1)} have?"
+        if re.match(r"statement is a\s+", body, re.I):
+            return f"Is “{w_show}” {clip(re.sub(r'^statement is a\s+', '', body, flags=re.I), 110)}?"
+        if re.match(r"change explains\s+", body, re.I):
+            rest = re.sub(r"^change explains\s+", "", body, flags=re.I)
+            return f"Is “{w_show}” a change that explains {clip(rest, 100)}?"
+        return f"Is “{w_show}” {clip(body, 110)}?"
     m = re.match(r"(How|Why|Where|When)\b\s*(.+)\?\s*$", hm, re.I)
     if m:
         return f"For “{w_show}”: {m.group(1).lower()} {clip(m.group(2), 110)}?"
-    return f"Does “{w_show}” correctly answer this: {clip(hm, 120)}?"
+    return f"Is “{w_show}” what this question is asking for?"
+
+
+def _content_choices(w_show: str, pred: str) -> tuple[str, list[str]]:
+    p = clip(pred, 70) if pred else "what the stem asks for"
+    correct = f"No — “{clip(w_show, 48)}” is not {p}"
+    distractors = [
+        f"Yes — “{clip(w_show, 48)}” is {p}",
+        f"“{clip(w_show, 40)}” is a different quantity or structure in the same item",
+        f"“{clip(w_show, 40)}” would apply to a different process or organism",
+    ]
+    return correct, distractors
+
+
+def _predicate(hinge_q: str) -> str:
+    hm = re.sub(r"\s+", " ", hinge_q or "").strip()
+    m = re.match(r"What is carried by (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"carried by {m.group(1)}"
+    m = re.match(r"What is the reason (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"the reason {m.group(1)}"
+    m = re.match(r"What is represented by (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"what {m.group(1)} represents"
+    m = re.match(r"What (?:is|are) (.+)\?\s*$", hm, re.I)
+    if m:
+        return clip(m.group(1), 80)
+    m = re.match(r"Which (.+)\?\s*$", hm, re.I)
+    if m:
+        return clip(m.group(1), 80)
+    return "what the stem asks for"
+
+
+def _tick_followup(uid: str, letter: str, hinge_q: str, w: str, r: str, wt: list, kt: list) -> dict:
+    pair = None
+    n = min(len(wt), len(kt))
+    for i in range(n):
+        if wt[i][0].lower() == kt[i][0].lower() and wt[i][1] != kt[i][1]:
+            pair = (wt[i][0], wt[i][1], kt[i][1])
+            break
+        if wt[i][0].lower() != kt[i][0].lower():
+            pair = (wt[i][0], wt[i][1], kt[i][1])
+            break
+    if pair is None and wt:
+        pair = (wt[0][0], wt[0][1], kt[0][1] if kt else wt[0][1])
+    name, wmark, kmark = pair
+    q = _letter_stem(
+        letter,
+        f"This row is “{clip(w, 70)}”. Should {name} be marked {kmark} or {wmark}?",
+    )
+    correct = f"{name} should be {kmark}"
+    distractors = [
+        f"{name} should be {wmark}",
+        f"{name} is not used in this item",
+        f"both {kmark} and {wmark} at once",
+    ]
+    opts, fu_key = place(uid, letter, correct, distractors)
+    why = f"Option {letter} marks {name} as {wmark}; the keyed row marks it as {kmark}."
+    return {"stem": q, "options": opts, "key": fu_key, "why": why}
+
+
+def _rank_followup(uid: str, letter: str, stem: str, w: str, r: str, wr: list[int], kr: list[int]) -> dict:
+    i = 0
+    for j, (a, b) in enumerate(zip(wr, kr)):
+        if a != b:
+            i = j
+            break
+    stages = _stem_stages(stem)
+    w_n, r_n = wr[i], kr[i]
+    w_name = stages.get(w_n, f"stage {w_n}")
+    r_name = stages.get(r_n, f"stage {r_n}")
+    q = _letter_stem(
+        letter,
+        f"This order is {w}. At position {i + 1} it puts stage {w_n} (“{clip(w_name, 40)}”). Which stage belongs there?",
+    )
+    correct = f"stage {r_n}: {clip(r_name, 55)}"
+    distractors = [
+        f"stage {w_n}: {clip(w_name, 55)}",
+        f"stage {wr[0]}: {clip(stages.get(wr[0], f'stage {wr[0]}'), 45)}",
+        "those two stages happen at the same time",
+    ]
+    opts, fu_key = place(uid, letter, correct, distractors)
+    why = f"Option {letter} swaps stage {w_n} into position {i + 1}; the keyed order has stage {r_n} there."
+    return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
 
 def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict:
@@ -737,9 +869,9 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
     r = option_text(item, key)
     w = option_text(item, letter)
     decoy = [
-        "this quantity is unchanged",
-        "the stem does not determine a direction",
-        "both directions at once",
+        "the quantity does not change under these conditions",
+        "both directions happen at the same time",
+        "no directed change is described",
     ]
     figure = bool(item.get("options_are_figure") and (item.get("figure_src") or item.get("tikz")))
 
@@ -757,6 +889,15 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
         )
         why = f"Statement {n} is {'required' if need == 'Yes' else 'not required'}; that is how {letter} differs from {key}."
         return {"stem": stem, "options": opts, "key": fu_key, "why": why}
+
+    wt, rt = parse_ticks(w), parse_ticks(r)
+    if len(wt) >= 2 and len(rt) >= 2:
+        h = hinge(item.get("stem") or item.get("stem_lead") or "")
+        return _tick_followup(uid, letter, h, w, r, wt, rt)
+
+    wr, rr = parse_rank(w), parse_rank(r)
+    if wr and rr and wr != rr:
+        return _rank_followup(uid, letter, item.get("stem") or "", w, r, wr, rr)
 
     if looks_numeric(w) and looks_numeric(r) and w != r:
         return _numeric_method(item, uid, letter, w, r)
@@ -796,13 +937,8 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
 
     w_show = clip(w or w_c or f"option {letter}", 90)
     h = hinge(item.get("stem") or item.get("stem_lead") or "")
-    q = _letter_stem(letter, _apply_stem_to_option(h, w_show))
-    correct = f"No — “{clip(w_show, 55)}” does not meet that requirement"
-    distractors = [
-        f"Yes — “{clip(w_show, 55)}” is exactly what is required",
-        f"“{clip(w_show, 45)}” would be correct only if the stem asked a different question",
-        f"“{clip(w_show, 45)}” and every other option are equally valid",
-    ]
+    q = _letter_stem(letter, _unlock_q(h, w_show))
+    correct, distractors = _content_choices(w_show, _predicate(h))
     opts, fu_key = place(uid, letter, correct, distractors)
     why = f"Option {letter} used “{clip(w_c or w, 60)}”; the item needs “{clip(k_c or r, 60)}”."
     return {"stem": q, "options": opts, "key": fu_key, "why": why}
