@@ -165,6 +165,25 @@ def parse_ticks(s: str) -> list[tuple[str, str]]:
     return rows
 
 
+def parse_slash_cells(s: str) -> list[tuple[str, str]]:
+    """Word-slash rows such as decreased / increased (not unicode ticks, not formulae)."""
+    t = (s or "").strip()
+    if not t or "✓" in t or "✗" in t or "✔" in t or "✘" in t:
+        return []
+    parts = [p.strip() for p in re.split(r"\s*/\s*", t) if p.strip()]
+    if len(parts) < 2 or len(parts) > 4:
+        return []
+    if any("(" in p or "=" in p or len(p) > 32 or p.count(" ") > 4 for p in parts):
+        return []
+    labs = (
+        "the first listed feature",
+        "the second listed feature",
+        "the third listed feature",
+        "the fourth listed feature",
+    )
+    return [(labs[i], parts[i]) for i in range(len(parts))]
+
+
 def parse_rank(s: str) -> list[int] | None:
     t = (s or "").strip()
     if not re.fullmatch(r"\d+(?:\s*,\s*\d+){2,}", t):
@@ -324,9 +343,9 @@ def all_diffs(a: str, b: str) -> list[tuple[int, str, str]]:
     for i in range(n):
         x = ca[i] if i < len(ca) else ""
         y = cb[i] if i < len(cb) else ""
-        if x.lower() != y.lower():
+        if x.strip() and y.strip() and x != y:
             diffs.append((i, x, y))
-    if not diffs and (a or "").lower() != (b or "").lower():
+    if not diffs and (a or "").strip() != (b or "").strip():
         diffs.append((0, (a or "").strip(), (b or "").strip()))
     return diffs
 
@@ -491,7 +510,7 @@ def _has_pole(p: str, text: str) -> bool:
     t = text or ""
     if p in ("oxid", "reduc", "hot", "cold"):
         return re.search(r"\b" + re.escape(p), t, re.I) is not None
-    return re.search(r"\b" + re.escape(p) + r"\b", t, re.I) is not None
+    return re.search(r"\b" + re.escape(p) + r"(?:s|d|ed|ing)?\b", t, re.I) is not None
 
 
 def _pole(k_c: str, w_c: str) -> tuple[str, str, bool] | None:
@@ -681,7 +700,7 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
         distractors = [
             f"{wv} is the required count",
             f"{wv} is the sum of the given group sizes",
-            "the required count is the first number in the stem",
+            "the required count is the first printed group size",
         ]
     elif any(s in sl for s in ("probability", "random", "chance")):
         q = f"Is {wv} the required probability, or a count that was not divided by the sample space?"
@@ -689,22 +708,22 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
         distractors = [
             f"{wv} is already the required probability",
             "probability = total outcomes ÷ favourable outcomes",
-            "probability is the first integer in the stem",
+            "probability is the first integer among the given numbers",
         ]
     elif any(s in sl for s in ("mole", "avogadro", "mr ", "molar")):
         q = f"Is {wv} the required amount-of-substance result, or a missed factor of Mr or moles?"
-        correct = "use mass ÷ Mr (or moles × Mr) as the stem requires"
+        correct = "use mass ÷ Mr (or moles × Mr) as that quantity requires"
         distractors = [
             f"{wv} is the required amount-of-substance result",
             "report the mass as the number of moles",
             "ignore Mr and divide the two masses",
         ]
     else:
-        q = f"Does the working this item requires actually give {wv}?"
+        q = f"Does the required working actually give {wv}?"
         correct = f"No — {wv} comes from dropping, doubling or inverting a required term"
         distractors = [
             f"Yes — {wv} is the required value",
-            f"{wv} is the sum of every number in the stem",
+            f"{wv} is the sum of every given number",
             f"{wv} is a unit, not a calculated result",
         ]
     opts, fu_key = place(uid, letter, correct, distractors)
@@ -714,7 +733,7 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
 
 _POLE_Q = {
     ("hot", "cold"): (
-        "In the process this item describes, is the change faster in hotter conditions or colder conditions?",
+        "Is the change faster in hotter conditions or colder conditions?",
         "faster in hotter conditions",
         "faster in colder conditions",
     ),
@@ -729,7 +748,7 @@ _POLE_Q = {
         "they move slower",
     ),
     ("increase", "decrease"): (
-        "Does the quantity in this item increase or decrease under the stated change?",
+        "Does that quantity increase or decrease under the stated change?",
         "it increases",
         "it decreases",
     ),
@@ -744,17 +763,17 @@ _POLE_Q = {
         "reduced",
     ),
     ("anode", "cathode"): (
-        "Which electrode does the stem require?",
+        "Which electrode is required?",
         "anode",
         "cathode",
     ),
     ("xylem", "phloem"): (
-        "Which tissue does the stem ask about?",
+        "Which tissue is required?",
         "xylem",
         "phloem",
     ),
     ("artery", "vein"): (
-        "Which vessel does the stem require?",
+        "Which vessel is required?",
         "artery",
         "vein",
     ),
@@ -824,7 +843,7 @@ def _unlock_q(hinge_q: str, w_show: str) -> str:
     m = re.match(r"(How|Why|Where|When)\b\s*(.+)\?\s*$", hm, re.I)
     if m:
         return f"For “{w_show}”: {m.group(1).lower()} {clip(m.group(2), 110)}?"
-    return f"What is true of “{w_show}” in the situation the stem describes?"
+    return None
 
 
 def _content_choices(w_show: str, pred: str, k_c: str = "", w_c: str = "") -> tuple[str, list[str]]:
@@ -842,16 +861,10 @@ def _content_choices(w_show: str, pred: str, k_c: str = "", w_c: str = "") -> tu
         distractors = [
             f"That part should be “{clip(w_c, 55)}”",
             "both descriptions at once",
-            "this part is not determined by the stem",
+            "neither description",
         ]
         return correct, distractors
-    correct = f"“{clip(w_show, 50)}” does not hold for the situation described"
-    distractors = [
-        f"“{clip(w_show, 50)}” fully holds for the situation described",
-        f"“{clip(w_show, 40)}” is a unit conversion of the keyed value",
-        f"“{clip(w_show, 40)}” is the same as every other option",
-    ]
-    return correct, distractors
+    return "", []
 
 
 def _predicate(hinge_q: str) -> str:
@@ -933,7 +946,7 @@ def _rank_followup(uid: str, letter: str, stem: str, w: str, r: str, wr: list[in
     return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
 
-def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict:
+def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict | None:
     uid = str(item.get("uid") or "")
     r = option_text(item, key)
     w = option_text(item, letter)
@@ -954,7 +967,7 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
             uid,
             letter,
             need,
-            ["Yes" if need == "No" else "No", "Only if the other statements are false", "The stem does not number statements"],
+            ["Yes" if need == "No" else "No", "Only if the other statements are false", "Statements are not numbered here"],
         )
         why = f"Statement {n} is {'required' if need == 'Yes' else 'not required'}; that is how {letter} differs from {key}."
         return {"stem": stem, "options": opts, "key": fu_key, "why": why}
@@ -963,6 +976,11 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
     if len(wt) >= 2 and len(rt) >= 2:
         h = hinge(item.get("stem") or item.get("stem_lead") or "")
         return _tick_followup(uid, letter, h, w, r, wt, rt)
+
+    ws, rs = parse_slash_cells(w), parse_slash_cells(r)
+    if len(ws) >= 2 and len(rs) >= 2:
+        h = hinge(item.get("stem") or item.get("stem_lead") or "")
+        return _tick_followup(uid, letter, h, w, r, ws, rs)
 
     wr, rr = parse_rank(w), parse_rank(r)
     if wr and rr and wr != rr:
@@ -994,7 +1012,7 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
             f"Look at diagram {letter} only. {clip(h, 140)} "
             f"Which required feature is missing or extra on that diagram?"
         )
-        correct = "The diagram does not show every feature the stem requires"
+        correct = "The diagram does not show every required feature"
         distractors = [
             "The diagram shows every required feature",
             "Letter of the diagram is enough; features do not matter",
@@ -1006,10 +1024,54 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
 
     w_show = clip(w or w_c or f"option {letter}", 90)
     h = hinge(item.get("stem") or item.get("stem_lead") or "")
-    q = _letter_stem(letter, _unlock_q(h, w_show))
-    correct, distractors = _content_choices(w_show, _predicate(h), k_c, w_c)
+    uq = _unlock_q(h, w_show)
+    pred = _predicate(h)
+    if uq and pred:
+        q = _letter_stem(letter, uq)
+        correct, distractors = _content_choices(w_show, pred, k_c, w_c)
+        if correct and distractors:
+            opts, fu_key = place(uid, letter, correct, distractors)
+            why = f"Option {letter} used “{clip(w_c or w, 60)}”; the item needs “{clip(k_c or r, 60)}”."
+            return {"stem": q, "options": opts, "key": fu_key, "why": why}
+    if w_c and k_c and w_c.strip() != k_c.strip():
+        q = _letter_stem(
+            letter,
+            f"This option is “{clip(w, 70)}”. Should the part “{clip(w_c, 50)}” be “{clip(k_c, 50)}” or “{clip(w_c, 50)}”?",
+        )
+        correct = clip(k_c, 70)
+        distractors = [
+            clip(w_c, 70),
+            "both of those descriptions at once",
+            "neither description",
+        ]
+        opts, fu_key = place(uid, letter, correct, distractors)
+        why = f"Option {letter} used “{clip(w_c, 60)}”; the item needs “{clip(k_c, 60)}”."
+        return {"stem": q, "options": opts, "key": fu_key, "why": why}
+    # Duplicate OCR option text vs the keyed letter: still name this choice.
+    contrast = (r or "").strip()
+    if contrast == (w or "").strip():
+        contrast = next(
+            (
+                option_text(item, X).strip()
+                for X in LETTERS
+                if option_text(item, X).strip() and option_text(item, X).strip() != (w or "").strip()
+            ),
+            "",
+        )
+    if not (w or "").strip() or not contrast:
+        return None
+    q = _letter_stem(
+        letter,
+        f"This choice is “{clip(w, 70)}”. Should that part be “{clip(contrast, 50)}” or “{clip(w, 50)}”?",
+    )
+    correct = clip(r, 50) if (r or "").strip() != (w or "").strip() else clip(w, 50)
+    distractors = [
+        clip(w, 50) if correct != clip(w, 50) else clip(contrast, 50),
+        "both of those descriptions at once",
+        "neither description",
+    ]
     opts, fu_key = place(uid, letter, correct, distractors)
-    why = f"Option {letter} used “{clip(w_c or w, 60)}”; the item needs “{clip(k_c or r, 60)}”."
+    why = f"Option {letter} repeats “{clip(w, 50)}”."
     return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
 
@@ -1049,10 +1111,13 @@ def construct_lbs(item: dict) -> dict | None:
         if not figure and not option_text(item, L) and not option_text(item, key):
             continue
         mx, pathway, k_c, w_c = classify(item, key, L)
+        fu = followup(item, key, L, mx, k_c, w_c)
+        if not fu:
+            return None
         wrong[L] = {
             "mx_type": mx,
             "pathway": pathway,
-            "followup": followup(item, key, L, mx, k_c, w_c),
+            "followup": fu,
         }
     if not wrong:
         return None

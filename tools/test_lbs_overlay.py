@@ -49,6 +49,9 @@ STAMP_STEMS = (
     "is what the stem asks for",
     "is not what the stem asks for",
     "Which operation on the stem data",
+    "What is true of",
+    "in the situation the stem describes",
+    "does not hold for the situation described",
 )
 
 
@@ -383,6 +386,54 @@ def test_wrapper_stems_fail_relevant() -> None:
     }
     assert is_stamp_lbs(syn["assessment"]["learn_by_solve"])
     assert not lbs_relevant(syn)
+    novel = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    novel["assessment"]["learn_by_solve"] = {
+        "solve": "Required: C — colour spreads faster in hot water.",
+        "wrong": {
+            "A": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Regarding “colour spreads faster in cold water”: does that description apply here?",
+                    "options": {
+                        "A": "It does not apply here",
+                        "B": "It fully holds here",
+                        "C": "y",
+                        "D": "w",
+                    },
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "B": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "What is true of “particles move slower” in the situation the stem describes?",
+                    "options": {
+                        "A": "It does not hold for the situation described",
+                        "B": "It fully holds for the situation described",
+                        "C": "y",
+                        "D": "w",
+                    },
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "D": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Taking “hot water” as a candidate, does that description apply here?",
+                    "options": {"A": "It does not apply here", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+        },
+    }
+    assert is_stamp_lbs(novel["assessment"]["learn_by_solve"])
+    assert not lbs_relevant(novel)
 
 
 def test_slash_tick_row_unlock() -> None:
@@ -436,6 +487,40 @@ def test_numeric_fallback_not_operation_wrapper() -> None:
         assert "what this question is asking for" not in stem
         assert count["options"][L] in stem
         assert "count" in stem.lower() or "choos" in stem.lower() or "working" in stem.lower()
+
+
+def test_word_slash_vasodilation() -> None:
+    item = {
+        "uid": "fixture:bio:vaso:q24",
+        "stem": (
+            "What would be the effects of vasodilation and sweating on the body "
+            "temperature and on the amount of moisture on the surface of the skin?"
+        ),
+        "options": {
+            "A": "decreased / decreased",
+            "B": "decreased / increased",
+            "C": "increased / decreased",
+            "D": "increased / increased",
+        },
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "B",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs and lbs_relevant(item, lbs, "B")
+    assert not is_stamp_lbs(lbs)
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        blob = " ".join(row["followup"]["options"].values())
+        assert "What is true of" not in stem, stem
+        assert "situation the stem describes" not in stem, stem
+        assert "apply here" not in stem.lower()
+        assert "increased" in stem.lower() or "decreased" in stem.lower(), stem
+        assert "increased" in blob.lower() or "decreased" in blob.lower(), blob
+        assert "does not hold" not in blob
 
 
 def test_followup_keys_not_always_a() -> None:
@@ -790,6 +875,7 @@ if __name__ == "__main__":
     test_rank_not_numeric_wrapper()
     test_wrapper_stems_fail_relevant()
     test_slash_tick_row_unlock()
+    test_word_slash_vasodilation()
     test_numeric_fallback_not_operation_wrapper()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()

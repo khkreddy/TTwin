@@ -53,6 +53,9 @@ STAMP_STEM = (
     "is not what the stem asks for",
     "Which operation on the stem data",
     "is a distractor. Which operation",
+    "What is true of",
+    "in the situation the stem describes",
+    "does not hold for the situation described",
 )
 META_OPTION = (
     "A stated condition that still applies",
@@ -104,6 +107,55 @@ def distinctive_tokens(text: str) -> list[str]:
     return out
 
 
+# Wrapper SHAPE — restating the original MCQ as the criterion. Not a synonym list.
+_WRAPPER_STEM = re.compile(
+    r"\bthe stem (asks|ask|describes|describe|requires|require|does not|is asking)|"
+    r"\bby the stem\b|"
+    r"what the stem\b|"
+    r"\bthis question\b|"
+    r"asking for|"
+    r"the situation.{0,60}describ|"
+    r"what is true of|"
+    r"\bholds for\b|"
+    r"apply here|"
+    r"regarding .{0,120}does that|"
+    r"does that description apply|"
+    r"in the situation the stem",
+    re.I,
+)
+_WRAPPER_OPT = re.compile(
+    r"does not hold for|"
+    r"does not hold here|"
+    r"fully holds|"
+    r"is what .{0,40}asks|"
+    r"is not what .{0,40}asks|"
+    r"apply here|"
+    r"not determined by the stem|"
+    r"the stem asks|"
+    r"the situation described|"
+    r"does not hold for the situation|"
+    r"it does not apply here|"
+    r"does not apply here",
+    re.I,
+)
+
+
+def _without_quotes(s: str) -> str:
+    t = re.sub(r"[“”\"].*?[“”\"]", " ", s or "", flags=re.S)
+    t = re.sub(r"‘.*?’", " ", t)
+    return t
+
+
+def is_wrapper_shape(stem: str, options: dict | None = None) -> bool:
+    body = _without_quotes(stem or "")
+    if _WRAPPER_STEM.search(body):
+        return True
+    blob = _without_quotes(" ".join((options or {}).values()))
+    if _WRAPPER_OPT.search(blob) or _WRAPPER_STEM.search(blob):
+        return True
+    return False
+
+
 def is_stamp_lbs(lbs: dict | None) -> bool:
     if not lbs:
         return True
@@ -112,10 +164,13 @@ def is_stamp_lbs(lbs: dict | None) -> bool:
     for row in (lbs.get("wrong") or {}).values():
         fu = (row or {}).get("followup") or {}
         stem = fu.get("stem") or ""
+        opts = fu.get("options") or {}
         if any(s in stem for s in STAMP_STEM):
             return True
-        blob = " ".join((fu.get("options") or {}).values())
+        blob = " ".join(opts.values())
         if any(s in blob for s in META_OPTION):
+            return True
+        if is_wrapper_shape(stem, opts):
             return True
     return False
 
