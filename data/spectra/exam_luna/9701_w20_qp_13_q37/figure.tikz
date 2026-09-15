@@ -1,0 +1,17 @@
+\begin{tikzpicture}[baseline=-0.2em]
+  % isopropyl group
+  \draw (-0.85,0) -- (0,0.45);
+  \draw (0,0.45) -- (0,1.25);
+  \draw (0,0.45) -- (0.75,0);
+  % ketone carbonyl
+  \draw (0.75,0) -- (1.35,0.45);
+  \draw (0.75,0) -- (0.75,-0.7);
+  \draw (0.83,0) -- (0.83,-0.7);
+  \node at (0.79,-0.92) {O};
+  % carboxylic acid group
+  \draw (1.35,0.45) -- (1.35,1.2);
+  \draw (1.43,0.45) -- (1.43,1.2);
+  \node at (1.39,1.42) {O};
+  \draw (1.35,0.45) -- (2.0,0.08);
+  \node at (2.27,-0.08) {OH};
+\end{tikzpicture}

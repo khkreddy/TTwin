@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1.5000cm,y=0.0600cm,font=\sffamily\small,line cap=round]
+\draw (20.0,0)--(22.0,0);
+\draw (20.0,0)--(20.0,100.0);
+\draw (20,0)--++(0,-0.12cm) node[below]{\footnotesize 20};
+\draw (21,0)--++(0,-0.12cm) node[below]{\footnotesize 21};
+\draw (22,0)--++(0,-0.12cm) node[below]{\footnotesize 22};
+\draw (20.0,0)--++(-0.12cm,0) node[left]{\footnotesize 0};
+\draw (20.0,50)--++(-0.12cm,0) node[left]{\footnotesize 50};
+\draw (20.0,100)--++(-0.12cm,0) node[left]{\footnotesize 100};
+\node[rotate=90,align=center] at (19.04,50.0){relative abundance};
+\node at (21.0,-12.00){mass/charge};
+\draw[line width=1.35pt] (20.0,0)--(20.0,100.0);
+\node[above,font=\sffamily\scriptsize] at (20.0,100.0){100};
+\draw[line width=1.35pt] (21.0,0)--(21.0,0.3);
+\node[above,font=\sffamily\scriptsize] at (21.0,0.3){0.3};
+\draw[line width=1.35pt] (22.0,0)--(22.0,8.0);
+\node[above,font=\sffamily\scriptsize] at (22.0,8.0){8};
+\end{tikzpicture}

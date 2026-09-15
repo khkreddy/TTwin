@@ -36,6 +36,7 @@ PROJ = AWM / "data/awm_product/generated/nav_mcq/vocab/projection_chem_v1.json"
 EXAM = AWM / "data/chem_curriculum/item_envelope/exam_json/items.jsonl"
 CORPUS = AWM / "data/awm_product/generated/exam_v1_corpus/items.jsonl"
 CHEM_JOINED = AWM / "data/awm_product/generated/exam_v1_chem_joined/items.jsonl"
+EXAM_LUNA = AWM / "data/spectra/canonical/out/exam_luna"
 TM_QUESTIONS = AWM / "data/corpus_intelligence/awm_corpus/testmaker_v1/index/questions.jsonl"
 EXAMINER_JOIN = AWM / "data/awm_product/generated/examiner_join/items.jsonl"
 MATH_MAP = AWM / "data/intelligence/MATHEMATICS_MAP.json"
@@ -482,6 +483,24 @@ def extract_structures(o: dict) -> list:
                 lab = labs[i] if i < 4 else str(i + 1)
                 out.append({"label": lab, "smiles": x.strip()})
     return out
+
+
+def luna_exam_tikz(uid: str) -> str | None:
+    """Digitized exam diagram (pixel-trace IR or Luna MS). Native tikz, 4000 LEFT."""
+    folder = uid.replace(":", "_")
+    p = EXAM_LUNA / folder / "figure.tikz"
+    if not p.is_file():
+        return None
+    code = p.read_text(encoding="utf-8").strip()
+    if "\\begin{tikzpicture}" not in code or len(code) < 800:
+        return None
+    if "coordinates" not in code and "--(" not in code:
+        return None
+    return (
+        code.replace("[x=.00205cm", "[x=-0.00205cm")
+        .replace("[x=0.00205cm", "[x=-0.00205cm")
+        .replace("[x=.00205 cm", "[x=-0.00205cm")
+    )
 
 
 def extract_tikz(o: dict) -> tuple[str | None, list[str]]:
@@ -1267,6 +1286,10 @@ def main() -> int:
                 item.update(body)
                 item["complete_exam"] = True
                 n_stems_total += 1
+                luna = luna_exam_tikz(uid)
+                if luna:
+                    item["tikz"] = luna
+                    item.pop("tikz_packages", None)
                 if item.get("tikz"):
                     n_tikz += 1
                 if item.get("structures"):
