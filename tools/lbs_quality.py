@@ -48,6 +48,11 @@ STAMP_STEM = (
     "correctly answer this",
     "A working produced",
     "Which combination of the stem quantities",
+    "what this question is asking for",
+    "is what the stem asks for",
+    "is not what the stem asks for",
+    "Which operation on the stem data",
+    "is a distractor. Which operation",
 )
 META_OPTION = (
     "A stated condition that still applies",
@@ -71,6 +76,10 @@ META_OPTION = (
     "Average the four listed option values",
     "Invert every quantity in the stem",
     "as given in the stem and stop",
+    "is what the stem asks for",
+    "is not what the stem asks for",
+    "what the stem asks for",
+    "the product, quotient, difference or weighted mean named in the stem",
 )
 
 

@@ -45,6 +45,10 @@ STAMP_STEMS = (
     "Which combination of the stem quantities",
     "is exactly what is required",
     "does not meet that requirement",
+    "what this question is asking for",
+    "is what the stem asks for",
+    "is not what the stem asks for",
+    "Which operation on the stem data",
 )
 
 
@@ -336,6 +340,102 @@ def test_wrapper_stems_fail_relevant() -> None:
     }
     assert is_stamp_lbs(item["assessment"]["learn_by_solve"])
     assert not lbs_relevant(item)
+    syn = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    syn["assessment"]["learn_by_solve"] = {
+        "solve": "Required: C — colour spreads faster in hot water.",
+        "wrong": {
+            "A": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Is “✓ / ✗” what this question is asking for?",
+                    "options": {
+                        "A": "Yes — “✓ / ✗” is what the stem asks for",
+                        "B": "No — “✓ / ✗” is not what the stem asks for",
+                        "C": "y",
+                        "D": "w",
+                    },
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "B": {
+                "mx_type": "operation_confusion",
+                "pathway": "x",
+                "followup": {
+                    "stem": "The value 320 is a distractor. Which operation on the stem data does this item actually ask for?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "D": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Is “cold water” what this question is asking for?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+        },
+    }
+    assert is_stamp_lbs(syn["assessment"]["learn_by_solve"])
+    assert not lbs_relevant(syn)
+
+
+def test_slash_tick_row_unlock() -> None:
+    item = {
+        "uid": "fixture:bio:alveoli:q21",
+        "stem": "What makes alveoli suitable as a gas exchange surface? large total surface well-supplied with blood vessels",
+        "options": {"A": "✓ / ✓", "B": "✓ / ✗", "C": "✗ / ✓", "D": "✗ / ✗"},
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "A",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs and lbs_relevant(item, lbs, "A")
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        blob = " ".join(row["followup"]["options"].values())
+        assert "what this question is asking for" not in stem, stem
+        assert "what the stem asks for" not in blob
+        assert "listed feature" in stem or "✓" in stem or "✗" in stem, stem
+        assert "does not meet that requirement" not in blob
+
+
+def test_numeric_fallback_not_operation_wrapper() -> None:
+    item = json.loads(NUMERIC.read_text(encoding="utf-8"))
+    lbs = construct_lbs(item)
+    assert lbs
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        assert "Which operation on the stem data" not in stem
+        assert "is a distractor. Which operation" not in stem
+        assert str(item["options"][L])[:3] in stem or "efficiency" in stem.lower()
+    count = {
+        "uid": "fixture:math:count:q38",
+        "stem": "A debate club consists of 6 girls and 4 boys. A team of 4 members is to be selected including a captain. How many ways?",
+        "options": {"A": "380", "B": "320", "C": "260", "D": "95"},
+        "assessment": {
+            "key_source": "olympiad_gold",
+            "key_status": "available",
+            "mcq_key": "A",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(count)
+    assert lbs and lbs_relevant(count, lbs, "A")
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        assert "Which operation on the stem data" not in stem, stem
+        assert "what this question is asking for" not in stem
+        assert count["options"][L] in stem
+        assert "count" in stem.lower() or "choos" in stem.lower() or "working" in stem.lower()
 
 
 def test_followup_keys_not_always_a() -> None:
@@ -689,6 +789,8 @@ if __name__ == "__main__":
     test_bony_fish_tick_unlock()
     test_rank_not_numeric_wrapper()
     test_wrapper_stems_fail_relevant()
+    test_slash_tick_row_unlock()
+    test_numeric_fallback_not_operation_wrapper()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
     test_olympiad_bracket_options()

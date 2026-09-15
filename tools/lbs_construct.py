@@ -137,8 +137,25 @@ def looks_numeric(s: str) -> bool:
 
 
 def parse_ticks(s: str) -> list[tuple[str, str]]:
+    t = (s or "").strip()
+    slash = re.fullmatch(
+        r"([✓✔✗✘])\s*/\s*([✓✔✗✘])(?:\s*/\s*([✓✔✗✘]))?(?:\s*/\s*([✓✔✗✘]))?",
+        t,
+    )
+    if slash:
+        labs = (
+            "the first listed feature",
+            "the second listed feature",
+            "the third listed feature",
+            "the fourth listed feature",
+        )
+        rows = []
+        for i, g in enumerate(slash.groups()):
+            if g:
+                rows.append((labs[i], g))
+        return rows
     rows = []
-    for p in re.split(r"\s*;\s*", s or ""):
+    for p in re.split(r"\s*;\s*", t):
         p = p.strip()
         if not p:
             continue
@@ -658,13 +675,37 @@ def _numeric_method(item: dict, uid: str, letter: str, w: str, r: str) -> dict:
         q = f"The value {wv} is not the magnification. Magnification is which ratio?"
         correct = "image size ÷ actual size"
         distractors = ["actual size ÷ image size", "image size × actual size", "image size − actual size"]
-    else:
-        q = f"The value {wv} is a distractor. Which operation on the stem data does this item actually ask for?"
-        correct = "the product, quotient, difference or weighted mean named in the stem"
+    elif any(s in sl for s in ("ways", "number of", "combin", "permut", "selected", "captain")):
+        q = f"Is {wv} the required count, or does that value omit a required choosing step?"
+        correct = f"{wv} omits or double-counts a required choosing step"
         distractors = [
-            f"report {wv} because it is listed among the options",
-            "add every number printed in the stem",
-            "take the first number in the stem as the answer",
+            f"{wv} is the required count",
+            f"{wv} is the sum of the given group sizes",
+            "the required count is the first number in the stem",
+        ]
+    elif any(s in sl for s in ("probability", "random", "chance")):
+        q = f"Is {wv} the required probability, or a count that was not divided by the sample space?"
+        correct = "probability = favourable outcomes ÷ total outcomes"
+        distractors = [
+            f"{wv} is already the required probability",
+            "probability = total outcomes ÷ favourable outcomes",
+            "probability is the first integer in the stem",
+        ]
+    elif any(s in sl for s in ("mole", "avogadro", "mr ", "molar")):
+        q = f"Is {wv} the required amount-of-substance result, or a missed factor of Mr or moles?"
+        correct = "use mass ÷ Mr (or moles × Mr) as the stem requires"
+        distractors = [
+            f"{wv} is the required amount-of-substance result",
+            "report the mass as the number of moles",
+            "ignore Mr and divide the two masses",
+        ]
+    else:
+        q = f"Does the working this item requires actually give {wv}?"
+        correct = f"No — {wv} comes from dropping, doubling or inverting a required term"
+        distractors = [
+            f"Yes — {wv} is the required value",
+            f"{wv} is the sum of every number in the stem",
+            f"{wv} is a unit, not a calculated result",
         ]
     opts, fu_key = place(uid, letter, correct, distractors)
     why = f"Option {letter} ({clip(w, 40)}) is a different operation or operand, not the required working."
@@ -736,6 +777,12 @@ def _unlock_q(hinge_q: str, w_show: str) -> str:
     m = re.match(r"What happens (?:to )?(.+)\?\s*$", hm, re.I)
     if m:
         return f"If the situation is “{w_show}”, what happens to {clip(m.group(1), 100)}?"
+    m = re.match(r"What makes (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"Does “{w_show}” make {clip(m.group(1), 110)}?"
+    m = re.match(r"What could (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"Could “{w_show}” be {clip(m.group(1), 110)}?"
     m = re.match(r"What (?:is|are) (.+)\?\s*$", hm, re.I)
     if m:
         return f"Is “{w_show}” {clip(m.group(1), 120)}?"
@@ -777,16 +824,32 @@ def _unlock_q(hinge_q: str, w_show: str) -> str:
     m = re.match(r"(How|Why|Where|When)\b\s*(.+)\?\s*$", hm, re.I)
     if m:
         return f"For “{w_show}”: {m.group(1).lower()} {clip(m.group(2), 110)}?"
-    return f"Is “{w_show}” what this question is asking for?"
+    return f"What is true of “{w_show}” in the situation the stem describes?"
 
 
-def _content_choices(w_show: str, pred: str) -> tuple[str, list[str]]:
-    p = clip(pred, 70) if pred else "what the stem asks for"
-    correct = f"No — “{clip(w_show, 48)}” is not {p}"
+def _content_choices(w_show: str, pred: str, k_c: str = "", w_c: str = "") -> tuple[str, list[str]]:
+    p = (pred or "").strip()
+    if p and p not in {"what the stem asks for", "what this question is asking for"}:
+        correct = f"No — “{clip(w_show, 48)}” is not {clip(p, 70)}"
+        distractors = [
+            f"Yes — “{clip(w_show, 48)}” is {clip(p, 70)}",
+            f"“{clip(w_show, 40)}” is a different quantity or structure in the same item",
+            f"“{clip(w_show, 40)}” would apply to a different process or organism",
+        ]
+        return correct, distractors
+    if k_c and w_c and k_c.strip().lower() != w_c.strip().lower():
+        correct = f"That part should be “{clip(k_c, 55)}”, not “{clip(w_c, 55)}”"
+        distractors = [
+            f"That part should be “{clip(w_c, 55)}”",
+            "both descriptions at once",
+            "this part is not determined by the stem",
+        ]
+        return correct, distractors
+    correct = f"“{clip(w_show, 50)}” does not hold for the situation described"
     distractors = [
-        f"Yes — “{clip(w_show, 48)}” is {p}",
-        f"“{clip(w_show, 40)}” is a different quantity or structure in the same item",
-        f"“{clip(w_show, 40)}” would apply to a different process or organism",
+        f"“{clip(w_show, 50)}” fully holds for the situation described",
+        f"“{clip(w_show, 40)}” is a unit conversion of the keyed value",
+        f"“{clip(w_show, 40)}” is the same as every other option",
     ]
     return correct, distractors
 
@@ -802,13 +865,19 @@ def _predicate(hinge_q: str) -> str:
     m = re.match(r"What is represented by (.+)\?\s*$", hm, re.I)
     if m:
         return f"what {m.group(1)} represents"
+    m = re.match(r"What makes (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"what makes {clip(m.group(1), 70)}"
+    m = re.match(r"What could (.+)\?\s*$", hm, re.I)
+    if m:
+        return clip(m.group(1), 80)
     m = re.match(r"What (?:is|are) (.+)\?\s*$", hm, re.I)
     if m:
         return clip(m.group(1), 80)
     m = re.match(r"Which (.+)\?\s*$", hm, re.I)
     if m:
         return clip(m.group(1), 80)
-    return "what the stem asks for"
+    return ""
 
 
 def _tick_followup(uid: str, letter: str, hinge_q: str, w: str, r: str, wt: list, kt: list) -> dict:
@@ -938,7 +1007,7 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
     w_show = clip(w or w_c or f"option {letter}", 90)
     h = hinge(item.get("stem") or item.get("stem_lead") or "")
     q = _letter_stem(letter, _unlock_q(h, w_show))
-    correct, distractors = _content_choices(w_show, _predicate(h))
+    correct, distractors = _content_choices(w_show, _predicate(h), k_c, w_c)
     opts, fu_key = place(uid, letter, correct, distractors)
     why = f"Option {letter} used “{clip(w_c or w, 60)}”; the item needs “{clip(k_c or r, 60)}”."
     return {"stem": q, "options": opts, "key": fu_key, "why": why}
