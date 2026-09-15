@@ -134,9 +134,24 @@ def looks_numeric(s: str) -> bool:
 
 def hinge(stem: str) -> str:
     s = re.sub(r"\s+", " ", (stem or "").strip())
-    m = re.search(r"((?:What|Which|How|Why|Where|When|Calculate|Find)\b.{8,220}\??)", s, re.I)
-    if m:
-        return clip(m.group(1), 180)
+    # Last sentence that asks a question (avoids matching "how" inside "show").
+    bits = re.split(r"(?<=[.!?])\s+", s)
+    for part in reversed(bits):
+        if "?" not in part or len(part) < 10:
+            continue
+        m = re.search(
+            r"((?:\b(?:What|Which|How|Why|Where|When|Calculate|Find))\b.{8,220}\?)",
+            part,
+            re.I,
+        )
+        return clip((m.group(1) if m else part), 180)
+    qs = re.findall(
+        r"((?:\b(?:What|Which|How|Why|Where|When|Calculate|Find))\b.{8,220}\?)",
+        s,
+        re.I,
+    )
+    if qs:
+        return clip(qs[-1], 180)
     q = s.find("?")
     if q >= 0:
         return clip(s[max(0, q - 160) : q + 1], 180)
@@ -668,20 +683,53 @@ _POLE_Q = {
 
 
 def _apply_stem_to_option(hinge_q: str, w_show: str) -> str:
+    """Turn the stem's criterion into an unlocking question about this option."""
     hm = re.sub(r"\s+", " ", hinge_q or "").strip()
-    m = re.match(r"Which (.+)\?\s*$", hm, re.I)
+    hm = re.sub(r"^(?:Which of the following|Which one)\s+", "Which ", hm, flags=re.I)
+    m = re.match(r"What is carried by (.+)\?\s*$", hm, re.I)
     if m:
-        return f"Does “{w_show}” match this requirement: {clip(m.group(1), 120)}?"
+        return f"Is “{w_show}” carried by {m.group(1)}?"
+    m = re.match(r"What is the reason (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"Is “{w_show}” the reason {clip(m.group(1), 110)}?"
+    m = re.match(r"What is represented by (.+)\?\s*$", hm, re.I)
+    if m:
+        return f"Does “{w_show}” represent {clip(m.group(1), 110)}?"
+    m = re.match(r"What happens (?:to )?(.+)\?\s*$", hm, re.I)
+    if m:
+        return f"If the situation is “{w_show}”, what happens to {clip(m.group(1), 100)}?"
     m = re.match(r"What (?:is|are) (.+)\?\s*$", hm, re.I)
     if m:
         return f"Is “{w_show}” {clip(m.group(1), 120)}?"
-    m = re.match(r"What happens (?:to )?(.+)\?\s*$", hm, re.I)
+    m = re.match(r"Which (.+)\?\s*$", hm, re.I)
     if m:
-        return f"Taking “{w_show}”, what happens to {clip(m.group(1), 100)}?"
-    m = re.match(r"(How|Why|Where|When)\b(.+)\?\s*$", hm, re.I)
+        body = m.group(1).strip()
+        body = re.sub(r"^(?:of the following\s+)", "", body, flags=re.I)
+        agree = {
+            "contains": "contain",
+            "contain": "contain",
+            "carries": "carry",
+            "carry": "carry",
+            "shows": "show",
+            "show": "show",
+            "produces": "produce",
+            "produce": "produce",
+            "represents": "represent",
+            "represent": "represent",
+            "has": "have",
+            "have": "have",
+            "gives": "give",
+            "give": "give",
+        }
+        for verb, inf in agree.items():
+            vm = re.match(rf"^(.+?)\s+({verb})\s+(.+)$", body, re.I)
+            if vm:
+                return f"Does “{w_show}” {inf} {clip(vm.group(3), 110)}?"
+        return f"Does “{w_show}” fit this requirement: {clip(body, 120)}?"
+    m = re.match(r"(How|Why|Where|When)\b\s*(.+)\?\s*$", hm, re.I)
     if m:
-        return f"For “{w_show}”, {m.group(1).lower()}{clip(m.group(2), 110)}?"
-    return f"A student chose “{w_show}”. Does that choice satisfy: {clip(hm, 120)}"
+        return f"For “{w_show}”: {m.group(1).lower()} {clip(m.group(2), 110)}?"
+    return f"Does “{w_show}” correctly answer this: {clip(hm, 120)}?"
 
 
 def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> dict:
@@ -730,18 +778,6 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
             why = f"Option {letter} used “{clip(w_c, 60)}”; the item needs “{clip(k_c, 60)}”."
             return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
-    if w_c and k_c and w_c.strip().lower() != k_c.strip().lower() and len(w_c.strip()) >= 8:
-        q = _letter_stem(letter, f"This option claims “{clip(w_c, 90)}”. Is that true for the situation in the stem?")
-        correct = f"No — “{clip(w_c, 70)}” is not what happens here"
-        distractors = [
-            f"Yes — “{clip(w_c, 70)}” is exactly what happens",
-            f"It is true only of a different process not in the stem",
-            f"The stem does not mention this part of the option",
-        ]
-        opts, fu_key = place(uid, letter, correct, distractors)
-        why = f"Option {letter} used “{clip(w_c, 60)}”; the item needs “{clip(k_c, 60)}”."
-        return {"stem": q, "options": opts, "key": fu_key, "why": why}
-
     if (not (w or "").strip()) and figure:
         h = hinge(item.get("stem") or item.get("stem_lead") or "")
         q = (
@@ -758,14 +794,14 @@ def followup(item: dict, key: str, letter: str, mx: str, k_c: str, w_c: str) -> 
         why = f"Diagram {letter} is not the keyed trace."
         return {"stem": q, "options": opts, "key": fu_key, "why": why}
 
-    w_show = clip(w or f"option {letter}", 90)
+    w_show = clip(w or w_c or f"option {letter}", 90)
     h = hinge(item.get("stem") or item.get("stem_lead") or "")
     q = _letter_stem(letter, _apply_stem_to_option(h, w_show))
-    correct = f"No. “{clip(w or letter, 55)}” does not satisfy what the stem asks"
+    correct = f"No — “{clip(w_show, 55)}” does not meet that requirement"
     distractors = [
-        f"Yes. “{clip(w or letter, 55)}” is exactly what the stem asks for",
-        f"“{clip(w or letter, 45)}” would be correct if one stated condition were dropped",
-        f"“{clip(w or letter, 45)}” and every other option are equally valid",
+        f"Yes — “{clip(w_show, 55)}” is exactly what is required",
+        f"“{clip(w_show, 45)}” would be correct only if the stem asked a different question",
+        f"“{clip(w_show, 45)}” and every other option are equally valid",
     ]
     opts, fu_key = place(uid, letter, correct, distractors)
     why = f"Option {letter} used “{clip(w_c or w, 60)}”; the item needs “{clip(k_c or r, 60)}”."

@@ -36,6 +36,9 @@ STAMP_STEMS = (
     "The stem names a specific species or process",
     "A word or symbol in the stem is easy to spot",
     "A student obtained a different numerical value from the working this item requires",
+    "This option claims",
+    "Is that true for the situation in the stem?",
+    "match this requirement:",
 )
 
 
@@ -159,6 +162,55 @@ def test_distinct_wrong_letter_followups() -> None:
     assert stems["A"] != stems["B"], stems
     assert "hotter" in stems["A"].lower() or "colder" in stems["A"].lower() or "temperature" in stems["A"].lower()
     assert "particle" in stems["B"].lower() or "move" in stems["B"].lower()
+
+
+def test_xylem_unlock_not_claims_template() -> None:
+    item = {
+        "uid": "fixture:bio:xylem:q14",
+        "stem": "What is carried by the xylem?",
+        "options": {"A": "chlorophyll", "B": "mineral ions", "C": "starch", "D": "sugars"},
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "B",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs
+    assert lbs_relevant(item, lbs, "B")
+    for L, row in lbs["wrong"].items():
+        stem = row["followup"]["stem"]
+        assert "This option claims" not in stem, stem
+        assert "Is that true for the situation" not in stem, stem
+        assert "carried by the xylem" in stem.lower() or "carried by" in stem.lower(), stem
+        opt = item["options"][L]
+        assert opt.lower() in stem.lower() or opt[:5].lower() in stem.lower(), (L, stem)
+
+
+def test_npk_row_is_relevant() -> None:
+    item = {
+        "uid": "fixture:chem:npk:q33",
+        "stem": "Which substance would make the best general fertiliser?",
+        "options": {
+            "A": "P 5, K 0, N 5; soluble in water",
+            "B": "P 5, K 5, N 20; insoluble in water",
+            "C": "P 5, K 10, N 15; soluble in water",
+            "D": "P 10, K 5, N 10; insoluble in water",
+        },
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "C",
+            "examiner_comment": {"present": False},
+        },
+    }
+    lbs = construct_lbs(item)
+    assert lbs and lbs_relevant(item, lbs, "C")
+    for L in ("A", "B", "D"):
+        stem = lbs["wrong"][L]["followup"]["stem"]
+        assert "This option claims" not in stem
+        assert "fertiliser" in stem.lower() or "fertilizer" in stem.lower()
 
 
 def test_followup_keys_not_always_a() -> None:
@@ -362,6 +414,44 @@ def test_stamp_fails_relevant() -> None:
     }
     assert is_stamp_lbs(item["assessment"]["learn_by_solve"])
     assert not lbs_relevant(item)
+    claims = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    claims["assessment"]["learn_by_solve"] = {
+        "solve": "Required: C — colour spreads faster in hot water.",
+        "wrong": {
+            "A": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "This option claims “colour spreads faster in cold water”. Is that true for the situation in the stem?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "B": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "This option claims “particles move slower”. Is that true for the situation in the stem?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "D": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "This option claims “hot water”. Is that true for the situation in the stem?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+        },
+    }
+    assert is_stamp_lbs(claims["assessment"]["learn_by_solve"])
+    assert not lbs_relevant(claims)
 
 
 def test_figure_letter_census() -> None:
@@ -469,6 +559,8 @@ if __name__ == "__main__":
     test_stamp_fails_relevant()
     test_numeric_no_key_leak()
     test_distinct_wrong_letter_followups()
+    test_xylem_unlock_not_claims_template()
+    test_npk_row_is_relevant()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
     test_olympiad_bracket_options()

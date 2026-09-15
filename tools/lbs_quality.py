@@ -38,6 +38,12 @@ STAMP_STEM = (
     "Keep the stem's stated conditions",
     "Match the named species or process; do not swap",
     "Use the operative criterion in the stem, not a salient",
+    "This option claims",
+    "Is that true for the situation in the stem?",
+    "is not what happens here",
+    "Does that choice satisfy:",
+    "A student chose",
+    "match this requirement:",
 )
 META_OPTION = (
     "A stated condition that still applies",
