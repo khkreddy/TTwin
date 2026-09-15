@@ -64,6 +64,8 @@ STAMP_STEM = (
 )
 
 _ROOT = Path(__file__).resolve().parents[1]
+_JEEBENCH = Path("/home/harik/awm_build/data/corpus_intelligence/awm_corpus/jeebench-dataset.json")
+_JEE_BY_UID: dict[str, str] | None = None
 
 
 def _preserve_uids() -> set[str]:
@@ -127,6 +129,34 @@ def parse_inline_options(stem: str) -> tuple[str, dict[str, str]]:
     return rest, opts
 
 
+def _jee_question(uid: str) -> str:
+    """Pack-time lookup of the JEEBench source stem (options still inline)."""
+    global _JEE_BY_UID
+    if not uid.startswith("jeebench:srcjson:"):
+        return ""
+    if _JEE_BY_UID is None:
+        _JEE_BY_UID = {}
+        if _JEEBENCH.is_file():
+            try:
+                rows = json.loads(_JEEBENCH.read_text(encoding="utf-8"))
+            except Exception:
+                rows = []
+            for rec in rows:
+                if not isinstance(rec, dict):
+                    continue
+                q = (rec.get("question") or "").strip()
+                if not q:
+                    continue
+                subj = rec.get("subject") or ""
+                desc = rec.get("description") or ""
+                idx = rec.get("index")
+                slug = re.sub(r"[^a-z0-9]+", "_", desc.lower()).strip("_")
+                _JEE_BY_UID[f"jeebench:srcjson:{subj}:{slug}:q{idx}"] = q
+                if subj in {"math", "mathematics"}:
+                    _JEE_BY_UID[f"jeebench:srcjson:math:{slug}:q{idx}"] = q
+    return _JEE_BY_UID.get(uid) or ""
+
+
 def option_from_table(item: dict, letter: str) -> str:
     for table in item.get("tables") or []:
         if not isinstance(table, dict) or not table.get("is_option_table"):
@@ -148,6 +178,10 @@ def lift_options(item: dict) -> bool:
         return False
     stem = item.get("stem") or item.get("stem_lead") or ""
     rest, parsed = parse_inline_options(stem)
+    if len(parsed) < 4:
+        src = _jee_question(str(item.get("uid") or ""))
+        if src:
+            rest, parsed = parse_inline_options(src)
     if len(parsed) == 4:
         item["options"] = parsed
         item["stem"] = rest

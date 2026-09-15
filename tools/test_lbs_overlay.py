@@ -198,6 +198,87 @@ def test_olympiad_parse_or_skip() -> None:
     assert not empty.get("assessment", {}).get("learn_by_solve")
 
 
+def test_olympiad_bracket_options() -> None:
+    item = {
+        "uid": "jeebench:fixture:q38",
+        "stem": (
+            "Then the triangle $PQR$ has $S$ as its\n\n"
+            "[A] centroid\n\n[B] circumcentre\n\n[C] incentre\n\n[D] orthocenter"
+        ),
+        "options": {},
+        "assessment": {
+            "key_source": "olympiad_gold",
+            "key_status": "available",
+            "mcq_key": "D",
+            "examiner_comment": {"present": False},
+        },
+    }
+    assert ensure_item(item)
+    assert item["options"]["D"] == "orthocenter"
+    assert "centroid" not in (item.get("stem") or "")
+    lbs = item["assessment"]["learn_by_solve"]
+    assert lbs_complete(lbs, "D", item["options"], item)
+    assert not is_stamp_lbs(lbs)
+
+
+def test_figure_letter_census() -> None:
+    item = {
+        "uid": "9701_m22_qp_12:q40",
+        "stem": "Which diagram shows both a C=O and an O–H group?",
+        "options": {"A": "", "B": "", "C": "", "D": ""},
+        "options_are_figure": True,
+        "figure_src": "data/spectra/originals/9701_m22_qp_12_q40.png",
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "B",
+            "examiner_comment": {"present": False},
+            "learn_by_solve": {
+                "solve": "Need both C=O and O–H. Diagram B is the only trace that has both.",
+                "key": "B",
+                "wrong": {
+                    "A": {
+                        "mx_type": "condition_omission",
+                        "pathway": "omits one of the two groups",
+                        "followup": {
+                            "stem": "A compound with both C=O and O–H must show which pattern?",
+                            "options": {"A": "C=O only", "B": "O–H only", "C": "both", "D": "neither"},
+                            "key": "C",
+                            "why": "both features",
+                        },
+                    },
+                    "C": {
+                        "mx_type": "surface_feature_capture",
+                        "pathway": "fingerprint trough",
+                        "followup": {
+                            "stem": "O–H stretches live at high wavenumber. Which side of the plot?",
+                            "options": {"A": "right", "B": "left-hand half", "C": "centre", "D": "never"},
+                            "key": "B",
+                            "why": "high wavenumber is left",
+                        },
+                    },
+                    "D": {
+                        "mx_type": "condition_omission",
+                        "pathway": "C=O without O–H",
+                        "followup": {
+                            "stem": "Which one feature is not enough to claim both groups?",
+                            "options": {"A": "canyon plus C=O", "B": "O–H plus C=O", "C": "C=O only", "D": "acid pair"},
+                            "key": "C",
+                            "why": "C=O alone is not both",
+                        },
+                    },
+                },
+            },
+            "modify_seeds": [{"id": "A:condition_omission", "letter": "A", "mx_type": "condition_omission"}],
+        },
+    }
+    c = census_item(item)
+    assert c["keyed"] and c["eligible"] and c["lbs_complete"] and c["modify_seeds"]
+    learner = json.dumps(item.get("stem"))
+    assert "mx_type" not in learner
+    assert "condition_omission" not in (item.get("stem") or "")
+
+
 def test_learner_vs_teacher_html(item: dict, out_dir: Path) -> dict:
     payload = out_dir / "lbs_html_item.json"
     payload.write_text(json.dumps(item), encoding="utf-8")
@@ -245,6 +326,8 @@ if __name__ == "__main__":
     test_distinct_wrong_letter_followups()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
+    test_olympiad_bracket_options()
+    test_figure_letter_census()
     result = test_join_fixture()
     packed = ROOT / "data/questions/chemistry-igcse.json"
     if packed.is_file():

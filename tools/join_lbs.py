@@ -15,12 +15,17 @@ TTWIN = Path(__file__).resolve().parents[1]
 QUESTIONS = TTWIN / "data" / "questions"
 
 
+def figure_letter_mcq(it: dict) -> bool:
+    """Four-spectrum / figure options: letter buttons only, no option prose."""
+    return bool(it.get("options_are_figure") and (it.get("figure_src") or it.get("tikz")))
+
+
 def census_item(it: dict) -> dict:
     a = it.get("assessment") or {}
     k = a.get("mcq_key")
     keyed = k in LETTERS and a.get("key_status") == "available"
     n_opt = sum(1 for L in LETTERS if str((it.get("options") or {}).get(L) or "").strip())
-    eligible = keyed and n_opt >= 2
+    eligible = keyed and (n_opt >= 2 or figure_letter_mcq(it))
     lbs = a.get("learn_by_solve")
     seeds = a.get("modify_seeds") or []
     ex = (a.get("examiner_comment") or {}).get("present")
