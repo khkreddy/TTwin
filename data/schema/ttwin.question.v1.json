@@ -31,6 +31,10 @@
     "statements": { "type": "array" },
     "has_figure": { "type": "boolean" },
     "options_are_figure": { "type": "boolean" },
+    "figure_src": {
+      "type": ["string", "null"],
+      "description": "Pack-time original exam crop (relative PNG). Preferred over tikz for 9701 spectroscopy learner/teacher papers."
+    },
     "equations": { "type": "array" },
     "tables": { "type": "array" },
     "structures": { "type": "array" },
@@ -69,6 +73,10 @@
             "text": { "type": "string", "minLength": 1 },
             "comment_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
           }
+        },
+        "learn_by_solve": {
+          "type": ["object", "null"],
+          "description": "Teacher-only. Per-wrong-option follow-up bank. Learner renderer must not print mx_type."
         }
       }
     }

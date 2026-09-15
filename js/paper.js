@@ -115,6 +115,10 @@
     return blocks.length ? blocks : (t ? [t] : []);
   }
   function figHTML(it) {
+    const src = String(it.figure_src || "").trim();
+    if (src) {
+      return "<div class='fig'><img class='orig' src='" + esc(src) + "' alt='exam figure'></div>";
+    }
     const code = String(it.tikz || "").trim();
     if (!code) return "";
     const pkgs = (it.tikz_packages || []).filter(Boolean);
@@ -141,7 +145,7 @@
   }
   function optionInner(it, k, o, byOpt) {
     const mols = (byOpt && byOpt[k]) || [];
-    if (it.tikz && it.options_are_figure) return "";
+    if ((it.tikz || it.figure_src) && it.options_are_figure) return "";
     if (mols.length) {
       return "<div class='smiles-row'>" + mols.map((s) => molCard(s, false)).join("") + "</div>";
     }
@@ -156,7 +160,7 @@
       (o[k] != null && o[k] !== "") ||
       ((it.structures || []).some((s) => optionLetter(s.label) === k))
     );
-    if (!keys.length && it.tikz && it.options_are_figure) keys = ["A", "B", "C", "D"];
+    if (it.options_are_figure && (it.tikz || it.figure_src)) keys = ["A", "B", "C", "D"];
     if (!keys.length) return "";
     const { byOpt } = partitionStructures(it);
     const interactive = !!opts.interactive;
@@ -172,9 +176,10 @@
       if (reveal && chosen === k && key && chosen !== key) cls.push("miss");
       const inner = optionInner(it, k, o, byOpt);
       const lab = "<span class='lab'>" + esc(k) + "</span> ";
+      const locked = reveal || !!(opts.lbsLocked);
       const body = interactive
         ? "<button type='button' class='opt' data-opt='" + k + "'" +
-          (reveal ? " disabled" : "") + (chosen === k ? " aria-pressed='true'" : "") + ">" +
+          (locked ? " disabled" : "") + (chosen === k ? " aria-pressed='true'" : "") + ">" +
           lab + inner + "</button>"
         : lab + inner;
       return "<li" + (cls.length ? " class='" + cls.join(" ") + "'" : "") + ">" + body + "</li>";
@@ -208,6 +213,8 @@
     const stemTables = ((it.tables || []).filter((t) => !t.is_option_table)).map((t) => tableHTML(t)).join("");
     const optTable = optionTableOf(it);
     const optTableHtml = optTable ? tableHTML(optTable, optOpts) : "";
+    const stage = (opts.lbsStage || {})[uid] || {};
+    if (stage.from && !stage.done) optOpts.lbsLocked = true;
     return (
       "<article class='q' id='q-" + esc(uid) + "' data-uid='" + esc(uid) + "'>" +
       "<div><span class='qnum'>" + esc(n) + "</span>" +
@@ -217,9 +224,47 @@
       "<p class='stem'>" + chem(it.stem || it.stem_lead || "(no stem — tagged only)") + "</p>" +
       eqs + stemTables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
       optTableHtml + optionsHTML(it, optOpts) +
+      followupHTML(it, opts) +
       toolsHTML(it, opts) +
       "</article>"
     );
+  }
+  function followupHTML(it, opts) {
+    if (!opts || !opts.interactive) return "";
+    const uid = it.uid || it.item_uid || "";
+    const stage = ((opts.lbsStage || {})[uid]) || {};
+    if (!stage.from) return "";
+    const lbs = it.assessment && it.assessment.learn_by_solve;
+    const row = lbs && lbs.wrong && lbs.wrong[stage.from];
+    const fu = row && row.followup;
+    if (!fu) return "";
+    const reveal = !!stage.done;
+    const chosen = optionLetter(stage.followup_choice);
+    const key = optionLetter(fu.key);
+    const optsMap = fu.options || {};
+    const keys = ["A", "B", "C", "D"].filter((k) => optsMap[k] != null);
+    const use = keys.length ? keys : ["A", "B", "C", "D"];
+    const lis = use.map((k) => {
+      const cls = [];
+      if (chosen === k) cls.push("sel");
+      if (reveal && key === k) cls.push("key");
+      if (reveal && chosen === k && key && chosen !== key) cls.push("miss");
+      return "<li" + (cls.length ? " class='" + cls.join(" ") + "'" : "") + ">" +
+        "<button type='button' class='opt' data-fu-opt='" + k + "'" + (reveal ? " disabled" : "") +
+        (chosen === k ? " aria-pressed='true'" : "") + ">" +
+        "<span class='lab'>" + k + "</span> " + chem(optsMap[k] || "") + "</button></li>";
+    }).join("");
+    let extra = "";
+    if (reveal) {
+      if (fu.why) extra += "<p class='lbs-why'>" + esc(fu.why) + "</p>";
+      const orig = extractedKey(it);
+      extra += "<p class='lbs-prompt'>Original question: the key is <b>" + esc(orig || "—") + "</b>.</p>";
+      if (lbs.solve) extra += "<p class='lbs-solve'>" + esc(lbs.solve) + "</p>";
+    }
+    return "<div class='lbs'>" +
+      "<p class='lbs-prompt'>Not that option. Think about this first:</p>" +
+      "<p class='stem'>" + chem(fu.stem || "") + "</p>" +
+      "<ul class='options pick'>" + lis + "</ul>" + extra + "</div>";
   }
   function assessmentSheetHTML(it, i) {
     const a = it && it.assessment;
@@ -238,6 +283,21 @@
     if (a && a.examiner_comment && a.examiner_comment.present && a.examiner_comment.text) {
       body += "<p class='ex'><b>Examiner comment</b></p><p>" +
         esc(a.examiner_comment.text).replace(/\n/g, "<br>") + "</p>";
+    }
+    const lbs = a && a.learn_by_solve;
+    if (lbs && (lbs.solve || lbs.wrong)) {
+      if (lbs.solve) body += "<p class='ex'><b>How to see it</b></p><p>" + esc(lbs.solve) + "</p>";
+      ["A", "B", "C", "D"].forEach((k) => {
+        if (letter && k === letter) return;
+        const row = (lbs.wrong || {})[k];
+        if (!row) return;
+        const fu = row.followup || {};
+        body += "<div class='mx'><b>If " + esc(k) + "</b> [" + esc(row.mx_type || "") + "] " +
+          esc(row.pathway || "") +
+          (fu.stem ? "<div class='muted'><i>Follow-up:</i> " + esc(fu.stem) +
+            " (key " + esc(fu.key || "—") + ")</div>" : "") +
+          "</div>";
+      });
     }
     if (!letter && !body) {
       body = "<p class='muted'>No extracted key or examiner comment for this item.</p>";
@@ -290,7 +350,27 @@
       (it.assessment && it.assessment.examiner_comment && it.assessment.examiner_comment.present
         ? "<p class='ex'><b>Examiner comment</b></p><p>" +
           esc(it.assessment.examiner_comment.text).replace(/\n/g, "<br>") + "</p>" : "") +
+      lbsKeyHTML(it) +
       "</article>";
+  }
+  function lbsKeyHTML(it) {
+    const lbs = it.assessment && it.assessment.learn_by_solve;
+    if (!lbs || !(lbs.solve || lbs.wrong)) return "";
+    const letter = extractedKey(it);
+    let html = "";
+    if (lbs.solve) html += "<p class='ex'><b>How to see it</b></p><p>" + esc(lbs.solve) + "</p>";
+    ["A", "B", "C", "D"].forEach((k) => {
+      if (letter && k === letter) return;
+      const row = (lbs.wrong || {})[k];
+      if (!row) return;
+      const fu = row.followup || {};
+      html += "<div class='mx'><b>If " + esc(k) + "</b> [" + esc(row.mx_type || "") + "] " +
+        esc(row.pathway || "") +
+        (fu.stem ? "<div class='muted'><i>Follow-up:</i> " + esc(fu.stem) +
+          " (key " + esc(fu.key || "—") + ")</div>" : "") +
+        "</div>";
+    });
+    return html;
   }
   function answerKeyHTML(meta, items) {
     const title = (meta && meta.title) || "Paper";

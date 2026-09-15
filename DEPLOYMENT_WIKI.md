@@ -223,6 +223,16 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D20 · 9701 spectroscopy originals + learn-by-solve overlay
+
+**Symptom.** Spectroscopy items on TTwin were TikZ redraws. A wrong A–D in student-take revealed nothing until Finish. Mix-up types must not print on the learner paper.
+
+**Solution.** Pack-time overlay `tools/overlay_spectra.py` (also run at the end of `build_data.py`). Does **not** rewrite freeze exam.v1. For the 107 9701 spectroscopy uids: copy harvest `original.png` to `data/spectra/originals/`, set `figure_src`, drop exam-item TikZ when the crop exists, overlay cleaned stems, attach `assessment.learn_by_solve` (hinge solve + per-wrong-option follow-up). Student-take: a wrong letter opens that follow-up in place; mx_type stays on the teacher answer key only.
+
+**Deploy check.** Jump `9701_s18_qp_11:q30` — original IR crop, not TikZ; A–D once. Student-take pick A → follow-up about C=O, then original key C. Teacher key lists mx pathways. `9701_m22_qp_12:q40` — four-spectrum figure, letter buttons only.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.
@@ -233,6 +243,7 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 5b. Spot: `9702_m16_qp_12:q22` (no source number, fraction table once), `9702_m17_qp_12:q26` (A–D not in the stem).
 5c. Spot: `0625_m16_qp_12:q32` (circuit draws), `0625_m16_qp_22:q23` (one-sentence stem).
 5d. Internal review only: Modify tab Apply uses `temperature: 1`; the figure redraws. Not a Pages check.
+5e. Spot: `9701_s18_qp_11:q30` original IR crop + student-take follow-up; `9701_m22_qp_12:q40` letter-only on four spectra.
 5e. Spot: `9702_m17_qp_22:q3` — Fig. 3.1 and Fig. 3.2 stacked, not overlapping.
 6. Journal: save a note, ingest, open Lesson on that node — overlay visible; AI prose cites it without calling it a publication.
 7. ISO-GEN: empty box, ordinary-language placeholder, one **Author question** button. No hinge id required. Physics/biology ISO-GEN sits on the syllabus-interim chapter list.

@@ -637,6 +637,7 @@
       reveal: !!p.result,
       responses: p.responses || {},
       withKey: !student,
+      lbsStage: p.lbs_stage || {},
     };
   }
   function paintPaper() {
@@ -832,12 +833,35 @@
     host.addEventListener("click", (e) => {
       const p = S.paper;
       if (!p) return;
-      const opt = e.target.closest("button.opt[data-opt], tr.opt-row[data-opt]");
+      const opt = e.target.closest("button.opt[data-opt], button.opt[data-fu-opt], tr.opt-row[data-opt]");
       if (opt && p.mode === "student" && !p.result) {
         const art = opt.closest("article.q");
         const uid = art && (art.getAttribute("data-uid") || (art.id || "").replace(/^q-/, ""));
         if (!uid) return;
-        p.responses[uid] = opt.getAttribute("data-opt");
+        const fu = opt.getAttribute("data-fu-opt");
+        if (fu) {
+          p.lbs_stage = p.lbs_stage || {};
+          const st = p.lbs_stage[uid] || {};
+          st.followup_choice = fu;
+          st.done = true;
+          p.lbs_stage[uid] = st;
+          replaceArticle(uid);
+          return;
+        }
+        const choice = opt.getAttribute("data-opt");
+        if (!choice) return;
+        p.responses[uid] = choice;
+        const i = itemIndex(uid);
+        const it = i >= 0 ? p.items[i] : null;
+        const key = it ? itemKey(it) : null;
+        const lbs = it && it.assessment && it.assessment.learn_by_solve;
+        p.lbs_stage = p.lbs_stage || {};
+        if (lbs && key && choice !== key && lbs.wrong && lbs.wrong[choice]) {
+          p.lbs_stage[uid] = { from: choice, followup_choice: null, done: false };
+          replaceArticle(uid);
+          return;
+        }
+        delete p.lbs_stage[uid];
         art.querySelectorAll("button.opt[data-opt]").forEach((b) => {
           const on = b.getAttribute("data-opt") === p.responses[uid];
           b.setAttribute("aria-pressed", on ? "true" : "false");
@@ -933,6 +957,7 @@
         originals: items.map(cloneItem),
         mode: "teacher",
         responses: {},
+        lbs_stage: {},
         result: null,
       };
       paintPaper();

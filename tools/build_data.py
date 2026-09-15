@@ -1526,6 +1526,17 @@ def main() -> int:
     dump(sol_dir / "index.json", sol_doc)
     meta["n_solutions"] = len(by_sol)
 
+    print("overlay 9701 spectroscopy originals + learn-by-solve…")
+    try:
+        from overlay_spectra import apply_pack
+
+        spec_stats = apply_pack(OUT.parent)
+        meta["n_spectra_items"] = spec_stats.get("n_pack")
+        meta["n_spectra_originals"] = spec_stats.get("n_figure_src")
+        meta["n_spectra_lbs"] = spec_stats.get("n_lbs")
+    except Exception as e:
+        print("  spectra overlay skipped:", e)
+
     print("writing catalog…")
     dump(OUT / "subjects.json", subjects_doc)
     dump(OUT / "meta.json", meta)
