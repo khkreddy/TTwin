@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from lbs_construct import ensure_item, lbs_complete, LETTERS
+from lbs_quality import is_stamp_lbs, lbs_relevant
 
 TTWIN = Path(__file__).resolve().parents[1]
 QUESTIONS = TTWIN / "data" / "questions"
@@ -29,23 +30,29 @@ def census_item(it: dict) -> dict:
     lbs = a.get("learn_by_solve")
     seeds = a.get("modify_seeds") or []
     ex = (a.get("examiner_comment") or {}).get("present")
-    complete = bool(eligible and lbs_complete(lbs, k, it.get("options") or {}, it))
+    structural = bool(eligible and lbs_complete(lbs, k, it.get("options") or {}, it))
+    relevant = bool(eligible and lbs_relevant(it, lbs, k))
+    stamp = bool(eligible and lbs and is_stamp_lbs(lbs))
     return {
         "keyed": keyed,
         "eligible": eligible,
-        "lbs_complete": complete,
-        "modify_seeds": bool(complete and seeds),
+        "lbs_complete": structural,
+        "lbs_relevant": relevant,
+        "stamp": stamp,
+        "modify_seeds": bool(relevant and seeds),
         "examiner": bool(ex),
     }
 
 
 def census_items(items: list) -> dict:
-    n_mcq_key = n_el = n_lbs = n_mod = n_ex = 0
+    n_mcq_key = n_el = n_lbs = n_rel = n_stamp = n_mod = n_ex = 0
     for it in items:
         c = census_item(it)
         n_mcq_key += int(c["keyed"])
         n_el += int(c.get("eligible") or False)
         n_lbs += int(c["lbs_complete"])
+        n_rel += int(c.get("lbs_relevant") or False)
+        n_stamp += int(c.get("stamp") or False)
         n_mod += int(c["modify_seeds"])
         n_ex += int(c["examiner"])
     return {
@@ -53,6 +60,8 @@ def census_items(items: list) -> dict:
         "n_mcq_key": n_mcq_key,
         "n_mcq_eligible": n_el,
         "n_lbs_complete": n_lbs,
+        "n_lbs_relevant": n_rel,
+        "n_stamp": n_stamp,
         "n_modify_seeds": n_mod,
         "n_examiner_present": n_ex,
     }
@@ -78,7 +87,17 @@ def join_file(path: Path) -> dict:
 def join_all(root: Path | None = None) -> dict:
     qdir = (root or TTWIN) / "data" / "questions"
     by = {}
-    tot = {"n": 0, "n_mcq_key": 0, "n_mcq_eligible": 0, "n_lbs_complete": 0, "n_modify_seeds": 0, "n_examiner_present": 0, "n_updated": 0}
+    tot = {
+        "n": 0,
+        "n_mcq_key": 0,
+        "n_mcq_eligible": 0,
+        "n_lbs_complete": 0,
+        "n_lbs_relevant": 0,
+        "n_stamp": 0,
+        "n_modify_seeds": 0,
+        "n_examiner_present": 0,
+        "n_updated": 0,
+    }
     for path in sorted(qdir.glob("*.json")):
         stats = join_file(path)
         by[path.name] = stats

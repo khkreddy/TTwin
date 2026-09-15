@@ -15,7 +15,16 @@ TTWIN = Path(__file__).resolve().parents[1]
 def main() -> dict:
     qdir = TTWIN / "data" / "questions"
     by = {}
-    tot = {"n": 0, "n_mcq_key": 0, "n_mcq_eligible": 0, "n_lbs_complete": 0, "n_modify_seeds": 0, "n_examiner_present": 0}
+    tot = {
+        "n": 0,
+        "n_mcq_key": 0,
+        "n_mcq_eligible": 0,
+        "n_lbs_complete": 0,
+        "n_lbs_relevant": 0,
+        "n_stamp": 0,
+        "n_modify_seeds": 0,
+        "n_examiner_present": 0,
+    }
     for path in sorted(qdir.glob("*.json")):
         items = json.loads(path.read_text(encoding="utf-8"))
         stats = census_items(items)
@@ -26,8 +35,9 @@ def main() -> dict:
     doc = {
         "by_file": by,
         **tot,
-        "complete": tot["n_lbs_complete"] == tot["n_mcq_eligible"] == tot["n_modify_seeds"]
-        and tot["n_mcq_eligible"] <= tot["n_mcq_key"],
+        "complete": tot["n_lbs_relevant"] == tot["n_mcq_eligible"] == tot["n_modify_seeds"]
+        and tot["n_mcq_eligible"] <= tot["n_mcq_key"]
+        and tot["n_stamp"] == 0,
         "n_skipped_no_options": tot["n_mcq_key"] - tot["n_mcq_eligible"],
     }
     return doc

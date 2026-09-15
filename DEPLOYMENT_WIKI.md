@@ -240,13 +240,13 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 **Solution.** A **complete TTwin question** is overlay, not a freeze rewrite:
 
 1. Existing five-click tags (`pack`, `subject`, `big_idea_id`, `chapter_id`, `subtopic_id`).
-2. **Learn-by-solve** under `assessment.learn_by_solve`: a hinge solve plus one follow-up MCQ for **every wrong A–D option** when `mcq_key` is available. Runtime is a JSON lookup. V2 mx types (`term_substitution` · `condition_omission` · `relationship_reversal` · `scope_error` · `surface_feature_capture` · `mechanism_conflation` · `operation_confusion`) sit on the teacher key only — never on the learner paper.
+2. **Learn-by-solve** under `assessment.learn_by_solve`: a hinge solve plus one follow-up MCQ for **every wrong A–D option** when `mcq_key` is available. Each follow-up is an **option-specific unlocking question** about that option’s content (approved gold: `9701_m16_qp_12:q1` — B = OH oxidation states in Mg(OH)₂, C = S in Na₂SO₄, D = Cl in NH₄Cl; spectroscopy banks are the same pattern). Generic/template stems (`Which check is required?`, `Which claim does the item actually require?`, `What did they drop?`, `The keyed choice is …`) are **not complete**. Runtime is a JSON lookup. V2 mx types (`term_substitution` · `condition_omission` · `relationship_reversal` · `scope_error` · `surface_feature_capture` · `mechanism_conflation` · `operation_confusion`) sit on the teacher key only — never on the learner paper.
 3. **Examiner comments** under `assessment.examiner_comment` when the Cambridge extract has them. Never invented.
 4. **Modify seeds** under `assessment.modify_seeds`: T-MOD instruction stubs from the admitted mx for that item. Session-only; no new freeze uid.
 
-Construction: `tools/lbs_construct.py`. Join: `tools/join_lbs.py` (also called from `build_data.py`). Structured / open items with no MCQ key stay complete without fabricated A–D follow-ups.
+Construction: `tools/lbs_construct.py` (option-anchored unlocking questions) plus hand overlay `data/overlay/lbs_gold.json` and spectroscopy `data/spectra/lbs.json`. Join: `tools/join_lbs.py` (also called from `build_data.py`). Overlay never rewrites freeze exam.v1. Structured / open items with no MCQ key stay complete without fabricated A–D follow-ups. Examiner comments stay extract-only (never invented).
 
-**Deploy check.** Census `n_lbs_complete == n_mcq_eligible`. Student-take: a wrong A–D opens the follow-up in place (no mx_type). Teacher answer key lists solve, per-wrong follow-up, and mx type. Modify panel shows seed buttons. Filter menus show big-idea / concept / sub-concept **names only** (no C6, B1, `cam:` codes).
+**Deploy check.** Census `n_lbs_relevant == n_mcq_eligible` and `n_stamp == 0` (template banks do not count). Student-take: a wrong A–D opens the follow-up in place (no mx_type). Teacher answer key lists solve, per-wrong follow-up, and mx type. Modify panel shows seed buttons. Filter menus show big-idea / concept / sub-concept **names only** (no C6, B1, `cam:` codes). Spot: `9701_m16_qp_12:q1` gold follow-ups still name Mg(OH)₂ / Na₂SO₄ / NH₄Cl.
 
 ---
 

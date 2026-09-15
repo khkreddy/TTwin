@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.lbs.gold.v1",
+  "note": "Hand-authored learn-by-solve. Do not overwrite with the template constructor. mx_type is teacher-key only.",
+  "items": {
+    "9701_m16_qp_12:q1": {
+      "solve": "HClO (HOCl): H is +1, O is −2, so Cl is +1. Hydrogen and chlorine are two different elements with the same oxidation state. Mg(OH)₂ is Mg +2, O −2, H +1 — three different states; two OH groups are the same elements repeated, not two different elements sharing a state. Na₂SO₄ is Na +1, S +6, O −2. NH₄Cl is N −3, H +1, Cl −1. Only HClO has a matching pair.",
+      "key": "A",
+      "wrong": {
+        "B": {
+          "mx_type": "scope_error",
+          "pathway": "Student reads (OH)₂ as ‘two elements with the same oxidation state’: two hydroxide units are the same two elements repeated, and in OH oxygen is −2 while hydrogen is +1.",
+          "followup": {
+            "stem": "Mg(OH)₂ has two hydroxide groups. In each OH, what are the oxidation states of O and H?",
+            "options": {
+              "A": "Both −1, so two different elements share the same state",
+              "B": "O is −2 and H is +1, so O and H do not share a state",
+              "C": "Both +1, matching magnesium",
+              "D": "O is −1 and H is −1 because OH is the hydroxide ion"
+            },
+            "key": "B",
+            "why": "Hydroxide is O −2 and H +1. Repeating OH twice does not create two different elements with the same oxidation state. Magnesium is +2, which matches neither."
+          }
+        },
+        "C": {
+          "mx_type": "operation_confusion",
+          "pathway": "Student does not complete 2(+1) + S + 4(−2) = 0 for Na₂SO₄, so they never see Na +1, S +6, O −2 as three different states (or they use sulfite S +4).",
+          "followup": {
+            "stem": "In Na₂SO₄, Na is +1 and O is −2. What is the oxidation state of S?",
+            "options": {
+              "A": "+2",
+              "B": "+4 (as in sulfite)",
+              "C": "+6",
+              "D": "−2"
+            },
+            "key": "C",
+            "why": "2(+1) + S + 4(−2) = 0 gives S = +6. The three elements are +1, +6 and −2. No two different elements share a state. Two sodium atoms are the same element."
+          }
+        },
+        "D": {
+          "mx_type": "term_substitution",
+          "pathway": "Student assigns Cl in NH₄Cl as +1 (as in HCl or HClO) so that H +1 and Cl +1 look like a matching pair. Chlorine here is chloride, Cl −1.",
+          "followup": {
+            "stem": "What is the oxidation state of chlorine in NH₄Cl?",
+            "options": {
+              "A": "+1, as in HClO",
+              "B": "−1, as chloride",
+              "C": "+5, as in chlorate",
+              "D": "0, as Cl₂"
+            },
+            "key": "B",
+            "why": "NH₄Cl is ammonium chloride: Cl is −1. Nitrogen in NH₄⁺ is −3 and hydrogen is +1. None of N, H and Cl share an oxidation state. Cl +1 is the HClO assignment, not this salt."
+          }
+        }
+      },
+      "modify_seeds": [
+        {
+          "id": "B:scope_error",
+          "letter": "B",
+          "mx_type": "scope_error",
+          "label": "If B · two OH groups as ‘two elements’",
+          "instruction": "Rewrite this oxidation-state item so option B remains the trap for a student who treats two repeated hydroxide groups as two different elements with the same oxidation state. Keep a compound in which O is −2 and H is +1. Rewrite the stem and all four options as one coherent item. Do not print mix-up labels. Recalculate the key."
+        },
+        {
+          "id": "C:operation_confusion",
+          "letter": "C",
+          "mx_type": "operation_confusion",
+          "label": "If C · sulfur OS in sulfate",
+          "instruction": "Rewrite this oxidation-state item so option C remains the trap for a student who assigns sulfur in a sulfate as +4 (sulfite) or who drops the factor of four oxygens in 2(+1)+S+4(−2)=0. Keep a sulfate whose elements are +1, +6 and −2. Rewrite the stem and all four options as one coherent item. Do not print mix-up labels. Recalculate the key."
+        },
+        {
+          "id": "D:term_substitution",
+          "letter": "D",
+          "mx_type": "term_substitution",
+          "label": "If D · Cl in chloride vs HClO",
+          "instruction": "Rewrite this oxidation-state item so option D remains the trap for a student who gives chlorine in an ammonium halide the oxidation state +1 (as in HClO) instead of −1 as chloride. Keep N −3, H +1, Cl −1 on the trap compound. Rewrite the stem and all four options as one coherent item. Do not print mix-up labels. Recalculate the key."
+        }
+      ]
+    }
+  }
+}

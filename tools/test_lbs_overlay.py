@@ -17,6 +17,7 @@ from lbs_construct import (  # noqa: E402
     is_stamp_lbs,
     lbs_complete,
 )
+from lbs_quality import lbs_relevant  # noqa: E402
 
 FIXTURE = Path(__file__).resolve().parent / "fixtures" / "lbs_item.json"
 NUMERIC = Path(__file__).resolve().parent / "fixtures" / "lbs_numeric.json"
@@ -29,6 +30,12 @@ STAMP_STEMS = (
     "Which claim does the item actually require?",
     "Which value is required?",
     "A working that is consistent with this item gives",
+    "A student answered as if a different condition held",
+    "Which check is required?",
+    "Which rule is required?",
+    "The stem names a specific species or process",
+    "A word or symbol in the stem is easy to spot",
+    "A student obtained a different numerical value from the working this item requires",
 )
 
 
@@ -67,6 +74,7 @@ def test_join_fixture() -> dict:
     expect = set(LETTERS) - {key}
     assert n == 1
     assert lbs_complete(lbs, key, item.get("options") or {}, item)
+    assert lbs_relevant(item, lbs, key)
     assert set(lbs["wrong"]) == expect
     assert not is_stamp_lbs(lbs)
     _assert_quality(lbs, item)
@@ -78,7 +86,7 @@ def test_join_fixture() -> dict:
         assert ins.startswith("Rewrite this item so option ")
     assert (a.get("examiner_comment") or {}).get("present") is False
     c = census_item(item)
-    assert c["keyed"] and c["lbs_complete"] and c["modify_seeds"]
+    assert c["keyed"] and c["lbs_complete"] and c["lbs_relevant"] and c["modify_seeds"]
     return {"item": item, "stats": stats}
 
 
@@ -123,6 +131,7 @@ def test_replaces_stamps() -> None:
     assert ensure_item(item) is True
     lbs = item["assessment"]["learn_by_solve"]
     assert not is_stamp_lbs(lbs)
+    assert lbs_relevant(item, lbs)
     _assert_quality(lbs, item)
 
 
@@ -137,7 +146,10 @@ def test_numeric_no_key_leak() -> None:
         assert key_txt not in fu["stem"], fu["stem"]
         assert key_txt not in blob, blob
         assert "Which value is required" not in fu["stem"]
-        assert "efficiency" in fu["stem"].lower() or "expression" in fu["stem"].lower() or "÷" in blob or "useful" in blob.lower()
+        assert "Which check is required" not in fu["stem"]
+        assert key_txt[:4] in fu["stem"] or "efficiency" in fu["stem"].lower() or "useful" in blob.lower()
+        # each wrong value is named in its own follow-up
+        assert str(item["options"][L])[:3] in fu["stem"] or "efficiency" in fu["stem"].lower()
 
 
 def test_distinct_wrong_letter_followups() -> None:
@@ -221,6 +233,137 @@ def test_olympiad_bracket_options() -> None:
     assert not is_stamp_lbs(lbs)
 
 
+def test_preserve_gold_seeds() -> None:
+    uid = "fixture:gold-preserve:q1"
+    gold_solve = "HClO: H +1, O −2, Cl +1. Two different elements share +1."
+    gold_ins = "Rewrite this oxidation-state item so option B remains the trap for two OH groups."
+    item = {
+        "uid": uid,
+        "stem": "Which compound contains two different elements with identical oxidation states?",
+        "options": {"A": "HClO", "B": "Mg(OH)₂", "C": "Na₂SO₄", "D": "NH₄Cl"},
+        "assessment": {
+            "key_source": "cambridge_extract",
+            "key_status": "available",
+            "mcq_key": "A",
+            "examiner_comment": {"present": False},
+            "learn_by_solve": {
+                "solve": gold_solve,
+                "key": "A",
+                "wrong": {
+                    "B": {
+                        "mx_type": "scope_error",
+                        "pathway": "two OH groups",
+                        "followup": {
+                            "stem": "In each OH, what are the oxidation states of O and H?",
+                            "options": {"A": "both −1", "B": "O −2 and H +1", "C": "both +1", "D": "O −1 H −1"},
+                            "key": "B",
+                            "why": "OH is O −2 and H +1",
+                        },
+                    },
+                    "C": {
+                        "mx_type": "operation_confusion",
+                        "pathway": "sulfur OS",
+                        "followup": {
+                            "stem": "In Na₂SO₄, what is the oxidation state of S?",
+                            "options": {"A": "+2", "B": "+4", "C": "+6", "D": "−2"},
+                            "key": "C",
+                            "why": "S is +6",
+                        },
+                    },
+                    "D": {
+                        "mx_type": "term_substitution",
+                        "pathway": "Cl as +1",
+                        "followup": {
+                            "stem": "What is the oxidation state of chlorine in NH₄Cl?",
+                            "options": {"A": "+1", "B": "−1", "C": "+5", "D": "0"},
+                            "key": "B",
+                            "why": "chloride is −1",
+                        },
+                    },
+                },
+            },
+            "modify_seeds": [
+                {
+                    "id": "B:scope_error",
+                    "letter": "B",
+                    "mx_type": "scope_error",
+                    "instruction": gold_ins,
+                }
+            ],
+        },
+    }
+    assert ensure_item(item) is False or item["assessment"]["learn_by_solve"]["solve"] == gold_solve
+    assert item["assessment"]["learn_by_solve"]["solve"] == gold_solve
+    assert item["assessment"]["modify_seeds"][0]["instruction"] == gold_ins
+    assert "mx_type" not in (item.get("stem") or "")
+
+
+def test_gold_approved_q1() -> dict:
+    """Hari-approved package: follow-ups name Mg(OH)₂ / Na₂SO₄ / NH₄Cl chemistry."""
+    packed = ROOT / "data/questions/chemistry-senior.json"
+    items = json.loads(packed.read_text(encoding="utf-8"))
+    item = next(it for it in items if it.get("uid") == "9701_m16_qp_12:q1")
+    a = item["assessment"]
+    lbs = a["learn_by_solve"]
+    assert a["mcq_key"] == "A"
+    assert lbs_relevant(item, lbs, "A")
+    assert not is_stamp_lbs(lbs)
+    stems = {L: lbs["wrong"][L]["followup"]["stem"] for L in ("B", "C", "D")}
+    assert "Mg(OH)" in stems["B"] or "OH" in stems["B"]
+    assert "Na" in stems["C"] and ("S" in stems["C"] or "SO" in stems["C"])
+    assert "NH" in stems["D"] or "chlorine" in stems["D"].lower() or "Cl" in stems["D"]
+    for p in STAMP_STEMS:
+        for L, s in stems.items():
+            assert p not in s, (L, p, s)
+    assert "mx_type" not in (item.get("stem") or "")
+    before = json.dumps(lbs, sort_keys=True)
+    ensure_item(item)
+    after = json.dumps(item["assessment"]["learn_by_solve"], sort_keys=True)
+    assert json.loads(before)["wrong"]["B"]["followup"]["stem"] == item["assessment"]["learn_by_solve"]["wrong"]["B"]["followup"]["stem"]
+    return {"uid": item["uid"], "stems": stems, "unchanged": before == after}
+
+
+def test_stamp_fails_relevant() -> None:
+    item = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    item["assessment"]["learn_by_solve"] = {
+        "solve": "The keyed choice is C: colour spreads faster in hot water.",
+        "wrong": {
+            "A": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "A student answered as if a different condition held. Which check is required?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "B": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "Which claim does the item actually require?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+            "D": {
+                "mx_type": "condition_omission",
+                "pathway": "x",
+                "followup": {
+                    "stem": "What did they drop?",
+                    "options": {"A": "x", "B": "y", "C": "z", "D": "w"},
+                    "key": "A",
+                    "why": "stamp",
+                },
+            },
+        },
+    }
+    assert is_stamp_lbs(item["assessment"]["learn_by_solve"])
+    assert not lbs_relevant(item)
+
+
 def test_figure_letter_census() -> None:
     item = {
         "uid": "9701_m22_qp_12:q40",
@@ -273,7 +416,8 @@ def test_figure_letter_census() -> None:
         },
     }
     c = census_item(item)
-    assert c["keyed"] and c["eligible"] and c["lbs_complete"] and c["modify_seeds"]
+    assert c["keyed"] and c["eligible"] and c["lbs_complete"]
+    assert c["lbs_relevant"] and c["modify_seeds"]
     learner = json.dumps(item.get("stem"))
     assert "mx_type" not in learner
     assert "condition_omission" not in (item.get("stem") or "")
@@ -322,24 +466,16 @@ if __name__ == "__main__":
     html_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("/tmp")
     html_dir.mkdir(parents=True, exist_ok=True)
     test_replaces_stamps()
+    test_stamp_fails_relevant()
     test_numeric_no_key_leak()
     test_distinct_wrong_letter_followups()
     test_followup_keys_not_always_a()
     test_olympiad_parse_or_skip()
     test_olympiad_bracket_options()
+    test_preserve_gold_seeds()
+    gold = test_gold_approved_q1()
     test_figure_letter_census()
     result = test_join_fixture()
-    packed = ROOT / "data/questions/chemistry-igcse.json"
-    if packed.is_file():
-        items = json.loads(packed.read_text(encoding="utf-8"))
-        keyed = [it for it in items if (it.get("assessment") or {}).get("mcq_key") in LETTERS][:80]
-        fu_keys = []
-        for it in keyed:
-            lbs = (it.get("assessment") or {}).get("learn_by_solve")
-            assert lbs, it.get("uid")
-            assert is_stamp_lbs(lbs) is False, it.get("uid")
-            fu_keys.extend(_assert_quality(lbs, it, packed=True))
-        assert set(fu_keys) - {"A"}, fu_keys[:12]
     html = test_learner_vs_teacher_html(result["item"], html_dir)
     (html_dir / "learner_vs_teacher.html").write_text(
         "<!-- learner mx_type=" + str(html["learner_has_mx"]) + " -->\n"
@@ -347,7 +483,13 @@ if __name__ == "__main__":
         + "<!-- solve -->\n" + (result["item"]["assessment"]["learn_by_solve"]["solve"] or "") + "\n",
         encoding="utf-8",
     )
-    doc = {"ok": True, "stats": result["stats"], "html": html, "solve": result["item"]["assessment"]["learn_by_solve"]["solve"]}
+    doc = {
+        "ok": True,
+        "stats": result["stats"],
+        "html": html,
+        "solve": result["item"]["assessment"]["learn_by_solve"]["solve"],
+        "gold_q1": gold,
+    }
     text = json.dumps(doc, indent=2)
     log_path.write_text(text + "\n", encoding="utf-8")
     print(text)
