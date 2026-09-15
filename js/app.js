@@ -875,6 +875,20 @@
         });
         return;
       }
+      const seedBtn = e.target.closest(".q-mod-seed");
+      if (seedBtn) {
+        const uid = seedBtn.getAttribute("data-uid");
+        const i = itemIndex(uid);
+        const it = i >= 0 ? p.items[i] : null;
+        const seeds = (it && it.assessment && it.assessment.modify_seeds) || [];
+        const seed = seeds[+seedBtn.getAttribute("data-seed")];
+        const art = seedBtn.closest("article.q");
+        const ta = art && art.querySelector(".q-mod-text");
+        const box = art && art.querySelector(".q-mod");
+        if (box) box.classList.remove("hidden");
+        if (ta && seed && seed.instruction) ta.value = seed.instruction;
+        return;
+      }
       const open = e.target.closest(".q-mod-open");
       if (open) {
         const art = open.closest("article.q");

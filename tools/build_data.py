@@ -1537,6 +1537,18 @@ def main() -> int:
     except Exception as e:
         print("  spectra overlay skipped:", e)
 
+    print("join corpus learn-by-solve + modify seeds…")
+    try:
+        from join_lbs import join_all
+
+        lbs_stats = join_all(OUT.parent)
+        meta["n_mcq_key"] = lbs_stats.get("n_mcq_key")
+        meta["n_lbs_complete"] = lbs_stats.get("n_lbs_complete")
+        meta["n_modify_seeds"] = lbs_stats.get("n_modify_seeds")
+        print("  lbs", lbs_stats.get("n_lbs_complete"), "/", lbs_stats.get("n_mcq_key"))
+    except Exception as e:
+        print("  lbs join skipped:", e)
+
     print("writing catalog…")
     dump(OUT / "subjects.json", subjects_doc)
     dump(OUT / "meta.json", meta)

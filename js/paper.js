@@ -188,12 +188,20 @@
   function toolsHTML(it, opts) {
     if (!opts || !opts.teacherTools) return "";
     const uid = it.uid || it.item_uid || "";
+    const seeds = (it.assessment && it.assessment.modify_seeds) || [];
+    const seedBtns = seeds.length
+      ? "<p class='mod-seeds'>" + seeds.map(function (s, i) {
+          return "<button type='button' class='sec q-mod-seed' data-uid='" + esc(uid) +
+            "' data-seed='" + i + "'>" + esc(s.label || ("seed " + (i + 1))) + "</button>";
+        }).join(" ") + "</p>"
+      : "";
     return "<div class='q-tools no-print'>" +
       "<button type='button' class='sec q-mod-open' data-uid='" + esc(uid) + "'>Modify</button>" +
       (it.modified ? "<span class='tag'>modified</span>" : "") +
       "<div class='q-mod hidden'>" +
       "<label>How should this item change?</label>" +
-      "<textarea class='q-mod-text' placeholder='Change the numbers, the species, the figure, or the mix-up. Stem and all four options will be rewritten to match.'></textarea>" +
+      seedBtns +
+      "<textarea class='q-mod-text' placeholder='Change the numbers, the species, the figure, or the mix-up. Stem and all four options will be rewritten to match. Or pick a mix-up seed above.'></textarea>" +
       "<p><button type='button' class='q-mod-go' data-uid='" + esc(uid) + "'>Apply modify</button> " +
       "<button type='button' class='sec q-mod-revert' data-uid='" + esc(uid) + "'>Revert</button> " +
       "<span class='muted q-mod-status'></span></p></div></div>";

@@ -233,6 +233,23 @@ Default `reasoning_effort` is `"max"`; with `max_tokens` 8192 the browser fetch 
 
 ---
 
+## D21 · Complete TTwin question (learn-by-solve + Mx modify seeds)
+
+**Symptom.** Only the 9701 spectroscopy slice had precomputed follow-ups. Modify was a blank instruction box. The packed schema did not state what “complete” means.
+
+**Solution.** A **complete TTwin question** is overlay, not a freeze rewrite:
+
+1. Existing five-click tags (`pack`, `subject`, `big_idea_id`, `chapter_id`, `subtopic_id`).
+2. **Learn-by-solve** under `assessment.learn_by_solve`: a hinge solve plus one follow-up MCQ for **every wrong A–D option** when `mcq_key` is available. Runtime is a JSON lookup. V2 mx types (`term_substitution` · `condition_omission` · `relationship_reversal` · `scope_error` · `surface_feature_capture` · `mechanism_conflation` · `operation_confusion`) sit on the teacher key only — never on the learner paper.
+3. **Examiner comments** under `assessment.examiner_comment` when the Cambridge extract has them. Never invented.
+4. **Modify seeds** under `assessment.modify_seeds`: T-MOD instruction stubs from the admitted mx for that item. Session-only; no new freeze uid.
+
+Construction: `tools/lbs_construct.py`. Join: `tools/join_lbs.py` (also called from `build_data.py`). Structured / open items with no MCQ key stay complete without fabricated A–D follow-ups.
+
+**Deploy check.** Census `n_lbs_complete == n_mcq_key` and `n_modify_seeds == n_mcq_key`. Student-take HTML for a follow-up does not contain `mx_type`. Teacher answer key lists solve, per-wrong follow-up, and mx type. Modify panel shows seed buttons that fill the T-MOD instruction.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.

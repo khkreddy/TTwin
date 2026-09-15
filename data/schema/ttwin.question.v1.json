@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "ttwin.question.v1",
   "title": "TTwin question pack item",
-  "description": "Shipped per-item contract. Learner paper is the top-level stem/options/figures. Answer key and examiner comments live only under assessment. Frozen exam.v1 is not rewritten. Join key is uid (bare item_uid, never tm:).",
+  "description": "Shipped per-item contract. A complete TTwin question keeps five-click tags (pack, subject, big_idea_id, chapter_id, subtopic_id), learner stem/options/figures, and under assessment: extracted examiner comments where available (never invented), learn-by-solve follow-ups for every wrong MCQ option when a key is available, and Mx-library modify seeds for T-MOD. Mix-up type names are teacher-key only. Frozen exam.v1 is not rewritten. Join key is uid (bare item_uid, never tm:).",
   "type": "object",
   "required": ["uid", "subject", "pack", "node", "chapter_id", "subtopic_id", "stem", "item_type", "assessment"],
   "properties": {
@@ -76,7 +76,11 @@
         },
         "learn_by_solve": {
           "type": ["object", "null"],
-          "description": "Teacher-only. Per-wrong-option follow-up bank. Learner renderer must not print mx_type."
+          "description": "Teacher-only overlay. Hinge solve plus one follow-up MCQ per wrong A–D option. Learner renderer must not print mx_type."
+        },
+        "modify_seeds": {
+          "type": ["array", "null"],
+          "description": "Teacher-only T-MOD instruction stubs derived from the Mx library (V2 types). Session-only modify; no new freeze uid. Never printed on the learner paper."
         }
       }
     }
