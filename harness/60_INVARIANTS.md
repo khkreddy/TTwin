@@ -11,8 +11,8 @@ If an invariant cannot be enforced, **say so** (DEGRADE HONESTLY or DEFER / DARK
 | Id | Law | Status | TTwin now | Waits for |
 |---|---|---|---|---|
 | I1 | Skill-only success | ENFORCE NOW | Credit only on unaided scored five-ID items in the 20,792-stem pool. Take mode has no AI path. | Maths stems |
-| I2 | No assisted credit | ENFORCE NOW | Take mode has no hints; all student AI gated on Finish; Modify-touched items are CANDIDATE, credit-excluded | — |
-| I3 | Generative error correction | DEGRADE HONESTLY | After feedback, the student must produce the correction (re-answer / notebook). No mastery weight. Do not show the key before they try again. No constructed-response grading. | Open-response (Phy-500) |
+| I2 | No assisted credit | ENFORCE NOW | LBS hint is a **different** question; it does not credit the original. Student AI still gated on Finish. Modify-touched items are CANDIDATE, credit-excluded. The original key is not shown on the hint. | — |
+| I3 | Generative error correction | ENFORCE NOW (LBS retry) | After the hint `why`, the student re-answers the **original** item (response cleared). No mastery weight from the hint. Do not show the original key before they try again. | Open-response (Phy-500) |
 | I4 | Anti-guessing | DEGRADE HONESTLY | MCQ correct = weak evidence; row-select stronger where present; one sitting never grants mastery | Constructed response, isomorphs |
 | I5 | No immediate mastery | ENFORCE NOW | Same-session ceiling is EVIDENCED / PROGRESS_EVIDENCE | — |
 | I6 | No identical-item mastery | ENFORCE NOW | Re-probe needs a different `item_uid`. With families DARK, no mastery claims at all | Isomorph families |

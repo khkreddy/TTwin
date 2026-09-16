@@ -881,6 +881,21 @@
     host.addEventListener("click", (e) => {
       const p = S.paper;
       if (!p) return;
+      const retryBtn = e.target.closest("[data-lbs-retry]");
+      if (retryBtn && p.mode === "student" && !p.result) {
+        const uid = retryBtn.getAttribute("data-lbs-retry");
+        if (!uid) return;
+        p.lbs_stage = p.lbs_stage || {};
+        const st = p.lbs_stage[uid] || {};
+        st.retry = true;
+        st.done = true;
+        p.lbs_stage[uid] = st;
+        if (p.responses) delete p.responses[uid];
+        replaceArticle(uid);
+        const art = host.querySelector("article.q[data-uid=\"" + uid.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"]");
+        if (art && art.scrollIntoView) art.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return;
+      }
       const opt = e.target.closest("button.opt[data-opt], button.opt[data-fu-opt], tr.opt-row[data-opt]");
       if (opt && p.mode === "student" && !p.result) {
         const art = opt.closest("article.q");

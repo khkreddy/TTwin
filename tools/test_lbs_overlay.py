@@ -823,6 +823,79 @@ def test_figure_letter_census() -> None:
     assert "condition_omission" not in (item.get("stem") or "")
 
 
+def test_hint_does_not_reveal_original_key() -> None:
+    packed = ROOT / "data/questions/chemistry-senior.json"
+    items = json.loads(packed.read_text(encoding="utf-8"))
+    item = next(it for it in items if it.get("uid") == "9701_m16_qp_12:q1")
+    payload = ROOT / "tools" / "fixtures" / "_tmp_lbs_html.json"
+    payload.write_text(json.dumps(item), encoding="utf-8")
+    js = r"""
+const fs = require('fs');
+const item = JSON.parse(fs.readFileSync(process.argv[1], 'utf8'));
+const window = global;
+eval(fs.readFileSync('js/paper.js', 'utf8'));
+if (!global.TTwinPaper) throw new Error('TTwinPaper missing');
+const uid = item.uid;
+const orig = (item.assessment && item.assessment.mcq_key) || '';
+const done = TTwinPaper.itemHTML(item, 0, {
+  interactive: true, showUid: false, teacherTools: false,
+  lbsStage: { [uid]: { from: 'B', followup_choice: 'B', done: true, retry: false } }
+});
+if (/Original question: the key is/.test(done)) throw new Error('donated original key');
+if (orig && new RegExp('the key is\\s*<b>\\s*'+orig).test(done)) throw new Error('key letter leaked');
+if (!/data-lbs-retry/.test(done)) throw new Error('missing retry');
+if (!/lbs-why/.test(done) && !/Hydroxide/.test(done)) throw new Error('missing hint why');
+const retry = TTwinPaper.itemHTML(item, 0, {
+  interactive: true, showUid: false, teacherTools: false,
+  lbsStage: { [uid]: { from: 'B', followup_choice: 'B', done: true, retry: true } }
+});
+if (/data-opt='A'[^>]*disabled/.test(retry) && /Try the original/.test(retry)) throw new Error('still locked after retry');
+if (/Original question: the key is/.test(retry)) throw new Error('key on retry');
+process.stdout.write(JSON.stringify({ ok: true, has_retry: /data-lbs-retry/.test(done) }));
+"""
+    r = subprocess.run(["node", "-e", js, str(payload)], cwd=str(ROOT), capture_output=True, text=True, timeout=20)
+    payload.unlink(missing_ok=True)
+    if r.returncode != 0:
+        raise SystemExit("hint key-leak test failed:\n" + r.stderr + r.stdout)
+    assert json.loads(r.stdout)["has_retry"]
+
+
+def test_electrochem_overlay_protocol() -> dict:
+    overlay = ROOT / "data/overlay/lbs_electrochem.json"
+    packed = ROOT / "data/questions/chemistry-senior.json"
+    assert overlay.is_file(), "electrochem overlay missing"
+    doc = json.loads(overlay.read_text(encoding="utf-8"))
+    items = json.loads(packed.read_text(encoding="utf-8"))
+    ec = [
+        it
+        for it in items
+        if it.get("pack") == "senior_11_12_as_a"
+        and (it.get("chapter_id") == "cam:9701:6" or it.get("chapter_label") == "Electrochemistry")
+        and (it.get("assessment") or {}).get("mcq_key") in LETTERS
+    ]
+    gold = next(it for it in ec if it.get("uid") == "9701_m16_qp_12:q1")
+    lbs = gold["assessment"]["learn_by_solve"]
+    assert "Mg(OH)" in lbs["wrong"]["B"]["followup"]["stem"] or "OH" in lbs["wrong"]["B"]["followup"]["stem"]
+    n_ov = 0
+    n_hinge = 0
+    for it in ec:
+        uid = it["uid"]
+        rec = (it.get("assessment") or {}).get("learn_by_solve") or {}
+        assert rec.get("wrong"), uid
+        assert not is_stamp_lbs(rec), uid
+        assert lbs_relevant(it, rec, it["assessment"]["mcq_key"]), uid
+        if uid in doc.get("items", {}) or uid == "9701_m16_qp_12:q1":
+            n_ov += 1
+        row = next(iter(rec["wrong"].values()))
+        if row.get("hinge_id") or rec.get("hinge_id"):
+            n_hinge += 1
+        for L, w in rec["wrong"].items():
+            why = (w.get("followup") or {}).get("why") or ""
+            assert "the key is" not in why.lower()
+            assert "original question" not in why.lower()
+    return {"n_ec": len(ec), "n_overlay_or_gold": n_ov, "n_hinge": n_hinge}
+
+
 def test_learner_vs_teacher_html(item: dict, out_dir: Path) -> dict:
     payload = out_dir / "lbs_html_item.json"
     payload.write_text(json.dumps(item), encoding="utf-8")
@@ -882,6 +955,8 @@ if __name__ == "__main__":
     test_olympiad_bracket_options()
     test_preserve_gold_seeds()
     gold = test_gold_approved_q1()
+    test_hint_does_not_reveal_original_key()
+    eco = test_electrochem_overlay_protocol()
     test_figure_letter_census()
     result = test_join_fixture()
     html = test_learner_vs_teacher_html(result["item"], html_dir)
@@ -897,6 +972,7 @@ if __name__ == "__main__":
         "html": html,
         "solve": result["item"]["assessment"]["learn_by_solve"]["solve"],
         "gold_q1": gold,
+        "electrochem": eco,
     }
     text = json.dumps(doc, indent=2)
     log_path.write_text(text + "\n", encoding="utf-8")

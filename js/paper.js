@@ -222,7 +222,7 @@
     const optTable = optionTableOf(it);
     const optTableHtml = optTable ? tableHTML(optTable, optOpts) : "";
     const stage = (opts.lbsStage || {})[uid] || {};
-    if (stage.from && !stage.done) optOpts.lbsLocked = true;
+    if (stage.from && !stage.done && !stage.retry) optOpts.lbsLocked = true;
     return (
       "<article class='q' id='q-" + esc(uid) + "' data-uid='" + esc(uid) + "'>" +
       "<div><span class='qnum'>" + esc(n) + "</span>" +
@@ -247,6 +247,13 @@
     const fu = row && row.followup;
     if (!fu) return "";
     const reveal = !!stage.done;
+    const retry = !!stage.retry;
+    if (retry) {
+      let note = "<div class='lbs' id='lbs-" + esc(uid) + "'>";
+      note += "<p class='lbs-prompt'>Use what you just checked, then choose on the original question.</p>";
+      if (fu.why) note += "<p class='lbs-why'>" + esc(fu.why) + "</p>";
+      return note + "</div>";
+    }
     const chosen = optionLetter(stage.followup_choice);
     const key = optionLetter(fu.key);
     const optsMap = fu.options || {};
@@ -265,9 +272,9 @@
     let extra = "";
     if (reveal) {
       if (fu.why) extra += "<p class='lbs-why'>" + esc(fu.why) + "</p>";
-      const orig = extractedKey(it);
-      extra += "<p class='lbs-prompt'>Original question: the key is <b>" + esc(orig || "—") + "</b>.</p>";
-      if (lbs.solve) extra += "<p class='lbs-solve'>" + esc(lbs.solve) + "</p>";
+      extra += "<p class='lbs-prompt'>Do not use this as the original answer. Try the original question again.</p>";
+      extra += "<button type='button' class='lbs-retry' data-lbs-retry='" + esc(uid) +
+        "'>Try the original question again</button>";
     }
     return "<div class='lbs' id='lbs-" + esc(uid) + "'>" +
       "<p class='lbs-prompt'>That choice is not the answer. Think about this first:</p>" +

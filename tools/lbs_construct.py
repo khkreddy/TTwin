@@ -67,6 +67,7 @@ def _overlay_records() -> dict[str, dict]:
     out: dict[str, dict] = {}
     paths = [
         _ROOT / "data" / "spectra" / "lbs.json",
+        _ROOT / "data" / "overlay" / "lbs_electrochem.json",
         _ROOT / "data" / "overlay" / "lbs_gold.json",
     ]
     shard = _ROOT / "data" / "overlay" / "shards"
@@ -1169,7 +1170,7 @@ def lbs_complete(lbs: dict | None, key: str, options: dict | None = None, item: 
 
 
 def _overlay_lbs(rec: dict, key: str) -> dict:
-    lbs = {k: rec[k] for k in ("solve", "wrong", "key") if k in rec}
+    lbs = {k: rec[k] for k in ("solve", "wrong", "key", "hinge_id", "hinge_label") if k in rec}
     if "key" not in lbs:
         lbs["key"] = key
     return lbs

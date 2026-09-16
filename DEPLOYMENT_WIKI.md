@@ -250,6 +250,23 @@ Construction: `tools/lbs_construct.py` (option-anchored unlocking questions) plu
 
 ---
 
+## D22 · ISO-GEN learn-by-solve (hinge + failure mode; no key leak)
+
+**Symptom.** Constructor follow-ups restated the original MCQ. After a hint, student-take printed `Original question: the key is X`, violating instructional integrity (I2/I3): the original answer was donated before a second unaided attempt.
+
+**Solution.** Spec-before-item for each wrong letter (`harness/81_LBS.md`):
+
+1. Take the packed hinge (`node`, chapter, subtopic; map `decision_hinge` when the stem matches).
+2. Name the option’s failure mode: overlooked **intermediate step** (oxidation number, electrode, electron count) or a V2 mix-up.
+3. Author a **simpler question** on that gate about **that option’s content**. `why` explains the hint, never `P`’s keyed letter.
+4. Runtime: miss on `P` → hint MCQ → hint explanation → **Try the original question again** (response cleared, original unlocked). Finish scores the last unaided pick of `P`. Hint does not credit `P`.
+
+Chemistry AS/A **Electrochemistry** (`cam:9701:6`, hubs Redox / Electrochemistry) is the first chapter overlay: `data/overlay/lbs_electrochem.json` via `tools/lbs_electrochem.py`. Gold `9701_m16_qp_12:q1` and spectroscopy banks are preserved. Do not scale other chapters until the owner has checked this pack.
+
+**Deploy check.** Jump `9701_m16_qp_12:q1` as student: pick B → OH oxidation-state hint → why about hydroxide → retry button → original options live, no “the key is A”. Jump `9701_s11_qp_11:q3` (cryolite) and `9701_m18_qp_12:q10` (which is not redox). Teacher key still shows mx types. Cache-bust `index.html` `?v=`.
+
+---
+
 ## Deploy checklist
 
 1. `python3 tools/build_data.py` from a tree that still has exam JSON + comprehensive map.

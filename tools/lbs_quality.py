@@ -233,6 +233,7 @@ def preserve_uids() -> set[str]:
     root = Path(__file__).resolve().parents[1]
     for p in (
         root / "data" / "spectra" / "lbs.json",
+        root / "data" / "overlay" / "lbs_electrochem.json",
         root / "data" / "overlay" / "lbs_gold.json",
     ):
         if not p.is_file():
