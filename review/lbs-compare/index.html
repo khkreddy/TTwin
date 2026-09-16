@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LBS compare · AS/A electrochemistry</title>
+<style>
+  :root { --ink:#14322c; --muted:#4d6a64; --line:#cfe4df; --bg:#f4faf8; --card:#fff; --cur:#1f4e79; --as:#1f6f64; --gap:#8a3b2b; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 16px/1.45 system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  header { background:#12352f; color:#fff; padding:16px 20px; }
+  header h1 { margin:0 0 6px; font-size:1.25rem; }
+  header p { margin:0; max-width:72rem; color:#d7eee9; font-size:.95rem; }
+  .wrap { max-width: 92rem; margin: 0 auto; padding: 16px 20px 48px; }
+  .bar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin: 12px 0 16px; }
+  .bar input, .bar select { font: inherit; padding:6px 8px; border:1px solid var(--line); border-radius:8px; }
+  .bar input[type=search] { min-width: 18rem; }
+  .chip { border:0; background:#e3eee9; color:var(--ink); padding:6px 10px; border-radius:999px; cursor:pointer; font: inherit; }
+  .chip:hover { background:#cfe4df; }
+  .stats { color: var(--muted); font-size:.9rem; }
+  article.q { background: var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:18px; }
+  article.q h2 { margin:0 0 8px; font-size:1.05rem; }
+  .meta { color: var(--muted); font-size:.85rem; margin-bottom:8px; }
+  .stem { white-space: pre-wrap; margin: 0 0 10px; }
+  .opts { margin: 0 0 12px; padding-left: 1.2rem; }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  .col { border:1px solid var(--line); border-radius:10px; padding:10px 12px; background:#fbfdff; }
+  .col.cur { border-top: 4px solid var(--cur); }
+  .col.as { border-top: 4px solid var(--as); }
+  .col h3 { margin:0 0 8px; font-size:.95rem; }
+  .letter { margin: 0 0 10px; padding-bottom:8px; border-bottom:1px dashed var(--line); }
+  .letter:last-child { border-bottom:0; }
+  .k { font-size:.8rem; color: var(--muted); }
+  .why { font-size:.9rem; color:#234; }
+  .explain { margin-top:12px; background:#eef6f3; border-radius:10px; padding:10px 12px; }
+  .explain h3 { margin:0 0 6px; font-size:.95rem; }
+  .gap { color: var(--gap); font-weight: 600; }
+  .same { color: var(--muted); }
+  code { font-size:.85rem; }
+</style>
+<body>
+<header>
+  <h1>AS/A electrochemistry — current LBS vs Astra harness</h1>
+  <p>Current overlay is unchanged. Astra column is a separate compile: Cambridge tags → reviewed grain → map unit (hinge + law + Mx) → thinking-prod instantiate, with <b>zero model calls per question</b>. Read the explanation under each item before deciding which is better.</p>
+</header>
+<div class="wrap">
+  <div class="bar">
+    <input type="search" id="q" placeholder="Jump uid e.g. 9701_m17_qp_12:q33">
+    <select id="filter">
+      <option value="all">All items</option>
+      <option value="diff">Stems differ</option>
+      <option value="same">Stems match current</option>
+      <option value="gap">Has a GAP letter</option>
+      <option value="fallback">Astra used generic OS default</option>
+    </select>
+    <button class="chip" data-jump="9701_m16_qp_12:q1">gold q1</button>
+    <button class="chip" data-jump="9701_m17_qp_12:q33">q33 Cl always −</button>
+    <button class="chip" data-jump="9701_m18_qp_12:q18">q18 sulfur XYZ</button>
+    <button class="chip" data-jump="9701_s11_qp_11:q3">cryolite q3</button>
+    <button class="chip" data-jump="9701_m19_qp_12:q10">FeC₂O₄ q10</button>
+    <span class="stats" id="stats"></span>
+  </div>
+  <p class="stats">How to judge: a better hint names a species or step the student did not just read, cites a map hinge, and does not reprint “2 and 3 only” / “that species”. Generic “oxidised / reduced / unchanged” defaults are honest gaps in join, not a win.</p>
+  <div id="list"></div>
+</div>
+<script>
+const LETTERS = ["A","B","C","D"];
+function esc(s){ return String(s||"").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+function fuBlock(letter, row, side){
+  if (!row) return `<div class="letter"><b>${letter}</b> <span class="gap">no follow-up</span></div>`;
+  const fu = row.followup || {};
+  let body = `<div class="k">${esc(fu.format || "single_mcq")} · key ${esc(JSON.stringify(fu.key))}</div>`;
+  body += `<div class="stem">${esc(fu.stem)}</div>`;
+  if (fu.assertion) body += `<p><b>A.</b> ${esc(fu.assertion)}<br><b>R.</b> ${esc(fu.reason)}</p>`;
+  if (fu.options) {
+    body += "<ul>" + LETTERS.filter(k => fu.options[k] != null).map(k => `<li><b>${k}</b> ${esc(fu.options[k])}</li>`).join("") + "</ul>";
+  }
+  if (fu.terms) body += `<div class="k">terms: ${esc((fu.terms||[]).join(", "))}</div>`;
+  if (fu.why) body += `<div class="why">${esc(fu.why)}</div>`;
+  return `<div class="letter"><b>${letter}</b> ${body}</div>`;
+}
+function itemHTML(it){
+  const key = it.key;
+  const letters = LETTERS.filter(L => L !== key);
+  const ex = it.explain || {};
+  const lex = ex.letters || {};
+  const differ = letters.some(L => lex[L] && lex[L].current_stem && lex[L].astra_stem && lex[L].current_stem !== lex[L].astra_stem);
+  const gap = letters.some(L => lex[L] && lex[L].status === "GAP");
+  const fallback = letters.some(L => lex[L] && lex[L].fallback) || letters.some(L => (lex[L] && (lex[L].astra_stem||"").startsWith("Assign oxidation numbers first")));
+  const same = letters.every(L => !lex[L] || lex[L].same_as_current);
+  let opts = LETTERS.map(L => {
+    const t = (it.options||{})[L];
+    if (t == null || t === "") return "";
+    return `<li><b>${L}${L===key?" (key)":""}.</b> ${esc(t)}</li>`;
+  }).join("");
+  let curCol = letters.map(L => fuBlock(L, (it.current && it.current.wrong && it.current.wrong[L]), "cur")).join("");
+  let asCol = letters.map(L => fuBlock(L, (it.astra && it.astra.wrong && it.astra.wrong[L]), "as")).join("");
+  let bits = letters.map(L => {
+    const row = lex[L] || {};
+    return `<div class="letter"><b>${L}</b> · ${esc(row.status||"")} · unit <code>${esc((ex.unit_id||"").split("/").slice(-2).join("/"))}</code> · guard <code>${esc(ex.guard)}</code><br>
+      route <code>${esc(row.route)}</code> step <code>${esc(row.step_id||"—")}</code> grounding ${esc(row.grounding||"—")}<br>
+      <span class="why">${esc(row.why_this_hint||row.gap||"")}</span>
+      ${row.status==="GAP"?"<div class='gap'>GAP: "+esc(row.gap)+"</div>":""}
+      </div>`;
+  }).join("");
+  return `<article class="q" id="u-${esc(it.uid)}" data-diff="${differ}" data-same="${same}" data-gap="${gap}" data-fallback="${fallback}">
+    <h2>${esc(it.uid)}</h2>
+    <div class="meta">${esc(it.chapter_id)} · ${esc(it.node)} · ${esc(it.subtopic_label||"")} · key ${esc(key)}</div>
+    <p class="stem">${esc(it.stem)}</p>
+    <ul class="opts">${opts}</ul>
+    <div class="grid">
+      <div class="col cur"><h3>Current LBS (kept)</h3>${curCol || "<p class='gap'>none on this overlay</p>"}</div>
+      <div class="col as"><h3>Astra harness LBS</h3>${asCol || "<p class='gap'>none proved</p>"}</div>
+    </div>
+    <div class="explain">
+      <h3>Why Astra produced this</h3>
+      <p class="k">Join: ${esc((ex.binding_id||""))} → <code>${esc(ex.unit_id)}</code> (${esc(ex.guard)}). Hinge: ${esc((it.astra&&it.astra.hinge_label)||"")}</p>
+      ${bits}
+    </div>
+  </article>`;
+}
+fetch("compare.json").then(r => r.json()).then(doc => {
+  const items = doc.items || [];
+  document.getElementById("stats").textContent =
+    `${doc.n} items · ${doc.n_proved_letters} Astra letters · ${doc.n_gap_letters} gaps · current overlay not modified`;
+  const list = document.getElementById("list");
+  list.innerHTML = items.map(itemHTML).join("");
+  const apply = () => {
+    const q = (document.getElementById("q").value || "").trim().toLowerCase();
+    const f = document.getElementById("filter").value;
+    list.querySelectorAll("article.q").forEach(art => {
+      const uid = (art.querySelector("h2").textContent || "").toLowerCase();
+      let show = !q || uid.includes(q);
+      if (f === "diff") show = show && art.dataset.diff === "true";
+      if (f === "same") show = show && art.dataset.same === "true";
+      if (f === "gap") show = show && art.dataset.gap === "true";
+      if (f === "fallback") show = show && art.dataset.fallback === "true";
+      art.style.display = show ? "" : "none";
+    });
+  };
+  document.getElementById("q").addEventListener("input", apply);
+  document.getElementById("filter").addEventListener("change", apply);
+  document.querySelectorAll("[data-jump]").forEach(btn => btn.addEventListener("click", () => {
+    document.getElementById("q").value = btn.getAttribute("data-jump");
+    document.getElementById("filter").value = "all";
+    apply();
+    const el = document.getElementById("u-" + btn.getAttribute("data-jump"));
+    if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+  }));
+});
+</script>
