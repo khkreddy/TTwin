@@ -38,10 +38,13 @@
 .paper .options button.opt{
   display:flex;gap:.5em;align-items:flex-start;flex-wrap:wrap;
   width:100%;text-align:left;background:#fff;border:2px solid #d5cfc3;
-  border-radius:8px;padding:8px 10px;font:inherit;color:inherit;cursor:pointer;font-weight:400;
+  border-radius:8px;padding:8px 10px;font:inherit;color:#111;cursor:pointer;font-weight:400;
 }
+.paper .options button.opt:disabled{color:#111;background:#f7f4ee;opacity:1}
+.paper .lbs{color:#111}
+.paper .lbs .options button.opt{color:#111;background:#fff}
 .paper .options button.opt:hover{border-color:#1f6f64}
-.paper .options li.sel button.opt{border-color:#1f6f64;background:#e7f2ef}
+.paper .options li.sel button.opt{border-color:#1f6f64;background:#e7f2ef;color:#111}
 .paper .options li.sel button.opt .lab{background:#1f6f64;color:#fff;border-color:#1f6f64}
 .paper .fig img.orig{max-width:100%;height:auto;display:block;margin:0 auto;border:1px solid #d5cfc3}
 .paper .lbs{margin-top:12px;padding:10px 12px;border:1px solid #cfe4df;background:#f4faf8;border-radius:8px}

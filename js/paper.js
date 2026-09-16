@@ -265,7 +265,7 @@
       ? fuChoiceList(keyRaw).map(String)
       : [String(keyRaw == null ? "" : keyRaw)];
     const optsMap = fu.options || {};
-    const use = (letters || Object.keys(optsMap)).filter((k) => optsMap[k] != null);
+    const use = (letters || Object.keys(optsMap)).filter((k) => String(optsMap[k] || "").trim() !== "");
     const toggle = fmt === "multi_mcq" && !reveal;
     return "<ul class='options pick'>" + use.map((k) => {
       const cls = [];
