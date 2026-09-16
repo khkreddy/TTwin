@@ -76,7 +76,7 @@
         },
         "learn_by_solve": {
           "type": ["object", "null"],
-          "description": "ISO-GEN LBS overlay. Spec = packed hinge + that option’s failure mode (intermediate step or V2 mx). Follow-up is a simpler MCQ on that gate; why explains the hint only. Learner renderer must not print mx_type or the original key on the hint. Student retries the original unaided."
+          "description": "ISO-GEN LBS overlay. Spec = packed hinge + that option’s failure mode (intermediate step or V2 mx). Follow-up is a simpler question on that gate (true/false, multi-select, assertion–reason, match, fill-blank with a term bank, or single MCQ). why explains the hint only. Learner renderer must not print mx_type or the original key on the hint. Submitting the hint returns the student to the original unaided."
         },
         "modify_seeds": {
           "type": ["array", "null"],

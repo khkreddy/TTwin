@@ -23,6 +23,7 @@
     const interactive = !!opts.interactive;
     const chosen = optionLetter(opts.chosen);
     const reveal = !!opts.reveal;
+    const locked = reveal || !!opts.lbsLocked;
     const key = optionLetter(opts.correct);
     const showHead = headers.some((h) => String(h || "").trim());
     const thead = showHead
@@ -38,7 +39,7 @@
       if (reveal && chosen && L && chosen === L && key && chosen !== key) cls.push("miss");
       const attrs = [];
       if (cls.length) attrs.push("class='" + cls.join(" ") + "'");
-      if (interactive && L) {
+      if (interactive && L && !locked) {
         attrs.push("data-opt='" + L + "'");
         attrs.push("tabindex='0'");
         attrs.push("role='button'");
@@ -223,6 +224,7 @@
     const optTableHtml = optTable ? tableHTML(optTable, optOpts) : "";
     const stage = (opts.lbsStage || {})[uid] || {};
     if (stage.from && !stage.done && !stage.retry) optOpts.lbsLocked = true;
+    if (stage.done || stage.retry) optOpts.chosen = null;
     return (
       "<article class='q' id='q-" + esc(uid) + "' data-uid='" + esc(uid) + "'>" +
       "<div><span class='qnum'>" + esc(n) + "</span>" +
@@ -237,6 +239,133 @@
       "</article>"
     );
   }
+  function fuFormat(fu) {
+    return (fu && fu.format) || "single_mcq";
+  }
+  function fuKeyLabel(fu) {
+    const k = fu && fu.key;
+    if (k == null || k === "") return "—";
+    if (Array.isArray(k)) return k.join(", ");
+    if (typeof k === "object") {
+      return Object.keys(k).map(function (id) { return id + "→" + k[id]; }).join(", ");
+    }
+    return String(k);
+  }
+  function fuChoiceList(choice) {
+    if (choice == null) return [];
+    if (Array.isArray(choice)) return choice.map((x) => String(x));
+    return [String(choice)];
+  }
+  function fuOptButtons(fu, stage, letters) {
+    const reveal = !!stage.done;
+    const chosen = fuChoiceList(stage.followup_choice);
+    const fmt = fuFormat(fu);
+    const keyRaw = fu.key;
+    const keys = fmt === "multi_mcq"
+      ? fuChoiceList(keyRaw).map(String)
+      : [String(keyRaw == null ? "" : keyRaw)];
+    const optsMap = fu.options || {};
+    const use = (letters || Object.keys(optsMap)).filter((k) => optsMap[k] != null);
+    const toggle = fmt === "multi_mcq" && !reveal;
+    return "<ul class='options pick'>" + use.map((k) => {
+      const cls = [];
+      const on = chosen.indexOf(k) >= 0 || chosen.indexOf(String(k)) >= 0;
+      if (on) cls.push("sel");
+      if (reveal && keys.indexOf(k) >= 0) cls.push("key");
+      if (reveal && on && keys.indexOf(k) < 0) cls.push("miss");
+      const attr = toggle ? "data-fu-toggle='" + k + "'" : "data-fu-opt='" + k + "'";
+      return "<li" + (cls.length ? " class='" + cls.join(" ") + "'" : "") + ">" +
+        "<button type='button' class='opt' " + attr + (reveal ? " disabled" : "") +
+        (on ? " aria-pressed='true'" : "") + ">" +
+        "<span class='lab'>" + esc(k) + "</span> " + chem(optsMap[k] || "") + "</button></li>";
+    }).join("") + "</ul>";
+  }
+  function fuSelect(name, attr, choices, selected) {
+    const opts = ["<option value=''>—</option>"].concat(
+      (choices || []).map((c) => {
+        const v = (c && typeof c === "object") ? String(c.value) : String(c);
+        const lab = (c && typeof c === "object") ? String(c.label) : String(c);
+        return "<option value='" + esc(v) + "'" + (selected === v ? " selected" : "") + ">" +
+          chem(lab) + "</option>";
+      })
+    );
+    return "<select " + attr + " data-fu-field='" + esc(name) + "'>" +
+      opts.join("") + "</select>";
+  }
+  function followupBody(fu, stage, uid) {
+    const fmt = fuFormat(fu);
+    const reveal = !!stage.done;
+    const choice = stage.followup_choice;
+    if (fmt === "true_false") {
+      const opts = fu.options && Object.keys(fu.options).length
+        ? fu.options
+        : { T: "True", F: "False" };
+      const order = ["T", "F", "A", "B"].filter((k) => opts[k] != null);
+      return "<p class='stem'>" + chem(fu.stem || "") + "</p>" +
+        fuOptButtons(Object.assign({}, fu, { options: opts }), stage, order);
+    }
+    if (fmt === "assertion_reason") {
+      let html = "<p class='stem'>" + chem(fu.stem || "Assertion and reason") + "</p>";
+      html += "<div class='lbs-ar'><p><b>Assertion (A).</b> " + chem(fu.assertion || "") + "</p>";
+      html += "<p><b>Reason (R).</b> " + chem(fu.reason || "") + "</p></div>";
+      const opts = fu.options || {
+        A: "Both A and R are true, and R is the correct explanation of A",
+        B: "Both A and R are true, but R is not the correct explanation of A",
+        C: "A is true, but R is false",
+        D: "A is false, but R is true"
+      };
+      return html + fuOptButtons(Object.assign({}, fu, { options: opts }), stage, ["A", "B", "C", "D"]);
+    }
+    if (fmt === "multi_mcq") {
+      let html = "<p class='stem'>" + chem(fu.stem || "") + "</p>";
+      html += "<p class='muted'>Select every statement that applies, then check the hint.</p>";
+      html += fuOptButtons(fu, stage);
+      if (!reveal) {
+        html += "<button type='button' class='lbs-submit' data-fu-submit='multi'>Check this hint</button>";
+      }
+      return html;
+    }
+    if (fmt === "match") {
+      const left = fu.left || {};
+      const right = fu.right || {};
+      const rightKeys = Object.keys(right);
+      const picked = (choice && typeof choice === "object" && !Array.isArray(choice)) ? choice : {};
+      const choices = rightKeys.map((k) => ({ value: k, label: k + " · " + right[k] }));
+      let html = "<p class='stem'>" + chem(fu.stem || "Match each item") + "</p>";
+      html += "<table class='lbs-match'><tbody>";
+      Object.keys(left).forEach((id) => {
+        const sel = picked[id] || "";
+        html += "<tr><th>" + esc(id) + ". " + chem(left[id] || "") + "</th><td>" +
+          fuSelect("match-" + id, "data-fu-match='" + esc(id) + "'", choices, sel) +
+          "</td></tr>";
+      });
+      html += "</tbody></table>";
+      if (!reveal) html += "<button type='button' class='lbs-submit' data-fu-submit='match'>Check this hint</button>";
+      return html;
+    }
+    if (fmt === "fill_blank") {
+      const terms = fu.terms || [];
+      const picked = (choice && typeof choice === "object" && !Array.isArray(choice)) ? choice : {};
+      const raw = fu.stem || "";
+      if (!/\[\[\w+\]\]/.test(raw)) {
+        return followupBody(Object.assign({}, fu, { stem: raw + " [[1]]" }), stage, uid);
+      }
+      let html = "<p class='stem lbs-fill'>";
+      raw.split(/(\[\[\w+\]\])/).forEach((part) => {
+        const m = part.match(/^\[\[(\w+)\]\]$/);
+        if (m) {
+          const id = m[1];
+          html += fuSelect("blank-" + id, "data-fu-blank='" + esc(id) + "'", terms, picked[id] || "");
+        } else {
+          html += chem(part);
+        }
+      });
+      html += "</p>";
+      if (!reveal) html += "<button type='button' class='lbs-submit' data-fu-submit='fill'>Check this hint</button>";
+      return html;
+    }
+    return "<p class='stem'>" + chem(fu.stem || "") + "</p>" + fuOptButtons(fu, stage);
+  }
   function followupHTML(it, opts) {
     if (!opts || !opts.interactive) return "";
     const uid = it.uid || it.item_uid || "";
@@ -246,40 +375,15 @@
     const row = lbs && lbs.wrong && lbs.wrong[stage.from];
     const fu = row && row.followup;
     if (!fu) return "";
-    const reveal = !!stage.done;
-    const retry = !!stage.retry;
-    if (retry) {
-      let note = "<div class='lbs' id='lbs-" + esc(uid) + "'>";
-      note += "<p class='lbs-prompt'>Use what you just checked, then choose on the original question.</p>";
+    if (stage.done || stage.retry) {
+      let note = "<div class='lbs' id='lbs-" + esc(uid) + "' data-lbs-retry='" + esc(uid) + "'>";
+      note += "<p class='lbs-prompt'>Hint used — now choose on the original question.</p>";
       if (fu.why) note += "<p class='lbs-why'>" + esc(fu.why) + "</p>";
       return note + "</div>";
     }
-    const chosen = optionLetter(stage.followup_choice);
-    const key = optionLetter(fu.key);
-    const optsMap = fu.options || {};
-    const keys = ["A", "B", "C", "D"].filter((k) => optsMap[k] != null);
-    const use = keys.length ? keys : ["A", "B", "C", "D"];
-    const lis = use.map((k) => {
-      const cls = [];
-      if (chosen === k) cls.push("sel");
-      if (reveal && key === k) cls.push("key");
-      if (reveal && chosen === k && key && chosen !== key) cls.push("miss");
-      return "<li" + (cls.length ? " class='" + cls.join(" ") + "'" : "") + ">" +
-        "<button type='button' class='opt' data-fu-opt='" + k + "'" + (reveal ? " disabled" : "") +
-        (chosen === k ? " aria-pressed='true'" : "") + ">" +
-        "<span class='lab'>" + k + "</span> " + chem(optsMap[k] || "") + "</button></li>";
-    }).join("");
-    let extra = "";
-    if (reveal) {
-      if (fu.why) extra += "<p class='lbs-why'>" + esc(fu.why) + "</p>";
-      extra += "<p class='lbs-prompt'>Do not use this as the original answer. Try the original question again.</p>";
-      extra += "<button type='button' class='lbs-retry' data-lbs-retry='" + esc(uid) +
-        "'>Try the original question again</button>";
-    }
     return "<div class='lbs' id='lbs-" + esc(uid) + "'>" +
       "<p class='lbs-prompt'>That choice is not the answer. Think about this first:</p>" +
-      "<p class='stem'>" + chem(fu.stem || "") + "</p>" +
-      "<ul class='options pick'>" + lis + "</ul>" + extra + "</div>";
+      followupBody(fu, stage, uid) + "</div>";
   }
   function assessmentSheetHTML(it, i) {
     const a = it && it.assessment;
@@ -309,8 +413,9 @@
         const fu = row.followup || {};
         body += "<div class='mx'><b>If " + esc(k) + "</b> [" + esc(row.mx_type || "") + "] " +
           esc(row.pathway || "") +
-          (fu.stem ? "<div class='muted'><i>Follow-up:</i> " + esc(fu.stem) +
-            " (key " + esc(fu.key || "—") + ")</div>" : "") +
+          (fu.stem ? "<div class='muted'><i>Follow-up" +
+            (fu.format ? " · " + esc(fu.format) : "") + ":</i> " + esc(fu.stem) +
+            " (key " + esc(fuKeyLabel(fu)) + ")</div>" : "") +
           "</div>";
       });
     }
@@ -381,8 +486,9 @@
       const fu = row.followup || {};
       html += "<div class='mx'><b>If " + esc(k) + "</b> [" + esc(row.mx_type || "") + "] " +
         esc(row.pathway || "") +
-        (fu.stem ? "<div class='muted'><i>Follow-up:</i> " + esc(fu.stem) +
-          " (key " + esc(fu.key || "—") + ")</div>" : "") +
+        (fu.stem ? "<div class='muted'><i>Follow-up" +
+          (fu.format ? " · " + esc(fu.format) : "") + ":</i> " + esc(fu.stem) +
+          " (key " + esc(fuKeyLabel(fu)) + ")</div>" : "") +
         "</div>";
     });
     return html;

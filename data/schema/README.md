@@ -23,7 +23,7 @@ A renderer that walks top-level learner fields never prints the key.
 - Otherwise if `ms_text` is non-empty prose → `mark_scheme.text` (verbatim) and `mcq_key: null`.
 - No extracted key → `key_source: "none"`, `key_status: "not_applicable"`, both key fields null.
 - Examiner comment envelope is always present: `{present: false}` or `{present: true, text, comment_sha256?}`. Text is verbatim. Never invent or summarise.
-- `learn_by_solve` (keyed MCQ only): hinge `solve` + `wrong[letter]` with V2 `mx_type`, `pathway`, and a follow-up `{stem, options, key, why}`. Not fabricated for items with no `mcq_key`.
+- `learn_by_solve` (keyed MCQ only): hinge `solve` + `wrong[letter]` with V2 `mx_type`, `pathway`, and a follow-up `{format, stem, key, why, …}`. `format` is `single_mcq` (default), `true_false`, `multi_mcq`, `assertion_reason`, `match`, or `fill_blank` (term bank + `[[id]]` placeholders). Not fabricated for items with no `mcq_key`.
 - `modify_seeds`: T-MOD instruction stubs from those mx rows. Session-only; no new freeze uid.
 - Mix-up type names are never printed on the learner paper.
 - There is no top-level `correct` field.

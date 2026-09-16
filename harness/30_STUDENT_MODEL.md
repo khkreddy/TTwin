@@ -33,7 +33,7 @@ Ledger: append own response and feedback events only.
 
 Must detect, localise, interpret, act **without printing the mix-up ledger** and **without donating the criterion before Finish**.
 
-Learn-by-solve on a wrong letter is a **simpler hinge question**, not the original key (I2, I3; `81_LBS.md`). After the hint explanation the student re-attempts the original unaided. No live coaching that donates the original criterion. Student AI remains gated on Finish.
+Learn-by-solve on a wrong letter is a **simpler hinge question** (true/false, multi-select, assertion–reason, match, fill-blank, or short MCQ), not the original key (I2, I3; `81_LBS.md`). Submitting the hint returns the student to the original unaided. No live coaching that donates the original criterion. Student AI remains gated on Finish.
 
 ### Evaluability-slice timing (I11–I14)
 

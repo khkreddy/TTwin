@@ -28,7 +28,7 @@ from lbs_construct import (
     place,
     seeds_from_lbs,
 )
-from lbs_quality import is_stamp_lbs, lbs_relevant
+from lbs_quality import AR_DEFAULT, followup_ok, is_stamp_lbs, lbs_relevant
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS = ROOT / "data" / "questions" / "chemistry-senior.json"
@@ -130,6 +130,7 @@ def _stmt_set(s: str) -> set[int]:
 def _wrap(row: dict, letter: str, hinge_id: str, hinge_label: str, mx: str, pathway: str, kind: str) -> dict:
     fu = dict(row)
     fu["stem"] = _letter_stem(letter, fu.get("stem") or "")
+    fu.setdefault("format", "single_mcq")
     return {
         "hinge_id": hinge_id,
         "hinge_label": hinge_label,
@@ -140,22 +141,69 @@ def _wrap(row: dict, letter: str, hinge_id: str, hinge_label: str, mx: str, path
     }
 
 
+def _os_terms(extra: list[str] | None = None) -> list[str]:
+    terms = ["−2", "−1", "0", "+1", "+2", "+3", "+4", "+5", "+6", "+7"]
+    for t in extra or []:
+        if t not in terms:
+            terms.append(t)
+    return terms
+
+
+def _os_term(v: int) -> str:
+    if v == 0:
+        return "0"
+    if v > 0:
+        return f"+{v}"
+    return f"−{abs(v)}"
+
+
 def _os_formula(uid: str, letter: str, w: str, hinge_id: str, hinge_label: str, mx: str, pathway: str) -> dict | None:
+    os = _oxidation_states(w)
+    t = _ascii_form(w)
+    if re.search(r"OH", t) and os:
+        fu = {
+            "format": "fill_blank",
+            "stem": (
+                f"{clip(w, 40)} has hydroxide groups. In each OH, O is [[O]] and H is [[H]]."
+            ),
+            "terms": _os_terms(),
+            "key": {"O": "−2", "H": "+1"},
+            "why": "Hydroxide is O −2 and H +1. Repeating OH does not give two different elements the same state.",
+        }
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
+    if re.search(r"SO4", t) and os and "S" in os:
+        fu = {
+            "format": "fill_blank",
+            "stem": f"In {clip(w, 40)}, oxygen is −2. The oxidation number of S is [[S]].",
+            "terms": _os_terms(),
+            "key": {"S": _os_term(os["S"])},
+            "why": f"Sulfate sulfur is {_os_term(os['S'])}. Assign that before using this formula as an option.",
+        }
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
+    if re.search(r"NH4", t) and re.search(r"Cl", t):
+        fu = {
+            "format": "fill_blank",
+            "stem": f"In {clip(w, 40)}, the oxidation number of chlorine is [[Cl]].",
+            "terms": _os_terms(),
+            "key": {"Cl": "−1"},
+            "why": f"{clip(w, 30)} is an ammonium halide: Cl is −1.",
+        }
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
+    if os:
+        el = next((e for e in os if e not in ("O", "H")), list(os)[0])
+        fu = {
+            "format": "fill_blank",
+            "stem": f"In {clip(w, 40)}, the oxidation number of {el} is [[{el}]].",
+            "terms": _os_terms([_os_term(os[el])]),
+            "key": {el: _os_term(os[el])},
+            "why": f"{clip(w, 30)} assigns {el} {_os_term(os[el])}. That assignment is the missing step for this option.",
+        }
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
     fu = _formula_followup(uid, letter, w)
     if not fu:
-        os = _oxidation_states(w)
-        if not os:
-            return None
-        q = f"What are the oxidation numbers of the elements in {clip(w, 40)}?"
-        correct = ", ".join(f"{e} {'+' if os[e] > 0 else ''}{os[e]}" for e in os)
-        distractors = ["all 0", "oxygen +2, others −1", "each element −1"]
-        opts, fu_key = place(uid, letter, correct, distractors)
-        fu = {
-            "stem": q,
-            "options": opts,
-            "key": fu_key,
-            "why": f"{clip(w, 30)} assigns {correct}. That is the missing step for this option.",
-        }
+        return None
+    fu = dict(fu)
+    fu.setdefault("format", "single_mcq")
     why = fu.get("why") or ""
     if "keyed" in why.lower() or "original" in why.lower():
         fu["why"] = why.split(".")[0] + "."
@@ -165,8 +213,6 @@ def _os_formula(uid: str, letter: str, w: str, hinge_id: str, hinge_label: str, 
 def _redox_equation(uid: str, letter: str, w: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
     if not EQN.search(w) or len(w) < 8:
         return None
-    q = f"In {clip(w, 90)}, does any element change oxidation number?"
-    # Prefer a computed OS if a simple left-hand species exists.
     left = re.split(r"→|->|⇌", w, maxsplit=1)[0]
     species = re.findall(r"[A-Z][a-z]?(?:[A-Z][a-z]?|\d|\(|\))*", left)
     os_left = None
@@ -179,36 +225,35 @@ def _redox_equation(uid: str, letter: str, w: str, hinge_id: str, hinge_label: s
             if os_left:
                 name = sp
                 break
-    if name and os_left:
-        q = f"In {clip(w, 80)}, what is the oxidation number of the highlighted species {name} on the left?"
-        correct = ", ".join(f"{e} {'+' if os_left[e] > 0 else ''}{os_left[e]}" for e in os_left)
-        distractors = ["all 0 because it is a reactant", "all −1", "cannot be assigned"]
-        why = (
-            f"Assign oxidation numbers on each side of this equation before deciding "
-            f"whether it is redox. On the left, {name} is {correct}."
-        )
-    else:
-        correct = "Check each element on both sides; a change means redox"
-        distractors = [
-            "If a compound appears, it cannot be redox",
-            "Only reactions with O₂ are redox",
-            "Ionic equations are never redox",
-        ]
-        why = (
-            "A reaction is redox only if some element’s oxidation number changes. "
-            "Work that check on this equation before using it as the original answer."
-        )
-    opts, fu_key = place(uid, letter, correct, distractors)
     pathway = f"Student judged {clip(w, 40)} without assigning oxidation numbers on both sides."
-    return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
-        letter,
-        hinge_id,
-        hinge_label,
-        mx,
-        pathway,
-        "intermediate_omission",
-    )
+    if name and os_left:
+        el = next((e for e in os_left if e not in ("O", "H")), list(os_left)[0])
+        fu = {
+            "format": "fill_blank",
+            "stem": (
+                f"In {clip(w, 80)}, on the left the oxidation number of {el} in {name} is [[{el}]]."
+            ),
+            "terms": _os_terms([_os_term(os_left[el])]),
+            "key": {el: _os_term(os_left[el])},
+            "why": (
+                f"Assign oxidation numbers on each side before deciding whether it is redox. "
+                f"On the left, {el} in {name} is {_os_term(os_left[el])}."
+            ),
+        }
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
+    fu = {
+        "format": "fill_blank",
+        "stem": (
+            f"In {clip(w, 90)}, the equation is redox only if some element’s oxidation number [[1]]."
+        ),
+        "terms": ["changes", "stays the same", "equals the ion charge", "is zero for every atom"],
+        "key": {"1": "changes"},
+        "why": (
+            "A reaction is redox only if some element’s oxidation number changes. "
+            "Work that check on this equation before using it as an option."
+        ),
+    }
+    return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
 
 
 def _os_row(uid: str, letter: str, w: str, k_c: str, w_c: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
@@ -236,7 +281,7 @@ def _os_row(uid: str, letter: str, w: str, k_c: str, w_c: str, hinge_id: str, hi
     opts, fu_key = place(uid, letter, correct, distractors)
     pathway = f"Student kept “{clip(focus, 40)}” without finishing the oxidation-number assignment."
     return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
+        {"format": "single_mcq", "stem": q, "options": opts, "key": fu_key, "why": why},
         letter,
         hinge_id,
         hinge_label,
@@ -257,31 +302,21 @@ def _three_stmt(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: str
     stmts = _numbered_statements(item.get("stem") or "")
     body = stmts.get(n) or f"numbered statement {n}"
     need = n in _stmt_set(r)
-    q = (
-        f"Option {letter} is “{clip(w, 40)}”. "
-        f"Is this statement always true in this redox item: “{clip(body, 100)}”?"
-    )
-    correct = "Yes" if need else "No"
-    distractors = [
-        "Yes" if not need else "No",
-        "Only when the compound is an element",
-        "The statement is about electrolysis, not oxidation number",
-    ]
-    opts, fu_key = place(uid, letter, correct, distractors)
-    why = (
-        f"Statement {n} is {'required' if need else 'not required'} for the original decision. "
-        f"Settle that statement before choosing among 1 / 2 / 3 combinations."
-    )
+    fu = {
+        "format": "true_false",
+        "stem": (
+            f"Option {letter} is “{clip(w, 40)}”. "
+            f"The numbered statement “{clip(body, 100)}” belongs in the correct 1 / 2 / 3 combination."
+        ),
+        "options": {"T": "True", "F": "False"},
+        "key": "T" if need else "F",
+        "why": (
+            f"Settle statement {n} on its own. "
+            f"It {'does' if need else 'does not'} belong in the correct combination."
+        ),
+    }
     pathway = f"Student mis-classified statement {n}: {clip(body, 50)}."
-    return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
-        letter,
-        hinge_id,
-        hinge_label,
-        mx,
-        pathway,
-        "intermediate_omission",
-    )
+    return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
 
 
 def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
@@ -289,59 +324,93 @@ def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hing
     wl = (w or "").lower()
     if not any(s in sl for s in ("electrolys", "cryolite", "anode", "cathode", "aluminium oxide", "al₂o₃", "al2o3")):
         return None
-    if "cryolite" in sl and ("oxid" in wl or "corrosion" in wl or "melting" in wl or "solvent" in wl):
-        q = (
-            f"This option says “{clip(w, 70)}”. "
-            "In the extraction of aluminium, what is the role of cryolite mixed with Al₂O₃?"
+    if "cryolite" in sl and ("oxid" in wl or "corrosion" in wl):
+        fu = {
+            "format": "assertion_reason",
+            "stem": f"This option says “{clip(w, 70)}”. Decide assertion and reason about cryolite.",
+            "assertion": clip(w, 90),
+            "reason": "Cryolite dissolves Al₂O₃ and lowers the melting temperature of the electrolyte.",
+            "options": dict(AR_DEFAULT),
+            "key": "D",
+            "why": (
+                "The option’s claim about oxidation/corrosion is false. "
+                "Cryolite is a solvent that lowers the melting point; Al³⁺ is still reduced at the cathode."
+            ),
+        }
+        kind = "term_substitution"
+        return _wrap(
+            fu, letter, hinge_id, hinge_label, mx or kind,
+            f"Student used “{clip(w, 40)}” without the cathode/cryolite distinction.",
+            kind,
         )
-        correct = "It lowers the melting point of the electrolyte (and dissolves Al₂O₃)"
-        distractors = [
-            "It prevents oxidation of aluminium metal",
-            "It is the source of Al³⁺ that is reduced",
-            "It stops the carbon anode from burning",
-        ]
-        why = (
-            "Cryolite is a solvent that lowers the melting point of aluminium oxide. "
-            "Aluminium is still produced by reduction of Al³⁺ at the cathode."
-        )
-        kind = "term_substitution" if "oxid" in wl else "intermediate_omission"
-    elif "anode" in wl or "cathode" in wl or "oxidised" in wl or "reduced" in wl:
-        q = (
-            f"This option says “{clip(w, 70)}”. "
-            "In molten electrolysis of the metal oxide, do cations travel to the cathode or the anode, "
-            "and are they oxidised or reduced?"
-        )
-        correct = "Cathode; Al³⁺ + 3e⁻ → Al (reduction)"
-        distractors = [
-            "Anode; Al³⁺ + 3e⁻ → Al (reduction)",
-            "Cathode; aluminium is oxidised",
-            "Anode; oxide ions are reduced to aluminium",
-        ]
-        why = (
-            "Cations are reduced at the cathode. Al³⁺ gains electrons there. "
-            "Oxide ions are oxidised at the carbon anode."
-        )
-        kind = "relationship_reversal"
-    else:
-        q = (
-            f"This option says “{clip(w, 70)}”. "
-            "Is that claim about the electrode process or about the solvent?"
-        )
-        correct = "Check whether the claim names the cathode reduction of Al³⁺ or a different role"
-        distractors = [
-            "Every labelled part of the cell is oxidised",
-            "Cryolite is purified aluminium",
-            "Aluminium is liberated at the anode",
-        ]
-        why = "Separate the solvent role of cryolite from the electrode half-equations before judging this option."
+    if "cryolite" in sl and ("melting" in wl or "solvent" in wl or "cryolite" in wl):
+        fu = {
+            "format": "multi_mcq",
+            "stem": (
+                f"This option says “{clip(w, 70)}”. "
+                "Which of these are roles of cryolite mixed with Al₂O₃?"
+            ),
+            "options": {
+                "A": "It lowers the melting point of the electrolyte",
+                "B": "It dissolves aluminium oxide",
+                "C": "It is reduced to aluminium metal",
+                "D": "It prevents oxidation of the product aluminium",
+            },
+            "key": ["A", "B"],
+            "why": (
+                "Cryolite is a solvent that lowers the melting point of aluminium oxide. "
+                "Aluminium is still produced by reduction of Al³⁺ at the cathode."
+            ),
+        }
         kind = "intermediate_omission"
-    opts, fu_key = place(uid, letter, correct, distractors)
+        return _wrap(
+            fu, letter, hinge_id, hinge_label, mx or kind,
+            f"Student used “{clip(w, 40)}” without the cathode/cryolite distinction.",
+            kind,
+        )
+    if "anode" in wl or "cathode" in wl or "oxidised" in wl or "reduced" in wl:
+        fu = {
+            "format": "match",
+            "stem": (
+                f"This option says “{clip(w, 70)}”. "
+                "Match each species to its role in molten electrolysis of the metal oxide."
+            ),
+            "left": {
+                "1": "Al³⁺",
+                "2": "O²⁻",
+                "3": "cryolite",
+            },
+            "right": {
+                "P": "reduced at the cathode",
+                "Q": "oxidised at the carbon anode",
+                "R": "lowers the melting point of Al₂O₃",
+                "S": "oxidised at the cathode",
+            },
+            "key": {"1": "P", "2": "Q", "3": "R"},
+            "why": (
+                "Cations are reduced at the cathode. Oxide ions are oxidised at the carbon anode. "
+                "Cryolite is the solvent, not a source of aluminium metal."
+            ),
+        }
+        kind = "relationship_reversal"
+        return _wrap(
+            fu, letter, hinge_id, hinge_label, mx or kind,
+            f"Student used “{clip(w, 40)}” without the cathode/cryolite distinction.",
+            kind,
+        )
+    fu = {
+        "format": "fill_blank",
+        "stem": (
+            f"This option says “{clip(w, 70)}”. "
+            "Cations are [[1]] at the [[2]]; cryolite is the [[3]]."
+        ),
+        "terms": ["reduced", "oxidised", "cathode", "anode", "solvent"],
+        "key": {"1": "reduced", "2": "cathode", "3": "solvent"},
+        "why": "Separate the solvent role of cryolite from the electrode half-equations before judging this option.",
+    }
+    kind = "intermediate_omission"
     return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
-        letter,
-        hinge_id,
-        hinge_label,
-        mx or kind,
+        fu, letter, hinge_id, hinge_label, mx or kind,
         f"Student used “{clip(w, 40)}” without the cathode/cryolite distinction.",
         kind,
     )
@@ -355,19 +424,28 @@ def _numeric_redox(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: 
     if ("fec2o4" in sl.replace("₂", "2").replace("₄", "4") or "ethanedioate" in sl) and (
         "mno4" in sl.replace("₄", "4") or "manganate" in sl
     ):
-        q = (
-            f"The listed value is {wv}. For FeC₂O₄ with MnO₄⁻, how many moles of electrons "
-            f"does 1 mol of FeC₂O₄ lose (Fe²⁺ and C₂O₄²⁻ together)?"
-        )
-        correct = "3 mol e⁻ (1 from Fe²⁺→Fe³⁺ and 2 from C₂O₄²⁻→2CO₂)"
-        distractors = [
-            "1 mol e⁻ (iron only)",
-            "2 mol e⁻ (ethanedioate only)",
-            "5 mol e⁻ (copied from MnO₄⁻)",
-        ]
-        why = (
-            "Fe²⁺ loses 1e⁻ and C₂O₄²⁻ loses 2e⁻, so 1 mol FeC₂O₄ loses 3 mol e⁻. "
-            "MnO₄⁻ gains 5e⁻. Combine those counts before using a listed value."
+        fu = {
+            "format": "multi_mcq",
+            "stem": (
+                f"The listed value is {wv}. For FeC₂O₄ with MnO₄⁻, which contributions "
+                "make up the electrons lost per 1 mol FeC₂O₄?"
+            ),
+            "options": {
+                "A": "Fe²⁺ → Fe³⁺ (1 e⁻)",
+                "B": "C₂O₄²⁻ → 2CO₂ (2 e⁻)",
+                "C": "MnO₄⁻ → Mn²⁺ (5 e⁻ copied as the FeC₂O₄ count)",
+                "D": "Each oxygen atom in the oxalate loses 2 e⁻",
+            },
+            "key": ["A", "B"],
+            "why": (
+                "Fe²⁺ loses 1e⁻ and C₂O₄²⁻ loses 2e⁻, so 1 mol FeC₂O₄ loses 3 mol e⁻. "
+                "MnO₄⁻ gains 5e⁻. Combine those counts before using a listed value."
+            ),
+        }
+        return _wrap(
+            fu, letter, hinge_id, hinge_label, mx,
+            f"Student obtained {wv} by skipping the electron-count step.",
+            "intermediate_omission",
         )
     elif "mno4" in sl.replace("₄", "4") or "manganate" in sl:
         q = f"The listed value is {wv}. How is the H⁺ coefficient fixed in a MnO₄⁻ half-equation in acid?"
@@ -389,7 +467,7 @@ def _numeric_redox(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: 
         why = "The missing intermediate is the electron count for each half-equation, not the distractor arithmetic."
     opts, fu_key = place(uid, letter, correct, distractors)
     return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
+        {"format": "single_mcq", "stem": q, "options": opts, "key": fu_key, "why": why},
         letter,
         hinge_id,
         hinge_label,
@@ -401,20 +479,21 @@ def _numeric_redox(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: 
 
 def _default_chem(item: dict, uid: str, letter: str, w: str, k_c: str, w_c: str, hinge_id: str, hinge_label: str, mx: str) -> dict:
     focus = clip(w_c or w, 80)
-    q = f"For the species or process “{focus}”, is the element under test oxidised, reduced, or unchanged?"
-    correct = "Assign oxidation numbers first, then decide oxidised / reduced / unchanged"
-    distractors = [
-        "Unchanged, because the formula is written the same on both sides",
-        "Oxidised if oxygen is present",
-        "Reduced if the species is an ion",
-    ]
-    why = (
-        f"The hinge is oxidation-number change. Settle oxidised / reduced / unchanged for "
-        f"“{clip(focus, 50)}” before returning to the original item."
-    )
-    opts, fu_key = place(uid, letter, correct, distractors)
+    fu = {
+        "format": "fill_blank",
+        "stem": (
+            f"For the species or process “{focus}”, assign oxidation numbers first. "
+            "The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same."
+        ),
+        "terms": ["oxidised", "reduced", "unchanged"],
+        "key": {"1": "oxidised", "2": "reduced", "3": "unchanged"},
+        "why": (
+            f"The hinge is oxidation-number change. Settle oxidised / reduced / unchanged for "
+            f"“{clip(focus, 50)}” before returning to this item."
+        ),
+    }
     return _wrap(
-        {"stem": q, "options": opts, "key": fu_key, "why": why},
+        fu,
         letter,
         hinge_id,
         hinge_label,
@@ -466,7 +545,7 @@ def author_item(item: dict, units: list[dict]) -> dict | None:
         if not option_text(item, L) and not item.get("options_are_figure"):
             continue
         row = author_wrong(item, L, hinge_id, hinge_label)
-        if not row:
+        if not row or not followup_ok(row.get("followup")):
             return None
         wrong[L] = row
     if not wrong:

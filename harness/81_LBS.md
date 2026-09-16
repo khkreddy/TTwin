@@ -14,15 +14,15 @@ For parent item `P` tagged to hinge `H` (five-click: pack, subject, big idea, ch
 2. **Failure mode of the chosen wrong letter.** Either:
    - **intermediate_omission** — a required step (oxidation number of one element, electrode identity, electron count) was skipped; or
    - a V2 mx (`term_substitution` · `condition_omission` · `relationship_reversal` · `scope_error` · `surface_feature_capture` · `mechanism_conflation` · `operation_confusion`).
-3. **Unlock question.** A new four-option MCQ whose subject is **that option’s content**, one rung simpler than `P`, whose answer is the missing step or the corrected mix-up. It must not state or imply `P`’s keyed letter or keyed option text.
-4. **Explanation (`why`).** Tells the result of the **hint**, not of `P`. Then the student returns to `P`.
+3. **Unlock question.** A simpler question on **that option’s content**. Format is whatever tests the gate: true/false, multi-select MCQ, assertion–reason, match, fill-in-the-blank with a pre-set term bank, or a short single-select MCQ. It must not state or imply `P`’s keyed letter or keyed option text.
+4. **Explanation (`why`).** Tells the result of the **hint**, not of `P`. Submitting the hint **returns the student to `P`** with the previous letter cleared.
 
 ## Runtime (instructional integrity)
 
 | Step | Learner sees | Must not see |
 |---|---|---|
-| Wrong letter on `P` | Hint stem + A–D | Original key, original solve, mx_type |
-| Answers the hint | Hint key mark + `why` of the hint + **Try the original again** | “Original question: the key is …” |
+| Wrong letter on `P` | Hint in the format that fits the gate | Original key, original solve, mx_type |
+| Answers the hint | Returned to `P`; `why` of the hint under the original | “Original question: the key is …” |
 | Retry | Original stem/options unlocked, previous letter cleared | Donated original answer |
 | Finish | Score on the **last unaided pick of `P`** | Credit for the hint |
 

@@ -17,7 +17,7 @@ from lbs_construct import (  # noqa: E402
     is_stamp_lbs,
     lbs_complete,
 )
-from lbs_quality import lbs_relevant  # noqa: E402
+from lbs_quality import followup_ok, lbs_relevant  # noqa: E402
 
 FIXTURE = Path(__file__).resolve().parent / "fixtures" / "lbs_item.json"
 NUMERIC = Path(__file__).resolve().parent / "fixtures" / "lbs_numeric.json"
@@ -843,21 +843,163 @@ const done = TTwinPaper.itemHTML(item, 0, {
 });
 if (/Original question: the key is/.test(done)) throw new Error('donated original key');
 if (orig && new RegExp('the key is\\s*<b>\\s*'+orig).test(done)) throw new Error('key letter leaked');
-if (!/data-lbs-retry/.test(done)) throw new Error('missing retry');
+if (!/data-lbs-retry/.test(done)) throw new Error('missing retry marker');
+if (!/Hint used/.test(done) || !/original question/.test(done)) throw new Error('did not return to original');
+if (/data-opt='A'[^>]*disabled/.test(done)) throw new Error('original still locked after hint');
+if (/data-fu-opt/.test(done)) throw new Error('hint widgets still showing after attempt');
 if (!/lbs-why/.test(done) && !/Hydroxide/.test(done)) throw new Error('missing hint why');
 const retry = TTwinPaper.itemHTML(item, 0, {
   interactive: true, showUid: false, teacherTools: false,
   lbsStage: { [uid]: { from: 'B', followup_choice: 'B', done: true, retry: true } }
 });
-if (/data-opt='A'[^>]*disabled/.test(retry) && /Try the original/.test(retry)) throw new Error('still locked after retry');
+if (/data-opt='A'[^>]*disabled/.test(retry)) throw new Error('still locked after retry');
 if (/Original question: the key is/.test(retry)) throw new Error('key on retry');
-process.stdout.write(JSON.stringify({ ok: true, has_retry: /data-lbs-retry/.test(done) }));
+process.stdout.write(JSON.stringify({ ok: true, has_retry: /data-lbs-retry/.test(done), returned: /Hint used/.test(done) }));
 """
     r = subprocess.run(["node", "-e", js, str(payload)], cwd=str(ROOT), capture_output=True, text=True, timeout=20)
     payload.unlink(missing_ok=True)
     if r.returncode != 0:
         raise SystemExit("hint key-leak test failed:\n" + r.stderr + r.stdout)
-    assert json.loads(r.stdout)["has_retry"]
+    out = json.loads(r.stdout)
+    assert out["has_retry"] and out["returned"]
+
+
+def test_followup_ok_formats() -> None:
+    assert followup_ok({
+        "format": "true_false",
+        "stem": "Option B is Mg(OH)2. Hydroxide oxygen is −2.",
+        "options": {"T": "True", "F": "False"},
+        "key": "T",
+        "why": "Hydroxide is O −2.",
+    })
+    assert followup_ok({
+        "format": "multi_mcq",
+        "stem": "Which contributions apply for FeC2O4?",
+        "options": {"A": "Fe2+ 1e", "B": "oxalate 2e", "C": "Mn 5e", "D": "oxygen 2e"},
+        "key": ["A", "B"],
+        "why": "Fe and oxalate together.",
+    })
+    assert followup_ok({
+        "format": "assertion_reason",
+        "stem": "Cryolite role",
+        "assertion": "Cryolite lowers the melting point of Al2O3.",
+        "reason": "Cryolite dissolves Al2O3.",
+        "key": "A",
+        "why": "Both true and R explains A.",
+    })
+    assert followup_ok({
+        "format": "match",
+        "stem": "Match electrode roles",
+        "left": {"1": "Al3+", "2": "O2-"},
+        "right": {"P": "cathode", "Q": "anode"},
+        "key": {"1": "P", "2": "Q"},
+        "why": "Cations to cathode.",
+    })
+    assert followup_ok({
+        "format": "fill_blank",
+        "stem": "In Mg(OH)2, O is [[O]] and H is [[H]].",
+        "terms": ["−2", "+1", "0"],
+        "key": {"O": "−2", "H": "+1"},
+        "why": "Hydroxide O −2 H +1.",
+    })
+    assert not followup_ok({
+        "format": "true_false",
+        "stem": "x",
+        "key": "T",
+        "why": "Original question: the key is A",
+    })
+
+
+def test_multiformat_hint_html() -> None:
+    packed = ROOT / "data/questions/chemistry-senior.json"
+    items = json.loads(packed.read_text(encoding="utf-8"))
+    item = next(it for it in items if it.get("uid") == "9701_m16_qp_12:q1")
+    item = json.loads(json.dumps(item))
+    wrong = item["assessment"]["learn_by_solve"]["wrong"]
+    letter = next(iter(wrong))
+    samples = {
+        "true_false": {
+            "format": "true_false",
+            "stem": "Option B names Mg(OH)2. Hydroxide oxygen is −2.",
+            "options": {"T": "True", "F": "False"},
+            "key": "T",
+            "why": "Hydroxide is O −2.",
+        },
+        "multi_mcq": {
+            "format": "multi_mcq",
+            "stem": "Which apply to Mg(OH)2?",
+            "options": {"A": "O is −2", "B": "H is +1", "C": "Mg is −2", "D": "all 0"},
+            "key": ["A", "B"],
+            "why": "OH is O −2 H +1.",
+        },
+        "assertion_reason": {
+            "format": "assertion_reason",
+            "stem": "Assertion and reason for Mg(OH)2",
+            "assertion": "Each OH has O −2.",
+            "reason": "Hydrogen in hydroxide is +1.",
+            "key": "B",
+            "why": "Both true; R does not explain A.",
+        },
+        "match": {
+            "format": "match",
+            "stem": "Match elements in Mg(OH)2",
+            "left": {"1": "O", "2": "H"},
+            "right": {"P": "−2", "Q": "+1", "R": "0"},
+            "key": {"1": "P", "2": "Q"},
+            "why": "Hydroxide O −2 H +1.",
+        },
+        "fill_blank": {
+            "format": "fill_blank",
+            "stem": "In Mg(OH)2, O is [[O]] and H is [[H]].",
+            "terms": ["−2", "+1", "0"],
+            "key": {"O": "−2", "H": "+1"},
+            "why": "Hydroxide O −2 H +1.",
+        },
+    }
+    payload = ROOT / "tools" / "fixtures" / "_tmp_lbs_formats.json"
+    payload.write_text(json.dumps({"item": item, "letter": letter, "samples": samples}), encoding="utf-8")
+    js = r"""
+const fs = require('fs');
+const doc = JSON.parse(fs.readFileSync(process.argv[1], 'utf8'));
+const window = global;
+eval(fs.readFileSync('js/paper.js', 'utf8'));
+const item = doc.item;
+const letter = doc.letter;
+const uid = item.uid;
+const out = {};
+for (const [fmt, fu] of Object.entries(doc.samples)) {
+  item.assessment.learn_by_solve.wrong[letter].followup = fu;
+  const open = TTwinPaper.itemHTML(item, 0, {
+    interactive: true, showUid: false, teacherTools: false,
+    lbsStage: { [uid]: { from: letter, followup_choice: null, done: false } }
+  });
+  const done = TTwinPaper.itemHTML(item, 0, {
+    interactive: true, showUid: false, teacherTools: false,
+    lbsStage: { [uid]: { from: letter, followup_choice: 'T', done: true, retry: true } }
+  });
+  if (/Original question: the key is/.test(open) || /Original question: the key is/.test(done)) {
+    throw new Error(fmt + ' leaked original key');
+  }
+  if (!/Hint used/.test(done) || /data-opt='A'[^>]*disabled/.test(done)) {
+    throw new Error(fmt + ' did not return to original');
+  }
+  if (fmt === 'true_false' && !/data-fu-opt='T'/.test(open)) throw new Error('tf missing');
+  if (fmt === 'multi_mcq' && !/data-fu-toggle/.test(open)) throw new Error('multi missing toggle');
+  if (fmt === 'multi_mcq' && !/data-fu-submit='multi'/.test(open)) throw new Error('multi missing submit');
+  if (fmt === 'assertion_reason' && !/Assertion/.test(open)) throw new Error('ar missing');
+  if (fmt === 'match' && !/data-fu-match/.test(open)) throw new Error('match missing');
+  if (fmt === 'fill_blank' && !/data-fu-blank/.test(open)) throw new Error('fill missing');
+  out[fmt] = true;
+}
+process.stdout.write(JSON.stringify(out));
+"""
+    r = subprocess.run(["node", "-e", js, str(payload)], cwd=str(ROOT), capture_output=True, text=True, timeout=20)
+    payload.unlink(missing_ok=True)
+    if r.returncode != 0:
+        raise SystemExit("multiformat html test failed:\n" + r.stderr + r.stdout)
+    got = json.loads(r.stdout)
+    for k in samples:
+        assert got.get(k), got
 
 
 def test_electrochem_overlay_protocol() -> dict:
@@ -893,7 +1035,19 @@ def test_electrochem_overlay_protocol() -> dict:
             why = (w.get("followup") or {}).get("why") or ""
             assert "the key is" not in why.lower()
             assert "original question" not in why.lower()
-    return {"n_ec": len(ec), "n_overlay_or_gold": n_ov, "n_hinge": n_hinge}
+            assert followup_ok(w.get("followup")), (uid, L)
+    formats = set()
+    for rec in (doc.get("items") or {}).values():
+        for w in (rec.get("wrong") or {}).values():
+            formats.add(((w.get("followup") or {}).get("format")) or "single_mcq")
+    for need in ("true_false", "assertion_reason", "match", "fill_blank", "multi_mcq"):
+        assert need in formats, formats
+    gold_fmt = {
+        ((w.get("followup") or {}).get("format") or "single_mcq")
+        for w in lbs["wrong"].values()
+    }
+    assert gold_fmt == {"single_mcq"}
+    return {"n_ec": len(ec), "n_overlay_or_gold": n_ov, "n_hinge": n_hinge, "formats": sorted(formats)}
 
 
 def test_learner_vs_teacher_html(item: dict, out_dir: Path) -> dict:
@@ -956,6 +1110,8 @@ if __name__ == "__main__":
     test_preserve_gold_seeds()
     gold = test_gold_approved_q1()
     test_hint_does_not_reveal_original_key()
+    test_followup_ok_formats()
+    test_multiformat_hint_html()
     eco = test_electrochem_overlay_protocol()
     test_figure_letter_census()
     result = test_join_fixture()

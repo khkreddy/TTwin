@@ -7,6 +7,20 @@ import re
 from pathlib import Path
 
 LETTERS = ("A", "B", "C", "D")
+FU_FORMATS = (
+    "single_mcq",
+    "true_false",
+    "multi_mcq",
+    "assertion_reason",
+    "match",
+    "fill_blank",
+)
+AR_DEFAULT = {
+    "A": "Both A and R are true, and R is the correct explanation of A",
+    "B": "Both A and R are true, but R is not the correct explanation of A",
+    "C": "A is true, but R is false",
+    "D": "A is false, but R is true",
+}
 THREE = re.compile(
     r"^(?:1\s*,\s*2\s*and\s*3|1,\s*2\s*and\s*3|1 and 2 only|1 and 3 only|2 and 3 only)\s*$",
     re.I,
@@ -163,11 +177,11 @@ def is_stamp_lbs(lbs: dict | None) -> bool:
         return True
     for row in (lbs.get("wrong") or {}).values():
         fu = (row or {}).get("followup") or {}
-        stem = fu.get("stem") or ""
+        stem = followup_anchor_text(fu)
         opts = fu.get("options") or {}
         if any(s in stem for s in STAMP_STEM):
             return True
-        blob = " ".join(opts.values())
+        blob = followup_text_blob(fu)
         if any(s in blob for s in META_OPTION):
             return True
         if is_wrapper_shape(stem, opts):
@@ -194,6 +208,95 @@ def option_text_of(item: dict, letter: str) -> str:
 
 def _figure(item: dict) -> bool:
     return bool(item.get("options_are_figure") and (item.get("figure_src") or item.get("tikz")))
+
+
+def tf_key(key) -> str | None:
+    u = str(key or "").strip().upper()
+    if u in ("T", "TRUE", "YES"):
+        return "T"
+    if u in ("F", "FALSE", "NO"):
+        return "F"
+    return None
+
+
+def followup_anchor_text(fu: dict | None) -> str:
+    fu = fu or {}
+    parts = [fu.get("stem") or "", fu.get("assertion") or "", fu.get("reason") or ""]
+    parts.extend(str(v) for v in (fu.get("left") or {}).values())
+    return " ".join(parts)
+
+
+def followup_text_blob(fu: dict | None) -> str:
+    fu = fu or {}
+    parts = [followup_anchor_text(fu)]
+    parts.extend(str(v) for v in (fu.get("options") or {}).values())
+    parts.extend(str(v) for v in (fu.get("right") or {}).values())
+    parts.extend(str(t) for t in (fu.get("terms") or []))
+    return " ".join(parts)
+
+
+def followup_ok(fu: dict | None) -> bool:
+    """Shape check for a hint of any admitted format. Does not score chemistry."""
+    if not isinstance(fu, dict):
+        return False
+    stem = str(fu.get("stem") or "").strip()
+    if not stem:
+        return False
+    why = str(fu.get("why") or "")
+    low = why.lower()
+    if "the key is" in low or "original question" in low:
+        return False
+    fmt = fu.get("format") or "single_mcq"
+    if fmt not in FU_FORMATS:
+        return False
+    key = fu.get("key")
+    if fmt == "single_mcq":
+        opts = fu.get("options") or {}
+        if key not in LETTERS:
+            return False
+        return sum(1 for x in LETTERS if str(opts.get(x) or "").strip()) >= 4
+    if fmt == "true_false":
+        k = tf_key(key)
+        if k not in ("T", "F"):
+            return False
+        opts = fu.get("options") or {}
+        if not opts:
+            return True
+        keys = {str(x).strip().upper() for x in opts}
+        return bool(keys & {"T", "TRUE", "F", "FALSE", "A", "B"})
+    if fmt == "assertion_reason":
+        if not str(fu.get("assertion") or "").strip() or not str(fu.get("reason") or "").strip():
+            return False
+        opts = fu.get("options") or AR_DEFAULT
+        if key not in LETTERS:
+            return False
+        return sum(1 for x in LETTERS if str(opts.get(x) or "").strip()) >= 2
+    if fmt == "multi_mcq":
+        opts = fu.get("options") or {}
+        keys = key if isinstance(key, (list, tuple)) else [key]
+        keys = [str(k) for k in keys if k is not None and str(k).strip() != ""]
+        if not keys or len(opts) < 2:
+            return False
+        return all(k in opts for k in keys) and all(str(opts.get(k) or "").strip() for k in keys)
+    if fmt == "match":
+        left = fu.get("left") or {}
+        right = fu.get("right") or {}
+        km = key if isinstance(key, dict) else {}
+        if len(left) < 2 or len(right) < 2 or not isinstance(km, dict):
+            return False
+        return all(str(left[i]).strip() and km.get(i) in right for i in left)
+    if fmt == "fill_blank":
+        terms = [str(t) for t in (fu.get("terms") or []) if str(t).strip()]
+        if len(terms) < 2:
+            return False
+        ids = re.findall(r"\[\[(\w+)\]\]", stem)
+        if not ids:
+            return False
+        km = key if isinstance(key, dict) else {"1": str(key or "")}
+        if not isinstance(km, dict):
+            return False
+        return all(i in km and str(km[i]) in terms for i in ids)
+    return False
 
 
 def followup_anchored(item: dict, letter: str, fu_stem: str) -> bool:
@@ -273,7 +376,7 @@ def lbs_relevant(item: dict, lbs: dict | None = None, key: str | None = None) ->
             return False
         for L in expect:
             fu = (wrong.get(L) or {}).get("followup") or {}
-            if not fu.get("stem") or fu.get("key") not in LETTERS or not (fu.get("options") or {}):
+            if not followup_ok(fu):
                 return False
         return True
     present = [L for L in LETTERS if option_text_of(item, L)] or list(LETTERS)
@@ -288,15 +391,12 @@ def lbs_relevant(item: dict, lbs: dict | None = None, key: str | None = None) ->
     stems = []
     for L in expect:
         fu = (wrong.get(L) or {}).get("followup") or {}
-        stem = fu.get("stem") or ""
-        if not stem or fu.get("key") not in LETTERS:
+        if not followup_ok(fu):
             return False
-        opts = fu.get("options") or {}
-        if sum(1 for x in LETTERS if str(opts.get(x) or "").strip()) < 4:
-            return False
+        stem = followup_anchor_text(fu)
         if not followup_anchored(item, L, stem):
             return False
-        blob = " ".join(str(opts.get(x) or "") for x in LETTERS)
+        blob = followup_text_blob(fu)
         if any(s in blob for s in META_OPTION):
             return False
         stems.append(norm(stem))

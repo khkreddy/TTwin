@@ -258,12 +258,12 @@ Construction: `tools/lbs_construct.py` (option-anchored unlocking questions) plu
 
 1. Take the packed hinge (`node`, chapter, subtopic; map `decision_hinge` when the stem matches).
 2. Name the option’s failure mode: overlooked **intermediate step** (oxidation number, electrode, electron count) or a V2 mix-up.
-3. Author a **simpler question** on that gate about **that option’s content**. `why` explains the hint, never `P`’s keyed letter.
-4. Runtime: miss on `P` → hint MCQ → hint explanation → **Try the original question again** (response cleared, original unlocked). Finish scores the last unaided pick of `P`. Hint does not credit `P`.
+3. Author a **simpler question** on that gate about **that option’s content**. Format fits the gate (true/false, multi-select, assertion–reason, match, fill-blank with a pre-set term bank, or short MCQ). `why` explains the hint, never `P`’s keyed letter.
+4. Runtime: miss on `P` → hint → submitting the hint **returns to `P`** (response cleared, original unlocked, `why` under the original). Finish scores the last unaided pick of `P`. Hint does not credit `P`.
 
-Chemistry AS/A **Electrochemistry** (`cam:9701:6`, hubs Redox / Electrochemistry) is the first chapter overlay: `data/overlay/lbs_electrochem.json` via `tools/lbs_electrochem.py`. Gold `9701_m16_qp_12:q1` and spectroscopy banks are preserved. Do not scale other chapters until the owner has checked this pack.
+Chemistry AS/A **Electrochemistry** (`cam:9701:6`, hubs Redox / Electrochemistry) is the first chapter overlay: `data/overlay/lbs_electrochem.json` via `tools/lbs_electrochem.py`. Gold `9701_m16_qp_12:q1` and spectroscopy banks stay single-select MCQ. Do not scale other chapters until the owner has checked this pack.
 
-**Deploy check.** Jump `9701_m16_qp_12:q1` as student: pick B → OH oxidation-state hint → why about hydroxide → retry button → original options live, no “the key is A”. Jump `9701_s11_qp_11:q3` (cryolite) and `9701_m18_qp_12:q10` (which is not redox). Teacher key still shows mx types. Cache-bust `index.html` `?v=`.
+**Deploy check.** Jump `9701_m16_qp_12:q1` as student: pick B → OH hint → after the hint the original options are live (previous letter cleared), why about hydroxide, no “the key is A”. Jump `9701_s11_qp_11:q3` (cryolite; may be assertion–reason or multi-select) and `9701_m18_qp_12:q10` (which is not redox). Teacher key still shows mx types. Cache-bust `index.html` `?v=26`.
 
 ---
 

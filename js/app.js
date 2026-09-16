@@ -700,7 +700,7 @@
     const opts = paperOpts();
     host.innerHTML =
       (opts.interactive && !opts.reveal
-        ? "<p class='notice lbs-note no-print'>Choose A, B, C or D. If a choice is not the answer, a follow-up appears on the idea behind that choice. Mix-up names are not shown.</p>"
+        ? "<p class='notice lbs-note no-print'>Choose A, B, C or D. If a choice is not the answer, a hint question appears (true/false, multi-select, assertion–reason, match, fill-blank, or a short MCQ). After that hint you return to the original question. Mix-up names are not shown.</p>"
         : "") +
       TTwinPaper.paperHTML(p.meta, p.items, opts);
     TTwinPaper.mount(host);
@@ -757,18 +757,41 @@
   function itemIndex(uid) {
     return (S.paper.items || []).findIndex((it) => (it.uid || it.item_uid) === uid);
   }
-  function replaceArticle(uid) {
+  function articleSel(uid) {
+    return "article.q[data-uid=\"" + String(uid).replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"]";
+  }
+  function finishHint(uid, choice) {
+    const p = S.paper;
+    if (!p) return;
+    p.lbs_stage = p.lbs_stage || {};
+    const st = p.lbs_stage[uid] || {};
+    st.followup_choice = choice;
+    st.done = true;
+    st.retry = true;
+    p.lbs_stage[uid] = st;
+    if (p.responses) delete p.responses[uid];
+    replaceArticle(uid, { scroll: "item" });
+  }
+  function replaceArticle(uid, how) {
     const host = $("tm-out");
     if (!host || !S.paper) return;
     const i = itemIndex(uid);
     if (i < 0) return;
-    const sel = "article.q[data-uid=\"" + uid.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"]";
+    how = how || {};
+    const sel = articleSel(uid);
     const art = host.querySelector(sel);
     const html = TTwinPaper.itemHTML(S.paper.items[i], i, paperOpts());
     if (art) {
       art.outerHTML = html;
       const next = host.querySelector(sel);
       TTwinPaper.mount(next || host);
+      if (how.scroll === "none") return;
+      const node = host.querySelector(sel);
+      if (how.scroll === "item" && node) {
+        const target = node.querySelector("ul.options, table.opt-table, p.stem") || node;
+        if (target.scrollIntoView) target.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
       const box = host.querySelector(sel + " .lbs");
       if (box && box.scrollIntoView) box.scrollIntoView({ behavior: "smooth", block: "nearest" });
     } else {
@@ -882,18 +905,60 @@
       const p = S.paper;
       if (!p) return;
       const retryBtn = e.target.closest("[data-lbs-retry]");
-      if (retryBtn && p.mode === "student" && !p.result) {
+      if (retryBtn && retryBtn.tagName === "BUTTON" && p.mode === "student" && !p.result) {
         const uid = retryBtn.getAttribute("data-lbs-retry");
         if (!uid) return;
+        finishHint(uid, ((p.lbs_stage || {})[uid] || {}).followup_choice);
+        return;
+      }
+      const tog = e.target.closest("button.opt[data-fu-toggle]");
+      if (tog && p.mode === "student" && !p.result) {
+        const art = tog.closest("article.q");
+        const uid = art && (art.getAttribute("data-uid") || (art.id || "").replace(/^q-/, ""));
+        if (!uid) return;
+        const k = tog.getAttribute("data-fu-toggle");
         p.lbs_stage = p.lbs_stage || {};
         const st = p.lbs_stage[uid] || {};
-        st.retry = true;
-        st.done = true;
+        const arr = Array.isArray(st.followup_choice) ? st.followup_choice.slice() : [];
+        const ix = arr.indexOf(k);
+        if (ix >= 0) arr.splice(ix, 1);
+        else arr.push(k);
+        st.followup_choice = arr;
         p.lbs_stage[uid] = st;
-        if (p.responses) delete p.responses[uid];
-        replaceArticle(uid);
-        const art = host.querySelector("article.q[data-uid=\"" + uid.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"]");
-        if (art && art.scrollIntoView) art.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        replaceArticle(uid, { scroll: "none" });
+        return;
+      }
+      const sub = e.target.closest("[data-fu-submit]");
+      if (sub && p.mode === "student" && !p.result) {
+        const art = sub.closest("article.q");
+        const uid = art && (art.getAttribute("data-uid") || (art.id || "").replace(/^q-/, ""));
+        if (!uid) return;
+        const kind = sub.getAttribute("data-fu-submit");
+        if (kind === "multi") {
+          const picked = [];
+          art.querySelectorAll("li.sel button.opt[data-fu-toggle]").forEach((b) => {
+            picked.push(b.getAttribute("data-fu-toggle"));
+          });
+          finishHint(uid, picked);
+          return;
+        }
+        if (kind === "match") {
+          const map = {};
+          art.querySelectorAll("select[data-fu-match]").forEach((s) => {
+            map[s.getAttribute("data-fu-match")] = s.value;
+          });
+          finishHint(uid, map);
+          return;
+        }
+        if (kind === "fill") {
+          const map = {};
+          art.querySelectorAll("select[data-fu-blank]").forEach((s) => {
+            map[s.getAttribute("data-fu-blank")] = s.value;
+          });
+          finishHint(uid, map);
+          return;
+        }
+        finishHint(uid, ((p.lbs_stage || {})[uid] || {}).followup_choice);
         return;
       }
       const opt = e.target.closest("button.opt[data-opt], button.opt[data-fu-opt], tr.opt-row[data-opt]");
@@ -903,14 +968,11 @@
         if (!uid) return;
         const fu = opt.getAttribute("data-fu-opt");
         if (fu) {
-          p.lbs_stage = p.lbs_stage || {};
-          const st = p.lbs_stage[uid] || {};
-          st.followup_choice = fu;
-          st.done = true;
-          p.lbs_stage[uid] = st;
-          replaceArticle(uid);
+          finishHint(uid, fu);
           return;
         }
+        const stLock = (p.lbs_stage || {})[uid];
+        if (stLock && stLock.from && !stLock.done && !stLock.retry) return;
         const choice = opt.getAttribute("data-opt");
         if (!choice) return;
         p.responses[uid] = choice;
@@ -986,11 +1048,29 @@
         applyModify(uid, prompt, st, go);
       }
     });
+    host.addEventListener("change", (e) => {
+      const p = S.paper;
+      if (!p || p.mode !== "student" || p.result) return;
+      const sel = e.target.closest("select[data-fu-match], select[data-fu-blank]");
+      if (!sel) return;
+      const art = sel.closest("article.q");
+      const uid = art && (art.getAttribute("data-uid") || (art.id || "").replace(/^q-/, ""));
+      if (!uid) return;
+      p.lbs_stage = p.lbs_stage || {};
+      const st = p.lbs_stage[uid] || {};
+      const map = (st.followup_choice && typeof st.followup_choice === "object" && !Array.isArray(st.followup_choice))
+        ? Object.assign({}, st.followup_choice)
+        : {};
+      if (sel.hasAttribute("data-fu-match")) map[sel.getAttribute("data-fu-match")] = sel.value;
+      if (sel.hasAttribute("data-fu-blank")) map[sel.getAttribute("data-fu-blank")] = sel.value;
+      st.followup_choice = map;
+      p.lbs_stage[uid] = st;
+    });
   }
   function renderPaper() {
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Test maker</p><h1>Assemble a question paper</h1>" +
-      "<p class='sub'>Choose a big idea, concept, and sub-concept by name, then assemble. Take as a student to sit the paper: a wrong A–D opens a follow-up on that idea. Mix-up names stay off the learner paper.</p>" +
+      "<p class='sub'>Choose a big idea, concept, and sub-concept by name, then assemble. Take as a student to sit the paper: a wrong A–D opens a hint on that idea, then you retry the original. Mix-up names stay off the learner paper.</p>" +
       filtersHTML("tm") +
       "<div class='card'><div class='row'>" +
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
@@ -1003,7 +1083,7 @@
       "<label class='toggle'><input id='tm-student' type='checkbox'> Take this paper as a student</label> " +
       "<button id='tm-finish' class='sec hidden' type='button'>Finish and score</button> " +
       "<span class='muted' id='tm-grade-status'></span>" +
-      "<p class='muted'>Student mode hides Modify, the answer key, and mix-up notes. Pick A–D (or a table row). A miss opens a short follow-up on that choice; the original key is not shown until that follow-up is done. Score uses extracted keys where present.</p>" +
+      "<p class='muted'>Student mode hides Modify, the answer key, and mix-up notes. Pick A–D (or a table row). A miss opens a hint (not always a four-option MCQ). After the hint you return to the original with that letter cleared. The original key is not shown on the hint. Score uses the last unaided pick of the original.</p>" +
       "<p><button class='sec' id='tm-export' type='button'>Download new analyses</button></p>" +
       "</div></div>" +
       "<div id='tm-score'></div>" +

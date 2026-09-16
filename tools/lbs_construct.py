@@ -12,7 +12,7 @@ import json
 import re
 from pathlib import Path
 
-from lbs_quality import is_stamp_lbs, lbs_relevant  # noqa: E402
+from lbs_quality import followup_ok, is_stamp_lbs, lbs_relevant  # noqa: E402
 
 MX = (
     "term_substitution",
@@ -1164,7 +1164,7 @@ def lbs_complete(lbs: dict | None, key: str, options: dict | None = None, item: 
         return False
     for L in expect:
         fu = (wrong.get(L) or {}).get("followup") or {}
-        if not fu.get("stem") or fu.get("key") not in LETTERS or not (fu.get("options") or {}):
+        if not followup_ok(fu):
             return False
     return True
 
