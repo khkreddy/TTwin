@@ -66,10 +66,17 @@ def _overlay_records() -> dict[str, dict]:
     """Hand-authored + shard overlay. Constructor must not clobber these."""
     out: dict[str, dict] = {}
     paths = [
-        _ROOT / "data" / "spectra" / "lbs.json",
         _ROOT / "data" / "overlay" / "lbs_electrochem.json",
-        _ROOT / "data" / "overlay" / "lbs_gold.json",
     ]
+    astra = _ROOT / "data" / "overlay" / "astra"
+    if astra.is_dir():
+        paths.extend(sorted(astra.glob("*.json")))
+    paths.extend(
+        [
+            _ROOT / "data" / "spectra" / "lbs.json",
+            _ROOT / "data" / "overlay" / "lbs_gold.json",
+        ]
+    )
     shard = _ROOT / "data" / "overlay" / "shards"
     if shard.is_dir():
         paths.extend(sorted(shard.glob("*.json")))

@@ -340,11 +340,15 @@ def preserve_uids() -> set[str]:
         return _PRESERVE
     out: set[str] = set()
     root = Path(__file__).resolve().parents[1]
-    for p in (
+    paths = [
         root / "data" / "spectra" / "lbs.json",
         root / "data" / "overlay" / "lbs_electrochem.json",
         root / "data" / "overlay" / "lbs_gold.json",
-    ):
+    ]
+    astra = root / "data" / "overlay" / "astra"
+    if astra.is_dir():
+        paths.extend(sorted(astra.glob("*.json")))
+    for p in paths:
         if not p.is_file():
             continue
         try:

@@ -339,6 +339,10 @@ def author_letter(item: dict, letter: str, unit: dict) -> tuple[dict | None, dic
     key = (item.get("assessment") or {}).get("mcq_key")
     w = option_text(item, letter)
     r = option_text(item, key)
+    mech = unit.get("mechanism")
+    if not isinstance(mech, dict):
+        unit = dict(unit)
+        unit["mechanism"] = {"law": str(mech or "")}
     uid_unit = unit.get("unit_id")
     blob = _blob(item)
     fu, ex = None, {}

@@ -60,3 +60,5 @@ python3 tools/lbs_instantiate.py --scope electrochem --library … --preserve �
 ```
 
 No AI import on those paths. Owner check before any chapter expansion: q1, q33 C, q18 B, cryolite `9701_s11_qp_11:q3`, FeC₂O₄ `9701_m19_qp_12:q10`.
+
+Corpus instantiate: `tools/lbs_astra_corpus.py` writes `data/overlay/astra/<pack>.json` (zero model calls). `join_lbs.py` applies them; gold and spectroscopy still load last. Physics/biology often use map-law T/F or CWO T/F until grain bindings exist. Maths IGCSE/senior have no extracted keys.
