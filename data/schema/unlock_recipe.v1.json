@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ttwin.local/schema/unlock_recipe.v1.json",
+  "title": "unlock_recipe.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "recipe_id", "spec_sha256", "spec", "surface"],
+  "properties": {
+    "schema": { "const": "unlock_recipe.v1" },
+    "recipe_id": { "type": "string", "minLength": 1 },
+    "spec_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit_id", "anchor_step_id", "route", "format"],
+      "properties": {
+        "unit_id": { "type": "string", "minLength": 1 },
+        "anchor_step_id": { "type": "string", "minLength": 1 },
+        "route": {
+          "type": "object",
+          "required": ["kind", "id"],
+          "properties": {
+            "kind": { "enum": ["mx", "intermediate_omission"] },
+            "id": { "type": "string" },
+            "mx_type": {
+              "enum": [
+                "term_substitution",
+                "condition_omission",
+                "relationship_reversal",
+                "scope_error",
+                "surface_feature_capture",
+                "mechanism_conflation",
+                "operation_confusion"
+              ]
+            },
+            "source_status": { "enum": ["CANDIDATE", "VALIDATED"] }
+          }
+        },
+        "construct_id": { "type": "string" },
+        "gate_kind": { "enum": ["move", "fact", "choice"] },
+        "format": {
+          "enum": [
+            "single_mcq",
+            "true_false",
+            "multi_mcq",
+            "assertion_reason",
+            "match",
+            "fill_blank"
+          ]
+        }
+      }
+    },
+    "surface": { "type": "object" },
+    "evidence": { "type": "object" }
+  }
+}

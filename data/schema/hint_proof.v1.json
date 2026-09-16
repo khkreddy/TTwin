@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ttwin.local/schema/hint_proof.v1.json",
+  "title": "hint_proof.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "item_uid", "wrong_letter", "status", "steps", "gaps"],
+  "properties": {
+    "schema": { "const": "hint_proof.v1" },
+    "item_uid": { "type": "string" },
+    "wrong_letter": { "enum": ["A", "B", "C", "D"] },
+    "status": { "enum": ["PROVED", "GAP", "REJECTED"] },
+    "snapshot_sha256": { "type": ["string", "null"] },
+    "recipe_sha256": { "type": ["string", "null"] },
+    "followup_sha256": { "type": ["string", "null"] },
+    "theorem": { "type": ["object", "null"] },
+    "steps": { "type": "array" },
+    "gaps": { "type": "array" },
+    "gates": { "type": "array" }
+  }
+}

@@ -51,4 +51,6 @@ I2: the hint is a different question; it does not credit `P`. I3: the student pr
 - Chemistry AS/A Electrochemistry (this protocol): `data/overlay/lbs_electrochem.json`
 - Join: `tools/join_lbs.py`. Gold and spectroscopy win on their uids. Constructor templates are not this protocol.
 
+The production architecture is the **proof-carrying compiler** in `82_LBS_COMPILER.md` (Astra spec `harness/lbs_compiler/ASTRA_SPEC.md`): map unit + mx/step → hashed `unlock_recipe.v1` library → deterministic instantiate. No LLM per packed option. `tools/lbs_construct.py` is legacy audit only.
+
 Do not scale a chapter overlay until the owner has checked a packed sample of that chapter.

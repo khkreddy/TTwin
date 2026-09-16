@@ -17,6 +17,8 @@ Public copy names the synthesis layer **AI**. Harness text refers to **slot ids*
 | **T-SOLVE** | Teacher | first-write solution analysis | LEGAL; bare-letter inference is **FOLD-INTO**, forbidden as standalone | Assemble/Finish hits unknown `item_uid × sha` |
 | **T-BRIEF** | Teacher | lesson prose | LEGAL | Teacher toggles AI on a built digest |
 | **S-FEED** | Student | post-score feedback | LEGAL — **sole student slot** | Finish event, and only Finish |
+| **T-LBS-RECIPE-SURFACE** | Teacher | unit-level unlock-recipe surface | **PROPOSED** (not live; pack-time only) | Signed compile plan, one packet per map unit; whitelist projection; no per-item call |
+| **T-LBS-RECIPE-EXAMINE** | Teacher | independent recipe examiner | **PROPOSED** (not live; pack-time only) | One examiner packet per unit after surface; cannot waive deterministic gates |
 
 ### Folds
 
