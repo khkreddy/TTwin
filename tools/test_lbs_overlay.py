@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -1050,6 +1051,53 @@ def test_electrochem_overlay_protocol() -> dict:
     return {"n_ec": len(ec), "n_overlay_or_gold": n_ov, "n_hinge": n_hinge, "formats": sorted(formats)}
 
 
+def test_never_reprint_q33_q18() -> dict:
+    """Owner-rejected reprints must not return. Thinking-prod on the chemistry instead."""
+    bad_q33 = (
+        "Option C is “2 and 3 only are correct”. The numbered statement "
+        "“The oxidation number of chlorine in a compound is negative.” "
+        "belongs in the correct 1 / 2 / 3 combination."
+    )
+    bad_q18 = (
+        "This option is “X: −2; Y: +4; Z: +6” and assigns “Y: +4”. "
+        "What oxidation number should that species actually have here?"
+    )
+    assert is_stamp_lbs({
+        "solve": "x",
+        "wrong": {"C": {"followup": {"stem": bad_q33, "options": {"T": "True", "F": "False"}, "key": "F", "why": "x"}}},
+    })
+    assert is_stamp_lbs({
+        "solve": "x",
+        "wrong": {"B": {"followup": {"stem": bad_q18, "options": {"A": "a", "B": "b", "C": "c", "D": "d"}, "key": "C", "why": "x"}}},
+    })
+    packed = ROOT / "data/questions/chemistry-senior.json"
+    items = json.loads(packed.read_text(encoding="utf-8"))
+    by = {it["uid"]: it for it in items}
+    q33 = by["9701_m17_qp_12:q33"]
+    for L, w in q33["assessment"]["learn_by_solve"]["wrong"].items():
+        fu = w["followup"]
+        stem = fu.get("stem") or ""
+        assert "belongs in the correct" not in stem, (L, stem)
+        assert "2 and 3 only" not in stem, (L, stem)
+        assert "Option C is" not in stem, (L, stem)
+        assert followup_ok(fu), (L, fu)
+    c = q33["assessment"]["learn_by_solve"]["wrong"]["C"]["followup"]
+    blob = (c.get("stem") or "") + " " + (c.get("why") or "")
+    assert re.search(r"HClO|KClO|NaClO|ClO", blob), blob
+    q18 = by["9701_m18_qp_12:q18"]
+    for L, w in q18["assessment"]["learn_by_solve"]["wrong"].items():
+        fu = w["followup"]
+        stem = fu.get("stem") or ""
+        assert "that species actually have" not in stem, (L, stem)
+        assert "This option is" not in stem, (L, stem)
+        assert "X: −2" not in stem and "X: -2" not in stem, (L, stem)
+        assert followup_ok(fu), (L, fu)
+    b = q18["assessment"]["learn_by_solve"]["wrong"]["B"]["followup"]
+    blob = (b.get("stem") or "") + " " + (b.get("why") or "")
+    assert re.search(r"SO[₂2]|SO[₃3]|sulfur dioxide|sulfur trioxide", blob, re.I), blob
+    return {"q33C": c.get("stem"), "q18B": b.get("stem")}
+
+
 def test_learner_vs_teacher_html(item: dict, out_dir: Path) -> dict:
     payload = out_dir / "lbs_html_item.json"
     payload.write_text(json.dumps(item), encoding="utf-8")
@@ -1113,6 +1161,7 @@ if __name__ == "__main__":
     test_followup_ok_formats()
     test_multiformat_hint_html()
     eco = test_electrochem_overlay_protocol()
+    never = test_never_reprint_q33_q18()
     test_figure_letter_census()
     result = test_join_fixture()
     html = test_learner_vs_teacher_html(result["item"], html_dir)
@@ -1129,6 +1178,7 @@ if __name__ == "__main__":
         "solve": result["item"]["assessment"]["learn_by_solve"]["solve"],
         "gold_q1": gold,
         "electrochem": eco,
+        "never_reprint": never,
     }
     text = json.dumps(doc, indent=2)
     log_path.write_text(text + "\n", encoding="utf-8")

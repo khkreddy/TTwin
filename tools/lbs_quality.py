@@ -70,6 +70,12 @@ STAMP_STEM = (
     "What is true of",
     "in the situation the stem describes",
     "does not hold for the situation described",
+    # Owner-rejected reprints (9701_m17_qp_12:q33, 9701_m18_qp_12:q18). Never reuse.
+    "belongs in the correct 1 / 2 / 3 combination",
+    "belongs in the correct combination",
+    "What oxidation number should that species actually have here",
+    "Option C is “2 and 3 only are correct”",
+    "Option A is “1, 2 and 3 are correct”",
 )
 META_OPTION = (
     "A stated condition that still applies",

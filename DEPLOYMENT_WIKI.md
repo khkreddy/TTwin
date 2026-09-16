@@ -258,7 +258,7 @@ Construction: `tools/lbs_construct.py` (option-anchored unlocking questions) plu
 
 1. Take the packed hinge (`node`, chapter, subtopic; map `decision_hinge` when the stem matches).
 2. Name the option’s failure mode: overlooked **intermediate step** (oxidation number, electrode, electron count) or a V2 mix-up.
-3. Author a **simpler question** on that gate about **that option’s content**. Format fits the gate (true/false, multi-select, assertion–reason, match, fill-blank with a pre-set term bank, or short MCQ). `why` explains the hint, never `P`’s keyed letter.
+3. Author a **thinking-prod**: a short scientific reason the option is wrong, then a *new* small task (e.g. OS of Cl in HClO). Never reprint the clicked option. Recorded NEVER: `9701_m17_qp_12:q33` C (`Option C is “2 and 3 only…” belongs in the combination`) and `9701_m18_qp_12:q18` B (`This option is “X: −2; Y: +4…” what OS should that species have`).
 4. Runtime: miss on `P` → hint → submitting the hint **returns to `P`** (response cleared, original unlocked, `why` under the original). Finish scores the last unaided pick of `P`. Hint does not credit `P`.
 
 Chemistry AS/A **Electrochemistry** (`cam:9701:6`, hubs Redox / Electrochemistry) is the first chapter overlay: `data/overlay/lbs_electrochem.json` via `tools/lbs_electrochem.py`. Gold `9701_m16_qp_12:q1` and spectroscopy banks stay single-select MCQ. Do not scale other chapters until the owner has checked this pack.

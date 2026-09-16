@@ -14,8 +14,24 @@ For parent item `P` tagged to hinge `H` (five-click: pack, subject, big idea, ch
 2. **Failure mode of the chosen wrong letter.** Either:
    - **intermediate_omission** — a required step (oxidation number of one element, electrode identity, electron count) was skipped; or
    - a V2 mx (`term_substitution` · `condition_omission` · `relationship_reversal` · `scope_error` · `surface_feature_capture` · `mechanism_conflation` · `operation_confusion`).
-3. **Unlock question.** A simpler question on **that option’s content**. Format is whatever tests the gate: true/false, multi-select MCQ, assertion–reason, match, fill-in-the-blank with a pre-set term bank, or a short single-select MCQ. It must not state or imply `P`’s keyed letter or keyed option text.
+3. **Unlock question.** A **thinking-prod**: first a short scientifically correct account of why that option is wrong, then a *new* small task (calculate an oxidation number, identify a species, true/false on a named compound) that makes the student discover that reason. Format fits the gate. It must not state or imply `P`’s keyed letter, and it must **not reprint the option the student just read**.
 4. **Explanation (`why`).** Tells the result of the **hint**, not of `P`. Submitting the hint **returns the student to `P`** with the previous letter cleared.
+
+## NEVER (owner-rejected reprints)
+
+These were served as hints and must not be generated again. They restate the clicked option; the student has already read that text. They are not a task.
+
+**`9701_m17_qp_12:q33` option C (bad):**
+> Option C is “2 and 3 only are correct”. The numbered statement “The oxidation number of chlorine in a compound is negative.” belongs in the correct 1 / 2 / 3 combination.
+
+The gate is that statement 3 is not always true. The unlock is a calculation, e.g. oxidation number of Cl in HClO (it is +1).
+
+**`9701_m18_qp_12:q18` option B (bad):**
+> This option is “X: −2; Y: +4; Z: +6” and assigns “Y: +4”. What oxidation number should that species actually have here?
+
+“That species” is undefined. The unlock is to identify Y as SO₃ (from oxidising the combustion product) and find S is +6, or identify X as SO₂ (S +4), not sulfide.
+
+Banned stem shapes: `Option C is “2 and 3 only…”`, `belongs in the correct 1 / 2 / 3 combination`, `This option is “X: −2; Y: +4…”`, `What oxidation number should that species actually have here?`
 
 ## Runtime (instructional integrity)
 

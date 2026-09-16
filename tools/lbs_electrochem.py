@@ -7,6 +7,7 @@ freeze exam.v1. Gold 9701_m16_qp_12:q1 and spectroscopy uids are not overwritten
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -20,7 +21,6 @@ from lbs_construct import (
     _formula_followup,
     _oxidation_states,
     classify,
-    _letter_stem,
     clip,
     looks_numeric,
     option_text,
@@ -129,7 +129,6 @@ def _stmt_set(s: str) -> set[int]:
 
 def _wrap(row: dict, letter: str, hinge_id: str, hinge_label: str, mx: str, pathway: str, kind: str) -> dict:
     fu = dict(row)
-    fu["stem"] = _letter_stem(letter, fu.get("stem") or "")
     fu.setdefault("format", "single_mcq")
     return {
         "hinge_id": hinge_id,
@@ -139,6 +138,39 @@ def _wrap(row: dict, letter: str, hinge_id: str, hinge_label: str, mx: str, path
         "pathway": pathway,
         "followup": fu,
     }
+
+
+def _pick(uid: str, letter: str, n: int) -> int:
+    h = hashlib.md5(f"{uid}:{letter}".encode()).hexdigest()
+    return int(h, 16) % max(1, n)
+
+
+def _item_statements(item: dict) -> dict[int, str]:
+    out: dict[int, str] = {}
+    for x in item.get("statements") or []:
+        if isinstance(x, dict) and x.get("n") is not None:
+            out[int(x["n"])] = re.sub(r"\s+", " ", str(x.get("text") or "")).strip()
+    if len(out) >= 2:
+        return out
+    return _numbered_statements(item.get("stem") or "")
+
+
+def _quotes_option(stem: str, option: str) -> bool:
+    """True when the hint reprints a combo label or an X/Y/Z row, not when it works a formula."""
+    s = re.sub(r"\s+", " ", stem or "")
+    o = re.sub(r"\s+", " ", option or "").strip()
+    sl = s.lower()
+    if "belongs in the correct" in sl or "that species actually have" in sl:
+        return True
+    if re.search(r"this option is\s+[“\"]", s, re.I) or re.search(r"this option says\s+[“\"]", s, re.I):
+        return True
+    if re.search(r"option [a-d]\s+is\s+", sl) and _looks_stmt_combo(s):
+        return True
+    if _looks_stmt_combo(o) and o and o in s:
+        return True
+    if re.search(r"[XYZ]\s*:\s*[+\-−]?\d+", o) and o[:24] in s:
+        return True
+    return False
 
 
 def _os_terms(extra: list[str] | None = None) -> list[str]:
@@ -256,39 +288,309 @@ def _redox_equation(uid: str, letter: str, w: str, hinge_id: str, hinge_label: s
     return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
 
 
-def _os_row(uid: str, letter: str, w: str, k_c: str, w_c: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
+def _fill(stem: str, terms: list[str], key: dict, why: str) -> dict:
+    return {"format": "fill_blank", "stem": stem, "terms": terms, "key": key, "why": why}
+
+
+def _tf(stem: str, truth: bool, why: str) -> dict:
+    return {
+        "format": "true_false",
+        "stem": stem,
+        "options": {"T": "True", "F": "False"},
+        "key": "T" if truth else "F",
+        "why": why,
+    }
+
+
+def _xyz_cells(s: str) -> dict[str, str]:
+    return {
+        lab: val.replace("−", "-")
+        for lab, val in re.findall(r"([A-Z])\s*:\s*([+\-−]?\d+)", s or "")
+    }
+
+
+def _sulfur_xyz_ident(lab: str) -> tuple[str, str, str] | None:
+    return {
+        "X": (
+            "SO₂",
+            "+4",
+            "Sulfur burns in air to sulfur dioxide. In SO₂, S is +4, not −2 (that value is sulfide, e.g. H₂S).",
+        ),
+        "Y": (
+            "SO₃",
+            "+6",
+            "SO₂ is oxidised to SO₃. In SO₃, S is +6, not +4.",
+        ),
+        "Z": (
+            "H₂SO₄",
+            "+6",
+            "SO₃ reacts with water to give sulfuric acid. Sulfur stays +6; dissolving it does not reduce sulfur.",
+        ),
+    }.get(lab)
+
+
+def _formula_os_pairs(s: str) -> list[tuple[str, str]]:
+    return re.findall(
+        r"([A-Za-z][A-Za-z0-9₀-₉()₂₃₄₅₆₇₈₉⁺⁻+\-]*)\s*:\s*([+\-−]?\d+)",
+        s or "",
+    )
+
+
+def _os_row(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
+    """Thinking-prod on the species the row got wrong. Never reprint the row."""
+    pairs_w = _formula_os_pairs(w)
+    pairs_r = _formula_os_pairs(r)
+    xyz_labels = {a for a, _ in pairs_w} <= set("XYZW") and all(len(a) == 1 for a, _ in pairs_w)
+    if len(pairs_w) >= 2 and len(pairs_r) >= 2 and not xyz_labels:
+        rw = {a.replace("−", "-"): b.replace("−", "-") for a, b in pairs_w}
+        rr = {a.replace("−", "-"): b.replace("−", "-") for a, b in pairs_r}
+        diffs = [name for name in rw if rr.get(name) != rw.get(name)]
+        if diffs:
+            name = diffs[0]
+            os = _oxidation_states(name) or _oxidation_states(_ascii_form(name))
+            # Elemental S / SO2 / thiosulfate
+            if name in {"S", "S(s)"} or re.fullmatch(r"S", name):
+                fu = _fill(
+                    "In elemental sulfur, S(s), the oxidation number of sulfur is [[S]].",
+                    _os_terms(["0"]),
+                    {"S": "0"},
+                    "An uncombined element has oxidation number 0.",
+                )
+                return _wrap(fu, letter, hinge_id, hinge_label, mx, "Student did not assign 0 to S(s).", "intermediate_omission")
+            if os:
+                el = next((e for e in os if e not in ("O", "H", "Na", "K") or len(os) == 1), list(os)[0])
+                if "S" in os and ("s2o3" in _ascii_form(name).lower() or name.startswith("Na")):
+                    el = "S"
+                osn = _os_term(os[el])
+                fu = _fill(
+                    f"In {name}, the oxidation number of {el} is [[{el}]].",
+                    _os_terms([osn]),
+                    {el: osn},
+                    f"Assign the usual oxidation numbers in {name}; {el} is {osn}.",
+                )
+                return _wrap(fu, letter, hinge_id, hinge_label, mx, f"Student mis-assigned {el} in {name}.", "intermediate_omission")
+    cells_w = _xyz_cells(w)
+    cells_r = _xyz_cells(r)
+    sl = (item.get("stem") or "").lower()
+    sulfur = ("sulfur" in sl or "sulphur" in sl) and ("burn" in sl or "oxidis" in sl)
+    if cells_w and cells_r and sulfur:
+        diffs = [lab for lab in cells_w if cells_w.get(lab) != cells_r.get(lab)]
+        if not diffs:
+            diffs = list(cells_w)
+        # Prefer a label unique to this wrong row among other wrongs.
+        others = []
+        opts = item.get("options") or {}
+        key = (item.get("assessment") or {}).get("mcq_key")
+        for L, txt in opts.items():
+            if L in (key, letter):
+                continue
+            others.append(_xyz_cells(txt))
+        ranked = sorted(diffs, key=lambda lab: sum(1 for o in others if o.get(lab) == cells_w.get(lab)))
+        lab = ranked[0]
+        ident = _sulfur_xyz_ident(lab)
+        if ident:
+            name, osn, sci = ident
+            fu = _fill(
+                f"In {name}, the oxidation number of sulfur is [[S]].",
+                _os_terms([osn]),
+                {"S": osn},
+                sci,
+            )
+            return _wrap(
+                fu, letter, hinge_id, hinge_label, mx,
+                f"Student assigned the wrong oxidation number to {name} in the X/Y/Z sequence.",
+                "intermediate_omission",
+            )
     if not re.search(r"[+\-−]\s*\d", w) and "oxidation" not in w.lower():
         return None
-    focus = w_c if w_c and w_c != k_c else w
-    q = (
-        f"This option is “{clip(w, 70)}” and assigns “{clip(focus, 50)}”. "
-        f"What oxidation number should that species actually have here?"
-    )
-    if k_c and k_c.strip() != (w_c or "").strip():
-        correct = clip(k_c, 70)
-        distractors = [clip(w_c or w, 70), "0 for every element", "the oxidation number of oxygen only"]
-        why = (
-            f"The missing step is the oxidation number of that species. "
-            f"It is not “{clip(w_c or w, 50)}” in this reaction."
+    # Generic OS-row: ask a named species from the stem, never quote the option row.
+    if sulfur:
+        fu = _fill(
+            "When sulfur burns in air, the oxidation number of sulfur in the gaseous product is [[S]].",
+            _os_terms(["+4"]),
+            {"S": "+4"},
+            "The combustion product is SO₂, in which sulfur is +4.",
         )
-        # Do not put the original keyed full option as the only correct if it leaks the whole row.
-        if len(k_c) > 80:
-            correct = "Recompute from the formula: group 1 = +1, O = −2, then the remaining element"
-            distractors = [clip(focus, 70), "treat every atom as 0", "copy the charge of the ion onto every atom"]
-            why = "Use the usual oxidation-number rules on the formula in this option, not a neighbouring element."
-    else:
+        return _wrap(fu, letter, hinge_id, hinge_label, mx, "Student skipped identifying the combustion product.", "intermediate_omission")
+    return None
+
+
+def _stmt_thinking(item: dict, uid: str, letter: str, body: str, statement_is_true: bool) -> dict | None:
+    """A small chemistry task that tests the disputed statement. Never reprints 1/2/3 combos."""
+    b = re.sub(r"<[^>]+>", " ", body or "")
+    b = re.sub(r"\s+", " ", b).strip()
+    bl = b.lower()
+    if not b:
         return None
-    opts, fu_key = place(uid, letter, correct, distractors)
-    pathway = f"Student kept “{clip(focus, 40)}” without finishing the oxidation-number assignment."
-    return _wrap(
-        {"format": "single_mcq", "stem": q, "options": opts, "key": fu_key, "why": why},
-        letter,
-        hinge_id,
-        hinge_label,
-        mx,
-        pathway,
-        "intermediate_omission",
+
+    if "chlorine" in bl and "negative" in bl:
+        # Canonical unlock for this trap: Cl in HClO is +1 (owner example).
+        bank = [
+            ("HClO", "+1", "H is +1 and O is −2, so Cl in HClO is +1."),
+            ("KClO₃", "+5", "K is +1 and three O at −2, so Cl in KClO₃ is +5."),
+        ]
+        name, osn, sci = bank[0] if letter in {"A", "C"} and uid.endswith(":q33") else bank[_pick(uid, letter, len(bank))]
+        if letter == "C":
+            name, osn, sci = bank[0]
+        return _fill(
+            f"In {name}, the oxidation number of chlorine is [[Cl]].",
+            _os_terms([osn]),
+            {"Cl": osn},
+            sci + " Chlorine in a compound is not always negative.",
+        )
+    if "sodium" in bl and "positive" in bl:
+        return _fill(
+            "In NaCl, the oxidation number of sodium is [[Na]].",
+            _os_terms(["+1"]),
+            {"Na": "+1"},
+            "Sodium in a salt is +1. That claim is true.",
+        )
+    if "sum" in bl and "oxidation" in bl and "zero" in bl:
+        return _fill(
+            "In H₂O, the oxidation numbers of the two hydrogen atoms and the oxygen atom sum to [[sum]].",
+            ["0", "+1", "−2", "+2", "the charge of the ion"],
+            {"sum": "0"},
+            "In a neutral compound the oxidation numbers sum to zero.",
+        )
+    if "bauxite" in bl and "melting" in bl:
+        return _fill(
+            "In the extraction of aluminium, [[1]] is mixed with Al₂O₃ to lower the melting point of the electrolyte.",
+            ["cryolite", "bauxite", "graphite", "pure alumina"],
+            {"1": "cryolite"},
+            "Cryolite, not bauxite, is the solvent that lowers the melting point.",
+        )
+    if "cathode" in bl and ("oxygen" in bl or "graphite" in bl or "co₂" in bl or "co2" in bl):
+        return _fill(
+            "In molten-Al₂O₃ electrolysis, O²⁻ is oxidised at the carbon [[1]].",
+            ["anode", "cathode"],
+            {"1": "anode"},
+            "Oxygen is liberated at the anode, not the cathode. The carbon anode then burns to CO₂.",
+        )
+    if "disproportionation" in bl:
+        return _tf(
+            "In 4KClO₃ → 3KClO₄ + KCl, some chlorine atoms increase in oxidation number and some decrease.",
+            True,
+            "The same element is both oxidised and reduced: that is disproportionation.",
+        )
+    m = re.search(
+        r"oxidation (?:state|number) of (chlorine|cl) in ([A-Za-z0-9₀-₉()₄₃₂]+)",
+        bl,
     )
+    if m:
+        formula = m.group(2)
+        # recover original formula casing from body if possible
+        fm = re.search(r"\b(KClO[₃3]|NaClO[₃3]|HClO[₄4]|KClO4|NaClO3)\b", b)
+        form = fm.group(1) if fm else formula
+        os = _oxidation_states(form) or _oxidation_states(form.replace("₃", "3").replace("₄", "4"))
+        if os and "Cl" in os:
+            osn = _os_term(os["Cl"])
+            return _fill(
+                f"In {form}, the oxidation number of chlorine is [[Cl]].",
+                _os_terms([osn]),
+                {"Cl": osn},
+                f"Assign K/Na/H = +1 and O = −2, then Cl is {osn}.",
+            )
+    if re.search(r"\bh\s*\+|h⁺|h\+\(aq\)", bl) and "oxid" in bl:
+        return _tf(
+            "In 2H⁺ + 2NO₂⁻ → H₂O + NO + NO₂, the oxidation number of hydrogen increases.",
+            False,
+            "Hydrogen stays +1. It is not oxidised. Nitrogen disproportionates (NO₂⁻ → NO and NO₂).",
+        )
+    if EQN.search(b) or re.search(r"→|->", b):
+        ascii_b = _ascii_form(b)
+        if re.search(r"Br2|Br₂", b) and re.search(r"CaBr|H2SO4|H₂SO₄", b):
+            return _fill(
+                "In Br₂, the oxidation number of bromine is [[Br]].",
+                _os_terms(["0"]),
+                {"Br": "0"},
+                "Elemental bromine is 0. In CaBr₂ bromine is −1, so that reaction is redox.",
+            )
+        if re.search(r"H3PO4|H₃PO₄|HBr", b) and re.search(r"CaBr", b):
+            return _fill(
+                "In CaBr₂ and in HBr, the oxidation number of bromine is [[Br]].",
+                _os_terms(["−1"]),
+                {"Br": "−1"},
+                "Bromine is −1 on both sides, so this metathesis is not redox.",
+            )
+        if re.search(r"AgNO3|AgNO₃|AgBr", b):
+            return _tf(
+                "In CaBr₂ + 2AgNO₃ → Ca(NO₃)₂ + 2AgBr, any element changes oxidation number.",
+                False,
+                "This is precipitation. Oxidation numbers are unchanged, so it is not redox.",
+            )
+        if re.search(r"SO3|SO₃", b) and re.search(r"H2O|H₂O", b) and re.search(r"H2SO4|H₂SO₄", b):
+            return _fill(
+                "When SO₃ reacts with water to give H₂SO₄, the oxidation number of sulfur [[1]].",
+                ["stays +6", "falls to +4", "rises to +8", "becomes 0"],
+                {"1": "stays +6"},
+                "S is +6 in both SO₃ and H₂SO₄. Combining with water is not redox.",
+            )
+        if re.search(r"NaClO|ClO\b", b) and re.search(r"NaCl\b", b):
+            return _fill(
+                "In NaClO, the oxidation number of chlorine is [[Cl]]; in NaCl it is [[Cl2]].",
+                _os_terms(["+1", "−1"]),
+                {"Cl": "+1", "Cl2": "−1"},
+                "Cl in hypochlorite is +1 and falls to −1 in chloride, so ClO⁻ is reduced.",
+            )
+        # generic: OS of a simple formula in the equation
+        os_hit = None
+        for sp in re.findall(r"[A-Z][a-z]?(?:[A-Z][a-z]?|\d|₀-₉|\(|\))*", ascii_b):
+            if sp.count("(") != sp.count(")"):
+                continue
+            if FORMULAISH.search(_ascii_form(sp)) and 1 < len(sp) <= 18:
+                os_hit = _oxidation_states(sp)
+                if os_hit:
+                    el = next((e for e in os_hit if e not in ("O", "H")), list(os_hit)[0])
+                    osn = _os_term(os_hit[el])
+                    return _fill(
+                        f"In {sp}, the oxidation number of {el} is [[{el}]].",
+                        _os_terms([osn]),
+                        {el: osn},
+                        f"Assign oxidation numbers in {sp} before judging whether that reaction is redox.",
+                    )
+        return _tf(
+            f"Deciding whether {clip(b, 70)} is redox requires checking oxidation numbers on both sides.",
+            True,
+            "A reaction is redox only if some element’s oxidation number changes. Do that check on this equation.",
+        )
+    m = re.match(r"(aluminium|aluminum|chlorine|nitrogen|sulfur|sulphur|oxygen|manganese|tin)\s+is\s+(oxidised|reduced)", bl)
+    if m:
+        el_name, verb = m.group(1), m.group(2)
+        if el_name.startswith("alum"):
+            return _fill(
+                "In the shuttle reaction, Al (0) becomes Al in Al₂O₃. Aluminium is [[1]].",
+                ["oxidised", "reduced", "unchanged"],
+                {"1": "oxidised"},
+                "Aluminium’s oxidation number rises from 0 to +3, so it is oxidised.",
+            )
+        if el_name == "chlorine" and verb == "reduced":
+            return _fill(
+                "In NH₄ClO₄, Cl is +7; in AlCl₃, Cl is −1. Chlorine is [[1]].",
+                ["reduced", "oxidised", "unchanged"],
+                {"1": "reduced"},
+                "Chlorine’s oxidation number falls, so chlorine is reduced.",
+            )
+        if el_name == "nitrogen" and verb == "oxidised":
+            return _fill(
+                "In NH₄⁺, N is −3; in N₂, N is 0. Nitrogen is [[1]].",
+                ["oxidised", "reduced", "unchanged"],
+                {"1": "oxidised"},
+                "Nitrogen’s oxidation number rises from −3 to 0, so nitrogen is oxidised.",
+            )
+    if "reducing agent" in bl:
+        return _tf(
+            "A reducing agent is oxidised: its oxidation number increases.",
+            True,
+            "If chlorine’s oxidation number falls, chlorine is reduced, so it is not acting as a reducing agent.",
+        )
+    if "three moles of electrons" in bl or "3 mol" in bl:
+        return _fill(
+            "Al³⁺ + [[n]]e⁻ → Al. How many moles of electrons are needed per mole of Al³⁺?",
+            ["1", "2", "3", "6"],
+            {"n": "3"},
+            "Each Al³⁺ gains three electrons.",
+        )
+    return None
 
 
 def _three_stmt(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: str, hinge_label: str, mx: str) -> dict | None:
@@ -299,23 +601,13 @@ def _three_stmt(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: str
     n = sorted(extra or missing)[0] if (extra or missing) else None
     if n is None:
         return None
-    stmts = _numbered_statements(item.get("stem") or "")
-    body = stmts.get(n) or f"numbered statement {n}"
-    need = n in _stmt_set(r)
-    fu = {
-        "format": "true_false",
-        "stem": (
-            f"Option {letter} is “{clip(w, 40)}”. "
-            f"The numbered statement “{clip(body, 100)}” belongs in the correct 1 / 2 / 3 combination."
-        ),
-        "options": {"T": "True", "F": "False"},
-        "key": "T" if need else "F",
-        "why": (
-            f"Settle statement {n} on its own. "
-            f"It {'does' if need else 'does not'} belong in the correct combination."
-        ),
-    }
-    pathway = f"Student mis-classified statement {n}: {clip(body, 50)}."
+    stmts = _item_statements(item)
+    body = stmts.get(n) or ""
+    statement_is_true = n not in extra
+    fu = _stmt_thinking(item, uid, letter, body, statement_is_true)
+    if not fu:
+        return None
+    pathway = f"Student mis-classified statement {n}: {clip(body or str(n), 50)}."
     return _wrap(fu, letter, hinge_id, hinge_label, mx, pathway, "intermediate_omission")
 
 
@@ -327,7 +619,7 @@ def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hing
     if "cryolite" in sl and ("oxid" in wl or "corrosion" in wl):
         fu = {
             "format": "assertion_reason",
-            "stem": f"This option says “{clip(w, 70)}”. Decide assertion and reason about cryolite.",
+            "stem": "Decide assertion and reason about cryolite in the extraction of aluminium.",
             "assertion": clip(w, 90),
             "reason": "Cryolite dissolves Al₂O₃ and lowers the melting temperature of the electrolyte.",
             "options": dict(AR_DEFAULT),
@@ -346,10 +638,7 @@ def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hing
     if "cryolite" in sl and ("melting" in wl or "solvent" in wl or "cryolite" in wl):
         fu = {
             "format": "multi_mcq",
-            "stem": (
-                f"This option says “{clip(w, 70)}”. "
-                "Which of these are roles of cryolite mixed with Al₂O₃?"
-            ),
+            "stem": "Which of these are roles of cryolite mixed with Al₂O₃?",
             "options": {
                 "A": "It lowers the melting point of the electrolyte",
                 "B": "It dissolves aluminium oxide",
@@ -371,10 +660,7 @@ def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hing
     if "anode" in wl or "cathode" in wl or "oxidised" in wl or "reduced" in wl:
         fu = {
             "format": "match",
-            "stem": (
-                f"This option says “{clip(w, 70)}”. "
-                "Match each species to its role in molten electrolysis of the metal oxide."
-            ),
+            "stem": "Match each species to its role in molten electrolysis of the metal oxide.",
             "left": {
                 "1": "Al³⁺",
                 "2": "O²⁻",
@@ -400,10 +686,7 @@ def _electrolysis(item: dict, uid: str, letter: str, w: str, hinge_id: str, hing
         )
     fu = {
         "format": "fill_blank",
-        "stem": (
-            f"This option says “{clip(w, 70)}”. "
-            "Cations are [[1]] at the [[2]]; cryolite is the [[3]]."
-        ),
+        "stem": "Cations are [[1]] at the [[2]]; cryolite is the [[3]].",
         "terms": ["reduced", "oxidised", "cathode", "anode", "solvent"],
         "key": {"1": "reduced", "2": "cathode", "3": "solvent"},
         "why": "Separate the solvent role of cryolite from the electrode half-equations before judging this option.",
@@ -479,10 +762,12 @@ def _numeric_redox(item: dict, uid: str, letter: str, w: str, r: str, hinge_id: 
 
 def _default_chem(item: dict, uid: str, letter: str, w: str, k_c: str, w_c: str, hinge_id: str, hinge_label: str, mx: str) -> dict:
     focus = clip(w_c or w, 80)
+    if _looks_stmt_combo(w) or re.search(r"[XYZ]\s*:", w or "") or _quotes_option(focus, w):
+        focus = "the species under test"
     fu = {
         "format": "fill_blank",
         "stem": (
-            f"For the species or process “{focus}”, assign oxidation numbers first. "
+            f"For {focus}, assign oxidation numbers first. "
             "The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same."
         ),
         "terms": ["oxidised", "reduced", "unchanged"],
@@ -519,14 +804,14 @@ def author_wrong(item: dict, letter: str, hinge_id: str, hinge_label: str) -> di
     num = _numeric_redox(item, uid, letter, w, r, hinge_id, hinge_label, mx)
     if num:
         return num
-    if FORMULAISH.search(_ascii_form(w)) and len(w) <= 48 and not EQN.search(w):
+    if FORMULAISH.search(_ascii_form(w)) and len(w) <= 48 and not EQN.search(w) and not re.search(r":\s*[+\-−]?\d", w):
         row = _os_formula(uid, letter, w, hinge_id, hinge_label, mx, pathway)
         if row:
             return row
     eq = _redox_equation(uid, letter, w, hinge_id, hinge_label, mx)
     if eq:
         return eq
-    row = _os_row(uid, letter, w, k_c, w_c, hinge_id, hinge_label, mx)
+    row = _os_row(item, uid, letter, w, r, hinge_id, hinge_label, mx)
     if row:
         return row
     return _default_chem(item, uid, letter, w, k_c, w_c, hinge_id, hinge_label, mx)
@@ -545,7 +830,8 @@ def author_item(item: dict, units: list[dict]) -> dict | None:
         if not option_text(item, L) and not item.get("options_are_figure"):
             continue
         row = author_wrong(item, L, hinge_id, hinge_label)
-        if not row or not followup_ok(row.get("followup")):
+        fu = (row or {}).get("followup") or {}
+        if not row or not followup_ok(fu) or _quotes_option(fu.get("stem") or "", option_text(item, L)):
             return None
         wrong[L] = row
     if not wrong:
