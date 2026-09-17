@@ -12,6 +12,8 @@ These files are **agent law** for the live site (https://khkreddy.github.io/TTwi
 6. `30_STUDENT_MODEL.md` — Student Model (first-class; instructional invariants live here)
 7. Rest as needed: packets, surfaces, IIP map, ledger, ISO-GEN, diagnosis, dark layers, strings, failure modes
 
+**ISO-GEN and Astra LBS (packaged).** Signed ISO-GEN lives in `isogen/`. The Astra hint compiler lives in `astra-lbs/`. Read `README_ISOGEN_ASTRA.md` before either folder.
+
 **Running philosophy (one sentence).** The corpus is the product — retrieve, typeset, score, and lookup are deterministic, and AI runs only where no lookup can exist, against a capped packet, returning output that is CANDIDATE until a human ratifies it.
 
 Public UI says **AI**. Never a vendor name or model slug.

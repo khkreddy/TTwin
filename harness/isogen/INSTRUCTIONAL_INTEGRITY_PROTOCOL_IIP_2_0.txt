@@ -1,0 +1,249 @@
+Below is the **final, corrected, Hendrick-compliant version** of the invariant system and protocol.
+
+This version incorporates:
+
+* the critique
+* the LinkedIn “Evaluability ≠ Feedback” rule
+* the anti-gaming requirement
+* and the distinction between **learning validity** vs **learning optimization**
+
+Nothing here is a best-practice.
+Everything here is a **failure-prevention law**.
+
+---
+
+# **Instructional Integrity Protocol — IIP-2.0**
+
+*(Hendrick–Kirschner Cognitive Validity Standard)*
+
+> **Purpose**
+> Prevent ed-tech systems from producing **false positives for learning**.
+
+A system is educational **only if** it cannot report progress unless **durable, transferable cognitive change** has occurred.
+
+---
+
+# **Layer 1 — Skill Validity (ACT-R Compliance)**
+
+These invariants prevent **success without skill**.
+
+### **I1. Skill-Only Success**
+
+A learner must not be able to succeed unless they execute the **target cognitive operation**.
+
+Fail if:
+UI cues, elimination, pattern-matching, or guessing allow correct answers.
+
+---
+
+### **I2. No Assisted Credit**
+
+Any attempt using hints, examples, or scaffolds is excluded from mastery tracking.
+
+Fail if:
+Guided or helped answers advance progress.
+
+---
+
+### **I3. Generative Error Correction**
+
+After an error, the learner must actively reconstruct the correct solution.
+
+Fail if:
+The system shows the answer and proceeds.
+
+---
+
+### **I4. Anti-Guessing**
+
+Guessing must be more costly than thinking.
+
+Fail if:
+Rapid clicking or random attempts advance the learner faster than reasoning.
+
+---
+
+# **Layer 2 — Memory Validity**
+
+These prevent **working-memory illusions** from being mistaken for learning.
+
+### **I5. No Immediate Mastery**
+
+New material cannot be marked mastered in the same session it is taught.
+
+Fail if:
+Same-session success counts as learning.
+
+---
+
+### **I6. No Surface Repetition**
+
+Identical items cannot verify mastery.
+
+Fail if:
+Same numbers, same phrasing, or same examples are reused.
+
+---
+
+### **I7. Delayed Confirmation**
+
+Mastery is granted only after later, independent retrieval.
+
+Fail if:
+Units can be completed immediately.
+
+---
+
+### **I8. Interleaved Exit**
+
+To exit a unit, learners must solve mixed problems from earlier units.
+
+Fail if:
+Blocked practice allows exit.
+
+---
+
+# **Layer 3 — Novice Protection**
+
+These prevent **schema-less overload**.
+
+### **I9. No Unguided Discovery for Novices**
+
+Low-knowledge learners must not face open-ended search.
+
+Fail if:
+Novices get discovery tasks.
+
+---
+
+### **I10. Step-Locked Complexity**
+
+High-element tasks must be decomposed into enforced sub-steps.
+
+Fail if:
+Whole tasks appear before components are learned.
+
+---
+
+# **Layer 4 — Evaluability (THE CORE INVARIANTS)**
+
+If any of these fail, learning fails even if everything else works.
+
+### **I11. Detectability**
+
+The learner must be able to see that something is wrong **without being told**.
+
+Fail if:
+The only error signal is “Incorrect” or a red banner.
+
+---
+
+### **I12. Localisability**
+
+The learner must be able to point to **where** the error occurred.
+
+Fail if:
+The error is global rather than tied to a specific step, variable, or move.
+
+---
+
+### **I13. Interpretability**
+
+The learner must understand **what kind** of error it is.
+
+Fail if:
+They cannot distinguish misconception, mis-application, or slip.
+
+---
+
+### **I14. Actionability**
+
+The learner must know **what to change next**.
+
+Fail if:
+They must guess a different option instead of deliberately correcting.
+
+---
+
+# **Layer 5 — Progress Integrity**
+
+These prevent **hollow advancement**.
+
+### **I15. High-Threshold Gates**
+
+Progress requires fluent, unassisted retrieval (e.g., ≥90%).
+
+Fail if:
+Time, completion, or engagement unlocks content.
+
+---
+
+### **I16. Active Spirals Only**
+
+Revisited material must require retrieval, not recap.
+
+Fail if:
+Users reread or rewatch instead of re-answering.
+
+---
+
+### **I17. Expert Decomposition**
+
+All expert knowledge must be decomposed into novice steps.
+
+Fail if:
+Compressed expert shortcuts are allowed.
+
+---
+
+### **I18. Transfer Verification**
+
+Skills must be tested in new contexts.
+
+Fail if:
+Skills only work in the training format.
+
+---
+
+### **I19. Mathemathantic Detection**
+
+The system must detect and block non-learning strategies.
+
+Fail if:
+Guessing, pattern exploitation, skipping, or error-practicing continues unchecked.
+
+---
+
+### **I20. No Progress Through Error**
+
+If the learner is repeatedly wrong using the same strategy, the system must halt progress and force correction.
+
+Fail if:
+Users can advance while reinforcing bad mental models.
+
+---
+
+# **How this protocol is used**
+
+Every ed-tech proposal must answer, **in engineering terms**:
+
+1. Where is each invariant enforced?
+2. What telemetry proves it?
+3. What happens when it is violated?
+
+If any invariant cannot be answered,
+the system is not educational — it is **instructional theatre**.
+
+---
+
+# **This is Hendrick’s architecture**
+
+Not:
+
+> “How do we make learning engaging?”
+
+But:
+
+> **“How do we prevent software from lying about learning?”**
+
+That is what IIP-2.0 now guarantees.

@@ -1,0 +1,55 @@
+{
+  "schema": "lbs.grain_bindings.v1",
+  "note": "Reviewed Cambridge→NCERT candidate sets. Instantiation still applies task guards. Token-overlap of hinge words is not a join.",
+  "bindings": [
+    {
+      "binding_id": "grain:cam:9701:6:redox-as",
+      "tags": {
+        "pack": "senior_11_12_as_a",
+        "chapter_id": "cam:9701:6",
+        "subtopic_id": "AS_A:9701.6.1",
+        "node": "C5/H-REDOX"
+      },
+      "chapter_family": "science/grade_11/chem_ch_207",
+      "candidates": [
+        "science/grade_11/chem_ch_207/H001",
+        "science/grade_11/chem_ch_207/H002",
+        "science/grade_11/chem_ch_207/H003",
+        "science/grade_11/chem_ch_207/H004",
+        "science/grade_11/chem_ch_207/H005",
+        "science/grade_11/chem_ch_207/H006",
+        "science/grade_11/chem_ch_207/H007",
+        "science/grade_11/chem_ch_207/H008",
+        "science/grade_11/chem_ch_207/H009",
+        "science/grade_11/chem_ch_207/H010",
+        "science/grade_11/chem_ch_207/H011",
+        "science/grade_11/chem_ch_207/H012"
+      ],
+      "excluded_unless_stem_matches": {
+        "science/grade_12/chem_ch_105/H004": ["coordination", "ligand", "[fe", "[cu", "[co"],
+        "science/grade_12/chem_ch_205/H002": ["sugar", "glucose", "sucrose", "reducing sugar"],
+        "science/grade_11/chem_ch_209/H017": ["alkene", "ozonolysis"]
+      },
+      "evidence": "projection.ncert_by_node_band[C5/H-REDOX|SENIOR_SECONDARY] ∩ chem_ch_207; AS 9701.6 is redox processes, not coordination/sugars."
+    },
+    {
+      "binding_id": "grain:cam:9701:24:echem-a",
+      "tags": {
+        "pack": "senior_11_12_as_a",
+        "chapter_id": "cam:9701:24",
+        "subtopic_id": "AS_A:9701.24.1",
+        "node": "C5/H-ECHEM"
+      },
+      "chapter_family": "science/grade_12/chem_ch_102",
+      "candidates": [
+        "science/grade_12/chem_ch_102/H001",
+        "science/grade_12/chem_ch_102/H003",
+        "science/grade_12/chem_ch_102/H016",
+        "science/grade_12/chem_ch_102/H017",
+        "science/grade_12/chem_ch_102/H018",
+        "science/grade_11/chem_ch_207/H014"
+      ],
+      "evidence": "projection.cambridge chapter_prefix AS_A:9701.24 and ncert_by_node_band[C5/H-ECHEM|SENIOR_SECONDARY] electrochemistry chapter."
+    }
+  ]
+}
