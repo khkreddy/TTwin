@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m18_qp_12:q40",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:21:27.144Z",
+  "source": {
+    "item_ref": "session:0620_m18_qp_12:q40",
+    "item_type": "single_mcq",
+    "stem": "Which statement about polymers is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Polymers are formed by breaking down monomers."
+      },
+      {
+        "id": "B",
+        "text": "Polymers can be natural or synthetic."
+      },
+      {
+        "id": "C",
+        "text": "Polymers contain atoms of only one element."
+      },
+      {
+        "id": "D",
+        "text": "Polymers have a giant ionic structure."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "States of matter, particles and water",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "water particles is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Applies when potassium permanganate grains are placed in water and the colour spreads without manual stirring."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "spreading and mixing through the available liquid or gas happens first, and that produces constant particle motion, with faster motion at higher temperature."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Applies when potassium permanganate grains are placed in water and the colour spreads without manual stirring is not true."
+      }
+    ],
+    "enrichment": "Particles of liquids and gases are in constant motion; moving water particles spread potassium permanganate through water, moving gas particles spread fragrance through air, and hotter water spreads the colour faster because its particles move faster. constant particle motion, with faster motion at higher temperature -> spreading and mixing through the available liquid or gas The learner predicts spreading of colour or fragrance from constant particle motion and predicts fastest colour spreading in hot water because hotter particles move faster. Colour or fragrance spreads only when someone stirs, blows, or carries it across the space.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_07/H010",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Polymers are formed by breaking down monomers.” for the required “Polymers can be natural or synthetic.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “Polymers contain atoms of only one element.” for the required “Polymers can be natural or synthetic.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Polymers have a giant ionic structure.” for the required “Polymers can be natural or synthetic.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Particulate nature of matter. The student must decide: Decide why colour or fragrance spreads through a liquid or gas, and how temperature changes the rate of spreading in water. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

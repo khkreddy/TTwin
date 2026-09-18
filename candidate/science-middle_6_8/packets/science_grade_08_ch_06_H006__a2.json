@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q8",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:19:29.246Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q8",
+    "item_type": "single_mcq",
+    "stem": "A box is being lifted by a fork-lift truck.\nThe weight of the box is 3000 N.\nThe force exerted by the fork-lift truck on the box is 3500 N vertically upwards.\nWhat is the resultant vertical force on the box?",
+    "options": [
+      {
+        "id": "A",
+        "text": "500 / N / downwards"
+      },
+      {
+        "id": "B",
+        "text": "500 / N / upwards"
+      },
+      {
+        "id": "C",
+        "text": "6500 / N / downwards"
+      },
+      {
+        "id": "D",
+        "text": "6500 / N / upwards"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"\",\"\"],\"rows\":[[\"500\",\"N\",\"downwards\"],[\"500\",\"N\",\"upwards\"],[\"6500\",\"N\",\"downwards\"],[\"6500\",\"N\",\"upwards\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The roof lifts even when the pressure below equals the low pressure above."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The balloons move apart because the fast air between them has higher pressure."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Blowing between the balloons lowers the pressure equally between them and throughout the surrounding still air."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Even with still air, the pressure above the roof is lower simply because it is above."
+      }
+    ],
+    "enrichment": "High-speed air is accompanied by lower pressure; higher pressure on nearby or opposite sides pushes objects toward the low-pressure region. Fast air between balloons lowers pressure between them so outside air pressure pushes them together; fast wind over a roof lowers pressure above it so higher pressure below can lift it. The learner predicts lower pressure where air moves faster and uses the resulting pressure imbalance to explain motion or roof lift. Faster wind always means stronger pressure in the place where the wind is moving fastest.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_06/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “downwards” for the required “upwards”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “downwards” for the required “upwards”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “6500” looked possible instead of “500”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Pressure. The student must decide: Decide how fast-moving air changes pressure around nearby objects and roofs. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

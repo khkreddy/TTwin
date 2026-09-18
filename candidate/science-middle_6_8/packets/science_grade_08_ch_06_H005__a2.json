@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:19:20.358Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q2",
+    "item_type": "single_mcq",
+    "stem": "A ball is dropped from a table-top. Air resistance may be ignored.\nWhich row describes the velocity and the acceleration of the ball at point X?",
+    "options": [
+      {
+        "id": "A",
+        "text": "acceleration constant; velocity constant"
+      },
+      {
+        "id": "B",
+        "text": "acceleration constant; velocity increasing"
+      },
+      {
+        "id": "C",
+        "text": "acceleration increasing; velocity constant"
+      },
+      {
+        "id": "D",
+        "text": "acceleration increasing; velocity increasing"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"acceleration\",\"velocity\"],\"rows\":[[\"constant\",\"constant\"],[\"constant\",\"increasing\"],[\"increasing\",\"constant\"],[\"increasing\",\"increasing\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "high-pressure region is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The two air regions must be connected by a path through which air can move."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Air flows from lower pressure toward higher pressure."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The two air regions must be connected by a path through which air can move is not true."
+      }
+    ],
+    "enrichment": "Air flows from a region of higher pressure to a region of lower pressure; the flow continues until the pressures become almost equal, and a larger pressure difference gives faster air flow. A pressure difference starts air moving from high pressure toward low pressure; reducing the difference slows and stops the flow, while increasing the difference increases the speed. The learner predicts that air flows from higher pressure to lower pressure and that a larger pressure difference produces faster flow. Wind is moving air that chooses a direction by how hard it was first pushed, not by high and low air pressure regions.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_06/H005",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “velocity constant” looked possible instead of “velocity increasing”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “velocity constant” looked possible instead of “velocity increasing”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “acceleration increasing” looked possible instead of “acceleration constant”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Pressure. The student must decide: Decide the direction and speed of air flow from a pressure difference. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

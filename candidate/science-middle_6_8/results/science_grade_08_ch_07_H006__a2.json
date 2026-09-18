@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meera sprays perfume in one corner of her classroom in Jaipur. Within a few minutes, Ravi, sitting at the far end, can smell it.\n\nFour students explain why the perfume gas has no fixed shape or fixed volume.\n\n| student | P | Q | R | S |\n| explanation | gas particles attract each other strongly and stay in fixed positions | gas particles move freely in all directions with negligible attraction between them | gas particles are far apart but move only in one fixed direction | gas particles move freely and spread out to fill all the available space |",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q"
+    },
+    {
+      "id": "B",
+      "text": "Q and S"
+    },
+    {
+      "id": "C",
+      "text": "R and S"
+    },
+    {
+      "id": "D",
+      "text": "P and R"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"student\",\"P\",\"Q\",\"R\",\"S\"],\"rows\":[[\"explanation\",\"gas particles attract each other strongly and stay in fixed positions\",\"gas particles move freely in all directions with negligible attraction between them\",\"gas particles are far apart but move only in one fixed direction\",\"gas particles move freely and spread out to fill all the available space\"]],\"row_labels\":[\"explanation\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A gas has no fixed shape or volume because its particles move freely in all directions with negligible interparticle attraction, so they spread to fill the available space. Student Q states free motion with negligible attraction, and student S states free movement filling available space; both correctly explain the property. P wrongly claims strong attraction and fixed positions (solid-like), and R restricts motion to one direction, which would not fill the whole room. Hence Q and S, option B.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
