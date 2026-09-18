@@ -1,0 +1,44 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meera tests four materials in her home by holding each one in front of a page of her notebook. The table shows what she sees through each material.\n\nWhich materials are transparent?",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "W and Y"
+    },
+    {
+      "id": "C",
+      "text": "X and Y"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"material\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"what Meera sees\",\"the words on the page are seen clearly\",\"the page is seen but the words look blurred\",\"the words on the page are seen clearly\",\"nothing on the page can be seen\"]],\"row_labels\":[\"what Meera sees\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Transparent materials let objects be seen clearly through them. W (clear view of words) and Y (clear view of words) are transparent. X is translucent (seen but blurred), Z is opaque (nothing seen). So the key is B. Option A remains the trap for a learner who assumes any glass-like or partly see-through material must be transparent, making 'W and X' look possible instead of 'W and Y'.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
