@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Aarav walks from his home to the bus stop, waits there, and then walks on to school. He covers 240 m in 120 s, stands still at the bus stop for 60 s, and then covers another 360 m in 120 s.\n\nWhat is Aarav's average speed for the whole journey from home to school?",
+  "options": [
+    {
+      "id": "A",
+      "text": "2 m/s, because he walked 240 m in 120 s in the first part"
+    },
+    {
+      "id": "B",
+      "text": "2 m/s, because the total distance of 600 m is divided by the total time of 300 s"
+    },
+    {
+      "id": "C",
+      "text": "3 m/s, because 360 m divided by 120 s gives his fastest walking speed"
+    },
+    {
+      "id": "D",
+      "text": "2.5 m/s, because the total distance of 600 m is divided by only the walking time of 240 s"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Average speed = total distance / total time = (240 + 360) m / (120 + 60 + 120) s = 600/300 = 2 m/s. Option A uses only the first segment, C uses only the fastest segment, and D wrongly excludes the waiting time from the total time; all are non-uniform-motion traps. B correctly includes the stationary interval.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
