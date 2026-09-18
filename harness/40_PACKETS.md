@@ -30,7 +30,7 @@ Join is string equality on `unit_id` (`science/grade_11/chem_ch_106/H001`). Not 
 | T-SOLVE batch | ≤8 items; stem ≤900 chars + options + option-table + ≤6 map units |
 | T-BRIEF total | three already-typeset packs, ≤6k tokens |
 | S-FEED | ≤40 items of **this** paper; mx/ledger stripped at builder |
-| T-MOD instruction | ≤1k; one item, whitelist fields only |
+| T-MOD instruction | ≤1k; compiled `modify_packet.v1` (see `83_MODIFY.md`); hard total 16k; one hinge row, never the map |
 
 ## Copy-only rule
 

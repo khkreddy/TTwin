@@ -17,7 +17,7 @@ Do not print SMILES, hinge ids, or node codes in the stem or options. No examine
 
 ## Modify (test maker)
 
-ISO-GEN on an **existing** item (P-ITEM-MODIFY-WHOLE): rewrite stem **and** all four options so the item stays one question. TikZ only if the change needs it. Text-only items included. Recalculate the correct letter. Session-only. Revert = packed bytes. Credit-excluded. Key flagged UNVERIFIED.
+ISO-GEN on an **existing** item (P-ITEM-MODIFY-WHOLE). Packet and gates: `../83_MODIFY.md` and `../modify/`. The kernel compiles `modify_packet.v1` then one AI call designs the new item. Formats are not collapsed to four-option MCQ. Session-only. Revert = packed bytes. Credit-excluded. Key flagged UNVERIFIED.
 
 ## Honesty
 

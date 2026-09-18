@@ -12,6 +12,8 @@ They do not replace the numbered files in `harness/` (read those first). They co
 
 **Astra LBS** is the pack-time compiler that fills those hints. It reads the map, the mix-up list, and the packed tags. It does not call a model once per option of the 21,000-item corpus. Instantiation is code. A missing hint is better than a reprint of the option the student just read.
 
+**Modify** (`83_MODIFY.md`, `harness/modify/`) is ISO-GEN on an existing item. The kernel compiles `modify_packet.v1` from the hinge join, seeds, and packed tags, then one AI call designs the new item. It does not free-write over stem and A–D. Session-only. Invalid → keep original.
+
 ## Where to look
 
 ### `harness/isogen/` — ISO-GEN, signed

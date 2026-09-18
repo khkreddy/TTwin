@@ -7,12 +7,12 @@ These files are **agent law** for the live site (https://khkreddy.github.io/TTwi
 1. `00_PRECEDENCE.md` — collision order, freeze > deterministic > kernel > honesty, load contract
 2. `05_VISION.md` — first principles, TRACE-OR-LABEL
 3. `10_KERNEL.md` + `11_FREEZE.md` — shared deterministic kernel
-4. `15_SLOTS.md` — seven legal AI slots (six teacher, one student)
+4. `15_SLOTS.md` — seven legal AI slots (six teacher, one student); T-MOD uses `83_MODIFY.md`
 5. `20_TEACHER_MODEL.md` — Teacher Model (first-class)
 6. `30_STUDENT_MODEL.md` — Student Model (first-class; instructional invariants live here)
 7. Rest as needed: packets, surfaces, IIP map, ledger, ISO-GEN, diagnosis, dark layers, strings, failure modes
 
-**ISO-GEN and Astra LBS (packaged).** Signed ISO-GEN lives in `isogen/`. The Astra hint compiler lives in `astra-lbs/`. Read `README_ISOGEN_ASTRA.md` before either folder.
+**ISO-GEN, Astra LBS, and Modify (packaged).** Signed ISO-GEN lives in `isogen/`. The Astra hint compiler lives in `astra-lbs/`. The Modify harness (T-MOD compiled packet) lives in `modify/` and `83_MODIFY.md`. Read `README_ISOGEN_ASTRA.md` and `modify/README.md`. Snapshot of this stage: `CHECKPOINT_2026-09-18.md`.
 
 **Running philosophy (one sentence).** The corpus is the product — retrieve, typeset, score, and lookup are deterministic, and AI runs only where no lookup can exist, against a capped packet, returning output that is CANDIDATE until a human ratifies it.
 

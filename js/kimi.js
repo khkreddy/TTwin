@@ -304,24 +304,184 @@ Laws:
     return extractJson(content);
   }
 
-  function modifySys(subject) {
-    const lab = subjectLabel(subject);
-    return `You modify ONE existing multiple-choice ${lab} item from a teacher's instruction.
-This is ISO-GEN on an existing item: the stem AND all four options must stay a coherent item after the change. Text-only items are in scope. If a figure exists and the change affects it, rewrite the TikZ too.
-Return ONLY JSON:
-{"stem":"...","options":{"A":"...","B":"...","C":"...","D":"..."},"correct":"A"|"B"|"C"|"D",
- "rationale":"one sentence","tikz":null,"tikz_unchanged":true,"note":null}
+  function clip(s, n) {
+    s = String(s == null ? "" : s);
+    return s.length <= n ? s : s.slice(0, n);
+  }
+  function packedItemType(item) {
+    if (item && item.options_are_figure) return "options_are_figure";
+    const t = item && item.item_type;
+    const key = item && item.assessment && item.assessment.mcq_key;
+    const multi = (item && item.assessment && item.assessment.one_or_more) ||
+      (typeof key === "string" && key.length > 1);
+    if (t === "three_statement") return "three_statement";
+    if (t === "structured") return "structured_parts";
+    if (t === "open_response") return "open_response";
+    if (t === "mcq_table") return "option_table";
+    if (multi) return "one_or_more";
+    return "single_mcq";
+  }
+  function sourceKey(item) {
+    const a = item && item.assessment;
+    const k = a && a.mcq_key;
+    if (typeof k === "string" && k.length > 1) {
+      return { kind: "letter_set", letters: k.split("").filter((c) => /[A-F]/.test(c)) };
+    }
+    if (typeof k === "string" && /^[A-F]$/.test(k)) return { kind: "single_letter", letter: k };
+    return null;
+  }
+  function findMapUnit(map, unitId) {
+    if (!unitId || !map) return null;
+    const rows = Array.isArray(map) ? map : (map.units || map.items || []);
+    for (let i = 0; i < rows.length; i++) {
+      if (rows[i] && rows[i].unit_id === unitId) return rows[i];
+    }
+    return null;
+  }
+  function assembleModifyPacket(item, instruction, ctx) {
+    ctx = ctx || {};
+    const itype = packedItemType(item);
+    const primary = item && item.hinges && item.hinges.primary;
+    const unit = findMapUnit(ctx.map, primary);
+    const bound = !!(unit && unit.unit_id);
+    const opts = item.options || {};
+    const options = ["A", "B", "C", "D", "E", "F"].filter((k) => opts[k] != null && String(opts[k]).trim() !== "")
+      .map((k) => ({ id: k, text: clip(opts[k], 1000) }));
+    const statements = (item.statements || []).slice(0, 5).map((s, i) => ({
+      id: String((s && s.n) || i + 1),
+      text: clip((s && s.text) != null ? s.text : s, 1000),
+    }));
+    const parts = (item.parts || []).slice(0, 8).map((p, i) => ({
+      id: String((p && p.id) || i + 1),
+      text: clip((p && p.stem) || "", 2000),
+      marks: typeof (p && p.marks) === "number" ? p.marks : 0,
+    }));
+    const mxRows = ((unit && unit.mx) || []).slice(0, 4).map((m) => ({
+      mx_type: clip(m.type || m.mx_type, 60),
+      name: clip(m.name || m.type || "", 120),
+      teacher_note: clip(m.cwo || m.canonical_wrong_output || m.note || "", 300),
+    }));
+    const serves = bound ? unit.unit_id : null;
+    let enrichText = "";
+    (ctx.enrichment || []).forEach((e) => {
+      const ids = e.serves || e.serves_statement_ids || [];
+      if (serves && ids.indexOf(serves) >= 0 && e.statement) {
+        enrichText += (enrichText ? " " : "") + e.statement;
+      }
+    });
+    const lbs = item.assessment && item.assessment.learn_by_solve;
+    let lbsRecipe = null;
+    if (lbs && lbs.wrong) {
+      const gates = Object.keys(lbs.wrong).slice(0, 6).map((L) => {
+        const rec = lbs.wrong[L] || {};
+        return clip((rec.mx_type || rec.pathway || L), 120);
+      });
+      lbsRecipe = { gates: gates, hint: clip("", 500), retry: "retry original unaided" };
+    }
+    const seeds = ((item.assessment && item.assessment.modify_seeds) || []).slice(0, 4)
+      .map((s) => clip(typeof s === "string" ? s : (s && (s.text || s.instruction)) || "", 500))
+      .filter(Boolean);
+    const packet = {
+      schema: "modify_packet.v1",
+      packet_id: "session:" + (item.uid || item.item_uid || "item"),
+      slot: "T-MOD",
+      created_at: new Date().toISOString(),
+      source: {
+        item_ref: "session:" + (item.uid || item.item_uid || "item"),
+        item_type: itype,
+        stem: clip(item.stem || item.stem_lead || "", 4000),
+        options: options,
+        statements: statements,
+        parts: parts,
+        equations: (item.equations || []).slice(0, 6).map((e) => clip(typeof e === "string" ? e : JSON.stringify(e), 1000)),
+        tables: (item.tables || []).slice(0, 6).map((t) => clip(JSON.stringify(t), 1000)),
+        tikz: clip(Array.isArray(item.tikz) ? item.tikz.join("\n") : (item.tikz || ""), 6000),
+        key: sourceKey(item),
+      },
+      intelligence: {
+        join_status: bound ? "BOUND" : "UNBOUND",
+        hinge: bound ? {
+          primary: primary,
+          unit_id: unit.unit_id,
+          title: clip(unit.decision_hinge || unit.chapter_title || unit.chapter || "", 240),
+          node_labels: [unit.node, unit.node_parent].filter(Boolean).slice(0, 8).map((x) => clip(String(x), 120)),
+        } : null,
+        packed_tags: {
+          pack: item.pack || null,
+          subject: item.subject || ctx.subject || null,
+          node: item.node || null,
+          chapter_id: item.chapter_id || null,
+          subtopic_id: item.subtopic_id || null,
+        },
+        mx: mxRows,
+        enrichment: enrichText ? clip(enrichText, 1500) : null,
+        lbs_recipe: lbsRecipe,
+        modify_seeds: seeds,
+      },
+      spec: {
+        instruction: clip(instruction || "", 1000),
+        variation_class: (ctx.variation_class) || "V1",
+        fidelity_mode: "FAITHFUL_TRANSFER",
+        target_item_type: "preserve",
+        format: { n_options: Math.max(2, Math.min(6, options.length || 4)) },
+        figure: { mode: "preserve", tikz_required: false },
+      },
+      caps: { hard_total: 16000 },
+      assembly: {
+        builder: "assembleModifyPacket",
+        join_status: bound ? "BOUND" : "UNBOUND",
+        trimmed: [],
+      },
+    };
+    return packet;
+  }
+  function modifySys() {
+    return `You design ONE replacement exam item inside the compiled modify_packet.v1 bundle. Specification exists before the item. You do not free-write.
+Return ONLY modify_result.v1 JSON:
+{"status":"OK"|"REFUSED","refusal_reason":null,"item_type":"...","stem":"...","options":[{"id":"A","text":"..."}],"statements":[],"parts":[],"equations":[],"tables":[],"tikz":null,"answer":{"kind":"single_letter"|"letter_set"|"statement_pattern"|"part_answers"|"rubric","letter":"A","letters":null},"teacher":{"proposed_key_status":"UNVERIFIED","key_rationale":"...","variation_applied":"V1","fidelity_selfcheck":"FAITHFUL_TRANSFER","mx_links":[],"figure_note":null}}
 Laws:
-- Honour the teacher's requested change (numbers, species, figure, mix-up, year group, wording).
-- Always return a complete stem and complete A, B, C, D. Do not leave an old option that no longer matches the new stem.
-- correct is the letter of the new right answer. Recalculate it; do not keep the old key if the item changed.
-- If the teacher did not mention the figure and the change does not require it: tikz_unchanged true and tikz null.
-- If the figure must change: tikz_unchanged false and tikz a complete tikzpicture source. Use circuitikz as tikzpicture (never nest circuitikz). Split a drawing and a pgfplots axis into two tikzpictures. No at=/anchor= on a split axis.
-- If the item is text-only, keep tikz_unchanged true.
-- If options are the figure itself (options_are_figure), rewrite TikZ so A–D still match; options text may stay A–D letters.
-- Do not print SMILES, hinge ids, node codes, examiner comments, or mix-up labels on the learner item.
-- Do not invent a published mark scheme. The correct letter is your authored key for this session.
-- Keep the same language and exam register as the source item unless asked to change it.`;
+- Honor spec.instruction, spec.variation_class, spec.fidelity_mode, spec.target_item_type, spec.figure.
+- If target_item_type is preserve, keep source.item_type.
+- Do not coerce to four-option MCQ. one_or_more uses answer.letters (e.g. ["B","C"]). structured_parts uses parts[]. open_response uses rubric kind, no letter.
+- Recalculate the key. Do not copy source.key unless the change cannot affect it.
+- Learner fields (stem, options, statements, parts, tables, tikz) must not contain mx_type names, mix-up labels, examiner comments, SMILES strings, hinge ids, node codes, or the word CANDIDATE.
+- If intelligence.join_status is UNBOUND, teacher block must not name a map title or hinge.
+- TikZ: at most one visual. Rewrite only if spec.figure.mode is rewrite or add. Never invent a figure when source has none unless mode is add and you supply complete tikzpicture. Use circuitikz as tikzpicture (never nest). Split drawing and pgfplots axis into two tikzpictures if needed.
+- If you cannot meet the spec: status REFUSED and a refusal_reason. Do not drift.
+- Public copy is an exam item, not a published mark scheme. Keep the source language and register unless asked to change it.`;
+  }
+  function bannedInLearner(text, packet) {
+    const blob = String(text || "").toLowerCase();
+    if (/\bcandidate\b/.test(blob)) return "CANDIDATE";
+    const mx = (packet.intelligence && packet.intelligence.mx) || [];
+    for (let i = 0; i < mx.length; i++) {
+      const t = mx[i] && mx[i].mx_type;
+      if (t && blob.indexOf(String(t).toLowerCase()) >= 0) return "mx_type";
+    }
+    if (/smiles\s*[:=]/i.test(blob)) return "SMILES";
+    return null;
+  }
+  function validateModifyResult(out, packet, item) {
+    if (!out || out.status === "REFUSED") return { ok: false, gate: "G1" };
+    const want = (packet.spec && packet.spec.target_item_type) || "preserve";
+    const itype = out.item_type || packedItemType(item);
+    if (want !== "preserve" && itype !== want) return { ok: false, gate: "G2" };
+    const learner = [out.stem].concat((out.options || []).map((o) => o && o.text), (out.parts || []).map((p) => p && p.text)).join("\n");
+    const ban = bannedInLearner(learner, packet);
+    if (ban) return { ok: false, gate: "G4" };
+    if (out.answer && out.answer.kind === "single_letter") {
+      const L = String(out.answer.letter || "");
+      const ids = (out.options || []).map((o) => o && o.id);
+      if (L && ids.length && ids.indexOf(L) < 0) return { ok: false, gate: "G6" };
+    }
+    if (packet.intelligence && packet.intelligence.join_status === "UNBOUND") {
+      const teach = JSON.stringify((out.teacher) || {}).toLowerCase();
+      if (packet.intelligence.hinge && packet.intelligence.hinge.title &&
+          teach.indexOf(String(packet.intelligence.hinge.title).toLowerCase()) >= 0) {
+        return { ok: false, gate: "G8" };
+      }
+    }
+    return { ok: true };
   }
 
   function inferPkgs(code, prev) {
@@ -338,42 +498,46 @@ Laws:
 
   async function modifyItem(item, prompt, ctx) {
     ctx = ctx || {};
-    const subject = ctx.subject || "chemistry";
     const onTick = ctx.onTick;
-    const slim = {
-      teacher_prompt: prompt,
-      subject,
-      uid: item.uid || item.item_uid || null,
-      stem: item.stem || item.stem_lead || "",
-      options: item.options || {},
-      statements: item.statements || [],
-      equations: item.equations || [],
-      tables: item.tables || [],
-      options_are_figure: !!item.options_are_figure,
-      has_figure: !!(item.tikz && String(item.tikz).trim()),
-      tikz: item.tikz || "",
-      tikz_packages: item.tikz_packages || [],
-    };
+    const packet = assembleModifyPacket(item, prompt, ctx);
     const content = await chat([
-      { role: "system", content: modifySys(subject) },
-      { role: "user", content: JSON.stringify(slim) },
+      { role: "system", content: modifySys() },
+      { role: "user", content: JSON.stringify(packet) },
     ], { reasoning_effort: "low", max_tokens: 4096, timeout_ms: 90000, onTick });
     const out = extractJson(content);
-    const opts = out.options || {};
+    const gate = validateModifyResult(out, packet, item);
+    if (!gate.ok) {
+      const err = new Error("Modify refused (" + gate.gate + "). Original item kept.");
+      err.gate = gate.gate;
+      err.keepOriginal = true;
+      throw err;
+    }
+    const optList = out.options || [];
+    const options = {};
+    optList.forEach((o) => { if (o && o.id) options[o.id] = o.text || ""; });
+    if (!optList.length) {
+      const src = item.options || {};
+      ["A", "B", "C", "D"].forEach((k) => { if (src[k] != null) options[k] = src[k]; });
+    }
+    let correct = null;
+    if (out.answer && out.answer.kind === "letter_set" && Array.isArray(out.answer.letters)) {
+      correct = out.answer.letters.join("");
+    } else if (out.answer && out.answer.letter) {
+      correct = String(out.answer.letter).trim().toUpperCase().slice(0, 1);
+    }
+    const tikzUnchanged = out.tikz == null || out.tikz === "" || out.tikz === (item.tikz || "");
     const next = {
-      stem: out.stem || slim.stem,
-      options: {
-        A: opts.A != null ? opts.A : (slim.options.A || ""),
-        B: opts.B != null ? opts.B : (slim.options.B || ""),
-        C: opts.C != null ? opts.C : (slim.options.C || ""),
-        D: opts.D != null ? opts.D : (slim.options.D || ""),
-      },
-      correct: String(out.correct || "").trim().toUpperCase().slice(0, 1),
-      rationale: out.rationale || "",
-      note: out.note || null,
-      tikz_unchanged: out.tikz_unchanged !== false && (out.tikz == null || out.tikz === ""),
+      stem: out.stem || item.stem,
+      options: options,
+      statements: out.statements || item.statements,
+      parts: out.parts || item.parts,
+      correct: correct,
+      rationale: (out.teacher && out.teacher.key_rationale) || "",
+      note: (out.teacher && out.teacher.figure_note) || null,
+      item_type: out.item_type || item.item_type,
+      join_status: packet.assembly.join_status,
+      tikz_unchanged: tikzUnchanged,
     };
-    if (!/^[A-D]$/.test(next.correct)) next.correct = item.correct || null;
     if (next.tikz_unchanged) {
       next.tikz = item.tikz || "";
       next.tikz_packages = item.tikz_packages || [];
@@ -568,7 +732,7 @@ Laws:
 
   g.TTwinKimi = {
     getKey, setKey, getProxy, setProxy, endpoint, chat,
-    inferSelector, inferIsoIntent, authorItem, modifyItem, inferKeys, gradePaper,
+    inferSelector, inferIsoIntent, authorItem, modifyItem, assembleModifyPacket, inferKeys, gradePaper,
     analyzeSolutions, lessonProse, mapJournalNote, extractJson, MODEL,
   };
 })(window);

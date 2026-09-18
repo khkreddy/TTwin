@@ -2,6 +2,22 @@
 
 Issues found while standing up the GitHub Pages chemistry showcase. Sort these **at deploy time** (rebuild `tools/build_data.py`, bump `?v=` on CSS/JS, hard-refresh `https://khkreddy.github.io/TTwin/` — not `/AWM/`).
 
+Stage snapshot (2026-09-18): four demand packs, Science 6–8, map-aligned vocab, hinge join, one-figure renderer, Modify harness. See `harness/CHECKPOINT_2026-09-18.md`.
+
+---
+
+## D-STAGE · Four packs, Science 6–8, Modify packet (2026-09-18)
+
+**Symptom.** Old A/B/C/D/E pack letters; Calculus as maths M4; junior science under biology; Modify rewrote A–D with no hinge intelligence.
+
+**What shipped.** Packs `middle_6_8` / `secondary_9_10` / `senior_11_12` / `olympiad_iit`. Subject **Science** at 6–8 then S1–S6. Vocab titles = map titles. `hinges.primary` on 72,772 items. Renderer skips blank-grid tables when TikZ exists (`0620_m15_qp_12:q20`). T-MOD sends compiled `modify_packet.v1` (`harness/83_MODIFY.md`).
+
+**Deploy check.** Hard-refresh TTwin. Subject menu includes Science. Maths middle school must not list Calculus. Jump `0620_m15_qp_12:q20` — one Periodic Table, not a blank HTML grid plus TikZ. Modify still session-only.
+
+**Still not exam-ready.** 5,233 has_figure with no drawing; 556 option-figures with no drawing; 13,548 unbound hinges; maths/phy/bio enrichment empty.
+
+---
+
 ---
 
 ## D1 · Wrong site / stale cache looks like “the old website”

@@ -51,7 +51,7 @@ data/
   nodes.json projection.json
 ```
 
-Agent harnesses for the live site (Teacher Model and Student Model, instructional invariants, when not to call AI): `harness/`. Start at `harness/README.md`. Six teacher slots, one student slot (post-score feedback). Deterministic retrieve / typeset / score first.
+Agent harnesses for the live site (Teacher Model and Student Model, instructional invariants, when not to call AI): `harness/`. Start at `harness/README.md`. Six teacher slots, one student slot (post-score feedback). T-MOD uses the Modify harness (`harness/83_MODIFY.md`). Deterministic retrieve / typeset / score first. Stage snapshot: `harness/CHECKPOINT_2026-09-18.md`.
 
 Deploy issues and checks: `DEPLOYMENT_WIKI.md`.
 

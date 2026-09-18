@@ -858,6 +858,8 @@
     try {
       const edited = await TTwinKimi.modifyItem(item, prompt, {
         subject: S.subject,
+        map: S.map,
+        enrichment: S.enrichment,
         onTick: (s) => { if (statusEl) statusEl.textContent = "Rewriting stem and options… " + s + "s"; },
       });
       const next = cloneItem(item);
@@ -865,9 +867,21 @@
       next.options = edited.options;
       next.correct = edited.correct;
       next.rationale = edited.rationale;
+      if (edited.item_type) next.item_type = edited.item_type;
+      if (edited.statements) next.statements = edited.statements;
+      if (edited.parts) next.parts = edited.parts;
       next.modified = true;
       next.analysis = null;
       next.item_sha256 = null;
+      next.join_status = edited.join_status || null;
+      if (edited.correct && String(edited.correct).length > 1) {
+        next.assessment = Object.assign({}, next.assessment || {}, {
+          mcq_key: edited.correct,
+          one_or_more: true,
+          key_source: next.assessment && next.assessment.key_source ? next.assessment.key_source : "none",
+          key_status: "available",
+        });
+      }
       if (!edited.tikz_unchanged) {
         next.tikz = edited.tikz;
         next.tikz_packages = edited.tikz_packages;
