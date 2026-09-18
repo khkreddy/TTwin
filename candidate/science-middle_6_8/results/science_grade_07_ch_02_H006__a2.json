@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Riya wants to compare lemon juice and soap solution using turmeric paper as a natural indicator.\n\nShe plans four possible ways to do the test:\n\n| test | P | Q | R | S |\n| procedure | same turmeric paper, one drop of each liquid, final colours recorded | rose extract for lemon juice, turmeric paper for soap solution | same turmeric paper, one drop of lemon juice and ten drops of soap solution | same turmeric paper, one drop of each liquid, colours not recorded |\n\nWhich tests give a fair comparison of the two liquids?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q"
+    },
+    {
+      "id": "B",
+      "text": "P only"
+    },
+    {
+      "id": "C",
+      "text": "Q and R"
+    },
+    {
+      "id": "D",
+      "text": "R and S"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"test\",\"P\",\"Q\",\"R\",\"S\"],\"rows\":[[\"procedure\",\"same turmeric paper, one drop of each liquid, final colours recorded\",\"rose extract for lemon juice, turmeric paper for soap solution\",\"same turmeric paper, one drop of lemon juice and ten drops of soap solution\",\"same turmeric paper, one drop of each liquid, colours not recorded\"]],\"row_labels\":[\"procedure\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fair indicator comparison needs the same prepared indicator, comparable amounts of each sample, and recorded final colours. Only test P satisfies all three: Q changes the indicator, R changes the sample amounts, and S does not record results. So the answer is B.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

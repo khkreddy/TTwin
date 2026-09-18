@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s22_qp_12:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:44:04.829Z",
+  "source": {
+    "item_ref": "session:0620_s22_qp_12:q9",
+    "item_type": "single_mcq",
+    "stem": "A compound of element X has the formula X₂O and a relative formula mass of 144.\n\nWhat is element X?",
+    "options": [
+      {
+        "id": "A",
+        "text": "copper, Cu"
+      },
+      {
+        "id": "B",
+        "text": "gadolinium, Gd"
+      },
+      {
+        "id": "C",
+        "text": "sulfur, S"
+      },
+      {
+        "id": "D",
+        "text": "tellurium, Te"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Comets show long tails throughout their orbits."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "All asteroids orbit between Mars and Jupiter."
+      }
+    ],
+    "enrichment": "Asteroids are small rocky, irregular Solar System objects, many of which revolve around the Sun between Mars and Jupiter; comets are objects made of dust, gases, rocks, and ice that can show long tails as they approach close to the Sun. Rocky irregular bodies without the comet tail pattern are classified as asteroids, while icy-dusty bodies that develop long tails near the Sun are classified as comets. The learner correctly applies this rule: Asteroids are small rocky, irregular Solar System objects, many of which revolve around the Sun between Mars and Jupiter; comets are objects made of dust, gases, rocks, and ice that can show long tails as they approach close to the Sun. All small objects in the Solar System are comets if they move around the Sun.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H011",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “gadolinium, Gd” for the required “copper, Cu”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “sulfur, S” for the required “copper, Cu”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “tellurium, Te” for the required “copper, Cu”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Distinguish asteroids from comets by shape, composition, position, tail, and motion around the Sun. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:45:16.733Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q3",
+    "item_type": "single_mcq",
+    "stem": "Which statement about bonding is not correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon can form four single covalent bonds."
+      },
+      {
+        "id": "B",
+        "text": "Chlorine atoms react to gain a noble gas electronic structure."
+      },
+      {
+        "id": "C",
+        "text": "Covalent bonding involves losing and gaining electrons."
+      },
+      {
+        "id": "D",
+        "text": "Hydrogen molecules have the formula H₂."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Acidic and basic"
+      }
+    ],
+    "enrichment": "Acidic samples make blue litmus red; basic samples make red litmus blue; neutral samples leave both litmus papers unchanged. substance_nature -> paired_litmus_response -> acid_base_neutral_label student says litmus paper just shows a colour but cannot say which observation decides acid or base",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_02/H001",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Carbon can form four single covalent bonds.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Chlorine atoms react to gain a noble gas electron…” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Hydrogen molecules have the formula H₂.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Acids, bases and salts. The student must decide: Classify a substance as acidic, basic, or neutral from paired blue-litmus and red-litmus responses. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

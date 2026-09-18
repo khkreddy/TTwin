@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_w20_qp_21:q35",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:44:50.364Z",
+  "source": {
+    "item_ref": "session:0620_w20_qp_21:q35",
+    "item_type": "single_mcq",
+    "stem": "The structures of four organic molecules are shown.\n\nWhich molecules are structural isomers of structure 1?",
+    "options": [
+      {
+        "id": "A",
+        "text": "2 and 4"
+      },
+      {
+        "id": "B",
+        "text": "2 only"
+      },
+      {
+        "id": "C",
+        "text": "3 and 4"
+      },
+      {
+        "id": "D",
+        "text": "3 only"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Light, shadows, Earth, the Moon and the Sun are connected, but materials and body changes are isolated topics."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Topics in different chapters are isolated subjects."
+      }
+    ],
+    "enrichment": "The chapter says science includes fields such as physics, chemistry, biology, and earth sciences, but these fields are connected even when they appear in different chapters. Seeing the fields as connected helps learners relate material properties, body changes, light, shadows, eclipses, and day-night patterns as parts of a larger scientific journey. The learner compares science fields as connected parts of one scientific journey, using examples such as materials, body changes, light, shadows, eclipses, and day-night patterns. Each chapter belongs to a separate subject box, so physics, chemistry, biology, and earth science should be learned without connecting them.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_01/H003",
+      "gate_names": [
+        "scope_error",
+        "scope_error",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping statement 4 which the keyed set still requires. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The ever-evolving world of science. The student must decide: Decide whether the different fields and chapters of science should be treated as isolated subjects or as connected ways of studying the same world. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

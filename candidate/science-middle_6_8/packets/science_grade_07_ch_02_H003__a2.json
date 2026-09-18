@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:45:34.695Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q6",
+    "item_type": "option_table",
+    "stem": "Covalent bonds are formed when electrons are ……1…… .\n\nMost covalent compounds have ……2…… electrical conductivity.\n\nWhich words correctly complete gaps 1 and 2?",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 shared; 2 high"
+      },
+      {
+        "id": "B",
+        "text": "1 shared; 2 low"
+      },
+      {
+        "id": "C",
+        "text": "1 transferred; 2 high"
+      },
+      {
+        "id": "D",
+        "text": "1 transferred; 2 low"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"1\",\"2\"],\"rows\":[[\"A\",\"shared\",\"high\"],[\"B\",\"shared\",\"low\"],[\"C\",\"transferred\",\"high\"],[\"D\",\"transferred\",\"low\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The characteristic acid in lemon is acetic acid."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Taste the unknown substance; if it is sour, identify it as acidic."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The unknown liquid is safe to drink because it tastes sour."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The unknown yellow liquid is acidic because it is yellow like a lemon."
+      }
+    ],
+    "enrichment": "Several edible sour substances contain acids, but unknown substances must not be tasted because taste is not a safe identification method. edible_example_and_safety_status -> allowable_evidence_for_acidic_nature student remembers that lemon tastes sour but cannot explain acid names or the rule against tasting unknown samples",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_02/H003",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “2 high” looked possible instead of “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “2 high” for the required “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “1 transferred” looked possible instead of “1 shared”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Acids, bases and salts. The student must decide: Connect common acidic substances with sour taste and named food acids while preserving the safety rule against tasting unknown substances. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

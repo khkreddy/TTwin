@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s25_qp_21:q25",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:44:14.296Z",
+  "source": {
+    "item_ref": "session:0620_s25_qp_21:q25",
+    "item_type": "single_mcq",
+    "stem": "Which statement about the properties and uses of copper is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It is used in electrical wiring, and it is ductile."
+      },
+      {
+        "id": "B",
+        "text": "It is mixed with tin to make the alloy brass."
+      },
+      {
+        "id": "C",
+        "text": "It is used in overhead electrical cables because it has a low density."
+      },
+      {
+        "id": "D",
+        "text": "It is used in takeaway food containers because of its resistance to corrosion."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "A planet revolving around another star in the Milky Way is a galaxy."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "On a moonless night, the Milky Way band is equally easy to see from a brightly lit city and a dark countryside location."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The Milky Way Galaxy is inside the Solar System."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "There cannot be any exoplanets in other galaxies."
+      }
+    ],
+    "enrichment": "The Milky Way is our home galaxy and can appear as a faint band of light from a very dark moonless location; beyond it there are many galaxies, and exoplanets are planets discovered revolving around other stars in our galaxy, while life elsewhere in the Universe is not yet known. Moving outward from the Solar System leads first to our galaxy, then to other galaxies; planets around other stars are exoplanets, but finding such planets does not by itself show that life exists there. The learner correctly applies this rule: The Milky Way is our home galaxy and can appear as a faint band of light from a very dark moonless location; beyond it there are many galaxies, and exoplanets are planets discovered revolving around other stars in our galaxy, while life elsewhere in the Universe is not yet known. Anything beyond the Solar System is just a far star, so galaxies, exoplanets, and evidence of life are the same idea.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H012",
+      "gate_names": [
+        "surface_feature_capture",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student matching a salient stem word and choosing “It is mixed with tin to make the alloy brass.” instead of “It is used in electrical wiring, and it is ductil…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It is used in overhead electrical cables because…” for the required “It is used in electrical wiring, and it is ductil…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “It is used in takeaway food containers because of…” for the required “It is used in electrical wiring, and it is ductil…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Organize objects beyond the Solar System into the Milky Way Galaxy, other galaxies, exoplanets, and the still-open question of life elsewhere. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
