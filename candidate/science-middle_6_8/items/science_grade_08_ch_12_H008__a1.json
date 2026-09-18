@@ -1,0 +1,55 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V3",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe6",
+  "target_unit_id": "science/grade_08/ch_12/H008",
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H008:a1",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H008",
+    "stem": "In her school garden in Pune, Meera observes the feeding relationships shown in the figure below (arrows point from the organism that is eaten to the organism that eats it). Which of the following statements about this diagram is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "It is a food chain, because it shows grass being eaten by a grasshopper.",
+      "B": "It is a food web, because the grasshopper is eaten by both the frog and the sparrow, so several feeding paths are interlinked.",
+      "C": "It is a food chain, because every feeding diagram drawn with arrows is a single chain.",
+      "D": "It is neither a food chain nor a food web, because it contains more than three organisms."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[->,>=stealth,thick,node distance=2.6cm]\n\\node (grass) {Grass};\n\\node (hopper) [right=of grass] {Grasshopper};\n\\node (frog) [above right=1.4cm and 2.2cm of hopper] {Frog};\n\\node (sparrow) [below right=1.4cm and 2.2cm of hopper] {Sparrow};\n\\node (snake) [right=3.2cm of hopper] {Snake};\n\\draw (grass) -- (hopper);\n\\draw (hopper) -- (frog);\n\\draw (hopper) -- (sparrow);\n\\draw (frog) -- (snake);\n\\draw (sparrow) -- (snake);\n\\end{tikzpicture}",
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "mark_scheme": null
+    }
+  }
+}

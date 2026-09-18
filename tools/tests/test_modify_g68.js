@@ -50,6 +50,25 @@ if (p2.intelligence.hinge !== null) throw new Error("UNBOUND hinge null");
 if (!(p2.intelligence.mx || []).length) throw new Error("target mx");
 if (p2.spec.fidelity_mode === "BLOCKED") throw new Error("C4 to S2 should bridge");
 if (p2.spec.variation_class !== "V4") throw new Error("expected V4");
+if (p2.spec.figure.mode !== "preserve") throw new Error("H005 no-figure hinge stays preserve");
+
+const eco = science.units.find((u) => u.unit_id === "science/grade_08/ch_12/H008");
+const pEco = g68.compileUnit(K, eco, igcse, science, {});
+if (pEco.spec.figure.mode !== "add") throw new Error("feeding-diagram hinge with no source tikz must add");
+if (!pEco.spec.figure.tikz_required) throw new Error("add requires tikz");
+
+const circuit = science.units.find((u) => u.unit_id === "science/grade_07/ch_03/H007");
+const circuitSrc = Object.assign({}, igcse, {
+  uid: "0625_m18_qp_12:q1",
+  subject: "physics",
+  pack: "secondary_9_10",
+  node: "phy:P2",
+  stem: "Which circuit shows a lamp in series with a cell and a switch?",
+  tikz: "\\begin{tikzpicture}\\draw (0,0) -- (1,0);\\end{tikzpicture}",
+  hinges: { primary: "IGCSE:0625.4.2.1" },
+});
+const pCir = g68.compileUnit(K, circuit, circuitSrc, science, {});
+if (pCir.spec.figure.mode !== "rewrite") throw new Error("circuit-diagram hinge with source tikz must rewrite");
 
 const c = g68.census(science, junior);
 if (c.science_units !== 391) throw new Error("units " + c.science_units);

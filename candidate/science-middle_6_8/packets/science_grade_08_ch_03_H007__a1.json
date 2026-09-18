@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:04:24.822Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q17",
+    "item_type": "single_mcq",
+    "stem": "Which structures in plants and in humans normally carry amino acids?",
+    "options": [
+      {
+        "id": "A",
+        "text": "arteries ✓; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "B",
+        "text": "arteries ✓; phloem ✗; ureters ✓"
+      },
+      {
+        "id": "C",
+        "text": "arteries ✗; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "D",
+        "text": "arteries ✗; phloem ✗; ureters ✓"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "A tetanus shot contains inactivated tetanus bacteria rather than inactivated tetanus toxin."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Having measles makes the immune response to a first polio infection stronger because the body remembers the earlier infection."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The first exposure produces the stronger immune response; another exposure to the same pathogen produces a weaker response because protection was used up."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Children living on the same street have the same immunity and will fall ill equally often."
+      }
+    ],
+    "enrichment": "Immunity is the body's ability to fight disease, and vaccines help the immune system develop protection against serious infections. Vaccination builds immune protection before or around exposure, so later contact with the same pathogen is less likely to cause serious illness and can reduce spread. The learner correctly applies this rule: Immunity is the body's ability to fight disease, and vaccines help the immune system develop protection against serious infections. Vaccines are medicines taken after someone is sick, so they cure the disease rather than prepare the immune system.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_03/H007",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Health: reaching the unreached. The student must decide: Predict how immunity and vaccination reduce serious infections and their spread. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

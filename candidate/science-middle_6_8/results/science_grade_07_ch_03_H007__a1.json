@@ -3,30 +3,30 @@
   "status": "OK",
   "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Priya connects a cell, a switch and a lamp in series using wires. The switch is open and the lamp does not light.\nHer teacher asks her to draw a circuit diagram of what she has built.\nWhich diagram correctly represents Priya's circuit?",
+  "stem": "Priya sets up a simple circuit on her study table at home using one cell, a switch, and a torch bulb, connected in a single loop with wires. The picture shows the actual circuit she built.\n\nShe now wants to draw a circuit diagram of it using standard symbols. Which statement about her circuit diagram is correct?",
   "options": [
     {
       "id": "A",
-      "text": "A cell, a closed switch and a lamp joined in a single loop, with standard symbols"
+      "text": "The bulb can be drawn as any neat sketch of a lamp, because a circuit diagram is just a tidy picture of the parts."
     },
     {
       "id": "B",
-      "text": "A cell, an open switch and a lamp joined in a single loop, with standard symbols"
+      "text": "Each component must be drawn with its standard symbol: the cell with a long and a short line, the switch as an open or closed gap, and the bulb as a circle with a cross inside."
     },
     {
       "id": "C",
-      "text": "A cell and a lamp joined in a single loop, with no switch shown"
+      "text": "The cell symbol can be drawn with the long and short lines either way round, because the orientation of the cell does not matter."
     },
     {
       "id": "D",
-      "text": "A cell and two lamps joined in a single loop, with an open switch"
+      "text": "The wires must be drawn curved around the bulb exactly as they lie on the table, so the diagram matches the real circuit's shape."
     }
   ],
   "statements": [],
   "parts": [],
   "equations": [],
   "tables": [],
-  "tikz": null,
+  "tikz": "\\begin{circuitikz}[scale=0.9]\n\\draw (0,0) to[battery1] (0,2) -- (2,2);\n\\draw (2,2) to[switch] (4,2) -- (4,0);\n\\draw (4,0) to[lamp] (2,0) -- (0,0);\n\\end{circuitikz}",
   "answer": {
     "kind": "single_letter",
     "letter": "B",
@@ -34,10 +34,10 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "The circuit diagram must faithfully translate the actual circuit: one cell, one open switch and one lamp in series. Only B matches all components and the open state of the switch; A wrongly closes the switch, C omits it, and D adds a second lamp.",
+    "key_rationale": "A circuit diagram must use standard symbols with correct terminal orientation: cell shown as long/short line pair (long is positive, so orientation matters, ruling out C), bulb as circle with a cross, switch as open/closed gap. A is wrong because symbols are not optional sketches; D is wrong because layout, not physical shape, matters. Key: B.",
     "variation_applied": "V4",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],
-    "figure_note": null
+    "figure_note": "Added one circuitikz diagram of the simple series circuit described in the stem."
   }
 }

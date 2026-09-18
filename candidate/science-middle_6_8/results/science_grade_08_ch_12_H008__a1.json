@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "In her school garden in Pune, Meera observes the feeding relationships shown in the figure below (arrows point from the organism that is eaten to the organism that eats it). Which of the following statements about this diagram is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a food chain, because it shows grass being eaten by a grasshopper."
+    },
+    {
+      "id": "B",
+      "text": "It is a food web, because the grasshopper is eaten by both the frog and the sparrow, so several feeding paths are interlinked."
+    },
+    {
+      "id": "C",
+      "text": "It is a food chain, because every feeding diagram drawn with arrows is a single chain."
+    },
+    {
+      "id": "D",
+      "text": "It is neither a food chain nor a food web, because it contains more than three organisms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[->,>=stealth,thick,node distance=2.6cm]\n\\node (grass) {Grass};\n\\node (hopper) [right=of grass] {Grasshopper};\n\\node (frog) [above right=1.4cm and 2.2cm of hopper] {Frog};\n\\node (sparrow) [below right=1.4cm and 2.2cm of hopper] {Sparrow};\n\\node (snake) [right=3.2cm of hopper] {Snake};\n\\draw (grass) -- (hopper);\n\\draw (hopper) -- (frog);\n\\draw (hopper) -- (sparrow);\n\\draw (frog) -- (snake);\n\\draw (sparrow) -- (snake);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The figure shows the grasshopper eaten by two consumers (frog and sparrow), and both of those eaten by the snake, creating multiple interlinked feeding paths rather than one linear sequence; therefore it is a food web. A and C wrongly claim any arrow diagram or one visible link makes a chain; D wrongly excludes larger diagrams.",
+    "variation_applied": "V3",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": "TikZ diagram added per spec: one grass -> grasshopper link branching to frog and sparrow, both leading to snake, giving interlinked paths (food web)."
+  }
+}

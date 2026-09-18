@@ -188,6 +188,9 @@ function instructionFor(unit, variation, figureMode) {
   else if (variation === "V5") s += "Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. ";
   else s += "Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. ";
   if (figureMode === "remove") s += "The new item has no figure. Do not refer to a diagram. ";
+  if (figureMode === "add" || figureMode === "rewrite") {
+    s += "Supply exactly one complete tikzpicture. The stem must refer to that figure. ";
+  }
   s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.";
   return s.slice(0, 1000);
 }
@@ -201,10 +204,18 @@ function packetHasPedagogy(packet) {
   if ((intel.modify_seeds || []).length) return true;
   return false;
 }
+function hingeWantsFigure(unit) {
+  return /figure|diagram|circuit|graph|apparatus/i.test(String((unit && unit.decision_hinge) || ""));
+}
 function compileUnit(K, unit, source, science, spec) {
   spec = spec || {};
   const p0 = pedagogy(source);
-  const figureMode = spec.figureMode || (p0.tikz && spec.variation_class !== "V5" ? "remove" : "preserve");
+  let figureMode = spec.figureMode;
+  if (!figureMode) {
+    if (hingeWantsFigure(unit)) figureMode = p0.tikz ? "rewrite" : "add";
+    else if (p0.tikz && spec.variation_class !== "V5") figureMode = "remove";
+    else figureMode = "preserve";
+  }
   const ctx = {
     map: science,
     pack: "middle_6_8",
@@ -471,6 +482,7 @@ async function main() {
       const spec = {};
       if (args.variation) spec.variation_class = args.variation;
       if (args["item-type"]) spec.target_item_type = args["item-type"];
+      if (args.figure) spec.figureMode = String(args.figure);
       for (let a = 1; a <= repeat; a++) {
         if (cmd === "compile") {
           const packet = compileUnit(K, unit, source, science, spec);

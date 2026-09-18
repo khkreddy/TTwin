@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:05:09.951Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q29",
+    "item_type": "single_mcq",
+    "stem": "What always increases during the development of an organism?",
+    "options": [
+      {
+        "id": "A",
+        "text": "cell number"
+      },
+      {
+        "id": "B",
+        "text": "complexity"
+      },
+      {
+        "id": "C",
+        "text": "dry mass"
+      },
+      {
+        "id": "D",
+        "text": "volume"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Habitats, microbes and ecosystems",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "population is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: A group of same-kind fish in a pond is a population, not the whole ecosystem."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The cause and effect in this law run in the opposite direction."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when A group of same-kind fish in a pond is a population, not the whole ecosystem is not true."
+      }
+    ],
+    "enrichment": "A population contains one kind of organism, a community is larger than a population, and an ecosystem includes interacting biotic and abiotic components. Adding more kinds of living organisms moves from population toward community, and including non-living components and their interactions moves toward ecosystem. The learner correctly applies this rule: A population contains one kind of organism, a community is larger than a population, and an ecosystem includes interacting biotic and abiotic components. Population, community, and ecosystem are interchangeable names for any group of living things.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_12/H003",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “cell number” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “dry mass” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “volume” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Ecosystems and habitats. The student must decide: Decide whether a situation is best described as a population, community, or ecosystem by comparing how many kinds of organisms and non-living components are included. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
