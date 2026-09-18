@@ -19,6 +19,11 @@ def test_packs_and_science():
     sci = next(s for s in catalog["subjects"] if s["id"] == "science")
     assert sci["packs"][0]["id"] == "middle_6_8"
     assert len(sci["packs"]) == 1
+    ov = sci.get("candidate_overlay") or {}
+    assert ov.get("questions", "").startswith("candidate/")
+    assert ov.get("nav", "").startswith("candidate/")
+    assert sci["packs"][0]["n"] == 109
+    assert sci["n_tagged"] == 109
     for s in catalog["subjects"]:
         for p in s["packs"]:
             assert p["id"] in PACKS, (s["id"], p["id"])

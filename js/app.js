@@ -6,8 +6,10 @@
     stems: {}, loadedPacks: {},
     map: [], mapStatus: null,
     paper: null,
+    bankMode: "live",
   };
   const SUBJECT_KEY = "ttwin.subject";
+  const BANK_KEY = "ttwin.science.bank";
 
   const ROUTES = [
     ["browse", "Browse"],
@@ -84,6 +86,23 @@
     S.nav = got[1] || [];
     S.navPack = spec.default_pack || ((spec.packs || [])[0] && spec.packs[0].id) || null;
     S.navBankLoaded = false;
+    S.stems = {};
+    S.loadedPacks = {};
+    S.spec = spec;
+    if (spec.id === "science" && spec.candidate_overlay) {
+      const saved = sessionStorage.getItem(BANK_KEY);
+      S.bankMode = saved === "live" ? "live" : "ai";
+    } else {
+      S.bankMode = "live";
+    }
+    if (spec.id === "science" && spec.candidate_overlay && S.bankMode === "ai") {
+      try {
+        S.nav = await jget(spec.candidate_overlay.nav);
+        S.navPack = "ai:" + S.navPack;
+      } catch (e) {
+        S.bankMode = "live";
+      }
+    }
     let i = 2;
     const mapDoc = loadMap ? got[i++] : null;
     const enrDoc = loadEnr ? got[i++] : null;
@@ -91,9 +110,6 @@
     if (projDoc) {
       S.projection = Object.assign({}, projDoc, { subject: spec.id });
     }
-    S.stems = {};
-    S.loadedPacks = {};
-    S.spec = spec;
     S.mapStatus = spec.map_status || (spec.has_map ? "comprehensive" : null);
     S.map = unwrapMap(mapDoc);
     if (mapDoc && !Array.isArray(mapDoc) && Array.isArray(mapDoc.nodes) && mapDoc.nodes.length) {
@@ -105,9 +121,34 @@
     return spec;
   }
 
+  function overlayOf() {
+    const spec = S.spec || specOf(S.subject);
+    return (spec && spec.id === "science" && spec.candidate_overlay) || null;
+  }
+  function bankMode() {
+    if (!overlayOf()) return "live";
+    return S.bankMode === "ai" ? "ai" : "live";
+  }
+  function setBankMode(mode) {
+    S.bankMode = mode === "ai" ? "ai" : "live";
+    try { sessionStorage.setItem(BANK_KEY, S.bankMode); } catch (e) {}
+  }
+  function trayNotice() {
+    if (bankMode() !== "ai") return "";
+    return "<div class='notice ai no-print'>These Science items were drafted by AI from the grades 6–8 map. Keys are unverified. They are not in the live exam pool and are not exam-ready.</div>";
+  }
   async function ensurePackNav(pack) {
     const spec = S.spec || specOf(S.subject);
     const want = pack || (spec && spec.default_pack);
+    const ov = overlayOf();
+    if (bankMode() === "ai" && ov && ov.nav) {
+      const tag = "ai:" + want;
+      if (S.navPack === tag && S.nav && S.nav.length) return;
+      const rows = await jget(ov.nav);
+      S.nav = rows || [];
+      S.navPack = tag;
+      return;
+    }
     const entry = ((spec && spec.packs) || []).find((p) => p.id === want);
     const file = (entry && entry.nav) || (spec && spec.nav);
     if (!file) return;
@@ -119,6 +160,20 @@
   async function ensurePack(pack) {
     const spec = S.spec || specOf(S.subject);
     await ensurePackNav(pack);
+    const ov = overlayOf();
+    if (bankMode() === "ai" && ov && ov.questions) {
+      const file = ov.questions;
+      if (S.loadedPacks[file]) return;
+      try {
+        const rows = await jget(file);
+        (rows || []).forEach((r) => { if (r && r.uid) S.stems[r.uid] = r; });
+        S.loadedPacks[file] = true;
+      } catch (e) {
+        S.loadedPacks[file] = "missing";
+        throw new Error("Could not load " + file + " (" + (e && e.message ? e.message : e) + ")");
+      }
+      return;
+    }
     const entry = ((spec && spec.packs) || []).find((p) => p.id === pack);
     const files = [].concat((entry && entry.questions) || []).filter(Boolean);
     if (!files.length) return;
@@ -218,7 +273,7 @@
     const want = selected || (S.spec && S.spec.default_pack);
     return packs.map((p) =>
       "<option value='" + esc(p.id) + "'" + (p.id === want ? " selected" : "") + ">" +
-      esc(p.label) + " (" + p.n + ")</option>"
+      esc(p.label) + " (" + ((bankMode() === "ai" && S.nav && S.nav.length) ? S.nav.length : p.n) + ")</option>"
     ).join("");
   }
 
@@ -241,6 +296,7 @@
       "<p>Use the subject menu for science (grades 6–8), mathematics, chemistry, biology, or physics. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
       "<p>The twin is organised around what the student must decide. That decision is the same whether you teach NCERT, Cambridge, or another board.</p>" +
       "<p>AI is optional. Browse, retrieve, and papers work without it. Chemistry has the NCERT hinge map. Physics and biology use the published NCERT chapter list until a complete hinge map exists. Mix-ups stay off the learner paper.</p>" +
+      "<p>Science grades 6–8 has a live bank of 109 items and a separate AI tray of unverified drafts. Open Science, then Browse or Test maker, and pick <b>AI tray · unverified</b> to check those drafts. They are not exam-ready.</p>" +
       "</div>" +
       "<h2 class='modules-head'>What it does</h2>" +
       "<div class='modules'>" +
@@ -260,6 +316,14 @@
   }
 
   function filtersHTML(prefix) {
+    const ov = overlayOf();
+    const bank = ov
+      ? "<div><label>Bank</label><select id='" + prefix + "-bank'>" +
+        "<option value='ai'" + (bankMode() === "ai" ? " selected" : "") + ">" +
+        esc(ov.label || "AI tray · unverified") + "</option>" +
+        "<option value='live'" + (bankMode() === "live" ? " selected" : "") + ">Live · 109</option>" +
+        "</select></div>"
+      : "";
     return "<div class='card'><div class='row'>" +
       "<div><label>Subject</label><select id='" + prefix + "-subject'>" +
       (S.catalog || []).map((s) =>
@@ -267,6 +331,7 @@
         esc(s.label) + "</option>"
       ).join("") +
       "</select></div>" +
+      bank +
       "<div><label>Pack</label><select id='" + prefix + "-pack'>" +
       packOptions() + "</select></div>" +
       "<div><label>Big idea</label><select id='" + prefix + "-node'><option value=''>any</option>" +
@@ -366,6 +431,16 @@
     $(prefix + "-sub").addEventListener("change", onchange);
     const typeEl = $(prefix + "-type");
     if (typeEl) typeEl.addEventListener("change", onchange);
+    const bankEl = $(prefix + "-bank");
+    if (bankEl) {
+      bankEl.addEventListener("change", async () => {
+        setBankMode(bankEl.value);
+        S.navPack = null;
+        try { await ensurePackNav($(prefix + "-pack").value); } catch (e) { /* assemble still runs */ }
+        fillChapters(prefix);
+        onchange();
+      });
+    }
     fillChapters(prefix);
   }
 
@@ -374,6 +449,7 @@
     const spec = S.spec || specOf(S.subject);
     $("app").innerHTML = "<p class='kicker'>Browse · " + esc((spec && spec.label) || S.subject) + "</p><h1>Five-click retrieve</h1>" +
       "<p class='sub'>Pick a subject, year group, big idea, concept, and sub-concept by name. Codes stay inside the system.</p>" +
+      trayNotice() +
       filtersHTML("br") + "<div id='br-out'></div>";
     const go = async () => {
       const sel = selectorFromFilters("br");
@@ -406,6 +482,7 @@
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Prompt retrieve</p><h1>Teacher language → packets</h1>" +
       "<p class='sub'>Aliases compile without a model (“chemical energetics at senior level”). Fuzzy prompts can use AI to emit a selector JSON. Retrieve itself never calls a provider.</p>" +
+      trayNotice() +
       "<div class='card'><label>Teacher prompt</label>" +
       "<textarea id='pr-text'>chemical energetics at senior level</textarea>" +
       "<p style='margin-top:10px'><button id='pr-go' type='button'>Retrieve</button> " +
@@ -559,6 +636,7 @@
     const preset = (S.carry && S.carry.sel) || TTwinRag.parsePromptDeterministic("chemical energetics at senior level", S.projection);
     $("app").innerHTML = "<p class='kicker'>Lesson planner</p><h1>Digest from map, enrichment, and your notes</h1>" +
       "<p class='sub'>AI prose is Zinsser-style and sees the hinge pack, enrichment, and journal overlay for this selection. Citations stay as given; null URLs stay null.</p>" +
+      trayNotice() +
       filtersHTML("ls") +
       "<p><button id='ls-go' type='button'>Build digest</button> " +
       "<button class='sec' id='ls-kimi' type='button'>AI prose</button></p>" +
@@ -623,12 +701,16 @@
   }
 
   async function itemsForUids(uids) {
-    const need = {};
-    uids.forEach((u) => {
-      const row = S.nav.find((r) => r.uid === u);
-      if (row && row.pack) need[row.pack] = true;
-    });
-    for (const pack of Object.keys(need)) await ensurePack(pack);
+    if (bankMode() === "ai") {
+      await ensurePack((S.spec && S.spec.default_pack) || "middle_6_8");
+    } else {
+      const need = {};
+      uids.forEach((u) => {
+        const row = S.nav.find((r) => r.uid === u);
+        if (row && row.pack) need[row.pack] = true;
+      });
+      for (const pack of Object.keys(need)) await ensurePack(pack);
+    }
     return uids.map((u) => S.stems[u] || S.nav.find((r) => r.uid === u) || { uid: u });
   }
 
@@ -1137,6 +1219,7 @@
     $("hero").classList.add("hidden");
     $("app").innerHTML = "<p class='kicker'>Test maker</p><h1>Assemble a question paper</h1>" +
       "<p class='sub'>Choose a big idea, concept, and sub-concept by name, then assemble. Take as a student to sit the paper: a wrong A–D opens a hint on that idea, then you retry the original. Mix-up names stay off the learner paper.</p>" +
+      trayNotice() +
       filtersHTML("tm") +
       "<div class='card'><div class='row'>" +
       "<div><label>N questions</label><input id='tm-n' type='number' min='1' max='40' value='10'></div>" +
@@ -1189,7 +1272,7 @@
         meta: {
           title: $("tm-title").value,
           subject: (S.spec && S.spec.label) || sel.subject,
-          subtitle: [(sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · "), packLabel(sel.pack)].filter(Boolean).join(" · "),
+          subtitle: [(sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · "), packLabel(sel.pack), bankMode() === "ai" ? "AI tray · unverified" : ""].filter(Boolean).join(" · "),
           seed,
         },
         items,

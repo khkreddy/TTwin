@@ -8,13 +8,17 @@ else
   export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -4 -i /home/harik/.ssh/id_ed25519 -o IdentitiesOnly=yes}"
 fi
 
+node tools/pack_g68_candidates.js >/dev/null
+
 git add \
   candidate/science-middle_6_8 \
   tools/modify_g68.js \
+  tools/pack_g68_candidates.js \
   tools/push_g68_candidates.sh \
   tools/tests/test_modify_packet.js \
   tools/tests/test_modify_gates.js \
   tools/tests/test_modify_g68.js \
+  tools/tests/test_g68_overlay.js \
   js/kimi.js
 
 if git diff --cached --name-only | grep -E 'BIOLOGY_MAP|CHEMISTRY_MAP_COMBINED|MATHEMATICS_MAP|PHYSICS_MAP'; then
