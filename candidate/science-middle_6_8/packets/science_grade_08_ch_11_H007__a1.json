@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s20_qp_12:q28",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:16:50.012Z",
+  "source": {
+    "item_ref": "session:0620_s20_qp_12:q28",
+    "item_type": "single_mcq",
+    "stem": "Which statement about pure water is not correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It condenses at 100 °C."
+      },
+      {
+        "id": "B",
+        "text": "It freezes at 0 °C."
+      },
+      {
+        "id": "C",
+        "text": "It turns cobalt(II) chloride paper blue."
+      },
+      {
+        "id": "D",
+        "text": "It turns anhydrous copper(II) sulfate blue."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "solar calendar is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Solar calendars were created because it was important for a year to synchronise with seasons."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "extra hours accumulate -> a leap day corrects the calendar's alignment with seas happens first, and that produces Earth's revolution takes more than 365 days."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Solar calendars were created because it was important for a year to synchronise with seasons is not true."
+      }
+    ],
+    "enrichment": "Earth takes nearly 365.25 days to revolve around the Sun, so the extra quarter-days add to about one full day every four years and solar calendars add a leap day to keep seasons aligned. Earth's revolution takes more than 365 days -> extra hours accumulate -> a leap day corrects the calendar's alignment with seasons. The learner correctly applies this rule: Earth takes nearly 365.25 days to revolve around the Sun, so the extra quarter-days add to about one full day every four years and solar calendars add a leap day to keep seasons aligned. Calendars have 365 days by rule, and leap years are arbitrary extra days rather than corrections for Earth's revolution.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_11/H007",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “It condenses at 100 °C.” for the required “It turns cobalt(II) chloride paper blue.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “It freezes at 0 °C.” for the required “It turns cobalt(II) chloride paper blue.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “It turns anhydrous copper(II) sulfate blue.” for the required “It turns cobalt(II) chloride paper blue.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: The night sky: Moon and calendars. The student must decide: Explain why solar calendars use leap-day adjustments to stay synchronised with seasons. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

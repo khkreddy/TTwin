@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera's teacher asks why solar calendars add a leap day about every four years. Which statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A leap day is added because the Moon takes exactly 28 days to orbit the Earth."
+    },
+    {
+      "id": "B",
+      "text": "Earth takes nearly 365.25 days to revolve around the Sun, so the extra quarter-days add up to about one full day every four years, and the leap day keeps the calendar aligned with the seasons."
+    },
+    {
+      "id": "C",
+      "text": "Calendars have 365 days by rule, and leap years are just arbitrary extra days chosen by governments."
+    },
+    {
+      "id": "D",
+      "text": "A leap day is added to correct the time Earth takes to spin once on its axis."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's revolution takes nearly 365.25 days, slightly more than 365; the accumulated extra hours make roughly one day every four years, and a leap day restores the calendar's alignment with the seasons. Only B states this. A confuses lunar motion with the solar year, C treats leap years as arbitrary rather than corrective, and D confuses rotation with revolution.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
