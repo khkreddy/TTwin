@@ -2,22 +2,39 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "open_response",
-  "stem": "Decide whether the following statement is correct. Mark “√” for a correct answer and “×” for a wrong answer.\n(1) During the school garden activity, Meena observes a small plant with a soft green stem and no woody branches. She says, “This plant is a herb.”",
-  "options": [],
+  "item_type": "single_mcq",
+  "stem": "Multiple choice question: Meena sees a plant growing near the wall of her school garden in Jaipur. It is not very tall, has many hard, woody brown stems that branch out close to the ground, and has no single main trunk. Which of the following statements about this plant is correct ( )\nA. It is a tree, because its stem is hard and woody\nB. It is a shrub, because it has many woody stems branching near the ground\nC. It is a herb, because it is not very tall\nD. It is a climber, because it is growing near a wall",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a tree, because its stem is hard and woody"
+    },
+    {
+      "id": "B",
+      "text": "It is a shrub, because it has many woody stems branching near the ground"
+    },
+    {
+      "id": "C",
+      "text": "It is a herb, because it is not very tall"
+    },
+    {
+      "id": "D",
+      "text": "It is a climber, because it is growing near a wall"
+    }
+  ],
   "statements": [],
   "parts": [],
   "equations": [],
   "tables": [],
   "tikz": null,
   "answer": {
-    "kind": "rubric",
-    "letter": null,
+    "kind": "single_letter",
+    "letter": "B",
     "letters": null
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "The statement is correct (√). Herbs are typically small plants with soft green stems, which matches the plant Meena describes. A tree or shrub would have hard, woody stems, and a climber or creeper would have weak stems needing support or spreading along the ground.",
+    "key_rationale": "Shrubs are shorter than trees and have many hard woody stems branching close to the ground with no single trunk, matching the described plant. Hardness alone does not make it a tree (A wrong: trees branch higher up with one thick trunk); herbs have soft green stems (C wrong); climbers have weak stems needing support, not woody ones (D wrong). Key recalculated as B.",
     "variation_applied": "V3",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],

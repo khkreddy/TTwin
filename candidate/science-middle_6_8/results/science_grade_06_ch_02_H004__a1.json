@@ -2,23 +2,40 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "open_response",
-  "stem": "During her school garden walk, Meera picks up a fallen mango leaf and a fallen blade of grass. She looks carefully at the thin lines (veins) on both leaves. Explain how Meera can decide which leaf has reticulate venation and which has parallel venation from the pattern of their veins.",
-  "options": [],
+  "item_type": "single_mcq",
+  "stem": "Meera plucks a leaf from the tulsi plant growing in a pot at her home in Pune. She observes that the veins spread out from a thick middle vein and form a net-like pattern on both sides of it. What type of venation does this leaf show?",
+  "options": [
+    {
+      "id": "A",
+      "text": "parallel venation, because all leaves have veins running side by side"
+    },
+    {
+      "id": "B",
+      "text": "reticulate venation, because the veins form a net-like pattern"
+    },
+    {
+      "id": "C",
+      "text": "parallel venation, because the leaf is small and thin"
+    },
+    {
+      "id": "D",
+      "text": "reticulate venation, because the leaf is green in colour"
+    }
+  ],
   "statements": [],
   "parts": [],
   "equations": [],
   "tables": [],
   "tikz": null,
   "answer": {
-    "kind": "rubric",
-    "letter": null,
+    "kind": "single_letter",
+    "letter": "B",
     "letters": null
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Full marks: the learner states that the thin lines are veins and their pattern is venation; the mango leaf shows a net-like pattern of veins spreading on both sides of a thick middle vein, so it has reticulate venation; the grass blade shows veins running parallel to each other, so it has parallel venation. Partial credit for naming the correct pattern for only one leaf or for describing net-like versus parallel veins without assigning them to the correct leaf.",
-    "variation_applied": "V3",
+    "key_rationale": "A net-like pattern of veins on both sides of a thick middle vein is the definition of reticulate venation, so B is correct. A and C wrongly claim parallel venation, which requires veins running side by side. D reaches the right term but for an irrelevant reason (colour), so B is the only fully correct choice.",
+    "variation_applied": "V4",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],
     "figure_note": null

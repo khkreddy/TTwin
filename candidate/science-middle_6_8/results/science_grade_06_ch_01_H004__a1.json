@@ -2,45 +2,47 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "options_are_figure",
-  "stem": "Which person is working like a scientist?",
+  "item_type": "option_table",
+  "stem": "Meena wants to find out why the curd she sets at home sometimes turns out runny.\n\nShe changes one thing at a time (amount of starter, warmth of the milk, setting time), notes the result each day, and repeats her tests before concluding.\n\nWhich row correctly describes Meena's activity?",
   "options": [
     {
       "id": "A",
-      "text": "Dr. Rao, a well-known scientist, guesses which switch in his lab is faulty without testing anything"
+      "text": "She is not working like a scientist, because she is not in a science laboratory."
     },
     {
       "id": "B",
-      "text": "Rohan repairs his bicycle by trying the very first idea that comes into his mind"
+      "text": "She is working like a scientist, because she uses the scientific method to solve a problem."
     },
     {
       "id": "C",
-      "text": "Meena finishes her maths homework quickly by copying the method her teacher showed on the board"
+      "text": "She is not working like a scientist, because only people with the job title 'scientist' do science."
     },
     {
       "id": "D",
-      "text": "Sunita, while baking at home, changes the amount of yeast one spoon at a time and records how high the dough rises each time"
+      "text": "She is working like a scientist, because setting curd is a chemistry process."
     }
   ],
   "statements": [],
   "parts": [],
   "equations": [],
-  "tables": [],
+  "tables": [
+    "{\"headers\":[\"Is Meena working like a scientist?\",\"Reason\"],\"rows\":[[\"No\",\"She is not in a science laboratory\"],[\"Yes\",\"She uses the scientific method to solve a problem\"],[\"No\",\"Only people with the job title 'scientist' do science\"],[\"Yes\",\"Setting curd is a chemistry process\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "D",
+    "letter": "B",
     "letters": null
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A person works like a scientist when they follow the scientific method — changing one variable, observing, and recording — to solve a problem, regardless of place or job title. Only Sunita (D) does this. A traps students who equate a scientist's job title with doing science (no testing occurs). B and C trap students who think solving any daily-life problem or completing schoolwork counts as scientific work, since no methodical testing is involved.",
+    "key_rationale": "Meena systematically changes one variable at a time, records observations, and repeats tests before concluding — this is the scientific method applied to a daily-life problem. Anyone following the scientific method is working like a scientist, regardless of location or job title, so row B is correct. Rows A and C drop the stated condition by treating setting or job title as disqualifying; row D gives a wrong reason.",
     "variation_applied": "V4",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "surface_feature_capture",
       "condition_omission",
-      "scope_error"
+      "scope_error",
+      "surface_feature_capture"
     ],
     "figure_note": null
   }
