@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "In a class activity, Meera lists four things found in or near her school in Jaipur. Her teacher asks her to check two things for each: whether it has mass, and whether it occupies space. Only something that has mass AND occupies space is matter.\n\n| thing | W | X | Y | Z |\n| has mass? | yes | yes | no | yes |\n| occupies space? | yes | no | yes | yes |\n\nW = a steel tiffin box, X = the smell of agarbatti smoke, Y = the light from a tube light, Z = the water in a bottle\n\nWhich of the things are matter?",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "W and Z"
+    },
+    {
+      "id": "C",
+      "text": "X and Y"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"thing\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"has mass?\",\"yes\",\"yes\",\"no\",\"yes\"],[\"occupies space?\",\"yes\",\"no\",\"yes\",\"yes\"]],\"row_labels\":[\"has mass?\",\"occupies space?\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matter requires both mass and occupying space. W (tiffin box) and Z (water) satisfy both conditions; X fails the occupies-space check as presented and Y fails the has-mass check (light is not matter). Therefore the answer is B (W and Z). Option A is the trap for a student who applies only the mass condition and drops the space condition.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
