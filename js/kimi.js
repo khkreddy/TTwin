@@ -338,12 +338,120 @@ Laws:
     }
     return null;
   }
+  function findMapNode(map, nodeId) {
+    if (!nodeId || !map || Array.isArray(map)) return null;
+    const rows = map.nodes || [];
+    for (let i = 0; i < rows.length; i++) {
+      if (rows[i] && rows[i].id === nodeId) return rows[i];
+    }
+    return null;
+  }
+  function nodeLabel(map, nodeId) {
+    const n = findMapNode(map, nodeId);
+    return (n && n.title) || "";
+  }
+  function sheafHomeOf(map, nodeId) {
+    const n = findMapNode(map, nodeId);
+    if (n && n.sheaf_home) return n.sheaf_home;
+    const parent = nodeId && String(nodeId).split("/")[0];
+    if (parent && parent !== nodeId) {
+      const p = findMapNode(map, parent);
+      if (p && p.sheaf_home) return p.sheaf_home;
+    }
+    return null;
+  }
+  function sheafFamily(sheaf) {
+    const s = String(sheaf || "");
+    if (s === "C2" || s.indexOf("C2") === 0) return ["C1", "C2", "C3", "C4", "C5"];
+    if (s === "P1" || s.indexOf("P1") === 0) return ["P1"];
+    if (s === "P2" || s.indexOf("P2") === 0) return ["P2"];
+    if (s === "L1" || s.indexOf("L1") === 0) return ["L1", "Q1", "Q2", "Q3", "Q8"];
+    if (s === "B5" || s.indexOf("B5") === 0) return ["B5", "B2", "B4"];
+    if (s === "B3" || s.indexOf("B3") === 0) return ["B3", "Q8"];
+    return s ? [s] : [];
+  }
+  function hasModifyBridge(item, sourceUnit, targetUnit, map) {
+    if (!targetUnit) return true;
+    if (sourceUnit && sourceUnit.unit_id === targetUnit.unit_id) return true;
+    if (sourceUnit && sourceUnit.chapter && sourceUnit.chapter === targetUnit.chapter) return true;
+    const srcNode = bareNode(item && item.node);
+    const tgtNode = String(targetUnit.node || "");
+    const tgtParent = String(targetUnit.node_parent || tgtNode.split("/")[0] || "");
+    if (srcNode && tgtNode && (srcNode === tgtNode || srcNode === tgtParent)) return true;
+    if (srcNode && tgtParent && srcNode.startsWith(tgtParent + "/")) return true;
+    if (item && item.subject === "science" && sourceUnit && targetUnit
+        && (sourceUnit.node === targetUnit.node || sourceUnit.node_parent === targetUnit.node_parent)) {
+      return true;
+    }
+    const sheaf = sheafHomeOf(map, tgtNode) || sheafHomeOf(map, tgtParent);
+    if (sheaf && srcNode) {
+      const s = bareNode(srcNode);
+      if (s === sheaf || s.startsWith(String(sheaf) + "/")) return true;
+      const fam = sheafFamily(sheaf);
+      for (let i = 0; i < fam.length; i++) {
+        if (s === fam[i] || s.startsWith(fam[i] + "/")) return true;
+      }
+    }
+    return false;
+  }
+  function compileModifyVariation(item, ctx, sourceUnit, targetUnit) {
+    if (ctx.variation_class) return ctx.variation_class;
+    const fig = ctx.figure || {};
+    if (fig.mode === "rewrite") return "V5";
+    if (targetUnit && sourceUnit && targetUnit.unit_id !== sourceUnit.unit_id) {
+      const srcSub = (item && item.subject) || "";
+      const tgtSub = targetUnit.subject || "";
+      if (srcSub && tgtSub && srcSub !== tgtSub) return "V4";
+      return "V3";
+    }
+    if (targetUnit && !sourceUnit) {
+      const srcSub = (item && item.subject) || "";
+      if (srcSub && srcSub !== (targetUnit.subject || "science")) return "V4";
+      return "V3";
+    }
+    return "V1";
+  }
+  function compileModifyFidelity(item, ctx, sourceUnit, targetUnit, variation) {
+    if (ctx.fidelity_mode) return ctx.fidelity_mode;
+    if ((variation === "V3" || variation === "V4") && targetUnit
+        && !hasModifyBridge(item, sourceUnit, targetUnit, ctx.map)) {
+      return "BLOCKED";
+    }
+    return "FAITHFUL_TRANSFER";
+  }
+  function unitEnrichmentText(unit, ctx) {
+    let enrichText = "";
+    const serves = unit && unit.unit_id;
+    (ctx.enrichment || []).forEach((e) => {
+      const ids = e.serves || e.serves_statement_ids || [];
+      if (serves && ids.indexOf(serves) >= 0 && e.statement) {
+        enrichText += (enrichText ? " " : "") + e.statement;
+      }
+    });
+    if (enrichText) return clip(enrichText, 1500);
+    if (!unit) return null;
+    const bits = [];
+    const mech = unit.mechanism;
+    if (mech && typeof mech === "string") bits.push(mech);
+    if (mech && mech.law) bits.push(mech.law);
+    if (mech && mech.causal_direction) bits.push(mech.causal_direction);
+    const ped = unit.pedagogy || {};
+    if (ped.mastery_signal) bits.push(ped.mastery_signal);
+    if (ped.lok_folk) bits.push(ped.lok_folk);
+    const joined = bits.filter(Boolean).join(" ");
+    return joined ? clip(joined, 1500) : null;
+  }
+  function validPack(p) {
+    return p === "middle_6_8" || p === "secondary_9_10" || p === "senior_11_12" || p === "olympiad_iit" ? p : null;
+  }
   function assembleModifyPacket(item, instruction, ctx) {
     ctx = ctx || {};
     const itype = packedItemType(item);
     const primary = item && item.hinges && item.hinges.primary;
-    const unit = findMapUnit(ctx.map, primary);
-    const bound = !!(unit && unit.unit_id);
+    const sourceUnit = findMapUnit(ctx.map, primary);
+    const targetUnit = ctx.target_unit_id ? findMapUnit(ctx.map, ctx.target_unit_id) : null;
+    const intelUnit = targetUnit || sourceUnit;
+    const bound = !!(sourceUnit && sourceUnit.unit_id);
     const opts = item.options || {};
     const options = ["A", "B", "C", "D", "E", "F"].filter((k) => opts[k] != null && String(opts[k]).trim() !== "")
       .map((k) => ({ id: k, text: clip(opts[k], 1000) }));
@@ -356,19 +464,11 @@ Laws:
       text: clip((p && p.stem) || "", 2000),
       marks: typeof (p && p.marks) === "number" ? p.marks : 0,
     }));
-    const mxRows = ((unit && unit.mx) || []).slice(0, 4).map((m) => ({
+    const mxRows = ((intelUnit && intelUnit.mx) || []).slice(0, 4).map((m) => ({
       mx_type: clip(m.type || m.mx_type, 60),
-      name: clip(m.name || m.type || "", 120),
+      name: clip(m.name || m.type || m.mx_type || "", 120),
       teacher_note: clip(m.cwo || m.canonical_wrong_output || m.note || "", 300),
     }));
-    const serves = bound ? unit.unit_id : null;
-    let enrichText = "";
-    (ctx.enrichment || []).forEach((e) => {
-      const ids = e.serves || e.serves_statement_ids || [];
-      if (serves && ids.indexOf(serves) >= 0 && e.statement) {
-        enrichText += (enrichText ? " " : "") + e.statement;
-      }
-    });
     const lbs = item.assessment && item.assessment.learn_by_solve;
     let lbsRecipe = null;
     if (lbs && lbs.wrong) {
@@ -376,11 +476,33 @@ Laws:
         const rec = lbs.wrong[L] || {};
         return clip((rec.mx_type || rec.pathway || L), 120);
       });
-      lbsRecipe = { gates: gates, hint: clip("", 500), retry: "retry original unaided" };
+      lbsRecipe = {
+        unit: clip((intelUnit && intelUnit.unit_id) || primary || "", 120),
+        gate_names: gates,
+        hint_skeleton: clip("", 500),
+        retry_plan: "retry original unaided",
+      };
     }
     const seeds = ((item.assessment && item.assessment.modify_seeds) || []).slice(0, 4)
       .map((s) => clip(typeof s === "string" ? s : (s && (s.text || s.instruction)) || "", 500))
       .filter(Boolean);
+    const variation = compileModifyVariation(item, ctx, sourceUnit, targetUnit);
+    const fidelity = compileModifyFidelity(item, ctx, sourceUnit, targetUnit, variation);
+    const fig = ctx.figure || {};
+    const figMode = fig.mode || "preserve";
+    const labels = [];
+    if (intelUnit) {
+      const t1 = nodeLabel(ctx.map, intelUnit.node);
+      const t2 = nodeLabel(ctx.map, intelUnit.node_parent || (intelUnit.node && String(intelUnit.node).split("/")[0]));
+      if (t1) labels.push(clip(t1, 120));
+      if (t2 && t2 !== t1) labels.push(clip(t2, 120));
+    }
+    const hingeUnit = bound ? (intelUnit || sourceUnit) : null;
+    const pack = validPack(ctx.pack) || validPack(item && item.pack) || "secondary_9_10";
+    const subject = (ctx.subject || (item && item.subject) || "").slice(0, 40) || "science";
+    const topic = (intelUnit && (nodeLabel(ctx.map, intelUnit.node) || intelUnit.chapter_title)) || "";
+    const level = intelUnit && intelUnit.grade != null ? ("grade " + intelUnit.grade) : (intelUnit && intelUnit.grade_band) || "";
+    const srcTikz = clip(Array.isArray(item.tikz) ? item.tikz.join("\n") : (item.tikz || ""), 6000);
     const packet = {
       schema: "modify_packet.v1",
       packet_id: "session:" + (item.uid || item.item_uid || "item"),
@@ -395,44 +517,63 @@ Laws:
         parts: parts,
         equations: (item.equations || []).slice(0, 6).map((e) => clip(typeof e === "string" ? e : JSON.stringify(e), 1000)),
         tables: (item.tables || []).slice(0, 6).map((t) => clip(JSON.stringify(t), 1000)),
-        tikz: clip(Array.isArray(item.tikz) ? item.tikz.join("\n") : (item.tikz || ""), 6000),
+        tikz: srcTikz,
         key: sourceKey(item),
       },
       intelligence: {
         join_status: bound ? "BOUND" : "UNBOUND",
-        hinge: bound ? {
-          primary: primary,
-          unit_id: unit.unit_id,
-          title: clip(unit.decision_hinge || unit.chapter_title || unit.chapter || "", 240),
-          node_labels: [unit.node, unit.node_parent].filter(Boolean).slice(0, 8).map((x) => clip(String(x), 120)),
+        hinge: hingeUnit ? {
+          primary: clip(hingeUnit.unit_id || primary || "", 120),
+          unit_id: clip(hingeUnit.unit_id || "", 120),
+          title: clip(hingeUnit.decision_hinge || hingeUnit.chapter_title || hingeUnit.chapter || "", 240),
+          node_labels: labels.slice(0, 8),
         } : null,
         packed_tags: {
-          pack: item.pack || null,
-          subject: item.subject || ctx.subject || null,
-          node: item.node || null,
-          chapter_id: item.chapter_id || null,
-          subtopic_id: item.subtopic_id || null,
+          pack: pack,
+          subject: subject,
+          level: clip(level, 40),
+          topic: clip(topic, 120),
+          paper_hint: clip(ctx.paper_hint || "", 60),
         },
         mx: mxRows,
-        enrichment: enrichText ? clip(enrichText, 1500) : null,
+        enrichment: unitEnrichmentText(intelUnit, ctx),
         lbs_recipe: lbsRecipe,
         modify_seeds: seeds,
       },
       spec: {
         instruction: clip(instruction || "", 1000),
-        variation_class: (ctx.variation_class) || "V1",
-        fidelity_mode: "FAITHFUL_TRANSFER",
-        target_item_type: "preserve",
+        variation_class: variation,
+        fidelity_mode: fidelity,
+        target_item_type: ctx.target_item_type || "preserve",
         format: { n_options: Math.max(2, Math.min(6, options.length || 4)) },
-        figure: { mode: "preserve", tikz_required: false },
+        figure: { mode: figMode, tikz_required: !!fig.tikz_required },
       },
-      caps: { hard_total: 16000 },
+      caps: { hard_total_chars: 16000, tightened_from: "40_PACKETS" },
       assembly: {
         builder: "assembleModifyPacket",
-        join_status: bound ? "BOUND" : "UNBOUND",
         trimmed: [],
+        slim_map_ref: clip(ctx.slim_map_ref || "S.map", 80),
       },
     };
+    const order = ["enrichment", "lbs_recipe", "mx_notes", "node_labels", "enrichment_drop"];
+    while (JSON.stringify(packet).length > 16000 && order.length) {
+      const step = order.shift();
+      packet.assembly.trimmed.push(step);
+      if (step === "enrichment") {
+        packet.intelligence.enrichment = packet.intelligence.enrichment
+          ? clip(packet.intelligence.enrichment, 400) : null;
+      } else if (step === "lbs_recipe") {
+        packet.intelligence.lbs_recipe = null;
+      } else if (step === "mx_notes") {
+        packet.intelligence.mx = (packet.intelligence.mx || []).map((m) => ({
+          mx_type: m.mx_type, name: m.name,
+        }));
+      } else if (step === "node_labels" && packet.intelligence.hinge) {
+        packet.intelligence.hinge.node_labels = [];
+      } else if (step === "enrichment_drop") {
+        packet.intelligence.enrichment = null;
+      }
+    }
     return packet;
   }
   function modifySys() {
@@ -453,35 +594,163 @@ Laws:
   function bannedInLearner(text, packet) {
     const blob = String(text || "").toLowerCase();
     if (/\bcandidate\b/.test(blob)) return "CANDIDATE";
+    if (/\b(kimi|moonshot|openai|anthropic|chatgpt|claude|astra)\b/.test(blob)) return "vendor";
     const mx = (packet.intelligence && packet.intelligence.mx) || [];
     for (let i = 0; i < mx.length; i++) {
       const t = mx[i] && mx[i].mx_type;
-      if (t && blob.indexOf(String(t).toLowerCase()) >= 0) return "mx_type";
+      const n = mx[i] && mx[i].name;
+      if (t && t.length > 3 && blob.indexOf(String(t).toLowerCase()) >= 0) return "mx_type";
+      if (n && n.length > 6 && blob.indexOf(String(n).toLowerCase()) >= 0) return "mx_name";
     }
-    if (/smiles\s*[:=]/i.test(blob)) return "SMILES";
+    if (/smiles\s*[:=]/i.test(blob) || /\bSMILES\b/.test(String(text || ""))) return "SMILES";
     return null;
   }
-  function validateModifyResult(out, packet, item) {
-    if (!out || out.status === "REFUSED") return { ok: false, gate: "G1" };
-    const want = (packet.spec && packet.spec.target_item_type) || "preserve";
-    const itype = out.item_type || packedItemType(item);
-    if (want !== "preserve" && itype !== want) return { ok: false, gate: "G2" };
-    const learner = [out.stem].concat((out.options || []).map((o) => o && o.text), (out.parts || []).map((p) => p && p.text)).join("\n");
-    const ban = bannedInLearner(learner, packet);
-    if (ban) return { ok: false, gate: "G4" };
-    if (out.answer && out.answer.kind === "single_letter") {
-      const L = String(out.answer.letter || "");
-      const ids = (out.options || []).map((o) => o && o.id);
-      if (L && ids.length && ids.indexOf(L) < 0) return { ok: false, gate: "G6" };
+  function learnerBlob(out) {
+    const opts = (out.options || []).map((o) => (o && (o.text || "")) + " " + ((o && o.tikz) || ""));
+    const parts = (out.parts || []).map((p) => (p && p.text) || "");
+    const stmts = (out.statements || []).map((s) => (s && s.text) || "");
+    return [out.stem, opts.join("\n"), parts.join("\n"), stmts.join("\n"),
+      (out.tables || []).join("\n"), out.tikz || ""].join("\n");
+  }
+  function optionIds(out) {
+    return (out.options || []).map((o) => o && o.id).filter(Boolean);
+  }
+  function isBlankGridTable(t) {
+    const s = typeof t === "string" ? t : JSON.stringify(t || "");
+    if (!/<table/i.test(s)) return false;
+    const cells = s.match(/<t[dh]\b[^>]*>[\s\S]*?<\/t[dh]>/gi) || [];
+    if (cells.length < 8) return false;
+    let empty = 0;
+    for (let i = 0; i < cells.length; i++) {
+      const inner = cells[i].replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+      if (inner.length <= 1) empty++;
     }
-    if (packet.intelligence && packet.intelligence.join_status === "UNBOUND") {
-      const teach = JSON.stringify((out.teacher) || {}).toLowerCase();
-      if (packet.intelligence.hinge && packet.intelligence.hinge.title &&
-          teach.indexOf(String(packet.intelligence.hinge.title).toLowerCase()) >= 0) {
-        return { ok: false, gate: "G8" };
+    return empty / cells.length > 0.7;
+  }
+  function mentionsFigure(text) {
+    return /figure|diagram|shown above|shown below|as shown|the graph|the circuit|the apparatus/i.test(String(text || ""));
+  }
+  function joinCodeHit(text) {
+    const s = String(text || "");
+    return /science\/grade_\d+|IGCSE:|AS_A:|[SPCBMLQ]\d+\/H-[A-Z0-9-]+|\b(?:chem|phy|bio|math):[A-Z]/.test(s);
+  }
+  function validateModifyResult(out, packet, item) {
+    if (!out) return { ok: false, gate: "G1" };
+    if (out.status === "REFUSED") {
+      return { ok: false, gate: out.refusal_reason ? "REFUSED" : "G1" };
+    }
+    if (out.status !== "OK") return { ok: false, gate: "G1" };
+    if (!out.item_type || !out.stem || !out.answer || !out.teacher) return { ok: false, gate: "G1" };
+    if (out.schema && out.schema !== "modify_result.v1") return { ok: false, gate: "G1" };
+    if (out.teacher.proposed_key_status && out.teacher.proposed_key_status !== "UNVERIFIED") {
+      return { ok: false, gate: "G1" };
+    }
+    const want = (packet.spec && packet.spec.target_item_type) || "preserve";
+    const preserved = (packet.source && packet.source.item_type) || packedItemType(item);
+    const itype = out.item_type;
+    if (want === "preserve") {
+      if (itype !== preserved) return { ok: false, gate: "G2" };
+    } else if (itype !== want) {
+      return { ok: false, gate: "G2" };
+    }
+    const ids = optionIds(out);
+    const ans = out.answer || {};
+    if (itype === "single_mcq") {
+      if (ans.kind !== "single_letter" || !ans.letter || ids.indexOf(ans.letter) < 0) return { ok: false, gate: "G2" };
+      if (ids.filter((x) => x === ans.letter).length !== 1) return { ok: false, gate: "G2" };
+    }
+    if (itype === "one_or_more") {
+      const L = ans.letters || [];
+      const uniq = [];
+      for (let i = 0; i < L.length; i++) if (uniq.indexOf(L[i]) < 0) uniq.push(L[i]);
+      if (ans.kind !== "letter_set" || uniq.length < 2) return { ok: false, gate: "G2" };
+      for (let i = 0; i < uniq.length; i++) if (ids.indexOf(uniq[i]) < 0) return { ok: false, gate: "G2" };
+    }
+    if (itype === "three_statement") {
+      const stmts = out.statements || [];
+      if (stmts.length < 2) return { ok: false, gate: "G2" };
+      if (ans.kind === "statement_pattern") {
+        if (!ans.pattern || ans.pattern.length !== stmts.length) return { ok: false, gate: "G2" };
+      } else if (ans.kind === "single_letter") {
+        if (!ans.letter || ids.indexOf(ans.letter) < 0) return { ok: false, gate: "G2" };
+      } else {
+        return { ok: false, gate: "G2" };
       }
     }
+    if (itype === "structured_parts") {
+      const parts = out.parts || [];
+      const pa = ans.part_answers || [];
+      if (!parts.length || ans.kind !== "part_answers") return { ok: false, gate: "G2" };
+      for (let i = 0; i < parts.length; i++) {
+        const pid = parts[i] && parts[i].id;
+        const hit = pa.filter((x) => x && x.part_id === pid && String(x.answer || "").trim());
+        if (!hit.length) return { ok: false, gate: "G2" };
+        const mk = parts[i].marks;
+        if (mk != null && (mk < 0 || mk > 20 || mk !== Math.floor(mk))) return { ok: false, gate: "G2" };
+      }
+    }
+    if (itype === "open_response") {
+      if (ans.kind !== "rubric" || !ans.rubric || !ans.rubric.length) return { ok: false, gate: "G2" };
+      if (ans.letter || (ans.letters && ans.letters.length)) return { ok: false, gate: "G2" };
+    }
+    if (itype === "option_table" || itype === "options_are_figure") {
+      if (!ids.length) return { ok: false, gate: "G2" };
+      if (itype === "options_are_figure") {
+        const withFig = (out.options || []).filter((o) => o && o.tikz);
+        if (!withFig.length && !out.tikz) return { ok: false, gate: "G2" };
+      }
+    }
+    const figMode = (packet.spec && packet.spec.figure && packet.spec.figure.mode) || "preserve";
+    const srcTikz = (packet.source && packet.source.tikz) || "";
+    const outTikz = out.tikz || "";
+    const hasTikz = String(outTikz).trim() !== "";
+    const learnerFig = mentionsFigure(out.stem) || (out.parts || []).some((p) => mentionsFigure(p && p.text));
+    if (hasTikz !== learnerFig) return { ok: false, gate: "G3" };
+    const nVisual = (hasTikz ? 1 : 0) + (out.options || []).filter((o) => o && o.tikz).length;
+    if (nVisual > 1) return { ok: false, gate: "G3" };
+    if ((out.tables || []).some(isBlankGridTable) && hasTikz) return { ok: false, gate: "G3" };
+    if (!String(srcTikz).trim() && figMode !== "add" && hasTikz) return { ok: false, gate: "G3" };
+    if (figMode === "remove" && hasTikz) return { ok: false, gate: "G3" };
+    const learner = learnerBlob(out);
+    const ban = bannedInLearner(learner, packet);
+    if (ban) return { ok: false, gate: "G4" };
+    const dumped = JSON.stringify(out);
+    if (/exam\.v1/.test(dumped)) return { ok: false, gate: "G5" };
+    if (out.uid && !/^session:|^candidate:/.test(String(out.uid))) return { ok: false, gate: "G5" };
+    if (ans.kind === "single_letter") {
+      if (!ans.letter || ids.indexOf(ans.letter) < 0) return { ok: false, gate: "G6" };
+    }
+    if (ans.kind === "letter_set") {
+      const L = ans.letters || [];
+      const seen = {};
+      for (let i = 0; i < L.length; i++) {
+        if (seen[L[i]] || ids.indexOf(L[i]) < 0) return { ok: false, gate: "G6" };
+        seen[L[i]] = true;
+      }
+    }
+    if (ans.kind === "statement_pattern") {
+      if (!ans.pattern || ans.pattern.length !== (out.statements || []).length) return { ok: false, gate: "G6" };
+    }
+    const applied = out.teacher && out.teacher.variation_applied;
+    if (applied !== (packet.spec && packet.spec.variation_class)) return { ok: false, gate: "G7" };
+    const join = packet.intelligence && packet.intelligence.join_status;
+    if (joinCodeHit(learner)) return { ok: false, gate: "G8" };
+    if (join === "UNBOUND") {
+      const teach = JSON.stringify(out.teacher || "");
+      if (joinCodeHit(teach)) return { ok: false, gate: "G8" };
+      const title = packet.intelligence.hinge && packet.intelligence.hinge.title;
+      if (title && teach.toLowerCase().indexOf(String(title).toLowerCase()) >= 0) return { ok: false, gate: "G8" };
+    }
     return { ok: true };
+  }
+  function applyModifyOutcome(out, packet, item) {
+    if (!out) return { ok: false, gate: "G1", keepOriginal: true };
+    if (packet && packet.spec && packet.spec.fidelity_mode === "BLOCKED") {
+      return { ok: false, gate: "BLOCKED", keepOriginal: true };
+    }
+    const gate = validateModifyResult(out, packet, item);
+    if (!gate.ok) return { ok: false, gate: gate.gate, keepOriginal: true };
+    return { ok: true, gate: null, keepOriginal: false };
   }
 
   function inferPkgs(code, prev) {
@@ -500,22 +769,34 @@ Laws:
     ctx = ctx || {};
     const onTick = ctx.onTick;
     const packet = assembleModifyPacket(item, prompt, ctx);
+    if (packet.spec.fidelity_mode === "BLOCKED") {
+      const err = new Error("Modify blocked (no bridge). Original item kept.");
+      err.gate = "BLOCKED";
+      err.keepOriginal = true;
+      err.packet = packet;
+      throw err;
+    }
     const content = await chat([
       { role: "system", content: modifySys() },
       { role: "user", content: JSON.stringify(packet) },
     ], { reasoning_effort: "low", max_tokens: 4096, timeout_ms: 90000, onTick });
     const out = extractJson(content);
-    const gate = validateModifyResult(out, packet, item);
+    const gate = applyModifyOutcome(out, packet, item);
     if (!gate.ok) {
       const err = new Error("Modify refused (" + gate.gate + "). Original item kept.");
       err.gate = gate.gate;
       err.keepOriginal = true;
+      err.packet = packet;
+      err.result = out;
       throw err;
     }
     const optList = out.options || [];
     const options = {};
     optList.forEach((o) => { if (o && o.id) options[o.id] = o.text || ""; });
-    if (!optList.length) {
+    const mcqLike = out.item_type === "single_mcq" || out.item_type === "one_or_more"
+      || out.item_type === "option_table" || out.item_type === "options_are_figure"
+      || out.item_type === "three_statement";
+    if (!optList.length && mcqLike) {
       const src = item.options || {};
       ["A", "B", "C", "D"].forEach((k) => { if (src[k] != null) options[k] = src[k]; });
     }
@@ -535,8 +816,12 @@ Laws:
       rationale: (out.teacher && out.teacher.key_rationale) || "",
       note: (out.teacher && out.teacher.figure_note) || null,
       item_type: out.item_type || item.item_type,
-      join_status: packet.assembly.join_status,
+      join_status: packet.intelligence.join_status,
       tikz_unchanged: tikzUnchanged,
+      packet: packet,
+      result: out,
+      serve_eligible: false,
+      key_status: "UNVERIFIED",
     };
     if (next.tikz_unchanged) {
       next.tikz = item.tikz || "";
@@ -734,5 +1019,6 @@ Laws:
     getKey, setKey, getProxy, setProxy, endpoint, chat,
     inferSelector, inferIsoIntent, authorItem, modifyItem, assembleModifyPacket, inferKeys, gradePaper,
     analyzeSolutions, lessonProse, mapJournalNote, extractJson, MODEL,
+    validateModifyResult, applyModifyOutcome, findMapUnit, hasModifyBridge,
   };
 })(window);
