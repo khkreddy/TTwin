@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QDIR = ROOT / "data/questions"
 HELD = ROOT / "data/held_questions_summary.json"
+PENDING = ROOT / "data/question_bank_pending.json"
 
 
 def git_sha() -> str:
@@ -28,6 +29,7 @@ def census() -> dict:
     n = 0
     n_parts = 0
     n_tikz = 0
+    n_unmapped = 0
     for path in sorted(QDIR.glob("*.json")):
         rows = json.loads(path.read_text(encoding="utf-8"))
         for it in rows:
@@ -37,9 +39,14 @@ def census() -> dict:
                 n_parts += 1
             if it.get("tikz"):
                 n_tikz += 1
+            if it.get("node") == "unmapped":
+                n_unmapped += 1
     held = {}
     if HELD.is_file():
         held = json.loads(HELD.read_text(encoding="utf-8"))
+    pending = {}
+    if PENDING.is_file():
+        pending = json.loads(PENDING.read_text(encoding="utf-8"))
     remote = ""
     try:
         remote = subprocess.check_output(
@@ -52,8 +59,14 @@ def census() -> dict:
         "n_packed": n,
         "n_with_parts": n_parts,
         "n_tikz": n_tikz,
+        "n_unmapped": n_unmapped,
         "by_subject_type": {f"{s}:{t}": c for (s, t), c in sorted(by.items())},
         "held": held,
+        "pending": {
+            "n": pending.get("pending_n"),
+            "by_task": pending.get("pending_by_task"),
+            "added_by_bank": pending.get("added_by_bank"),
+        },
         "git_head": git_sha(),
         "origin_main": remote,
     }
