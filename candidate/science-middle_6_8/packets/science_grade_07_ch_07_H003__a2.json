@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q11",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:56:51.095Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q11",
+    "item_type": "single_mcq",
+    "stem": "Which is a non-renewable energy resource?",
+    "options": [
+      {
+        "id": "A",
+        "text": "coal"
+      },
+      {
+        "id": "B",
+        "text": "solar"
+      },
+      {
+        "id": "C",
+        "text": "tides"
+      },
+      {
+        "id": "D",
+        "text": "wind"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Water at the same warm temperature throughout keeps producing convection currents just because it is warm."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The lighter heated water sinks, and the heavier cooler water rises to replace it."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "In a solid metal rod heated from below, hot metal particles rise through the rod and cooler ones move down."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Convection begins only when the water boils and bubbles appear."
+      }
+    ],
+    "enrichment": "In liquids and gases, heat transfer can take place by the actual movement of particles from one place to another; heated fluid expands, becomes lighter, rises, and cooler fluid moves down. Heating a fluid from below makes the lower fluid warmer and lighter, causing upward motion that is replaced by cooler fluid from the sides or above, forming a convection current. The learner correctly applies this rule: In liquids and gases, heat transfer can take place by the actual movement of particles from one place to another; heated fluid expands, becomes lighter, rises, and cooler fluid moves down. Heating water only warms the bottom layer; the rest of the beaker becomes hot without water actually moving.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H003",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “solar” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “tides” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “wind” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: When air or water is heated from below, decide that the heated fluid expands, becomes lighter, rises, and cooler fluid moves down to replace it. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

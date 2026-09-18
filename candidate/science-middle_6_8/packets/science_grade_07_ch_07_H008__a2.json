@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:57:32.228Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "The table gives four energy sources and states whether the energy of the source is derived from the Sun.\nWhich row is correct?\nsource of energy derived from the Sun",
+    "options": [
+      {
+        "id": "A",
+        "text": "geothermal yes"
+      },
+      {
+        "id": "B",
+        "text": "oil no"
+      },
+      {
+        "id": "C",
+        "text": "water held behind a dam yes"
+      },
+      {
+        "id": "D",
+        "text": "wind no"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Cooling water vapour forms clouds by evaporation."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Water vapour condenses into clouds simply by rising, even without cooling."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Condensation into clouds causes the rising water vapour to cool."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Snow and hail are not part of the water cycle."
+      }
+    ],
+    "enrichment": "The Sun heats water in oceans, rivers, and lakes so it evaporates as water vapour; plants release water vapour through transpiration; rising vapour cools and condenses to form clouds, and clouds bring precipitation. Solar heating produces water vapour, cooling aloft changes vapour into clouds, precipitation brings water down, and water returns through soil, rocks, plants, and water bodies in a continuous cycle. The learner correctly applies this rule: The Sun heats water in oceans, rivers, and lakes so it evaporates as water vapour; plants release water vapour through transpiration; rising vapour cools and condenses to form clouds, and clouds bring precipitation. Rain appears from clouds without evaporation from water bodies or transpiration from plants.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “geothermal yes” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “oil no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “wind no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Sequence the water cycle as Sun-driven evaporation and transpiration, rising and cooling of water vapour, condensation into clouds, precipitation, seepage or return flow, and return to water bodies. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

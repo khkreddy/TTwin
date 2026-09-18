@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:56:43.450Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "A person in a factory has to lift a box on to a shelf.\nWhich action involves the person doing the least amount of work?",
+    "options": [
+      {
+        "id": "A",
+        "text": "lifting the box quickly to the high shelf"
+      },
+      {
+        "id": "B",
+        "text": "lifting the box slowly to the high shelf"
+      },
+      {
+        "id": "C",
+        "text": "lifting the box to the low shelf first then lifting it to the high shelf"
+      },
+      {
+        "id": "D",
+        "text": "lifting the box to the low shelf instead of to the high shelf"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Wool insulates equally well when its trapped air is replaced by water."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "A metal cup slows heat loss more than an otherwise identical porcelain cup."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Use metal for the handle because a cooking utensil should conduct heat easily throughout."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Painting a metal pan black makes it a poor conductor of heat."
+      }
+    ],
+    "enrichment": "Materials that allow heat to pass through them easily are good conductors; materials that do not allow heat to pass through easily are poor conductors or insulators. A material's ability to pass heat changes how quickly heat enters or leaves an object, so conductor materials support heating and insulator materials slow heat transfer. The learner correctly applies this rule: Materials that allow heat to pass through them easily are good conductors; materials that do not allow heat to pass through easily are poor conductors or insulators. A metal cup will keep tea hot longest because metal is sturdy, while material choice is not about heat flow.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H002",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “lifting the box quickly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “lifting the box slowly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “lifting the box to the low shelf first then lifti…” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Choose materials for cooking, drinking, clothing, or house walls by deciding whether easy heat flow or reduced heat flow is needed. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
