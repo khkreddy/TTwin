@@ -61,4 +61,19 @@ if (stemP && /\(a\)/.test(stemP[0])) {
 if ((html.match(/Complete the table\./g) || []).length !== 1) {
   throw new Error("part body reprinted outside parts");
 }
+const mathItem = {
+  uid: "latex-demo",
+  item_type: "open_response",
+  stem: "Let $ABC$ be a triangle. Find $\\omega$ and $$x^2+y^2=1$$.",
+  parts: [],
+  assessment: { key_source: "none", key_status: "not_applicable", examiner_comment: { present: false } },
+};
+const mh = TTwinPaper.itemHTML(mathItem, 0, {});
+if (mh.includes("$ABC$") || mh.includes("$$x^2")) {
+  throw new Error("raw latex delimiters still in stem: " + mh.slice(0, 300));
+}
+if (!mh.includes("katex") && !mh.includes("class='tex'")) {
+  throw new Error("expected katex html or tex fallback");
+}
 console.log("paper_parts_ok", html.includes("tikz-slot"), html.includes("(a)"));
+console.log("latex_ok", mh.includes("class='tex'") || mh.includes("katex"));

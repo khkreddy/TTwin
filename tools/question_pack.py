@@ -71,7 +71,7 @@ PACK_LABEL = {
     "igcse_9_10": "A · Grades 9–10 / IGCSE",
     "senior_11_12_as_a": "B · Grades 11–12 / AS–A",
     "olympiad_iit": "C · Olympiad / IIT",
-    "question_bank": "D · Question bank (unmapped)",
+    "question_bank": "D · Advanced / extra practice",
 }
 UNMAPPED = "unmapped"
 SUBJECT_ORDER = ["chemistry", "biology", "physics", "maths"]

@@ -4,7 +4,29 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
   }
+  function texHTML(tex, display) {
+    const src = String(tex || "").replace(/&amp;/g, "&");
+    if (g.katex && typeof g.katex.renderToString === "function") {
+      try {
+        return g.katex.renderToString(src, { throwOnError: false, displayMode: !!display, output: "html" });
+      } catch (e) { /* fall through */ }
+    }
+    return "<code class='tex'>" + esc(src) + "</code>";
+  }
   function chem(s) {
+    const raw = String(s == null ? "" : s).replace(/\(cid:\d+\)/g, "");
+    const re = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$\n]+?)\$/g;
+    let html = "", last = 0, m;
+    while ((m = re.exec(raw))) {
+      if (m.index > last) html += inlineHTML(raw.slice(last, m.index));
+      const tex = m[1] || m[2] || m[3] || m[4] || "";
+      html += texHTML(tex, !!(m[1] || m[2]));
+      last = m.index + m[0].length;
+    }
+    html += inlineHTML(raw.slice(last));
+    return html;
+  }
+  function inlineHTML(s) {
     return esc(s)
       .replace(/&lt;u&gt;/gi, "<u>").replace(/&lt;\/u&gt;/gi, "</u>")
       .replace(/&lt;sub&gt;/gi, "<sub>").replace(/&lt;\/sub&gt;/gi, "</sub>")
