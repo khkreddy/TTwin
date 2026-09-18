@@ -1,0 +1,42 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Priya writes the word MOM on a piece of paper and holds it in front of a plane mirror in her bedroom.\nHow does the word appear in the mirror?",
+  "options": [
+    {
+      "id": "A",
+      "text": "MOM, exactly as it is written"
+    },
+    {
+      "id": "B",
+      "text": "WOW, upside down"
+    },
+    {
+      "id": "C",
+      "text": "MOM, but with each letter reversed left to right"
+    },
+    {
+      "id": "D",
+      "text": "WOW, with each letter reversed left to right"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane mirror produces lateral inversion: left and right swap, so each letter appears reversed left to right; the word is not turned upside down and is not shown unchanged. The letters M, O, M happen to look the same when reversed, but option C is the only statement describing the lateral-inversion effect; A wrongly claims no change, B wrongly claims top-bottom inversion, D combines both errors.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

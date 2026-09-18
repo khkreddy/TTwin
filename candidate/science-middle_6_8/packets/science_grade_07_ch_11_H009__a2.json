@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m17_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:05:59.528Z",
+  "source": {
+    "item_ref": "session:0625_m17_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "The engine of a motor vehicle develops a large amount of power.\nWhich statement is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The driving force acting on the vehicle must be large."
+      },
+      {
+        "id": "B",
+        "text": "The engine must have a very large volume."
+      },
+      {
+        "id": "C",
+        "text": "The engine must transfer large amounts of energy each second."
+      },
+      {
+        "id": "D",
+        "text": "The vehicle must be very fast."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The upward-pointing arrow points downward in the mirror."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Ordinary AMBULANCE lettering reads normally as AMBULANCE in the rear-view mirror."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The photograph shows the person raising their right arm."
+      }
+    ],
+    "enrichment": "In a plane mirror image, the left side appears as the right side and the right side appears as the left side; this perceived left-right reversal is lateral inversion. Because of lateral inversion, actions or writing facing a plane mirror appear reversed left-to-right in the mirror image. The learner correctly applies this rule: In a plane mirror image, the left side appears as the right side and the right side appears as the left side; this perceived left-right reversal is lateral inversion. A mirror copies left and right exactly as they are.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_11/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “The driving force acting on the vehicle must be l…” for the required “The engine must transfer large amounts of energy…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “The engine must have a very large volume.” looked possible instead of “The engine must transfer large amounts of energy…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The vehicle must be very fast.” for the required “The engine must transfer large amounts of energy…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Apply lateral inversion to decide which side or writing direction appears in a plane mirror. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

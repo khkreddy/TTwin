@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q18",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:04:08.811Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q18",
+    "item_type": "single_mcq",
+    "stem": "Why is the circulatory system of mammals described as a double circulation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blood flows firstly through arteries and then through veins."
+      },
+      {
+        "id": "B",
+        "text": "Blood flows through the heart twice on one complete circuit of the body."
+      },
+      {
+        "id": "C",
+        "text": "In the heart, blood flows firstly through atria and then through ventricles."
+      },
+      {
+        "id": "D",
+        "text": "The atria and the ventricles contract alternately."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Food made in leaves reaches storage and growing parts through xylem."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Roots make the plant's food and send it through phloem to the leaves."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Phloem carries food, water, and minerals to all parts of the plant."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Starch in a potato proves that the food was made in the potato."
+      }
+    ],
+    "enrichment": "Leaves are the primary site of photosynthesis; food prepared in leaves is transported to all parts of the plant through phloem. Photosynthesis in leaves -> food prepared in leaves -> transport through phloem -> food reaches other plant parts. The learner correctly applies this rule: Leaves are the primary site of photosynthesis; food prepared in leaves is transported to all parts of the plant through phloem. Stored starch in roots or potatoes is made there from soil minerals, not transported from leaves.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_10/H009",
+      "gate_names": [
+        "term_substitution",
+        "condition_omission",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Blood flows firstly through arteries and then thr…” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “In the heart, blood flows firstly through atria a…” looked possible instead of “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The atria and the ventricles contract alternately.” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Respiration and transport in plants. The student must decide: Explain that food made in leaves reaches storage or growing parts through phloem. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

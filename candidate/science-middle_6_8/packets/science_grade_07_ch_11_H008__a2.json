@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:05:50.101Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "The table gives four energy sources and states whether the energy of the source is derived from the Sun.\nWhich row is correct?\nsource of energy derived from the Sun",
+    "options": [
+      {
+        "id": "A",
+        "text": "geothermal yes"
+      },
+      {
+        "id": "B",
+        "text": "oil no"
+      },
+      {
+        "id": "C",
+        "text": "water held behind a dam yes"
+      },
+      {
+        "id": "D",
+        "text": "wind no"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The image moves farther from the mirror when the object moves closer."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "For every mirror shape, moving the object closer always makes its image closer to the mirror."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The image stays on the mirror surface, so its distance from the mirror remains zero."
+      }
+    ],
+    "enrichment": "When an object is close to a plane mirror, its image also appears close to the mirror; when the object is far from the mirror, its image appears far from the mirror. Changing the object's distance from the plane mirror changes the apparent distance of its image in the same near-or-far direction. The learner correctly applies this rule: When an object is close to a plane mirror, its image also appears close to the mirror; when the object is far from the mirror, its image appears far from the mirror. A plane mirror keeps every image at one fixed distance behind it.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_11/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “geothermal yes” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “oil no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “wind no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Predict how the apparent distance of a plane-mirror image changes when the object moves closer to or farther from the mirror. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
