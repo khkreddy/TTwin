@@ -11,7 +11,7 @@
       "description": "Bare item_uid join key, e.g. 9701_m16_qp_12:q1. Never tm:-prefixed."
     },
     "subject": { "type": "string", "enum": ["chemistry", "biology", "physics", "maths"] },
-    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank"] },
+    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank", "junior_6_8"] },
     "bank": {
       "type": "string",
       "description": "Source extra-bank id when pack is question_bank (k12_graph, jeebench, physics500, phybench, mathnet, aime, scibench, superchem, hicogmath)."
@@ -63,7 +63,7 @@
         },
         "mcq_key": {
           "type": ["string", "null"],
-          "enum": ["A", "B", "C", "D", null]
+          "description": "Single A–D or multi-correct gold such as BC."
         },
         "mark_scheme": {
           "type": ["object", "null"],

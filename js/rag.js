@@ -16,12 +16,17 @@
     iit: "olympiad_iit",
     question_bank: "question_bank",
     bank: "question_bank",
+    junior_6_8: "junior_6_8",
+    junior: "junior_6_8",
+    "6-8": "junior_6_8",
+    "grades 6-8": "junior_6_8",
   };
   const PACK_BAND = {
     igcse_9_10: "SECONDARY",
     senior_11_12_as_a: "SENIOR_SECONDARY",
     olympiad_iit: "olympiad-iit",
     question_bank: "question-bank",
+    junior_6_8: "SECONDARY",
   };
   const CAP = 32;
   const JUNIOR_H007 = "science/grade_10/ch_01/H007";
@@ -311,6 +316,7 @@
         if (a.grain === "lattice_entropy") sel.related_lattice = true;
       }
     }
+    if (/grade\s*[6-8]|grades?\s*6\s*[-–to]+\s*8/.test(low) && !sel.pack) sel.pack = "junior_6_8";
     if (/grade\s*9|igcse|gcse/.test(low) && !sel.pack) sel.pack = "igcse_9_10";
     if (/related lower|junior grain/.test(low)) sel.related_lower_grain = true;
     if (/\bmcq[ _-]?diagrams?\b/.test(low)) sel.item_type = "mcq_diagram";
