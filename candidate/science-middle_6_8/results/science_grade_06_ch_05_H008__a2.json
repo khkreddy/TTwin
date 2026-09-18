@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meena is standing in her school playground. Her teacher asks four students to describe the position of a flag post in the ground.\n\nArun says: \"The flag post is 12 m from the classroom wall.\"\nBhavna says: \"The flag post is 9 m from the gate.\"\nChetan says: \"The flag post is 15 m from the water tap.\"\nDivya says: \"The flag post is 7 m from the neem tree.\"\n\nAll four students measured correctly. Which statement about the reference points is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only one student can be correct, because the flag post can have only one position."
+    },
+    {
+      "id": "B",
+      "text": "All four students are correct, because each distance is measured from a different reference point."
+    },
+    {
+      "id": "C",
+      "text": "The reference point must always be the gate of the school."
+    },
+    {
+      "id": "D",
+      "text": "The flag post itself is the reference point in all four measurements."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each stated distance describes the flag post's position with respect to a different fixed object (wall, gate, tap, tree), and each fixed object serves as that measurement's reference point. Since all four measurements are correct, all four descriptions are valid; only the reference points differ. Option A wrongly assumes one position means one description, C invents a mandatory reference point, and D confuses the object being located with the reference point.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

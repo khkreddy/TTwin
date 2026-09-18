@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m17_qp_22:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:22:42.044Z",
+  "source": {
+    "item_ref": "session:0625_m17_qp_22:q2",
+    "item_type": "single_mcq",
+    "stem": "Four balls with different masses are dropped from the heights shown.\nP Q R S\nAir resistance may be ignored.\nWhich statement about the balls is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ball P has the greatest acceleration."
+      },
+      {
+        "id": "B",
+        "text": "Balls Q and R take the same time to fall to the ground."
+      },
+      {
+        "id": "C",
+        "text": "The acceleration of ball R is half the acceleration of ball P."
+      },
+      {
+        "id": "D",
+        "text": "Ball S has the greatest average speed."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Both observers are correct: the same stationary ball is 5 m and 8 m from the same post."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A chosen point on the ground cannot be a reference point unless an object stands there."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The kilometre stone is the reference point."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "Measure the court-line distances first, then choose the reference point."
+      }
+    ],
+    "enrichment": "When distance is stated with respect to a fixed object or point, that fixed object or point is the reference point; the stated distance describes position with respect to it. chosen reference point -> meaning of the stated position or distance The learner correctly applies this rule: When distance is stated with respect to a fixed object or point, that fixed object or point is the reference point; the stated distance describes position with respect to it. The reference point is the object being located, not the fixed point from which distance is measured.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “Ball P has the greatest acceleration.” looked possible instead of “Ball S has the greatest average speed.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Balls Q and R take the same time to fall to the g…” for the required “Ball S has the greatest average speed.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “The acceleration of ball R is half the accelerati…” for the required “Ball S has the greatest average speed.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Describe a position by naming the reference point used for the distance. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

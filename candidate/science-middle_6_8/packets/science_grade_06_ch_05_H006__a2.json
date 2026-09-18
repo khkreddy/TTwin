@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m17_qp_12:q5",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:22:23.261Z",
+  "source": {
+    "item_ref": "session:0625_m17_qp_12:q5",
+    "item_type": "single_mcq",
+    "stem": "A stone has a weight of 5.7 N.\nThe gravitational field strength g is 10 N / kg.\nWhat is the mass of the stone?",
+    "options": [
+      {
+        "id": "A",
+        "text": "0.57 kg"
+      },
+      {
+        "id": "B",
+        "text": "5.7 kg"
+      },
+      {
+        "id": "C",
+        "text": "57 kg"
+      },
+      {
+        "id": "D",
+        "text": "570 kg"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Cannot measure from the 2 cm mark; it must start at 1 cm."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "2 − 7 = −5 cm"
+      }
+    ],
+    "enrichment": "A scale with a broken end or unclear zero can still be used by placing one end of the object at another clear full mark and using the separation between the readings at the two ends. nonzero starting mark plus endpoint reading -> length found from the difference between readings The learner correctly applies this rule: A scale with a broken end or unclear zero can still be used by placing one end of the object at another clear full mark and using the separation between the readings at the two ends. The far endpoint reading on a scale is always the object length.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student computing 5.7 kg instead of the required 0.57 kg. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student computing 57 kg instead of the required 0.57 kg. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student computing 570 kg instead of the required 0.57 kg. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Find a length when the scale's end is broken or the zero mark is not clear. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

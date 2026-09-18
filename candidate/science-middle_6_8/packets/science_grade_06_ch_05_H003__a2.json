@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m17_qp_12:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:21:53.859Z",
+  "source": {
+    "item_ref": "session:0625_m17_qp_12:q2",
+    "item_type": "single_mcq",
+    "stem": "In a laboratory, a ball is dropped in a vacuum and falls 200 cm.\nWhich statement describes the acceleration of the ball?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It is greater at 10 cm than at 200 cm."
+      },
+      {
+        "id": "B",
+        "text": "It is greatest at 200 cm."
+      },
+      {
+        "id": "C",
+        "text": "It is smaller at 50 cm than at 100 cm."
+      },
+      {
+        "id": "D",
+        "text": "It is the same value at 50 cm as at 150 cm."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "2 m = 2000 cm"
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "1.5 km = 0.0015 m"
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "1.5 km = 15 m"
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "1.5 km = 1.5 m"
+      }
+    ],
+    "enrichment": "Length units are related by fixed conversion factors: 1 km = 1000 m, 1 m = 100 cm, and 1 cm = 10 mm. larger unit to smaller unit -> multiply by the stated conversion factor; smaller unit to larger unit -> divide by the stated conversion factor The learner correctly applies this rule: Length units are related by fixed conversion factors: 1 km = 1000 m, 1 m = 100 cm, and 1 cm = 10 mm. Changing the unit name is enough; the measurement number can stay the same or be guessed.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H003",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “It is greater at 10 cm than at 200 cm.” for the required “It is the same value at 50 cm as at 150 cm.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “It is greatest at 200 cm.” for the required “It is the same value at 50 cm as at 150 cm.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It is smaller at 50 cm than at 100 cm.” for the required “It is the same value at 50 cm as at 150 cm.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Convert a length correctly among kilometre, metre, centimetre, and millimetre. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

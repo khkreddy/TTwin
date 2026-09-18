@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m17_qp_22:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:22:59.535Z",
+  "source": {
+    "item_ref": "session:0625_m17_qp_22:q6",
+    "item_type": "single_mcq",
+    "stem": "A skydiver jumps from a stationary helicopter and reaches a steady vertical speed. She then opens her parachute.\nWhich statement about the falling skydiver is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "As her parachute opens, her acceleration is upwards."
+      },
+      {
+        "id": "B",
+        "text": "As she falls at a steady speed with her parachute open, her weight is zero."
+      },
+      {
+        "id": "C",
+        "text": "When she accelerates, the resultant force on her is zero."
+      },
+      {
+        "id": "D",
+        "text": "When she falls at a steady speed, air resistance is zero."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Linear motion"
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Not linear motion"
+      }
+    ],
+    "enrichment": "When an object moves along a straight line, its motion is called linear motion. straight-line path -> linear motion classification The learner correctly applies this rule: When an object moves along a straight line, its motion is called linear motion. Linear motion means any object moving forward or along something that looks ordinary, regardless of the actual path shape.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H010",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “As she falls at a steady speed with her parachute…” for the required “As her parachute opens, her acceleration is upwar…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “When she accelerates, the resultant force on her…” for the required “As her parachute opens, her acceleration is upwar…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student matching a salient stem word and choosing “When she falls at a steady speed, air resistance…” instead of “As her parachute opens, her acceleration is upwar…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Classify a motion as linear when the object's path is a straight line. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

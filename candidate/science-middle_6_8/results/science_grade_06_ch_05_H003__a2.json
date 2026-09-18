@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera measures the length of her school playground and finds it is 1.5 km.\nHer teacher asks her to write this length in metres.\nWhat is the correct length of the playground in metres?",
+  "options": [
+    {
+      "id": "A",
+      "text": "15 m"
+    },
+    {
+      "id": "B",
+      "text": "150 m"
+    },
+    {
+      "id": "C",
+      "text": "1500 m"
+    },
+    {
+      "id": "D",
+      "text": "0.0015 m"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1 km = 1000 m, so 1.5 km = 1.5 × 1000 = 1500 m. Options A and B reflect under-multiplying by the factor 1000; option D reflects wrongly dividing by 1000 (treating a larger-to-smaller conversion as smaller-to-larger).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

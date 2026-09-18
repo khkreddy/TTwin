@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:21:21.962Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q1",
+    "item_type": "single_mcq",
+    "stem": "The diameter of a copper wire is thought to be approximately 0.3 mm.\nWhich instrument should be used to obtain a more accurate measurement of the diameter of the wire?",
+    "options": [
+      {
+        "id": "A",
+        "text": "measuring tape"
+      },
+      {
+        "id": "B",
+        "text": "metre rule"
+      },
+      {
+        "id": "C",
+        "text": "micrometer"
+      },
+      {
+        "id": "D",
+        "text": "ruler"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Magnets and magnetic materials",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A plastic paper clip moves toward the magnet through glass."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Any sheet, including a thick steel sheet, leaves the compass deflection unchanged."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Cardboard stops the compass deflection, but clear glass does not."
+      }
+    ],
+    "enrichment": "A magnet can move some objects without touching them. Sheets of wood, cardboard, plastic, or glass placed between a magnet and a compass needle do not cause any appreciable change in the needle's deflection. a magnetic effect can act across a gap and through listed non-magnetic sheets The learner predicts that wood, cardboard, thin plastic, and glass do not stop the magnetic effect on a compass needle or steel object in the described tests. A magnet works only when it touches the object, and any sheet in between blocks the pull.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_04/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “measuring tape” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “metre rule” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “ruler” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Exploring magnets. The student must decide: Predict whether a common sheet placed between a magnet and a compass needle or steel object will stop the magnetic effect. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

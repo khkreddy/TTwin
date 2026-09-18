@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:21:37.369Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q4",
+    "item_type": "single_mcq",
+    "stem": "A concrete post is carried up a very high mountain. At the top of the mountain, the gravitational field is slightly weaker than at the bottom.\nWhat is the effect of this weaker field on the mass and on the weight of the post at the top of the mountain?",
+    "options": [
+      {
+        "id": "A",
+        "text": "is / less / is / less"
+      },
+      {
+        "id": "B",
+        "text": "is / less / is / unchanged"
+      },
+      {
+        "id": "C",
+        "text": "is / unchanged / is / less"
+      },
+      {
+        "id": "D",
+        "text": "is / unchanged / is / unchanged"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"\",\"\",\"\"],\"rows\":[[\"is\",\"less\",\"is\",\"less\"],[\"is\",\"less\",\"is\",\"unchanged\"],[\"is\",\"unchanged\",\"is\",\"less\"],[\"is\",\"unchanged\",\"is\",\"unchanged\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Different handspan sizes must give different counts, whatever the lengths of the tables."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The student with the larger handspan will count more handspans."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Their centimetre measurements differ because a centimetre is a different length for each student."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The taller student will count fewer handspans, even if their handspans are the same size."
+      }
+    ],
+    "enrichment": "A measurement number depends on the length of the unit used. Body-part units such as handspan, hand, foot, fist, or fingers differ from person to person, so the same length can be expressed by different counts. different body-part unit lengths -> different counts for the same object length The learner correctly applies this rule: A measurement number depends on the length of the unit used. Body-part units such as handspan, hand, foot, fist, or fingers differ from person to person, so the same length can be expressed by different counts. A bigger measurement number means the object itself is longer, even when different handspans were used.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H001",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “less” looked possible instead of “unchanged”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Decide why the same table measured in handspans can give different numbers for different students. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
