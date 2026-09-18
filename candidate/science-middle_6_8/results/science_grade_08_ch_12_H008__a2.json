@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Riya draws this feeding diagram for a school garden in her science notebook. In it, grass is eaten by both a grasshopper and a rabbit; the grasshopper is eaten by a frog and a sparrow; the frog is eaten by a snake; the rabbit is eaten by a fox; and the sparrow and the snake are both eaten by an eagle.\n\nWhat should Riya call this diagram?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A food chain, because it starts with grass, which is a producer"
+    },
+    {
+      "id": "B",
+      "text": "A food web, because the organisms are connected through many interlinked feeding paths"
+    },
+    {
+      "id": "C",
+      "text": "A food chain, because the arrows show the flow of energy in one direction"
+    },
+    {
+      "id": "D",
+      "text": "A food web, because it contains more than three organisms"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[->,>=latex,scale=0.95,every node/.style={font=\\small}]\n\\node (grass) at (0,0) {Grass};\n\\node (ghop) at (3,1.2) {Grasshopper};\n\\node (rabbit) at (3,-1.2) {Rabbit};\n\\node (frog) at (6,2.0) {Frog};\n\\node (sparrow) at (6,0.4) {Sparrow};\n\\node (fox) at (6,-1.2) {Fox};\n\\node (snake) at (9,2.0) {Snake};\n\\node (eagle) at (9,0.4) {Eagle};\n\\draw (grass) -- (ghop);\n\\draw (grass) -- (rabbit);\n\\draw (ghop) -- (frog);\n\\draw (ghop) -- (sparrow);\n\\draw (frog) -- (snake);\n\\draw (rabbit) -- (fox);\n\\draw (snake) -- (eagle);\n\\draw (sparrow) -- (eagle);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The diagram shows grass eaten by two consumers and the grasshopper eaten by two consumers, so feeding paths branch and interlink; by the taught rule, many interlinked feeding paths make a food web, not a single linear food chain. Distractor A wrongly uses 'starts with a producer', C wrongly uses 'arrows show one-way energy flow' (true of webs too), and D wrongly uses a mere organism count instead of the interlinking test. Key B.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Diagram added per spec: directed feeding graph (grass -> grasshopper/rabbit; grasshopper -> frog/sparrow; frog -> snake; rabbit -> fox; snake and sparrow -> eagle). Stem refers to this figure."
+  }
+}

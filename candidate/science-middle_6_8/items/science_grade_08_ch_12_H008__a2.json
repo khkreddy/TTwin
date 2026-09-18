@@ -1,0 +1,55 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0610_m15_qp_12:q21",
+  "target_unit_id": "science/grade_08/ch_12/H008",
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H008:a2",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H008",
+    "stem": "Riya draws this feeding diagram for a school garden in her science notebook. In it, grass is eaten by both a grasshopper and a rabbit; the grasshopper is eaten by a frog and a sparrow; the frog is eaten by a snake; the rabbit is eaten by a fox; and the sparrow and the snake are both eaten by an eagle.\n\nWhat should Riya call this diagram?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A food chain, because it starts with grass, which is a producer",
+      "B": "A food web, because the organisms are connected through many interlinked feeding paths",
+      "C": "A food chain, because the arrows show the flow of energy in one direction",
+      "D": "A food web, because it contains more than three organisms"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[->,>=latex,scale=0.95,every node/.style={font=\\small}]\n\\node (grass) at (0,0) {Grass};\n\\node (ghop) at (3,1.2) {Grasshopper};\n\\node (rabbit) at (3,-1.2) {Rabbit};\n\\node (frog) at (6,2.0) {Frog};\n\\node (sparrow) at (6,0.4) {Sparrow};\n\\node (fox) at (6,-1.2) {Fox};\n\\node (snake) at (9,2.0) {Snake};\n\\node (eagle) at (9,0.4) {Eagle};\n\\draw (grass) -- (ghop);\n\\draw (grass) -- (rabbit);\n\\draw (ghop) -- (frog);\n\\draw (ghop) -- (sparrow);\n\\draw (frog) -- (snake);\n\\draw (rabbit) -- (fox);\n\\draw (snake) -- (eagle);\n\\draw (sparrow) -- (eagle);\n\\end{tikzpicture}",
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "mark_scheme": null
+    }
+  }
+}
