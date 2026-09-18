@@ -148,6 +148,39 @@
   function marksHTML(m) {
     return (typeof m === "number") ? " <span class='marks'>[" + m + "]</span>" : "";
   }
+  function leadInStem(it) {
+    let stem = String(it.stem || it.stem_lead || "");
+    const parts = it.parts || [];
+    if (!stem || !parts.length) return stem;
+    let first = null;
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i];
+      if (!p || typeof p !== "object") continue;
+      if (!first) first = p;
+      if (String(p.id || "").trim()) { first = p; break; }
+    }
+    if (!first) return stem;
+    const pid = String(first.id || "").trim();
+    let cut = -1;
+    if (pid) {
+      const re = new RegExp(
+        "(?:^|\\n)(?:[ \\t]*\\d+[ \\t]+)?[ \\t]*\\(" +
+          pid.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
+          "\\)(?:[ \\t\\n]|\\(|$)",
+        "i"
+      );
+      const m = re.exec(stem);
+      if (m) cut = m.index;
+    }
+    let key = String(first.stem || "").trim().split("\n")[0].trim();
+    key = key.replace(/^\([a-z0-9ivx]+\)\s*/i, "");
+    if (key.length >= 24) {
+      const idx = stem.indexOf(key.slice(0, 80));
+      if (idx > 0 && (cut < 0 || idx < cut)) cut = idx;
+    }
+    if (cut < 0) return stem;
+    return stem.slice(0, cut).replace(/\s+$/, "");
+  }
   function partsHTML(it) {
     const parts = it.parts || [];
     if (!parts.length) return "";
@@ -254,7 +287,12 @@
       (opts.showUid === false ? "" : "<span class='uid'>" + esc(uid) + "</span>") +
       (it.modified && opts.showUid !== false ? " <span class='tag'>modified</span>" : "") +
       "</div>" +
-      "<p class='stem'>" + chem(it.stem || it.stem_lead || "(no stem — tagged only)") + "</p>" +
+      (function () {
+        const lead = leadInStem(it);
+        if (lead) return "<p class='stem'>" + chem(lead) + "</p>";
+        if ((it.parts || []).length) return "";
+        return "<p class='stem'>" + chem("(no stem — tagged only)") + "</p>";
+      })() +
       eqs + stemTables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
       partsHTML(it) +
       optTableHtml + optionsHTML(it, optOpts) +

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -52,6 +53,23 @@ def _first_matching(path: Path, pred, limit: int = 1) -> list:
     return out
 
 
+def _assert_stem_is_lead_in(packed: dict, uid: str) -> None:
+    parts = packed.get("parts") or []
+    assert parts, uid
+    stem = packed.get("stem") or ""
+    pid = str((parts[0] or {}).get("id") or "").strip()
+    if pid:
+        lab = re.compile(
+            r"(?:^|\n)(?:[ \t]*\d+[ \t]+)?[ \t]*\(" + re.escape(pid) + r"\)(?:[ \t\n]|\(|$)",
+            re.I,
+        )
+        assert not lab.search(stem), (uid, "stem still has part label", stem[:240])
+    body = str((parts[0] or {}).get("stem") or "").strip().split("\n", 1)[0].strip()
+    body = re.sub(r"^\([a-z0-9ivx]+\)\s*", "", body, flags=re.I)
+    if len(body) >= 24:
+        assert body[:24].lower() not in stem.lower(), (uid, body[:24], stem[:200])
+
+
 def _tikz_ok(o: dict) -> bool:
     fig = o.get("figure") if isinstance(o.get("figure"), dict) else {}
     tj = fig.get("tikz") if isinstance(fig.get("tikz"), dict) else {}
@@ -85,6 +103,7 @@ def test_pack_chemistry_structured_table():
         assert packed["parts"][0].get("marks") == src_parts[0].get("marks")
     if any((p.get("subparts") or []) for p in src_parts if isinstance(p, dict)):
         assert any(p.get("subparts") for p in packed["parts"])
+    _assert_stem_is_lead_in(packed, src.get("item_uid"))
     print("chem_structured_table", src.get("item_uid"), "parts", len(packed["parts"]), "tables", len(packed["tables"]))
 
 
@@ -104,7 +123,8 @@ def test_pack_physics_structured_tikz():
     assert packed.get("tikz"), src.get("item_uid")
     assert "\\begin{tikzpicture}" in packed["tikz"] or "\\begin{circuitikz}" in packed["tikz"]
     assert packed.get("parts")
-    print("phy_structured_tikz", src.get("item_uid"), "tikz_len", len(packed["tikz"]))
+    _assert_stem_is_lead_in(packed, src.get("item_uid"))
+    print("phy_structured_tikz", src.get("item_uid"), "tikz_len", len(packed["tikz"]), "stem_has_a", "(a)" in (packed.get("stem") or ""))
 
 
 def test_pack_free_response_becomes_open_response():
@@ -150,7 +170,33 @@ def test_repack_flattened_maths_structured_uid():
     assert packed.get("parts"), packed_uid
     src_parts = [p for p in (src.get("parts") or []) if isinstance(p, dict)]
     assert len(packed["parts"]) == len(src_parts)
+    _assert_stem_is_lead_in(packed, packed_uid)
+    named = _load_uids(CORPUS, {"0625_s14_qp_52:q3"})
+    phy = named.get("0625_s14_qp_52:q3")
+    assert phy, "0625_s14_qp_52:q3 missing from corpus"
+    phy_packed = project_exam_item(phy)
+    assert phy_packed and phy_packed.get("parts")
+    _assert_stem_is_lead_in(phy_packed, "0625_s14_qp_52:q3")
     print("maths_flattened", packed_uid, "parts", len(packed["parts"]))
+    print("phy_named", "0625_s14_qp_52:q3", "stem_lead_in", phy_packed.get("stem", "")[:80])
+
+
+def test_shipped_written_stems_are_lead_in():
+    want = {"0580_m16_qp_12:q19", "0625_s14_qp_52:q3", "0625_m15_qp_22:q1"}
+    found = {}
+    for path in sorted(TTWIN_Q.glob("*.json")):
+        for it in json.loads(path.read_text(encoding="utf-8")):
+            if it.get("uid") in want:
+                found[it["uid"]] = it
+                if len(found) == len(want):
+                    break
+        if len(found) == len(want):
+            break
+    missing = want - set(found)
+    assert not missing, missing
+    for uid, it in found.items():
+        _assert_stem_is_lead_in(it, uid)
+        print("shipped_lead_in", uid)
 
 
 if __name__ == "__main__":
@@ -159,4 +205,5 @@ if __name__ == "__main__":
     test_pack_physics_structured_tikz()
     test_pack_free_response_becomes_open_response()
     test_repack_flattened_maths_structured_uid()
+    test_shipped_written_stems_are_lead_in()
     print("pack_layout_ok")

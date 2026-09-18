@@ -130,6 +130,51 @@ def slim_parts(parts) -> list[dict]:
     return out
 
 
+def _first_written_part(parts) -> dict | None:
+    first = None
+    for p in parts or []:
+        if not isinstance(p, dict):
+            continue
+        if first is None:
+            first = p
+        if str(p.get("id") or "").strip():
+            return p
+    return first
+
+
+def stem_before_parts(stem: str, parts) -> str:
+    """Keep the lead-in only. Packed parts render the (a)/(b) body."""
+    text = str(stem or "")
+    if not text or not parts:
+        return text.strip()
+    first = _first_written_part(parts)
+    if not first:
+        return text.strip()
+    cuts: list[int] = []
+    pid = str(first.get("id") or "").strip()
+    if pid:
+        pat = re.compile(
+            r"(?:^|\n)(?:[ \t]*\d+[ \t]+)?[ \t]*\(" + re.escape(pid) + r"\)(?:[ \t\n]|\(|$)",
+            re.I,
+        )
+        m = pat.search(text)
+        if m:
+            cuts.append(m.start())
+    body = str(first.get("stem") or "").strip()
+    body = re.sub(r"^\([a-z0-9ivx]+\)\s*", "", body, flags=re.I)
+    key = body.split("\n", 1)[0].strip()
+    if len(key) >= 24:
+        idx = text.find(key[:80])
+        if idx > 0:
+            cuts.append(idx)
+    if not cuts:
+        return text.strip()
+    cut = min(cuts)
+    lead = text[:cut].strip()
+    lead = re.sub(r"\n\[Total:[^\]]*\]\s*$", "", lead, flags=re.I).strip()
+    return lead
+
+
 def parts_have_text(parts) -> bool:
     for p in parts or []:
         if not isinstance(p, dict):
@@ -247,7 +292,7 @@ def project_exam_item(o: dict) -> dict | None:
     lead = str(o.get("stem_lead") or "").strip()
     complete = str(o.get("complete_stem") or "").strip()
     if itype in WRITTEN_TYPES:
-        stem = lead or complete
+        stem = stem_before_parts(lead or complete, parts)
     else:
         stem = complete or lead
     rec = {
@@ -283,9 +328,9 @@ def project_exam_item(o: dict) -> dict | None:
     if itype in WRITTEN_TYPES and parts:
         rec["parts"] = parts
         rec["item_type"] = itype
-        if lead:
-            rec["stem_lead"] = lead
-            rec["stem"] = rec.get("stem") or lead
+        lead_in = stem_before_parts(rec.get("stem") or rec.get("stem_lead") or stem, parts)
+        rec["stem"] = lead_in
+        rec["stem_lead"] = lead_in
     return rec
 
 

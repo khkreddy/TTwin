@@ -22,7 +22,7 @@ if (!TTwinPaper || typeof TTwinPaper.itemHTML !== "function") {
 const structured = {
   uid: "demo-struct",
   item_type: "structured",
-  stem: "Some properties of the halogens are shown in the table.",
+  stem: "Some properties of the halogens are shown in the table.\n(a) Complete the table.\n[2]\n(b) Explain the trend.\n[4]",
   parts: [
     { id: "a", stem: "Complete the table.", marks: 2, subparts: [] },
     {
@@ -54,4 +54,11 @@ if (!html.includes("<table")) {
 }
 const smashedOnly = html.includes("Complete the table.") && !html.includes("class='parts'");
 if (smashedOnly) throw new Error("stem-only flatten");
+const stemP = html.match(/<p class='stem'>[\s\S]*?<\/p>/);
+if (stemP && /\(a\)/.test(stemP[0])) {
+  throw new Error("stem paragraph still reprints part labels: " + stemP[0]);
+}
+if ((html.match(/Complete the table\./g) || []).length !== 1) {
+  throw new Error("part body reprinted outside parts");
+}
 console.log("paper_parts_ok", html.includes("tikz-slot"), html.includes("(a)"));
