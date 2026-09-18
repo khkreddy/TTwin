@@ -1,0 +1,53 @@
+{
+  "protocol": "mx_derivation_v2",
+  "registered_before_run": true,
+  "scope": "NCERT combined science grades 6-8 (391 hinges)",
+  "purpose": "Halt the 391-hinge author if a registered expected-NA is admitted. expect_admit is directional, not a quota.",
+  "canaries": [
+    {
+      "unit_id": "science/grade_06/ch_01/H001",
+      "shape": "epistemic",
+      "why": "What counts as science. Single classification/model-epistemic act; no taught multi-step procedure.",
+      "expect_na": ["operation_confusion"],
+      "expect_admit": []
+    },
+    {
+      "unit_id": "science/grade_06/ch_02/H001",
+      "shape": "classificatory",
+      "why": "Biodiversity of a region. Two-class/region inventory, not a procedure.",
+      "expect_na": ["operation_confusion"],
+      "expect_admit": []
+    },
+    {
+      "unit_id": "science/grade_08/ch_08/H001",
+      "shape": "classificatory",
+      "why": "Mixture vs substances that keep their properties. Label swap is term_substitution; no multi-step procedure.",
+      "expect_na": ["operation_confusion"],
+      "expect_admit": [],
+      "note": "r1 NA'd term_substitution after CWO-too-short gate. OC-NA stands. Do not require TS."
+    },
+    {
+      "unit_id": "science/grade_07/ch_07/H001",
+      "shape": "directed_relational",
+      "why": "Conduction: heat along a solid from hot end to colder parts. Pole swap (cold to hot) is relationship_reversal.",
+      "expect_na": [],
+      "expect_admit": ["relationship_reversal"]
+    },
+    {
+      "unit_id": "science/grade_07/ch_03/H001",
+      "shape": "directed_relational",
+      "why": "Cell terminals: metal cap positive, disc negative. Swapping poles is relationship_reversal.",
+      "expect_na": ["operation_confusion"],
+      "expect_admit": ["term_substitution"],
+      "note": "Cap/disc polarity swap is term_substitution. Author correctly NA'd RR as duplicate of that label swap, not a causal inversion."
+    },
+    {
+      "unit_id": "science/grade_06/ch_04/H001",
+      "shape": "test_criterion",
+      "why": "Magnetic vs non-magnetic by attraction. Surface (looks like iron / shiny) replacing the attraction test is surface_feature_capture.",
+      "expect_na": ["operation_confusion"],
+      "expect_admit": ["relationship_reversal"],
+      "note": "Attraction→magnetic class is a directed map; pole swap admitted as RR. SFC NA'd as duplicate prediction of scope_error."
+    }
+  ]
+}
