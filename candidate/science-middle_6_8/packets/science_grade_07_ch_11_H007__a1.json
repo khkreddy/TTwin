@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q8",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:11:15.962Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q8",
+    "item_type": "single_mcq",
+    "stem": "A helicopter takes off from the ground and rises vertically. It then hovers at a constant height above the ground.\nWhich sequence of energy changes takes place during the gain in height?",
+    "options": [
+      {
+        "id": "A",
+        "text": "chemical → gravitational potential → kinetic"
+      },
+      {
+        "id": "B",
+        "text": "chemical → kinetic → gravitational potential"
+      },
+      {
+        "id": "C",
+        "text": "gravitational potential → chemical → kinetic"
+      },
+      {
+        "id": "D",
+        "text": "kinetic → chemical → gravitational potential"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Every mirror forms an upright image of the same size as the object."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The image is smaller than the object."
+      }
+    ],
+    "enrichment": "A plane mirror forms an image that appears behind the mirror, is the same size as the object, is not upside down, and cannot be obtained on a screen. Reflection from a plane mirror makes an image appear in the mirror; that image keeps the object's size and uprightness but is not a screen image. The learner correctly applies this rule: A plane mirror forms an image that appears behind the mirror, is the same size as the object, is not upside down, and cannot be obtained on a screen. A mirror image is a picture on the mirror surface that can be caught on paper.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_11/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “kinetic”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “kinetic” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Predict the basic properties of an image formed by a plane mirror. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
