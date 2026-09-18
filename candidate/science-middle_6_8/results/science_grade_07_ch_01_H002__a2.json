@@ -2,48 +2,33 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "three_statement",
-  "stem": "Meera's class in Jaipur is discussing how science should really be learned. Her teacher says that science goes beyond the pages of the textbook.\n\nWhich of the following activities show learning science by observing, doing, and experimenting with the world around you?\n\n1  Rohan reads the chapter on plants twice and memorises every definition without looking at a single real plant.\n2  Asha observes the tulsi plant in her courtyard every morning and notes how its leaves turn towards sunlight.\n3  Kabir copies the diagram of a water filter from the book neatly into his notebook without trying it out.\n4  Priya mixes lemon juice with baking soda in her kitchen to see whether bubbles of gas are produced.",
+  "item_type": "option_table",
+  "stem": "Meena has read the chapter on magnets in her science book and can repeat every definition. At home in Jaipur, her grandmother asks her, \"Have you really learnt the science?\"\n\nWhich statement best shows that learning science goes beyond reading the book?",
   "options": [
     {
       "id": "A",
-      "text": "1 only"
+      "text": "Meena has learnt the science because she can name all the magnetic materials from the book"
     },
     {
       "id": "B",
-      "text": "2 and 3"
+      "text": "Meena should watch her brother do the magnet activity so she can describe it in the test"
     },
     {
       "id": "C",
-      "text": "2 and 4"
+      "text": "Meena should test which spoons, pins and coins in the kitchen stick to a magnet and record what she observes"
     },
     {
       "id": "D",
-      "text": "3 and 4"
+      "text": "Meena should read the chapter once more until she memorises it fully"
     }
   ],
-  "statements": [
-    {
-      "id": "1",
-      "text": "Rohan reads the chapter on plants twice and memorises every definition without looking at a single real plant."
-    },
-    {
-      "id": "2",
-      "text": "Asha observes the tulsi plant in her courtyard every morning and notes how its leaves turn towards sunlight."
-    },
-    {
-      "id": "3",
-      "text": "Kabir copies the diagram of a water filter from the book neatly into his notebook without trying it out."
-    },
-    {
-      "id": "4",
-      "text": "Priya mixes lemon juice with baking soda in her kitchen to see whether bubbles of gas are produced."
-    }
-  ],
+  "statements": [],
   "parts": [],
   "equations": [],
-  "tables": [],
-  "tikz": null,
+  "tables": [
+    "{\"headers\":[\"Meena's plan\",\"What it shows\",\"Does it go beyond the book?\"],\"rows\":[[\"naming magnetic materials from memory\",\"recall of book content\",\"no\"],[\"watching someone else's activity\",\"second-hand description\",\"no\"],[\"testing kitchen objects with a magnet and recording observations\",\"observing and experimenting herself\",\"yes\"],[\"re-reading the chapter to memorise it\",\"repetition of book content\",\"no\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": "",
   "answer": {
     "kind": "single_letter",
     "letter": "C",
@@ -51,7 +36,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Only statements 2 and 4 involve learning science through observation and hands-on experimenting; statements 1 and 3 stay inside the book. Hence the correct set is 2 and 4, option C. Option A is the trap for a learner who counts statement 1 (pure reading/memorising) as genuine science learning, which the keyed set rejects.",
+    "key_rationale": "The chapter's claim is that science learning extends beyond reading into observing, doing activities and experimenting. Only option C has Meena herself experimenting and recording observations; A and D are pure book recall (condition-dropping traps), and B substitutes passive watching for doing.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],

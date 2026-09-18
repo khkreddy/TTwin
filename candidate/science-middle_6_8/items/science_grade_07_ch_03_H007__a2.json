@@ -1,0 +1,55 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m16_qp_22:q29",
+  "target_unit_id": "science/grade_07/ch_03/H007",
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H007:a2",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H007",
+    "stem": "Meera is making a torch circuit for her school science project in Jaipur. The figure shows the actual circuit she has connected on her table: one cell, a closed switch and one bulb, joined in a single loop with wires.\n\nWhich circuit diagram correctly represents Meera's circuit?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A cell and a bulb in series, with no switch shown.",
+      "B": "A cell, a closed switch and a bulb, all in series in one loop.",
+      "C": "A cell with the switch and the bulb connected in parallel branches.",
+      "D": "Two cells and a bulb in series, with the switch left open."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[circuit ee IEC, thick]\n\\draw (0,0) to [battery={info={cell}}] (0,2.5)\n      to [make switch={info={switch}}] (3,2.5)\n      to [bulb={info={bulb}}] (6,2.5)\n      -- (6,0) -- (0,0);\n\\end{tikzpicture}",
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q8",
+  "target_unit_id": "science/grade_07/ch_03/H001",
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H001:a2",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H001",
+    "stem": "Meera fixes a small torch bulb to an electric cell using two wires, as shown in the figure. The bulb lights up.\n\nWhich statement about the cell is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The metal disc is the positive terminal and the metal cap is the negative terminal; the cell supplies electrical energy to the circuit.",
+      "B": "The metal cap is the positive terminal and the metal disc is the negative terminal; the cell supplies electrical energy to the circuit.",
+      "C": "Either end of the cell can be the positive terminal; the shape of the cap and disc does not matter.",
+      "D": "The metal cap is the positive terminal, but the cell cannot supply energy unless two cells are joined together."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{circuitikz}[scale=1.0]\n\\draw (0,0) to[battery1, l_=cell] (0,2);\n\\draw (0,2) -- (2,2);\n\\draw (2,2) to[lamp, l_=bulb] (2,0);\n\\draw (2,0) -- (0,0);\n\\node at (-1.6,2.4) {metal cap};\n\\node at (-1.7,-0.4) {metal disc};\n\\end{circuitikz}",
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "mark_scheme": null
+    }
+  }
+}

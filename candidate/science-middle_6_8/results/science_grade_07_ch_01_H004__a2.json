@@ -2,43 +2,56 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "options_are_figure",
-  "stem": "Meera's teacher writes an answer on the board: \"Because the water in the clay pot evaporates and takes heat away.\" She asks the class to come up with a question for which this would be the answer. Which student has formed a valid scientific question by imagining a curious situation, instead of just asking the most obvious matching question?",
+  "item_type": "three_statement",
+  "stem": "Meera's science teacher writes an answer on the board: \"The wet clothes on the balcony dried faster on a windy day.\"\n\nThe teacher says a good scientific question is curious and creative, and does not have to be the most obvious question that matches the answer.\n\nWhich of the following are valid scientific questions that Meera could invent so that the teacher's answer makes sense?\n\n1  \"Why do teachers give homework every day?\"\n2  \"Do wet clothes dry faster on a windy day or on a still day?\"\n3  \"The clothes dried quickly, so no question needs to be asked.\"\n4  \"Does the type of cloth change how fast it dries in the wind?\"",
   "options": [
     {
       "id": "A",
-      "text": "Rohan asks: \"What does the word evaporation mean in our textbook?\"",
-      "sort": null
+      "text": "1 only"
     },
     {
       "id": "B",
-      "text": "Sunita asks: \"Why does water kept in a clay pot stay cooler than water in a steel vessel on a hot day in Jaipur?\"",
-      "sort": null
+      "text": "2 and 3"
     },
     {
       "id": "C",
-      "text": "Arjun asks: \"Who first discovered that water can evaporate?\"",
-      "sort": null
+      "text": "2 and 4"
     },
     {
       "id": "D",
-      "text": "Farhan asks: \"Is evaporation a good topic for our science project?\"",
-      "sort": null
+      "text": "3 and 4"
     }
   ],
-  "statements": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "\"Why do teachers give homework every day?\""
+    },
+    {
+      "id": "2",
+      "text": "\"Do wet clothes dry faster on a windy day or on a still day?\""
+    },
+    {
+      "id": "3",
+      "text": "\"The clothes dried quickly, so no question needs to be asked.\""
+    },
+    {
+      "id": "4",
+      "text": "\"Does the type of cloth change how fast it dries in the wind?\""
+    }
+  ],
   "parts": [],
   "equations": [],
   "tables": [],
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
+    "letter": "C",
     "letters": null
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Only option B invents a curious, observable situation (clay pot vs steel vessel on a hot day) for which the given answer about evaporation removing heat is a sensible scientific explanation; it can be tested. Options A, C and D are a definition lookup, a history fact, and an opinion, none of which the given answer explains.",
+    "key_rationale": "Statements 2 and 4 are curious, testable scientific questions for which the given answer (clothes dried faster on a windy day) is sensible. Statement 1 is unrelated to the answer, and statement 3 asserts that no question is needed, which contradicts the task of inventing a question. Hence 2 and 4, key C.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],

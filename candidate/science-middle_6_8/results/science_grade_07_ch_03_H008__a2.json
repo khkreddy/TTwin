@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meena connects the circuit shown in the figure using a cell and a small lamp. She wants the lamp to glow.\n\nWhich object should she connect between the two free wire ends at P and Q so that the lamp glows?",
+  "options": [
+    {
+      "id": "A",
+      "text": "a rubber eraser"
+    },
+    {
+      "id": "B",
+      "text": "an iron nail"
+    },
+    {
+      "id": "C",
+      "text": "a plastic scale"
+    },
+    {
+      "id": "D",
+      "text": "a piece of dry chalk"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{circuitikz}\n\\draw (0,0) to[battery1] (0,2);\n\\draw (0,2) -- (2,2) to[lamp] (4,2);\n\\draw (4,2) -- (5,2) -- (5,1);\n\\draw (0,0) -- (5,0) -- (5,0.4);\n\\draw (5,0.4) -- (5,0.8);\n\\fill (5,0.8) circle (1.5pt) node[above right]{P};\n\\fill (5,1) circle (1.5pt) node[below right]{Q};\n\\end{circuitikz}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only an iron nail is a metal conductor; it completes the circuit so current flows and the lamp glows. Rubber, plastic and dry chalk are insulators and block the current.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Simple circuit with cell, lamp and gap labelled P and Q for the test object."
+  }
+}

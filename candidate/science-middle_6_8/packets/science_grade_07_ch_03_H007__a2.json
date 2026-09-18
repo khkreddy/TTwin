@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:48:50.862Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q29",
+    "item_type": "single_mcq",
+    "stem": "The table describes four different resistance wires. They are all made from the same metal.\nWhich wire has the smallest resistance?",
+    "options": [
+      {
+        "id": "A",
+        "text": "length of diameter of wire / m 2.0; wire / mm 1.0"
+      },
+      {
+        "id": "B",
+        "text": "length of diameter of wire / m 2.0; wire / mm 1.5"
+      },
+      {
+        "id": "C",
+        "text": "length of diameter of wire / m 3.0; wire / mm 1.0"
+      },
+      {
+        "id": "D",
+        "text": "length of diameter of wire / m 3.0; wire / mm 1.5"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"length of diameter of wire / m\",\"wire / mm\"],\"rows\":[[\"2.0\",\"1.0\"],[\"2.0\",\"1.5\"],[\"3.0\",\"1.0\"],[\"3.0\",\"1.5\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "LED: a circle with a cross inside."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Cell with two parallel lamp branches."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "For rightward current, the LED triangle points left."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The diagram is incorrect because the lamp is on the opposite side, even though its connections match."
+      }
+    ],
+    "enrichment": "Electrical components can be represented by standard symbols, and a circuit diagram is a representation of an electrical circuit using those symbols. component recognition + symbol choice + terminal orientation -> readable circuit diagram The learner correctly applies this rule: Electrical components can be represented by standard symbols, and a circuit diagram is a representation of an electrical circuit using those symbols. A circuit diagram is any neat picture of the parts, so exact symbols and terminal orientation are optional.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_03/H007",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “mm 1.0” looked possible instead of “mm 1.5”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “mm 1.0” looked possible instead of “mm 1.5”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “m 3.0” looked possible instead of “m 2.0”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Electricity: circuits and cells. The student must decide: Decide how to translate an actual circuit into a circuit diagram. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "add",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,55 +1,40 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_w17_qp_21:q35",
+  "packet_id": "session:0620_s22_qp_11:q40",
   "slot": "T-MOD",
-  "created_at": "2026-09-18T20:44:35.837Z",
+  "created_at": "2026-09-18T20:47:08.935Z",
   "source": {
-    "item_ref": "session:0620_w17_qp_21:q35",
-    "item_type": "three_statement",
-    "stem": "The structures of some organic molecules are shown.\n\nWhich structures represent an alkane with four carbon atoms?\n\n1  CH₃CH=CHCH₃, displayed with each C=C carbon bonded to H and CH₃.\n2  CH₃CH₂CH₂CH₃, displayed as a four-carbon alkane.\n3  CH₃CH₂CH₃, displayed as a three-carbon alkane.\n4  CH₃CH₂CH₂CH₃, displayed as a four-carbon alkane.",
+    "item_ref": "session:0620_s22_qp_11:q40",
+    "item_type": "option_table",
+    "stem": "Many molecules of J join together in reaction R to form a long chain molecule K.\n\nK is the only product.\n\nWhich row describes molecule J, reaction R and molecule K?",
     "options": [
       {
         "id": "A",
-        "text": "1 only"
+        "text": "molecule J: polymer; reaction R: addition; molecule K: monomer"
       },
       {
         "id": "B",
-        "text": "2 and 3"
+        "text": "molecule J: monomer; reaction R: addition; molecule K: polymer"
       },
       {
         "id": "C",
-        "text": "2 and 4"
+        "text": "molecule J: polymer; reaction R: cracking; molecule K: monomer"
       },
       {
         "id": "D",
-        "text": "3 and 4"
+        "text": "molecule J: monomer; reaction R: cracking; molecule K: polymer"
       }
     ],
-    "statements": [
-      {
-        "id": "1",
-        "text": "CH₃CH=CHCH₃, displayed with each C=C carbon bonded to H and CH₃."
-      },
-      {
-        "id": "2",
-        "text": "CH₃CH₂CH₂CH₃, displayed as a four-carbon alkane."
-      },
-      {
-        "id": "3",
-        "text": "CH₃CH₂CH₃, displayed as a three-carbon alkane."
-      },
-      {
-        "id": "4",
-        "text": "CH₃CH₂CH₂CH₃, displayed as a four-carbon alkane."
-      }
-    ],
+    "statements": [],
     "parts": [],
     "equations": [],
-    "tables": [],
+    "tables": [
+      "{\"headers\":[\"molecule J\",\"reaction R\",\"molecule K\"],\"rows\":[[\"polymer\",\"addition\",\"monomer\"],[\"monomer\",\"addition\",\"polymer\"],[\"polymer\",\"cracking\",\"monomer\"],[\"monomer\",\"cracking\",\"polymer\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
     "tikz": "",
     "key": {
       "kind": "single_letter",
-      "letter": "C"
+      "letter": "B"
     }
   },
   "intelligence": {
@@ -78,17 +63,17 @@
     "lbs_recipe": {
       "unit": "science/grade_07/ch_01/H002",
       "gate_names": [
-        "scope_error",
-        "scope_error",
-        "scope_error"
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
       ],
       "hint_skeleton": "",
       "retry_plan": "retry original unaided"
     },
     "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student including statement 1 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option B remains the trap for a student including statement 3 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student including statement 3 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “molecule K: monomer” looked possible instead of “molecule K: polymer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “molecule K: monomer” looked possible instead of “molecule K: polymer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “reaction R: cracking” looked possible instead of “reaction R: addition”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
     ]
   },
   "spec": {

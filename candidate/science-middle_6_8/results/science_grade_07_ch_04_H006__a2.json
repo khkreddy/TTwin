@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera uses the circuit tester shown in the figure to test four materials found in her home. She clips the two free ends of the tester to each material in turn and watches the bulb.\n\nShe tests: a steel spoon, a dry wooden ruler, an iron nail, and a rubber slipper strap. For two of these materials the bulb glows.\n\nLater, Meera's mother asks her to touch a switch with wet hands. Meera refuses, saying water can conduct electricity.\n\nWhich statement correctly explains Meera's results and her safety decision?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The bulb glows for the steel spoon and iron nail because metals allow electricity to flow through them; tap water also conducts electricity, so wet hands near a switch are unsafe."
+    },
+    {
+      "id": "B",
+      "text": "The bulb glows for the wooden ruler and rubber strap because insulators allow electricity to flow through them; wet hands are safe because water stops the current."
+    },
+    {
+      "id": "C",
+      "text": "The bulb glows for all four materials because the bulb works; wet hands are safe because the tester bulb is small."
+    },
+    {
+      "id": "D",
+      "text": "The bulb does not glow for any material because dry cells are too weak; wet hands are safe because the switch is made of plastic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[circuitikz, scale=0.9, transform shape]\n\\draw (0,0) to[battery1, l_=dry cell] (0,2);\n\\draw (0,2) -- (2,2) to[bulb, l_=bulb] (4,2);\n\\draw (4,2) -- (5,2);\n\\draw (5,2) -- (5,1.4);\n\\node[circ] at (5,1.3) {};\n\\draw (0,0) -- (4,0) -- (4.6,0);\n\\node[circ] at (4.7,0) {};\n\\draw (4.7,0) -- (5.4,0.6);\n\\draw (5,1.3) -- (5.6,0.7);\n\\node[right] at (5.8,0.65) {test material};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Steel and iron are metals and good conductors, so the bulb glows for them; dry wood and rubber are insulators, so it does not. Tap water conducts electricity, so touching a switch with wet hands risks electric shock. Option A alone states both correctly. B swaps conductors and insulators, C claims all materials conduct and dismisses the water hazard, D claims nothing conducts and denies the hazard.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Added single tikzpicture (circuit tester: dry cell, bulb, two free probe ends clipped to the test material); stem refers to the figure."
+  }
+}

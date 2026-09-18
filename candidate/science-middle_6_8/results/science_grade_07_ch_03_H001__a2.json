@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera fixes a small torch bulb to an electric cell using two wires, as shown in the figure. The bulb lights up.\n\nWhich statement about the cell is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The metal disc is the positive terminal and the metal cap is the negative terminal; the cell supplies electrical energy to the circuit."
+    },
+    {
+      "id": "B",
+      "text": "The metal cap is the positive terminal and the metal disc is the negative terminal; the cell supplies electrical energy to the circuit."
+    },
+    {
+      "id": "C",
+      "text": "Either end of the cell can be the positive terminal; the shape of the cap and disc does not matter."
+    },
+    {
+      "id": "D",
+      "text": "The metal cap is the positive terminal, but the cell cannot supply energy unless two cells are joined together."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{circuitikz}[scale=1.0]\n\\draw (0,0) to[battery1, l_=cell] (0,2);\n\\draw (0,2) -- (2,2);\n\\draw (2,2) to[lamp, l_=bulb] (2,0);\n\\draw (2,0) -- (0,0);\n\\node at (-1.6,2.4) {metal cap};\n\\node at (-1.7,-0.4) {metal disc};\n\\end{circuitikz}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The metal cap of an electric cell is the positive terminal and the metal disc is the negative terminal; the cell is a source of electrical energy that drives current through the torch bulb, so it lights. Option A reverses the terminals, C ignores the terminal identity, and D wrongly claims one cell cannot power the circuit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Simple circuitikz diagram of one cell connected to a torch bulb; cap and disc labelled."
+  }
+}

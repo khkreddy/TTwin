@@ -1,0 +1,88 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:48:41.243Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q10",
+    "item_type": "single_mcq",
+    "stem": "A weight-lifter raises a 2000 N weight through a vertical height of 2.0 m in 0.80 s.\nWhat useful power does he develop in doing this?",
+    "options": [
+      {
+        "id": "A",
+        "text": "800 W"
+      },
+      {
+        "id": "B",
+        "text": "3200 W"
+      },
+      {
+        "id": "C",
+        "text": "4000 W"
+      },
+      {
+        "id": "D",
+        "text": "5000 W"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [],
+    "enrichment": "A switch is a simple device that completes or breaks a circuit; when the switch closes the gap, the circuit is ON and current flows, and when it breaks the path, the circuit is OFF. switch contact state -> path completed or broken -> current flow changes -> lamp glows or stays off The learner correctly applies this rule: A switch is a simple device that completes or breaks a circuit; when the switch closes the gap, the circuit is ON and current flows, and when it breaks the path, the circuit is OFF. The switch itself supplies current, so sliding it tells the lamp to turn on or off.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_03/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “800 W” looked possible instead of “5000 W”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “3200 W” looked possible instead of “5000 W”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “4000 W” looked possible instead of “5000 W”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Electricity: circuits and cells. The student must decide: Decide whether a switch is making a circuit ON or OFF. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "add",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

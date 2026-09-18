@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera connects a cell, a lamp and a switch in series to check her science project at home, as shown in the figure.\n\nWhen the switch is in the position shown, what happens to the lamp?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp glows, because the switch itself supplies current to the lamp."
+    },
+    {
+      "id": "B",
+      "text": "The lamp glows, because the switch has closed the gap and completed the circuit."
+    },
+    {
+      "id": "C",
+      "text": "The lamp stays off, because the open switch has broken the path of the circuit."
+    },
+    {
+      "id": "D",
+      "text": "The lamp stays off, because a cell can never light a lamp without a switch."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{circuitikz}[scale=0.9]\n\\draw (0,0) to[battery1] (0,2);\n\\draw (0,2) to[short] (2,2);\n\\draw (2,2) to[lamp] (4,2);\n\\draw (4,2) to[nos, l={switch}] (6,2);\n\\draw (6,2) to[short] (6,0);\n\\draw (6,0) to[short] (0,0);\n\\end{circuitikz}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The figure shows an open (normally open) switch, so the circuit path is broken and no current flows; the lamp stays off. Option C states this correctly. Option A is the trap for students who think the switch supplies current; B wrongly treats the shown open switch as closed; D is a false general claim.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Single circuitikz figure: cell, lamp and open switch in series; switch shown open."
+  }
+}

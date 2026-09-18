@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Priya tests a colourless solution from her kitchen with three indicators. Her observations are shown in the table.\n\nWhich statement correctly classifies the solution?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The solution is basic, because turmeric turning reddish-brown is enough to decide, and the blue litmus result can be ignored."
+    },
+    {
+      "id": "B",
+      "text": "The solution is basic, because it turns red litmus blue and turns turmeric reddish-brown, while it does not change blue litmus."
+    },
+    {
+      "id": "C",
+      "text": "The solution cannot be classified, because every possible indicator must be tested before it can be called basic."
+    },
+    {
+      "id": "D",
+      "text": "The solution is neutral, because two of the three indicators show no colour change."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    {
+      "title": "Priya's observations",
+      "headers": [
+        "Indicator",
+        "Observation"
+      ],
+      "rows": [
+        [
+          "Red litmus paper",
+          "Turns blue"
+        ],
+        [
+          "Blue litmus paper",
+          "No change"
+        ],
+        [
+          "Turmeric solution",
+          "Turns reddish-brown"
+        ]
+      ]
+    }
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A basic solution turns red litmus blue, leaves blue litmus unchanged, and turns turmeric reddish-brown. All three observations are consistent with basic, so B is correct. A commits condition omission by ignoring the blue litmus row; C commits scope error by demanding every possible indicator; D commits surface feature capture by counting 'no change' rows instead of combining the evidence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

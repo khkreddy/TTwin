@@ -1,0 +1,55 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0620_m16_qp_22:q9",
+  "target_unit_id": "science/grade_07/ch_04/H006",
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_04:H006:a2",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_04",
+    "chapter_label": "The world of metals and non-metals",
+    "subtopic_id": "science/grade_07/ch_04/H006",
+    "stem": "Meera uses the circuit tester shown in the figure to test four materials found in her home. She clips the two free ends of the tester to each material in turn and watches the bulb.\n\nShe tests: a steel spoon, a dry wooden ruler, an iron nail, and a rubber slipper strap. For two of these materials the bulb glows.\n\nLater, Meera's mother asks her to touch a switch with wet hands. Meera refuses, saying water can conduct electricity.\n\nWhich statement correctly explains Meera's results and her safety decision?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The bulb glows for the steel spoon and iron nail because metals allow electricity to flow through them; tap water also conducts electricity, so wet hands near a switch are unsafe.",
+      "B": "The bulb glows for the wooden ruler and rubber strap because insulators allow electricity to flow through them; wet hands are safe because water stops the current.",
+      "C": "The bulb glows for all four materials because the bulb works; wet hands are safe because the tester bulb is small.",
+      "D": "The bulb does not glow for any material because dry cells are too weak; wet hands are safe because the switch is made of plastic."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[circuitikz, scale=0.9, transform shape]\n\\draw (0,0) to[battery1, l_=dry cell] (0,2);\n\\draw (0,2) -- (2,2) to[bulb, l_=bulb] (4,2);\n\\draw (4,2) -- (5,2);\n\\draw (5,2) -- (5,1.4);\n\\node[circ] at (5,1.3) {};\n\\draw (0,0) -- (4,0) -- (4.6,0);\n\\node[circ] at (4.7,0) {};\n\\draw (4.7,0) -- (5.4,0.6);\n\\draw (5,1.3) -- (5.6,0.7);\n\\node[right] at (5.8,0.65) {test material};\n\\end{tikzpicture}",
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_04/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "mark_scheme": null
+    }
+  }
+}

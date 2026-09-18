@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meera drops four objects on the kitchen floor and listens to the sound each one makes.\n\n| object | P | Q | R | S |\n| sound heard | ringing | dull | dull | ringing |\n\nWhich objects are sonorous?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q"
+    },
+    {
+      "id": "B",
+      "text": "P and S"
+    },
+    {
+      "id": "C",
+      "text": "Q and R"
+    },
+    {
+      "id": "D",
+      "text": "R and S"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"object\",\"P\",\"Q\",\"R\",\"S\"],\"rows\":[[\"sound heard\",\"ringing\",\"dull\",\"dull\",\"ringing\"]],\"row_labels\":[\"sound heard\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sonority is the property of producing a ringing sound when struck or dropped. P (ringing) and S (ringing) are sonorous; Q and R give dull sounds and are not. Option A pairs one ringing object with a dull one, matching the student who drops the ringing-sound condition. Key: B.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

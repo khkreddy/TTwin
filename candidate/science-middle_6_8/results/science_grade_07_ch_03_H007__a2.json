@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera is making a torch circuit for her school science project in Jaipur. The figure shows the actual circuit she has connected on her table: one cell, a closed switch and one bulb, joined in a single loop with wires.\n\nWhich circuit diagram correctly represents Meera's circuit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A cell and a bulb in series, with no switch shown."
+    },
+    {
+      "id": "B",
+      "text": "A cell, a closed switch and a bulb, all in series in one loop."
+    },
+    {
+      "id": "C",
+      "text": "A cell with the switch and the bulb connected in parallel branches."
+    },
+    {
+      "id": "D",
+      "text": "Two cells and a bulb in series, with the switch left open."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[circuit ee IEC, thick]\n\\draw (0,0) to [battery={info={cell}}] (0,2.5)\n      to [make switch={info={switch}}] (3,2.5)\n      to [bulb={info={bulb}}] (6,2.5)\n      -- (6,0) -- (0,0);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The physical circuit in the figure has exactly three components in one continuous loop: one cell, a closed switch and one bulb. Only option B shows all three components in series in a single loop; A omits the switch, C puts components in parallel and D adds a second cell and shows an open switch, so none of these match the actual circuit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Figure added as required: circuitikz-style tikzpicture of the actual circuit (cell, closed switch, bulb in series) that the stem refers to."
+  }
+}
