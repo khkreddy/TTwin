@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera's family in Pune wants to reduce the food miles of the vegetables they eat. Her teacher explains that food miles are the total distance a food item travels from the farm where it is grown to the person who eats it.\n\nWhich choice would most reduce the family's food miles, and what is the main benefit of lower food miles?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Buy vegetables grown on a nearby farm and sold at the local market; less transport means lower fuel cost and less air pollution."
+    },
+    {
+      "id": "B",
+      "text": "Buy vegetables flown in from another country because they look fresher; longer travel reduces cost and pollution."
+    },
+    {
+      "id": "C",
+      "text": "Buy the same vegetables from the nearest shop when they are on sale; the discount shortens the delivery route."
+    },
+    {
+      "id": "D",
+      "text": "Buy packaged vegetables that last longer in the fridge; longer storage time means fewer food miles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Food miles measure the producer-to-consumer distance travelled by the food. Locally grown vegetables travel the shortest distance, so less fuel is used for transport, cutting both cost and pollution. B reverses the relationship (longer travel cannot reduce pollution), C confuses a price discount with a change in travel distance, and D confuses storage life with distance travelled.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

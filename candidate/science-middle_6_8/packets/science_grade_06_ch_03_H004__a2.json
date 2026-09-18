@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q18",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:17:45.716Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q18",
+    "item_type": "single_mcq",
+    "stem": "Why is the circulatory system of mammals described as a double circulation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Blood flows firstly through arteries and then through veins."
+      },
+      {
+        "id": "B",
+        "text": "Blood flows through the heart twice on one complete circuit of the body."
+      },
+      {
+        "id": "C",
+        "text": "In the heart, blood flows firstly through atria and then through ventricles."
+      },
+      {
+        "id": "D",
+        "text": "The atria and the ventricles contract alternately."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Proteins and fats are the energy-giving components."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Only carbohydrates are energy-giving; fats are foods to avoid."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Glucose water is not energy-giving because it looks like plain water."
+      }
+    ],
+    "enrichment": "Carbohydrates and fats provide energy for performing activities, so they are called energy-giving foods. presence of carbohydrates or fats in food -> energy available for activities The learner correctly applies this rule: Carbohydrates and fats provide energy for performing activities, so they are called energy-giving foods. Only sweet foods give energy, and fats such as ghee or oils are never energy-giving foods.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H004",
+      "gate_names": [
+        "term_substitution",
+        "condition_omission",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Blood flows firstly through arteries and then thr…” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “In the heart, blood flows firstly through atria a…” looked possible instead of “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The atria and the ventricles contract alternately.” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Classify carbohydrates and fats as energy-giving food components rather than as protective or growth-focused components. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

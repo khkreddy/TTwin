@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m16_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:18:48.178Z",
+  "source": {
+    "item_ref": "session:0610_m16_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "The table shows the conditions in four test-tubes containing equal amounts of starch and salivary amylase.\nIn which test-tube is the starch broken down fastest?",
+    "options": [
+      {
+        "id": "A",
+        "text": "° 2; C 27"
+      },
+      {
+        "id": "B",
+        "text": "° 2; C 37"
+      },
+      {
+        "id": "C",
+        "text": "° 7; C 27"
+      },
+      {
+        "id": "D",
+        "text": "° 7; C 37"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"°\",\"C\"],\"rows\":[[\"2\",\"27\"],[\"2\",\"37\"],[\"7\",\"27\"],[\"7\",\"37\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Starch is present."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Protein is present."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Starch and fat are absent."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Protein is absent."
+      }
+    ],
+    "enrichment": "In the protein test, a violet colour after adding copper sulphate solution and caustic soda solution indicates the presence of proteins in the food item. protein-test chemicals added to prepared food sample and violet colour appears -> protein is present The learner correctly applies this rule: In the protein test, a violet colour after adding copper sulphate solution and caustic soda solution indicates the presence of proteins in the food item. Any added laboratory chemical proves protein even if the violet colour does not appear.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H011",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C 27” looked possible instead of “C 37”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “° 2” looked possible instead of “° 7”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “C 27” looked possible instead of “C 37”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Identify the presence of protein in a food item from a violet colour after the protein-test procedure with copper sulphate solution and caustic soda solution. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

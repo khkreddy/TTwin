@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:17:00.961Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "By which process does oxygen pass out of a leaf?",
+    "options": [
+      {
+        "id": "A",
+        "text": "diffusion"
+      },
+      {
+        "id": "B",
+        "text": "osmosis"
+      },
+      {
+        "id": "C",
+        "text": "translocation"
+      },
+      {
+        "id": "D",
+        "text": "transpiration"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Every feature of a desert camel is a desert adaptation."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Fish acquire streamlined bodies because they move easily through water."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Hot- and cold-desert camels need exactly the same adaptations."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Ordinary-looking sloping branches on a mountain tree are not an adaptation."
+      }
+    ],
+    "enrichment": "Special features that enable plants and animals to survive in a particular region are adaptations, such as conical shape and sloping branches in some mountain trees, long legs and wide hooves in hot desert camels, humps for food scarcity in camels, reduced water loss in camels, shorter height and smaller leaves in mountain rhododendrons, and streamlined bodies in fish. special_feature_in_specific_region -> survival_advantage -> adaptation The learner correctly applies this rule: Special features that enable plants and animals to survive in a particular region are adaptations, such as conical shape and sloping branches in some mountain trees, long legs and wide hooves in hot desert camels, humps for food scarcity in camels, reduced water loss in camels, shorter height and smaller leaves in mountain rhododendrons, and streamlined bod Adaptation means any noticeable body part, such as a hump or branch shape, even if it has no survival use in that region.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_02/H009",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “osmosis” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “translocation” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “transpiration” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Diversity in the living world. The student must decide: Decide whether a plant or animal feature is an adaptation for survival in a particular region. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
