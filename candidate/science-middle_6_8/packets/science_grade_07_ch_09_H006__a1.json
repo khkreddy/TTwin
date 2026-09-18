@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:55:47.848Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q17",
+    "item_type": "single_mcq",
+    "stem": "Which structures in plants and in humans normally carry amino acids?",
+    "options": [
+      {
+        "id": "A",
+        "text": "arteries ✓; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "B",
+        "text": "arteries ✓; phloem ✗; ureters ✓"
+      },
+      {
+        "id": "C",
+        "text": "arteries ✗; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "D",
+        "text": "arteries ✗; phloem ✗; ureters ✓"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The liver secretes pancreatic juice into the small intestine."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Undigested carbohydrates, proteins and fats pass directly through the small-intestine wall into blood."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "During absorption, digested nutrients move from blood vessels into the small intestine."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The stomach wall also absorbs the products of carbohydrate, protein and fat digestion into blood."
+      }
+    ],
+    "enrichment": "Partially digested food enters the small intestine, which receives digestive secretions from its own lining, the liver, and the pancreas; pancreatic juice is basic, helps neutralise acids, breaks down carbohydrates, proteins, and fats, and digested nutrients pass into blood vessels in the small intestine walls. partially digested food enters small intestine -> digestive secretions and basic pancreatic juice act -> nutrients are digested and pass into blood The learner correctly applies this rule: Partially digested food enters the small intestine, which receives digestive secretions from its own lining, the liver, and the pancreas; pancreatic juice is basic, helps neutralise acids, breaks down carbohydrates, proteins, and fats, and digested nutrients pass into blood vessels in the small intestine walls. The small intestine is just a narrow tube that passes food to the large intestine.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_09/H006",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Nutrition in animals. The student must decide: Decide that the small intestine receives digestive secretions, neutralises acidic food with basic pancreatic juice, digests major food components, and absorbs nutrients into blood. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

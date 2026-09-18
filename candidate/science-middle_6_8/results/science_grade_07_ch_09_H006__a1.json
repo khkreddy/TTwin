@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera's teacher asks her which statements about the small intestine are correct. Which row correctly describes the small intestine?",
+  "options": [
+    {
+      "id": "A",
+      "text": "receives pancreatic juice ✓; neutralises acidic food from the stomach ✓; absorbs digested nutrients into blood ✓"
+    },
+    {
+      "id": "B",
+      "text": "receives pancreatic juice ✓; neutralises acidic food from the stomach ✓; absorbs digested nutrients into blood ✗"
+    },
+    {
+      "id": "C",
+      "text": "receives pancreatic juice ✓; neutralises acidic food from the stomach ✗; absorbs digested nutrients into blood ✓"
+    },
+    {
+      "id": "D",
+      "text": "receives pancreatic juice ✗; neutralises acidic food from the stomach ✓; absorbs digested nutrients into blood ✓"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"receives pancreatic juice\",\"neutralises acidic food from the stomach\",\"absorbs digested nutrients into blood\"],\"rows\":[[\"✓\",\"✓\",\"✓\"],[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The small intestine receives pancreatic juice from the pancreas (✓); the basic pancreatic juice neutralises the acidic partially digested food arriving from the stomach (✓); and digested nutrients pass into blood vessels in the small-intestine wall (✓). Row B is the trap for a student who drops the absorption condition and treats the small intestine as merely a tube passing food onward.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
