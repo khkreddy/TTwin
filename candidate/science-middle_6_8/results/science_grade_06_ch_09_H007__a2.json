@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meena's mother mixes different things with water at home. She leaves each mixture undisturbed for some time and then gently pours off the water. Which mixture can be separated from the water by this method?",
+  "options": [
+    {
+      "id": "A",
+      "text": "salt stirred into water"
+    },
+    {
+      "id": "B",
+      "text": "sugar dissolved in water"
+    },
+    {
+      "id": "C",
+      "text": "sand mixed into water"
+    },
+    {
+      "id": "D",
+      "text": "lemon juice squeezed into water"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"substance\",\"mixed with\",\"settles on standing?\"],\"rows\":[[\"salt\",\"water\",\"no\"],[\"sugar\",\"water\",\"no\"],[\"sand\",\"water\",\"yes\"],[\"lemon juice\",\"water\",\"no\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sand is a heavier insoluble solid; it settles at the bottom (sedimentation) and the water can then be gently poured off (decantation). Salt, sugar and lemon juice dissolve in water, so they cannot be separated by this method.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

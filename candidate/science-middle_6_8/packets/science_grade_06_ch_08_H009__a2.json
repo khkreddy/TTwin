@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:28:57.798Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "Magnesium nitride is formed when magnesium burns in air. Magnesium nitride is an ionic compound.\n\nWhat is the formula of magnesium nitride?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MgN₂"
+      },
+      {
+        "id": "B",
+        "text": "Mg₂N₂"
+      },
+      {
+        "id": "C",
+        "text": "Mg₂N₃"
+      },
+      {
+        "id": "D",
+        "text": "Mg₃N₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "States of matter, particles and water",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Clouds are made of water vapour, not liquid water droplets."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Every cloud produces rain as soon as its tiny droplets form."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Water vapour cools because it condenses into cloud droplets."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A cloud starts raining when it turns dark."
+      }
+    ],
+    "enrichment": "Water vapour rises, cools, condenses into tiny droplets that form clouds, and many droplets together fall as rain, hail, or snow. Upward movement and cooling of water vapour cause condensation; growth and coming together of droplets leads to precipitation. The learner correctly applies this rule: Water vapour rises, cools, condenses into tiny droplets that form clouds, and many droplets together fall as rain, hail, or snow. Clouds are just invisible water vapour collected overhead, so droplets are not needed before rain.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_08/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “MgN₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “Mg₂N₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “Mg₂N₃” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: A journey through states of water. The student must decide: Decide how water vapour becomes clouds and rain, hail, or snow. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

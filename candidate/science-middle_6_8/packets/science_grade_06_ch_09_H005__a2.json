@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m19_qp_12:q35",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:29:51.906Z",
+  "source": {
+    "item_ref": "session:0620_m19_qp_12:q35",
+    "item_type": "option_table",
+    "stem": "Most objects made from synthetic polymers last for many years.\n\nWhy do these polymers last for so long?",
+    "options": [
+      {
+        "id": "A",
+        "text": "chemically unreactive: no; biodegradable: no"
+      },
+      {
+        "id": "B",
+        "text": "chemically unreactive: no; biodegradable: yes"
+      },
+      {
+        "id": "C",
+        "text": "chemically unreactive: yes; biodegradable: no"
+      },
+      {
+        "id": "D",
+        "text": "chemically unreactive: yes; biodegradable: yes"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"chemically unreactive\",\"biodegradable\"],\"rows\":[[\"no\",\"no\"],[\"no\",\"yes\"],[\"yes\",\"no\"],[\"yes\",\"yes\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A sieve with holes larger than both flour and bran will still separate the flour from the bran."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "With holes between their sizes, fine flour remains on the sieve and bigger bran passes through."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Sieving removes dissolved salt from salt water."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Equal-sized pale sand grains pass through, but dark sand grains stay on the sieve."
+      }
+    ],
+    "enrichment": "Sieving allows smaller particles to pass through the holes of a sieve while bigger particles remain on the sieve. The size of the sieve holes relative to the particle sizes determines which particles pass through and which are retained. The learner correctly applies this rule: Sieving allows smaller particles to pass through the holes of a sieve while bigger particles remain on the sieve. A sieve keeps the wanted material on top, whatever its size is.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_09/H005",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “chemically unreactive: no” looked possible instead of “chemically unreactive: yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “biodegradable: yes” looked possible instead of “biodegradable: no”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “biodegradable: yes” looked possible instead of “biodegradable: no”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when sieving is suitable for separating solid particles by size. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

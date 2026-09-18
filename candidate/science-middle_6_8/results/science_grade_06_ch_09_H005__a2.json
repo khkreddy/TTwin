@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meena wants to separate a mixture of fine sand and small pebbles using a sieve in her kitchen.\n\nFor sieving to work, the holes in the sieve must let the smaller particles pass through while the bigger particles stay on the sieve.\n\nWhich row correctly describes when sieving is suitable?",
+  "options": [
+    {
+      "id": "A",
+      "text": "particles have different sizes: sieving works; particles have the same size: sieving does not work"
+    },
+    {
+      "id": "B",
+      "text": "particles have different sizes: sieving does not work; particles have the same size: sieving works"
+    },
+    {
+      "id": "C",
+      "text": "particles have different sizes: sieving works; particles have the same size: sieving works"
+    },
+    {
+      "id": "D",
+      "text": "particles have different sizes: sieving does not work; particles have the same size: sieving does not work"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"particles have different sizes\",\"particles have the same size\"],\"rows\":[[\"sieving works\",\"sieving does not work\"],[\"sieving does not work\",\"sieving works\"],[\"sieving works\",\"sieving works\"],[\"sieving does not work\",\"sieving does not work\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sieving separates solid particles only when they differ in size: the smaller particles pass through the holes while the larger ones are retained. Particles of the same size cannot be separated by a sieve, so option A is correct.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

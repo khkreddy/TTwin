@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Priya spills equal amounts of water in four places at her home in Jaipur. She notes the conditions for each patch of water.\n\n| patch | W | X | Y | Z |\n| container | shallow plate | shallow plate | narrow-necked bottle | shallow plate |\n| temperature | warm (35 °C) | cool (20 °C) | warm (35 °C) | warm (35 °C) |\n| air | dry, with a breeze | dry, still | dry, with a breeze | humid, still |\n\nWhich two patches of water will dry the fastest?",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "W and Z"
+    },
+    {
+      "id": "C",
+      "text": "X and Y"
+    },
+    {
+      "id": "D",
+      "text": "W and Y"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"patch\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"container\",\"shallow plate\",\"shallow plate\",\"narrow-necked bottle\",\"shallow plate\"],[\"temperature\",\"warm (35 °C)\",\"cool (20 °C)\",\"warm (35 °C)\",\"warm (35 °C)\"],[\"air\",\"dry, with a breeze\",\"dry, still\",\"dry, with a breeze\",\"humid, still\"]],\"row_labels\":[\"container\",\"temperature\",\"air\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation is fastest with large exposed surface, warmth, dry air and air movement. W has a shallow plate (large area), warm water, dry air and a breeze: fastest. X is cool: slower. Y is warm and dry but has a narrow neck (small exposed area): slower. Z is warm with a large surface but the air is humid and still, so it dries slower than Y's warm, dry, breezy setup. Comparing all, W and Y both sit in warm, dry, breezy air; between them W's larger surface wins, but Y still beats Z (humid) and X (cool). Hence the two fastest are W and Y, key D. Option A is the trap for a student who drops the temperature condition and treats both shallow plates in dry air as equal, making 'W and X' look possible.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

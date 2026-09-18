@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q8",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:27:33.514Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q8",
+    "item_type": "single_mcq",
+    "stem": "A helicopter takes off from the ground and rises vertically. It then hovers at a constant height above the ground.\nWhich sequence of energy changes takes place during the gain in height?",
+    "options": [
+      {
+        "id": "A",
+        "text": "chemical → gravitational potential → kinetic"
+      },
+      {
+        "id": "B",
+        "text": "chemical → kinetic → gravitational potential"
+      },
+      {
+        "id": "C",
+        "text": "gravitational potential → chemical → kinetic"
+      },
+      {
+        "id": "D",
+        "text": "kinetic → chemical → gravitational potential"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Maximum and minimum air temperatures generally rise from day to day in every season."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Maximum and minimum air temperatures generally decrease as summer approaches."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The hospital wall thermometer reads 22°C, so today's maximum and minimum outdoor air temperatures are both 22°C."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "From one day to the next, maximum temperatures must rise and minimum temperatures must fall."
+      }
+    ],
+    "enrichment": "Maximum and minimum air temperatures usually vary every day because weather depends on several factors, and they generally increase as summer approaches. Changes in weather conditions change the day's maximum and minimum air temperatures; seasonal change toward summer generally raises those values. The learner correctly applies this rule: Maximum and minimum air temperatures usually vary every day because weather depends on several factors, and they generally increase as summer approaches. A weather report for one place should give the same maximum and minimum temperature every day unless the thermometer changes.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_07/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “kinetic”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “kinetic” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Temperature and its measurement. The student must decide: Interpret maximum and minimum air-temperature records as values that usually vary from day to day and across seasons. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

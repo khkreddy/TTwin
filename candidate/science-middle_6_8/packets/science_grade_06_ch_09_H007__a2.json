@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m19_qp_22:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:30:14.892Z",
+  "source": {
+    "item_ref": "session:0620_m19_qp_22:q6",
+    "item_type": "option_table",
+    "stem": "Which row describes the structure of the positive ion in sodium chloride?",
+    "options": [
+      {
+        "id": "A",
+        "text": "11 protons, 11 electrons, 12 neutrons"
+      },
+      {
+        "id": "B",
+        "text": "11 protons, 10 electrons, 12 neutrons"
+      },
+      {
+        "id": "C",
+        "text": "17 protons, 17 electrons, 18 neutrons"
+      },
+      {
+        "id": "D",
+        "text": "17 protons, 18 electrons, 18 neutrons"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"protons\",\"electrons\",\"neutrons\"],\"rows\":[[\"11\",\"11\",\"12\"],[\"11\",\"10\",\"12\"],[\"17\",\"17\",\"18\"],[\"17\",\"18\",\"18\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Tea leaves settling at the bottom is decantation."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Leave salt water undisturbed, then pour off the water to separate the dissolved salt."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The heavier insoluble solid forms the upper layer, with the lighter liquid underneath."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Decantation removes every tea-leaf fragment; none can remain in the poured tea."
+      }
+    ],
+    "enrichment": "Sedimentation is the settling down of a heavier insoluble component at the bottom of a liquid, and decantation is removing the liquid by tilting the vessel. Leaving the mixture undisturbed lets the heavier insoluble part settle or a separate layer form, then tilting pours off the upper liquid. The learner correctly applies this rule: Sedimentation is the settling down of a heavier insoluble component at the bottom of a liquid, and decantation is removing the liquid by tilting the vessel. If a liquid is poured gently, any solid impurity in it is completely removed.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_09/H007",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “11 protons, 11 electrons, 12 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “17 protons, 17 electrons, 18 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “17 protons, 18 electrons, 18 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when sedimentation followed by decantation can separate a liquid from heavier matter or a separate layer. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
