@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q30",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:07:16.247Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q30",
+    "item_type": "single_mcq",
+    "stem": "The table describes four different resistance wires. They are all made from the same metal.\nWhich wire has the smallest resistance?",
+    "options": [
+      {
+        "id": "A",
+        "text": "length of diameter of wire / m 2.0; wire / mm 1.0"
+      },
+      {
+        "id": "B",
+        "text": "length of diameter of wire / m 2.0; wire / mm 1.5"
+      },
+      {
+        "id": "C",
+        "text": "length of diameter of wire / m 3.0; wire / mm 1.0"
+      },
+      {
+        "id": "D",
+        "text": "length of diameter of wire / m 3.0; wire / mm 1.5"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"length of diameter of wire / m\",\"wire / mm\"],\"rows\":[[\"2.0\",\"1.0\"],[\"2.0\",\"1.5\"],[\"3.0\",\"1.0\"],[\"3.0\",\"1.5\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Gravel with wider isolated pores lets water seep through faster than sand with narrower connected pores."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Clay is fastest, sand next, and gravel slowest."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The dark sand lets water seep through faster than the pale sand, despite their identical pore spaces."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "The material with the greatest total pore volume always lets water seep through fastest."
+      }
+    ],
+    "enrichment": "Water seeps faster through materials with wider, open, connected spaces between particles; gravel lets water pass fastest, sand slower, and clay slowest. Larger and better-connected spaces allow more water movement, which increases seepage rate and controls where water can move and be stored below the ground. The learner correctly applies this rule: Water seeps faster through materials with wider, open, connected spaces between particles; gravel lets water pass fastest, sand slower, and clay slowest. Clay lets water pass fastest because its particles are finest and the surface looks smooth.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H009",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “mm 1.0” looked possible instead of “mm 1.5”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “mm 1.0” looked possible instead of “mm 1.5”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “m 3.0” looked possible instead of “m 2.0”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Predict which material lets water seep fastest by comparing the width and connection of spaces between its particles. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

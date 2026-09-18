@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:06:56.734Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "A person in a factory has to lift a box on to a shelf.\nWhich action involves the person doing the least amount of work?",
+    "options": [
+      {
+        "id": "A",
+        "text": "lifting the box quickly to the high shelf"
+      },
+      {
+        "id": "B",
+        "text": "lifting the box slowly to the high shelf"
+      },
+      {
+        "id": "C",
+        "text": "lifting the box to the low shelf first then lifting it to the high shelf"
+      },
+      {
+        "id": "D",
+        "text": "lifting the box to the low shelf instead of to the high shelf"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Even with no heat falling on either shirt, the black shirt gains more heat."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Dark-coloured clothes in summer; light-coloured clothes in winter."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A thin, lightweight black shirt reflects more heat than a thick, heavy white shirt."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Black cotton insulates better than otherwise identical white cotton because dark colour traps body heat."
+      }
+    ],
+    "enrichment": "Light-coloured surfaces reflect most of the heat that falls on them, while dark surfaces absorb more heat. Surface colour affects heat reflection and absorption, which changes how much heat the wearer gains and how comfortable the clothing feels in summer or winter. The learner correctly applies this rule: Light-coloured surfaces reflect most of the heat that falls on them, while dark surfaces absorb more heat. Clothing colour only changes appearance, so white and dark clothes should feel the same in summer and winter.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “lifting the box quickly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “lifting the box slowly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “lifting the box to the low shelf first then lifti…” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Choose light-coloured clothes in summer and dark-coloured clothes in winter by deciding whether the surface mostly reflects or absorbs heat. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

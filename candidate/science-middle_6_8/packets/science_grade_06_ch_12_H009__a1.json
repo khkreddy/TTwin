@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s22_qp_11:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:08:13.406Z",
+  "source": {
+    "item_ref": "session:0620_s22_qp_11:q9",
+    "item_type": "single_mcq",
+    "stem": "Which equation for the decomposition of calcium nitrate is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ca(NO₃)₂ → CaO + NO₂ + O₂"
+      },
+      {
+        "id": "B",
+        "text": "Ca(NO₃)₂ → CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "C",
+        "text": "2Ca(NO₃)₂ → 2CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "D",
+        "text": "2Ca(NO₃)₂ → 2CaO + 4NO₂ + O₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Earth's turning about its axis is revolution."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "An artificial spacecraft orbiting Earth is not a satellite."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "The Moon revolves around the Sun instead of around Earth."
+      }
+    ],
+    "enrichment": "Rotation is turning about an axis, while revolution is the movement of an object around another object; planets revolve around the Sun, and satellites such as moons move around planets. The path relation decides the word: spinning on an axis is rotation, moving around another body is revolution, and moving around a planet identifies a satellite relation. The learner correctly applies this rule: Rotation is turning about an axis, while revolution is the movement of an object around another object; planets revolve around the Sun, and satellites such as moons move around planets. All movement in space is called rotation, whether an object spins or goes around another object.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H009",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “CaO + NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “2CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Choose correctly between rotation, revolution, and satellite motion when describing how Earth, planets, and moons move. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

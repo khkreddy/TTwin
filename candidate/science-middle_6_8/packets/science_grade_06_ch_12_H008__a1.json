@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s21_qp_12:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:08:05.243Z",
+  "source": {
+    "item_ref": "session:0620_s21_qp_12:q29",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful for food containers?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It conducts heat."
+      },
+      {
+        "id": "B",
+        "text": "It has low density."
+      },
+      {
+        "id": "C",
+        "text": "It is strong."
+      },
+      {
+        "id": "D",
+        "text": "It resists corrosion."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The planet closest to the Sun must be the hottest, regardless of its atmosphere."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "With comparable atmospheres, the farther planet is generally hotter."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A star farther from the Sun is generally colder than a star nearer the Sun."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Red planets are always hot; blue planets are always cold."
+      }
+    ],
+    "enrichment": "Planets get most of their energy from the Sun, so planets farther from the Sun are generally colder, but a planet's atmosphere can trap heat and significantly change its temperature. Increasing distance from the Sun reduces received solar energy and generally lowers temperature, while heat trapped by an atmosphere can raise or alter the temperature. The learner correctly applies this rule: Planets get most of their energy from the Sun, so planets farther from the Sun are generally colder, but a planet's atmosphere can trap heat and significantly change its temperature. A planet's temperature can be predicted from distance alone, so there is no need to check atmosphere.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H008",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “It conducts heat.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “It has low density.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It is strong.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Predict a planet's general temperature trend from its distance from the Sun while checking whether an atmosphere changes that trend. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

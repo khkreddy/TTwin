@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q8",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:06:48.986Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q8",
+    "item_type": "single_mcq",
+    "stem": "A helicopter takes off from the ground and rises vertically. It then hovers at a constant height above the ground.\nWhich sequence of energy changes takes place during the gain in height?",
+    "options": [
+      {
+        "id": "A",
+        "text": "chemical → gravitational potential → kinetic"
+      },
+      {
+        "id": "B",
+        "text": "chemical → kinetic → gravitational potential"
+      },
+      {
+        "id": "C",
+        "text": "gravitational potential → chemical → kinetic"
+      },
+      {
+        "id": "D",
+        "text": "kinetic → chemical → gravitational potential"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The Sun heats Earth by conduction."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The hotter utensil gains heat by radiation from the cooler surroundings and gets hotter."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A hot, non-glowing utensil cannot cool by radiation."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "The warmth reaching me beside the fire is convection because hot air carries it to me."
+      }
+    ],
+    "enrichment": "Radiation transfers heat directly from a hot object to other objects or surroundings; the Sun's heat and the warmth felt from a fire reach us by radiation, and hot objects cool by radiating heat. A hot object radiates heat outward, which can warm another object or reduce the hot object's own heat as energy goes to the surroundings. The learner correctly applies this rule: Radiation transfers heat directly from a hot object to other objects or surroundings; the Sun's heat and the warmth felt from a fire reach us by radiation, and hot objects cool by radiating heat. Heat can reach a person only by touching the hot object, so warmth near a fire is not heat transfer unless there is contact.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “kinetic”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “gravitational potential” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “kinetic” looked possible instead of “chemical”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Decide when heat reaches a person or object by radiation rather than by touch or moving fluid. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
