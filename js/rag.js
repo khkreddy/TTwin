@@ -18,6 +18,8 @@
     senior: "senior_11_12",
     olympiad: "olympiad_iit",
     iit: "olympiad_iit",
+    // Dissolved pack. Old selectors that still say question_bank mean contest-style
+    // practice, not "dump MathNet into secondary". They resolve to olympiad_iit.
     question_bank: "olympiad_iit",
     bank: "olympiad_iit",
     junior_6_8: "middle_6_8",

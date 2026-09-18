@@ -1,0 +1,59 @@
+{
+  "schema": "ttwin.map_manifest.v1",
+  "status": "CANDIDATE",
+  "built_utc": "2026-09-18T16:35:33Z",
+  "plan": "data/maps/KIMI_K3_MAX_FOUR_PACK_HINGE_PLAN.md",
+  "files": [
+    {
+      "id": "science",
+      "path": "data/maps/science.json",
+      "sha256": "0389ab72427381827ab986c1692276e0f6c41db3281e90c0136b47f2c156f885",
+      "bytes": 22941894,
+      "schema": "ttwin.map.v1",
+      "n_nodes": 22,
+      "n_statements": 391,
+      "on_github": true
+    },
+    {
+      "id": "mathematics",
+      "path": "data/maps/MATHEMATICS_MAP.json",
+      "sha256": "3b764930385ce161517402adc386ea30c7dc13dd399ddd0445b037c50e0aa3fd",
+      "bytes": 139947608,
+      "schema": "ttwin.map.v1 (extended: statement layer mirrors CHEMISTRY_MAP_COMBINED.json; envelope mirrors PHYSICS_MAP.json / BIOLOGY_MAP.json)",
+      "n_nodes": 23,
+      "n_statements": 1877,
+      "on_github": false
+    },
+    {
+      "id": "chemistry",
+      "path": "data/maps/CHEMISTRY_MAP_COMBINED.json",
+      "sha256": "f0e9e6f56004d7df5fa3a9bc74497ec2f8ce5539c50d2d3eb0412a5a8f267e66",
+      "bytes": 64115813,
+      "schema": "CHEMISTRY_MAP_COMBINED",
+      "n_nodes": 21,
+      "n_statements": 1237,
+      "on_github": false
+    },
+    {
+      "id": "physics",
+      "path": "data/maps/PHYSICS_MAP.json",
+      "sha256": "9a76ac6782b20ae3c90d99ea45edc5819b74cf7d24e1b074359c447f884f1c3b",
+      "bytes": 67199524,
+      "schema": "ttwin.map.v1 (extended: statement layer mirrors CHEMISTRY_MAP_COMBINED.json)",
+      "n_nodes": 19,
+      "n_statements": 1143,
+      "on_github": false
+    },
+    {
+      "id": "biology",
+      "path": "data/maps/BIOLOGY_MAP.json",
+      "sha256": "b12e1f707d38913e1576e2eb169f47f16416498719852c6d020c29bf3db4ed4d",
+      "bytes": 72883745,
+      "schema": "ttwin.map.v1 (extended: statement layer mirrors CHEMISTRY_MAP_COMBINED.json)",
+      "n_nodes": 19,
+      "n_statements": 1257,
+      "on_github": false
+    }
+  ],
+  "note": "Full BIOLOGY/CHEMISTRY/PHYSICS/MATHEMATICS maps are local authority blobs (too large for GitHub). Vocab, slim biology projection, and questions consume them. science.json is on GitHub."
+}
