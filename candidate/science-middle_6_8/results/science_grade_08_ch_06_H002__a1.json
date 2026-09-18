@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Radha's house has an overhead water tank on the roof, and a tap is fixed near the floor of the bathroom on the ground floor. She wants to know what decides the pressure of the water at the tap.\nOn which of these does the water pressure at the tap depend?",
+  "options": [
+    {
+      "id": "A",
+      "text": "the total amount of water stored in the tank"
+    },
+    {
+      "id": "B",
+      "text": "the width of the overhead tank"
+    },
+    {
+      "id": "C",
+      "text": "the height of the water surface in the tank above the tap"
+    },
+    {
+      "id": "D",
+      "text": "the material of which the tank is made"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pressure at a point in a liquid depends on the depth below the free surface (p = hρg), i.e. the height of water above the tap, not on the total volume, the width of the container, or the tank material. So C is correct.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

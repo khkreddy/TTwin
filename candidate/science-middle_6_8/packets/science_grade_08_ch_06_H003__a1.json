@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:35:24.831Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q1",
+    "item_type": "single_mcq",
+    "stem": "A student wishes to find the volume of a small, irregularly-shaped stone.\nA ruler and a measuring cylinder containing some water are available.\nWhich apparatus is needed?",
+    "options": [
+      {
+        "id": "A",
+        "text": "neither the ruler nor the measuring cylinder"
+      },
+      {
+        "id": "B",
+        "text": "the measuring cylinder only"
+      },
+      {
+        "id": "C",
+        "text": "the ruler and the measuring cylinder"
+      },
+      {
+        "id": "D",
+        "text": "the ruler only"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "liquid is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The liquid or gas must be in contact with the container wall where the pressure effect is being considered."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The liquid or gas must be in contact with the container wall where the pressure effect is being considered is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Pressure acts only downward because water sits on the bottom."
+      }
+    ],
+    "enrichment": "Liquids and gases exert pressure on the walls of their containers; water flows out through side holes because liquid pressure pushes on the side walls, and air inflates a balloon because it pushes outward on the balloon wall. Fluid pressure on a wall produces an outward push; when the wall has an opening, the pressure can drive fluid through that opening. The learner identifies that liquids and gases exert pressure on container walls as well as at the bottom. Pressure in a fluid is just the weight pushing straight down on the bottom of the container.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_06/H003",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “neither the ruler nor the measuring cylinder” looked possible instead of “the measuring cylinder only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “the ruler and the measuring cylinder” looked possible instead of “the measuring cylinder only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “the ruler only” looked possible instead of “the measuring cylinder only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Pressure. The student must decide: Decide whether a fluid in a container exerts pressure only downward or also on the side walls. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

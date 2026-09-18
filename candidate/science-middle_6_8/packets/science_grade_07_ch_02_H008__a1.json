@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_12:q36",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:34:37.621Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_12:q36",
+    "item_type": "single_mcq",
+    "stem": "Which bond is not present in the structure of ethanol, CH₃CH₂OH?",
+    "options": [
+      {
+        "id": "A",
+        "text": "C–C"
+      },
+      {
+        "id": "B",
+        "text": "H–H"
+      },
+      {
+        "id": "C",
+        "text": "H–O"
+      },
+      {
+        "id": "D",
+        "text": "O–C"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "One drop of lime water is enough to neutralise any amount of lemon juice."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "This neutral water must have been made by mixing an acid and a base."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The blue-litmus mixture must become colourless at neutralisation."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Adding enough water to lemon juice neutralises it without any base."
+      }
+    ],
+    "enrichment": "When enough base is added to an acid, or enough acid to a base, the resulting solution can become neither acidic nor basic while salt, water, and heat are produced. opposite_natures_mixed_in_sufficient_quantity -> neutral_effect_and_products student says colours changed in the test tube but cannot explain why lime water changes the lemon-juice result",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_02/H008",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “H–O” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “O–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Acids, bases and salts. The student must decide: Explain neutralisation as sufficient mixing of an acid and a base to form a solution that is neither acidic nor basic. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
