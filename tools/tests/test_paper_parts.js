@@ -61,6 +61,57 @@ if (stemP && /\(a\)/.test(stemP[0])) {
 if ((html.match(/Complete the table\./g) || []).length !== 1) {
   throw new Error("part body reprinted outside parts");
 }
+const periodic = {
+  uid: "0620_m15_qp_12:q20",
+  item_type: "mcq_diagram",
+  stem: "The diagram shows a section of the Periodic Table.",
+  options: { A: "position A", B: "position B", C: "position C", D: "position D" },
+  tables: [{
+    headers: [],
+    rows: [
+      ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "A"],
+      ["", "", "", "", "", "", "", "", "", "", "", "", "blank", "blank", "blank", "B", "blank", "blank"],
+      ["blank", "blank", "", "", "", "", "", "", "", "", "", "", "blank", "blank", "blank", "blank", "C", "blank"],
+    ],
+    row_labels: [],
+    caption: "",
+  }],
+  tikz: "\\begin{tikzpicture}\\draw (0,0) rectangle (1,1);\\end{tikzpicture}",
+  assessment: { key_source: "none", key_status: "not_applicable", examiner_comment: { present: false } },
+};
+const ph = TTwinPaper.itemHTML(periodic, 0, {});
+if (!ph.includes("tikz-slot")) throw new Error("periodic item missing tikz");
+if (ph.includes("<table")) throw new Error("periodic item still shows the blank-grid table next to TikZ");
+const resultsPlusTikz = {
+  uid: "0620_m25_qp_52:q1",
+  item_type: "structured",
+  stem: "Record your results.",
+  tables: [{
+    headers: ["time in s", "0", "30", "60"],
+    rows: [["temperature / °C", "0.0", "", ""]],
+    row_labels: [],
+    caption: "",
+  }],
+  tikz: "\\begin{tikzpicture}\\draw (0,0) grid (5,5);\\end{tikzpicture}",
+  assessment: { key_source: "none", key_status: "not_applicable", examiner_comment: { present: false } },
+};
+const rh = TTwinPaper.itemHTML(resultsPlusTikz, 0, {});
+if (!rh.includes("tikz-slot")) throw new Error("results+tikz missing tikz");
+if (!rh.includes("<table") || !rh.includes("time in s")) {
+  throw new Error("results table next to a graph must still print");
+}
+const money = {
+  uid: "money-demo",
+  item_type: "open_response",
+  stem: "She plans to invest a total of $10,000 into the business. Also $4.50 per loaf. Compare with $x$.",
+  parts: [],
+  assessment: { key_source: "none", key_status: "not_applicable", examiner_comment: { present: false } },
+};
+const mhMoney = TTwinPaper.itemHTML(money, 0, {});
+if (!mhMoney.includes("$10,000") || !mhMoney.includes("$4.50")) {
+  throw new Error("currency dollars stripped: " + mhMoney.slice(0, 400));
+}
+if (/katex[\s\S]*10,000/.test(mhMoney)) throw new Error("currency $10,000 typeset as math");
 sandbox.module = { exports: {} };
 sandbox.exports = sandbox.module.exports;
 vm.runInContext(fs.readFileSync(path.join(ROOT, "js/vendor/katex.min.js"), "utf8"), sandbox);

@@ -21,8 +21,17 @@
     }
     return "<span class='tex'>" + esc(src) + "</span>";
   }
+  function protectCurrency(s) {
+    // Keep $10$ as TeX; do not treat $10,000 or $4.50 as math delimiters.
+    return String(s == null ? "" : s)
+      .replace(/\$(\d{1,3}(?:,\d{3})+(?:\.\d+)?)/g, "\u00A4$1")
+      .replace(/\$(\d+\.\d{2})(?!\$)/g, "\u00A4$1");
+  }
+  function restoreCurrency(s) {
+    return String(s == null ? "" : s).replace(/\u00A4/g, "$");
+  }
   function chem(s) {
-    const raw = String(s == null ? "" : s).replace(/\(cid:\d+\)/g, "");
+    const raw = protectCurrency(String(s == null ? "" : s).replace(/\(cid:\d+\)/g, ""));
     const re = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$]+?)\$/g;
     let html = "", last = 0, m;
     while ((m = re.exec(raw))) {
@@ -32,7 +41,7 @@
       last = m.index + m[0].length;
     }
     html += inlineHTML(raw.slice(last));
-    return html;
+    return restoreCurrency(html);
   }
   function inlineHTML(s) {
     return esc(s)
@@ -42,6 +51,24 @@
   }
   function optionTableOf(it) {
     return ((it && it.tables) || []).find((t) => t && t.is_option_table) || null;
+  }
+  function isFigureGridTable(t) {
+    if (!t || t.is_option_table) return false;
+    if ((t.headers || []).some((h) => String(h || "").trim())) return false;
+    const rows = t.rows || [];
+    const cells = [];
+    rows.forEach((row) => { (row || []).forEach((c) => cells.push(c)); });
+    if (cells.length < 16) return false;
+    let blank = 0;
+    for (let i = 0; i < cells.length; i++) {
+      const s = String(cells[i] == null ? "" : cells[i]).trim();
+      if (!s || s === "-" || s === "—" || /^blank$/i.test(s)) {
+        blank++;
+        continue;
+      }
+      if (!/^[A-DWXYZ1-9]$/i.test(s)) return false;
+    }
+    return blank / cells.length >= 0.7;
   }
   function tableHTML(t, opts) {
     if (!t) return "";
@@ -146,6 +173,7 @@
     return blocks.length ? blocks : (t ? [t] : []);
   }
   function figHTML(it) {
+    // One visual only. Exam crop (figure_src) wins when packed; else TikZ.
     const src = String(it.figure_src || "").trim();
     if (src) {
       return "<div class='fig'><img class='orig' src='" + esc(src) + "' alt='exam figure'></div>";
@@ -305,7 +333,12 @@
       reveal: opts.reveal,
       correct: extractedKey(it),
     };
-    const stemTables = ((it.tables || []).filter((t) => !t.is_option_table)).map((t) => tableHTML(t)).join("");
+    const hasDrawnFig = !!(String(it.figure_src || "").trim() || it.tikz);
+    const stemTables = ((it.tables || []).filter((t) => {
+      if (!t || t.is_option_table) return false;
+      if (hasDrawnFig && isFigureGridTable(t)) return false;
+      return true;
+    })).map((t) => tableHTML(t)).join("");
     const optTable = optionTableOf(it);
     const optTableHtml = optTable ? tableHTML(optTable, optOpts) : "";
     const stage = (opts.lbsStage || {})[uid] || {};
