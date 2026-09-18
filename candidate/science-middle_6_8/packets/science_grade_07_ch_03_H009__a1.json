@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q11",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:03:15.411Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q11",
+    "item_type": "single_mcq",
+    "stem": "Which is a non-renewable energy resource?",
+    "options": [
+      {
+        "id": "A",
+        "text": "coal"
+      },
+      {
+        "id": "B",
+        "text": "solar"
+      },
+      {
+        "id": "C",
+        "text": "tides"
+      },
+      {
+        "id": "D",
+        "text": "wind"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Touching any switch is unsafe, even with dry hands during normal use."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A teacher-supervised circuit activity using a cell must not be performed."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A live plug with no visible heating is safe to touch with wet hands."
+      }
+    ],
+    "enrichment": "Electricity can be dangerous if it is not handled carefully, and the human body conducts electricity; current through the body may cause severe injury or death. unsafe contact with electrical supply or wet switches and plugs -> current can pass through the body -> injury risk The learner correctly applies this rule: Electricity can be dangerous if it is not handled carefully, and the human body conducts electricity; current through the body may cause severe injury or death. Briefly touching household switches or plugs is safe if the person is careful.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_03/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “solar” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “tides” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “wind” for the required “coal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Electricity: circuits and cells. The student must decide: Decide when an electrical situation is unsafe to handle. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

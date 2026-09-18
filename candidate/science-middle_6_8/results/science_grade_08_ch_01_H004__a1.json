@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "Meera wants to find out whether the type of flour affects how much a puri puffs up when fried.\n\nShe makes puris in her school science club. Which plans are fair tests of the type of flour?\n\n1  She uses wheat flour puris and rice flour puris of different thicknesses and fries them in oil at the same temperature.\n2  She uses wheat flour puris and rice flour puris of the same thickness and fries them in oil at the same temperature.\n3  She uses wheat flour puris and rice flour puris of the same thickness, dropped into the oil in the same way, at the same oil temperature.\n4  She uses wheat flour puris and rice flour puris of the same thickness but drops them into the oil from different heights.",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 4"
+    },
+    {
+      "id": "B",
+      "text": "2 and 3"
+    },
+    {
+      "id": "C",
+      "text": "1 and 2"
+    },
+    {
+      "id": "D",
+      "text": "3 and 4"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "She uses wheat flour puris and rice flour puris of different thicknesses and fries them in oil at the same temperature."
+    },
+    {
+      "id": "2",
+      "text": "She uses wheat flour puris and rice flour puris of the same thickness and fries them in oil at the same temperature."
+    },
+    {
+      "id": "3",
+      "text": "She uses wheat flour puris and rice flour puris of the same thickness, dropped into the oil in the same way, at the same oil temperature."
+    },
+    {
+      "id": "4",
+      "text": "She uses wheat flour puris and rice flour puris of the same thickness but drops them into the oil from different heights."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fair test of flour type changes only the flour while keeping dough thickness, oil temperature, and dropping method the same. Statements 2 and 3 keep all other conditions constant, so B is the key. Statement 1 varies thickness as well as flour; statement 4 varies dropping height, so options containing 1 or 4 are rejected.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
