@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_22:q5",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:49:45.359Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_22:q5",
+    "item_type": "single_mcq",
+    "stem": "Which molecule contains only single covalent bonds?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cl₂"
+      },
+      {
+        "id": "B",
+        "text": "CO₂"
+      },
+      {
+        "id": "C",
+        "text": "N₂"
+      },
+      {
+        "id": "D",
+        "text": "O₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "relative density is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The comparison is made with water at that temperature."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The comparison is made with water at that temperature is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "Relative density with respect to water equals the density of a substance divided by the density of water at that temperature, so it is a number without units. Dividing one density by the reference density of water cancels the units and gives how many times denser the substance is than water. The learner correctly applies this rule: Relative density with respect to water equals the density of a substance divided by the density of water at that temperature, so it is a number without units. Relative density is another density measurement, so the answer should be written as 2.7 g/cm^3.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_09/H010",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “CO₂” looked possible instead of “Cl₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “N₂” looked possible instead of “Cl₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “O₂” looked possible instead of “Cl₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Solutions and density. The student must decide: Use relative density as a unitless comparison with water, not as another density unit. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

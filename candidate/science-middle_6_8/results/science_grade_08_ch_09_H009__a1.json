@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Priya is finding the volumes of four objects in her school laboratory.\n\nWhich objects should have their volumes found by water displacement in a measuring cylinder, not by a shape formula?\n\n| object | W | X | Y | Z |\n| description | iron cube of side 3 cm | piece of stone | wooden block 5 cm × 2 cm × 4 cm | broken piece of brick |",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "X and Z"
+    },
+    {
+      "id": "C",
+      "text": "W and Y"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"object\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"description\",\"iron cube of side 3 cm\",\"piece of stone\",\"wooden block 5 cm × 2 cm × 4 cm\",\"broken piece of brick\"]],\"row_labels\":[\"description\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only regular shapes (cube W and cuboid Y) allow a shape formula V = l × b × h. The stone (X) and broken brick piece (Z) are irregular, so their volumes must be found by water displacement: final reading minus initial reading. Hence X and Z, option B.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
