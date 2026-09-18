@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m19_qp_22:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:24:28.051Z",
+  "source": {
+    "item_ref": "session:0620_m19_qp_22:q6",
+    "item_type": "option_table",
+    "stem": "Which row describes the structure of the positive ion in sodium chloride?",
+    "options": [
+      {
+        "id": "A",
+        "text": "11 protons, 11 electrons, 12 neutrons"
+      },
+      {
+        "id": "B",
+        "text": "11 protons, 10 electrons, 12 neutrons"
+      },
+      {
+        "id": "C",
+        "text": "17 protons, 17 electrons, 18 neutrons"
+      },
+      {
+        "id": "D",
+        "text": "17 protons, 18 electrons, 18 neutrons"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"protons\",\"electrons\",\"neutrons\"],\"rows\":[[\"11\",\"11\",\"12\"],[\"11\",\"10\",\"12\"],[\"17\",\"17\",\"18\"],[\"17\",\"18\",\"18\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "A mixture is a compound because two substances are present together."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The stated observation is for baking soda in water in the chapter's activity."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The stated observation is for baking soda in water in the chapter's activity is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "It is a mixture because you can see two colours."
+      }
+    ],
+    "enrichment": "In the baking soda and water activity, heating the mixture from about 20 C to 50 C while stirring makes the undissolved baking soda dissolve and allows more baking soda to dissolve at the higher temperature. Raising the temperature in this activity increases the amount of baking soda that dissolves in the water. The learner correctly applies this rule: In the baking soda and water activity, heating the mixture from about 20 C to 50 C while stirring makes the undissolved baking soda dissolve and allows more baking soda to dissolve at the higher temperature. Heating only warms the water and does not change how much baking soda can dissolve.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_09/H005",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “11 protons, 11 electrons, 12 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “17 protons, 17 electrons, 18 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “17 protons, 18 electrons, 18 neutrons” looked possible instead of “11 protons, 10 electrons, 12 neutrons”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Solutions and density. The student must decide: Predict what heating does in the baking soda and water solubility activity. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

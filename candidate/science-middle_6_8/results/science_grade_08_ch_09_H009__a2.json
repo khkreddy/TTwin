@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Priya wants to find the volume of an irregularly shaped stone she found near the river. She has a measuring cylinder partially filled with water.\n\nHow should she find the volume of the stone?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use the formula volume = length × width × height, treating the stone as a cuboid."
+    },
+    {
+      "id": "B",
+      "text": "Lower the stone into the water and subtract the initial water reading from the final water reading."
+    },
+    {
+      "id": "C",
+      "text": "Weigh the stone on a balance, since the mass is equal to the volume."
+    },
+    {
+      "id": "D",
+      "text": "Read the water level in the cylinder before putting the stone in."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The stone is irregular, so a shape formula cannot be applied; volume is found by water displacement: final reading minus initial reading. Option A is the trap of applying the regular-cuboid formula without checking the stated condition (irregular shape).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

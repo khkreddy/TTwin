@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:23:17.513Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "Magnesium nitride is formed when magnesium burns in air. Magnesium nitride is an ionic compound.\n\nWhat is the formula of magnesium nitride?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MgN₂"
+      },
+      {
+        "id": "B",
+        "text": "Mg₂N₂"
+      },
+      {
+        "id": "C",
+        "text": "Mg₂N₃"
+      },
+      {
+        "id": "D",
+        "text": "Mg₃N₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "sugar is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The water droplets in the boiling tube come from the dry sugar, not from the air, because the tube is being heated."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The water droplets in the boiling tube come from the dry sugar, not from the air, because the tube is being heated is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "Sugar decomposes on heating to give carbon and water; because water consists of hydrogen and oxygen, sugar is a compound containing carbon, hydrogen, and oxygen. Heating breaks sugar into different products, and the products reveal that sugar contains more than one element. The learner correctly applies this rule: Sugar decomposes on heating to give carbon and water; because water consists of hydrogen and oxygen, sugar is a compound containing carbon, hydrogen, and oxygen. If heating leaves one black solid, the original substance was that element.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_08/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “MgN₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “Mg₂N₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “Mg₂N₃” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Elements, compounds and mixtures. The student must decide: Use the heating of sugar to decide that sugar is a compound rather than an element. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

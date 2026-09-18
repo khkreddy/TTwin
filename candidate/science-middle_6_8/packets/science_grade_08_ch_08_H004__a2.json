@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:22:28.726Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q6",
+    "item_type": "option_table",
+    "stem": "Covalent bonds are formed when electrons are ……1…… .\n\nMost covalent compounds have ……2…… electrical conductivity.\n\nWhich words correctly complete gaps 1 and 2?",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 shared; 2 high"
+      },
+      {
+        "id": "B",
+        "text": "1 shared; 2 low"
+      },
+      {
+        "id": "C",
+        "text": "1 transferred; 2 high"
+      },
+      {
+        "id": "D",
+        "text": "1 transferred; 2 low"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"1\",\"2\"],\"rows\":[[\"A\",\"shared\",\"high\"],[\"B\",\"shared\",\"low\"],[\"C\",\"transferred\",\"high\"],[\"D\",\"transferred\",\"low\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "lime water is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The milky appearance is evidence of calcium carbonate formation, not simply a colour change in water."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The milky appearance is evidence of calcium carbonate formation, not simply a colour change in water is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "Lime water turns milky when carbon dioxide reacts with calcium hydroxide to form insoluble tiny white particles of calcium carbonate and water. Carbon dioxide in air reacts with calcium hydroxide, producing insoluble calcium carbonate particles, and those particles make the solution look milky. The learner correctly applies this rule: Lime water turns milky when carbon dioxide reacts with calcium hydroxide to form insoluble tiny white particles of calcium carbonate and water. Lime water turns milky because air makes clear water dirty.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_08/H004",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “2 high” looked possible instead of “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “2 high” for the required “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “1 transferred” looked possible instead of “1 shared”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Elements, compounds and mixtures. The student must decide: Explain why lime water turns milky when exposed to air by identifying carbon dioxide as the reacting gas. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

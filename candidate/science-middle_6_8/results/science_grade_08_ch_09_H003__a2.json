@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meena dissolves 4 spoons of sugar in 200 mL of water in a glass. Her brother Arjun dissolves 2 spoons of sugar in 200 mL of water in an identical glass. Both stir until all the sugar dissolves.\n\nWhich row correctly compares Meena's glass with Arjun's glass?",
+  "options": [
+    {
+      "id": "A",
+      "text": "more sugar dissolved in the same amount of water: no; more concentrated: no"
+    },
+    {
+      "id": "B",
+      "text": "more sugar dissolved in the same amount of water: no; more concentrated: yes"
+    },
+    {
+      "id": "C",
+      "text": "more sugar dissolved in the same amount of water: yes; more concentrated: no"
+    },
+    {
+      "id": "D",
+      "text": "more sugar dissolved in the same amount of water: yes; more concentrated: yes"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"more sugar dissolved in the same amount of water\",\"more concentrated\"],\"rows\":[[\"no\",\"no\"],[\"no\",\"yes\"],[\"yes\",\"no\"],[\"yes\",\"yes\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Both glasses contain the same amount of water (200 mL). Meena's glass has more dissolved solute (4 spoons vs 2 spoons) in that fixed amount of water, so it contains more sugar dissolved and is therefore the more concentrated solution. The correct row is yes/yes, which is option D. The trap options are A (ignoring the solute difference entirely) and B/C (treating the two properties as independent rather than linked).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

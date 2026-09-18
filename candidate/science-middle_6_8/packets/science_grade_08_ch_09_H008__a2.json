@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m20_qp_12:q5",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:25:00.524Z",
+  "source": {
+    "item_ref": "session:0620_m20_qp_12:q5",
+    "item_type": "single_mcq",
+    "stem": "Lithium reacts with fluorine to form the compound lithium fluoride.\n\nWhich statement about this reaction is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Each fluorine atom gains one electron."
+      },
+      {
+        "id": "B",
+        "text": "Each fluorine atom gains two or more electrons."
+      },
+      {
+        "id": "C",
+        "text": "Each fluorine atom loses one electron."
+      },
+      {
+        "id": "D",
+        "text": "Each fluorine atom loses two or more electrons."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Mixtures, solutions, pure substances and separation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "digital weighing balance is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: If the balance does not initially show zero, it must be brought to zero before measuring."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when If the balance does not initially show zero, it must be brought to zero before measuring is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "Mass is measured with a balance, which must be brought to zero by tare or reset when needed; liquid volume is measured with a measuring cylinder, whose capacity and smallest division set what it can read. Zeroing the balance and reading the measuring cylinder correctly produce usable mass and volume measurements for later density calculations. The learner correctly applies this rule: Mass is measured with a balance, which must be brought to zero by tare or reset when needed; liquid volume is measured with a measuring cylinder, whose capacity and smallest division set what it can read. The displayed balance number and any meniscus mark can be read directly because the instrument already gives the measurement.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_09/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “Each fluorine atom gains two or more electrons.” looked possible instead of “Each fluorine atom gains one electron.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “Each fluorine atom loses one electron.” looked possible instead of “Each fluorine atom gains one electron.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “Each fluorine atom loses two or more electrons.” looked possible instead of “Each fluorine atom gains one electron.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Solutions and density. The student must decide: Choose the correct measurement procedure before using mass and volume data. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

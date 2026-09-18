@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meera lists four substances found in her kitchen and at home.\n\nShe knows that a compound forms when different elements are chemically joined together, so the new substance has properties different from those of its elements and cannot be separated by physical means.\n\nWhich substances are compounds?\n\n| substance | W | X | Y | Z |\n| description | common salt, made by joining sodium and chlorine | air, a mixture of gases that keep their own properties | copper wire, made of only one element | sugar, made by joining carbon, hydrogen and oxygen |",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "W and Z"
+    },
+    {
+      "id": "C",
+      "text": "X and Y"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"substance\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"description\",\"common salt, made by joining sodium and chlorine\",\"air, a mixture of gases that keep their own properties\",\"copper wire, made of only one element\",\"sugar, made by joining carbon, hydrogen and oxygen\"]],\"row_labels\":[\"description\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "W (common salt) and Z (sugar) are compounds because their constituent elements are chemically joined and the substances have properties different from those elements. X (air) is a mixture whose gases retain their properties; Y (copper) is a single element. Hence the correct option is B: W and Z.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
