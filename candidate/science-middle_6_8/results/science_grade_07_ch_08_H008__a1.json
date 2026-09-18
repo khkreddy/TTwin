@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera walks from her home in Jaipur to the school gate. She covers a distance of 600 metres in 10 minutes. She wants to find her speed in metres per second.\nWhich calculation and unit correctly give her speed?",
+  "options": [
+    {
+      "id": "A",
+      "text": "600 × 10 = 6000 m/s"
+    },
+    {
+      "id": "B",
+      "text": "10 ÷ 600 = 0.017 m/s"
+    },
+    {
+      "id": "C",
+      "text": "600 ÷ (10 × 60) = 1 m/s"
+    },
+    {
+      "id": "D",
+      "text": "600 ÷ 10 = 60 m/s"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Speed = total distance ÷ total time. Time must first be converted to seconds: 10 min = 600 s, so 600 ÷ 600 = 1 m/s. Option D is the trap for dividing without converting the unit of time; B reverses the division; A multiplies.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

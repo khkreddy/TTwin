@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "During a school sports practice, Meera runs 150 m in 30 s, while Arjun runs 100 m in 10 s.\nWhich calculation correctly compares their speeds to decide who is faster?",
+  "options": [
+    {
+      "id": "A",
+      "text": "150 ÷ 30 = 5 m/s and 100 ÷ 10 = 10 m/s, so Arjun is faster"
+    },
+    {
+      "id": "B",
+      "text": "150 > 100, so Meera is faster because she covered more distance"
+    },
+    {
+      "id": "C",
+      "text": "30 > 10, so Arjun is faster because he took less time"
+    },
+    {
+      "id": "D",
+      "text": "150 + 30 = 180 and 100 + 10 = 110, so Meera is faster"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Speed must be compared as distance per unit time because both distances and times differ: 150/30 = 5 m/s and 100/10 = 10 m/s, so Arjun is faster. Option B traps comparing distance alone, C traps comparing time alone, D traps an invalid operation.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
