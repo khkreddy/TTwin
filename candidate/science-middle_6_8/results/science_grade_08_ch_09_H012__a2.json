@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "In her kitchen, Priya drops a steel spoon and a plastic spoon of the same size into a bowl of water. The steel spoon sinks because its density is ……1…… that of water. The plastic spoon floats because its density is ……2…… that of water.\n\nWhich words correctly complete gaps 1 and 2?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 greater than; 2 greater than"
+    },
+    {
+      "id": "B",
+      "text": "1 greater than; 2 less than"
+    },
+    {
+      "id": "C",
+      "text": "1 less than; 2 greater than"
+    },
+    {
+      "id": "D",
+      "text": "1 less than; 2 less than"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"\",\"1\",\"2\"],\"rows\":[[\"A\",\"greater than\",\"greater than\"],[\"B\",\"greater than\",\"less than\"],[\"C\",\"less than\",\"greater than\"],[\"D\",\"less than\",\"less than\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An object denser than water sinks and one less dense than water floats, regardless of size. Steel is denser than water (gap 1: greater than) and the plastic used for a floating spoon is less dense than water (gap 2: less than), so B is correct. Option A is the trap for a student who judges sinking/floating from apparent heaviness rather than density; C and D misassign both comparisons.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
