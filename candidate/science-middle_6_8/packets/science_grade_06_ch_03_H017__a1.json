@@ -1,0 +1,101 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:49:02.481Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q17",
+    "item_type": "single_mcq",
+    "stem": "Which structures in plants and in humans normally carry amino acids?",
+    "options": [
+      {
+        "id": "A",
+        "text": "arteries ✓; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "B",
+        "text": "arteries ✓; phloem ✗; ureters ✓"
+      },
+      {
+        "id": "C",
+        "text": "arteries ✗; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "D",
+        "text": "arteries ✗; phloem ✗; ureters ✓"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Regions with fewer kinds of food show more respect for farmers."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "It is fine to waste cheap food."
+      }
+    ],
+    "enrichment": "Many people leave food unconsumed on their plates, but food should be respected because farmers and other community members put time and effort into getting food from the farm to the plate. recognising farm-to-plate effort -> taking only needed food and reducing waste The learner correctly applies this rule: Many people leave food unconsumed on their plates, but food should be respected because farmers and other community members put time and effort into getting food from the farm to the plate. Food left on a plate is only a personal matter and has no connection to farmers or community effort.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H017",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Connect avoiding food waste with the time and effort put in by farmers and community members to bring food from farm to plate. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

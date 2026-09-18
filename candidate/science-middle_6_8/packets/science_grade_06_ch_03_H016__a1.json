@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q16",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:48:46.661Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q16",
+    "item_type": "single_mcq",
+    "stem": "What is the correct sequence for blood being pumped from the heart to the lungs?",
+    "options": [
+      {
+        "id": "A",
+        "text": "left atrium → left ventricle → pulmonary artery"
+      },
+      {
+        "id": "B",
+        "text": "left atrium → left ventricle → pulmonary vein"
+      },
+      {
+        "id": "C",
+        "text": "right atrium → right ventricle → pulmonary artery"
+      },
+      {
+        "id": "D",
+        "text": "right atrium → right ventricle → pulmonary vein"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Locally grown food always has fewer food miles, even if it travels through a distant warehouse."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Putting the same food on sale reduces its food miles even when its delivery route stays unchanged."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Food miles stop at the shop; carrying the food home does not count."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The fresher-looking apple has fewer food miles, even though it travelled farther."
+      }
+    ],
+    "enrichment": "Food miles are the entire distance travelled by a food item from the producer to the consumer; reducing food miles helps cut down cost and pollution. shorter producer-to-consumer travel distance -> fewer food miles -> lower cost and pollution The learner correctly applies this rule: Food miles are the entire distance travelled by a food item from the producer to the consumer; reducing food miles helps cut down cost and pollution. Food miles means the distance a person travels to buy or eat food, not the food item's producer-to-consumer travel.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H016",
+      "gate_names": [
+        "relationship_reversal",
+        "relationship_reversal",
+        "relationship_reversal"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student reversing the directed relation (left ventricle vs right ventricle). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Explain how eating local food can reduce food miles and why lower food miles matter for cost and pollution. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

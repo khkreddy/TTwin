@@ -1,28 +1,28 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0610_m15_qp_12:q18",
+  "packet_id": "session:biology_8b_rjb_exe6",
   "slot": "T-MOD",
-  "created_at": "2026-09-18T18:39:37.078Z",
+  "created_at": "2026-09-18T18:48:04.715Z",
   "source": {
-    "item_ref": "session:0610_m15_qp_12:q18",
+    "item_ref": "session:biology_8b_rjb_exe6",
     "item_type": "single_mcq",
-    "stem": "Why is the circulatory system of mammals described as a double circulation?",
+    "stem": "Which of the following options regarding Darwin’s theory of natural selection is incorrect ( )\nA. All living things generally have strong reproductive capabilities\nB. If living things want to survive, they must fight for survival in order to obtain food and space.\nC. Variations produced by organisms must be conducive to adapting to the environment\nD. Organisms that do not adapt to the environment will be eliminated",
     "options": [
       {
         "id": "A",
-        "text": "Blood flows firstly through arteries and then through veins."
+        "text": "All living things generally have strong reproductive capabilities"
       },
       {
         "id": "B",
-        "text": "Blood flows through the heart twice on one complete circuit of the body."
+        "text": "If living things want to survive, they have to fight for food and space."
       },
       {
         "id": "C",
-        "text": "In the heart, blood flows firstly through atria and then through ventricles."
+        "text": "Variations produced by organisms must be conducive to adapting to the environment"
       },
       {
         "id": "D",
-        "text": "The atria and the ventricles contract alternately."
+        "text": "Creatures that do not adapt to the environment will be eliminated"
       }
     ],
     "statements": [],
@@ -32,12 +32,20 @@
     "tikz": "",
     "key": {
       "kind": "single_letter",
-      "letter": "B"
+      "letter": "C"
     }
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_03/H009",
+      "unit_id": "science/grade_06/ch_03/H009",
+      "title": "Identify the presence of starch in a food item from a blue-black colour result in the starch test.",
+      "node_labels": [
+        "Food, digestion, growth and health",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -63,25 +71,12 @@
       }
     ],
     "enrichment": "A blue-black colour in the starch test indicates the presence of starch in the food item. starch test gives blue-black colour -> starch is present The learner correctly applies this rule: A blue-black colour in the starch test indicates the presence of starch in the food item. Any colour change in any food test proves whichever nutrient the learner already expected.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_03/H009",
-      "gate_names": [
-        "term_substitution",
-        "condition_omission",
-        "term_substitution"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Blood flows firstly through arteries and then thr…” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “In the heart, blood flows firstly through atria a…” looked possible instead of “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The atria and the ventricles contract alternately.” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
     "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Identify the presence of starch in a food item from a blue-black colour result in the starch test. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
-    "variation_class": "V4",
+    "variation_class": "V3",
     "fidelity_mode": "FAITHFUL_TRANSFER",
     "target_item_type": "preserve",
     "format": {
