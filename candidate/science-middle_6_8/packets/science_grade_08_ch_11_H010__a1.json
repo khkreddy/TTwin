@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_22:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:18:59.100Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_22:q27",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful in the manufacture of aircraft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts electricity"
+      },
+      {
+        "id": "B",
+        "text": "high boiling point"
+      },
+      {
+        "id": "C",
+        "text": "low density"
+      },
+      {
+        "id": "D",
+        "text": "silver colour"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Moon is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Artificial satellites are different from the Moon, which is Earth's natural satellite."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "it can be seen as a moving speck under suitable viewing conditions -> satellites happens first, and that produces Human-made object orbits Earth."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Artificial satellites are different from the Moon, which is Earth's natural satellite is not true."
+      }
+    ],
+    "enrichment": "The Moon is Earth's natural satellite, while artificial satellites are man-made objects that orbit Earth and can appear as tiny moving specks in the night sky. Human-made object orbits Earth -> it can be seen as a moving speck under suitable viewing conditions -> satellites can serve purposes such as mapping, while old satellites and rocket parts can become space debris. The learner correctly applies this rule: The Moon is Earth's natural satellite, while artificial satellites are man-made objects that orbit Earth and can appear as tiny moving specks in the night sky. A moving point of light is just a star or the Moon; artificial satellites cannot be seen from the ground.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_11/H010",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts electricity” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “high boiling point” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “silver colour” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: The night sky: Moon and calendars. The student must decide: Classify moving star-like points in the night sky as possible artificial satellites and connect them to satellite uses and space debris. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

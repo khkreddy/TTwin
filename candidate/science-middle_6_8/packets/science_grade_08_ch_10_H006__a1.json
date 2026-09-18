@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:18:36.516Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q4",
+    "item_type": "single_mcq",
+    "stem": "Which quantities are measured in the same unit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "energy, power and work"
+      },
+      {
+        "id": "B",
+        "text": "energy and power, but not work"
+      },
+      {
+        "id": "C",
+        "text": "energy and work, but not power"
+      },
+      {
+        "id": "D",
+        "text": "power and work, but not energy"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "parallel rays is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The comparison is for multiple parallel rays falling on the mirrors."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The comparison is for multiple parallel rays falling on the mirrors is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "A plane mirror reflects multiple parallel rays as parallel rays, a concave mirror makes them converge, and a convex mirror makes them diverge. mirror surface shape determines whether reflected parallel rays stay parallel, converge, or diverge The learner predicts the reflected beam pattern for plane, concave, and convex mirrors from the mirror surface shape. All mirrors reflect parallel beams as parallel beams because each ray follows the law of reflection.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_10/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “energy, power and work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “energy and power, but not work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “power and work, but not energy” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Light: mirrors and lenses. The student must decide: Predict how multiple parallel light rays behave after reflection from plane, concave, and convex mirrors. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
