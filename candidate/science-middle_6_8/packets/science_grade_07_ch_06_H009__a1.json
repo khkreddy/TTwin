@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:52:43.679Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q29",
+    "item_type": "single_mcq",
+    "stem": "What always increases during the development of an organism?",
+    "options": [
+      {
+        "id": "A",
+        "text": "cell number"
+      },
+      {
+        "id": "B",
+        "text": "complexity"
+      },
+      {
+        "id": "C",
+        "text": "dry mass"
+      },
+      {
+        "id": "D",
+        "text": "volume"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Alcohol does not need to be refused because it is not an illegal drug."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "I can try a cigarette if I have no breathing difficulty."
+      }
+    ],
+    "enrichment": "Harmful substances such as tobacco, gutka, cigarettes, beedi, alcohol, and illegal drugs can damage physical and mental health and are addictive. A person should say no to addictive substances the first time and every time, and seek help from trusted people, counselling, or medical advice when needed. first or repeated substance use -> addiction risk and health problems; refusal and support -> protection and recovery help The learner applies the rule that tobacco, gutka, cigarettes, beedi, alcohol, and illegal drugs should be refused from the first offer because they are harmful and addictive, and help should be sought when needed. Trying a harmful substance once is a normal adolescent experiment and can always be stopped easily.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_06/H009",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “cell number” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “dry mass” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “volume” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Adolescence. The student must decide: Decide whether tobacco, gutka, cigarettes, beedi, alcohol, and illegal drugs should be refused from the first offer because they are harmful and addictive. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
