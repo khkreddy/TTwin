@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:20:13.870Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "A person in a factory has to lift a box on to a shelf.\nWhich action involves the person doing the least amount of work?",
+    "options": [
+      {
+        "id": "A",
+        "text": "lifting the box quickly to the high shelf"
+      },
+      {
+        "id": "B",
+        "text": "lifting the box slowly to the high shelf"
+      },
+      {
+        "id": "C",
+        "text": "lifting the box to the low shelf first then lifting it to the high shelf"
+      },
+      {
+        "id": "D",
+        "text": "lifting the box to the low shelf instead of to the high shelf"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "lens is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The object must be transparent because lenses allow light to pass through them."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The object must be transparent because lenses allow light to pass through them is not true."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Judge from the most visible feature in the figure, not from the mechanism's test."
+      }
+    ],
+    "enrichment": "A lens is a transparent material with curved surfaces; a convex lens is thicker in the middle than at the edges, while a concave lens is thicker at the edges than in the middle. lens thickness pattern determines whether the lens is convex or concave The learner classifies a transparent curved object as a convex or concave lens from its thickness pattern. Any curved object with a bulging shape is a lens, even if it is opaque and light cannot pass through it.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_10/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “lifting the box quickly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “lifting the box slowly to the high shelf” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “lifting the box to the low shelf first then lifti…” looked possible instead of “lifting the box to the low shelf instead of to th…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Light: mirrors and lenses. The student must decide: Classify a transparent curved object as a convex lens or concave lens from its thickness pattern. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
