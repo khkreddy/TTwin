@@ -1,0 +1,94 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_8b_rjb_exe6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:38:31.443Z",
+  "source": {
+    "item_ref": "session:biology_8b_rjb_exe6",
+    "item_type": "single_mcq",
+    "stem": "Which of the following options regarding Darwin’s theory of natural selection is incorrect ( )\nA. All living things generally have strong reproductive capabilities\nB. If living things want to survive, they must fight for survival in order to obtain food and space.\nC. Variations produced by organisms must be conducive to adapting to the environment\nD. Organisms that do not adapt to the environment will be eliminated",
+    "options": [
+      {
+        "id": "A",
+        "text": "All living things generally have strong reproductive capabilities"
+      },
+      {
+        "id": "B",
+        "text": "If living things want to survive, they have to fight for food and space."
+      },
+      {
+        "id": "C",
+        "text": "Variations produced by organisms must be conducive to adapting to the environment"
+      },
+      {
+        "id": "D",
+        "text": "Creatures that do not adapt to the environment will be eliminated"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_03/H003",
+      "unit_id": "science/grade_06/ch_03/H003",
+      "title": "Compare traditional and modern cooking practices as practices that can differ because culinary practices change over time.",
+      "node_labels": [
+        "Food, digestion, growth and health",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This is a traditional-versus-modern difference."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Traditional cooking."
+      }
+    ],
+    "enrichment": "Cooking practices, also called culinary practices, have changed over time, creating significant differences between traditional and modern culinary practices. passage of time and changes in practice -> differences between traditional and modern cooking practices The learner correctly applies this rule: Cooking practices, also called culinary practices, have changed over time, creating significant differences between traditional and modern culinary practices. Traditional and modern cooking differ only because different people like different tastes.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Compare traditional and modern cooking practices as practices that can differ because culinary practices change over time. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

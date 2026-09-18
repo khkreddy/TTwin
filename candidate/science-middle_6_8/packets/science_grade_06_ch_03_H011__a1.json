@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:39:59.389Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q29",
+    "item_type": "single_mcq",
+    "stem": "What always increases during the development of an organism?",
+    "options": [
+      {
+        "id": "A",
+        "text": "cell number"
+      },
+      {
+        "id": "B",
+        "text": "complexity"
+      },
+      {
+        "id": "C",
+        "text": "dry mass"
+      },
+      {
+        "id": "D",
+        "text": "volume"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Starch is present."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Protein is present."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Starch and fat are absent."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Protein is absent."
+      }
+    ],
+    "enrichment": "In the protein test, a violet colour after adding copper sulphate solution and caustic soda solution indicates the presence of proteins in the food item. protein-test chemicals added to prepared food sample and violet colour appears -> protein is present The learner correctly applies this rule: In the protein test, a violet colour after adding copper sulphate solution and caustic soda solution indicates the presence of proteins in the food item. Any added laboratory chemical proves protein even if the violet colour does not appear.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H011",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “cell number” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “dry mass” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “volume” for the required “complexity”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Identify the presence of protein in a food item from a violet colour after the protein-test procedure with copper sulphate solution and caustic soda solution. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
