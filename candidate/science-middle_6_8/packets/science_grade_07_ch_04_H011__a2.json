@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_22:q28",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:52:43.704Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_22:q28",
+    "item_type": "single_mcq",
+    "stem": "One method of preventing the rusting of iron is to keep oxygen away from the surface of the metal.\n\nWhich way of rust prevention does not use this method?",
+    "options": [
+      {
+        "id": "A",
+        "text": "coating the iron with grease"
+      },
+      {
+        "id": "B",
+        "text": "connecting the iron to a more reactive metal"
+      },
+      {
+        "id": "C",
+        "text": "covering the iron with plastic"
+      },
+      {
+        "id": "D",
+        "text": "painting the iron"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Nitrogen is used to purify drinking water."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Every non-metal is essential in everyday life."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Only metals are important in everyday life."
+      }
+    ],
+    "enrichment": "Non-metals have important uses: oxygen is needed for breathing and survival, carbon is a building block of life forms and key components needed for growth and energy, nitrogen is used in fertilisers and supports plant growth, and chlorine is used in water purification. The roles of non-metals in living organisms, plant growth, and water purification explain why non-metals are essential in everyday life. The learner correctly applies this rule: Non-metals have important uses: oxygen is needed for breathing and survival, carbon is a building block of life forms and key components needed for growth and energy, nitrogen is used in fertilisers and supports plant growth, and chlorine is used in water purification. Useful substances are mainly visible metals in tools, so gases and less visible non-metals do not count as important.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_04/H011",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “coating the iron with grease” for the required “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “covering the iron with plastic” for the required “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “painting the iron” looked possible instead of “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When explaining everyday importance, decide that non-metals are essential even though many metals are visible in tools and technologies. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

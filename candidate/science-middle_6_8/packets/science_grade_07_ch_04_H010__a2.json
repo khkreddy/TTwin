@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_12:q36",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:52:36.832Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_12:q36",
+    "item_type": "single_mcq",
+    "stem": "Which bond is not present in the structure of ethanol, CH₃CH₂OH?",
+    "options": [
+      {
+        "id": "A",
+        "text": "C–C"
+      },
+      {
+        "id": "B",
+        "text": "H–H"
+      },
+      {
+        "id": "C",
+        "text": "H–O"
+      },
+      {
+        "id": "D",
+        "text": "O–C"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Plastic is a non-metal."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Laboratory-made elements are neither metals nor non-metals."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Shiny glass is a metal."
+      }
+    ],
+    "enrichment": "Metals and non-metals are sub-categories of elements, and an element cannot be broken down into simpler substances. Oxygen, hydrogen, nitrogen, and carbon are non-metals; plastic, glass, wood, rubber, and paper are materials that are not classified as metals or non-metals. A substance's status as an element determines whether it can be classified as a metal or non-metal in this chapter. The learner correctly applies this rule: Metals and non-metals are sub-categories of elements, and an element cannot be broken down into simpler substances. Oxygen, hydrogen, nitrogen, and carbon are non-metals; plastic, glass, wood, rubber, and paper are materials that are not classified as metals or non-metals. Anything that is not a metal should be placed in the non-metal category.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_04/H010",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “H–O” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “O–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When sorting substances and materials, decide whether something is an element classified as a metal or non-metal or an everyday material that is not in either class. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

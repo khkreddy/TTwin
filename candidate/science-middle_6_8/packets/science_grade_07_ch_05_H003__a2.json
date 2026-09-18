@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:53:12.996Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "Magnesium nitride is formed when magnesium burns in air. Magnesium nitride is an ionic compound.\n\nWhat is the formula of magnesium nitride?",
+    "options": [
+      {
+        "id": "A",
+        "text": "MgN₂"
+      },
+      {
+        "id": "B",
+        "text": "Mg₂N₂"
+      },
+      {
+        "id": "C",
+        "text": "Mg₂N₃"
+      },
+      {
+        "id": "D",
+        "text": "Mg₃N₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Physical vs chemical change",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Nitrogen is the gas required for combustion."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "An oxygen-free chemical reaction that releases heat is combustion."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A flameless reaction with oxygen that releases heat is not combustion."
+      }
+    ],
+    "enrichment": "Combustion is a chemical reaction in which a substance reacts with oxygen and produces heat or light. When a combustible substance reacts with oxygen, the reaction releases heat or light and is classified as combustion. The learner classifies combustion by checking that a substance reacts with oxygen and produces heat or light. Combustion just means a flame or bright light appears, so oxygen reaction does not need to be checked.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_05/H003",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “MgN₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “Mg₂N₂” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “Mg₂N₃” looked possible instead of “Mg₃N₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Physical and chemical changes. The student must decide: Decide whether a reaction is combustion by checking for reaction with oxygen and production of heat or light. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "In her home in Jaipur, Meena observes four changes.\n\n| change | W | X | Y | Z |\n| observation | ice cubes melting in a glass of water | an iron gate forming rust in the rain | tearing a sheet of paper into pieces | a log of wood burning in the stove |\n\nWhich changes are physical changes?",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "X and Z"
+    },
+    {
+      "id": "C",
+      "text": "W and Y"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"change\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"observation\",\"ice cubes melting in a glass of water\",\"an iron gate forming rust in the rain\",\"tearing a sheet of paper into pieces\",\"a log of wood burning in the stove\"]],\"row_labels\":[\"observation\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A physical change produces no new substance. Melting ice (W) and tearing paper (Y) leave the material unchanged, so they are physical. Rusting (X) forms a new substance (rust) and burning wood (Z) forms ash, smoke and gases, so both are chemical. Therefore the correct pair is W and Y, option C. Option A traps a learner who treats rusting as merely a change in appearance; option B pairs the two chemical changes; option D pairs one physical with one chemical change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
