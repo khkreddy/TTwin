@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_12:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T23:04:20.694Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_12:q27",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful in the manufacture of aircraft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts electricity"
+      },
+      {
+        "id": "B",
+        "text": "high boiling point"
+      },
+      {
+        "id": "C",
+        "text": "low density"
+      },
+      {
+        "id": "D",
+        "text": "silver colour"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Sun is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Use distance from the Sun as a starting expectation, not as the only rule."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "planet temperature happens first, and that produces distance from the Sun plus atmospheric heat trapping."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Use distance from the Sun as a starting expectation, not as the only rule is not true."
+      }
+    ],
+    "enrichment": "Planets closer to the Sun generally receive more heat, but a thick atmosphere rich in carbon dioxide can trap heat strongly, so Venus is the hottest planet even though it is not closest to the Sun. distance from the Sun plus atmospheric heat trapping -> planet temperature The learner correctly uses the chapter relationship: Planets closer to the Sun generally receive more heat, but a thick atmosphere rich in carbon dioxide can trap heat strongly, so Venus is the hottest planet even though it is not closest to the Sun. The closest planet to the Sun must always be the hottest planet.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_13/H002",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts electricity” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “high boiling point” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “silver colour” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Why Earth supports life. The student must decide: Decide whether a planet's temperature can be predicted from distance from the Sun alone. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
