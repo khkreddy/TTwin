@@ -1,0 +1,94 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:59:36.022Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q2",
+    "item_type": "single_mcq",
+    "stem": "The graph represents the motion of a train travelling between two stations.\n0 100 200 300 400 500 600 700 800 900 Which statement about the train is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Its acceleration takes a longer time than its deceleration."
+      },
+      {
+        "id": "B",
+        "text": "It travels at constant speed for less than half of its journey time."
+      },
+      {
+        "id": "C",
+        "text": "It travels 2000 m in the first 100 s."
+      },
+      {
+        "id": "D",
+        "text": "It travels 10⁰⁰0 m at constant speed."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Speed during the stop = 10 m/s"
+      }
+    ],
+    "enrichment": "Speed equals total distance covered divided by total time taken; metre/second is written as m/s and kilometre/hour is written as km/h. Dividing distance by time gives distance per unit time, and the distance and time units determine the speed unit. The learner correctly applies this rule: Speed equals total distance covered divided by total time taken; metre/second is written as m/s and kilometre/hour is written as km/h. Speed can be found by dividing the two numbers in either order and copying a familiar unit from the question.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_08/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Its acceleration takes a longer time than its dec…” for the required “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It travels 2000 m in the first 100 s.” for the required “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “It travels 10⁰⁰0 m at constant speed.” looked possible instead of “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Measurement of time. The student must decide: Calculate speed and express it with the correct unit. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
