@@ -73,6 +73,7 @@ def _overlay_records() -> dict[str, dict]:
         paths.extend(sorted(astra.glob("*.json")))
     paths.extend(
         [
+            _ROOT / "data" / "overlay" / "lbs_olympiad.json",
             _ROOT / "data" / "spectra" / "lbs.json",
             _ROOT / "data" / "overlay" / "lbs_gold.json",
         ]
@@ -1156,16 +1157,26 @@ def seeds_from_lbs(lbs: dict | None, key: str | None) -> list[dict]:
     return out
 
 
+def gold_letters(key) -> set[str]:
+    """Single A–D or a multi-correct string such as 'BC'."""
+    if key in LETTERS:
+        return {key}
+    if isinstance(key, str):
+        return {c for c in key.upper() if c in LETTERS}
+    return set()
+
+
 def lbs_complete(lbs: dict | None, key: str, options: dict | None = None, item: dict | None = None) -> bool:
-    if not lbs or key not in LETTERS:
+    g = gold_letters(key)
+    if not lbs or not g:
         return False
     if item is not None:
         present = option_letters(item)
     else:
         present = [L for L in LETTERS if (options or {}).get(L) not in (None, "")] or list(LETTERS)
-    expect = set(present) - {key}
+    expect = set(present) - g
     if not expect:
-        expect = set(LETTERS) - {key}
+        expect = set(LETTERS) - g
     wrong = lbs.get("wrong") or {}
     if expect - set(wrong):
         return False
@@ -1191,7 +1202,7 @@ def ensure_item(item: dict) -> bool:
     """
     a = dict(item.get("assessment") or {})
     key = a.get("mcq_key")
-    if key not in LETTERS or a.get("key_status") != "available":
+    if not gold_letters(key) or a.get("key_status") != "available":
         return False
     lifted = lift_options(item)
     uid = str(item.get("uid") or "")

@@ -9,7 +9,7 @@ import json
 import sys
 from pathlib import Path
 
-from lbs_construct import ensure_item, lbs_complete, LETTERS
+from lbs_construct import LETTERS, ensure_item, gold_letters, lbs_complete
 from lbs_quality import is_stamp_lbs, lbs_relevant
 
 TTWIN = Path(__file__).resolve().parents[1]
@@ -24,7 +24,7 @@ def figure_letter_mcq(it: dict) -> bool:
 def census_item(it: dict) -> dict:
     a = it.get("assessment") or {}
     k = a.get("mcq_key")
-    keyed = k in LETTERS and a.get("key_status") == "available"
+    keyed = bool(gold_letters(k)) and a.get("key_status") == "available"
     n_opt = sum(1 for L in LETTERS if str((it.get("options") or {}).get(L) or "").strip())
     eligible = keyed and (n_opt >= 2 or figure_letter_mcq(it))
     lbs = a.get("learn_by_solve")

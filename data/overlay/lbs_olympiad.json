@@ -1,0 +1,146 @@
+{
+  "schema": "ttwin.lbs.olympiad.v1",
+  "note": "ISO-GEN 81_LBS: unlock is a simpler gate question, not an option reprint. Constructor templates must not overwrite these uids.",
+  "items": {
+    "jeebench:srcjson:math:jee_adv_2016_paper_2:q37": {
+      "solve": "P = I+N with N strictly lower triangular and N^3 = 0. Then P^n = I + nN + C(n,2) N^2. Q = P^50 − I, so Q = 50N + 1225 N^2. q21 = 200, q32 = 200, q31 = 20400, hence (q31+q32)/q21 = 103.",
+      "key": "B",
+      "hinge_id": "math:M6",
+      "hinge_label": "Binomial expansion of a unipotent matrix",
+      "wrong": {
+        "A": {
+          "mx_type": "operation_confusion",
+          "pathway": "Skipped writing P = I+N and the nilpotency N^3=0, so the three-term binomial never starts.",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "The given P has 1s on the main diagonal. Write P = I + N. Which statement about N is true?",
+            "options": {
+              "A": "N is the identity matrix",
+              "B": "N is strictly lower triangular and N^3 is the zero matrix",
+              "C": "N equals P squared",
+              "D": "N is symmetric with 1s on the diagonal"
+            },
+            "key": "B",
+            "why": "P − I has zeros on and above the diagonal, so N is strictly lower triangular. One further multiply kills the remaining nonzero, so N^3 = 0. That is what licences P^n = I + nN + C(n,2)N^2."
+          }
+        },
+        "C": {
+          "mx_type": "condition_omission",
+          "pathway": "Took 50×4 = 200 from N and then added 1, as if q21 were not purely from 50N.",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "Q = P^{50} − I. The (2,1) entry of N^2 is 0, so q_{21} comes only from 50N. If that entry of N is 4, what is q_{21}?",
+            "options": {
+              "A": "4",
+              "B": "50",
+              "C": "200",
+              "D": "800"
+            },
+            "key": "C",
+            "why": "50 × 4 = 200. There is no extra +1 in that entry; N^2 does not contribute to position (2,1)."
+          }
+        },
+        "D": {
+          "mx_type": "operation_confusion",
+          "pathway": "Used the wrong coefficient on N^2 (not C(50,2) = 1225), which shifts q31.",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "If N^3 = 0, then (I+N)^{50} = I + 50N + \\binom{50}{2} N^2. What is \\binom{50}{2}?",
+            "options": {
+              "A": "50",
+              "B": "100",
+              "C": "1225",
+              "D": "2500"
+            },
+            "key": "C",
+            "why": "50×49/2 = 1225. That coefficient multiplies N^2 and therefore q_{31}; it is not a small adjustment of 200."
+          }
+        }
+      }
+    },
+    "jeebench:srcjson:math:jee_adv_2016_paper_1:q38": {
+      "solve": "At most one boy, team of 4, then a captain from those 4. Zero boys: C(6,4)×4 = 60. One boy: C(6,3)×C(4,1)×4 = 320. Total 380.",
+      "key": "A",
+      "hinge_id": "math:M8/H-COUNTING",
+      "hinge_label": "Counting with a captain and an at-most-one constraint",
+      "wrong": {
+        "B": {
+          "mx_type": "condition_omission",
+          "pathway": "Counted only the one-boy teams (320) and dropped the all-girl teams allowed by ‘at most one boy’.",
+          "followup": {
+            "format": "true_false",
+            "stem": "Under the condition “at most one boy”, a team of four girls is allowed.",
+            "key": "T",
+            "why": "At most one boy includes zero boys. Those teams still need a captain from the four girls: C(6,4)×4 = 60, which must be added to the one-boy count."
+          }
+        },
+        "C": {
+          "mx_type": "operation_confusion",
+          "pathway": "Chose the captain from only one gender, or mixed the two cases with the wrong factor 3 instead of 4.",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "A team of 4 has already been chosen. How many ways can the captain be chosen?",
+            "options": {
+              "A": "1, the captain is already determined",
+              "B": "3, excluding one reserved member",
+              "C": "4, any of the four members",
+              "D": "10, any member of the club"
+            },
+            "key": "C",
+            "why": "The captain is chosen from the four selected members, so multiply by 4 after the membership count."
+          }
+        },
+        "D": {
+          "mx_type": "intermediate_omission",
+          "pathway": "Counted memberships C(6,4)+C(6,3)C(4,1)=95 and never chose a captain.",
+          "followup": {
+            "format": "true_false",
+            "stem": "After the four members are chosen, a captain must still be selected from those four.",
+            "key": "T",
+            "why": "95 is only the number of 4-subsets with at most one boy. Each subset still has 4 choices of captain, which is why 95 is not the team count."
+          }
+        }
+      }
+    },
+    "jeebench:srcjson:math:jee_adv_2016_paper_1:q44": {
+      "solve": "PQ=kI so Q = k P^{-1} and det(Q)=k^3/det(P). The given det(Q)=k^2/2 forces det(P)=2k. The (2,3) entry of Q then pins α, and the two det(adj) identities decide which of C,D hold. Gold is B and C.",
+      "key": "BC",
+      "hinge_id": "math:M6",
+      "hinge_label": "Inverse, adjugate and determinant identities",
+      "wrong": {
+        "A": {
+          "mx_type": "scope_error",
+          "pathway": "Forced α=0 and k=8 without using det(Q)=k^3/det(P).",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "If PQ = kI for 3×3 matrices, then det(Q) = k^3 / det(P). Given det(Q) = k^2/2, what is det(P)?",
+            "options": {
+              "A": "k/2",
+              "B": "2k",
+              "C": "k^2",
+              "D": "2/k"
+            },
+            "key": "B",
+            "why": "k^3 / det(P) = k^2/2 ⇒ det(P) = 2k. That relation must be used before any claim that k=8 and α=0."
+          }
+        },
+        "D": {
+          "mx_type": "operation_confusion",
+          "pathway": "Used det(Q adj P) = det(Q) det(P) instead of det(Q)[det(P)]^{n-1}.",
+          "followup": {
+            "format": "single_mcq",
+            "stem": "For an n×n matrix, det(adj M) equals which power of det(M)?",
+            "options": {
+              "A": "det(M)",
+              "B": "[det(M)]^{n-1}",
+              "C": "[det(M)]^n",
+              "D": "[det(M)]^{n+1}"
+            },
+            "key": "B",
+            "why": "adj M = (det M) M^{-1} when M is invertible, so det(adj M) = (det M)^{n-1}. For n=3 that is a square, not a free 2^{13}."
+          }
+        }
+      }
+    }
+  }
+}
