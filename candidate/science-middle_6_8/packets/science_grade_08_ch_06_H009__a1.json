@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:38:03.587Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q2",
+    "item_type": "single_mcq",
+    "stem": "A ball is dropped from a table-top. Air resistance may be ignored.\nWhich row describes the velocity and the acceleration of the ball at point X?",
+    "options": [
+      {
+        "id": "A",
+        "text": "acceleration constant; velocity constant"
+      },
+      {
+        "id": "B",
+        "text": "acceleration constant; velocity increasing"
+      },
+      {
+        "id": "C",
+        "text": "acceleration increasing; velocity constant"
+      },
+      {
+        "id": "D",
+        "text": "acceleration increasing; velocity increasing"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"acceleration\",\"velocity\"],\"rows\":[[\"constant\",\"constant\"],[\"constant\",\"increasing\"],[\"increasing\",\"constant\"],[\"increasing\",\"increasing\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The rising water vapour evaporates into raindrops."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Cyclones form just as readily over cold ocean water as over warm ocean water."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Air flows from the cyclone's low-pressure centre towards the higher-pressure surroundings."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Winds are calm throughout the cyclone, including the region around the eye."
+      }
+    ],
+    "enrichment": "Cyclones are large storms that form over warm ocean waters; heated ocean water makes warm moist air rise, the water vapour condenses to raindrops, and the storm develops a lowest-pressure centre called the eye where winds are calm while surrounding regions have strong winds and heavy rainfall. Warm ocean heating leads to rising moist air and condensation; the low-pressure storm draws in surrounding air and can develop into a cyclone with a calm low-pressure eye and destructive surrounding winds and rain. The learner explains cyclone formation over warm ocean water and distinguishes the calm lowest-pressure eye from the surrounding strong winds and heavy rainfall. A cyclone is just a very windy thunderstorm, and the centre must be the most dangerous part because it is the middle.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_06/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “velocity constant” looked possible instead of “velocity increasing”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “velocity constant” looked possible instead of “velocity increasing”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “acceleration increasing” looked possible instead of “acceleration constant”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Pressure. The student must decide: Decide how a warm-ocean storm becomes a cyclone and how the eye differs from the surrounding region. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

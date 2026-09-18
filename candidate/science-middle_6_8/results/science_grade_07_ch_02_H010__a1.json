@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meera tests a colourless liquid from her kitchen with three indicators and records the results shown. Which conclusion about the liquid is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The liquid is acidic because it turns blue litmus paper red."
+    },
+    {
+      "id": "B",
+      "text": "The liquid is basic because turmeric solution stays yellow with it."
+    },
+    {
+      "id": "C",
+      "text": "The liquid is neutral because none of the three indicators changes colour."
+    },
+    {
+      "id": "D",
+      "text": "The liquid is acidic because turmeric solution turns reddish-brown with it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    {
+      "caption": "Indicator results for the liquid",
+      "header": [
+        "Indicator",
+        "Observation"
+      ],
+      "rows": [
+        [
+          "Blue litmus paper",
+          "Turns red"
+        ],
+        [
+          "Red litmus paper",
+          "Stays red"
+        ],
+        [
+          "Turmeric solution",
+          "Stays yellow"
+        ]
+      ]
+    }
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Blue litmus turning red is the decisive positive test for an acid; red litmus staying red and turmeric staying yellow are consistent with an acid and rule out basic (turmeric would turn reddish-brown) and neutral (blue litmus would not turn red). Only A combines all three rows into a justified label; B and C conflict with the litmus results, and D cites a false turmeric observation.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

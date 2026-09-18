@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "During a storm, strong wind blows fast over the tin roof of Meena's house in a village near Pune. The roof is lifted upward.\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The fast-moving air above the roof has lower pressure, so the higher pressure of the still air inside the house pushes the roof upward."
+    },
+    {
+      "id": "B",
+      "text": "The fast-moving air above the roof has higher pressure, and this higher pressure pushes the roof upward from outside."
+    },
+    {
+      "id": "C",
+      "text": "The pressure of the fast-moving air above the roof is the same as the pressure inside, so the roof lifts only because of its own weight."
+    },
+    {
+      "id": "D",
+      "text": "The pressure above the roof is lower simply because it is higher up, whether the air is moving or still."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fast-moving air over the roof lowers the pressure above it; the higher pressure of the still air below pushes the roof up. B reverses the pressure–speed relationship, C omits the pressure difference condition, and D attributes the low pressure to position rather than air speed. Key recalculated for the new item.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
