@@ -14,11 +14,14 @@
     senior: "senior_11_12_as_a",
     olympiad: "olympiad_iit",
     iit: "olympiad_iit",
+    question_bank: "question_bank",
+    bank: "question_bank",
   };
   const PACK_BAND = {
     igcse_9_10: "SECONDARY",
     senior_11_12_as_a: "SENIOR_SECONDARY",
     olympiad_iit: "olympiad-iit",
+    question_bank: "question-bank",
   };
   const CAP = 32;
   const JUNIOR_H007 = "science/grade_10/ch_01/H007";

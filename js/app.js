@@ -106,15 +106,17 @@
   async function ensurePack(pack) {
     const spec = S.spec || specOf(S.subject);
     const entry = ((spec && spec.packs) || []).find((p) => p.id === pack);
-    const file = entry && entry.questions;
-    if (!file) return;
-    if (S.loadedPacks[file]) return;
-    try {
-      const rows = await jget(file);
-      rows.forEach((r) => { S.stems[r.uid] = r; });
-      S.loadedPacks[file] = true;
-    } catch (e) {
-      S.loadedPacks[file] = "missing";
+    const files = [].concat((entry && entry.questions) || []).filter(Boolean);
+    if (!files.length) return;
+    for (const file of files) {
+      if (S.loadedPacks[file]) continue;
+      try {
+        const rows = await jget(file);
+        (rows || []).forEach((r) => { S.stems[r.uid] = r; });
+        S.loadedPacks[file] = true;
+      } catch (e) {
+        S.loadedPacks[file] = "missing";
+      }
     }
   }
 

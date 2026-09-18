@@ -1013,6 +1013,10 @@ def main() -> int:
         census = pack_remaining(write="--dry-run" not in sys.argv)
         print(json.dumps({k: v for k, v in census.items() if k != "question_files"}, indent=2))
         return 0
+    if "--pack-bank" in sys.argv:
+        from pack_question_bank import main as pack_bank_main
+
+        return pack_bank_main()
     maps_only = "--maps-only" in sys.argv
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "questions").mkdir(exist_ok=True)

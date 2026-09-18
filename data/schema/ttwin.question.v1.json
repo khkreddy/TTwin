@@ -11,7 +11,11 @@
       "description": "Bare item_uid join key, e.g. 9701_m16_qp_12:q1. Never tm:-prefixed."
     },
     "subject": { "type": "string", "enum": ["chemistry", "biology", "physics", "maths"] },
-    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit"] },
+    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank"] },
+    "bank": {
+      "type": "string",
+      "description": "Source extra-bank id when pack is question_bank (k12_graph, jeebench, physics500, phybench, mathnet, aime, scibench, superchem, hicogmath)."
+    },
     "grade_band": { "type": ["string", "null"] },
     "node": { "type": "string" },
     "chapter_id": { "type": "string" },

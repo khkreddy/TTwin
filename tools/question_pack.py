@@ -65,12 +65,15 @@ PACK_SLUG = {
     "igcse_9_10": "igcse",
     "senior_11_12_as_a": "senior",
     "olympiad_iit": "olympiad",
+    "question_bank": "bank",
 }
 PACK_LABEL = {
     "igcse_9_10": "A · Grades 9–10 / IGCSE",
     "senior_11_12_as_a": "B · Grades 11–12 / AS–A",
     "olympiad_iit": "C · Olympiad / IIT",
+    "question_bank": "D · Question bank (unmapped)",
 }
+UNMAPPED = "unmapped"
 SUBJECT_ORDER = ["chemistry", "biology", "physics", "maths"]
 FIVE_IDS = ("pack", "subject", "node", "chapter_id", "subtopic_id")
 NAV_FIELDS = (
@@ -461,6 +464,28 @@ def _best_unit(qtok: set[str], candidates: list[tuple[set[str], dict]]):
     return best, best_n
 
 
+def unmapped_tags(uid: str, subject: str, pack: str, *, item_type: str, bank: str | None = None) -> dict:
+    """Fill required five-ID fields without inventing a map node."""
+    rec = {
+        "uid": uid,
+        "subject": subject,
+        "pack": pack,
+        "grade_band": None,
+        "node": UNMAPPED,
+        "chapter_id": UNMAPPED,
+        "chapter_label": "Unmapped — pending sheaf tag",
+        "subtopic_id": UNMAPPED,
+        "subtopic_label": "Unmapped — pending sheaf tag",
+        "complete_exam": False,
+        "cam_family": None,
+        "ncert_family": None,
+        "item_type": item_type,
+    }
+    if bank:
+        rec["bank"] = bank
+    return rec
+
+
 def compose_item(tags: dict, body: dict, assessment: dict) -> dict:
     item = dict(tags)
     item.update(body)
@@ -680,7 +705,7 @@ def pack_remaining(*, data_dir: Path | None = None, write: bool = True) -> dict:
         (out_dir / "questions").mkdir(parents=True, exist_ok=True)
         (out_dir / "nav").mkdir(parents=True, exist_ok=True)
         for subject in SUBJECT_ORDER:
-            for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit"):
+            for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank"):
                 items = by_pack.get((subject, pack)) or []
                 if not items:
                     continue

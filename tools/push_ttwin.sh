@@ -8,6 +8,7 @@ else
 fi
 git add data/questions data/nav data/meta.json data/subjects.json data/schema \
   data/held_questions.jsonl data/held_questions_summary.json \
+  data/question_bank_pending.json data/question_bank_pending.jsonl \
   tools js css index.html
 if git diff --cached --quiet; then
   echo "no-op: working tree clean for pack files"
