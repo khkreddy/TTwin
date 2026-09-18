@@ -21,7 +21,7 @@ NON_EN = re.compile(
 )
 QDIR = OUT / "questions"
 NAV = OUT / "nav"
-CORE_PACKS = {"igcse_9_10", "senior_11_12_as_a", "olympiad_iit"}
+CORE_PACKS = {"middle_6_8", "secondary_9_10", "senior_11_12", "olympiad_iit"}
 
 
 def blob(it: dict) -> str:

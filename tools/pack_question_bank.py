@@ -581,7 +581,7 @@ def write_bank_files(existing: dict[str, dict]) -> list[str]:
     (OUT / "nav").mkdir(parents=True, exist_ok=True)
     for subject in SUBJECT_ORDER:
         nav_rows = []
-        for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank"):
+        for pack in ("middle_6_8", "secondary_9_10", "senior_11_12", "olympiad_iit"):
             items = by.get((subject, pack)) or []
             if not items:
                 continue

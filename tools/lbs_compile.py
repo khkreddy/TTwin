@@ -91,14 +91,14 @@ def cmd_plan(scope: str) -> dict:
         it
         for it in packed
         if it.get("chapter_id") == "cam:9701:6"
-        and it.get("pack") == "senior_11_12_as_a"
+        and it.get("pack") in {"senior_11_12", "senior_11_12_as_a"}
         and ((it.get("assessment") or {}).get("mcq_key") in {"A", "B", "C", "D"})
     ]
     idx = cmd_index()
     return {
         "schema": "lbs.compile_plan.v1",
         "scope": {
-            "pack": "senior_11_12_as_a",
+            "pack": "senior_11_12",
             "chapter_id": "cam:9701:6",
             "nodes": ["chem:C5/H-REDOX", "chem:C5/H-ECHEM"],
         },

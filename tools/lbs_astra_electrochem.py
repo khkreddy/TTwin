@@ -404,7 +404,7 @@ def build() -> dict:
     scope = [
         it
         for it in packed
-        if it.get("pack") == "senior_11_12_as_a"
+        if it.get("pack") in {"senior_11_12", "senior_11_12_as_a"}
         and it.get("chapter_id") in ("cam:9701:6", "cam:9701:24")
         and (it.get("assessment") or {}).get("mcq_key") in LETTERS
     ]

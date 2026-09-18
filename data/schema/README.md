@@ -2,7 +2,7 @@
 
 Contract for every object in `data/questions/*.json`. JSON Schema: `ttwin.question.v1.json`.
 
-A **complete TTwin question** is self-contained: five-click tags, learner stem/options/figures, extracted answer key, examiner comments when they exist, learn-by-solve follow-ups for every wrong MCQ option when a key exists, and Mx-library modify seeds for T-MOD. Overlay at pack time; frozen exam.v1 is not rewritten.
+A **complete TTwin question** is self-contained: four demand packs (middle 6–8, secondary 9–10, senior 11–12, olympiad/IIT), five-click tags, learner stem/options/figures, extracted answer key, examiner comments when they exist, learn-by-solve follow-ups for every wrong MCQ option when a key exists, and Mx-library modify seeds for T-MOD. `hinges.primary` is a final-map statement `unit_id` so LBS/ISO-GEN join map intelligence without a per-task model call. Origin of a question does not decide pack. Overlay at pack time; frozen exam.v1 is not rewritten.
 
 ## Split
 

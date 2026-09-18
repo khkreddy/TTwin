@@ -1,32 +1,41 @@
 /* Deterministic retrieve. Zero provider calls. Port of nav_mcq_rag ancestor closure. */
 (function (g) {
   const PACK = {
-    A: "igcse_9_10",
-    B: "senior_11_12_as_a",
+    A: "secondary_9_10",
+    B: "senior_11_12",
     C: "olympiad_iit",
-    igcse_9_10: "igcse_9_10",
-    senior_11_12_as_a: "senior_11_12_as_a",
+    D: "olympiad_iit",
+    E: "middle_6_8",
+    igcse_9_10: "secondary_9_10",
+    secondary_9_10: "secondary_9_10",
+    senior_11_12_as_a: "senior_11_12",
+    senior_11_12: "senior_11_12",
     olympiad_iit: "olympiad_iit",
-    igcse: "igcse_9_10",
-    as: "senior_11_12_as_a",
-    "as-a": "senior_11_12_as_a",
-    "a-level": "senior_11_12_as_a",
-    senior: "senior_11_12_as_a",
+    igcse: "secondary_9_10",
+    as: "senior_11_12",
+    "as-a": "senior_11_12",
+    "a-level": "senior_11_12",
+    senior: "senior_11_12",
     olympiad: "olympiad_iit",
     iit: "olympiad_iit",
-    question_bank: "question_bank",
-    bank: "question_bank",
-    junior_6_8: "junior_6_8",
-    junior: "junior_6_8",
-    "6-8": "junior_6_8",
-    "grades 6-8": "junior_6_8",
+    question_bank: "olympiad_iit",
+    bank: "olympiad_iit",
+    junior_6_8: "middle_6_8",
+    middle_6_8: "middle_6_8",
+    junior: "middle_6_8",
+    "6-8": "middle_6_8",
+    "grades 6-8": "middle_6_8",
+    "middle school": "middle_6_8",
   };
   const PACK_BAND = {
+    secondary_9_10: "SECONDARY",
+    senior_11_12: "SENIOR_SECONDARY",
+    olympiad_iit: "olympiad-iit",
+    middle_6_8: "MIDDLE",
     igcse_9_10: "SECONDARY",
     senior_11_12_as_a: "SENIOR_SECONDARY",
-    olympiad_iit: "olympiad-iit",
-    question_bank: "question-bank",
-    junior_6_8: "SECONDARY",
+    junior_6_8: "MIDDLE",
+    question_bank: "olympiad-iit",
   };
   const CAP = 32;
   const JUNIOR_H007 = "science/grade_10/ch_01/H007";
@@ -37,12 +46,13 @@
     const s = String(n || "").trim();
     if (s.startsWith("chem:")) return s.slice(5);
     const i = s.indexOf(":");
-    if (i > 0 && ["phy", "bio", "math"].includes(s.slice(0, i))) return s.slice(i + 1);
+    if (i > 0 && ["phy", "bio", "math", "sci"].includes(s.slice(0, i))) return s.slice(i + 1);
     return s;
   }
   function prefixNode(sel, table, node) {
     const bare = normNode(node);
     const s = String((sel && sel.subject) || (table && table.subject) || "chemistry").toLowerCase();
+    if (s === "science" || s === "sci") return bare;
     if (s === "physics" || s === "phy") return "phy:" + bare;
     if (s === "biology" || s === "bio") return "bio:" + bare;
     if (s === "maths" || s === "mathematics" || s === "math") return "math:" + bare;
@@ -316,8 +326,9 @@
         if (a.grain === "lattice_entropy") sel.related_lattice = true;
       }
     }
-    if (/grade\s*[6-8]|grades?\s*6\s*[-–to]+\s*8/.test(low) && !sel.pack) sel.pack = "junior_6_8";
-    if (/grade\s*9|igcse|gcse/.test(low) && !sel.pack) sel.pack = "igcse_9_10";
+    if (/grade\s*[6-8]|grades?\s*6\s*[-–to]+\s*8|middle school/.test(low) && !sel.pack) sel.pack = "middle_6_8";
+    if (/grade\s*9|igcse|gcse|secondary/.test(low) && !sel.pack) sel.pack = "secondary_9_10";
+    if (/grade\s*1[12]|as[ –-]?a|senior secondary/.test(low) && !sel.pack) sel.pack = "senior_11_12";
     if (/related lower|junior grain/.test(low)) sel.related_lower_grain = true;
     if (/\bmcq[ _-]?diagrams?\b/.test(low)) sel.item_type = "mcq_diagram";
     else if (/\bmcq[ _-]?tables?\b/.test(low)) sel.item_type = "mcq_table";

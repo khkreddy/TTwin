@@ -62,21 +62,23 @@ MAX_PACK_BYTES = 90 * 1024 * 1024
 HELD_JSONL = OUT / "held_questions.jsonl"
 HELD_SUMMARY = OUT / "held_questions_summary.json"
 PACK_SLUG = {
+    "secondary_9_10": "igcse",
+    "senior_11_12": "senior",
+    "olympiad_iit": "olympiad",
+    "middle_6_8": "junior",
     "igcse_9_10": "igcse",
     "senior_11_12_as_a": "senior",
-    "olympiad_iit": "olympiad",
     "question_bank": "bank",
     "junior_6_8": "junior",
 }
 PACK_LABEL = {
-    "igcse_9_10": "A · Grades 9–10 / IGCSE",
-    "senior_11_12_as_a": "B · Grades 11–12 / AS–A",
-    "olympiad_iit": "C · Olympiad / IIT",
-    "question_bank": "D · Advanced / extra practice",
-    "junior_6_8": "E · Grades 6–8",
+    "middle_6_8": "Middle School · Grades 6–8",
+    "secondary_9_10": "Secondary · Grades 9–10",
+    "senior_11_12": "Senior Secondary · Grades 11–12",
+    "olympiad_iit": "Olympiad / IIT Practice",
 }
 UNMAPPED = "unmapped"
-SUBJECT_ORDER = ["chemistry", "biology", "physics", "maths"]
+SUBJECT_ORDER = ["science", "maths", "chemistry", "physics", "biology"]
 FIVE_IDS = ("pack", "subject", "node", "chapter_id", "subtopic_id")
 NAV_FIELDS = (
     "uid",
@@ -707,7 +709,7 @@ def pack_remaining(*, data_dir: Path | None = None, write: bool = True) -> dict:
         (out_dir / "questions").mkdir(parents=True, exist_ok=True)
         (out_dir / "nav").mkdir(parents=True, exist_ok=True)
         for subject in SUBJECT_ORDER:
-            for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank"):
+            for pack in ("middle_6_8", "secondary_9_10", "senior_11_12", "olympiad_iit"):
                 items = by_pack.get((subject, pack)) or []
                 if not items:
                     continue

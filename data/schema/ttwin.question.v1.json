@@ -10,11 +10,21 @@
       "type": "string",
       "description": "Bare item_uid join key, e.g. 9701_m16_qp_12:q1. Never tm:-prefixed."
     },
-    "subject": { "type": "string", "enum": ["chemistry", "biology", "physics", "maths"] },
-    "pack": { "type": "string", "enum": ["igcse_9_10", "senior_11_12_as_a", "olympiad_iit", "question_bank", "junior_6_8"] },
+    "subject": { "type": "string", "enum": ["chemistry", "biology", "physics", "maths", "science"] },
+    "pack": { "type": "string", "enum": ["middle_6_8", "secondary_9_10", "senior_11_12", "olympiad_iit"] },
     "bank": {
       "type": "string",
-      "description": "Source extra-bank id when pack is question_bank (k12_graph, jeebench, physics500, phybench, mathnet, aime, scibench, superchem, hicogmath)."
+      "description": "Source corpus id (k12_graph, jeebench, physics500, phybench, mathnet, aime, scibench, superchem, hicogmath). Does not decide pack."
+    },
+    "hinges": {
+      "type": "object",
+      "description": "One-time map join. primary is a statement unit_id on a final map. LBS and ISO-GEN consume that statement's decision_hinge, mechanism, and mx without a per-task model call.",
+      "required": ["primary"],
+      "properties": {
+        "primary": { "type": "string", "minLength": 1 },
+        "supporting": { "type": "array", "items": { "type": "string" } },
+        "binder": { "type": "object" }
+      }
     },
     "grade_band": { "type": ["string", "null"] },
     "node": { "type": "string" },

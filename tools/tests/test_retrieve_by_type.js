@@ -22,10 +22,10 @@ if (!TTwinRag || typeof TTwinRag.assemble !== "function") {
 }
 
 const mixed = [
-  { uid: "a-mcq", subject: "chemistry", pack: "igcse_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "mcq", status: "tagged" },
-  { uid: "b-struct", subject: "chemistry", pack: "igcse_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "structured", status: "tagged" },
-  { uid: "c-open", subject: "chemistry", pack: "igcse_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "open_response", status: "tagged" },
-  { uid: "d-mcq-phy", subject: "physics", pack: "igcse_9_10", node: "phy:P1", chapter_id: "cam:0625:1", subtopic_id: "cam:0625:1", item_type: "mcq", status: "tagged" },
+  { uid: "a-mcq", subject: "chemistry", pack: "secondary_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "mcq", status: "tagged" },
+  { uid: "b-struct", subject: "chemistry", pack: "secondary_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "structured", status: "tagged" },
+  { uid: "c-open", subject: "chemistry", pack: "secondary_9_10", node: "chem:C1", chapter_id: "cam:0620:1", subtopic_id: "cam:0620:1", item_type: "open_response", status: "tagged" },
+  { uid: "d-mcq-phy", subject: "physics", pack: "secondary_9_10", node: "phy:P1", chapter_id: "cam:0625:1", subtopic_id: "cam:0625:1", item_type: "mcq", status: "tagged" },
 ];
 const table = { subject: "chemistry", ncert: [], cambridge: [], aliases: {} };
 const packed = {
@@ -37,7 +37,7 @@ const packed = {
 
 function assertType(selType) {
   const r = TTwinRag.assemble(
-    { subject: "chemistry", pack: "igcse_9_10", item_type: selType },
+    { subject: "chemistry", pack: "secondary_9_10", item_type: selType },
     mixed,
     table
   );
@@ -59,7 +59,7 @@ if (mcq.join() !== "a-mcq") throw new Error("mcq set " + mcq);
 if (open.join() !== "c-open") throw new Error("open set " + open);
 
 const noType = TTwinRag.assemble(
-  { subject: "chemistry", pack: "igcse_9_10" },
+  { subject: "chemistry", pack: "secondary_9_10" },
   mixed,
   table
 );
@@ -69,7 +69,7 @@ if (noType.question_uids.length !== 3) {
 
 const parsed = TTwinRag.parsePromptDeterministic("structured questions on chemical energetics at senior level", {
   subject: "chemistry",
-  aliases: { "chemical energetics": { pack: "senior_11_12_as_a", nodes: ["chem:C6"] } },
+  aliases: { "chemical energetics": { pack: "senior_11_12", nodes: ["chem:C6"] } },
 });
 if (parsed.item_type !== "structured") {
   throw new Error("parsePromptDeterministic item_type " + parsed.item_type);
@@ -79,7 +79,7 @@ const navPath = path.join(ROOT, "data/nav/chemistry.json");
 if (fs.existsSync(navPath)) {
   const nav = JSON.parse(fs.readFileSync(navPath, "utf8"));
   const live = TTwinRag.assemble(
-    { subject: "chemistry", pack: "igcse_9_10", item_type: "structured" },
+    { subject: "chemistry", pack: "secondary_9_10", item_type: "structured" },
     nav,
     table
   );
@@ -91,7 +91,7 @@ if (fs.existsSync(navPath)) {
     }
   }
   const liveMcq = TTwinRag.assemble(
-    { subject: "chemistry", pack: "igcse_9_10", item_type: "mcq" },
+    { subject: "chemistry", pack: "secondary_9_10", item_type: "mcq" },
     nav,
     table
   );

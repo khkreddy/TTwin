@@ -82,6 +82,7 @@
     const got = await Promise.all(jobs);
     S.vocab = got[0] || { ideas: [] };
     S.nav = got[1] || [];
+    S.navPack = spec.default_pack || ((spec.packs || [])[0] && spec.packs[0].id) || null;
     S.navBankLoaded = false;
     let i = 2;
     const mapDoc = loadMap ? got[i++] : null;
@@ -104,22 +105,20 @@
     return spec;
   }
 
-  async function ensureBankNav() {
+  async function ensurePackNav(pack) {
     const spec = S.spec || specOf(S.subject);
-    const extra = spec && spec.nav_bank;
-    if (!extra || S.navBankLoaded) return;
-    try {
-      const rows = await jget(extra);
-      const have = new Set((S.nav || []).map((r) => r.uid));
-      (rows || []).forEach((r) => { if (r && r.uid && !have.has(r.uid)) S.nav.push(r); });
-      S.navBankLoaded = true;
-    } catch (e) {
-      S.navBankLoaded = "missing";
-    }
+    const want = pack || (spec && spec.default_pack);
+    const entry = ((spec && spec.packs) || []).find((p) => p.id === want);
+    const file = (entry && entry.nav) || (spec && spec.nav);
+    if (!file) return;
+    if (S.navPack === want && S.nav && S.nav.length) return;
+    const rows = await jget(file);
+    S.nav = rows || [];
+    S.navPack = want;
   }
   async function ensurePack(pack) {
     const spec = S.spec || specOf(S.subject);
-    if (pack === "question_bank") await ensureBankNav();
+    await ensurePackNav(pack);
     const entry = ((spec && spec.packs) || []).find((p) => p.id === pack);
     const files = [].concat((entry && entry.questions) || []).filter(Boolean);
     if (!files.length) return;
@@ -180,27 +179,45 @@
   function looksLikeCode(s) {
     const t = String(s || "").trim();
     if (!t) return true;
-    return /^(chem|phy|bio|math):/i.test(t) ||
+    return /^(chem|phy|bio|math|sci):/i.test(t) ||
       /^(cam:|IGCSE:|AS_A:)/i.test(t) ||
       /^[A-Z]\d+(\/|$)/.test(t);
   }
-  function nodeOptions(selected) {
-    return (S.vocab.ideas || []).map((n) => {
-      const title = (n.title || "").trim();
-      if (!title) return "";
-      const id = n.id;
-      return "<option value='" + esc(id) + "'" + (selected === id ? " selected" : "") + ">" +
-        esc(title) + "</option>";
-    }).join("");
+  function ideaVisible(n, pack) {
+    if (!n || !(n.title || "").trim()) return false;
+    const packs = n.packs;
+    if (!pack || !packs || !packs.length) return true;
+    return packs.indexOf(pack) >= 0;
+  }
+  function originsForPack(pack) {
+    return (S.vocab.ideas || []).filter((n) =>
+      (n.kind === "concept_origin" || !n.kind) && ideaVisible(n, pack)
+    );
+  }
+  function conceptsFor(pack, originId) {
+    return (S.vocab.ideas || []).filter((n) => {
+      if (n.kind !== "hub" && n.kind !== "grain") return false;
+      if (!ideaVisible(n, pack)) return false;
+      if (!originId) return true;
+      return n.parent === originId || TTwinRag.nodesComparable(n.id, originId) || TTwinRag.nodesComparable(n.parent, originId);
+    });
+  }
+  function nodeOptions(selected, pack) {
+    const p = pack || (S.spec && S.spec.default_pack);
+    return originsForPack(p).map((n) =>
+      "<option value='" + esc(n.id) + "'" + (selected === n.id ? " selected" : "") + ">" +
+      esc(n.title) + "</option>"
+    ).join("");
   }
 
   function packOptions(selected) {
     const packs = (S.spec && S.spec.packs) || [];
     if (!packs.length) {
-      return "<option value='igcse_9_10'>A · Grades 9–10 / IGCSE</option>";
+      return "<option value='secondary_9_10'>Secondary · Grades 9–10</option>";
     }
+    const want = selected || (S.spec && S.spec.default_pack);
     return packs.map((p) =>
-      "<option value='" + esc(p.id) + "'" + (p.id === selected ? " selected" : "") + ">" +
+      "<option value='" + esc(p.id) + "'" + (p.id === want ? " selected" : "") + ">" +
       esc(p.label) + " (" + p.n + ")</option>"
     ).join("");
   }
@@ -221,7 +238,7 @@
     $("app").innerHTML =
       "<div class='banner'>" + counts + "</div>" +
       "<div class='home-lede'>" +
-      "<p>Use the subject menu for chemistry, biology, physics, or mathematics. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
+      "<p>Use the subject menu for science (grades 6–8), mathematics, chemistry, biology, or physics. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
       "<p>The twin is organised around what the student must decide. That decision is the same whether you teach NCERT, Cambridge, or another board.</p>" +
       "<p>AI is optional. Browse, retrieve, and papers work without it. Chemistry has the NCERT hinge map. Physics and biology use the published NCERT chapter list until a complete hinge map exists. Mix-ups stay off the learner paper.</p>" +
       "</div>" +
@@ -270,34 +287,23 @@
 
   function fillChapters(prefix) {
     const pack = $(prefix + "-pack").value;
-    const node = $(prefix + "-node").value;
-    const rows = S.nav.filter((r) => r.pack === pack && (!node || TTwinRag.nodesComparable(r.node, node)));
-    const seen = {};
-    const ch = [];
-    rows.forEach((r) => {
-      const id = r.chapter_id;
-      const lab = (r.chapter_label || "").trim();
-      if (!id || seen[id] || !lab || looksLikeCode(lab)) return;
-      seen[id] = true;
-      ch.push({ id: id, lab: lab });
-    });
-    ch.sort((a, b) => a.lab.localeCompare(b.lab));
-    if (ch.length > 250) ch.length = 250;
+    const origin = $(prefix + "-node").value;
+    const hubs = conceptsFor(pack, origin);
     const sel = $(prefix + "-ch");
     const keep = sel.value;
-    sel.innerHTML = "<option value=''>any</option>" + ch.map((x) =>
-      "<option value='" + esc(x.id) + "'>" + esc(x.lab) + "</option>"
+    sel.innerHTML = "<option value=''>any</option>" + hubs.map((n) =>
+      "<option value='" + esc(n.id) + "'>" + esc(n.title) + "</option>"
     ).join("");
     if (keep && [...sel.options].some((o) => o.value === keep)) sel.value = keep;
     fillSubs(prefix);
   }
   function fillSubs(prefix) {
     const pack = $(prefix + "-pack").value;
-    const node = $(prefix + "-node").value;
-    const ch = $(prefix + "-ch").value;
-    const rows = S.nav.filter((r) => r.pack === pack &&
-      (!node || TTwinRag.nodesComparable(r.node, node)) &&
-      (!ch || r.chapter_id === ch));
+    const origin = $(prefix + "-node").value;
+    const hub = $(prefix + "-ch").value;
+    const want = hub || origin;
+    const rows = (S.nav || []).filter((r) => r.pack === pack &&
+      (!want || TTwinRag.nodesComparable(r.node, want)));
     const seen = {};
     const subs = [];
     rows.forEach((r) => {
@@ -322,10 +328,10 @@
       subject: ($(prefix + "-subject") && $(prefix + "-subject").value) || S.subject,
       maps: ["ncert", "cambridge"],
     };
-    const node = $(prefix + "-node").value;
-    if (node) sel.nodes = [node];
-    const ch = $(prefix + "-ch").value;
-    if (ch) sel.families = [ch];
+    const origin = $(prefix + "-node").value;
+    const hub = $(prefix + "-ch").value;
+    if (hub) sel.nodes = [hub];
+    else if (origin) sel.nodes = [origin];
     const sub = $(prefix + "-sub").value;
     if (sub) sel.families = [sub];
     const typ = $(prefix + "-type") && $(prefix + "-type").value;
@@ -342,15 +348,21 @@
           const navSel = $("nav-subject");
           if (navSel) navSel.value = next;
           $(prefix + "-pack").innerHTML = packOptions();
-          $(prefix + "-node").innerHTML = "<option value=''>any</option>" + nodeOptions();
+          $(prefix + "-node").innerHTML = "<option value=''>any</option>" + nodeOptions(null, $(prefix + "-pack").value);
         }
         fillChapters(prefix);
         onchange();
       });
     }
-    ["pack", "node", "ch"].forEach((id) => {
-      $(prefix + "-" + id).addEventListener("change", () => { fillChapters(prefix); onchange(); });
+    $(prefix + "-pack").addEventListener("change", async () => {
+      const pack = $(prefix + "-pack").value;
+      try { await ensurePackNav(pack); } catch (e) { /* assemble still runs */ }
+      $(prefix + "-node").innerHTML = "<option value=''>any</option>" + nodeOptions(null, pack);
+      fillChapters(prefix);
+      onchange();
     });
+    $(prefix + "-node").addEventListener("change", () => { fillChapters(prefix); onchange(); });
+    $(prefix + "-ch").addEventListener("change", () => { fillSubs(prefix); onchange(); });
     $(prefix + "-sub").addEventListener("change", onchange);
     const typeEl = $(prefix + "-type");
     if (typeEl) typeEl.addEventListener("change", onchange);
@@ -365,9 +377,7 @@
       filtersHTML("br") + "<div id='br-out'></div>";
     const go = async () => {
       const sel = selectorFromFilters("br");
-      if (sel.pack === "question_bank") {
-        try { await ensureBankNav(); } catch (e) { /* preview core nav */ }
-      }
+      try { await ensurePackNav(sel.pack); } catch (e) { /* preview loaded nav */ }
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const uids = r.question_uids.slice(0, 8);
       let items = [];
@@ -387,7 +397,7 @@
     };
     bindFilters("br", () => { go(); });
     if (spec && spec.default_pack) $("br-pack").value = spec.default_pack;
-    if (spec && spec.default_node) $("br-node").value = spec.default_node;
+    $("br-node").innerHTML = "<option value=''>any</option>" + nodeOptions(spec && spec.default_node, $("br-pack").value);
     fillChapters("br");
     go();
   }
@@ -1140,9 +1150,7 @@
     $("tm-go").onclick = async () => {
       const jump = ($("tm-jump").value || "").trim();
       const sel = selectorFromFilters("tm");
-      if (sel.pack === "question_bank") {
-        try { await ensureBankNav(); } catch (e) { /* assemble with core nav */ }
-      }
+      try { await ensurePackNav(sel.pack); } catch (e) { /* assemble with loaded nav */ }
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const n = Math.max(1, Math.min(40, Number($("tm-n").value || 10)));
       const seed = $("tm-seed").value;

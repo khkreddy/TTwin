@@ -65,14 +65,18 @@ CHAPTER_VOCAB = {
     "biology": VOCAB_DIR / "chapters_bio.json",
 }
 PACK_SLUG = {
+    "secondary_9_10": "igcse",
     "igcse_9_10": "igcse",
     "senior_11_12_as_a": "senior",
     "olympiad_iit": "olympiad",
 }
 PACK_LABEL = {
-    "igcse_9_10": "A · Grades 9–10 / IGCSE",
-    "senior_11_12_as_a": "B · Grades 11–12 / AS–A",
-    "olympiad_iit": "C · Olympiad / IIT",
+    "middle_6_8": "Middle School · Grades 6–8",
+    "secondary_9_10": "Secondary · Grades 9–10",
+    "senior_11_12": "Senior Secondary · Grades 11–12",
+    "olympiad_iit": "Olympiad / IIT Practice",
+    "igcse_9_10": "Secondary · Grades 9–10",
+    "senior_11_12_as_a": "Senior Secondary · Grades 11–12",
 }
 FIVE_IDS = ("pack", "subject", "big_idea_id", "chapter_id", "subtopic_id")
 LEGACY_QUESTION_FILES = (
@@ -1285,7 +1289,7 @@ def main() -> int:
             packs_present[row.get("pack") or "unknown"].append(item)
 
         pack_entries = []
-        for pack in ("igcse_9_10", "senior_11_12_as_a", "olympiad_iit"):
+        for pack in ("middle_6_8", "secondary_9_10", "senior_11_12", "olympiad_iit"):
             items = packs_present.get(pack) or []
             if not items:
                 continue
