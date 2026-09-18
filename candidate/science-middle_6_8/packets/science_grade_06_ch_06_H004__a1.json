@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:53:10.847Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q3",
+    "item_type": "single_mcq",
+    "stem": "Which statement about bonding is not correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon can form four single covalent bonds."
+      },
+      {
+        "id": "B",
+        "text": "Chlorine atoms react to gain a noble gas electronic structure."
+      },
+      {
+        "id": "C",
+        "text": "Covalent bonding involves losing and gaining electrons."
+      },
+      {
+        "id": "D",
+        "text": "Hydrogen molecules have the formula H₂."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A shiny wax-coated wooden object is a metal."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Shiny plastic is non-lustrous."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Dull gold-coloured paint is lustrous."
+      }
+    ],
+    "enrichment": "Materials with typically shiny surfaces have a lustrous appearance, and such materials are usually metals. However, not every shining material is a metal because some surfaces shine after polishing or coating. surface appearance and source of shine -> lustrous classification and cautious metal inference The learner correctly applies this rule: Materials with typically shiny surfaces have a lustrous appearance, and such materials are usually metals. However, not every shining material is a metal because some surfaces shine after polishing or coating. Anything shiny is a metal, so a shiny coated card must be metal.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_06/H004",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Carbon can form four single covalent bonds.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Chlorine atoms react to gain a noble gas electron…” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Hydrogen molecules have the formula H₂.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Materials around us. The student must decide: When judging appearance, decide whether a material is lustrous and whether shine is enough evidence that it is a metal. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

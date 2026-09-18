@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meena is sitting inside a moving train. Her brother Rohan is standing on the platform as the train passes by.\nWhich statement about Meena's state of motion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Meena is at rest with respect to the train seat, but in motion with respect to Rohan on the platform."
+    },
+    {
+      "id": "B",
+      "text": "Meena is at rest with respect to everything, because she is sitting down and not moving her body."
+    },
+    {
+      "id": "C",
+      "text": "Meena is in motion with respect to everything, because the train is moving."
+    },
+    {
+      "id": "D",
+      "text": "Meena is in motion with respect to the train seat, but at rest with respect to Rohan on the platform."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Motion is judged against a chosen reference point. Meena's position does not change relative to her seat (at rest), but her position changes with time relative to Rohan on the platform (in motion). Option B wrongly ignores the reference point entirely; option C wrongly treats motion as absolute for every reference point; option D reverses the two reference points.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}
