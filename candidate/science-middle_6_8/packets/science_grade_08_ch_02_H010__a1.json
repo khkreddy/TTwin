@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m16_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:01:53.017Z",
+  "source": {
+    "item_ref": "session:0610_m16_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "The table shows the conditions in four test-tubes containing equal amounts of starch and salivary amylase.\nIn which test-tube is the starch broken down fastest?",
+    "options": [
+      {
+        "id": "A",
+        "text": "° 2; C 27"
+      },
+      {
+        "id": "B",
+        "text": "° 2; C 37"
+      },
+      {
+        "id": "C",
+        "text": "° 7; C 27"
+      },
+      {
+        "id": "D",
+        "text": "° 7; C 37"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"°\",\"C\"],\"rows\":[[\"2\",\"27\"],[\"2\",\"37\"],[\"7\",\"27\"],[\"7\",\"37\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Habitats, microbes and ecosystems",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Even a tiny amount of salt or sugar prevents microorganisms from infecting food."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Food rots first, and the rotting produces microorganisms."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Food exposed only to air cannot rot, because microorganisms occur only in water and soil."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A pickle cannot get infected, even without enough salt or sugar, because it is a pickle."
+      }
+    ],
+    "enrichment": "Microorganisms can be found everywhere, including water, soil, air, surfaces, and some food items. Spices with high concentrations of salt or sugar act as preservatives because they do not allow these organisms to infect pickles and murabbas. Microbes present in surroundings -> exposed food can rot; high salt or sugar preservative conditions -> microbial infection is prevented. The learner correctly applies this rule: Microorganisms can be found everywhere, including water, soil, air, surfaces, and some food items. Spices with high concentrations of salt or sugar act as preservatives because they do not allow these organisms to infect pickles and murabbas. Pickles stay safe because they are pickles, while fresh foods rot because they are naturally weak.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_02/H010",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C 27” looked possible instead of “C 37”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “° 2” looked possible instead of “° 7”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “C 27” looked possible instead of “C 37”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Microorganisms: friend and foe. The student must decide: Decide why some exposed foods rot while pickles and murabbas with enough salt or sugar do not get infected in the same way. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

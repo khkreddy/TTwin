@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:00:31.931Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q17",
+    "item_type": "single_mcq",
+    "stem": "Which structures in plants and in humans normally carry amino acids?",
+    "options": [
+      {
+        "id": "A",
+        "text": "arteries ✓; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "B",
+        "text": "arteries ✓; phloem ✗; ureters ✓"
+      },
+      {
+        "id": "C",
+        "text": "arteries ✗; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "D",
+        "text": "arteries ✗; phloem ✗; ureters ✓"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Use a short twig in warm water and a long twig in cold water; whichever turns red at the top first shows the faster temperature condition."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The twig that turns red later transports water faster."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A twig without flowers cannot be used to test water transport speed."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Choose the twig with the darkest red leaves, even if its leaves turned red later."
+      }
+    ],
+    "enrichment": "To test the speed of water transport, place comparable cut plant twigs in coloured water under warm and cold conditions, vary only temperature, and compare how quickly red colour appears in the stem, leaves, or flowers. Temperature condition -> possible change in the rate at which coloured water moves through the plant -> earlier or later red colour in plant parts. The learner correctly applies this rule: To test the speed of water transport, place comparable cut plant twigs in coloured water under warm and cold conditions, vary only temperature, and compare how quickly red colour appears in the stem, leaves, or flowers. Whichever twig gets red ink first proves the answer, even if the warm and cold setups use different materials.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_10/H013",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Respiration and transport in plants. The student must decide: Design a fair test for whether warm or cold conditions change the speed of water transport in a plant. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q7",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:01:38.993Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q7",
+    "item_type": "single_mcq",
+    "stem": "What are the levels of organisation of the retina and of the eye?",
+    "options": [
+      {
+        "id": "A",
+        "text": "cell organ"
+      },
+      {
+        "id": "B",
+        "text": "cell organ system"
+      },
+      {
+        "id": "C",
+        "text": "tissue organ"
+      },
+      {
+        "id": "D",
+        "text": "tissue organ system"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Habitats, microbes and ecosystems",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "This nonliving soil grain is a microorganism because it is visible only under the microscope."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Microorganisms occur only in water, not in moist soil."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "These stationary microscopic living beings are not microorganisms."
+      }
+    ],
+    "enrichment": "Microorganisms are very small living beings that cannot be seen with the naked or unaided eye. Pond water, stagnant water, and soil suspension can contain tiny organisms that become observable with a microscope or foldscope. Sampling pond water or soil suspension and using magnification -> tiny organisms become visible -> they can be identified as microorganisms. The learner correctly applies this rule: Microorganisms are very small living beings that cannot be seen with the naked or unaided eye. Pond water, stagnant water, and soil suspension can contain tiny organisms that become observable with a microscope or foldscope. If water or soil only looks like dirt to my eye, any moving specks under a microscope are not living organisms.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_02/H008",
+      "gate_names": [
+        "intermediate_omission",
+        "surface_feature_capture",
+        "surface_feature_capture"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “cell organ” looked possible instead of “tissue organ”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “cell organ system” for the required “tissue organ”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “tissue organ system” looked possible instead of “tissue organ”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Microorganisms: friend and foe. The student must decide: Decide whether tiny moving beings in pond water or soil suspension are microorganisms when they cannot be seen with the unaided eye. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
