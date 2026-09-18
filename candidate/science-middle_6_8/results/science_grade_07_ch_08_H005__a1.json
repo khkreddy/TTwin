@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Meena swings two simple pendulums in her school laboratory in Jaipur. Pendulum P and pendulum Q have the same length, but the bob of pendulum Q is heavier. Both are set swinging with small oscillations at the same place.\nWhich row correctly describes the time periods of the two pendulums?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q have the same time period; time period depends on length, not on the mass of the bob"
+    },
+    {
+      "id": "B",
+      "text": "Q has a longer time period; time period increases with the mass of the bob"
+    },
+    {
+      "id": "C",
+      "text": "Q has a shorter time period; time period decreases with the mass of the bob"
+    },
+    {
+      "id": "D",
+      "text": "The time periods cannot be compared unless the place is changed"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"comparison of time periods\",\"reason\"],\"rows\":[[\"P and Q equal\",\"time period depends on length, not on bob mass\"],[\"Q longer than P\",\"time period increases with bob mass\"],[\"Q shorter than P\",\"time period decreases with bob mass\"],[\"cannot be compared\",\"place must be changed first\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "At a given place, the time period of a simple pendulum depends only on its length (and g), not on the mass of the bob. Since P and Q have the same length at the same place, their time periods are equal, so A is correct. Options B and C trap students who believe a heavier bob swings slower or faster; D traps students who think changing place is needed for comparison.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

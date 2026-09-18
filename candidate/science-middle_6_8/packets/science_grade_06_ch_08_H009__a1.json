@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m16_qp_12:q36",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:24:55.146Z",
+  "source": {
+    "item_ref": "session:0620_m16_qp_12:q36",
+    "item_type": "single_mcq",
+    "stem": "Which bond is not present in the structure of ethanol, CH₃CH₂OH?",
+    "options": [
+      {
+        "id": "A",
+        "text": "C–C"
+      },
+      {
+        "id": "B",
+        "text": "H–H"
+      },
+      {
+        "id": "C",
+        "text": "H–O"
+      },
+      {
+        "id": "D",
+        "text": "O–C"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "States of matter, particles and water",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Clouds are made of water vapour, not liquid water droplets."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Every cloud produces rain as soon as its tiny droplets form."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Water vapour cools because it condenses into cloud droplets."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A cloud starts raining when it turns dark."
+      }
+    ],
+    "enrichment": "Water vapour rises, cools, condenses into tiny droplets that form clouds, and many droplets together fall as rain, hail, or snow. Upward movement and cooling of water vapour cause condensation; growth and coming together of droplets leads to precipitation. The learner correctly applies this rule: Water vapour rises, cools, condenses into tiny droplets that form clouds, and many droplets together fall as rain, hail, or snow. Clouds are just invisible water vapour collected overhead, so droplets are not needed before rain.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_08/H009",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “H–O” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “O–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: A journey through states of water. The student must decide: Decide how water vapour becomes clouds and rain, hail, or snow. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
