@@ -2,24 +2,24 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "options_are_figure",
-  "stem": "Meena wants to find out whether the temperature of the oil affects how much a puri puffs up when fried. Which pair of trials is a fair test?",
+  "item_type": "single_best_answer",
+  "stem": "Meera wants to find out whether the temperature of the oil affects how much a pakora puffs up when it is fried.\n\nShe plans two trials. In Trial 1 she uses oil at 150°C. In Trial 2 she uses oil at 180°C.\n\nFor the test to be fair, what should she do about the size of the pakoras and the time they are fried?",
   "options": [
     {
       "id": "A",
-      "text": "Trial 1: oil at 160 °C, puri 2 mm thick, dropped gently. Trial 2: oil at 180 °C, puri 4 mm thick, dropped from a height."
+      "text": "Use pakoras of the same size and fry them for the same time."
     },
     {
       "id": "B",
-      "text": "Trial 1: oil at 160 °C, puri 2 mm thick, dropped the same way. Trial 2: oil at 180 °C, puri 2 mm thick, dropped the same way."
+      "text": "Use a bigger pakora in the hotter oil so it puffs up more easily."
     },
     {
       "id": "C",
-      "text": "Trial 1: oil at 160 °C, puri 2 mm thick. Trial 2: oil at 160 °C, puri 4 mm thick, both dropped the same way."
+      "text": "Fry the pakora in the hotter oil for a longer time to get a clearer result."
     },
     {
       "id": "D",
-      "text": "Trial 1: oil at 180 °C, puri 2 mm thick, dropped gently. Trial 2: oil at 180 °C, puri 2 mm thick, dropped from a height."
+      "text": "Change both the pakora size and the frying time so the two trials are clearly different."
     }
   ],
   "statements": [],
@@ -29,15 +29,17 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
+    "letter": "A",
     "letters": null
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A fair test of oil temperature changes only the oil temperature while keeping puri thickness and dropping method identical; only option B does this. A changes thickness and dropping too, C keeps temperature the same and changes thickness (tests the wrong factor), D changes only the dropping method.",
+    "key_rationale": "In a fair test only the factor being tested (oil temperature) changes; pakora size and frying time must be kept identical, so A is correct. B, C and D each change an extra condition alongside temperature.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
-    "mx_links": [],
+    "mx_links": [
+      "condition_omission"
+    ],
     "figure_note": null
   }
 }
