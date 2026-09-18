@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meena notices that the dal in her pressure cooker cooks faster on some days than on others.\n\nHer teacher says that a curiosity becomes a scientific question only when it is focused enough to guide careful observation, a fair experiment, and a clear explanation.\n\nWhich row shows a question that has been made scientific and a matching way to test it?",
+  "options": [
+    {
+      "id": "A",
+      "text": "question: Why is cooking dal so interesting?; test: think about it during dinner"
+    },
+    {
+      "id": "B",
+      "text": "question: Does dal cook faster with more water or less water?; test: cook equal masses of dal with different measured volumes of water, keeping the flame and time the same"
+    },
+    {
+      "id": "C",
+      "text": "question: Why do all spices do things in food?; test: read a recipe book"
+    },
+    {
+      "id": "D",
+      "text": "question: What is the best dal in the world?; test: ask friends which dal they like"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"question\",\"test\"],\"rows\":[[\"Why is cooking dal so interesting?\",\"think about it during dinner\"],[\"Does dal cook faster with more water or less water?\",\"cook equal masses of dal with different measured volumes of water, keeping the flame and time the same\"],[\"Why do all spices do things in food?\",\"read a recipe book\"],[\"What is the best dal in the world?\",\"ask friends which dal they like\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Row B pairs a focused, testable question (one variable changed: volume of water) with a fair experiment that controls other conditions (same dal mass, flame, time), so it can guide observation, experimentation and explanation. Rows A, C and D are unfocused or opinion-based and their 'tests' involve no controlled investigation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

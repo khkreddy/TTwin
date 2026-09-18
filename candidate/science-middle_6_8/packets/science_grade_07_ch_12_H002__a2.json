@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_22:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:07:01.668Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_22:q27",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful in the manufacture of aircraft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts electricity"
+      },
+      {
+        "id": "B",
+        "text": "high boiling point"
+      },
+      {
+        "id": "C",
+        "text": "low density"
+      },
+      {
+        "id": "D",
+        "text": "silver colour"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "It is daytime everywhere on Earth at the same time."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Day and night are caused by Earth orbiting the Sun."
+      }
+    ],
+    "enrichment": "The side of Earth facing the Sun has daytime, while the side turned away from the Sun is dark and has night. As Earth rotates, a location changes from facing the Sun to being turned away from the Sun, creating the day-night cycle. The learner correctly applies this rule: The side of Earth facing the Sun has daytime, while the side turned away from the Sun is dark and has night. Day and night are just where the Sun is visible or hidden, without needing Earth's rotation.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_12/H002",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts electricity” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “high boiling point” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “silver colour” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Earth, Sun and the apparent motion of the sky. The student must decide: Day and night occur because Earth's rotation moves each place into and out of the side facing the Sun. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s22_qp_11:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:07:37.806Z",
+  "source": {
+    "item_ref": "session:0620_s22_qp_11:q9",
+    "item_type": "single_mcq",
+    "stem": "Which equation for the decomposition of calcium nitrate is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ca(NO₃)₂ → CaO + NO₂ + O₂"
+      },
+      {
+        "id": "B",
+        "text": "Ca(NO₃)₂ → CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "C",
+        "text": "2Ca(NO₃)₂ → 2CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "D",
+        "text": "2Ca(NO₃)₂ → 2CaO + 4NO₂ + O₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The Northern Hemisphere's longest day occurs at the March equinox."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The Southern Hemisphere's longest day occurs around 21 June."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "After 21 June, Northern Hemisphere days become longer and nights become shorter."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "At the North Pole on 21 June, there are about 12 hours of daylight."
+      }
+    ],
+    "enrichment": "In the Northern Hemisphere, the longest day occurs around 21 June and the shortest day occurs around 22 December; at the Equator there are always about 12 hours of sunlight and 12 hours of darkness. Earth's tilted axis and revolution change how long different latitudes face the Sun during one rotation. The learner correctly applies this rule: In the Northern Hemisphere, the longest day occurs around 21 June and the shortest day occurs around 22 December; at the Equator there are always about 12 hours of sunlight and 12 hours of darkness. Every place on Earth has the same day length changes during the seasons.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_12/H006",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “CaO + NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “2CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Earth, Sun and the apparent motion of the sky. The student must decide: Daytime length depends on latitude and season: solstices mark extreme day lengths, poles can have months of continuous daylight or darkness, and the equator stays near 12 hours of day and night. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

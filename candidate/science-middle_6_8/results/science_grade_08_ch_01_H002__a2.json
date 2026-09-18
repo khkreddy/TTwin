@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "Meera is frying puris at home with her grandmother. She notices that some puris puff up well while others do not. She wants to investigate what makes a puri puff up.\n\nA factor is something that can be changed and may change the result of an investigation.\n\nWhich of the following are possible factors that Meera could change to see if they affect how the puri puffs up?\n\n1  The thickness of the rolled dough.\n2  How much the puri puffs up in the hot oil.\n3  The temperature of the oil in the kadhai.\n4  The golden-brown colour of the fried puri.",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3"
+    },
+    {
+      "id": "C",
+      "text": "2 and 4"
+    },
+    {
+      "id": "D",
+      "text": "3 and 4"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The thickness of the rolled dough."
+    },
+    {
+      "id": "2",
+      "text": "How much the puri puffs up in the hot oil."
+    },
+    {
+      "id": "3",
+      "text": "The temperature of the oil in the kadhai."
+    },
+    {
+      "id": "4",
+      "text": "The golden-brown colour of the fried puri."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Statements 1 and 3 are features Meera can deliberately change and that may affect puffing (controllable factors). Statements 2 and 4 are observed outcomes of frying, not factors, so they are excluded. The keyed set is therefore 1 and 3, option B. Option A is the trap for students who include statement 2, the result itself, as a factor.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Meena watches the full Moon slowly darken during a lunar eclipse from her terrace in Jaipur. Her friends give different explanations. Which explanation of a lunar eclipse is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ravi: The Moon comes between the Sun and Earth, so the Moon's shadow falls on Earth."
+    },
+    {
+      "id": "B",
+      "text": "Sunita: Earth comes between the Sun and the Moon, so Earth's shadow falls on the Moon."
+    },
+    {
+      "id": "C",
+      "text": "Arjun: The Moon stops giving out its own light for some time."
+    },
+    {
+      "id": "D",
+      "text": "Farah: Clouds in the sky cover the Moon and make it look dark."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"student\",\"explanation\"],\"rows\":[[\"Ravi\",\"The Moon comes between the Sun and Earth, so the Moon's shadow falls on Earth.\"],[\"Sunita\",\"Earth comes between the Sun and the Moon, so Earth's shadow falls on the Moon.\"],[\"Arjun\",\"The Moon stops giving out its own light for some time.\"],[\"Farah\",\"Clouds in the sky cover the Moon and make it look dark.\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar eclipse occurs when Earth passes between the Sun and the Moon and Earth's shadow falls on the Moon, matching Sunita's explanation (B). A describes a solar eclipse, C wrongly treats the Moon as a light source, and D confuses weather with an eclipse.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
