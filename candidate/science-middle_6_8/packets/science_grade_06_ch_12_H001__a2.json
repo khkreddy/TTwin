@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_w23_qp_13:q26",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:41:32.580Z",
+  "source": {
+    "item_ref": "session:0620_w23_qp_13:q26",
+    "item_type": "single_mcq",
+    "stem": "Aluminium is used to make containers for storing food.\n\nWhich property makes it suitable for this use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts heat"
+      },
+      {
+        "id": "B",
+        "text": "low density"
+      },
+      {
+        "id": "C",
+        "text": "resists corrosion"
+      },
+      {
+        "id": "D",
+        "text": "shiny surface"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Only the stars forming the familiar figure belong to the constellation."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Solid connecting lines are real lines in the sky; dotted connecting lines are imaginary."
+      }
+    ],
+    "enrichment": "Stars shine with their own light, while groups of stars may only appear to form familiar patterns; constellations are regions of the sky that include such apparent patterns, and the connecting lines are imaginary aids for identification. Imaginary connecting lines help the eye recognize a pattern, and defined sky regions give that pattern a constellation name. The learner correctly applies this rule: Stars shine with their own light, while groups of stars may only appear to form familiar patterns; constellations are regions of the sky that include such apparent patterns, and the connecting lines are imaginary aids for identification. The lines drawn between stars are really in the sky, so a constellation is the outlined picture.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H001",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts heat” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “low density” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “shiny surface” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Decide whether a star drawing is showing real lines in the sky or an identification pattern inside a constellation region. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

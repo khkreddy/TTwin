@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_22:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:39:21.909Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_22:q27",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful in the manufacture of aircraft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts electricity"
+      },
+      {
+        "id": "B",
+        "text": "high boiling point"
+      },
+      {
+        "id": "C",
+        "text": "low density"
+      },
+      {
+        "id": "D",
+        "text": "silver colour"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Air is oxygen."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Every planet's atmosphere contains nitrogen, oxygen, argon, and carbon dioxide."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Air is a single gas because it looks the same throughout."
+      }
+    ],
+    "enrichment": "The air surrounding Earth is a mixture of gases. It contains nitrogen, oxygen, argon, carbon dioxide, and other gases in small quantities. Because air contains several gases together, a correct description treats oxygen as one component of air rather than as the whole of air. The learner correctly applies this rule: The air surrounding Earth is a mixture of gases. It contains nitrogen, oxygen, argon, carbon dioxide, and other gases in small quantities. Air is just oxygen.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H003",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts electricity” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “high boiling point” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “silver colour” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Decide whether air is a single gas or a mixture of gases, and identify the gases named in the chapter. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

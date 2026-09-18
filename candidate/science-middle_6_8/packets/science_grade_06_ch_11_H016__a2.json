@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_w20_qp_12:q34",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:41:21.963Z",
+  "source": {
+    "item_ref": "session:0620_w20_qp_12:q34",
+    "item_type": "single_mcq",
+    "stem": "The element sulfur is found in a number of different minerals.\n\nWhich mineral contains the greatest percentage by mass of sulfur?",
+    "options": [
+      {
+        "id": "A",
+        "text": "barite, BaSO₄"
+      },
+      {
+        "id": "B",
+        "text": "galena, PbS"
+      },
+      {
+        "id": "C",
+        "text": "gypsum, CaSO₄"
+      },
+      {
+        "id": "D",
+        "text": "pyrite, FeS₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Stop washing clothes altogether because all washing wastes water."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Eating rice uses food, but it does not use water or soil, even indirectly."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Driving a car with clear, odourless exhaust does not pollute air, so no pollution-reduction action is needed."
+      }
+    ],
+    "enrichment": "Everyday life uses many natural resources directly or indirectly, including air, water, soil, and food from plants and animals. Responsible use means identifying the resource in an activity and reducing unnecessary use or pollution. When an activity is linked to the resource it uses, a learner can choose a practical reduction action that lowers waste, overuse, or pollution from that activity. The learner correctly applies this rule: Everyday life uses many natural resources directly or indirectly, including air, water, soil, and food from plants and animals. Responsible use means identifying the resource in an activity and reducing unnecessary use or pollution. Daily activities use only the item in hand and do not connect to natural resources or pollution.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H016",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “barite, BaSO₄” for the required “pyrite, FeS₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “galena, PbS” for the required “pyrite, FeS₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “gypsum, CaSO₄” for the required “pyrite, FeS₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Trace a daily activity to the natural resources it uses directly or indirectly and choose a way to reduce unnecessary use or pollution. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

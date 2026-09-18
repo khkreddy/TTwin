@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m22_qp_22:q7",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:42:02.526Z",
+  "source": {
+    "item_ref": "session:0625_m22_qp_22:q7",
+    "item_type": "single_mcq",
+    "stem": "A metal wire is loaded up to the limit of proportionality.\nWhich statement is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hooke’s law is not obeyed when the load is increased from zero to this point."
+      },
+      {
+        "id": "B",
+        "text": "When the load is increased beyond the limit of proportionality, the diameter of the wire will increase."
+      },
+      {
+        "id": "C",
+        "text": "When the load is removed, the wire returns to its original length."
+      },
+      {
+        "id": "D",
+        "text": "Up to the limit of proportionality, there is no change in the shape of the wire."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Equally powerful stars appear equally bright from Earth even at different distances."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "An identical star farther from Earth appears larger and brighter than a nearer one."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The Sun appears as a tiny point from Earth, just like every other star."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The Sun is physically larger than every other star."
+      }
+    ],
+    "enrichment": "The Sun is the star closest to Earth and gives out a huge amount of energy, so it appears much bigger and brighter than other stars, which are much farther away and appear point-like. Closer distance makes the Sun appear large and bright from Earth; much greater distance makes other stars appear as points even when some are larger than the Sun. The learner correctly applies this rule: The Sun is the star closest to Earth and gives out a huge amount of energy, so it appears much bigger and brighter than other stars, which are much farther away and appear point-like. Daytime stars disappear because they stop shining when the Sun rises.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H004",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Hooke’s law is not obeyed when the load is increa…” for the required “When the load is removed, the wire returns to its…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “When the load is increased beyond the limit of pr…” for the required “When the load is removed, the wire returns to its…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Up to the limit of proportionality, there is no c…” for the required “When the load is removed, the wire returns to its…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Explain why the Sun appears large and bright while other stars appear as tiny points and are not seen in the daytime sky. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

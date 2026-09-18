@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s22_qp_11:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:39:55.702Z",
+  "source": {
+    "item_ref": "session:0620_s22_qp_11:q9",
+    "item_type": "single_mcq",
+    "stem": "Which equation for the decomposition of calcium nitrate is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ca(NO₃)₂ → CaO + NO₂ + O₂"
+      },
+      {
+        "id": "B",
+        "text": "Ca(NO₃)₂ → CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "C",
+        "text": "2Ca(NO₃)₂ → 2CaO + 2NO₂ + O₂"
+      },
+      {
+        "id": "D",
+        "text": "2Ca(NO₃)₂ → 2CaO + 4NO₂ + O₂"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Grass uses the Sun’s heat to make food that supplies energy to a cow."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "When a cow eats grass, energy passes from the cow to the grass."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A cow eating grass in the shade gets no energy from the Sun."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "A cow can get the Sun’s energy for growth just by standing in sunlight, without eating."
+      }
+    ],
+    "enrichment": "Sunlight helps plants prepare food. Plants get energy from the Sun and produce food, animals eat plants and grow, and the Sun is the main source of energy for living beings on Earth. Sun energy supports plant food-making; when animals eat plants, energy reaches animals through the food they eat. The learner correctly applies this rule: Sunlight helps plants prepare food. Plants get energy from the Sun and produce food, animals eat plants and grow, and the Sun is the main source of energy for living beings on Earth. Animals get energy only from the food itself, so the Sun is unrelated unless the animal stands in sunlight.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H007",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “CaO + NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “2CaO + 2NO₂ + O₂” looked possible instead of “2CaO + 4NO₂ + O₂”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Decide whether animals receive energy from the Sun indirectly through plants and food. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
