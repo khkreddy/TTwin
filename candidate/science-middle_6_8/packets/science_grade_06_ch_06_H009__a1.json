@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:54:11.844Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q3",
+    "item_type": "single_mcq",
+    "stem": "Which statement about bonding is not correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon can form four single covalent bonds."
+      },
+      {
+        "id": "B",
+        "text": "Chlorine atoms react to gain a noble gas electronic structure."
+      },
+      {
+        "id": "C",
+        "text": "Covalent bonding involves losing and gaining electrons."
+      },
+      {
+        "id": "D",
+        "text": "Hydrogen molecules have the formula H₂."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The two identical tumblers contain equal volumes of water."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The narrow vessel contains more water because its water level is higher."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The tumbler with the lower water level contains the larger volume of water."
+      }
+    ],
+    "enrichment": "The space occupied by water represents its volume. Two containers can have the same capacity while holding different volumes if the amounts of water in them are different. amount of substance and space occupied -> observed volume and level in the container The learner correctly applies this rule: The space occupied by water represents its volume. Two containers can have the same capacity while holding different volumes if the amounts of water in them are different. Volume is the container capacity, so equal tumblers always contain equal volume of water.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_06/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Carbon can form four single covalent bonds.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Chlorine atoms react to gain a noble gas electron…” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Hydrogen molecules have the formula H₂.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Materials around us. The student must decide: When comparing amounts in containers, decide the volume from the space occupied, not only from the container's capacity. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
