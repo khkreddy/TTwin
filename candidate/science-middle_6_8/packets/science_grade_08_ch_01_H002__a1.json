@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_w20_qp_21:q35",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:00:12.354Z",
+  "source": {
+    "item_ref": "session:0620_w20_qp_21:q35",
+    "item_type": "single_mcq",
+    "stem": "The structures of four organic molecules are shown.\n\nWhich molecules are structural isomers of structure 1?",
+    "options": [
+      {
+        "id": "A",
+        "text": "2 and 4"
+      },
+      {
+        "id": "B",
+        "text": "2 only"
+      },
+      {
+        "id": "C",
+        "text": "3 and 4"
+      },
+      {
+        "id": "D",
+        "text": "3 only"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Smoke noticed above the oil is a factor, even if it is not deliberately varied."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Puffing is the factor; rolled dough size is the result."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Flour type is not a possible factor because it is not a numerical quantity."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Oil temperature is not a possible factor because temperature itself cannot be seen."
+      }
+    ],
+    "enrichment": "A factor is worth testing when changing it may change the observed result; for the puri example, thickness and size of rolled dough, type of flour, and oil temperature are possible factors. Changing a factor can change the way the puri puffs up, so factors are chosen before comparing results. The learner identifies controllable features such as dough thickness, dough size, flour type, and oil temperature as possible factors in the puri investigation. Anything mentioned during frying, including smoke or smell, is a factor in the experiment.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_01/H002",
+      "gate_names": [
+        "scope_error",
+        "scope_error",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping statement 4 which the keyed set still requires. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Exploring the inquisitive mind. The student must decide: Identify which features of the puri investigation are possible factors that may change how the puri puffs up. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

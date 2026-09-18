@@ -2,30 +2,32 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "options_are_figure",
-  "stem": "Meera's science teacher writes the answer \"the water in the clay pot stays cooler than the water in the steel bottle\" on the board and asks each student to invent a curious question for which this could be the answer. Which question would be a valid scientific question for this answer?",
+  "item_type": "option_table",
+  "stem": "Meera's teacher writes one answer on the board: \"The wet clothes on the balcony dried faster than the ones in the room.\"\n\nThe teacher asks each student to work backwards and invent a curious, scientific question that this answer could sensibly belong to.\n\nWhich row shows a student whose question is a valid scientific question for the given answer?",
   "options": [
     {
       "id": "A",
-      "text": "Why is water wet and why do we drink it every day?"
+      "text": "student: Arjun; what the student does: copies the textbook question \"What is evaporation?\" because it sounds scientific; valid for the given answer: no"
     },
     {
       "id": "B",
-      "text": "Does the material of a container affect how cool the water inside it stays on a hot day?"
+      "text": "student: Sana; what the student does: imagines the balcony is windy and asks \"Does moving air make wet clothes dry faster?\" which can be tested by hanging clothes in two places; valid for the given answer: yes"
     },
     {
       "id": "C",
-      "text": "Where did Meera buy her clay pot and her steel bottle?"
+      "text": "student: Rohan; what the student does: asks \"Will the clothes dry?\" even though everyone already knows the answer; valid for the given answer: no"
     },
     {
       "id": "D",
-      "text": "Is water a compound made of hydrogen and oxygen?"
+      "text": "student: Priya; what the student does: asks \"Do clothes dry faster because the balcony likes them?\" which cannot be tested by any observation; valid for the given answer: no"
     }
   ],
   "statements": [],
   "parts": [],
   "equations": [],
-  "tables": [],
+  "tables": [
+    "{\"headers\":[\"student\",\"what the student does\",\"valid for the given answer?\"],\"rows\":[[\"Arjun\",\"copies the textbook question \\\"What is evaporation?\\\" because it sounds scientific\",\"no\"],[\"Sana\",\"imagines the balcony is windy and asks \\\"Does moving air make wet clothes dry faster?\\\", which can be tested by hanging clothes in two places\",\"yes\"],[\"Rohan\",\"asks \\\"Will the clothes dry?\\\" even though everyone already knows the answer\",\"no\"],[\"Priya\",\"asks \\\"Do clothes dry faster because the balcony likes them?\\\", which cannot be tested by any observation\",\"no\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
   "tikz": null,
   "answer": {
     "kind": "single_letter",
@@ -34,7 +36,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Only option B invents a curious, testable situation that sensibly leads to the given answer: comparing how container material affects water temperature could produce the observation that the clay pot water stays cooler. A is vague and not testable, C is not a scientific question, and D is a textbook fact question unrelated to the given answer.",
+    "key_rationale": "A valid scientific question for the given answer must be curious, fit the answer, and be testable by observation or experiment. Only Sana invents a testable situation (wind on the balcony) whose answer matches the given statement. Arjun merely repeats a memorised question, Rohan asks something with an already-known answer, and Priya's question is untestable.",
     "variation_applied": "V4",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],

@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "During a science club meeting, four students share questions they are curious about.\n\nWhich questions are focused scientific questions that can guide careful observation, experimentation, and explanation?\n\n1  Meera asks: \"Why is the world such an interesting place?\"\n2  Arjun asks: \"Does dosa batter rise faster at 30°C or at 20°C in my kitchen?\"\n3  Kavya asks: \"Why do I feel happy when it rains?\"\n4  Rohan asks: \"Does hibiscus flower extract change colour more in lemon juice or in soap solution?\"",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "2 and 3"
+    },
+    {
+      "id": "C",
+      "text": "2 and 4"
+    },
+    {
+      "id": "D",
+      "text": "3 and 4"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Meera asks: \"Why is the world such an interesting place?\""
+    },
+    {
+      "id": "2",
+      "text": "Arjun asks: \"Does dosa batter rise faster at 30°C or at 20°C in my kitchen?\""
+    },
+    {
+      "id": "3",
+      "text": "Kavya asks: \"Why do I feel happy when it rains?\""
+    },
+    {
+      "id": "4",
+      "text": "Rohan asks: \"Does hibiscus flower extract change colour more in lemon juice or in soap solution?\""
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Statements 2 and 4 are focused questions with identifiable variables that can be tested by careful observation or experiment (temperature versus batter rising; acidic versus basic solution versus colour change). Statement 1 is too broad and unfocused to guide an investigation, and statement 3 concerns a personal feeling with no testable variable. Hence 2 and 4 only, key C.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
