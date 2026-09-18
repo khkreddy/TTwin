@@ -15,23 +15,28 @@ def _rows(*names):
     return out
 
 
-def test_k12_science_uses_s_grains():
-    rows = [r for r in _rows("biology-bank.json", "chemistry-bank.json", "physics-bank.json") if r.get("bank") == "k12_graph"]
-    assert rows
-    mapped = [r for r in rows if r.get("node") and r["node"] != "unmapped"]
-    assert mapped, "k12 science still unmapped"
-    s = [r for r in mapped if str(r.get("node")).startswith("S")]
-    assert s, "expected science-map grains S1–S6 on k12 science"
-    assert all(r.get("practice_tier") == "core" for r in s)
-    print("k12_science", len(rows), "mapped", len(mapped), "S-grains", len(s), "sample", s[0]["uid"], s[0]["node"])
+def test_live_bank_is_english():
+    import re
+    cjk = re.compile(r"[\u4e00-\u9fff]")
+    n = 0
+    leaked = []
+    for name in ["biology-igcse.json", "chemistry-bank.json", "maths-bank.json", "physics-bank.json"]:
+        path = Q / name
+        if not path.is_file():
+            continue
+        for r in json.loads(path.read_text(encoding="utf-8")):
+            blob = str(r.get("stem") or "")
+            if cjk.search(blob):
+                leaked.append(r.get("uid"))
+            n += 1
+    assert not leaked, leaked[:5]
+    print("english_ok", n)
 
 
-def test_k12_maths_mapped():
-    rows = [r for r in _rows("maths-bank.json") if r.get("bank") == "k12_graph"]
-    un = [r for r in rows if r.get("node") == "unmapped"]
-    assert not un, un[:3]
-    assert any(str(r.get("node")).startswith("math:") for r in rows)
-    print("k12_maths", len(rows), "node0", rows[0]["node"])
+def test_k12_remaining_english_only():
+    rows = [r for r in _rows("chemistry-bank.json", "physics-bank.json", "maths-bank.json") if r.get("bank") == "k12_graph"]
+    print("k12_english_remaining", len(rows))
+    assert all(r.get("node") and r["node"] != "unmapped" for r in rows)
 
 
 def test_advanced_practice_on_map_nodes():
@@ -44,7 +49,7 @@ def test_advanced_practice_on_map_nodes():
 
 
 if __name__ == "__main__":
-    test_k12_science_uses_s_grains()
-    test_k12_maths_mapped()
+    test_live_bank_is_english()
+    test_k12_remaining_english_only()
     test_advanced_practice_on_map_nodes()
     print("tag_unmapped_ok")

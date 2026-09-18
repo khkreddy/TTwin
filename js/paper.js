@@ -578,7 +578,16 @@
       "<p class='cap'>" + esc(meta.subtitle || "") + " · " + items.length + " questions" +
       (meta.seed ? " · seed " + esc(meta.seed) : "") + "</p></div><hr class='rule'/>";
     const itemOpts = Object.assign({ showUid: true }, opts);
-    const learner = "<div class='paper'>" + head + items.map((it, i) => itemHTML(it, i, itemOpts)).join("") + "</div>";
+    const body = (items || []).map((it, i) => {
+      try {
+        return itemHTML(it, i, itemOpts);
+      } catch (e) {
+        return "<article class='q'><div class='qhead'><span class='qnum'>" + (i + 1) +
+          "</span></div><p class='muted'>Could not render this item" +
+          (it && it.uid ? " (" + esc(it.uid) + ")" : "") + ".</p></article>";
+      }
+    }).join("");
+    const learner = "<div class='paper'>" + head + (body || "<p class='muted'>No questions in this selection.</p>") + "</div>";
     const key = opts && opts.withKey && !opts.interactive ? answerKeyHTML(meta, items) : "";
     return learner + key;
   }

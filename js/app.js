@@ -82,6 +82,7 @@
     const got = await Promise.all(jobs);
     S.vocab = got[0] || { ideas: [] };
     S.nav = got[1] || [];
+    S.navBankLoaded = false;
     let i = 2;
     const mapDoc = loadMap ? got[i++] : null;
     const enrDoc = loadEnr ? got[i++] : null;
@@ -103,8 +104,22 @@
     return spec;
   }
 
+  async function ensureBankNav() {
+    const spec = S.spec || specOf(S.subject);
+    const extra = spec && spec.nav_bank;
+    if (!extra || S.navBankLoaded) return;
+    try {
+      const rows = await jget(extra);
+      const have = new Set((S.nav || []).map((r) => r.uid));
+      (rows || []).forEach((r) => { if (r && r.uid && !have.has(r.uid)) S.nav.push(r); });
+      S.navBankLoaded = true;
+    } catch (e) {
+      S.navBankLoaded = "missing";
+    }
+  }
   async function ensurePack(pack) {
     const spec = S.spec || specOf(S.subject);
+    if (pack === "question_bank") await ensureBankNav();
     const entry = ((spec && spec.packs) || []).find((p) => p.id === pack);
     const files = [].concat((entry && entry.questions) || []).filter(Boolean);
     if (!files.length) return;
@@ -116,6 +131,7 @@
         S.loadedPacks[file] = true;
       } catch (e) {
         S.loadedPacks[file] = "missing";
+        throw new Error("Could not load " + file + " (" + (e && e.message ? e.message : e) + ")");
       }
     }
   }
@@ -266,6 +282,7 @@
       ch.push({ id: id, lab: lab });
     });
     ch.sort((a, b) => a.lab.localeCompare(b.lab));
+    if (ch.length > 250) ch.length = 250;
     const sel = $(prefix + "-ch");
     const keep = sel.value;
     sel.innerHTML = "<option value=''>any</option>" + ch.map((x) =>
@@ -291,6 +308,7 @@
       subs.push({ id: id, lab: lab });
     });
     subs.sort((a, b) => a.lab.localeCompare(b.lab));
+    if (subs.length > 250) subs.length = 250;
     const sel = $(prefix + "-sub");
     const keep = sel.value;
     sel.innerHTML = "<option value=''>any</option>" + subs.map((x) =>
@@ -347,9 +365,18 @@
       filtersHTML("br") + "<div id='br-out'></div>";
     const go = async () => {
       const sel = selectorFromFilters("br");
+      if (sel.pack === "question_bank") {
+        try { await ensureBankNav(); } catch (e) { /* preview core nav */ }
+      }
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const uids = r.question_uids.slice(0, 8);
-      const items = await itemsForUids(uids);
+      let items = [];
+      try {
+        items = await itemsForUids(uids);
+      } catch (e) {
+        $("br-out").innerHTML = "<div class='notice err'>" + esc(e.message) + "</div>";
+        return;
+      }
       $("br-out").innerHTML =
         "<div class='banner'><span class='stat'><b>" + r.receipt.n_questions + "</b> questions</span>" +
         "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges</span>" +
@@ -1113,11 +1140,29 @@
     $("tm-go").onclick = async () => {
       const jump = ($("tm-jump").value || "").trim();
       const sel = selectorFromFilters("tm");
+      if (sel.pack === "question_bank") {
+        try { await ensureBankNav(); } catch (e) { /* assemble with core nav */ }
+      }
       const r = TTwinRag.assemble(sel, S.nav, S.projection);
       const n = Math.max(1, Math.min(40, Number($("tm-n").value || 10)));
       const seed = $("tm-seed").value;
       const ordered = jump ? [jump] : TTwinRag.seededShuffle(r.question_uids, seed).slice(0, n);
-      const items = (await itemsForUids(ordered)).map(cloneItem);
+      const statusEl = $("tm-grade-status");
+      if (statusEl) statusEl.textContent = ordered.length
+        ? "Loading " + ordered.length + " questions…"
+        : "No questions match this pack / idea / type.";
+      if (!ordered.length) {
+        S.paper = null;
+        paintPaper();
+        return;
+      }
+      let items;
+      try {
+        items = (await itemsForUids(ordered)).map(cloneItem);
+      } catch (e) {
+        if (statusEl) statusEl.textContent = "Could not load questions: " + e.message;
+        return;
+      }
       S.paper = {
         meta: {
           title: $("tm-title").value,
