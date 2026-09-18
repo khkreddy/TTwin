@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "In a scrapyard near Pune, Sameer uses a lifting electromagnet attached to a crane to move iron sheets.\n\nWhen the current in the electromagnet is switched ON, what happens to the iron sheet, and what happens to it when the current is switched OFF?",
+  "options": [
+    {
+      "id": "A",
+      "text": "ON: the iron sheet is released. OFF: the iron sheet is lifted."
+    },
+    {
+      "id": "B",
+      "text": "ON: the iron sheet is lifted. OFF: the iron sheet is released."
+    },
+    {
+      "id": "C",
+      "text": "ON: the iron sheet is lifted. OFF: the iron sheet keeps being held."
+    },
+    {
+      "id": "D",
+      "text": "ON: the iron sheet is released. OFF: the iron sheet stays released."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Current ON makes the coil an electromagnet, so the iron sheet is attracted and lifted; switching the current OFF removes the magnetic effect, so the sheet is released. A reverses the relationship, C drops the OFF condition (holds after release), D drops the ON lifting effect.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}
