@@ -6,16 +6,24 @@
   }
   function texHTML(tex, display) {
     const src = String(tex || "").replace(/&amp;/g, "&");
-    if (g.katex && typeof g.katex.renderToString === "function") {
+    const disp = !!display || /\\begin\{(?:array|pmatrix|bmatrix|vmatrix|cases|aligned|gather|matrix)\}/.test(src);
+    const engine = g.katex;
+    if (engine && typeof engine.renderToString === "function") {
       try {
-        return g.katex.renderToString(src, { throwOnError: false, displayMode: !!display, output: "html" });
+        const html = engine.renderToString(src, {
+          throwOnError: false,
+          displayMode: disp,
+          output: "html",
+          strict: "ignore",
+        });
+        return disp ? "<div class='eq'>" + html + "</div>" : html;
       } catch (e) { /* fall through */ }
     }
-    return "<code class='tex'>" + esc(src) + "</code>";
+    return "<span class='tex'>" + esc(src) + "</span>";
   }
   function chem(s) {
     const raw = String(s == null ? "" : s).replace(/\(cid:\d+\)/g, "");
-    const re = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$\n]+?)\$/g;
+    const re = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$]+?)\$/g;
     let html = "", last = 0, m;
     while ((m = re.exec(raw))) {
       if (m.index > last) html += inlineHTML(raw.slice(last, m.index));
@@ -311,9 +319,12 @@
       "</div>" +
       (function () {
         const lead = leadInStem(it);
-        if (lead) return "<p class='stem'>" + chem(lead) + "</p>";
-        if ((it.parts || []).length) return "";
-        return "<p class='stem'>" + chem("(no stem — tagged only)") + "</p>";
+        const more = it.assessment && (it.assessment.one_or_more ||
+          (typeof it.assessment.mcq_key === "string" && it.assessment.mcq_key.length > 1));
+        const note = more ? "<p class='muted exam-note'>One or more options may be correct.</p>" : "";
+        if (lead) return "<p class='stem'>" + chem(lead) + "</p>" + note;
+        if ((it.parts || []).length) return note;
+        return "<p class='stem'>" + chem("(no stem — tagged only)") + "</p>" + note;
       })() +
       eqs + stemTables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
       partsHTML(it) +

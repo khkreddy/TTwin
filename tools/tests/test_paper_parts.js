@@ -61,6 +61,10 @@ if (stemP && /\(a\)/.test(stemP[0])) {
 if ((html.match(/Complete the table\./g) || []).length !== 1) {
   throw new Error("part body reprinted outside parts");
 }
+sandbox.module = { exports: {} };
+sandbox.exports = sandbox.module.exports;
+vm.runInContext(fs.readFileSync(path.join(ROOT, "js/vendor/katex.min.js"), "utf8"), sandbox);
+sandbox.katex = sandbox.module.exports.default || sandbox.module.exports;
 const mathItem = {
   uid: "latex-demo",
   item_type: "open_response",
@@ -72,8 +76,14 @@ const mh = TTwinPaper.itemHTML(mathItem, 0, {});
 if (mh.includes("$ABC$") || mh.includes("$$x^2")) {
   throw new Error("raw latex delimiters still in stem: " + mh.slice(0, 300));
 }
-if (!mh.includes("katex") && !mh.includes("class='tex'")) {
-  throw new Error("expected katex html or tex fallback");
-}
+if (!mh.includes("katex")) throw new Error("expected katex html");
+const olympiad = JSON.parse(fs.readFileSync(path.join(ROOT, "data/questions/maths-olympiad.json"), "utf8"));
+const q44 = olympiad.find((x) => x.uid === "jeebench:srcjson:math:jee_adv_2016_paper_1:q44");
+if (!q44) throw new Error("q44 missing");
+const qh = TTwinPaper.itemHTML(q44, 0, {});
+if (qh.includes("\\begin{array}")) throw new Error("q44 still raw array env");
+if (!qh.includes("katex")) throw new Error("q44 not typeset");
+if (!qh.includes("One or more options may be correct")) throw new Error("q44 missing multi-correct note");
 console.log("paper_parts_ok", html.includes("tikz-slot"), html.includes("(a)"));
-console.log("latex_ok", mh.includes("class='tex'") || mh.includes("katex"));
+console.log("latex_ok", mh.includes("katex"));
+console.log("q44_ok", !qh.includes("\\begin{array}"));

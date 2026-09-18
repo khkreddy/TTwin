@@ -10,8 +10,11 @@
 .paper .rule{border:0;border-top:1.2px solid #111;margin:8px 0}
 .paper .q{margin:18px 0 0;position:relative;padding-right:1.5em}
 .paper .qnum{font-weight:700;margin-right:.6em}
-.paper .stem{white-space:pre-wrap;margin:0 0 .6em;text-align:justify}
-.paper .eq{text-align:center;margin:12px 0;font-size:12.5pt}
+.paper .stem{white-space:normal;margin:0 0 .6em;text-align:justify}
+.paper .stem .katex-display,.paper .eq .katex-display{margin:.55em 0;overflow-x:auto}
+.paper .eq{text-align:center;margin:.5em 0;font-size:12.5pt}
+.paper .exam-note{font-style:italic;margin:.2em 0 .7em;color:#333}
+.paper .tex{font-family:"Liberation Serif","Times New Roman",Times,serif;font-style:italic}
 .paper ol.stmts{list-style:none;padding:4px 0 8px;margin:0}
 .paper ol.stmts li{margin:0 0 .55em;padding:0 0 0 1.6em;position:relative}
 .paper ol.parts,.paper ol.subparts{list-style:none;padding:4px 0 8px 0;margin:0}
