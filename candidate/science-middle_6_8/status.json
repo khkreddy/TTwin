@@ -3,8 +3,8 @@
   "science_units": 391,
   "junior_live": 109,
   "live_distinct_primaries": 9,
-  "candidates": 103,
-  "uncovered": 279,
+  "candidates": 112,
+  "uncovered": 270,
   "by_node": {
     "S1": {
       "units": 14,
@@ -33,14 +33,14 @@
     "S5": {
       "units": 59,
       "live": 2,
-      "candidate": 18,
-      "uncovered": 39
+      "candidate": 22,
+      "uncovered": 35
     },
     "S6": {
       "units": 62,
       "live": 0,
-      "candidate": 13,
-      "uncovered": 49
+      "candidate": 18,
+      "uncovered": 44
     }
   },
   "last_run": {
@@ -50,70 +50,20 @@
     "fail_closed": 1,
     "skip": 0,
     "by_node": {
-      "S1": {
-        "attempted": 3,
-        "ok": 3,
-        "fail_closed": 0
-      },
       "S5": {
-        "attempted": 4,
-        "ok": 3,
+        "attempted": 5,
+        "ok": 4,
         "fail_closed": 1
       },
       "S6": {
-        "attempted": 3,
-        "ok": 3,
+        "attempted": 5,
+        "ok": 5,
         "fail_closed": 0
       }
     },
     "rows": [
       {
-        "at": "2026-09-18T19:02:11.759Z",
-        "unit_id": "science/grade_08/ch_01/H003",
-        "node": "S1",
-        "grain": "S1/H-INQUIRY",
-        "source_uid": "0620_s22_qp_11:q40",
-        "attempt": 1,
-        "join_status": "UNBOUND",
-        "variation_class": "V4",
-        "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_08_ch_01_H003__a1.json",
-        "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_08:ch_01:H003:a1",
-        "item": "items/science_grade_08_ch_01_H003__a1.json"
-      },
-      {
-        "at": "2026-09-18T19:02:26.032Z",
-        "unit_id": "science/grade_08/ch_01/H004",
-        "node": "S1",
-        "grain": "S1/H-INQUIRY",
-        "source_uid": "0620_w17_qp_21:q35",
-        "attempt": 1,
-        "join_status": "UNBOUND",
-        "variation_class": "V4",
-        "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_08_ch_01_H004__a1.json",
-        "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_08:ch_01:H004:a1",
-        "item": "items/science_grade_08_ch_01_H004__a1.json"
-      },
-      {
-        "at": "2026-09-18T19:02:42.695Z",
-        "unit_id": "science/grade_08/ch_01/H005",
-        "node": "S1",
-        "grain": "S1/H-INQUIRY",
-        "source_uid": "0620_w20_qp_21:q35",
-        "attempt": 1,
-        "join_status": "UNBOUND",
-        "variation_class": "V4",
-        "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_08_ch_01_H005__a1.json",
-        "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_08:ch_01:H005:a1",
-        "item": "items/science_grade_08_ch_01_H005__a1.json"
-      },
-      {
-        "at": "2026-09-18T19:02:55.055Z",
+        "at": "2026-09-18T19:04:42.018Z",
         "unit_id": "science/grade_07/ch_03/H007",
         "node": "S5",
         "grain": "S5/H-CIRCUIT",
@@ -127,38 +77,38 @@
         "gate": "G3"
       },
       {
-        "at": "2026-09-18T19:03:06.200Z",
-        "unit_id": "science/grade_07/ch_03/H008",
+        "at": "2026-09-18T19:04:51.810Z",
+        "unit_id": "science/grade_07/ch_07/H002",
         "node": "S5",
-        "grain": "S5/H-CIRCUIT",
+        "grain": "S5/H-HEAT",
         "source_uid": "0625_m16_qp_12:q10",
         "attempt": 1,
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_07_ch_03_H008__a1.json",
+        "packet": "packets/science_grade_07_ch_07_H002__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_07:ch_03:H008:a1",
-        "item": "items/science_grade_07_ch_03_H008__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_07:ch_07:H002:a1",
+        "item": "items/science_grade_07_ch_07_H002__a1.json"
       },
       {
-        "at": "2026-09-18T19:03:15.411Z",
-        "unit_id": "science/grade_07/ch_03/H009",
+        "at": "2026-09-18T19:04:59.229Z",
+        "unit_id": "science/grade_07/ch_07/H003",
         "node": "S5",
-        "grain": "S5/H-CIRCUIT",
+        "grain": "S5/H-HEAT",
         "source_uid": "0625_m16_qp_12:q11",
         "attempt": 1,
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_07_ch_03_H009__a1.json",
+        "packet": "packets/science_grade_07_ch_07_H003__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_07:ch_03:H009:a1",
-        "item": "items/science_grade_07_ch_03_H009__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_07:ch_07:H003:a1",
+        "item": "items/science_grade_07_ch_07_H003__a1.json"
       },
       {
-        "at": "2026-09-18T19:03:24.201Z",
-        "unit_id": "science/grade_07/ch_07/H001",
+        "at": "2026-09-18T19:05:09.972Z",
+        "unit_id": "science/grade_07/ch_07/H004",
         "node": "S5",
         "grain": "S5/H-HEAT",
         "source_uid": "0625_m16_qp_12:q30",
@@ -166,14 +116,29 @@
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_07_ch_07_H001__a1.json",
+        "packet": "packets/science_grade_07_ch_07_H004__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_07:ch_07:H001:a1",
-        "item": "items/science_grade_07_ch_07_H001__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_07:ch_07:H004:a1",
+        "item": "items/science_grade_07_ch_07_H004__a1.json"
       },
       {
-        "at": "2026-09-18T19:03:35.257Z",
-        "unit_id": "science/grade_06/ch_11/H010",
+        "at": "2026-09-18T19:05:18.990Z",
+        "unit_id": "science/grade_07/ch_07/H005",
+        "node": "S5",
+        "grain": "S5/H-HEAT",
+        "source_uid": "0625_m16_qp_12:q4",
+        "attempt": 1,
+        "join_status": "UNBOUND",
+        "variation_class": "V4",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/science_grade_07_ch_07_H005__a1.json",
+        "status": "ok",
+        "candidate_uid": "candidate:g68:science:grade_07:ch_07:H005:a1",
+        "item": "items/science_grade_07_ch_07_H005__a1.json"
+      },
+      {
+        "at": "2026-09-18T19:05:28.411Z",
+        "unit_id": "science/grade_06/ch_11/H013",
         "node": "S6",
         "grain": "S6/H-EARTH",
         "source_uid": "0620_s19_qp_12:q27",
@@ -181,14 +146,14 @@
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_06_ch_11_H010__a1.json",
+        "packet": "packets/science_grade_06_ch_11_H013__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H010:a1",
-        "item": "items/science_grade_06_ch_11_H010__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H013:a1",
+        "item": "items/science_grade_06_ch_11_H013__a1.json"
       },
       {
-        "at": "2026-09-18T19:03:44.198Z",
-        "unit_id": "science/grade_06/ch_11/H011",
+        "at": "2026-09-18T19:05:36.849Z",
+        "unit_id": "science/grade_06/ch_11/H014",
         "node": "S6",
         "grain": "S6/H-EARTH",
         "source_uid": "0620_s19_qp_22:q27",
@@ -196,14 +161,14 @@
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_06_ch_11_H011__a1.json",
+        "packet": "packets/science_grade_06_ch_11_H014__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H011:a1",
-        "item": "items/science_grade_06_ch_11_H011__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H014:a1",
+        "item": "items/science_grade_06_ch_11_H014__a1.json"
       },
       {
-        "at": "2026-09-18T19:03:56.156Z",
-        "unit_id": "science/grade_06/ch_11/H012",
+        "at": "2026-09-18T19:05:48.076Z",
+        "unit_id": "science/grade_06/ch_11/H015",
         "node": "S6",
         "grain": "S6/H-EARTH",
         "source_uid": "0620_s19_qp_23:q27",
@@ -211,10 +176,40 @@
         "join_status": "UNBOUND",
         "variation_class": "V4",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/science_grade_06_ch_11_H012__a1.json",
+        "packet": "packets/science_grade_06_ch_11_H015__a1.json",
         "status": "ok",
-        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H012:a1",
-        "item": "items/science_grade_06_ch_11_H012__a1.json"
+        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H015:a1",
+        "item": "items/science_grade_06_ch_11_H015__a1.json"
+      },
+      {
+        "at": "2026-09-18T19:05:58.562Z",
+        "unit_id": "science/grade_06/ch_11/H016",
+        "node": "S6",
+        "grain": "S6/H-EARTH",
+        "source_uid": "0620_s20_qp_12:q28",
+        "attempt": 1,
+        "join_status": "UNBOUND",
+        "variation_class": "V4",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/science_grade_06_ch_11_H016__a1.json",
+        "status": "ok",
+        "candidate_uid": "candidate:g68:science:grade_06:ch_11:H016:a1",
+        "item": "items/science_grade_06_ch_11_H016__a1.json"
+      },
+      {
+        "at": "2026-09-18T19:06:08.830Z",
+        "unit_id": "science/grade_06/ch_12/H003",
+        "node": "S6",
+        "grain": "S6/H-SKY",
+        "source_uid": "0620_s21_qp_12:q29",
+        "attempt": 1,
+        "join_status": "UNBOUND",
+        "variation_class": "V4",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/science_grade_06_ch_12_H003__a1.json",
+        "status": "ok",
+        "candidate_uid": "candidate:g68:science:grade_06:ch_12:H003:a1",
+        "item": "items/science_grade_06_ch_12_H003__a1.json"
       }
     ]
   }

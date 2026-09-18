@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:05:18.989Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q4",
+    "item_type": "single_mcq",
+    "stem": "Which quantities are measured in the same unit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "energy, power and work"
+      },
+      {
+        "id": "B",
+        "text": "energy and power, but not work"
+      },
+      {
+        "id": "C",
+        "text": "energy and work, but not power"
+      },
+      {
+        "id": "D",
+        "text": "power and work, but not energy"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Day: land → sea. Night: sea → land."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Large freshwater lake, daytime: no breeze toward the warmer shore."
+      }
+    ],
+    "enrichment": "Soil heats up faster and cools down faster than water; air above the warmer surface rises, and cooler air moves in from the other surface. Time of day changes which surface is warmer, which controls where air rises and therefore which direction cooler air moves near the coast. The learner correctly applies this rule: Soil heats up faster and cools down faster than water; air above the warmer surface rises, and cooler air moves in from the other surface. Wind near the coast always blows from the same direction because the sea is always cooler than land.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H005",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “energy, power and work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “energy and power, but not work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “power and work, but not energy” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Use the faster heating and cooling of land than water to decide the direction of daytime sea breeze and nighttime land breeze. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
