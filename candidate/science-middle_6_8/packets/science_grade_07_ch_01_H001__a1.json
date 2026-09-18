@@ -1,0 +1,106 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s22_qp_11:q40",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:56:56.772Z",
+  "source": {
+    "item_ref": "session:0620_s22_qp_11:q40",
+    "item_type": "option_table",
+    "stem": "Many molecules of J join together in reaction R to form a long chain molecule K.\n\nK is the only product.\n\nWhich row describes molecule J, reaction R and molecule K?",
+    "options": [
+      {
+        "id": "A",
+        "text": "molecule J: polymer; reaction R: addition; molecule K: monomer"
+      },
+      {
+        "id": "B",
+        "text": "molecule J: monomer; reaction R: addition; molecule K: polymer"
+      },
+      {
+        "id": "C",
+        "text": "molecule J: polymer; reaction R: cracking; molecule K: monomer"
+      },
+      {
+        "id": "D",
+        "text": "molecule J: monomer; reaction R: cracking; molecule K: polymer"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"molecule J\",\"reaction R\",\"molecule K\"],\"rows\":[[\"polymer\",\"addition\",\"monomer\"],[\"monomer\",\"addition\",\"polymer\"],[\"polymer\",\"cracking\",\"monomer\"],[\"monomer\",\"cracking\",\"polymer\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Learning facts means you are not doing scientific thinking."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Testing why a puddle dries outside school is not science."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Copying a page headed Experiment is scientific inquiry."
+      }
+    ],
+    "enrichment": "Science is presented as a way of thinking: it welcomes curiosity, asks questions, supports experiments, and looks for patterns rather than stopping at facts. When a learner treats science as an active process, observations and questions lead to exploration and experiments; when the learner treats it only as facts, the reasoning process is missed. The learner classifies science as an active way of thinking that uses curiosity, questions, experiments, and pattern seeking rather than as only a list of facts. Science class means memorising textbook facts and correct answers; questions and experiments are interesting extras.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_01/H001",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “molecule K: monomer” looked possible instead of “molecule K: polymer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “molecule K: monomer” looked possible instead of “molecule K: polymer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “reaction R: cracking” looked possible instead of “reaction R: addition”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The ever-evolving world of science. The student must decide: Decide whether science in this chapter is being treated as a list of facts to memorise or as a process of curiosity, questioning, experimenting, and exploring patterns. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Anjali has two identical cells and a torch at home in Pune. She places the two cells into the torch's battery holder in different ways to see which arrangement lights the bulb.\nWhich arrangement makes a working battery so that the bulb lights?",
+  "options": [
+    {
+      "id": "A",
+      "text": "placing both cells with their positive terminals touching each other"
+    },
+    {
+      "id": "B",
+      "text": "placing the positive terminal of one cell touching the negative terminal of the other cell"
+    },
+    {
+      "id": "C",
+      "text": "placing only one cell in the holder, pointing the right way"
+    },
+    {
+      "id": "D",
+      "text": "placing both cells with their negative terminals touching each other"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A working battery requires the positive terminal of one cell to connect to the negative terminal of the next so the cells push current in the same direction and supply energy to the device. Option B does this. Options A and D join like terminals, which does not make a working battery. Option C provides only one cell, so the two-cell holder has a gap and no complete battery is formed. Option A is the trap for a student who ignores the terminal-direction condition.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
