@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Priya and her friends spent a rainy afternoon at school in Coimbatore. Each of them did something different.\n\nOnly one of them was truly doing science, because science means asking questions, observing, exploring and doing things to understand the world — not just memorising facts.\n\nWhich row matches the student, what they did, and whether it counts as science?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rohan learnt the names of ten scientists by heart — this is science"
+    },
+    {
+      "id": "B",
+      "text": "Meena watched how ants carried crumbs and wondered why they walk in a line — this is science"
+    },
+    {
+      "id": "C",
+      "text": "Arjun copied the rainbow experiment from his notebook without asking any question — this is science"
+    },
+    {
+      "id": "D",
+      "text": "Sara recited the definitions of 'observation' and 'experiment' aloud — this is science"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"student\",\"what they did\",\"is it science?\"],\"rows\":[[\"Rohan\",\"learnt the names of ten scientists by heart\",\"yes\"],[\"Meena\",\"watched ants carrying crumbs and wondered why they walk in a line\",\"yes\"],[\"Arjun\",\"copied the rainbow experiment from his notebook without asking any question\",\"yes\"],[\"Sara\",\"recited the definitions of 'observation' and 'experiment' aloud\",\"yes\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only Meena is curious, observing, and asking a question about the world, which is what counts as science; Rohan and Sara are only memorising, and Arjun copies actions without a question. Key B.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

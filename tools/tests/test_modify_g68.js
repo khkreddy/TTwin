@@ -73,5 +73,18 @@ if (pCir.spec.figure.mode !== "rewrite") throw new Error("circuit-diagram hinge 
 const c = g68.census(science, junior);
 if (c.science_units !== 391) throw new Error("units " + c.science_units);
 if (c.junior_live !== 109) throw new Error("junior " + c.junior_live);
+if (c.uncovered < 0) throw new Error("uncovered negative " + c.uncovered);
+const sumUnc = Object.keys(c.by_node).reduce((n, k) => n + c.by_node[k].uncovered, 0);
+if (c.uncovered !== sumUnc) throw new Error("uncovered mismatch");
+if (g68.variationForAttempt(2) !== "V1") throw new Error("a2 V1");
+if (g68.variationForAttempt(3) !== "V6") throw new Error("a3 V6");
+if (g68.variationForAttempt(4) !== "V5") throw new Error("a4 V5");
+if (c.uncovered === 0) {
+  const deep = g68.deepenUnits(science);
+  if (!deep.length) throw new Error("deepen empty");
+  const withCand = deep.find((u) => g68.maxAttempt(u.unit_id) >= 1);
+  if (!withCand) throw new Error("deepen missing candidate units");
+  if (g68.nextAttempt(withCand.unit_id) < 2) throw new Error("next attempt after first fill");
+}
 
 console.log("modify_g68_ok", packet.intelligence.join_status, p2.intelligence.join_status, p2.spec.variation_class, c.uncovered);

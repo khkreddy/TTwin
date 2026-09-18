@@ -304,6 +304,36 @@ function existingCandidateUnits() {
   });
   return have;
 }
+function maxAttempt(unitId) {
+  const dir = path.join(OUT, "items");
+  const prefix = safeUnit(unitId) + "__a";
+  let max = 0;
+  if (!fs.existsSync(dir)) return 0;
+  fs.readdirSync(dir).forEach((f) => {
+    if (!f.startsWith(prefix) || !f.endsWith(".json")) return;
+    const n = parseInt(f.slice(prefix.length, -5), 10);
+    if (n) max = Math.max(max, n);
+  });
+  return max;
+}
+function nextAttempt(unitId) {
+  return maxAttempt(unitId) + 1;
+}
+function variationForAttempt(attempt) {
+  if (attempt === 2) return "V1";
+  if (attempt === 3) return "V6";
+  if (attempt === 4) return "V5";
+  return null;
+}
+function deepenUnits(science) {
+  const rows = (science.units || []).filter((u) => u.unit_id);
+  rows.sort((a, b) => {
+    const da = maxAttempt(a.unit_id) - maxAttempt(b.unit_id);
+    if (da) return da;
+    return String(a.unit_id).localeCompare(String(b.unit_id));
+  });
+  return rows.filter((u) => maxAttempt(u.unit_id) < 4);
+}
 function uncoveredUnits(science, junior) {
   const covered = new Set();
   junior.forEach((it) => {
@@ -329,13 +359,16 @@ function census(science, junior) {
     else if (cand.has(u.unit_id)) byNode[n].candidate += 1;
     else byNode[n].uncovered += 1;
   });
+  const uncoveredCount = (science.units || []).filter((u) => {
+    return u.unit_id && !liveCovered.has(u.unit_id) && !cand.has(u.unit_id);
+  }).length;
   return {
     schema: "ttwin.g68_status.v1",
     science_units: (science.units || []).length,
     junior_live: junior.length,
     live_distinct_primaries: liveCovered.size,
     candidates: cand.size,
-    uncovered: (science.units || []).length - liveCovered.size - cand.size,
+    uncovered: uncoveredCount,
     by_node: byNode,
   };
 }
@@ -463,6 +496,7 @@ async function main() {
       });
     } else {
       queue = uncoveredUnits(science, junior);
+      if (!queue.length) queue = deepenUnits(science);
     }
     const rows = [];
     let n = 0;
@@ -479,11 +513,17 @@ async function main() {
         source = picked.item;
       }
       used.add(source.uid);
-      const spec = {};
-      if (args.variation) spec.variation_class = args.variation;
-      if (args["item-type"]) spec.target_item_type = args["item-type"];
-      if (args.figure) spec.figureMode = String(args.figure);
-      for (let a = 1; a <= repeat; a++) {
+      const start = nextAttempt(unit.unit_id);
+      for (let k = 0; k < repeat; k++) {
+        const a = start + k;
+        const spec = {};
+        if (args.variation) spec.variation_class = args.variation;
+        else {
+          const v = variationForAttempt(a);
+          if (v) spec.variation_class = v;
+        }
+        if (args["item-type"]) spec.target_item_type = args["item-type"];
+        if (args.figure) spec.figureMode = String(args.figure);
         if (cmd === "compile") {
           const packet = compileUnit(K, unit, source, science, spec);
           const tag = safeUnit(unit.unit_id) + "__a" + a;
@@ -537,7 +577,8 @@ async function main() {
 
 module.exports = {
   loadKimi, compileUnit, pickSource, packetHasPedagogy, instructionFor,
-  resultToCandidate, census, uncoveredUnits, pedagogy, hasPedagogy, OUT, ROOT,
+  resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
+  variationForAttempt, hingeWantsFigure, pedagogy, hasPedagogy, OUT, ROOT,
 };
 
 if (require.main === module) {
