@@ -159,6 +159,10 @@
     if ((row.status || "tagged") !== "tagged") return false;
     const subj = String(sel.subject || "chemistry").toLowerCase();
     if (subj && subj !== "any" && (row.subject || "chemistry") !== subj) return false;
+    if (sel.item_type) {
+      const want = String(sel.item_type) === "free_response" ? "open_response" : String(sel.item_type);
+      if ((row.item_type || "") !== want) return false;
+    }
     const wantPack = normalizePack(sel.pack);
     const rowPack = row.pack;
     const rowBand = row.grade_band || bandForPack(rowPack);
@@ -306,6 +310,12 @@
     }
     if (/grade\s*9|igcse|gcse/.test(low) && !sel.pack) sel.pack = "igcse_9_10";
     if (/related lower|junior grain/.test(low)) sel.related_lower_grain = true;
+    if (/\bmcq[ _-]?diagrams?\b/.test(low)) sel.item_type = "mcq_diagram";
+    else if (/\bmcq[ _-]?tables?\b/.test(low)) sel.item_type = "mcq_table";
+    else if (/three[ _-]?statement/.test(low)) sel.item_type = "three_statement";
+    else if (/open[ _-]?response|free[ _-]?response/.test(low)) sel.item_type = "open_response";
+    else if (/\bstructured\b/.test(low)) sel.item_type = "structured";
+    else if (/\bmcq\b|multiple[ _-]choice/.test(low)) sel.item_type = "mcq";
     const um = raw.match(/science\/grade_\d+\/[^\s,]+\/H\d+/);
     if (um) sel.unit_id = um[0];
     if (!sel.nodes.length) delete sel.nodes;

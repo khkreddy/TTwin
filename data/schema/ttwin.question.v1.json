@@ -40,6 +40,10 @@
     "structures": { "type": "array" },
     "tikz": { "type": ["string", "array"] },
     "tikz_packages": { "type": "array", "items": { "type": "string" } },
+    "parts": {
+      "type": "array",
+      "description": "Additive on this schema id. Structured / open_response labelled parts with stems, marks, and subparts. Learner renderer prints parts as parts, not a flattened stem. Source free_response is stored as open_response."
+    },
     "assessment": {
       "type": "object",
       "description": "Teacher-only. Learner renderer must not descend here.",

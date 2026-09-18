@@ -238,6 +238,15 @@
       nodeOptions() + "</select></div>" +
       "<div><label>Concept</label><select id='" + prefix + "-ch'><option value=''>any</option></select></div>" +
       "<div><label>Sub-concept</label><select id='" + prefix + "-sub'><option value=''>any</option></select></div>" +
+      "<div><label>Question type</label><select id='" + prefix + "-type'>" +
+      "<option value=''>any</option>" +
+      "<option value='mcq'>MCQ</option>" +
+      "<option value='mcq_diagram'>MCQ diagram</option>" +
+      "<option value='mcq_table'>MCQ table</option>" +
+      "<option value='three_statement'>Three-statement</option>" +
+      "<option value='structured'>Structured</option>" +
+      "<option value='open_response'>Open response</option>" +
+      "</select></div>" +
       "</div></div>";
   }
 
@@ -299,6 +308,8 @@
     if (ch) sel.families = [ch];
     const sub = $(prefix + "-sub").value;
     if (sub) sel.families = [sub];
+    const typ = $(prefix + "-type") && $(prefix + "-type").value;
+    if (typ) sel.item_type = typ;
     return sel;
   }
   function bindFilters(prefix, onchange) {
@@ -321,6 +332,8 @@
       $(prefix + "-" + id).addEventListener("change", () => { fillChapters(prefix); onchange(); });
     });
     $(prefix + "-sub").addEventListener("change", onchange);
+    const typeEl = $(prefix + "-type");
+    if (typeEl) typeEl.addEventListener("change", onchange);
     fillChapters(prefix);
   }
 

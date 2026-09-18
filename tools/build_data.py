@@ -928,6 +928,8 @@ def nav_record(o: dict) -> dict | None:
 
 
 def load_exam_index(uids: set[str]) -> dict:
+    from question_pack import project_exam_item
+
     found = {}
     paths = [EXAM]
     if CORPUS.is_file():
@@ -946,44 +948,9 @@ def load_exam_index(uids: set[str]) -> dict:
                 uid = o.get("item_uid")
                 if uid not in uids or uid in found:
                     continue
-                opts = o.get("options") or {}
-                if isinstance(opts, dict):
-                    options = {str(k): v for k, v in opts.items() if v is not None}
-                else:
-                    options = {}
-                stmts = []
-                for s in o.get("statements") or []:
-                    if isinstance(s, dict):
-                        stmts.append({"n": s.get("n"), "text": s.get("text")})
-                    elif s:
-                        stmts.append({"text": str(s)})
-                tikz, tikz_packages = extract_tikz(o)
-                rec = {
-                    "stem": o.get("complete_stem") or o.get("stem_lead") or "",
-                    "stem_lead": o.get("stem_lead") or "",
-                    "item_type": o.get("item_type"),
-                    "options": options,
-                    "statements": stmts,
-                    "has_figure": bool(o.get("has_drawn_figure") or o.get("options_are_figure")),
-                    "options_are_figure": bool(o.get("options_are_figure")),
-                    "equations": [
-                        (e.get("text") if isinstance(e, dict) else e)
-                        for e in (o.get("equations") or [])[:4]
-                    ],
-                    "tables": slim_tables(o.get("tables")),
-                    "structures": extract_structures(o),
-                }
-                if tikz:
-                    rec["tikz"] = tikz
-                    if tikz_packages:
-                        rec["tikz_packages"] = tikz_packages
-                if not rec["tables"]:
-                    rec.pop("tables")
-                if not rec["structures"]:
-                    rec.pop("structures")
-                rec = sanitize_item(uid, rec)
-                if not rec.get("tables"):
-                    rec.pop("tables", None)
+                rec = project_exam_item(o)
+                if not rec:
+                    continue
                 found[uid] = rec
                 if len(found) == len(uids):
                     return found
@@ -1040,6 +1007,12 @@ def write_enrichment_dir(enrich: list) -> None:
 
 
 def main() -> int:
+    if "--pack-remaining" in sys.argv:
+        from question_pack import pack_remaining
+
+        census = pack_remaining(write="--dry-run" not in sys.argv)
+        print(json.dumps({k: v for k, v in census.items() if k != "question_files"}, indent=2))
+        return 0
     maps_only = "--maps-only" in sys.argv
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "questions").mkdir(exist_ok=True)

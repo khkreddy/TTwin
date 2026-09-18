@@ -8,7 +8,7 @@ A **complete TTwin question** is self-contained: five-click tags, learner stem/o
 
 | Layer | Fields | Who sees it |
 |---|---|---|
-| Learner | `uid`, five-ID tags, `stem`, `options`, `statements`, `equations`, `tables`, `structures`, `tikz` / `figure_src` | Student paper |
+| Learner | `uid`, five-ID tags, `item_type`, `stem`, `options`, `statements`, `equations`, `tables`, `structures`, `tikz` / `figure_src`, `parts` (structured / open_response) | Student paper |
 | Student-take overlay | follow-up *question text* after a wrong letter (from `assessment.learn_by_solve`) | Student after a miss; no mx_type |
 | `assessment` | `mcq_key`, `mark_scheme`, `examiner_comment`, `learn_by_solve`, `modify_seeds`, honesty enums | Teacher sheet / Finish scoring only |
 

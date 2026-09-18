@@ -120,7 +120,8 @@
     if (src) {
       return "<div class='fig'><img class='orig' src='" + esc(src) + "' alt='exam figure'></div>";
     }
-    const code = String(it.tikz || "").trim();
+    const rawTikz = it.tikz;
+    const code = (Array.isArray(rawTikz) ? rawTikz.join("\n") : String(rawTikz || "")).trim();
     if (!code) return "";
     const pkgs = (it.tikz_packages || []).filter(Boolean);
     const pkgAttr = pkgs.length
@@ -142,6 +143,28 @@
       const n = x && x.n != null ? x.n : "";
       const t = x && x.text != null ? x.text : x;
       return "<li>" + (n !== "" ? "<span class='n'>" + esc(n) + "</span> " : "") + chem(t) + "</li>";
+    }).join("") + "</ol>";
+  }
+  function marksHTML(m) {
+    return (typeof m === "number") ? " <span class='marks'>[" + m + "]</span>" : "";
+  }
+  function partsHTML(it) {
+    const parts = it.parts || [];
+    if (!parts.length) return "";
+    return "<ol class='parts'>" + parts.map((p) => {
+      if (!p || typeof p !== "object") return "";
+      const id = p.id != null && String(p.id).trim() !== "" ? String(p.id) : "";
+      const lab = id ? "<span class='part-id'>(" + esc(id) + ")</span> " : "";
+      let inner = "<li>" + lab + chem(p.stem || "") + marksHTML(p.marks);
+      const sub = p.subparts || [];
+      if (sub.length) {
+        inner += "<ol class='subparts'>" + sub.map((sp) => {
+          const sid = sp && sp.id != null && String(sp.id).trim() !== "" ? String(sp.id) : "";
+          const slab = sid ? "<span class='part-id'>(" + esc(sid) + ")</span> " : "";
+          return "<li>" + slab + chem((sp && sp.stem) || "") + marksHTML(sp && sp.marks) + "</li>";
+        }).join("") + "</ol>";
+      }
+      return inner + "</li>";
     }).join("") + "</ol>";
   }
   function optionInner(it, k, o, byOpt) {
@@ -233,6 +256,7 @@
       "</div>" +
       "<p class='stem'>" + chem(it.stem || it.stem_lead || "(no stem — tagged only)") + "</p>" +
       eqs + stemTables + figHTML(it) + structuresHTML(it) + statementsHTML(it) +
+      partsHTML(it) +
       optTableHtml + optionsHTML(it, optOpts) +
       followupHTML(it, opts) +
       toolsHTML(it, opts) +
