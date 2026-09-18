@@ -1,0 +1,106 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q8",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:51:21.305Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q8",
+    "item_type": "single_mcq",
+    "stem": "A box is being lifted by a fork-lift truck.\nThe weight of the box is 3000 N.\nThe force exerted by the fork-lift truck on the box is 3500 N vertically upwards.\nWhat is the resultant vertical force on the box?",
+    "options": [
+      {
+        "id": "A",
+        "text": "500 / N / downwards"
+      },
+      {
+        "id": "B",
+        "text": "500 / N / upwards"
+      },
+      {
+        "id": "C",
+        "text": "6500 / N / downwards"
+      },
+      {
+        "id": "D",
+        "text": "6500 / N / upwards"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"\",\"\"],\"rows\":[[\"500\",\"N\",\"downwards\"],[\"500\",\"N\",\"upwards\"],[\"6500\",\"N\",\"downwards\"],[\"6500\",\"N\",\"upwards\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Room height: 15-cm scale."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Distance between cities: millimetre."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Height of the 4-cm toy room: metre."
+      }
+    ],
+    "enrichment": "A length should be measured with a unit and scale suited to its size: kilometre for larger lengths, metre for room- or ground-sized lengths, and centimetre or millimetre for smaller lengths. length size -> suitable unit and measuring scale The learner correctly applies this rule: A length should be measured with a unit and scale suited to its size: kilometre for larger lengths, metre for room- or ground-sized lengths, and centimetre or millimetre for smaller lengths. Any length unit or scale can be used equally well for any object if the measurer is careful.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H004",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “downwards” for the required “upwards”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “downwards” for the required “upwards”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “6500” looked possible instead of “500”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Choose an appropriate length unit and measuring scale for the size of the length being measured. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

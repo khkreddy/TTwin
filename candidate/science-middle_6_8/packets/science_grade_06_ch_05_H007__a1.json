@@ -1,0 +1,101 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T18:51:55.993Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q4",
+    "item_type": "single_mcq",
+    "stem": "A concrete post is carried up a very high mountain. At the top of the mountain, the gravitational field is slightly weaker than at the bottom.\nWhat is the effect of this weaker field on the mass and on the weight of the post at the top of the mountain?",
+    "options": [
+      {
+        "id": "A",
+        "text": "is / less / is / less"
+      },
+      {
+        "id": "B",
+        "text": "is / less / is / unchanged"
+      },
+      {
+        "id": "C",
+        "text": "is / unchanged / is / less"
+      },
+      {
+        "id": "D",
+        "text": "is / unchanged / is / unchanged"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"\",\"\",\"\"],\"rows\":[[\"is\",\"less\",\"is\",\"less\"],[\"is\",\"less\",\"is\",\"unchanged\"],[\"is\",\"unchanged\",\"is\",\"less\"],[\"is\",\"unchanged\",\"is\",\"unchanged\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The length around the bottle's base cannot be measured with thread."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The thicker curve is longer."
+      }
+    ],
+    "enrichment": "A curved line can be measured with a flexible measuring tape or by laying a thread along the curve, straightening the thread, and measuring the straightened thread with a metre scale. curve traced by flexible tape or thread -> straight measurable length of the same curve The learner correctly applies this rule: A curved line can be measured with a flexible measuring tape or by laying a thread along the curve, straightening the thread, and measuring the straightened thread with a metre scale. A curved line is measured by the straight gap between its two ends.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “less” looked possible instead of “unchanged”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Measure the length of a curved line or curved edge. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
