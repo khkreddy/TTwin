@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:37:01.524Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "By which process does oxygen pass out of a leaf?",
+    "options": [
+      {
+        "id": "A",
+        "text": "diffusion"
+      },
+      {
+        "id": "B",
+        "text": "osmosis"
+      },
+      {
+        "id": "C",
+        "text": "translocation"
+      },
+      {
+        "id": "D",
+        "text": "transpiration"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A living seed will germinate even when conditions are unsuitable."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A wooden pencil is living because it came from a plant that grew from a seed."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A dry, ungerminated seed is non-living."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "The young plant is the seed's offspring."
+      }
+    ],
+    "enrichment": "A seed is connected to living processes because, under suitable conditions, it germinates into a young plant that grows and can later be part of a life cycle producing new seeds. Favourable conditions allow the seed to show growth as a plant; the observed germination supports placing the seed with living things. The learner correctly applies this rule: A seed is connected to living processes because, under suitable conditions, it germinates into a young plant that grows and can later be part of a life cycle producing new seeds. A seed is just a small non-living object until it visibly sprouts.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_10/H003",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “osmosis” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “translocation” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “transpiration” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Living creatures: exploring their characteristics. The student must decide: Decide whether a seed should be classified as living after considering germination. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

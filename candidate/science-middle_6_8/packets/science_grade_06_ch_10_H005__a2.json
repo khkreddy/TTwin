@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q16",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T20:37:20.918Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q16",
+    "item_type": "single_mcq",
+    "stem": "What is the correct sequence for blood being pumped from the heart to the lungs?",
+    "options": [
+      {
+        "id": "A",
+        "text": "left atrium → left ventricle → pulmonary artery"
+      },
+      {
+        "id": "B",
+        "text": "left atrium → left ventricle → pulmonary vein"
+      },
+      {
+        "id": "C",
+        "text": "right atrium → right ventricle → pulmonary artery"
+      },
+      {
+        "id": "D",
+        "text": "right atrium → right ventricle → pulmonary vein"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "With sunlight from the right, the root bends right and the shoot grows straight upward."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "With sunlight from the right, the shoot bends left and the root grows downward."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "With sunlight from the right, the shoot grows straight upward and the root grows downward."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "In the inverted seedling, the root keeps growing upward and the shoot keeps growing downward."
+      }
+    ],
+    "enrichment": "Shoots of plants grow upward and move towards sunlight, while roots grow downward. Plant orientation and light direction affect the observed bending of the shoot, but the root still grows downward and the shoot grows upward or towards sunlight. The learner correctly applies this rule: Shoots of plants grow upward and move towards sunlight, while roots grow downward. Roots and shoots keep growing in whichever direction they are already pointing.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_10/H005",
+      "gate_names": [
+        "relationship_reversal",
+        "relationship_reversal",
+        "relationship_reversal"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student reversing the directed relation (left ventricle vs right ventricle). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Living creatures: exploring their characteristics. The student must decide: Predict the direction of root and shoot growth when a seedling is upright, inverted, or lit from one side. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
