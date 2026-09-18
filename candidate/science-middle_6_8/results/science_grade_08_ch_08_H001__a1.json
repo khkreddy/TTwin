@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "option_table",
+  "stem": "Priya lists four samples found in her home and school laboratory.\n\n| sample | W | X | Y | Z |\n| description | air in a balloon | pure distilled water | a brass (copper and zinc) plate | oxygen gas in a cylinder |\n\nA mixture contains two or more substances physically mixed together, with each substance keeping its own properties. Which samples are mixtures?",
+  "options": [
+    {
+      "id": "A",
+      "text": "W and X"
+    },
+    {
+      "id": "B",
+      "text": "W and Y"
+    },
+    {
+      "id": "C",
+      "text": "X and Z"
+    },
+    {
+      "id": "D",
+      "text": "Y and Z"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "{\"headers\":[\"sample\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"description\",\"air in a balloon\",\"pure distilled water\",\"a brass (copper and zinc) plate\",\"oxygen gas in a cylinder\"]],\"row_labels\":[\"description\"],\"caption\":\"\"}"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air (W) is a physical mixture of nitrogen, oxygen and other gases, each keeping its own properties. Brass (Y) is a physical mixture (alloy) of copper and zinc. Distilled water (X) is a single pure compound, and oxygen gas in the cylinder (Z) is a single pure element, so neither is a mixture. Hence W and Y only, option B. Option A traps students who treat any clear liquid as a mixture; option D traps students who assume any gas stored in a container must be a mixture.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

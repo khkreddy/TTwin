@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:44:20.694Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q3",
+    "item_type": "single_mcq",
+    "stem": "Which statement about bonding is not correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Carbon can form four single covalent bonds."
+      },
+      {
+        "id": "B",
+        "text": "Chlorine atoms react to gain a noble gas electronic structure."
+      },
+      {
+        "id": "C",
+        "text": "Covalent bonding involves losing and gaining electrons."
+      },
+      {
+        "id": "D",
+        "text": "Hydrogen molecules have the formula H₂."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "States of matter, particles and water",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "gas is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Applies to gas behaviour represented by smoke spreading inside connected gas jars."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "spreading through available space -> no fixed shape or volume happens first, and that produces free motion in all directions and negligible attraction."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Applies to gas behaviour represented by smoke spreading inside connected gas jars is not true."
+      }
+    ],
+    "enrichment": "In gases, particles move freely in all directions and interparticle attractions are negligible, so gases spread to fill available space and have no fixed shape or fixed volume. free motion in all directions and negligible attraction -> spreading through available space -> no fixed shape or volume The learner explains that gas particles move freely in all directions with negligible attractions, so gas spreads through available connected space and has no fixed shape or volume. Gas is empty space, so smoke spreads by itself without needing moving air particles.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_07/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Carbon can form four single covalent bonds.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Chlorine atoms react to gain a noble gas electron…” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Hydrogen molecules have the formula H₂.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Particulate nature of matter. The student must decide: Decide why a gas does not have a fixed shape or fixed volume. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
