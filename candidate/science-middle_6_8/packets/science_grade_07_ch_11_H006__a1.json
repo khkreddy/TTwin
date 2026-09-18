@@ -1,0 +1,104 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T19:09:42.205Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q4",
+    "item_type": "single_mcq",
+    "stem": "Which quantities are measured in the same unit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "energy, power and work"
+      },
+      {
+        "id": "B",
+        "text": "energy and power, but not work"
+      },
+      {
+        "id": "C",
+        "text": "energy and work, but not power"
+      },
+      {
+        "id": "D",
+        "text": "power and work, but not energy"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The beam bends toward the wall even though it passes beside the mirror."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A polished steel plate cannot reflect light; only glass mirrors can."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "No reflection occurs because there is no bright spot on another surface."
+      }
+    ],
+    "enrichment": "Reflection is the change in direction of light when light falls on a mirror or shiny surface. Light falling on a mirror or shiny surface is redirected, so the path of the beam changes and a bright spot can appear elsewhere. The learner correctly applies this rule: Reflection is the change in direction of light when light falls on a mirror or shiny surface. A mirror creates its own bright spot because it is shiny.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_11/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “energy, power and work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “energy and power, but not work” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “power and work, but not energy” looked possible instead of “energy and work, but not power”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Decide when a mirror or shiny surface changes the direction of light and produces reflection. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V4",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
