@@ -325,11 +325,20 @@ function variationForAttempt(attempt) {
   if (attempt === 4) return "V5";
   return null;
 }
+function attemptFailed(unitId, attempt) {
+  const tag = safeUnit(unitId) + "__a" + attempt;
+  if (fs.existsSync(path.join(OUT, "items", tag + ".json"))) return false;
+  return fs.existsSync(path.join(OUT, "packets", tag + ".json"))
+    || fs.existsSync(path.join(OUT, "results", tag + ".json"));
+}
 function deepenUnits(science) {
   const rows = (science.units || []).filter((u) => u.unit_id);
   rows.sort((a, b) => {
     const da = maxAttempt(a.unit_id) - maxAttempt(b.unit_id);
     if (da) return da;
+    const fa = attemptFailed(a.unit_id, maxAttempt(a.unit_id) + 1) ? 1 : 0;
+    const fb = attemptFailed(b.unit_id, maxAttempt(b.unit_id) + 1) ? 1 : 0;
+    if (fa !== fb) return fa - fb;
     return String(a.unit_id).localeCompare(String(b.unit_id));
   });
   return rows.filter((u) => maxAttempt(u.unit_id) < 4);
@@ -578,7 +587,7 @@ async function main() {
 module.exports = {
   loadKimi, compileUnit, pickSource, packetHasPedagogy, instructionFor,
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
-  variationForAttempt, hingeWantsFigure, pedagogy, hasPedagogy, OUT, ROOT,
+  variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy, OUT, ROOT,
 };
 
 if (require.main === module) {

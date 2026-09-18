@@ -1,0 +1,111 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:17:47.826Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q4",
+    "item_type": "single_mcq",
+    "stem": "A concrete post is carried up a very high mountain. At the top of the mountain, the gravitational field is slightly weaker than at the bottom.\nWhat is the effect of this weaker field on the mass and on the weight of the post at the top of the mountain?",
+    "options": [
+      {
+        "id": "A",
+        "text": "is / less / is / less"
+      },
+      {
+        "id": "B",
+        "text": "is / less / is / unchanged"
+      },
+      {
+        "id": "C",
+        "text": "is / unchanged / is / less"
+      },
+      {
+        "id": "D",
+        "text": "is / unchanged / is / unchanged"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"\",\"\",\"\"],\"rows\":[[\"is\",\"less\",\"is\",\"less\"],[\"is\",\"less\",\"is\",\"unchanged\"],[\"is\",\"unchanged\",\"is\",\"less\"],[\"is\",\"unchanged\",\"is\",\"unchanged\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The unit of weight is the kilogram."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A stretching one spring by 4 cm must weigh more than B stretching a different spring by 2 cm."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Stretching the spring further increases the Earth's pull on the same object."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The downward push of my hand on a book is the book's weight."
+      }
+    ],
+    "enrichment": "The weight of an object is the force with which the Earth pulls the object towards itself; weight measures how strongly the object is pulled by the Earth and is measured in newtons. Earth pulls object -> weight of object -> force value in newtons The learner correctly applies this rule: The weight of an object is the force with which the Earth pulls the object towards itself; weight measures how strongly the object is pulled by the Earth and is measured in newtons. Weight is the amount of matter in an object, so it should be written in kilograms even in science.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_05/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “less” looked possible instead of “unchanged”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “unchanged” looked possible instead of “less”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Force. The student must decide: Identify weight as the Earth's pull on an object and choose the correct unit. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

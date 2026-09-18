@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:17:31.702Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q1",
+    "item_type": "single_mcq",
+    "stem": "The diameter of a copper wire is thought to be approximately 0.3 mm.\nWhich instrument should be used to obtain a more accurate measurement of the diameter of the wire?",
+    "options": [
+      {
+        "id": "A",
+        "text": "measuring tape"
+      },
+      {
+        "id": "B",
+        "text": "metre rule"
+      },
+      {
+        "id": "C",
+        "text": "micrometer"
+      },
+      {
+        "id": "D",
+        "text": "ruler"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "static charge is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: Use this for objects that have acquired static charge by rubbing or for a charged body brought near another body."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Two similarly charged balloons attract; opposite charges repel."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when Use this for objects that have acquired static charge by rubbing or for a charged body brought near another body is not true."
+      }
+    ],
+    "enrichment": "When certain materials are rubbed together, static charges build up on their surfaces. A charged body can exert electrostatic force on another charged body or on an uncharged body; like charges repel and unlike charges attract. rubbing certain materials -> static charge buildup -> electrostatic attraction or repulsion without contact The learner correctly applies this rule: When certain materials are rubbed together, static charges build up on their surfaces. A charged body can exert electrostatic force on another charged body or on an uncharged body; like charges repel and unlike charges attract. Rubbing makes charged objects sticky, so all charged objects attract every nearby object in the same way.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_05/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “measuring tape” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “metre rule” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “ruler” for the required “micrometer”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Force. The student must decide: Predict attraction or repulsion from static electric charges. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}

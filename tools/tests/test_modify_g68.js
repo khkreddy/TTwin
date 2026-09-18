@@ -85,6 +85,11 @@ if (c.uncovered === 0) {
   const withCand = deep.find((u) => g68.maxAttempt(u.unit_id) >= 1);
   if (!withCand) throw new Error("deepen missing candidate units");
   if (g68.nextAttempt(withCand.unit_id) < 2) throw new Error("next attempt after first fill");
+  const failedFirst = deep.find((u) => g68.attemptFailed(u.unit_id, g68.nextAttempt(u.unit_id)));
+  const fresh = deep.find((u) => g68.maxAttempt(u.unit_id) === 1 && !g68.attemptFailed(u.unit_id, 2));
+  if (failedFirst && fresh && deep.indexOf(failedFirst) < deep.indexOf(fresh)) {
+    throw new Error("fail-closed a2 must sort after fresh a2 gaps");
+  }
 }
 
 console.log("modify_g68_ok", packet.intelligence.join_status, p2.intelligence.join_status, p2.spec.variation_class, c.uncovered);

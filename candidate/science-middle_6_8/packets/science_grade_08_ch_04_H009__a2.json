@@ -1,0 +1,94 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_22:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-18T21:16:37.526Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_22:q9",
+    "item_type": "single_mcq",
+    "stem": "The table gives four energy sources and states whether the energy of the source is derived from the Sun.\nWhich row is correct?\nsource of energy derived from the Sun",
+    "options": [
+      {
+        "id": "A",
+        "text": "geothermal yes"
+      },
+      {
+        "id": "B",
+        "text": "oil no"
+      },
+      {
+        "id": "C",
+        "text": "water held behind a dam yes"
+      },
+      {
+        "id": "D",
+        "text": "wind no"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Rechargeable"
+      }
+    ],
+    "enrichment": "Rechargeable batteries can be recharged and reused multiple times, unlike dry cells that are single-use. battery designed for recharge -> charging restores use for multiple cycles -> less wastage and money saved over time; dry cell used up -> disposal is required The learner correctly applies this rule: Rechargeable batteries can be recharged and reused multiple times, unlike dry cells that are single-use. Any battery can be charged again if it is put into a charger for long enough.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_04/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “geothermal yes” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “oil no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “wind no” for the required “water held behind a dam yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Electricity: magnetic and heating effects. The student must decide: Classify a battery as rechargeable rather than single-use by whether it can be recharged and reused multiple times. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  }
+}
