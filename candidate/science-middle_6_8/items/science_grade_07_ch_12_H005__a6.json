@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_12/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_12/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "mechanism_conflation",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_12/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H005:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H005",
+    "stem": "The diagram shows Earth revolving around the Sun with its tilted axis. Vivaan's class asks why the Northern Hemisphere has winter in December while the Southern Hemisphere has summer then.\n\nWhich reason is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Earth's tilted axis stays pointed the same way as Earth revolves, so in December the Northern Hemisphere gets less direct sunlight and shorter days.",
+      "B": "In December the Northern Hemisphere has winter because its tilt brings it farther from the Sun.",
+      "C": "In December the Northern Hemisphere has summer.",
+      "D": "In December both hemispheres have winter."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\fill[yellow!80] (0,0) circle (0.35);\n\\node at (0,-0.7) {Sun};\n\\draw[thick] (0,0) ellipse (3.2 and 1.6);\n\\fill[cyan!40] (2.6,0.9) circle (0.28);\n\\draw[thick,->] (2.6,0.55) -- (2.6,1.35);\n\\node at (2.6,1.55) {tilt};\n\\node at (2.6,0.15) {Earth};\n\\node at (3.5,1.1) {Dec};\n\\node[align=center] at (-2.8,0) {N winter\\\\S summer};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

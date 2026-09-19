@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Qasim multiplies $\\frac{3}{5} \\times \\frac{4}{9}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly applies the product rule for fractions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The product is $\\frac{3 \\times 4}{5} = \\frac{12}{5}$, keeping one denominator unchanged."
+        },
+        {
+          "id": "B",
+          "text": "The product is $\\frac{3 \\times 4}{5 \\times 9} = \\frac{12}{45}$."
+        },
+        {
+          "id": "C",
+          "text": "The product is the printed $9$ alone."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Multiply numerators together and denominators together: (3×4)/(5×9)=12/45."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "a/b × c/d = (ac)/(bd). A multiplies numerators only. C reports a surface digit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

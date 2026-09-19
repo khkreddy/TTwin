@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-12$, because $(+12)+(-12)=0$ (same distance from zero, opposite sign)."
+        },
+        {
+          "id": "B",
+          "text": "Call \"opposite integer\" the finished answer, without naming the number that cancels $+12$."
+        },
+        {
+          "id": "C",
+          "text": "Report $12$ alone, because that digit string is printed in $+12$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Reena needs the additive inverse of $+12$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The additive inverse is the opposite-sign integer at the same distance from zero; $+12$ and $-12$ cancel to $0$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Additive inverse of +12 is -12 because they cancel to 0. B stops at the term \"opposite integer\". C grabs the printed digits without the sign change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Farhan finds $55\\%$ of $40$ mentally using benchmark percentages.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which method is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The finished answer is the phrase \"same whole\", with no percent of $40$ computed."
+        },
+        {
+          "id": "B",
+          "text": "$50\\%$ of $40$ is $20$ and $5\\%$ of $60$ is $3$, so $55\\%$ is $23$."
+        },
+        {
+          "id": "C",
+          "text": "$50\\%$ of $40$ is $20$ and $5\\%$ of $40$ is $2$, so $55\\%$ of $40$ is $20+2=22$."
+        },
+        {
+          "id": "D",
+          "text": "Use the same benchmark story to compare lengths on an unrelated map scale."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Benchmark percentages of the same whole combine: $50\\%$ of $40$ plus $5\\%$ of $40$ gives $55\\%$ of $40$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$55\\%=50\\%+5\\%$ of the same whole $40$ yields $20+2=22$. Naming \"same whole\" alone, mixing a different whole for $5\\%$, or stretching to map scales are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Vikram draws a pie chart for club choices in three categories: badminton $6$, chess $9$, and table tennis $9$.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The whole is $6+9+9=24$, so the chess slice is $\\dfrac{9}{24}\\times 360^{\\circ}=135^{\\circ}$."
+    },
+    {
+      "id": "2",
+      "text": "Each slice angle is proportional to its category's part of the whole, and the angles around the circle total $360^{\\circ}$."
+    },
+    {
+      "id": "3",
+      "text": "Report the category count $9$ itself as the number of degrees for chess on the pie chart."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Statements 1 and 2 are true: chess occupies $135^{\\circ}$ as a proportional share of $360^{\\circ}$. Statement 3 confuses the count with degrees. So the key is 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

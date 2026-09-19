@@ -1,0 +1,110 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_202/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_202/H005",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "UNRESOLVED",
+      "B": "UNRESOLVED",
+      "C": null,
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_202/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H005:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-PLACEVALUE",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H005",
+    "stem": "Priya asks whether $\\sqrt{2}$ can be written as a terminating decimal or as a fraction of counting numbers.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "marks": 1,
+        "text": "Which claim is correct?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Call $\\sqrt{2}$ a terminating decimal, with no check that its decimal ends."
+          },
+          {
+            "id": "B",
+            "text": "$\\sqrt{2}$ equals a fraction of counting numbers even if $m$ and $n$ need not be counting numbers."
+          },
+          {
+            "id": "C",
+            "text": "$\\sqrt{2}$ cannot be written as a terminating decimal and cannot equal a fraction $m/n$ of counting numbers $m$ and $n$."
+          },
+          {
+            "id": "D",
+            "text": "Choose $1.4$ as $\\sqrt{2}$ because $1.4$ is a short decimal printed nearby in a table."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "marks": 1,
+        "text": "Give one reason for your choice."
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

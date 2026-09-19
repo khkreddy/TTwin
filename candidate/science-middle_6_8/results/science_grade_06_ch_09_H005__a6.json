@@ -1,0 +1,54 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Fine ragi flour should pass through the sieve; larger grit should remain on the sieve."
+    },
+    {
+      "id": "B",
+      "text": "Sieving is suitable here because the particles differ in size and the hole size sits between them."
+    },
+    {
+      "id": "C",
+      "text": "With those hole sizes, fine ragi flour remains on the sieve and larger grit passes through."
+    },
+    {
+      "id": "D",
+      "text": "The same sieve will remove dissolved mud colour from the muddy water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Rohit needs to separate fine ragi flour from larger grit using a kitchen sieve whose holes are between the sizes of the flour and the grit. He also has a cup of muddy water on the side.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sieving lets smaller particles through and keeps larger ones. Holes between flour and grit sizes make that separation work. Reversing which passes, or using a sieve for dissolved mud in water, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

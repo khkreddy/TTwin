@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "$1$ is neither prime nor composite because it has only one factor."
+    },
+    {
+      "id": "B",
+      "text": "Call $1$ a composite number from the label composite alone."
+    },
+    {
+      "id": "C",
+      "text": "$17$ is prime (exactly two factors) and $8$ is composite (more than two factors)."
+    },
+    {
+      "id": "D",
+      "text": "The prime and composite labels are produced by a jump-size treasure hunt on a number line, not by these factor lists."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "one_or_more",
+  "stem": "Vikram lists the factors of three whole numbers: $1$ has only $\\{1\\}$; $17$ has $\\{1,17\\}$; $8$ has $\\{1,2,4,8\\}$.\n\nOne or more options may be correct. Which two claims classify $1$, $17$, and $8$ correctly?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1 has one factor so is neither; 17 has exactly two factors so is prime; 8 has more than two factors so is composite. A and C state that. B mislabels 1 as composite. D swaps in a number-line jump mechanism instead of factor counts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

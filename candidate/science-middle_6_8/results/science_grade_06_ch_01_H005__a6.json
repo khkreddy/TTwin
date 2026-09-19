@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep investigating the dew question and work with others instead of treating it as finished."
+    },
+    {
+      "id": "B",
+      "text": "Ask classmates or a teacher to help continue the search, because hard science questions need more than one afternoon alone."
+    },
+    {
+      "id": "C",
+      "text": "Stop investigating because every science question must be answered by a group before evening study."
+    },
+    {
+      "id": "D",
+      "text": "Stop investigating because the dew answer is beyond Grade 6."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ojas wants to know why dew appears on grass overnight. He cannot finish the answer alone before evening study time.\n\nWhich claims correctly say what he should do? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A hard science question is not finished when time runs out alone; keep investigating and collaborate. Group answers are not required before evening study, and Grade 6 is not a stop rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir solves $6x+4=2x+20$, where the unknown $x$ appears on both sides.\n\nOne or more options may be correct. Which two first moves correctly clear the matching unknown terms?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Subtract $2x$ from both sides to get $4x+4=20$."
+    },
+    {
+      "id": "B",
+      "text": "Name the phrase \"like terms\" instead of removing a matching $x$ term from both sides."
+    },
+    {
+      "id": "C",
+      "text": "Remove the same unknown term $2x$ from both sides so all remaining $x$ terms sit on one side before clearing constants."
+    },
+    {
+      "id": "D",
+      "text": "Add $2x$ to both sides to get $8x+4=20$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching $2x$ clears when subtracted from both sides, giving $4x+4=20$ and gathering $x$ on one side. Naming \"like terms\" swaps the label. Adding $2x$ runs the clear-matching-terms move backwards.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

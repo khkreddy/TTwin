@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Urvashi multiplies $0.5 \\times 2$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Compared with both factors, where does the product sit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The product is greater than both factors."
+        },
+        {
+          "id": "B",
+          "text": "The product equals $1$, which lies between $0.5$ and $2$."
+        },
+        {
+          "id": "C",
+          "text": "Settle the size by treating the digits as place-value regrouping of whole numbers only."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "0.5×2=1. One factor is less than 1 and the other is greater than 1, so the product lies between them."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "0.5×2=1 sits between the factors. A would fit two factors greater than 1. C conflates with whole-number place-value regrouping.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

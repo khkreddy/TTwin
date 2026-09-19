@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Omar studies the expression $4n+1$ for whole-number values of $n$.\n\nHow should he classify its parity?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $4n+1$ a letter-number label only, without testing whether values stay even, stay odd, or change."
+    },
+    {
+      "id": "B",
+      "text": "It is always odd for every whole number $n$: $4n$ is even, so $4n+1$ is odd."
+    },
+    {
+      "id": "C",
+      "text": "Decide from the printed coefficient $4$ alone, without testing any value of $n$."
+    },
+    {
+      "id": "D",
+      "text": "Treat $4n+1$ as parity-changing by running the same check used for expressions such as $3n+4$, without using that $4n$ is always even."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "4n is always even, so 4n+1 is always odd. A stops at a label. C reads the printed 4. D borrows the parity-changing check from forms like 3n+4.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

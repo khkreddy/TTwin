@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "There are $9000$ four-digit counting numbers, from $1000$ to $9999$."
+    },
+    {
+      "id": "2",
+      "text": "There are $9999$ four-digit counting numbers, counting every whole number from $1$ through $9999$."
+    },
+    {
+      "id": "3",
+      "text": "A $4$-digit number has digit length $4$, so there are exactly $4$ such numbers."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Rohan asks how many $4$-digit counting numbers there are.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Four-digit counting numbers run from 1000 to 9999, so there are 9000 of them. Statement 1 alone is correct. Statement 2 counts from 1 and drops the 4-digit start. Statement 3 confuses digit length with the count of such numbers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

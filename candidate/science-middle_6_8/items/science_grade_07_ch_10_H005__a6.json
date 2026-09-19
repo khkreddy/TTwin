@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_10/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_10/H005",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "term_substitution",
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_10/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_10:H005:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_07/ch_10",
+    "chapter_label": "Respiration and transport in plants",
+    "subtopic_id": "science/grade_07/ch_10/H005",
+    "stem": "The diagram shows Aarav's leaf flowchart on the board. He may use carbon dioxide, water, glucose, oxygen, starch, sunlight, darkness, and chlorophyll.\n\nWhich claims about photosynthesis are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Carbon dioxide and water, in sunlight and chlorophyll, make glucose and oxygen.",
+      "B": "Oxygen is released when a green leaf makes food by photosynthesis in sunlight.",
+      "C": "Carbon dioxide and water, in sunlight and chlorophyll, make starch and oxygen.",
+      "D": "Glucose and oxygen, in sunlight and chlorophyll, make carbon dioxide and water."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n\\draw[thick,fill=green!25] (0,0) .. controls (0.4,0.9) and (0.4,1.7) .. (0,2.4) .. controls (-0.4,1.7) and (-0.4,0.9) .. (0,0);\n\\draw[thick] (0,0) -- (0,2.4);\n\\node at (0,2.8) {leaf};\n\\node[align=center] at (-2.6,1.8) {CO$_2$\\\\water};\n\\draw[->,thick] (-1.7,1.6) -- (-0.55,1.6);\n\\node[align=center] at (2.8,1.8) {glucose\\\\oxygen};\n\\draw[->,thick] (0.55,1.6) -- (1.8,1.6);\n\\node at (0,3.4) {sunlight + chlorophyll};\n\\draw[->,thick] (0,3.15) -- (0,2.55);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_10/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

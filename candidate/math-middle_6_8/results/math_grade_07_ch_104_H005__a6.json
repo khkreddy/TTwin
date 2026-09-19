@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Madhav simplifies $4(3x + 2) - (2x - 5)$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly removes the brackets before combining like terms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The expression becomes $12x + 2 - (2x - 5)$."
+        },
+        {
+          "id": "B",
+          "text": "The expression becomes $12x + 8 - 2x + 5$."
+        },
+        {
+          "id": "C",
+          "text": "The expression becomes $12x + 8 - 2x - 5$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The factor 4 multiplies every term in the first bracket, giving 12x+8. Subtracting (2x−5) changes each term inside to its opposite, so −2x+5. The expanded form is 12x+8−2x+5."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distribute 4 across 3x and 2, then negate both terms of the subtracted bracket. A leaves 2 unscaled. C flips the sign of 2x but not of −5.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

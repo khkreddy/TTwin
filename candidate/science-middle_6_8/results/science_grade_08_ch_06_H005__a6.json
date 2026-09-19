@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes the air flow?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Air flows from inside the bottle to outside until the pressures are almost equal."
+        },
+        {
+          "id": "B",
+          "text": "Air flows from outside into the higher-pressure bottle."
+        },
+        {
+          "id": "C",
+          "text": "Air flows out even if the cap stays fully closed and no path connects the regions."
+        },
+        {
+          "id": "D",
+          "text": "The open cap itself is the high-pressure region that forces outside air in."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,font=\\sffamily\\small]\n\\draw[thick] (0,0) ellipse (0.85 and 1.35);\n\\draw[thick] (-0.35,1.25) -- (-0.35,1.7) -- (0.35,1.7) -- (0.35,1.25);\n\\node at (0,0.15) {high $P$};\n\\node at (0,-0.45) {inside};\n\\draw[->,thick] (0.95,1.55) -- (2.1,1.55);\n\\node[above] at (1.5,1.55) {air out};\n\\node at (3.1,1.55) {low $P$};\n\\node[font=\\bfseries\\small] at (1.4,-1.7) {diagram};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Krish's sealed soft-drink bottle after it was shaken. Air pressure inside the bottle is higher than the air pressure outside. He opens the cap so a path connects the two regions.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Air moves from higher pressure to lower pressure through an open path until the pressures nearly match."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With a connecting path, air flows from higher pressure inside the bottle to lower pressure outside until pressures nearly equalise. Reversing the direction, omitting the open path, or treating the cap as the high-pressure region is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": "Rewrote source force-arrow block into a soft-drink bottle with high/low pressure and outflow arrow."
+  }
+}

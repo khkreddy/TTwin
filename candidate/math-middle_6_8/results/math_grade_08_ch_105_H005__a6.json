@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kavya knows that $24$ is divisible by $8$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim follows?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Treat whether multiples of $24$ are divisible by $8$ as unknown, dropping the given that $24$ is divisible by $8$."
+        },
+        {
+          "id": "B",
+          "text": "Every multiple of $24$ is divisible by $8$."
+        },
+        {
+          "id": "C",
+          "text": "$24$ is divisible by every multiple of $8$, such as $16$ or $32$."
+        },
+        {
+          "id": "D",
+          "text": "Divisibility by $8$ comes from already knowing a multiple of $24$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "If $24$ is divisible by $8$, then every multiple of $24$ is also divisible by $8$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divisibility by $8$ passes to every multiple of $24$. Dropping the given, extending to multiples of $8$, or reversing the direction are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

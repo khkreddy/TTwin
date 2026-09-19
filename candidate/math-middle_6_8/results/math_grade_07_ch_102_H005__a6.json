@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "First form the product: compute $5 \\times 2 = 10$, then evaluate $6 + 10 - 4 = 12$."
+    },
+    {
+      "id": "B",
+      "text": "Work strictly left to right as $((6+5)\\times 2)-4$, as if brackets already fixed that order."
+    },
+    {
+      "id": "C",
+      "text": "Call the answer multiplication only, without combining the remaining terms."
+    },
+    {
+      "id": "D",
+      "text": "Also treat an exponent such as $2^{3}$ under the same left-to-right walk, as if this hinge settled powers."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Tanvi must evaluate the unbracketed expression $6 + 5 \\times 2 - 4$.\n\nWhich order is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Without brackets, form the multiplication term first: 5×2=10, then 6+10-4=12. B pretends brackets force left-to-right. C stops at the word multiplication. D stretches the hinge to exponents.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

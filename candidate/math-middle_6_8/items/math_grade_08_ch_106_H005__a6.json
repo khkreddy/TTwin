@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_106/H005",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_106/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "C": null,
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_106/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_106:H005:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M2",
+    "chapter_id": "math/grade_08/ch_106",
+    "chapter_label": "math/grade_08/ch_106",
+    "subtopic_id": "math/grade_08/ch_106/H005",
+    "stem": "The diagram shows a square of side $w+6$ split into four rectangles.\n\nArjun expands $(w+6)^{2}$.\n\nWhich expansion is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$(w+6)^{2}=w^{2}$.",
+      "B": "$(w+6)^{2}=w^{2}+36$.",
+      "C": "$(w+6)^{2}=(w+6)(w+6)=w^{2}+6w+6w+36=w^{2}+12w+36$.",
+      "D": "$(w+6)^{2}=w^{2}+6w+36$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily\\small,line join=round,line cap=round]\n  \\draw[line width=1pt] (0,0) rectangle (5.5,5.5);\n  \\draw[line width=0.8pt] (3.3,0) -- (3.3,5.5);\n  \\draw[line width=0.8pt] (0,3.3) -- (5.5,3.3);\n  \\node at (1.65,4.4) {$w^{2}$};\n  \\node at (4.4,4.4) {$6w$};\n  \\node at (1.65,1.65) {$6w$};\n  \\node at (4.4,1.65) {$36$};\n  \\node[above] at (1.65,5.5) {$w$};\n  \\node[above] at (4.4,5.5) {$6$};\n  \\node[left] at (0,4.4) {$w$};\n  \\node[left] at (0,1.65) {$6$};\n  \\node[below] at (2.75,-0.35) {side $w+6$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_106/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

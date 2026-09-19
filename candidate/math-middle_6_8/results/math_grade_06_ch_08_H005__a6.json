@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "Draw base $AB$ of $4$ cm, construct a perpendicular at $A$ and at $B$, mark $4$ cm on each perpendicular to get $D$ and $C$, then join $DC$."
+    },
+    {
+      "id": "B",
+      "text": "Draw a base of $4$ cm and raise perpendiculars at both ends, but mark any new lengths on those perpendiculars."
+    },
+    {
+      "id": "C",
+      "text": "The upright sides are produced by first writing the area $16$ cm$^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "Find the area $16$ cm$^{2}$ first, and treat that area calculation as the construction of the square."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Diya must construct a square of side $4$ cm with ruler and compass.\n\nWhich plan forces the square?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Base 4 cm, perpendiculars at both ends, mark 4 cm on each, join the top. B omits equal side lengths on the perpendiculars. C reverses construction order around area. D treats area as the construction itself.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

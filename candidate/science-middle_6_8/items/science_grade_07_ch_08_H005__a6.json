@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_08/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_08/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_08/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_08:H005:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_07/ch_08",
+    "chapter_label": "Measurement of time",
+    "subtopic_id": "science/grade_07/ch_08/H005",
+    "stem": "The diagram shows Reyansh's two simple pendulums in the lab. Both have the same string length at the same place. Pendulum P has a wooden-bead bob. Pendulum Q has a metal-nut bob. He sets both swinging with small oscillations.\n\nWhich statement about their time periods is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "P and Q have the same time period, because time period depends on length, not on the mass of the bob.",
+      "B": "Q has a longer time period, because time period depends on the mass of the bob, not on length.",
+      "C": "P and Q have the same time period at every place on Earth, because length alone fixes the time period everywhere.",
+      "D": "Any two periodically moving objects of this length have the same time period at this place."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n\\fill (-2.0,3.2) circle (0.05);\n\\draw[thick] (-2.0,3.2) -- (-2.0,0.75);\n\\fill[brown!55] (-2.0,0.75) circle (0.20);\n\\node at (-2.0,3.5) {support};\n\\node at (-2.0,0.25) {P};\n\\node at (-2.0,-0.15) {wood};\n\\fill (2.0,3.2) circle (0.05);\n\\draw[thick] (2.0,3.2) -- (2.0,0.75);\n\\fill[gray!75] (2.0,0.75) circle (0.26);\n\\node at (2.0,3.5) {support};\n\\node at (2.0,0.25) {Q};\n\\node at (2.0,-0.15) {metal};\n\\node at (0,3.9) {same length};\n\\draw[<->] (-1.8,2.55) -- (1.8,2.55);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_08/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

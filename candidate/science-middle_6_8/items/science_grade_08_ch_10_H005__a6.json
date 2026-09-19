@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_10/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_10/H005",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "term_substitution",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_10/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H005:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H005",
+    "stem": "The diagram shows Ojas's plane-mirror set-up. An incident ray meets the mirror at point O. The dashed line at O is drawn at 90° to the mirror. The reflected ray leaves O. Ojas keeps a flat cardboard sheet under these rays so he can trace them.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "The incident ray, the dashed normal, and the reflected ray all lie in the same plane.",
+      "B": "A flat sheet under the rays can hold all three lines because they share one plane.",
+      "C": "The dashed line is only another name for the incident ray, so only two lines matter.",
+      "D": "The same-plane rule applies only to curved mirrors, not to this plane mirror."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[line width=1.2pt] (0,0) -- (0,3.2);\n\\node[right] at (0.12,1.6) {mirror};\n\\coordinate (O) at (0,1.6);\n\\fill (O) circle (1.5pt);\n\\node[right] at (0.15,1.35) {O};\n\\draw[dashed,line width=0.7pt] (O) -- (2.4,1.6);\n\\node[above] at (1.5,1.6) {normal};\n\\draw[->,line width=0.8pt] (-2.4,2.7) -- (O);\n\\node[above] at (-1.5,2.55) {incident};\n\\draw[->,line width=0.8pt] (O) -- (-2.4,0.5);\n\\node[below] at (-1.4,0.7) {reflected};\n\\draw[thin] (-2.6,-0.2) rectangle (2.6,3.4);\n\\node[font=\\footnotesize] at (0,-0.55) {cardboard sheet};\n\\node[font=\\bfseries\\small] at (0,-1.05) {diagram};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Wafa has line $n$ and wants a line through point $Q$ parallel to $n$ by copying a corresponding angle from a transversal.\n\nWhich plan works?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copy an angle at $Q$ with no transversal that cuts line $n$, and claim the new line is parallel to $n$."
+    },
+    {
+      "id": "B",
+      "text": "The transversal through $n$ comes from first drawing the finished parallel through $Q$."
+    },
+    {
+      "id": "C",
+      "text": "Draw a transversal through $Q$ that cuts $n$, copy the corresponding angle at $Q$, and draw the new line through $Q$."
+    },
+    {
+      "id": "D",
+      "text": "Slide a set-square along $n$ and treat that tool method as this corresponding-angle copy."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A transversal must cut n; copy the corresponding angle at Q; draw the new line. A omits the transversal. B reverses construction order. D swaps in a set-square slide.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

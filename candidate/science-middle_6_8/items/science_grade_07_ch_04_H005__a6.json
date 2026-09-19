@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_04/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_04/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "relationship_reversal",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_04/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_04:H005:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_04",
+    "chapter_label": "The world of metals and non-metals",
+    "subtopic_id": "science/grade_07/ch_04/H005",
+    "stem": "The diagram shows Kabir's choices for heating dal: an iron pan, a wooden handle, and a shiny plastic pan. He must pick a pan to heat the dal and a handle for a hot iron pan.\n\nWhich claim is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "An iron pan is suitable for heating dal because iron conducts heat well.",
+      "B": "An iron handle is safer than a wooden handle on the hot iron pan.",
+      "C": "A wooden handle becomes a good heat conductor when fixed to the iron pan.",
+      "D": "Shiny plastic is suitable for a heating pan because it conducts heat well."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% iron pan\n\\draw[thick,fill=gray!35] (0,0.35) -- (0,1.1) -- (1.6,1.1) -- (1.6,0.35) -- cycle;\n\\draw[thick,fill=gray!20] (0.15,0.5) rectangle (1.45,0.95);\n\\node at (0.8,1.45) {iron pan};\n% wooden handle\n\\draw[thick,fill=brown!45] (2.4,0.55) rectangle (4.0,0.95);\n\\node at (3.2,1.35) {wood};\n\\node at (3.2,0.2) {handle};\n% shiny plastic pan\n\\draw[thick,fill=cyan!15] (5.0,0.35) -- (5.0,1.1) -- (6.6,1.1) -- (6.6,0.35) -- cycle;\n\\draw[thick,fill=cyan!8] (5.15,0.5) rectangle (6.45,0.95);\n\\node at (5.8,1.45) {shiny plastic};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_04/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Proteins are food components needed for muscle building, proper growth, and development."
+    },
+    {
+      "id": "2",
+      "text": "Boiled eggs and rajma cannot supply proteins because only sweets build muscle."
+    },
+    {
+      "id": "3",
+      "text": "Any tiny amount of protein is enough for a growing child on a long trek."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Bilal packs boiled eggs and rajma for a long school trek. His aunt says these foods supply proteins that help build muscle and support proper growth and development.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Proteins support muscle building and growth; eggs and rajma are protein sources. Sweets are not the only muscle food, and any tiny amount is not enough for growing children.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

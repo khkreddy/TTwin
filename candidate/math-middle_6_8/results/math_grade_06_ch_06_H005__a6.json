@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim about full rounds and leftover distance is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Full rounds $= 3$ and leftover $= 50$ m along the track, because $800 = 3 \\times 250 + 50$."
+        },
+        {
+          "id": "B",
+          "text": "Call \"one round\" the leftover distance, and stop before using the $250$ m perimeter."
+        },
+        {
+          "id": "C",
+          "text": "Report $800$ full rounds, reading the run distance as the round count."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Priya runs on a rectangular track whose perimeter is $250$ m. She runs $800$ m from a start mark that is also the finish line.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "One full round equals the $250$ m perimeter, so $800 = 3 \\times 250 + 50$ means $3$ full rounds and $50$ m left along the track from the finish line."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter 250 m; 800 = 3×250 + 50, so 3 full rounds and 50 m leftover. B swaps leftover for one round. C reads the run distance as the round count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

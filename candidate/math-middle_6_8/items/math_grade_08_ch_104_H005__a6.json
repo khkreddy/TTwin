@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_104/H005",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_104/H005",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_104/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H005:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H005",
+    "stem": "The diagram shows quadrilateral $ABCD$ with all four angles $90^{\\circ}$ and side lengths $8$, $5$, $8$, $5$ in order around the shape.\n\nOne or more options may be correct. Which two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "It is a rectangle, because all four angles are $90^{\\circ}$.",
+      "B": "Call it a square as the label, with no check that all sides are equal.",
+      "C": "It is not a square, because adjacent sides $8$ and $5$ are unequal.",
+      "D": "Having four right angles comes from already calling the shape a square."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (6.4,0);\n  \\coordinate (C) at (6.4,4.0);\n  \\coordinate (D) at (0,4.0);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw (A)--++(0.35,0)--++(0,0.35);\n  \\draw (B)--++(-0.35,0)--++(0,0.35);\n  \\draw (C)--++(-0.35,0)--++(0,-0.35);\n  \\draw (D)--++(0.35,0)--++(0,-0.35);\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n  \\node[below] at (3.2,-0.35) {8};\n  \\node[above] at (3.2,4.35) {8};\n  \\node[left] at (-0.35,2.0) {5};\n  \\node[right] at (6.75,2.0) {5};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

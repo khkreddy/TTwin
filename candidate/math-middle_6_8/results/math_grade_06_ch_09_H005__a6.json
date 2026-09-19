@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly predicts the unfolded design?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two star stamps appear as mirror images across the fold line, because the fold forced matching positions to coincide."
+        },
+        {
+          "id": "B",
+          "text": "The fold line itself is the stamped design."
+        },
+        {
+          "id": "C",
+          "text": "One star appears anywhere on the paper, even where the layers did not meet."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Neel folds a square sheet once down the middle, stamps one star through both layers, then unfolds the sheet.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Folding makes matching positions coincide, so the stamp through both layers leaves two mirror-image stars across the fold line when the sheet is opened."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One fold then a stamp through both layers yields two mirror stars about the fold line. B swaps the fold line for the design. C drops the layers-coincide condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

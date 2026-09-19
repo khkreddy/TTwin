@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "All three readings can be normal for healthy people because 37.0 °C is a typical average, not an exact value every person must show."
+    },
+    {
+      "id": "2",
+      "text": "Anyone not exactly 37.0 °C after play is unhealthy."
+    },
+    {
+      "id": "3",
+      "text": "A reading of 41.5 °C can also be normal for a healthy sibling."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Ishaan records evening body temperatures of three healthy siblings after play: 36.7 °C, 37.1 °C, and 37.3 °C. A chart marks about 37.0 °C as a typical average and shows 41.5 °C as a very high fever reading.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "37.0 °C is a useful average; small differences around it can still be healthy. Exact 37.0 °C is not required, and 41.5 °C is not a normal healthy reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

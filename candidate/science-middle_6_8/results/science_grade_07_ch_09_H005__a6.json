@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Myra labels four stomach agents on a science-fair poster: wall movements, digestive juice, acid, and mucus. She must match each to its job: churning food, breaking proteins into simpler components, killing many harmful bacteria, or protecting the stomach lining from acid.\n\nWhich matching is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Wall movements — churning; mucus — protein breakdown; acid — killing bacteria; digestive juice — protecting the lining."
+    },
+    {
+      "id": "B",
+      "text": "Wall movements — churning; digestive juice — protein breakdown; acid — killing bacteria; mucus — protecting the lining."
+    },
+    {
+      "id": "C",
+      "text": "Wall movements — churning; digestive juice — protein breakdown; acid — killing bacteria; acid also damages the lining during ordinary digestion."
+    },
+    {
+      "id": "D",
+      "text": "Wall movements — churning; digestive juice — protein breakdown in the oesophagus; acid — killing bacteria; mucus — protecting the lining."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wall movements churn; digestive juice breaks proteins in the stomach; acid kills many harmful bacteria; mucus protects the lining. Mucus does not digest protein; ordinary digestion does not leave the lining unprotected; stomach juice does not act in the oesophagus.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

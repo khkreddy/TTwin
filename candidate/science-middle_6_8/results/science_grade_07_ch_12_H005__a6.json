@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Earth revolving around the Sun with its tilted axis. Vivaan's class asks why the Northern Hemisphere has winter in December while the Southern Hemisphere has summer then.\n\nWhich reason is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's tilted axis stays pointed the same way as Earth revolves, so in December the Northern Hemisphere gets less direct sunlight and shorter days."
+    },
+    {
+      "id": "B",
+      "text": "In December the Northern Hemisphere has winter because its tilt brings it farther from the Sun."
+    },
+    {
+      "id": "C",
+      "text": "In December the Northern Hemisphere has summer."
+    },
+    {
+      "id": "D",
+      "text": "In December both hemispheres have winter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\fill[yellow!80] (0,0) circle (0.35);\n\\node at (0,-0.7) {Sun};\n\\draw[thick] (0,0) ellipse (3.2 and 1.6);\n\\fill[cyan!40] (2.6,0.9) circle (0.28);\n\\draw[thick,->] (2.6,0.55) -- (2.6,1.35);\n\\node at (2.6,1.55) {tilt};\n\\node at (2.6,0.15) {Earth};\n\\node at (3.5,1.1) {Dec};\n\\node[align=center] at (-2.8,0) {N winter\\\\S summer};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Maintained axial tilt during revolution changes sunlight intensity and day length by hemisphere. December winter in the north is not because that hemisphere is farther from the Sun; seasons are opposite, not the same in both hemispheres.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote lens ray diagram into Earth–Sun orbit with maintained tilt for December."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Kabir's choices for heating dal: an iron pan, a wooden handle, and a shiny plastic pan. He must pick a pan to heat the dal and a handle for a hot iron pan.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "An iron pan is suitable for heating dal because iron conducts heat well."
+    },
+    {
+      "id": "B",
+      "text": "An iron handle is safer than a wooden handle on the hot iron pan."
+    },
+    {
+      "id": "C",
+      "text": "A wooden handle becomes a good heat conductor when fixed to the iron pan."
+    },
+    {
+      "id": "D",
+      "text": "Shiny plastic is suitable for a heating pan because it conducts heat well."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% iron pan\n\\draw[thick,fill=gray!35] (0,0.35) -- (0,1.1) -- (1.6,1.1) -- (1.6,0.35) -- cycle;\n\\draw[thick,fill=gray!20] (0.15,0.5) rectangle (1.45,0.95);\n\\node at (0.8,1.45) {iron pan};\n% wooden handle\n\\draw[thick,fill=brown!45] (2.4,0.55) rectangle (4.0,0.95);\n\\node at (3.2,1.35) {wood};\n\\node at (3.2,0.2) {handle};\n% shiny plastic pan\n\\draw[thick,fill=cyan!15] (5.0,0.35) -- (5.0,1.1) -- (6.6,1.1) -- (6.6,0.35) -- cycle;\n\\draw[thick,fill=cyan!8] (5.15,0.5) rectangle (6.45,0.95);\n\\node at (5.8,1.45) {shiny plastic};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Iron conducts heat well, so it suits a heating pan. A metal handle is less safe than wood; wood stays a poor conductor; shiny plastic does not conduct heat well for a cooking vessel.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force block into iron pan, wooden handle, and shiny plastic pan."
+  }
+}

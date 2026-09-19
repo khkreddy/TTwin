@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle ABC$ and $\\triangle DEF$. In both triangles the sides $8\\,\\mathrm{cm}$ and $6\\,\\mathrm{cm}$ meet at a $50^{\\circ}$ angle.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent from the two equal side lengths alone."
+    },
+    {
+      "id": "B",
+      "text": "The matching sides and included angle come from first declaring the triangles congruent."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent by SAS: two sides and the included angle match."
+    },
+    {
+      "id": "D",
+      "text": "Two sides and a non-included angle are enough for congruence here."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.6,0);\n  \\coordinate (C) at (1.3,2.3);\n  \\draw[line width=0.9pt] (A)--(B)--(C)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above] at (C) {$C$};\n  \\node[below=3pt] at (1.8,0) {$8\\,\\mathrm{cm}$};\n  \\node[left] at (0.55,1.15) {$6\\,\\mathrm{cm}$};\n  \\draw[line width=0.65pt] (0.4,0) arc (0:48:0.4);\n  \\node at (0.78,0.38) {$50^{\\circ}$};\n  \\begin{scope}[xshift=5.5cm]\n    \\coordinate (D) at (0,0);\n    \\coordinate (E) at (3.6,0);\n    \\coordinate (F) at (1.3,2.3);\n    \\draw[line width=0.9pt] (D)--(E)--(F)--cycle;\n    \\node[below left] at (D) {$D$};\n    \\node[below right] at (E) {$E$};\n    \\node[above] at (F) {$F$};\n    \\node[below=3pt] at (1.8,0) {$8\\,\\mathrm{cm}$};\n    \\node[left] at (0.55,1.15) {$6\\,\\mathrm{cm}$};\n    \\draw[line width=0.65pt] (0.4,0) arc (0:48:0.4);\n    \\node at (0.78,0.38) {$50^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.4,1.0) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In each triangle the 50° angle lies between the 8 cm and 6 cm sides, so SAS applies. A drops the included-angle condition. B reverses congruence and the given equal parts. D stretches to SSA.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Two triangles with SAS data 8 cm, 50°, 6 cm."
+  }
+}

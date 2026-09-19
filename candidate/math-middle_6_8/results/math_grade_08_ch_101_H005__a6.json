@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rohan looks at the consecutive squares $13^{2}=169$ and $14^{2}=196$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim about the gap is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The gap is $196$, the larger square."
+        },
+        {
+          "id": "B",
+          "text": "The gap is $27$, and there are $26$ whole numbers strictly between $169$ and $196$."
+        },
+        {
+          "id": "C",
+          "text": "The consecutive squares come from writing the gap $27$ first."
+        },
+        {
+          "id": "D",
+          "text": "The gap is $14$, the larger base printed in $14^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Consecutive squares differ by the odd number $27$; whole numbers strictly between them number one less than that gap, so $26$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$196-169=27$, and the count of whole numbers strictly between is $26$. Naming a printed square or base, or reversing gap and squares, misses the gap idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Priya asks whether $\\sqrt{2}$ can be written as a terminating decimal or as a fraction of counting numbers.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Call $\\sqrt{2}$ a terminating decimal, with no check that its decimal ends."
+        },
+        {
+          "id": "B",
+          "text": "$\\sqrt{2}$ equals a fraction of counting numbers even if $m$ and $n$ need not be counting numbers."
+        },
+        {
+          "id": "C",
+          "text": "$\\sqrt{2}$ cannot be written as a terminating decimal and cannot equal a fraction $m/n$ of counting numbers $m$ and $n$."
+        },
+        {
+          "id": "D",
+          "text": "Choose $1.4$ as $\\sqrt{2}$ because $1.4$ is a short decimal printed nearby in a table."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$\\sqrt{2}$ is irrational: its decimal does not terminate, and assuming $\\sqrt{2}=m/n$ for counting numbers leads to a contradiction on prime factors of $2$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$\\sqrt{2}$ is neither a terminating decimal nor a fraction of counting numbers. Labelling it terminating, dropping the counting-number condition, or grabbing a short printed decimal are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

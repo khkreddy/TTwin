@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "The incident ray, the dashed normal, and the reflected ray all lie in the same plane."
+    },
+    {
+      "id": "B",
+      "text": "A flat sheet under the rays can hold all three lines because they share one plane."
+    },
+    {
+      "id": "C",
+      "text": "The dashed line is only another name for the incident ray, so only two lines matter."
+    },
+    {
+      "id": "D",
+      "text": "The same-plane rule applies only to curved mirrors, not to this plane mirror."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[line width=1.2pt] (0,0) -- (0,3.2);\n\\node[right] at (0.12,1.6) {mirror};\n\\coordinate (O) at (0,1.6);\n\\fill (O) circle (1.5pt);\n\\node[right] at (0.15,1.35) {O};\n\\draw[dashed,line width=0.7pt] (O) -- (2.4,1.6);\n\\node[above] at (1.5,1.6) {normal};\n\\draw[->,line width=0.8pt] (-2.4,2.7) -- (O);\n\\node[above] at (-1.5,2.55) {incident};\n\\draw[->,line width=0.8pt] (O) -- (-2.4,0.5);\n\\node[below] at (-1.4,0.7) {reflected};\n\\draw[thin] (-2.6,-0.2) rectangle (2.6,3.4);\n\\node[font=\\footnotesize] at (0,-0.55) {cardboard sheet};\n\\node[font=\\bfseries\\small] at (0,-1.05) {diagram};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Ojas's plane-mirror set-up. An incident ray meets the mirror at point O. The dashed line at O is drawn at 90° to the mirror. The reflected ray leaves O. Ojas keeps a flat cardboard sheet under these rays so he can trace them.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The incident ray, the normal, and the reflected ray lie in one plane, so a flat sheet can hold all three. The normal is not the incident ray, and the rule is not limited to curved mirrors.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source lens ray figure into a plane-mirror reflection with incident ray, normal, reflected ray on a flat sheet."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Plenty of ocean water on Earth does not mean plenty of water fit for watering the school garden."
+    },
+    {
+      "id": "2",
+      "text": "Most of Earth's water is freshwater found in oceans and seas."
+    },
+    {
+      "id": "3",
+      "text": "Clear seawater is fit for drinking and for watering crops because it looks clean."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Dev's class maps Earth's surface and notes that oceans cover a large share of it as saline water. The school garden still needs freshwater for watering plants in summer.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Most surface water is saline ocean water unfit for everyday use, so gardens can still face freshwater shortage. Oceans are not freshwater, and clear look does not make seawater fit to drink or water crops.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

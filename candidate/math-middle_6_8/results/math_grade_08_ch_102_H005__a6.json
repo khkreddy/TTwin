@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Nisha simplifies $(4^{2})^{3}$.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "$(4^{2})^{3}=4^{2\\times 3}=4^{6}$."
+    },
+    {
+      "id": "2",
+      "text": "A power of a power is simplified by multiplying the exponents."
+    },
+    {
+      "id": "3",
+      "text": "The written form $(4^{2})^{3}$ comes from already having the single power $4^{6}$."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Statements 1 and 2 are true: multiply exponents to get $4^{6}$. Statement 3 reverses the relation. So the key is 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

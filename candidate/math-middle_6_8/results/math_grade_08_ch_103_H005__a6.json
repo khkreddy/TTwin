@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tarun looks at landmarks $1$, $3$, $9$, $27$, where each new landmark is $3$ times the previous one.\n\nDoes this sequence form a base-$n$ system, and why?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the fixed multiplier $3$, with no check that the landmarks are powers of one base."
+    },
+    {
+      "id": "B",
+      "text": "Yes, it is base-$3$ even if the multipliers jumped as $3$, then $2$, then $5$."
+    },
+    {
+      "id": "C",
+      "text": "Yes: the first landmark is $1$ and each next landmark is the previous times the same fixed $n=3$, so the landmarks are powers of $3$."
+    },
+    {
+      "id": "D",
+      "text": "Yes, because $27$ is the largest printed landmark in the list."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A base-$n$ landmark list starts at $1$ and multiplies by the same fixed $n$ each time; here $n=3$. Naming only the multiplier, allowing jumping multipliers, or picking the largest print misses that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

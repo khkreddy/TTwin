@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows quadrilateral $ABCD$ with all four angles $90^{\\circ}$ and side lengths $8$, $5$, $8$, $5$ in order around the shape.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a rectangle, because all four angles are $90^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "Call it a square as the label, with no check that all sides are equal."
+    },
+    {
+      "id": "C",
+      "text": "It is not a square, because adjacent sides $8$ and $5$ are unequal."
+    },
+    {
+      "id": "D",
+      "text": "Having four right angles comes from already calling the shape a square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (6.4,0);\n  \\coordinate (C) at (6.4,4.0);\n  \\coordinate (D) at (0,4.0);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw (A)--++(0.35,0)--++(0,0.35);\n  \\draw (B)--++(-0.35,0)--++(0,0.35);\n  \\draw (C)--++(-0.35,0)--++(0,-0.35);\n  \\draw (D)--++(0.35,0)--++(0,-0.35);\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n  \\node[below] at (3.2,-0.35) {8};\n  \\node[above] at (3.2,4.35) {8};\n  \\node[left] at (-0.35,2.0) {5};\n  \\node[right] at (6.75,2.0) {5};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "All right angles make a rectangle; unequal adjacent sides mean it is not a square. Calling it a square by label swaps the class. Saying the right angles come from already naming it a square reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite as rectangle ABCD with sides 8 and 5 and four right-angle marks."
+  }
+}

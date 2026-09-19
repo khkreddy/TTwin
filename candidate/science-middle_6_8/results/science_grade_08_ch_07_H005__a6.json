@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim explains this?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Juice particles can move and change positions while staying close under attraction, so shape changes but volume stays fixed."
+        },
+        {
+          "id": "B",
+          "text": "Juice particles are locked in fixed places, so the juice cannot change shape at all."
+        },
+        {
+          "id": "C",
+          "text": "Juice particles fly far apart and fill every corner, so the volume grows to match the lunch-box section."
+        },
+        {
+          "id": "D",
+          "text": "The lunch-box section sets a new, smaller volume for the same juice as soon as the shape changes."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Leela measures 120 cm³ of fruit juice in a measuring cylinder, then pours it into a square section of her lunch box. The juice takes the square section's shape, but its volume stays 120 cm³.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In a liquid, particles move enough to take the container's shape but stay close enough that the volume stays the same."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid particles move within a limited space while remaining close under attraction, so liquids take the container's shape but keep a fixed volume.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

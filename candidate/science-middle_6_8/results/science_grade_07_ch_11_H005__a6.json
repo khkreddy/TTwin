@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara holds a thick book between a desk lamp and a notebook page. Light from the lamp is blocked by the book before it reaches the page.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which change makes the shadow on the page smaller?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Moving the book closer to the page."
+        },
+        {
+          "id": "B",
+          "text": "Moving the book closer to the lamp."
+        },
+        {
+          "id": "C",
+          "text": "Switching the lamp off."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Moving the opaque book closer to the screen shrinks the shadow; moving it toward the lamp enlarges the shadow, and switching the lamp off removes the shadow."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shadow size depends on object position relative to lamp and screen: closer to screen → smaller shadow. Closer to lamp enlarges it; lamp off ends the shadow.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

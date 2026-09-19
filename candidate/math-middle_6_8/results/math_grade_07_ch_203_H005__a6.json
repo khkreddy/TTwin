@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Tejas has $36 = 2^{2} \\times 3^{2}$ and $54 = 2 \\times 3^{3}$. He wants their HCF from these prime factorisations.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly gives the HCF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The HCF is the phrase common primes, with no value written."
+        },
+        {
+          "id": "B",
+          "text": "Keep only the common primes with the smaller count in each: $2^{1} \\times 3^{2} = 18$."
+        },
+        {
+          "id": "C",
+          "text": "The HCF is $36$, copying the smaller given number."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Shared primes are 2 and 3; take the minimum powers 2^1 and 3^2, so HCF=2×9=18."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Min powers of shared primes: 2^1 and 3^2 give 18. A stops at a label. C copies the smaller given integer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

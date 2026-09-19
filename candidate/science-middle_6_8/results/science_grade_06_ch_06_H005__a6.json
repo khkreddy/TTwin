@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly classifies the sponge and the tile?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The sponge is soft; the ceramic tile is hard."
+        },
+        {
+          "id": "B",
+          "text": "The sponge is hard; the ceramic tile is soft."
+        },
+        {
+          "id": "C",
+          "text": "You cannot tell hard or soft from pressing or scratching."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Kavya presses a kitchen sponge and a ceramic floor tile, then gently scratches each. Soft materials change shape or scratch easily; hard materials resist both.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The sponge compresses and scratches easily, so it is soft; the ceramic tile resists compression and scratching, so it is hard."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Soft materials change shape or scratch easily; hard materials resist. Swapping soft/hard reverses the relationship; press and scratch tests do classify hardness.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

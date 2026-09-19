@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Arjun dips turmeric paper into detergent solution, tomato juice, and distilled water. Only the detergent solution changes the paper's colour.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Turmeric paper shows the detergent solution is basic."
+    },
+    {
+      "id": "B",
+      "text": "The unchanged papers do not tell which of tomato juice and distilled water is acidic and which is neutral."
+    },
+    {
+      "id": "C",
+      "text": "Tomato juice is neutral because it does not change turmeric paper's colour."
+    },
+    {
+      "id": "D",
+      "text": "Tomato juice turns turmeric paper red, so it must be acidic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Turmeric paper changes colour with bases, so detergent is basic. No colour change leaves acid versus neutral undecided; turmeric does not turn red with acid, and lack of change does not prove neutrality.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

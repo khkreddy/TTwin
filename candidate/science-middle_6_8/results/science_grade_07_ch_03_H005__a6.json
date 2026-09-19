@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Sana joins an LED to a 1.5 V cell with alligator clips. The LED has a longer pin and a shorter pin.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which connection makes the LED glow?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Longer pin to the cell positive terminal; shorter pin to the cell negative terminal."
+        },
+        {
+          "id": "B",
+          "text": "Longer pin to the cell negative terminal; shorter pin to the cell positive terminal."
+        },
+        {
+          "id": "C",
+          "text": "Either way round, because an LED glows in both directions."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "An LED allows current in one direction only, so it glows when the longer pin joins the cell positive terminal and the shorter pin joins the negative terminal."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "LED polarity: longer pin to +, shorter to −. Reversed wiring stays off; LEDs do not glow both ways.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

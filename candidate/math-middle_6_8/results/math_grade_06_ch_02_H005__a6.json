@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly describes the angle they form?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rays share starting point $Q$ (the vertex); the arms are $QR$ and $QS$; the angle may be named $\\angle RQS$."
+        },
+        {
+          "id": "B",
+          "text": "The vertex of the angle is arm $QR$."
+        },
+        {
+          "id": "C",
+          "text": "Ray $QR$ and ray $QS$ form this angle even if they start at two different points."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Nisha draws two rays from a common point $Q$ on her chalkboard: ray $QR$ and ray $QS$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "An angle needs two rays with a common starting point; that common point $Q$ is the vertex, the rays are the arms, and the three-letter name $\\angle RQS$ places the vertex letter in the middle."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two rays from Q form an angle with vertex Q and arms QR, QS; name ∠RQS. B swaps vertex for an arm. C drops the shared-start condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}
