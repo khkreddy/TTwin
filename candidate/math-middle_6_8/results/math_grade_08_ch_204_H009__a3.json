@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a net of a cuboid with edges 6 cm, 4 cm and 3 cm. An ant crawls on the surface from corner $A$ to corner $G$.\n\nWhich claim correctly identifies a shortest surface path?",
+  "options": [
+    {
+      "id": "A",
+      "text": "On the net that joins a 6-by-4 face to a 6-by-3 face, the straight $A$-to-$G$ segment has length $\\sqrt{6^{2}+7^{2}}=\\sqrt{85}$ cm and is shortest among the three face-pair unfolds."
+    },
+    {
+      "id": "B",
+      "text": "The shortest surface path is $\\sqrt{6^{2}+4^{2}+3^{2}}$ cm, the interior space diagonal."
+    },
+    {
+      "id": "C",
+      "text": "Adding $6+4+3$ gives the shortest surface path."
+    },
+    {
+      "id": "D",
+      "text": "The unfold with length $\\sqrt{109}$ cm is shortest because that net covers more area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  % net: 4x3 left, 6x3 middle, 4x3 right, 6x4 above middle\n  \\draw[thick] (0,0) rectangle (4,3);\n  \\draw[thick] (4,0) rectangle (10,3);\n  \\draw[thick] (10,0) rectangle (14,3);\n  \\draw[thick] (4,3) rectangle (10,7);\n  \\node at (2,1.5) {4};\n  \\node at (7,1.5) {6};\n  \\node at (12,1.5) {4};\n  \\node at (7,5) {6};\n  \\fill (4,0) circle (2pt) node[below left] {$A$};\n  \\fill (10,7) circle (2pt) node[above right] {$G$};\n  \\draw[dashed,thick] (4,0) -- (10,7);\n  \\node[align=center] at (16,4) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "operation_confusion",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Surface paths match straight segments on nets. The three face-pair unfolds give sqrt(85), sqrt(97), and sqrt(109); shortest is sqrt(85). The space diagonal leaves the surface. Edge sums and larger nets are not the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source grid quadrilateral as a cuboid net with A, G, and a dashed straight surface path."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Isha's game score starts at $0$. She gains $5$ points on each of $3$ turns and loses $4$ points on each of $2$ turns.\n\nWhich expression gives her final score?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$3 + 5 + 2 + (-4)$"
+    },
+    {
+      "id": "B",
+      "text": "$3 \\times (-5) + 2 \\times (+4)$"
+    },
+    {
+      "id": "C",
+      "text": "$3 \\times (+5) + 2 \\times (-4)$"
+    },
+    {
+      "id": "D",
+      "text": "$3 \\times (+4) + 2 \\times (-5)$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "operation_confusion",
+    "B": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three gains of 5 are 3×(+5) and two losses of 4 are 2×(−4); the final score is their signed sum, 15−8=7. Adding counts instead of multiplying, swapping gain/loss signs, or swapping the rates 5 and 4 all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

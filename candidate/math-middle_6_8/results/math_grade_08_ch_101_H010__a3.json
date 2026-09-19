@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir wants a whole-number bound for $\\sqrt{50}$. He knows $7^{2} = 49$ and $8^{2} = 64$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\sqrt{50}$ lies between 7 and 8, because $49 < 50 < 64$."
+    },
+    {
+      "id": "B",
+      "text": "$\\sqrt{50} = 25$, by halving 50."
+    },
+    {
+      "id": "C",
+      "text": "$\\sqrt{50}$ is between 7 and 8 only when 50 is a perfect square."
+    },
+    {
+      "id": "D",
+      "text": "The nearby squares 49 and 64 settle $\\sqrt{50}$ as exactly 7."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Because 49 < 50 < 64, √50 lies strictly between 7 and 8. Halving is not square root. The bound is for non-squares. √50 is not exactly 7.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

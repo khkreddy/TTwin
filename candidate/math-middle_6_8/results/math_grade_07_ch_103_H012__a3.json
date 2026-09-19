@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leela reads a cricket scoreboard that shows overs as 12.3.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mark means 12 and 3 tenths of an over, because every point is a decimal point."
+    },
+    {
+      "id": "B",
+      "text": "The 3 means three balls in the next incomplete over, not three tenths of an over."
+    },
+    {
+      "id": "C",
+      "text": "Points in scores never mark place value, so 12.3 cannot be read at all."
+    },
+    {
+      "id": "D",
+      "text": "Only the digits after the point matter for the total overs bowled."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In cricket overs, the point separates completed overs from balls (0–5), so 12.3 is 12 overs and 3 balls, not a base-ten decimal. The whole reading still matters.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

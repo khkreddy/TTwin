@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "In the diagram, lines $p$ and $q$ are parallel and transversal $t$ crosses them. Angle $a$ measures $65^\\circ$. Angle $b$ is alternate to angle $a$.\n\nWhich claim about angle $b$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $b$ equals $65^\\circ$ only when $t$ is perpendicular to $p$ and $q$."
+    },
+    {
+      "id": "B",
+      "text": "Equal alternate angles $a$ and $b$ are what create the parallel marks on $p$ and $q$."
+    },
+    {
+      "id": "C",
+      "text": "Angle $b$ equals $65^\\circ$ because alternate angles formed by a transversal of parallel lines are equal."
+    },
+    {
+      "id": "D",
+      "text": "Angle $b$ equals $115^\\circ$, the supplement of $65^\\circ$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round]\n  \\draw[thick] (0,2.4) -- (6.2,2.4) node[right] {$p$};\n  \\draw[thick] (0,0.8) -- (6.2,0.8) node[right] {$q$};\n  \\draw[->,thick] (2.0,2.4) -- (2.5,2.4);\n  \\draw[->,thick] (2.0,0.8) -- (2.5,0.8);\n  \\draw[thick] (1.2,-0.4) -- (5.0,3.4) node[above right] {$t$};\n  \\node at (3.85,2.05) {$a$};\n  \\node at (1.55,0.35) {$b$};\n  \\node[align=center] at (7.4,1.6) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With p ∥ q cut by transversal t, alternate angles are equal, so b = a = 65°. Requiring a right-angle transversal, reversing angles as creators of parallelism, or taking the supplement (co-interior) all miss the alternate-angle hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source triangle figure as parallel lines p,q with matching arrows, transversal t, and alternate angles a and b."
+  },
+  "learn_by_solve": null
+}

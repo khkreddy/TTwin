@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "He is unlikely to see Venus clearly because clouds and bright lights block a clear dark view."
+    },
+    {
+      "id": "2",
+      "text": "He will see Venus clearly because it is above the horizon at that clock time alone."
+    },
+    {
+      "id": "3",
+      "text": "Switching on more terrace lights will make Venus easier to find against the clouds."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "item_type": "three_statement",
+  "stem": "Mohan plans to spot Venus from his terrace at 7:30 p.m. Venus is above the horizon, but thick cloud covers the whole sky and nearby street lamps stay bright.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Observation needs a clear enough sky and suitable darkness as well as the object being above the horizon. Clouds and bright lights block the view; more lights make it worse, not better.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

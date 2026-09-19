@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "In parallelogram $PQRS$, $\\angle P=70^\\circ$.\n\nWhich claim about the angles is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Adjacent $\\angle Q=110^\\circ$ and opposite $\\angle R=70^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "Adjacent $\\angle Q=70^\\circ$ and opposite $\\angle R=110^\\circ$."
+    },
+    {
+      "id": "C",
+      "text": "Every angle of $PQRS$ equals $70^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "Adjacent $\\angle Q=70^\\circ+110^\\circ=180^\\circ$ as a single angle measure at $Q$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a parallelogram, adjacent angles sum to 180° and opposite angles are equal, so Q=110° and R=70°. Swapping those values reverses the adjacent/opposite rules. Not every angle is 70°. Adding 70 and 110 describes the supplementary pair, not the measure of one angle Q.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

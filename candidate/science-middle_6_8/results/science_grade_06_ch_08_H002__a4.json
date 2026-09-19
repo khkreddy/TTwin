@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "On the steel plate the water mainly evaporates into the air."
+    },
+    {
+      "id": "B",
+      "text": "On the steel plate the water seeps into the metal, just as it seeps into soil."
+    },
+    {
+      "id": "C",
+      "text": "On the soil the water can both seep in and evaporate."
+    },
+    {
+      "id": "D",
+      "text": "Neither case involves evaporation, because no white mist was visible."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Mohan spills the same small amount of water on a polished steel plate and on dry garden soil. After some time both wet patches look smaller.\n\nWhich claims correctly explain the disappearing water? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On impermeable steel, water mainly evaporates. On soil, water can seep in and also evaporate. Steel does not take in water like soil, and mist is not required to show evaporation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

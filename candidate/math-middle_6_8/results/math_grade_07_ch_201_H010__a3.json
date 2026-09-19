@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohan knows $\\triangle ABC \\cong \\triangle DEF$ with correspondence $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$. Side $AB$ equals side $DE$, and $\\angle BAC$ equals $\\angle EDF$.\n\nWhich claim correctly uses the congruence?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\angle ABC$ equals $\\angle DFE$, matching $B$ with $F$."
+    },
+    {
+      "id": "B",
+      "text": "Side $BC$ equals side $EF$, as corresponding sides under $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$."
+    },
+    {
+      "id": "C",
+      "text": "Congruence of the triangles is enough even if the vertex matching is ignored."
+    },
+    {
+      "id": "D",
+      "text": "Only sides can be equal from congruence; angles need a separate rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Corresponding parts of congruent triangles are equal under the given matching, so BC corresponds to EF. Angle at B matches angle at E, not F. Vertex order matters. Angles are included.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

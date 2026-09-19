@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a polygon drawn on a $1\\,\\mathrm{cm}^{2}$ grid. Aditya wants its area in square centimetres.\n\nWhich claim correctly tells how to find the area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divide the polygon into triangles, find the area of each triangle, and add those areas."
+    },
+    {
+      "id": "B",
+      "text": "Report the word polygon as the area of the shape on the grid."
+    },
+    {
+      "id": "C",
+      "text": "Dividing into triangles is what creates the polygon on the grid."
+    },
+    {
+      "id": "D",
+      "text": "The area equals $1$ because the grid is labelled $1\\,\\mathrm{cm}^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.65cm,y=0.65cm]\\draw[gray!70,densely dashed,line width=0.3pt] (0,0) grid[step=1] (9,7);\\draw[black,line width=1.15pt,line join=round] (1,1)--(7,1)--(8,4)--(5,6)--(2,5)--cycle;\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Any polygon’s area is the sum of the areas of triangles that fill it. Naming polygon, reversing divide-and-create, or grabbing the printed 1 cm² all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote the source grid quadrilateral as a pentagon on a 1 cm² grid matching the stem."
+  }
+}

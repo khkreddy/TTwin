@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya's garden plot is the irregular figure in the diagram: a rectangle $8\\ \\mathrm{cm}$ by $4\\ \\mathrm{cm}$ with a triangle of height $3\\ \\mathrm{cm}$ on the top side.\n\nWhich plan finds the area correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the rectangle area $8\\times 4$ to the triangle area $\\tfrac{1}{2}\\times 8\\times 3$ to get $32+12=44$."
+    },
+    {
+      "id": "B",
+      "text": "Use only the rectangle area $8\\times 4=32$ and ignore the triangle."
+    },
+    {
+      "id": "C",
+      "text": "The triangle area is what produces the rectangle, so report $12$ alone."
+    },
+    {
+      "id": "D",
+      "text": "Multiply $8\\times 4\\times 3=96$ as if one product covers the whole figure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.45]\\draw[thick] (0,0) rectangle (8,4);\\draw[thick] (0,4)--(4,7)--(8,4);\\node[below] at (4,0) {$8\\\\mathrm{cm}$};\\node[left] at (0,2) {$4\\\\mathrm{cm}$};\\node[above] at (4,5.5) {$3\\\\mathrm{cm}$};\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divide into the 8-by-4 rectangle and the triangle of base 8 and height 3; areas 32 and 12 sum to 44. Omitting the triangle undercounts. The triangle does not produce the rectangle. A single triple product is the wrong operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote kite to house-shaped composite: rectangle with triangular roof, lengths labeled."
+  }
+}

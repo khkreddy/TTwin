@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H002"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H002:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H002",
+    "stem": "The diagram shows Yusuf looking at a lamp flame through holes in three cardboard sheets P, Q and R. The holes lie on one straight line.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "He can see the flame because light travels along the straight path through the aligned holes.",
+      "B": "He can still see the flame if the hole in Q is moved well off the straight path.",
+      "C": "Light from the flame bends freely around the sheets, so hole alignment does not matter.",
+      "D": "He can see the flame only when sheets P, Q and R are all removed."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick, fill=yellow!70] (0,1.2) circle (0.25);\n\\node at (0,0.55) {lamp};\n\\foreach \\x/\\lab in {1.6/P, 3.2/Q, 4.8/R} {\n  \\draw[thick, fill=gray!15] (\\x,0.2) rectangle (\\x+0.2,2.2);\n  \\draw[thick, fill=white] (\\x+0.1,1.2) circle (0.12);\n  \\node at (\\x+0.1,2.45) {\\lab};\n}\n\\draw[thick, dashed] (0.25,1.2) -- (5.3,1.2);\n\\node at (3.0,-0.2) {straight path};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

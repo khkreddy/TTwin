@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir starts at 6 and applies the Collatz rule: if the current number is even, take half of it; if it is odd, multiply by 3 and add 1. He writes 6, 3, 10, 5, 16, 8, 4, 2, 1.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After 5 the next term is 15, using only the multiply-by-3 step."
+    },
+    {
+      "id": "B",
+      "text": "Reaching 1 from 6 proves that every whole-number start reaches 1."
+    },
+    {
+      "id": "C",
+      "text": "The chain is one Collatz example that reaches 1; it does not prove the rule for every start."
+    },
+    {
+      "id": "D",
+      "text": "The Collatz rule applies only to even starts, so the odd terms 3 and 5 are mistakes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1 is a valid Collatz chain. An example is not a proof for every start. After 5 the rule needs 3×5+1=16, not 15. Odd terms are allowed.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

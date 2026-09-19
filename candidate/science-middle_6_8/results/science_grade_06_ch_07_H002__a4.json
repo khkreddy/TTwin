@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which cup is hotter?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Cup Q, because 61 °C is the higher reading."
+        },
+        {
+          "id": "B",
+          "text": "Cup P, because a lower reading means hotter tea."
+        },
+        {
+          "id": "C",
+          "text": "Cup P, because it looks darker."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Jaya measures two cups of tea. Cup P reads 48 °C. Cup Q reads 61 °C. Cup P looks darker.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The hotter body has the higher temperature reading, so Cup Q at 61 °C is hotter."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Temperature readings compare how hot the cups are. The higher reading is hotter. Colour of the tea is not the temperature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

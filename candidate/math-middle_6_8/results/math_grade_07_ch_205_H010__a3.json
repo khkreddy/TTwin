@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ananya records that three friends in her class each sleep about 8 hours on school nights. She wants a claim about sleep for all children in the state.\n\nWhich claim is warranted?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Every child in the state sleeps about 8 hours on school nights."
+    },
+    {
+      "id": "B",
+      "text": "The three friends give a local note, but not a statewide sleep claim."
+    },
+    {
+      "id": "C",
+      "text": "Statewide sleep is what produces the three friends' hours, so the state average must be 8."
+    },
+    {
+      "id": "D",
+      "text": "Any sample of three is enough once the hours are written down."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three classmates are too narrow a sample for a statewide generalisation. The friends' hours do not force a state average, and writing the numbers down does not enlarge the sample.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

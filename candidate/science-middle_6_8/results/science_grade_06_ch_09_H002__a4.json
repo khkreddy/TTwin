@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "When the components differ and can be separated by hand in a small sample."
+    },
+    {
+      "id": "B",
+      "text": "Whenever any solid mixture contains wheat, in any amount."
+    },
+    {
+      "id": "C",
+      "text": "Only when the unwanted pieces are identical to the wheat in size and colour."
+    },
+    {
+      "id": "D",
+      "text": "Never, because handpicking cannot separate pieces that differ in colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item_type": "single_mcq",
+  "stem": "Tara has a small handful of wheat mixed with a few husk pieces. The husk pieces differ in size and colour from the wheat, and she can pick them out by hand.\n\nWhen is handpicking suitable for this mixture?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Handpicking suits a small solid mixture when the components differ enough to pick out by hand. It is not automatic for every wheat mixture, and difference in size or colour is what makes picking possible.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

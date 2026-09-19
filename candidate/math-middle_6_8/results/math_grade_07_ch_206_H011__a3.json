@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Poonam asks which shapes can tile the entire plane, covering without gaps or overlaps, rather than only a finite floor region.\n\nWhich claims are correct? Two options are correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the word tiling as the shape that covers the entire plane."
+    },
+    {
+      "id": "B",
+      "text": "Repeated copies of a square can tile the entire plane."
+    },
+    {
+      "id": "C",
+      "text": "Repeated copies of a regular hexagon can tile the entire plane."
+    },
+    {
+      "id": "D",
+      "text": "Covering only a classroom floor with squares proves those squares tile the entire plane."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Squares and regular hexagons both tile the plane by repetition. Naming tiling as a shape, or treating a finite floor covering as a plane tiling, miss the entire-plane hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

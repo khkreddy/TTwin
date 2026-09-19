@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_06/ch_04/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_06/ch_04/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H002"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H002:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H002",
+    "stem": "The diagram shows a bar magnet resting on a sheet sprinkled with iron filings. Mohan taps the sheet gently so the filings can move.\n\nWhere does the magnet attract the iron filings most strongly?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Everywhere equally along the whole bar.",
+      "B": "Near the two ends (the poles).",
+      "C": "Most strongly in the middle and least at the ends.",
+      "D": "Only at the red-painted end."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!30] (0,1.6) rectangle (1.6,2.2);\n\\draw[thick,fill=blue!30] (1.6,1.6) rectangle (3.2,2.2);\n\\node at (0.8,1.9) {N};\n\\node at (2.4,1.9) {S};\n\\node at (1.6,2.55) {bar magnet};\n% iron filings clusters near poles\n\\foreach \\x/\\y in {0.15/1.25,0.35/1.15,0.55/1.30,0.25/1.05,0.45/1.00,2.65/1.25,2.85/1.15,3.05/1.30,2.75/1.05,2.95/1.00} {\n  \\draw[thick] (\\x,\\y) -- ++(0.12,0.28);\n}\n% few filings in middle\n\\foreach \\x/\\y in {1.45/1.20,1.70/1.10} {\n  \\draw[thick] (\\x,\\y) -- ++(0.10,0.22);\n}\n\\node at (1.6,0.55) {iron filings};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

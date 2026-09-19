@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev checks whether $3816$ is divisible by $4$ by testing one digit block of $3816$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Test whether $38$, formed by the first two digits, is divisible by $4$."
+    },
+    {
+      "id": "B",
+      "text": "Test whether $4$ is divisible by $16$, the number formed by the last two digits."
+    },
+    {
+      "id": "C",
+      "text": "Test whether $16$, formed by the last two digits, is divisible by $4$."
+    },
+    {
+      "id": "D",
+      "text": "Test whether $816$, formed by the last three digits, is divisible by $4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3816 is divisible by 4 iff the number formed by its last two digits, 16, is divisible by 4. Using the first two digits, reversing divisor and dividend, or switching to a three-digit block (the rule for 8) all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

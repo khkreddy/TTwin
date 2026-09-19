@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Local crops, taste preferences, and traditions differ from place to place."
+    },
+    {
+      "id": "B",
+      "text": "States that grow the same crops must share the same traditional food."
+    },
+    {
+      "id": "C",
+      "text": "A state's traditional food decides which crops farmers are allowed to grow."
+    },
+    {
+      "id": "D",
+      "text": "Everyone in a state eats exactly the same traditional food."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Jaya notices millet rotis in one state and rice plates in another.\n\nWhy do traditional foods differ across Indian states?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Traditional foods differ because local crops, tastes, and traditions differ. Crops alone do not force identical dishes, dishes do not decide crops, and not every person eats the same dish.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:51:36.068Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q1",
+    "item_type": "single_mcq",
+    "stem": "What is not a characteristic of all living organisms?",
+    "options": [
+      {
+        "id": "A",
+        "text": "excretion"
+      },
+      {
+        "id": "B",
+        "text": "photosynthesis"
+      },
+      {
+        "id": "C",
+        "text": "reproduction"
+      },
+      {
+        "id": "D",
+        "text": "respiration"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Carbohydrates"
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Any amount of protein meets a growing child's protein needs."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "A child growing normally must be eating enough protein."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Pulses are not a protein source."
+      }
+    ],
+    "enrichment": "Proteins are important food components; the right amount of protein is needed in growing children for proper growth and development, and sportspersons need larger quantities to build muscles. adequate protein in the diet -> growth, development, and muscle building support The learner correctly applies this rule: Proteins are important food components; the right amount of protein is needed in growing children for proper growth and development, and sportspersons need larger quantities to build muscles. Protein-rich foods are just another form of instant energy food, so they are interchangeable with glucose.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H005",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “excretion” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “reproduction” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “respiration” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Classify proteins as food components needed for muscle building, proper growth, and development, with sources from plants and animals. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q1",
+    "hinge": "science/grade_06/ch_03/H005",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H005"
+  }
+}

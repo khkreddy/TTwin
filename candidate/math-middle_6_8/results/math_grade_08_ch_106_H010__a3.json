@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naina builds a matchstick pattern. Step $1$ uses $4$ matchsticks for one square. Each new step adds one square that shares one side with the previous square, so $3$ new matchsticks are added each time.\n\nWhich expression gives the number of matchsticks at Step $k$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4k$"
+    },
+    {
+      "id": "B",
+      "text": "$3k$"
+    },
+    {
+      "id": "C",
+      "text": "$3k+1$"
+    },
+    {
+      "id": "D",
+      "text": "Only Step $1$ has a matchstick count; later steps have no expression in $k$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Structural count: 4+(k−1)×3=3k+1 for every step. Check: k=1→4, k=2→7, k=3→10. Using 4k, 3k, or denying a formula for later steps all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

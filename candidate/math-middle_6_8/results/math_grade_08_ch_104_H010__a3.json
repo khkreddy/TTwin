@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aditya has parallelogram $ABCD$ with $AB = 9$ cm and $AD = 5$ cm.\n\nWhich claim correctly states the side lengths that can be inferred?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words opposite sides as the length of $AB$."
+    },
+    {
+      "id": "B",
+      "text": "Equal opposite sides are what create parallelogram $ABCD$ from the lengths $9$ cm and $5$ cm."
+    },
+    {
+      "id": "C",
+      "text": "$CD = 9$ cm and $BC = 5$ cm, because opposite sides of a parallelogram are equal."
+    },
+    {
+      "id": "D",
+      "text": "Diagonals $AC$ and $BD$ must each equal $9$ cm."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Opposite sides of a parallelogram are equal, so CD=AB=9 and BC=AD=5. Naming opposite sides, reversing equality and the shape, or swapping in equal-diagonal (square/rectangle) thinking all miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

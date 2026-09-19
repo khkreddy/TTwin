@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:08aj",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:51:46.434Z",
+  "source": {
+    "item_ref": "session:mathnet:08aj",
+    "item_type": "single_mcq",
+    "stem": "Problem:\n\nDavide fa il seguente gioco: parte da un numero intero compreso tra 1 e 99 e ad ogni mossa sostituisce il numero $n$ che ha al momento con il numero formato dalle ultime due cifre di $51 n+50$ (o solo dall'ultima cifra, se la penultima è 0). Quanti numeri diversi può ottenere al massimo nel corso delle prime 100 mosse di una singola partita?\n\n(A) 2\n(B) 4\n(C) 51\n(D) 99\n(E) 100",
+    "options": [
+      {
+        "id": "A",
+        "text": "2"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "51"
+      },
+      {
+        "id": "D",
+        "text": "99\n(E) 100"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_05/H018",
+      "unit_id": "math/grade_06/ch_05/H018",
+      "title": "Fill a product grid with primes that make every row and column product match the margins.",
+      "node_labels": [
+        "Number: magnitude, representation and arithmetic structure"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Number: magnitude, representation and arithmetic structure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Grid cell is the label that belongs on this item, so 'Fill a product grid with primes that make every row and column product' is answered as grid cell rather than prime puzzle."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "prime puzzle still holds here even though Every entry inside the grid must be prime; composite entries do not satisfy the puzzle is missing from the stem — on the item about Fill a product grid with primes that make every row and."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Matching margin products is what produces prime entries chosen as row and column factors, so the usual direction of this relation is run backwards — on the item about Fill a product grid with primes that make every row and."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The prime puzzle rule also covers this: special-number comparison boxes, so it is not an exception — on the item about Fill a product grid with primes that make every row and."
+      }
+    ],
+    "enrichment": "In the prime puzzle, each blank cell must contain a prime number, each row's primes must multiply to the number at the row's right, and each column's primes must multiply to the number below the column.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_05. The student must decide: Fill a product grid with primes that make every row and column product match the margins. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:08aj",
+    "hinge": "math/grade_06/ch_05/H018",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_05/H018"
+  }
+}

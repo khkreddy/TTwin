@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aditya carries out the long division $5 \\div 6$. After the decimal point, each new digit leaves remainder $2$, then again remainder $2$, and the pattern continues.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The decimal quotient ends after a few digits even while remainder $2$ keeps returning."
+    },
+    {
+      "id": "B",
+      "text": "Repeating remainder $2$ only means the digit $5$ in the dividend is a chapter label, not a signal about the quotient."
+    },
+    {
+      "id": "C",
+      "text": "Because remainder $2$ repeats, the decimal quotient does not end; the repeating remainders produce repeating digits."
+    },
+    {
+      "id": "D",
+      "text": "The answer is remainder because $2$ is the standout printed number in the division."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A nonzero repeating remainder pattern means the decimal does not terminate; 5÷6=0.8333…. Saying it still ends omits that condition. Treating the remainder rule as a label issue, or grabbing the printed 2, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

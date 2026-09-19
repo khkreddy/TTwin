@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Swati lists Virahanka numbers $1, 2, 3, 5, 8, 13, \\ldots$, where each term after the second is the sum of the two before it. The parity pattern odd, even, odd repeats along the list.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The $9$th term is even."
+    },
+    {
+      "id": "B",
+      "text": "The $8$th term is odd."
+    },
+    {
+      "id": "C",
+      "text": "The $9$th term is odd."
+    },
+    {
+      "id": "D",
+      "text": "From the $4$th term onward every term is even."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Terms: 1,2,3,5,8,13,21,34,55. Position 9 is 55, odd, matching the repeating odd-even-odd pattern. The 8th term 34 is even. Later terms keep the three-step parity cycle, so they are not all even.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

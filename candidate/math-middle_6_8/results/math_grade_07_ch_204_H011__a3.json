@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Swati computes $6\\div 0.5$ and obtains $12$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The quotient must be less than $6$ whenever division is used."
+    },
+    {
+      "id": "B",
+      "text": "Because the divisor $0.5$ is between $0$ and $1$, the quotient $12$ is greater than the dividend $6$."
+    },
+    {
+      "id": "C",
+      "text": "Any decimal divisor forces the quotient to equal the dividend."
+    },
+    {
+      "id": "D",
+      "text": "Division by $0.5$ is the same as multiplication by $0.5$, so the result should be $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For positive numbers, a divisor between 0 and 1 makes the quotient larger than the dividend, as in 6÷0.5=12. Claiming quotients are always smaller omits the size of the divisor. Decimal form alone does not force equality. Dividing by 0.5 matches multiplying by 2, not by 0.5.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

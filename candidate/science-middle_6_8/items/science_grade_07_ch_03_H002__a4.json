@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_07/ch_03/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_03/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H002"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H002:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H002",
+    "stem": "The diagram shows Yusuf's circuit. Two cells are joined end to end, and wires connect them to a small lamp. The + end of one cell touches the − end of the other cell. The lamp lights.\n\nWhich claim about the cells is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The two cells make a working battery because the + end of one cell touches the + end of the other cell.",
+      "B": "Only one cell is shown, so this cannot be a battery made of two or more cells.",
+      "C": "The two cells make a working battery because opposite terminals touch and together they can run the lamp.",
+      "D": "Any two cells always make a working battery, even if no terminals touch."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick] (0,0) rectangle (1.4,0.7);\n\\node at (0.7,0.35) {cell};\n\\node[font=\\bfseries] at (-0.25,0.35) {$-$};\n\\node[font=\\bfseries] at (1.55,0.35) {$+$};\n\\draw[thick] (1.7,0) rectangle (3.1,0.7);\n\\node at (2.4,0.35) {cell};\n\\node[font=\\bfseries] at (1.85,0.35) {$-$};\n\\node[font=\\bfseries] at (3.35,0.35) {$+$};\n\\draw[thick] (3.1,0.35) -- (4.3,0.35) -- (4.3,1.15);\n\\draw[thick] (4.05,1.15) rectangle (4.55,1.65);\n\\node at (4.3,1.9) {lamp};\n\\draw[thick] (4.3,1.65) -- (4.3,2.25) -- (-0.5,2.25) -- (-0.5,0.35) -- (0,0.35);\n\\node at (1.55,-0.4) {battery};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

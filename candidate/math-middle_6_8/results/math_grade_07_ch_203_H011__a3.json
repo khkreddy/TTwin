@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Isha takes the two numbers $12$ and $18$. Their HCF is $6$ and their LCM is $36$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The product $12\\times18$ equals the LCM $36$ alone."
+    },
+    {
+      "id": "B",
+      "text": "The LCM $36$ is greater than the product $12\\times18=216$."
+    },
+    {
+      "id": "C",
+      "text": "HCF $\\times$ LCM equals the product: $6\\times36=12\\times18=216$, and the LCM $36$ is not greater than that product."
+    },
+    {
+      "id": "D",
+      "text": "HCF $\\times$ LCM equals the product only for prime numbers, so not for $12$ and $18$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For two numbers, HCF×LCM equals their product: 6×36=216=12×18. The LCM cannot exceed that product. Dropping the HCF from the identity, claiming LCM>product, or restricting the identity to primes all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

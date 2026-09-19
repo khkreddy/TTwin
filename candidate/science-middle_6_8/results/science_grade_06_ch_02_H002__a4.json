@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Group them by whether each living thing seems lucky or unlucky."
+    },
+    {
+      "id": "B",
+      "text": "Group hibiscus, mango tree as plants that make food; group crow, goat, grasshopper as animals that eat food."
+    },
+    {
+      "id": "C",
+      "text": "Group crow with goat and grasshopper because all three are animals that move about to find food."
+    },
+    {
+      "id": "D",
+      "text": "Group crow with hibiscus because both names start with a letter from the middle of the alphabet."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Vikram wants to group these living things from the school garden: hibiscus, mango tree, crow, goat, and grasshopper.\n\nWhich claims give a valid basis for grouping plants or animals from similarities and differences? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Valid grouping uses observable similarities and differences of the organisms. Food-making versus food-eating, or grouping moving animals together, are valid. Luck and letter patterns are not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

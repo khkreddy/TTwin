@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "The balloon holds a mixture of gases, including nitrogen, oxygen, argon, and carbon dioxide."
+    },
+    {
+      "id": "B",
+      "text": "The balloon holds only oxygen."
+    },
+    {
+      "id": "C",
+      "text": "The balloon holds a single gas, because the air looks the same throughout."
+    },
+    {
+      "id": "D",
+      "text": "Every planet's air must contain the same gases as Earth's air in the same amounts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Jaya fills a balloon from the air around her. She has heard of nitrogen, oxygen, argon, and carbon dioxide.\n\nWhich statement about the air in the balloon is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air is a mixture of named gases, not a single gas such as oxygen alone. Looking uniform does not make it one gas, and Earth's recipe is not required for every planet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

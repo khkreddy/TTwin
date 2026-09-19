@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Yusuf chooses materials for a cooking pan on a flame and for its handle.\n\nWhich choices match whether easy heat flow is wanted? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Metal for the pan base, because easy heat flow from the flame to the food is wanted."
+    },
+    {
+      "id": "B",
+      "text": "Wood for the handle, because reduced heat flow to the hand is wanted."
+    },
+    {
+      "id": "C",
+      "text": "Metal for the handle, because reduced heat flow to the hand is wanted."
+    },
+    {
+      "id": "D",
+      "text": "Wood for the pan base, because easy heat flow from the flame to the food is wanted."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Easy heat flow is wanted in the pan base, so metal fits. Reduced heat flow is wanted in the handle, so wood fits. Swapping those needs reverses the choice.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

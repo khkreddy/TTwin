@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Parth works with the nonzero base $5$ and integer exponents.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5^{-2}=-25$"
+    },
+    {
+      "id": "B",
+      "text": "$5^{-2}=\\dfrac{1}{5^{2}}=\\dfrac{1}{25}$"
+    },
+    {
+      "id": "C",
+      "text": "$5^{2}=\\dfrac{1}{5^{-2}}$"
+    },
+    {
+      "id": "D",
+      "text": "$5^{-2}=-\\dfrac{1}{25}$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "operation_confusion",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For nonzero base, 5^(-2)=1/5^2=1/25 and equivalently 5^2=1/5^(-2). Writing −25 treats the negative exponent as a negative value; writing −1/25 flips the reciprocal into a signed value. Both miss the reciprocal-power hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

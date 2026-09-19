@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Isha records scores in a frequency table: score $2$ appears $3$ times, score $4$ appears $5$ times, and score $6$ appears $2$ times.\n\nWhich claim correctly finds the mean of these scores?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mean is $\\dfrac{2+4+6}{3}$, averaging the listed score values only."
+    },
+    {
+      "id": "B",
+      "text": "The mean is the middle cumulative-frequency position among the ordered scores."
+    },
+    {
+      "id": "C",
+      "text": "The mean is $\\dfrac{2\\times3+4\\times5+6\\times2}{3+5+2}=\\dfrac{38}{10}=3.8$."
+    },
+    {
+      "id": "D",
+      "text": "The mean is $5$, the largest frequency printed in the table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a frequency table the mean is Σ(value×frequency)/Σfrequency = (6+20+12)/10 = 3.8. Averaging the three score labels alone, using cumulative frequency (median tool), or grabbing the largest frequency all miss the weighted-total hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

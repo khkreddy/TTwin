@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows lines $PQ$ and $RS$ cut by transversal $AC$. Triangles $PAC$ and $RCA$ are congruent, and that congruence makes a pair of alternate interior angles equal.\n\nWhich claim correctly concludes that $PQ \\parallel RS$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Because the congruent triangles give equal alternate interior angles for transversal $AC$, lines $PQ$ and $RS$ are parallel."
+    },
+    {
+      "id": "B",
+      "text": "Report the words alternate interior angles as the names of lines $PQ$ and $RS$."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent, so $PQ \\parallel RS$ even when no alternate interior angles are used."
+    },
+    {
+      "id": "D",
+      "text": "Equal side lengths in the triangles alone prove $PQ \\parallel RS$, with no equal alternate interior angles needed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95]\\coordinate (P) at (-0.2,2.6);\\coordinate (Q) at (5.2,2.6);\\coordinate (R) at (-0.2,0);\\coordinate (S) at (5.2,0);\\coordinate (A) at (1.0,2.6);\\coordinate (C) at (3.6,0);\\draw[line width=0.75pt] (P)--(Q);\\draw[line width=0.75pt] (R)--(S);\\draw[line width=0.75pt] (A)--(C);\\draw[line width=0.55pt] (A)--(1.0,0);\\draw[line width=0.55pt] (C)--(3.6,2.6);\\node[above left] at (P) {$P$};\\node[above right] at (Q) {$Q$};\\node[below left] at (R) {$R$};\\node[below right] at (S) {$S$};\\node[above] at (A) {$A$};\\node[below] at (C) {$C$};\\node[left] at (1.0,1.3) {$T$};\\node[right] at (3.6,1.3) {$U$};\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Congruence yields equal alternate interior angles on transversal AC, which forces PQ ∥ RS. Naming the angle type as the lines, dropping the alternate-interior step, or stretching side-length equality to a parallel proof all miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote the source bolt-triangle figure as lines PQ, RS with transversal AC and auxiliary segments for the congruent triangles."
+  }
+}

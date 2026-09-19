@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Everywhere equally along the whole bar."
+    },
+    {
+      "id": "B",
+      "text": "Near the two ends (the poles)."
+    },
+    {
+      "id": "C",
+      "text": "Most strongly in the middle and least at the ends."
+    },
+    {
+      "id": "D",
+      "text": "Only at the red-painted end."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!30] (0,1.6) rectangle (1.6,2.2);\n\\draw[thick,fill=blue!30] (1.6,1.6) rectangle (3.2,2.2);\n\\node at (0.8,1.9) {N};\n\\node at (2.4,1.9) {S};\n\\node at (1.6,2.55) {bar magnet};\n% iron filings clusters near poles\n\\foreach \\x/\\y in {0.15/1.25,0.35/1.15,0.55/1.30,0.25/1.05,0.45/1.00,2.65/1.25,2.85/1.15,3.05/1.30,2.75/1.05,2.95/1.00} {\n  \\draw[thick] (\\x,\\y) -- ++(0.12,0.28);\n}\n% few filings in middle\n\\foreach \\x/\\y in {1.45/1.20,1.70/1.10} {\n  \\draw[thick] (\\x,\\y) -- ++(0.10,0.22);\n}\n\\node at (1.6,0.55) {iron filings};\n\\end{tikzpicture}",
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a bar magnet resting on a sheet sprinkled with iron filings. Mohan taps the sheet gently so the filings can move.\n\nWhere does the magnet attract the iron filings most strongly?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A bar magnet attracts magnetic materials most strongly near its two poles. Filings cluster at the ends, not equally along the bar, not mainly in the middle, and not only at the painted colour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source cylinders into a bar magnet with iron filings denser at the poles."
+  }
+}

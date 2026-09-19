@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya buys a lamp for $\\mathrm{Rs}\\,800$. The tag shows $\\mathrm{Rs}\\,1000$. She sells the lamp for $\\mathrm{Rs}\\,900$.\n\nWhich two claims correctly name the prices before profit or discount is calculated?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\mathrm{Rs}\\,800$ is the selling price."
+    },
+    {
+      "id": "B",
+      "text": "$\\mathrm{Rs}\\,800$ is the cost price."
+    },
+    {
+      "id": "C",
+      "text": "$\\mathrm{Rs}\\,1000$ is the marked price and $\\mathrm{Rs}\\,900$ is the selling price."
+    },
+    {
+      "id": "D",
+      "text": "Profit percent must use the marked price $\\mathrm{Rs}\\,1000$ as the $100\\%$ base in every case."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cost price is what Diya paid (Rs 800), marked price is the tag (Rs 1000), and selling price is Rs 900. Calling 800 the selling price swaps names. Profit percent uses cost price as the usual 100% base unless another base is named.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

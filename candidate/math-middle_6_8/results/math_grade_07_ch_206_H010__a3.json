@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Parth colours a $4$-by-$4$ grid in checkerboard black and white, then removes two white corner squares. He wants to cover the remaining region with $2 \\times 1$ tiles that do not overlap and leave no gaps.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The remaining region has even area $14$, so it can be tiled by $2 \\times 1$ tiles."
+    },
+    {
+      "id": "B",
+      "text": "Every $2 \\times 1$ tile covers one black square and one white square."
+    },
+    {
+      "id": "C",
+      "text": "The remaining region has $8$ black squares and $6$ white squares, so it cannot be tiled by $2 \\times 1$ tiles."
+    },
+    {
+      "id": "D",
+      "text": "Only the total number of squares matters for tiling with $2 \\times 1$ tiles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 4×4 checkerboard has 8 black and 8 white; removing two white corners leaves 8 black and 6 white. Each 2×1 tile covers one of each colour, so unequal counts block a tiling even though area 14 is even. Even area alone, or ignoring colour, misses the invariant.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

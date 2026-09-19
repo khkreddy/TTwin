@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each student's own handspan is suitable, because a body part is always a standard unit."
+    },
+    {
+      "id": "B",
+      "text": "The metre is suitable, because everyone can use the same agreed length."
+    },
+    {
+      "id": "C",
+      "text": "A standard length unit must be the same for every student who shares the measurement."
+    },
+    {
+      "id": "D",
+      "text": "No shared length unit is possible, so each desk must keep its own private unit."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Tara's class must share one length unit when they measure the same desk. Someone suggests each student's own handspan. Someone suggests the metre.\n\nWhich claims correctly decide whether a length unit is suitable as a standard unit? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A standard unit is an agreed shared length, such as the metre. Personal handspans differ, so they are not suitable as the shared standard.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

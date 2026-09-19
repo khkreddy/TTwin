@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ananya asks what integer $q$ satisfies $(-4) \\times q = -36$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$q = 9$, and that $q$ is $(-36) \\div (-4)$."
+    },
+    {
+      "id": "B",
+      "text": "$q = -9$, because the product $(-4) \\times q$ must be negative."
+    },
+    {
+      "id": "C",
+      "text": "Division asks for $q$ in $q \\div (-4) = -36$, so reverse the missing-factor layout."
+    },
+    {
+      "id": "D",
+      "text": "$q = 144$, from writing $(-4) \\times q$ as adding the absolute values."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "(-4)×9 = -36, so q = 9 and (-36)÷(-4) = 9. The product is already negative with positive q. The missing factor multiplies by the divisor. Addition is not the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

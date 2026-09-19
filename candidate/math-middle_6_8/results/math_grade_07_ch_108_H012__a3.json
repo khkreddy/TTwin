@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan starts with a full bottle. He pours out $\\dfrac{1}{4}$ of the bottle, then pours out $\\dfrac{1}{3}$ of what remains.\n\nWhich claim correctly tracks the amounts?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After the first pour, $\\dfrac{3}{4}$ remains; $\\dfrac{1}{3}$ of that remaining is $\\dfrac{1}{4}$ of the bottle, so $\\dfrac{1}{2}$ of the bottle is left."
+    },
+    {
+      "id": "B",
+      "text": "He pours $\\dfrac{1}{4}$ and then $\\dfrac{1}{3}$ of the original bottle, so $\\dfrac{7}{12}$ is poured in total."
+    },
+    {
+      "id": "C",
+      "text": "The second pour uses $\\dfrac{1}{3}$ of the original, and that step creates the remaining $\\dfrac{3}{4}$."
+    },
+    {
+      "id": "D",
+      "text": "The two pour fractions multiply to make the remaining amount, so the bottle ends with $\\dfrac{1}{4}\\times\\dfrac{1}{3}=\\dfrac{1}{12}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The second fraction applies to the remaining 3/4, so (1/3)*(3/4)=1/4 of the original is poured next and 1/2 remains. Applying 1/3 to the original ignores the new whole. The remaining does not create the prior step. Multiplying the pour fractions as the leftover confuses the mechanism for tracking the current whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

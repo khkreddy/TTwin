@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Omkar compares two statements about last year's fee of $\\mathrm{Rs}\\,5000$.\nStatement 1: This year's fee is $120\\%$ of last year's fee.\nStatement 2: The fee rose by $20\\%$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Statement 1 means this year's fee is $\\mathrm{Rs}\\,120$ only."
+    },
+    {
+      "id": "B",
+      "text": "Statement 1 means this year's fee equals last year's fee plus $20\\%$ of last year's fee."
+    },
+    {
+      "id": "C",
+      "text": "Statement 2 also makes this year's fee equal to $120\\%$ of last year's fee."
+    },
+    {
+      "id": "D",
+      "text": "Statement 1 means the fee fell by $20\\%$ from last year."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "120% of the original is the original plus 20% of the original, so Statement 1 and a 20% rise describe the same final amount. Reading 120% as Rs 120 grabs the numerals only. Treating 120% of as a 20% fall reverses increase and decrease.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

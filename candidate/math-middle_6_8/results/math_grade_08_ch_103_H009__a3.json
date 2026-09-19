@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naina has $3$ hundreds and $5$ ones, with no tens. She writes a place-value numeral for that amount.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $35$, placing the $3$ and the $5$ next to each other."
+    },
+    {
+      "id": "B",
+      "text": "Write $350$, treating the empty tens place as if it held the ones digit $5$ shifted left."
+    },
+    {
+      "id": "C",
+      "text": "Write $305$, using $0$ as a placeholder in the tens place."
+    },
+    {
+      "id": "D",
+      "text": "Write $3$ and $5$ only, and leave the empty tens place blank with no digit."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With hundreds and ones but no tens, a placeholder zero must mark the empty tens place: 305. Writing 35, shifting 5 into the tens as 350, or leaving a blank with no digit all make the places ambiguous.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

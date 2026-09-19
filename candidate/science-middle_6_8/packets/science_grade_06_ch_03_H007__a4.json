@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q13",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:51:36.142Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q13",
+    "item_type": "single_mcq",
+    "stem": "Which nutrient produces a purple colour when mixed with biuret solution?",
+    "options": [
+      {
+        "id": "A",
+        "text": "fat"
+      },
+      {
+        "id": "B",
+        "text": "protein"
+      },
+      {
+        "id": "C",
+        "text": "reducing sugar"
+      },
+      {
+        "id": "D",
+        "text": "starch"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Cooking heat destroys minerals in vegetables."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Cooked vegetables contain no nutrients."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Loss of bright colour proves that vitamin C has been lost."
+      }
+    ],
+    "enrichment": "Cooked vegetables can lose bright colour and become softer or less crisp, and some nutrients such as vitamin C can be affected during cooking. cooking vegetables -> changes in colour and texture, with possible loss of some nutrients The learner correctly applies this rule: Cooked vegetables can lose bright colour and become softer or less crisp, and some nutrients such as vitamin C can be affected during cooking. Cooked vegetables either keep all nutrients unchanged or lose every nutrient completely.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H007",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “fat” for the required “protein”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “reducing sugar” for the required “protein”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “starch” for the required “protein”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Explain why cooking can change vegetables and reduce some nutrients, especially when considering vitamin C and other nutrients that may be affected by cooking. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q13",
+    "hinge": "science/grade_06/ch_03/H007",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H007"
+  }
+}

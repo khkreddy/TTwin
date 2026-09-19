@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela wants an easier way to compute $48 \\times 52$.\n\nWhich claims correctly rewrite the product without changing its value? Two options are correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "$48 \\times 52 = 50 \\times 50$, replacing each factor by 50."
+    },
+    {
+      "id": "B",
+      "text": "$48 \\times 52 = (50 - 2)(50 + 2) = 50^{2} - 2^{2}$."
+    },
+    {
+      "id": "C",
+      "text": "$48 \\times 52 = 48 \\times (50 + 2) = 48 \\times 50 + 48 \\times 2$."
+    },
+    {
+      "id": "D",
+      "text": "$48 \\times 52 = 48 + 52$, because a product means combine the two numbers by addition."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Difference of squares and distributivity both keep the value 2496. Replacing both factors by 50 changes the product. Addition is not multiplication.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

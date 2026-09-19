@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "They share material properties of metals."
+    },
+    {
+      "id": "B",
+      "text": "Each metals group may hold only one object."
+    },
+    {
+      "id": "C",
+      "text": "Grouping by shiny colour is the only correct grouping for these objects."
+    },
+    {
+      "id": "D",
+      "text": "The metals group is correct only when exactly three objects are always present."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Vikram puts a steel spoon, a copper coin, and an aluminium plate in one group. He says they belong together as metals.\n\nWhat common property is he using for this classification?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Classification here uses the shared material properties of metals. A metals group can hold several objects; shiny colour alone is not the only basis; the common property does not require exactly three objects.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

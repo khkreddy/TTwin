@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q16",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:51:36.188Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q16",
+    "item_type": "single_mcq",
+    "stem": "What is the correct sequence for blood being pumped from the heart to the lungs?",
+    "options": [
+      {
+        "id": "A",
+        "text": "left atrium → left ventricle → pulmonary artery"
+      },
+      {
+        "id": "B",
+        "text": "left atrium → left ventricle → pulmonary vein"
+      },
+      {
+        "id": "C",
+        "text": "right atrium → right ventricle → pulmonary artery"
+      },
+      {
+        "id": "D",
+        "text": "right atrium → right ventricle → pulmonary vein"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Roughage carries waste out of the body through sweat and urine."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "One sip of water a day is enough for nutrient absorption and waste removal."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "High-fibre foods do not provide any nutrients."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Smooth, unstrained whole-carrot purée contains no roughage."
+      }
+    ],
+    "enrichment": "The body needs dietary fibres and water in addition to essential nutrients; roughage does not provide nutrients but is essential, and water helps absorb nutrients and remove waste through sweat and urine. roughage and water in the diet -> support for digestion, nutrient absorption, and waste removal The learner correctly applies this rule: The body needs dietary fibres and water in addition to essential nutrients; roughage does not provide nutrients but is essential, and water helps absorb nutrients and remove waste through sweat and urine. Only components that provide nutrients are needed by the body.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H008",
+      "gate_names": [
+        "relationship_reversal",
+        "relationship_reversal",
+        "relationship_reversal"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student reversing the directed relation (left ventricle vs right ventricle). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student reversing the directed relation (pulmonary vein vs pulmonary artery). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Distinguish essential diet components like roughage and water from nutrients while explaining why they are still needed by the body. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q16",
+    "hinge": "science/grade_06/ch_03/H008",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H008"
+  }
+}

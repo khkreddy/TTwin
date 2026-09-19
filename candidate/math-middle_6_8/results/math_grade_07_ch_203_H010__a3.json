@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan writes this common-division table for $24$ and $36$:\n\n$2 \\mid 24\\quad 36$\n\n$2 \\mid 12\\quad 18$\n\n$3 \\mid 6\\quad 9$\n\n$\\phantom{2\\mid} 2\\quad 3$\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The HCF is the phrase common division, so the answer is that label rather than a product of factors."
+    },
+    {
+      "id": "B",
+      "text": "The HCF is $2\\times 2\\times 3=12$ and the LCM is $2\\times 2\\times 3\\times 2\\times 3=72$."
+    },
+    {
+      "id": "C",
+      "text": "The HCF is $2\\times 2\\times 3\\times 2\\times 3=72$ and the LCM is $2\\times 2\\times 3=12$."
+    },
+    {
+      "id": "D",
+      "text": "The HCF equals $24+36$ because those are the two starting numbers in the table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Common divisors removed are 2, 2 and 3, so HCF=12. LCM multiplies those by the leftover 2 and 3 to get 72. Relabeling as factors without multiplying misses the products. Swapping the products reverses HCF and LCM. Adding the starters is not the method.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

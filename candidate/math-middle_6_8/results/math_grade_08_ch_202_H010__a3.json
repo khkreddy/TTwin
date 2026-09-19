@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Smita knows that $(5, 12, 13)$ is a Baudhāyana triple. She multiplies every entry by $3$ to get $(15, 36, 39)$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Is $(15, 36, 39)$ also a Baudhāyana triple?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only if $15 + 36 = 39$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Because $5^{2}+12^{2}=13^{2}$, multiplying by $3$ gives $(3\\cdot 5)^{2}+(3\\cdot 12)^{2}=(3\\cdot 13)^{2}$, so $(15,36,39)$ is also a Baudhāyana triple."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scaling every entry of a Baudhāyana triple by the same positive integer k preserves a²+b²=c². Here k=3, and 15²+36²=225+1296=1521=39². Option C confuses the side-sum with the squared relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

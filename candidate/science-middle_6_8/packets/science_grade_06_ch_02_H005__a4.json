@@ -1,0 +1,108 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe15",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:51:14.368Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe15",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice question: Which of the following statements about gymnosperms and angiosperms is correct ( )\nA. The seeds of gymnosperms are covered with pericarp.\nB. The seeds of angiosperms are exposed\nC. Gymnosperm seeds are exposed\nD. The cones of gymnosperms are fruits",
+    "options": [
+      {
+        "id": "A",
+        "text": "The seeds of gymnosperms are covered by a pericarp"
+      },
+      {
+        "id": "B",
+        "text": "The seeds of angiosperms are exposed"
+      },
+      {
+        "id": "C",
+        "text": "Gymnosperm seeds are exposed"
+      },
+      {
+        "id": "D",
+        "text": "The cones of gymnosperms are fruits"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_02/H005",
+      "unit_id": "science/grade_06/ch_02/H005",
+      "title": "Identify whether a plant has a taproot or a fibrous root system from root evidence or connected plant features.",
+      "node_labels": [
+        "What is living; diversity, life cycles and plant processes",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Fibrous roots"
+      }
+    ],
+    "enrichment": "A root system with one main root and small side roots arising from it is a taproot; fibrous roots are the contrasting root type used for grouping plants, and wheat is an example with fibrous roots while chickpea has taproots. root_structure_or_connected_features -> root_type The learner correctly applies this rule: A root system with one main root and small side roots arising from it is a taproot; fibrous roots are the contrasting root type used for grouping plants, and wheat is an example with fibrous roots while chickpea has taproots. Roots are just roots; wheat and chickpea can be named without checking whether there is one main root or a bunch of similar thin roots.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Diversity in the living world. The student must decide: Identify whether a plant has a taproot or a fibrous root system from root evidence or connected plant features. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe15",
+    "hinge": "science/grade_06/ch_02/H005",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": "relationship_reversal",
+      "B": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_02/H005"
+  }
+}

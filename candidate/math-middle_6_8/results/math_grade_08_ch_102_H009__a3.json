@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir evaluates $5^{0}$ and $(-3)^{0}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5^{0} = 0$, because the exponent is zero."
+    },
+    {
+      "id": "B",
+      "text": "$5^{0} = 1$ and $(-3)^{0} = 1$, for these nonzero bases."
+    },
+    {
+      "id": "C",
+      "text": "$5^{0} = 1$ only when the base is positive; $(-3)^{0}$ is undefined."
+    },
+    {
+      "id": "D",
+      "text": "Any base to the power 0 equals 1, including $0^{0}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For any nonzero base x, x^0 = 1, so both 5^0 and (-3)^0 equal 1. The zero exponent does not force the value 0. The rule needs a nonzero base, so 0^0 is excluded.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
