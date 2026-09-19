@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the fixed side lengths $5$ and $12$."
+    },
+    {
+      "id": "B",
+      "text": "Any $x$ from $7$ to $17$ inclusive works, including the endpoints."
+    },
+    {
+      "id": "C",
+      "text": "$x$ must satisfy $7 < x < 17$."
+    },
+    {
+      "id": "D",
+      "text": "The same rule also decides the perimeter once the triangle is built."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Pallavi has two sticks of lengths $5\\,\\mathrm{cm}$ and $12\\,\\mathrm{cm}$. She wants a third stick of length $x\\,\\mathrm{cm}$ so the three lengths can form a triangle.\n\nWhich claim about $x$ is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Triangle inequality requires |12-5| < x < 12+5, so 7 < x < 17 with endpoints excluded. Naming the fixed sides, including 7 and 17, or shifting to perimeter all miss that range.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

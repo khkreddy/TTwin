@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Carbon dioxide in Mehak's exhaled breath reacts with the lime water."
+    },
+    {
+      "id": "2",
+      "text": "The milky look is evidence that insoluble calcium carbonate has formed."
+    },
+    {
+      "id": "3",
+      "text": "Oxygen in Mehak's exhaled breath is the gas that turns lime water milky."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Mehak blows exhaled breath through a straw into a test tube of clear lime water. After a short time the liquid turns milky.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "CO2 in exhaled air reacts to form insoluble calcium carbonate, which makes the liquid milky. Oxygen is not the reacting gas here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal studies the expression $91 - 38$.\n\nWhat are its terms?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rewrite as $91 + (-38)$; the terms are $91$ and $-38$."
+    },
+    {
+      "id": "B",
+      "text": "The plus-sign idea alone is the terms, with no named parts of $91 - 38$."
+    },
+    {
+      "id": "C",
+      "text": "The listed terms are what create the expression $91 - 38$."
+    },
+    {
+      "id": "D",
+      "text": "The printed digits $9$, $1$, $3$, and $8$ are the terms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rewrite 91-38 as 91+(-38); terms are 91 and -38. Naming only the plus-sign idea swaps the term label. Saying terms create the expression reverses the relation. Digit list captures surface print.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

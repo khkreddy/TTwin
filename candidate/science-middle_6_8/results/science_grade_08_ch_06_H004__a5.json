@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Air pressure outside the straw is greater than the pressure inside her mouth, so outside air pushes the juice up the straw."
+    },
+    {
+      "id": "B",
+      "text": "Air pressure inside her mouth is greater than outside, so the juice is pushed up from inside the straw."
+    },
+    {
+      "id": "C",
+      "text": "The juice rises even when the air pressure outside equals the air pressure inside her mouth."
+    },
+    {
+      "id": "D",
+      "text": "Atmospheric air around the glass pulls the juice up the straw with no pressure difference needed."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Leela drinks mango juice through a straw. She lowers the air pressure inside her mouth while the straw dips into the juice.\n\nWhy does the juice rise in the straw?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lower pressure in the mouth creates a pressure difference; higher outside atmospheric pressure pushes the juice up the straw.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

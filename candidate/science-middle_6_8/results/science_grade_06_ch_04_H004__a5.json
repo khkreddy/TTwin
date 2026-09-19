@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Nidhi's magnetic compass resting flat on a wooden desk, away from other magnets. After the needle settles, she notes which tip points toward geographic north.\n\nWhat has the settled needle helped her find?",
+  "options": [
+    {
+      "id": "A",
+      "text": "North–south direction; the tip toward geographic north is the North-seeking pole."
+    },
+    {
+      "id": "B",
+      "text": "North–south direction while the needle is still swinging."
+    },
+    {
+      "id": "C",
+      "text": "A direction that a plain iron pin on the desk would show the same way."
+    },
+    {
+      "id": "D",
+      "text": "East–west direction, because the red paint on that tip marks east."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% desk outline\n\\draw[thick] (-0.2,-0.2) rectangle (4.2,3.2);\n\\node at (2.0,2.95) {wooden desk};\n% compass body\n\\draw[thick,fill=gray!10] (2.0,1.4) circle (1.15);\n\\draw[thick] (2.0,1.4) circle (1.15);\n% N-S marks on dial\n\\node at (2.0,2.35) {N};\n\\node at (2.0,0.45) {S};\n\\node at (0.95,1.4) {W};\n\\node at (3.05,1.4) {E};\n% settled needle (N tip toward geographic north)\n\\fill[red!60] (2.0,1.4) -- (1.85,2.15) -- (2.15,2.15) -- cycle;\n\\fill[blue!50] (2.0,1.4) -- (1.85,0.65) -- (2.15,0.65) -- cycle;\n\\fill (2.0,1.4) circle (0.06);\n\\node at (2.0,-0.55) {magnetic compass};\n\\draw[thick,->] (2.0,2.55) -- (2.0,2.85);\n\\node at (3.35,2.7) {geographic north};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A freely settling compass needle rests along north–south. The tip that points to geographic north is the North-seeking pole. Reading while swinging, treating a plain iron pin the same, or using paint colour alone are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote IGCSE force-block tikz into a settled compass on a desk."
+  }
+}

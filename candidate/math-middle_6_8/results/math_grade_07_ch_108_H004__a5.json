@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The product is the label rectangle area, with no link to the shaded fraction."
+    },
+    {
+      "id": "B",
+      "text": "The shaded piece is $\\frac{1}{15}$ of the unit square."
+    },
+    {
+      "id": "C",
+      "text": "$\\frac{1}{3}\\times\\frac{1}{5}$ equals the area of the shaded rectangle inside the unit square."
+    },
+    {
+      "id": "D",
+      "text": "The same shading finds the perimeter of the unit square."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Qasim shades a unit square. He takes $\\frac{1}{3}$ of the square and then $\\frac{1}{5}$ of that third to show $\\frac{1}{3}\\times\\frac{1}{5}$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One fifth of one third of the unit square is 1/15 of the unit square, and that shaded area is the product. Stopping at the rectangle-area label or reading perimeter from the shading both miss the area-product link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

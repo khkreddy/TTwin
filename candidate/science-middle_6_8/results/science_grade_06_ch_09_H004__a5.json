@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohit has a mixture of heavier peanuts and their light removed skins. He stands outdoors near a running fan that blows air across a tray.\n\nWhen can winnowing work for this mixture?",
+  "options": [
+    {
+      "id": "A",
+      "text": "When moving air carries the light skins farther while the heavier peanuts fall closer."
+    },
+    {
+      "id": "B",
+      "text": "When he closes the room and switches the fan off so there is no moving air."
+    },
+    {
+      "id": "C",
+      "text": "When the heavier peanuts travel farther in the air and the light skins fall closer."
+    },
+    {
+      "id": "D",
+      "text": "When the skins and peanuts are the same mass but painted different colours."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Winnowing needs moving air so lighter skins travel farther and heavier peanuts fall closer. No air, reversing which part travels farther, or colour-only separation miss the method.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

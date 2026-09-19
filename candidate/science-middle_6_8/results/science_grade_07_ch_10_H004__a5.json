@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Carbon dioxide from air is essential for the leaf to prepare starch."
+    },
+    {
+      "id": "B",
+      "text": "Part M should not turn blue-black with iodine, because it could not get carbon dioxide."
+    },
+    {
+      "id": "C",
+      "text": "Oxygen from air is essential for the leaf to prepare starch."
+    },
+    {
+      "id": "D",
+      "text": "Water and sunlight alone are enough for Part M to prepare starch without carbon dioxide."
+    }
+  ],
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "Kiara sets up a half-leaf bottle experiment on a destarched green leaf. Part M of the leaf is enclosed in a bottle so it cannot get carbon dioxide from air. Part N stays in open air with carbon dioxide. Both parts get water and sunlight. Oxygen is also present around the leaf. She later tests both parts for starch with iodine.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Starch forms only where carbon dioxide is available with water and sunlight. The enclosed part lacks CO2 so should not show starch; oxygen is not the gas this test isolates; water and sunlight without CO2 are not enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_07/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_07/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "option_plan": {
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_07/H004"
+  },
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_07:H004:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_07/ch_07",
+    "chapter_label": "Heat transfer",
+    "subtopic_id": "science/grade_07/ch_07/H004",
+    "stem": "The diagram shows Reyansh holding his hand beside a glowing room heater without touching it. His hand feels warm.\n\nHow does heat reach his hand?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Radiation — heat reaches his hand from the heater without contact.",
+      "B": "Conduction — heat passes only through contacting solid parts.",
+      "C": "Convection — heater particles themselves move into his hand.",
+      "D": "Conduction — any warmth from a heater is conduction."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,>=stealth]\n\\draw[thick,fill=gray!25] (0,0) rectangle (1.6,1.8);\n\\node at (0.8,2.1) {heater};\n\\draw[thick,fill=orange!40] (0.3,0.3) rectangle (1.3,1.5);\n\\draw[->,thick] (1.8,1.0) -- (3.0,1.0);\n\\node at (2.4,1.35) {heat};\n\\draw[thick,fill=pink!30] (3.2,0.5) circle (0.55);\n\\node at (3.2,-0.3) {hand};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_07/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

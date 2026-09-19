@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H004",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H004"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H004:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H004",
+    "stem": "The diagram shows Vivaan holding a thick opaque book between a torch and a white wall. Light from the torch is blocked by the book before it reaches the wall.\n\nAnswer both parts.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim about the shadow is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "A dark shadow forms on the wall because the book blocks light from the torch."
+          },
+          {
+            "id": "B",
+            "text": "An object that blocks more light makes a lighter shadow on the wall."
+          },
+          {
+            "id": "C",
+            "text": "The book still casts a distinct shadow on the wall when the torch is switched off."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {torch};\n\\draw[thick,fill=brown!45] (2.0,0.3) rectangle (2.45,2.2);\n\\node at (2.22,2.5) {book};\n\\draw[thick,fill=gray!10] (4.2,0.1) rectangle (4.45,2.4);\n\\node at (4.32,2.7) {wall};\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,1.55);\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,0.85);\n\\draw[thick,fill=gray!55] (4.2,0.7) rectangle (4.45,1.7);\n\\node at (5.3,1.2) {shadow};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

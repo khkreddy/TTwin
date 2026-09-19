@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the shadow is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A dark shadow forms on the wall because the book blocks light from the torch."
+        },
+        {
+          "id": "B",
+          "text": "An object that blocks more light makes a lighter shadow on the wall."
+        },
+        {
+          "id": "C",
+          "text": "The book still casts a distinct shadow on the wall when the torch is switched off."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {torch};\n\\draw[thick,fill=brown!45] (2.0,0.3) rectangle (2.45,2.2);\n\\node at (2.22,2.5) {book};\n\\draw[thick,fill=gray!10] (4.2,0.1) rectangle (4.45,2.4);\n\\node at (4.32,2.7) {wall};\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,1.55);\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,0.85);\n\\draw[thick,fill=gray!55] (4.2,0.7) rectangle (4.45,1.7);\n\\node at (5.3,1.2) {shadow};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Vivaan holding a thick opaque book between a torch and a white wall. Light from the torch is blocked by the book before it reaches the wall.\n\nAnswer both parts.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A shadow is the dark region on the wall where the book stops light from the torch from reaching."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The opaque book blocks torch light, so a dark shadow forms on the wall. Blocking more light darkens the shadow, and with the torch off there is no light to block.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": "Torch, opaque book, and shadow on a wall."
+  }
+}

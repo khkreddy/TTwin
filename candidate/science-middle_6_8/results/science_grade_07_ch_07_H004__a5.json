@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,>=stealth]\n\\draw[thick,fill=gray!25] (0,0) rectangle (1.6,1.8);\n\\node at (0.8,2.1) {heater};\n\\draw[thick,fill=orange!40] (0.3,0.3) rectangle (1.3,1.5);\n\\draw[->,thick] (1.8,1.0) -- (3.0,1.0);\n\\node at (2.4,1.35) {heat};\n\\draw[thick,fill=pink!30] (3.2,0.5) circle (0.55);\n\\node at (3.2,-0.3) {hand};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Radiation — heat reaches his hand from the heater without contact."
+    },
+    {
+      "id": "B",
+      "text": "Conduction — heat passes only through contacting solid parts."
+    },
+    {
+      "id": "C",
+      "text": "Convection — heater particles themselves move into his hand."
+    },
+    {
+      "id": "D",
+      "text": "Conduction — any warmth from a heater is conduction."
+    }
+  ],
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Reyansh holding his hand beside a glowing room heater without touching it. His hand feels warm.\n\nHow does heat reach his hand?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heat from the glowing heater reaches the hand without contact, which is radiation. Conduction needs contact through a solid; convection is movement of fluid particles, not solid heater bits into the hand.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Glowing heater with heat reaching a nearby hand."
+  }
+}

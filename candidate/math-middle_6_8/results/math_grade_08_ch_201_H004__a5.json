@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Gauri scores $14$ marks out of $20$ on one test and $18$ marks out of $25$ on another.\n\nWhich claim about comparing her percentages is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$18 > 14$, so the second score is the higher percentage."
+    },
+    {
+      "id": "B",
+      "text": "A fair percentage comparison is what forces the totals $20$ and $25$ to be equal."
+    },
+    {
+      "id": "C",
+      "text": "Write $14/20 = 70\\%$ and $18/25 = 72\\%$; the wholes differ, so compare those percentages rather than the raw marks alone."
+    },
+    {
+      "id": "D",
+      "text": "Compare the raw marks $18$ and $14$ directly while the totals stay $25$ and $20$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Different wholes require percentages: 70% vs 72%. Comparing raw marks, reversing what fair comparison requires, or claiming raw marks suffice when wholes differ miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

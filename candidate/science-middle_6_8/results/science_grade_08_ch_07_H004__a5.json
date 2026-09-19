@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% dish with solid butter\n\\draw[thick] (0,0.6)--(0,0)--(3.2,0)--(3.2,0.6);\n\\draw[thick,fill=yellow!40] (0.15,0.05) rectangle (3.05,0.45);\n\\node[font=\\footnotesize] at (1.6,0.25) {solid butter};\n\\node[font=\\footnotesize] at (1.6,-0.35) {dish};\n% heat source\n\\draw[thick,fill=orange!30] (1.0,-1.1) rectangle (2.2,-0.7);\n\\node[font=\\footnotesize] at (1.6,-1.4) {gentle heat};\n\\draw[->,thick] (1.6,-0.7)--(1.6,-0.05);\n% thermometer\n\\draw[thick] (3.6,0)--(3.6,2.2);\n\\draw[thick,fill=gray!20] (3.45,-0.15) rectangle (3.75,0.15);\n\\node[font=\\footnotesize] at (4.55,1.1) {thermometer};\n\\draw[thick] (3.6,0.15)--(3.05,0.35);\n\\node[font=\\footnotesize] at (1.6,1.1) {melting begins at one fixed temperature};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Heating makes the particles vibrate more until they leave fixed positions; that temperature is the melting point at atmospheric pressure."
+    },
+    {
+      "id": "B",
+      "text": "Heating packs the particles closer until they stop vibrating; that temperature is the melting point."
+    },
+    {
+      "id": "C",
+      "text": "Heating turns the solid butter straight into vapour; the melting point is the boiling temperature."
+    },
+    {
+      "id": "D",
+      "text": "The butter melts at any temperature as soon as Harsh stirs it."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Harsh heating solid butter in a dish. A thermometer is placed in the butter. At one fixed temperature the solid butter turns into liquid butter.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Added heat increases particle vibration until particles leave fixed positions; that temperature at atmospheric pressure is the melting point.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Dish of solid butter over gentle heat with a thermometer."
+  }
+}

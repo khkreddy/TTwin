@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_07/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_07/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_07/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_07:H004:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_06/ch_07",
+    "chapter_label": "Temperature and its measurement",
+    "subtopic_id": "science/grade_06/ch_07/H004",
+    "stem": "The diagram shows Ishaan's digital clinical thermometer with its tip and display labelled. He will measure his sister's body temperature.\n\nWhich set of steps is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Wash the tip, reset, place the tip correctly, wait for the beep, then read the display.",
+      "B": "Wash the tip, reset, place the display under the tongue, then read after the beep.",
+      "C": "Skip washing the tip, place the tip correctly, and read as soon as any number appears.",
+      "D": "Wash the whole thermometer including the digital portion, then place the tip correctly."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% thermometer body\n\\draw[thick,fill=gray!15] (0.0,1.0) rectangle (4.2,2.0);\n% display window\n\\draw[thick,fill=white] (0.25,1.2) rectangle (1.8,1.8);\n\\node at (1.02,1.5) {36.8};\n\\node at (1.02,2.35) {display};\n\\draw[thick,->] (1.02,2.2) -- (1.02,1.85);\n% stem to tip\n\\draw[thick,fill=gray!25] (4.2,1.35) rectangle (5.4,1.65);\n\\draw[thick,fill=gray!40] (5.4,1.5) circle (0.22);\n\\node at (5.4,2.35) {tip};\n\\draw[thick,->] (5.4,2.2) -- (5.4,1.75);\n\\node at (2.5,0.55) {digital clinical thermometer};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_07/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

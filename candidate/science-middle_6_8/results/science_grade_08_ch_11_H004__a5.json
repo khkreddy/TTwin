@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which pair of marks should Nikhil use to measure one day of nearly 24 hours?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The shortest shadow tip on day 1 and the shortest shadow tip on day 2"
+        },
+        {
+          "id": "B",
+          "text": "The longest shadow tip on day 1 and the longest shadow tip on day 2"
+        },
+        {
+          "id": "C",
+          "text": "Any morning mark on day 1 and any evening mark on day 1 only"
+        },
+        {
+          "id": "D",
+          "text": "The longest shadow on day 1 and the shortest shadow on day 2"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% ground\n\\draw[thick] (-0.5,0)--(6.5,0);\n% vertical stick\n\\draw[thick] (2.5,0)--(2.5,2.2);\n\\node[font=\\footnotesize] at (2.5,2.5) {vertical stick};\n% morning long shadow\n\\draw[thick] (2.5,0)--(0.2,0);\n\\fill (0.2,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (0.2,-0.35) {long};\n% noon short shadow\n\\draw[thick] (2.5,0)--(2.9,0);\n\\fill (2.9,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (3.5,-0.35) {shortest};\n% afternoon long shadow\n\\draw[thick] (2.5,0)--(5.5,0);\n\\fill (5.5,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (5.5,-0.35) {long};\n% sun high\n\\fill[yellow!70!orange] (2.9,3.3) circle (0.28);\n\\node[font=\\footnotesize] at (2.9,3.75) {Sun high};\n\\draw[->,thin] (2.9,3.0)--(2.7,2.3);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Nikhil's vertical stick on the school terrace and the tip marks of its shadow. He records marks through two school days. He wants to measure one day of nearly 24 hours.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The shortest shadow marks when the Sun is highest. The time from that mark on one day to the same mark on the next day is nearly 24 hours."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The mean solar day is timed from the Sun's highest position (shortest shadow) on one day to the next.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Vertical stick with long and shortest shadow tip marks; Sun high at noon."
+  }
+}

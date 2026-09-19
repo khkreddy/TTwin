@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Chloroplasts contain chlorophyll, which makes the leaf green and helps the cell make food by photosynthesis."
+    },
+    {
+      "id": "B",
+      "text": "The cell membrane contains chlorophyll, which makes the leaf green and helps the cell make food."
+    },
+    {
+      "id": "C",
+      "text": "Chloroplasts can make food by photosynthesis even without chlorophyll."
+    },
+    {
+      "id": "D",
+      "text": "Every plastid in every part of the spinach plant carries out photosynthesis."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Navya studies a spinach leaf cell under a microscope. The leaf looks green and can make food in sunlight.\n\nWhich explanation is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Chloroplasts hold chlorophyll; chlorophyll gives green colour and enables photosynthesis. The membrane does not, and not every plastid photosynthesises.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

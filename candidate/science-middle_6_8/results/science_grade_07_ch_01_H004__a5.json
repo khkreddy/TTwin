@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "He imagines four ice cubes melting at different speeds and asks which factors could explain the differences."
+    },
+    {
+      "id": "B",
+      "text": "He asks, \"Why do ants follow sugar trails?\" without checking whether \"four\" answers that question."
+    },
+    {
+      "id": "C",
+      "text": "He says a scientific question is valid only when its answer is already known, so the activity is impossible."
+    },
+    {
+      "id": "D",
+      "text": "He writes any long, dramatic question about bouncing balls and says it is valid because it sounds creative, even though \"four\" does not answer it."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "The teacher writes one answer on the board: \"four\". Arjun must invent a curious situation and a scientific question that this answer could fit. Ideas mentioned include ice cubes melting, ant trails on sugar, and bouncing balls.\n\nWhich response best follows the activity?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid move invents a situation where \"four\" really answers the question. Asking an unrelated question, insisting the answer must already be known, or praising a dramatic question that \"four\" does not fit all miss that link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

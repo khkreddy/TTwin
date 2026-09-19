@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_104/H004",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_104/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_104/H004"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H004",
+    "stem": "The diagram shows quadrilateral $WXYZ$ with diagonals $WY$ and $XZ$ meeting at $O$. Chetan measures $WY = XZ$, $WO = OY$, and $XO = OZ$.\n\nWhich claim about $WXYZ$ is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$WXYZ$ is a rectangle, because its diagonals are equal and bisect each other.",
+      "B": "$WXYZ$ is a rectangle from $WY = XZ$ alone.",
+      "C": "The rectangle label for $WXYZ$ is what produces $WY = XZ$ and the bisections at $O$.",
+      "D": "The same measurements also make any two equal crossing sticks a rectangle."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (W) at (0,0);\n  \\coordinate (X) at (5.0,0);\n  \\coordinate (Y) at (5.0,3.0);\n  \\coordinate (Z) at (0,3.0);\n  \\coordinate (O) at (2.5,1.5);\n  \\draw[line width=1.05pt] (W)--(X)--(Y)--(Z)--cycle;\n  \\draw[line width=0.9pt] (W)--(Y);\n  \\draw[line width=0.9pt] (X)--(Z);\n  \\fill (O) circle (1.4pt);\n  \\node[below left] at (W) {$W$};\n  \\node[below right] at (X) {$X$};\n  \\node[above right] at (Y) {$Y$};\n  \\node[above left] at (Z) {$Z$};\n  \\node[above right] at (O) {$O$};\n  \\node[below] at (2.5,-0.55) {$WY=XZ$, $WO=OY$, $XO=OZ$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

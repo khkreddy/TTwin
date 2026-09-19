@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya holds a polished brass nameplate and a wooden toy coated with shiny wax up to the light.\n\nWhich claims correctly judge lustre and whether shine proves a metal? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The polished brass nameplate has a lustrous appearance."
+    },
+    {
+      "id": "B",
+      "text": "The shiny wax-coated wooden toy is not a metal just because it shines."
+    },
+    {
+      "id": "C",
+      "text": "The shiny wax-coated wooden toy must be a metal because it shines."
+    },
+    {
+      "id": "D",
+      "text": "The polished brass nameplate is non-lustrous because brass is not plastic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Polished brass is lustrous and usually metallic. Shine alone does not prove a wax-coated wooden toy is a metal. Calling brass non-lustrous because it is not plastic misuses the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

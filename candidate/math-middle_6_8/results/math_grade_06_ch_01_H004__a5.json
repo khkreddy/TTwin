@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Esha's $5$-by-$5$ square of unit tiles. She paints it in nested L-shaped borders: the outermost border uses $9$ tiles, the next uses $7$, then $5$, then $3$, and the centre tile is $1$.\n\nWhy does the sum of the first $5$ odd numbers equal $5^{2}$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The $5$-by-$5$ square partitions into those five nested odd L-borders, so $1+3+5+7+9=25$."
+    },
+    {
+      "id": "B",
+      "text": "Any set of odd numbers sums to a square, even when the odds are not the first five consecutive odds from $1$."
+    },
+    {
+      "id": "C",
+      "text": "The same L-border story also forces the sum of the first five counting numbers to equal $25$."
+    },
+    {
+      "id": "D",
+      "text": "The answer is $25$, because $5$ is the largest number printed on the figure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,font=\\sffamily\\small]\n  \\draw[gray!70,densely dashed,line width=0.3pt] (0,0) grid (5,5);\n  \\draw[thick] (0,0) rectangle (5,5);\n  \\draw[thick] (0,5)--(0,4)--(1,4)--(1,5)--cycle;\n  \\draw[thick] (0,4)--(0,3)--(2,3)--(2,4)--(1,4)--(1,5)--(0,5)--(0,4);\n  \\fill[black!12] (2,2) rectangle (3,3);\n  \\node at (2.5,2.5) {$1$};\n  \\node[right] at (5.3,4.5) {$9$};\n  \\node[right] at (5.3,3.5) {$7$};\n  \\node[right] at (5.3,2.5) {$5$};\n  \\node[right] at (5.3,1.5) {$3$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 5-by-5 square has 25 tiles and splits into odd L-borders 9+7+5+3+1. Skipping the consecutive-from-1 condition, extending the story to counting numbers, or grabbing the printed 5 are wrong about that partition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a 5-by-5 square with nested L-borders labelled."
+  }
+}

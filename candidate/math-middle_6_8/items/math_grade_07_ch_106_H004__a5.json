@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_07/ch_106/H004",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_07/ch_106/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_106/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_106:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_106",
+    "chapter_label": "math/grade_07/ch_106",
+    "subtopic_id": "math/grade_07/ch_106/H004",
+    "stem": "Omar looks at the diagram of a rectangular grid that is $3$ squares tall and $8$ squares wide. He wants the even-or-odd parity of the total number of small squares without multiplying $3 \\times 8$.\n\nWhich claim correctly decides that parity?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The total is even, because one side length is even.",
+      "B": "The answer is the tall count $3$.",
+      "C": "The total is odd, because $3$ is odd.",
+      "D": "An even total is what forces the grid to be $3$ by $8$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.42cm,y=0.42cm,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[step=1,line width=0.55pt,gray!70] (0,0) grid (8,3);\n  \\draw[line width=1.0pt] (0,0) rectangle (8,3);\n  \\node[below] at (4,-0.35) {$8$ squares wide};\n  \\node[left,align=center] at (-0.55,1.5) {$3$\\\\squares\\\\tall};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_106/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

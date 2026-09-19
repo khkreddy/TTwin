@@ -1,0 +1,121 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_s10_qp_32:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:41:07.969Z",
+  "source": {
+    "item_ref": "session:0580_s10_qp_32:q10",
+    "item_type": "options_are_figure",
+    "stem": "10 Three bolts at A , B and C join the rods AB , BC and CA to form the right-angled triangle, ABC . Examiner's Angle ABC = 90°, AB = 8 cm and BC = 5 cm.\n(a) Calculate\n(i) the length of the rod AC ,\n(i) AC = cm [2]\n(ii) angle CAB .\n(ii) Angle CAB = [2]\n(b) Another right-angled triangle, ADE , is formed by adding rods to triangle ABC .\nAC is extended to E and AB is extended to D , with more bolts at D and E .\nRods AB and BD are the same length.\n(i) Complete the following statement.\nTriangle ADE is to triangle ABC . [1]\n(ii) Describe clearly the single transformation which maps triangle ABC onto triangle ADE .\n(ii) [3]\nDiagram 1 Diagram 2 Diagram 3 Diagram 4\n(c) The pattern of diagrams shown above is continued by adding more rods and bolts.\nComplete the table below.\nDiagram 1 2 3 4 5 Number of bolts 3 5 7 [2]\n(d) How many bolts are required for\n(i) Diagram 10,\n(i) [1]\n(ii) Diagram n ?\n(ii) [2]\n(e) The number of bolts in Diagram n is 47.\nFind the value of n .\nreasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity.\nUniversity of Cambridge International Examinations is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of University of Cambridge Local Examinations Syndicate (UCLES), which is itself a department of the University of Cambridge.",
+    "options": [
+      {
+        "id": "A",
+        "text": "B"
+      },
+      {
+        "id": "B",
+        "text": "and"
+      },
+      {
+        "id": "C",
+        "text": "NOT TO SCALE"
+      },
+      {
+        "id": "D",
+        "text": ", with more bolts at"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]\\tikzset{dot/.style={circle,fill=black,inner sep=0pt,minimum size=5pt}}\\begin{scope}\\coordinate (A) at (0,0);\\coordinate (B) at (4,0);\\coordinate (C) at (4,2.5);\\draw (A)--(B)--(C)--cycle;\\draw (B)+(-0.35,0)--+(-0.35,0.35)--+(0,0.35);\\node[dot] at (A) {};\\node[dot] at (B) {};\\node[dot] at (C) {};\\node[below left] at (A) {$A$};\\node[below right] at (B) {$B$};\\node[above right] at (C) {$C$};\\node[below] at ($(A)!0.5!(B)$) {$8\\,\\mathrm{cm}$};\\node[right] at ($(B)!0.5!(C)$) {$5\\,\\mathrm{cm}$};\\node[align=center] at (5.4,1.5) {NOT TO\\\\SCALE};\\end{scope}\\begin{scope}[yshift=-5.0cm]\\coordinate (A) at (0,0);\\coordinate (B) at (3,0);\\coordinate (C) at (3,2);\\coordinate (D) at (6,0);\\coordinate (E) at (6,4);\\draw (A)--(D)--(E)--cycle;\\draw (B)--(C);\\draw (B)+(0,0)--+(0.32,0)--+(0.32,0.32)--+(0,0.32);\\draw (D)+(-0.32,0)--+(-0.32,0.32)--+(0,0.32);\\node[dot] at (A) {};\\node[dot] at (B) {};\\node[dot] at (C) {};\\node[dot] at (D) {};\\node[dot] at (E) {};\\node[below left] at (A) {$A$};\\node[below] at (B) {$B$};\\node[left] at (C) {$C$};\\node[below] at (D) {$D$};\\node[above right] at (E) {$E$};\\node[align=center] at (7.1,1.9) {NOT TO\\\\SCALE};\\end{scope}\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_04/H004",
+      "unit_id": "math/grade_06/ch_04/H004",
+      "title": "decide how to read quantities, differences, maximums, and minimums from a pictograph by using its key",
+      "node_labels": [
+        "Visualization & models"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Visualization & models",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Symbol is the label that belongs on this item, so 'decide how to read quantities, differences, maximums, and minimums' is answered as symbol rather than pictograph."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Symbol is what produces pictograph, so the usual direction of this relation is run backwards — on the item about decide how to read quantities, differences, maximums."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "pictograph is settled by running 'decide whether a frequency table preserves enough information for the': A frequency table preserves how many items fall in each category but removes which — on the item about decide how to read quantities, differences, maximums."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "Pictograph is found by dividing the given values instead of multiplying, giving 41 as the reported result — on the item about decide how to read quantities, differences, maximums."
+      }
+    ],
+    "enrichment": "The quantity in a pictograph row equals the number of whole symbols times the key value, plus any partial symbol's matching fraction of the key value.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_04. The student must decide: decide how to read quantities, differences, maximums, and minimums from a pictograph by using its key Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H004"
+  }
+}

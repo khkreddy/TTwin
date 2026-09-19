@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema's game token stands at $-2$ on a number line. She wants to reach $+6$.\n\nOne or more options may be correct. Which two claims correctly give the signed movement she needs?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needed movement is $+8$, because target $-$ start $= 6-(-2)$."
+    },
+    {
+      "id": "B",
+      "text": "The needed movement is $+6$, equal to the target alone."
+    },
+    {
+      "id": "C",
+      "text": "Adding $+8$ to $-2$ reaches $+6$."
+    },
+    {
+      "id": "D",
+      "text": "The needed movement is what produces the start $-2$ after she arrives at $+6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Target minus start is 6-(-2)=+8, and -2+8=+6. Using the target alone swaps the movement for the endpoint. Saying the movement produces the start reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

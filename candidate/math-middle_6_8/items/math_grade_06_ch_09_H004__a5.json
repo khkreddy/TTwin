@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_09/H004",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_09/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_09/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_09:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_09",
+    "chapter_label": "math/grade_06/ch_09",
+    "subtopic_id": "math/grade_06/ch_09/H004",
+    "stem": "The diagram shows Gopal completing a mirror image across a fixed horizontal symmetry line. Point $B$ is $4\\,\\mathrm{cm}$ above the line, at a marked horizontal position.\n\nWhere does the reflected point $B'$ belong?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$B'$ is $4\\,\\mathrm{cm}$ below the line, at the same horizontal position as $B$.",
+      "B": "$B'$ is the name mirror image for the symmetry line itself.",
+      "C": "$B'$ may sit anywhere below the line, at any distance.",
+      "D": "First place $B'$, and that placement is what creates the symmetry line."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,font=\\sffamily\\small]\n  \\draw[thick] (-0.5,0)--(5.5,0);\n  \\node[right] at (5.5,0) {symmetry line};\n  \\fill (2,2) circle (1.6pt) node[above] {$B$};\n  \\draw[dashed] (2,2)--(2,0)--(2,-2);\n  \\fill (2,-2) circle (1.6pt) node[below] {$B'$};\n  \\node[right] at (2.15,1) {$4\\,\\mathrm{cm}$};\n  \\node[right] at (2.15,-1) {$4\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_09/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

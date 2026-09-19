@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (W) at (0,0);\n  \\coordinate (X) at (5.0,0);\n  \\coordinate (Y) at (5.0,3.0);\n  \\coordinate (Z) at (0,3.0);\n  \\coordinate (O) at (2.5,1.5);\n  \\draw[line width=1.05pt] (W)--(X)--(Y)--(Z)--cycle;\n  \\draw[line width=0.9pt] (W)--(Y);\n  \\draw[line width=0.9pt] (X)--(Z);\n  \\fill (O) circle (1.4pt);\n  \\node[below left] at (W) {$W$};\n  \\node[below right] at (X) {$X$};\n  \\node[above right] at (Y) {$Y$};\n  \\node[above left] at (Z) {$Z$};\n  \\node[above right] at (O) {$O$};\n  \\node[below] at (2.5,-0.55) {$WY=XZ$, $WO=OY$, $XO=OZ$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows quadrilateral $WXYZ$ with diagonals $WY$ and $XZ$ meeting at $O$. Chetan measures $WY = XZ$, $WO = OY$, and $XO = OZ$.\n\nWhich claim about $WXYZ$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$WXYZ$ is a rectangle, because its diagonals are equal and bisect each other."
+    },
+    {
+      "id": "B",
+      "text": "$WXYZ$ is a rectangle from $WY = XZ$ alone."
+    },
+    {
+      "id": "C",
+      "text": "The rectangle label for $WXYZ$ is what produces $WY = XZ$ and the bisections at $O$."
+    },
+    {
+      "id": "D",
+      "text": "The same measurements also make any two equal crossing sticks a rectangle."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal diagonals that bisect each other force a rectangle, so WXYZ is a rectangle. Equality alone, reversing the implication, or applying the rule to loose sticks miss both required diagonal conditions.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle into rectangle WXYZ with equal bisecting diagonals through O."
+  }
+}

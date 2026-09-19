@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% charged comb\n\\draw[thick] (0,1.6)--(0.2,1.6)--(0.2,0.2)--(1.6,0.2)--(1.6,0)--(0,0)--cycle;\n\\node[font=\\footnotesize] at (0.8,1.9) {charged plastic comb};\n% paper bits below, not touching\n\\foreach \\x in {0.3,0.75,1.2} {\n  \\draw[thick,fill=yellow!20] (\\x,-0.55) rectangle (\\x+0.25,-0.35);\n}\n\\node[font=\\footnotesize] at (0.9,-0.9) {paper bits};\n\\draw[<->,dashed,thin] (0.8,0.0)--(0.8,-0.35);\n\\node[font=\\footnotesize,right] at (1.0,-0.15) {no touch yet};\n% separate: hand kicking ball\n\\draw[thick] (4.0,0.3) circle (0.45);\n\\node[font=\\footnotesize] at (4.0,0.3) {ball};\n\\draw[thick] (5.2,0.15)--(5.6,0.55)--(5.9,0.2)--(5.5,-0.05)--cycle;\n\\node[font=\\footnotesize] at (5.6,0.85) {foot};\n\\draw[->,thick] (5.2,0.35)--(4.55,0.35);\n\\node[font=\\footnotesize] at (4.9,-0.55) {kick (touching)};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The pull of the charged comb on the paper bits is a non-contact force; the kick on the ball is a contact force."
+    },
+    {
+      "id": "B",
+      "text": "The pull of the charged comb on the paper bits is a contact force; the kick on the ball is a non-contact force."
+    },
+    {
+      "id": "C",
+      "text": "Both the comb's pull and the kick are contact forces because the paper bits and the ball will move."
+    },
+    {
+      "id": "D",
+      "text": "The comb's pull is a non-contact force only after the paper bits have already stuck to the comb."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Krish's charged plastic comb held near dry paper bits. The bits jump toward the comb without the comb touching them first. Separately, Krish's foot kicks a football and the foot touches the ball.\n\nWhich claim correctly classifies these forces?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Electrostatic force acts without contact, so it is non-contact. The kick needs physical contact, so it is a contact force.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Charged comb near paper bits (no touch) and foot kicking a ball (contact)."
+  }
+}

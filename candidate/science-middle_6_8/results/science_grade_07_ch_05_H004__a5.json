@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=gray!15] (0,0) rectangle (2.2,0.35);\n\\node at (1.1,-0.35) {plate};\n\\draw[thick,fill=white!80!yellow] (0.9,0.35) rectangle (1.3,0.7);\n\\node at (1.1,1.55) {camphor};\n\\draw[thick,fill=orange!50] (1.0,0.7) -- (1.1,1.25) -- (1.2,0.7) -- cycle;\n\\node at (1.1,1.9) {flame};\n\\draw[thick] (0.2,0.2) -- (0.2,2.4) -- (2.0,2.4) -- (2.0,0.2);\n\\node at (1.1,2.7) {glass jar};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "At first camphor as fuel, oxygen from the air, and heat above the camphor’s ignition temperature were all present; under the jar the oxygen ran low, so burning stopped."
+    },
+    {
+      "id": "B",
+      "text": "The camphor caught fire as soon as it melted in air."
+    },
+    {
+      "id": "C",
+      "text": "Once lit, the camphor needs only fuel to keep burning; heat above ignition temperature is not needed for continued burning."
+    },
+    {
+      "id": "D",
+      "text": "The covered camphor keeps burning until the camphor runs out; oxygen is needed only to light it."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Vihaan lighting a piece of camphor on a plate. It burns with a steady flame. He then covers the camphor with a glass jar. After some time the flame goes out.\n\nWhich explanation is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Combustion needs fuel, oxygen, and heat above ignition temperature. Covering cuts oxygen so the flame goes out. Melting alone, fuel alone after lighting, or oxygen only at lighting all miss a required condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Camphor on a plate burning under a glass jar."
+  }
+}

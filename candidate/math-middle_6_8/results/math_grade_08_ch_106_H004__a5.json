@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$4c^{2} + c^{2} = 5c^{2}$, so the simplified form is $5c^{2} + 5c$."
+        },
+        {
+          "id": "B",
+          "text": "$4c^{2}$, $5c$, and $c^{2}$ all combine into the single term $5c^{3}$."
+        },
+        {
+          "id": "C",
+          "text": "The simplified form is $9c^{2}$, from adding the coefficients $4$, $5$, and $1$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Eklavya expands and then simplifies $4c^{2} + 5c + c^{2}$.",
+  "options": [],
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only $4c^{2}$ and $c^{2}$ are like terms, so they combine to $5c^{2}$; the unlike term $5c$ stays, giving $5c^{2}+5c$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like terms 4c² and c² combine to 5c²; 5c is unlike, so the result is 5c²+5c. Collapsing to 5c³ or 9c² ignores matching variable parts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

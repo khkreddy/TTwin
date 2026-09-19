@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The fixed amount of water has reached its dissolving limit for copper sulphate under these conditions."
+    },
+    {
+      "id": "B",
+      "text": "The remaining copper sulphate will dissolve if Yash only stirs longer, with no other change."
+    },
+    {
+      "id": "C",
+      "text": "Undissolved copper sulphate at the bottom means the water never dissolved any copper sulphate."
+    },
+    {
+      "id": "D",
+      "text": "A dissolving limit applies only when the water is boiling, not at room temperature."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Yash adds copper sulphate crystals little by little to a fixed amount of water at room temperature, stirring each time. After several additions, some copper sulphate stays undissolved at the bottom no matter how long he stirs.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Undissolved solute after stirring means the fixed amount of solvent has reached its dissolving limit (solubility) under those conditions.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

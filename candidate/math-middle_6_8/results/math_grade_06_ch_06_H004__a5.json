@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bhavna's equilateral triangular garden has each side $8\\,\\mathrm{m}$ long.\n\nOne or more options may be correct. Which two claims correctly give the perimeter of the garden?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Perimeter $= 3 \\times 8 = 24\\,\\mathrm{m}$, because all three sides are equal."
+    },
+    {
+      "id": "B",
+      "text": "Perimeter $= 4 \\times 8 = 32\\,\\mathrm{m}$, treating the garden as a square."
+    },
+    {
+      "id": "C",
+      "text": "Perimeter $= 8 + 8 + 8 = 24\\,\\mathrm{m}$."
+    },
+    {
+      "id": "D",
+      "text": "Perimeter $= 8\\,\\mathrm{m}$, taking the printed side length as the perimeter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An equilateral triangle perimeter is 3×side or side+side+side, both 24 m. Using 4×side swaps in a square. Taking the single printed side captures a surface number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anaya places bean seeds in three trays: Tray 1 has moist soil with air spaces in a closed cupboard. Tray 2 has dry soil in sunlight. Tray 3 has waterlogged soil with almost no air spaces in sunlight.\n\nIn which case should the bean seeds germinate?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Tray 1 only, because bean seeds need water and air; light is not essential."
+    },
+    {
+      "id": "B",
+      "text": "Tray 3, because waterlogged soil in sunlight has the most water."
+    },
+    {
+      "id": "C",
+      "text": "Tray 2, because sunlight alone makes every bean seed germinate."
+    },
+    {
+      "id": "D",
+      "text": "None of the trays, because bean seeds never germinate in the dark."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bean seeds need suitable water and air; light is not required. Waterlogged Tray 3 lacks air. Dry Tray 2 lacks water. Denying germination in the dark confuses the need for light with germination needs.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

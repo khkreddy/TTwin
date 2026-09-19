@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The converted reading is the word kilogram."
+    },
+    {
+      "id": "B",
+      "text": "$650\\,\\mathrm{g} = 650000\\,\\mathrm{kg}$."
+    },
+    {
+      "id": "C",
+      "text": "$650\\,\\mathrm{g} = 0.65\\,\\mathrm{kg}$."
+    },
+    {
+      "id": "D",
+      "text": "$650\\,\\mathrm{g} = 650\\,\\mathrm{kg}$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Lalit weighs a bag of flour as $650$ grams. He needs the same mass in kilograms. There are $1000$ grams in $1$ kilogram.\n\nWhich conversion is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One kilogram is 1000 grams, so each gram is 0.001 kg and 650 g = 0.65 kg. Naming the unit, multiplying by 1000, or copying 650 without the place shift all miss the decimal link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

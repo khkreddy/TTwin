@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_08/ch_05/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_08/ch_05/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_05/H004"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_05:H004:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_05",
+    "chapter_label": "Force",
+    "subtopic_id": "science/grade_08/ch_05/H004",
+    "stem": "The diagram shows Krish's charged plastic comb held near dry paper bits. The bits jump toward the comb without the comb touching them first. Separately, Krish's foot kicks a football and the foot touches the ball.\n\nWhich claim correctly classifies these forces?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The pull of the charged comb on the paper bits is a non-contact force; the kick on the ball is a contact force.",
+      "B": "The pull of the charged comb on the paper bits is a contact force; the kick on the ball is a non-contact force.",
+      "C": "Both the comb's pull and the kick are contact forces because the paper bits and the ball will move.",
+      "D": "The comb's pull is a non-contact force only after the paper bits have already stuck to the comb."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% charged comb\n\\draw[thick] (0,1.6)--(0.2,1.6)--(0.2,0.2)--(1.6,0.2)--(1.6,0)--(0,0)--cycle;\n\\node[font=\\footnotesize] at (0.8,1.9) {charged plastic comb};\n% paper bits below, not touching\n\\foreach \\x in {0.3,0.75,1.2} {\n  \\draw[thick,fill=yellow!20] (\\x,-0.55) rectangle (\\x+0.25,-0.35);\n}\n\\node[font=\\footnotesize] at (0.9,-0.9) {paper bits};\n\\draw[<->,dashed,thin] (0.8,0.0)--(0.8,-0.35);\n\\node[font=\\footnotesize,right] at (1.0,-0.15) {no touch yet};\n% separate: hand kicking ball\n\\draw[thick] (4.0,0.3) circle (0.45);\n\\node[font=\\footnotesize] at (4.0,0.3) {ball};\n\\draw[thick] (5.2,0.15)--(5.6,0.55)--(5.9,0.2)--(5.5,-0.05)--cycle;\n\\node[font=\\footnotesize] at (5.6,0.85) {foot};\n\\draw[->,thick] (5.2,0.35)--(4.55,0.35);\n\\node[font=\\footnotesize] at (4.9,-0.55) {kick (touching)};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_05/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya fills a metal bowl with ice cubes from the freezer on a humid day. Soon, small water droplets form on the outside of the bowl.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Water vapour from the air cools on the cold bowl and turns into liquid droplets by condensation."
+    },
+    {
+      "id": "2",
+      "text": "The outside droplets come from water vapour in the surrounding air, not from ice leaking through the metal."
+    },
+    {
+      "id": "3",
+      "text": "Water vapour turns into those outside droplets by evaporation."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Outside droplets form when air vapour condenses on the cold bowl. They come from surrounding air. Calling that change evaporation is the false statement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

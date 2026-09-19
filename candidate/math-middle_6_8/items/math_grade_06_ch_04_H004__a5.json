@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_06/ch_04/H004",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H004",
+    "stem": "The figure shows Sonia's pictograph of juice cartons sold on three days. The key says each circle stands for $4$ cartons.\n\nHow many more cartons were sold on Tuesday than on Monday?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$12$ cartons, because Tuesday has $3$ more circles than Monday and each circle is $4$ cartons.",
+      "B": "$3$ cartons, equal to the difference in the number of circles.",
+      "C": "$24$ cartons, equal to Tuesday's total alone.",
+      "D": "$6/3$ cartons, from dividing Tuesday's circle count by Monday's."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\node[anchor=west] at (0,2.0) {\\textbf{Juice cartons sold}};\n  \\node[anchor=east] at (1.4,1.2) {Mon};\n  \\foreach \\i in {0,1,2} {\\fill (1.8+0.45*\\i,1.2) circle (0.14);}\n  \\node[anchor=east] at (1.4,0.5) {Tue};\n  \\foreach \\i in {0,1,2,3,4,5} {\\fill (1.8+0.45*\\i,0.5) circle (0.14);}\n  \\node[anchor=east] at (1.4,-0.2) {Wed};\n  \\foreach \\i in {0,1,2,3} {\\fill (1.8+0.45*\\i,-0.2) circle (0.14);}\n  \\node[anchor=west] at (0,-1.1) {Key: each circle $= 4$ cartons};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

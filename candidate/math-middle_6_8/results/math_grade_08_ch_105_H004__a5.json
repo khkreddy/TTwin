@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Damini knows that $5$ divides $15$ and $5$ divides $35$.\n\nWhat follows for $15+35$ and for a split of a multiple of $5$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5$ divides $15+35$ when $5$ divides only one of $15$ or $35$."
+    },
+    {
+      "id": "B",
+      "text": "Because $5$ divides $50$, both addends in every split of $50$ must be multiples of $5$."
+    },
+    {
+      "id": "C",
+      "text": "$5$ divides $15+35=50$; a multiple of $5$ can still split into addends that are not both multiples of $5$."
+    },
+    {
+      "id": "D",
+      "text": "The same closure also applies when different divisors act on $15$ and $35$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "If 5 divides both 15 and 35, then 5 divides 50. The converse fails: 50 can split as 22+28 with neither addend a multiple of 5. Dropping the both-multiples premise, reversing the implication, or mixing divisors miss the direction of the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

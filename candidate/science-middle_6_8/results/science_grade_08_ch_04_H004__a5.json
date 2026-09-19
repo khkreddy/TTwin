@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,>=stealth]\n% cell and switch\n\\draw[thick] (0,2.2) rectangle (1.0,2.75);\n\\node at (0.5,2.475) {cell};\n\\draw[thick] (1.0,2.475)--(1.7,2.475);\n\\draw[thick] (1.7,2.475)--(1.7,2.75)--(2.15,2.75);\n\\draw[thick] (2.45,2.75)--(2.9,2.75)--(2.9,2.475);\n\\node[font=\\footnotesize] at (2.15,3.1) {switch};\n% crane hook / coil on iron core\n\\draw[thick] (2.9,2.475)--(3.6,2.475)--(3.6,1.55);\n\\draw[thick] (0,2.475)--(0,1.55)--(3.6,1.55);\n\\draw[thick,fill=gray!25] (2.9,0.85) rectangle (4.3,1.35);\n\\node[font=\\footnotesize] at (3.6,1.6) {iron core};\n\\foreach \\x in {3.05,3.35,3.65,3.95} {\n  \\draw[thick] (\\x,0.75) arc (240:-60:0.18 and 0.35);\n}\n\\node[font=\\footnotesize] at (3.6,0.45) {coil};\n% iron bolts and wooden bead\n\\draw[thick,fill=gray!40] (3.1,-0.15) rectangle (3.45,0.25);\n\\draw[thick,fill=gray!40] (3.7,-0.15) rectangle (4.05,0.25);\n\\node[font=\\footnotesize] at (3.6,-0.45) {iron bolts};\n\\draw[thick,fill=brown!30] (5.0,-0.05) circle (0.22);\n\\node[font=\\footnotesize] at (5.0,-0.5) {wooden bead};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Switch ON: the electromagnet picks up the iron bolts. Switch OFF: it releases the iron bolts."
+    },
+    {
+      "id": "B",
+      "text": "Switch ON: the electromagnet releases the iron bolts. Switch OFF: it picks up the iron bolts."
+    },
+    {
+      "id": "C",
+      "text": "Switch ON: the electromagnet picks up the iron bolts and the wooden bead."
+    },
+    {
+      "id": "D",
+      "text": "Switch OFF: the electromagnet keeps holding the iron bolts as strongly as when the switch was ON."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ira's lifting electromagnet on a small crane. A coil on an iron core is joined to a cell through a switch. Iron bolts sit under the electromagnet. A wooden bead sits nearby.\n\nWhich prediction is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lifting electromagnet attracts iron only while current is ON and releases iron when current is OFF. Wood is not picked up.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Crane electromagnet with cell, switch, coil on iron core, iron bolts, and wooden bead."
+  }
+}

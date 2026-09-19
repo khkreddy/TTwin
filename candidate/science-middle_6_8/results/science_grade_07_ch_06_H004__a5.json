@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Menstruation is a natural adolescent body process linked with reproductive maturation."
+    },
+    {
+      "id": "B",
+      "text": "Menstruation should not be treated as a reason for fear, shame, guilt, or taboo."
+    },
+    {
+      "id": "C",
+      "text": "Pregnancy starts naturally when girls reach adolescence."
+    },
+    {
+      "id": "D",
+      "text": "Boys and girls both begin menstruating during adolescence."
+    }
+  ],
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Zara hears a school nurse explain menstruation during a Class 7 health talk. She wants a clear, respectful understanding of what it is.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Menstruation is a natural adolescent process linked with reproductive maturation and should not be a source of fear or taboo. It is not pregnancy, and it does not begin in boys.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

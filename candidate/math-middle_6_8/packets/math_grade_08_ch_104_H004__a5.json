@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m20_qp_12:q14",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:40:53.175Z",
+  "source": {
+    "item_ref": "session:0580_m20_qp_12:q14",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.45);\\coordinate (C) at (3.55,0);\\draw[line width=0.7pt] (A)--(B)--(C)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=6pt] at (0,1.225) {$8.5\\,\\mathrm{cm}$};\\node[below=5pt] at (1.775,0) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (5.0,1.5) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_104/H004",
+      "unit_id": "math/grade_08/ch_104/H004",
+      "title": "Can rectangle status and equal-bisecting diagonal status be used interchangeably?",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "rectangle still holds here even though Both diagonal conditions are required for the converse: equal lengths and mutual is missing from the stem — on the item about Can rectangle status and equal-bisecting diagonal."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Diagonal is what produces rectangle, so the usual direction of this relation is run backwards — on the item about Can rectangle status and equal-bisecting diagonal."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The rectangle rule also covers this: {'excluded_case': 'Do not infer a rectangle from equal diagonals alone.', 'reason': 'The chapter requires, so it is not an exception — on the item about Can rectangle status and equal-bisecting diagonal."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "Rectangle is computed by squaring diagonal and leaving rectangle linear, so the written value is 30 — on the item about Can rectangle status and equal-bisecting diagonal."
+      }
+    ],
+    "enrichment": "For rectangles, the diagonals are equal and bisect each other; conversely, a quadrilateral whose diagonals are equal and bisect each other is a rectangle.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_104. The student must decide: Can rectangle status and equal-bisecting diagonal status be used interchangeably? Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_104/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_104/H004"
+  }
+}

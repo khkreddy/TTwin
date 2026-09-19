@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ishaan's digital clinical thermometer with its tip and display labelled. He will measure his sister's body temperature.\n\nWhich set of steps is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Wash the tip, reset, place the tip correctly, wait for the beep, then read the display."
+    },
+    {
+      "id": "B",
+      "text": "Wash the tip, reset, place the display under the tongue, then read after the beep."
+    },
+    {
+      "id": "C",
+      "text": "Skip washing the tip, place the tip correctly, and read as soon as any number appears."
+    },
+    {
+      "id": "D",
+      "text": "Wash the whole thermometer including the digital portion, then place the tip correctly."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% thermometer body\n\\draw[thick,fill=gray!15] (0.0,1.0) rectangle (4.2,2.0);\n% display window\n\\draw[thick,fill=white] (0.25,1.2) rectangle (1.8,1.8);\n\\node at (1.02,1.5) {36.8};\n\\node at (1.02,2.35) {display};\n\\draw[thick,->] (1.02,2.2) -- (1.02,1.85);\n% stem to tip\n\\draw[thick,fill=gray!25] (4.2,1.35) rectangle (5.4,1.65);\n\\draw[thick,fill=gray!40] (5.4,1.5) circle (0.22);\n\\node at (5.4,2.35) {tip};\n\\draw[thick,->] (5.4,2.2) -- (5.4,1.75);\n\\node at (2.5,0.55) {digital clinical thermometer};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Correct use washes the tip, resets, places the tip for body temperature, waits for the beep, then reads. Placing the display, skipping wash/wait, or washing the digital portion are wrong steps.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote IGCSE force-block tikz into a labelled digital clinical thermometer."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The finished product is the whole number $60$."
+    },
+    {
+      "id": "B",
+      "text": "Multiply $15 \\times 4 = 60$, then place the decimal so the product has $2$ decimal places: $0.60$."
+    },
+    {
+      "id": "C",
+      "text": "$1.5 \\times 0.4 = 0.6$."
+    },
+    {
+      "id": "D",
+      "text": "The $2$ decimal places in the product are what create the factors $1.5$ and $0.4$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item_type": "one_or_more",
+  "stem": "Urvashi multiplies $1.5 \\times 0.4$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Strip decimals: 15×4=60. Factors have 1+1=2 decimal places, so the product is 0.60, which equals 0.6. Leaving 60 as the product or reversing product places into the factors both miss the place-count step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

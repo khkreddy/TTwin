@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Yamini must solve $5x + 9 = 29$ by isolating $x$. The two sides are already equal.\n\nWhich first move preserves equality and removes the unwanted $+9$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The first move is the label \"inverse operations\"."
+    },
+    {
+      "id": "B",
+      "text": "Subtract $9$ from the left side only, writing $5x = 29$."
+    },
+    {
+      "id": "C",
+      "text": "Subtract $9$ from both sides, writing $5x = 20$."
+    },
+    {
+      "id": "D",
+      "text": "Take $x = 29$, because $29$ is the largest printed number."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equality is preserved only when the same inverse move hits both sides: subtract 9 from both to get 5x=20. Naming the phrase, changing one side only, or grabbing 29 miss that move.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

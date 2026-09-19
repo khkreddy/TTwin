@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The simplified value is the phrase like terms."
+    },
+    {
+      "id": "B",
+      "text": "$5y + 3$ are like terms, so the expression becomes $8y - 8$."
+    },
+    {
+      "id": "C",
+      "text": "$5y$ and $2y$ are like terms and $3$ and $-8$ are like terms, so the expression becomes $7y - 5$."
+    },
+    {
+      "id": "D",
+      "text": "The simplified form is $5$, because $5$ is printed first."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Madhav simplifies $5y + 3 + 2y - 8$.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like terms share the same letter part: 5y+2y=7y and 3+(-8)=-5, so the expression is 7y-5. Naming like terms as the answer, combining unlike 5y with 3, or grabbing the leading 5 all miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

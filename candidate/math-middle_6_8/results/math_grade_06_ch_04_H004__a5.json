@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Sonia's pictograph of juice cartons sold on three days. The key says each circle stands for $4$ cartons.\n\nHow many more cartons were sold on Tuesday than on Monday?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$12$ cartons, because Tuesday has $3$ more circles than Monday and each circle is $4$ cartons."
+    },
+    {
+      "id": "B",
+      "text": "$3$ cartons, equal to the difference in the number of circles."
+    },
+    {
+      "id": "C",
+      "text": "$24$ cartons, equal to Tuesday's total alone."
+    },
+    {
+      "id": "D",
+      "text": "$6/3$ cartons, from dividing Tuesday's circle count by Monday's."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\node[anchor=west] at (0,2.0) {\\textbf{Juice cartons sold}};\n  \\node[anchor=east] at (1.4,1.2) {Mon};\n  \\foreach \\i in {0,1,2} {\\fill (1.8+0.45*\\i,1.2) circle (0.14);}\n  \\node[anchor=east] at (1.4,0.5) {Tue};\n  \\foreach \\i in {0,1,2,3,4,5} {\\fill (1.8+0.45*\\i,0.5) circle (0.14);}\n  \\node[anchor=east] at (1.4,-0.2) {Wed};\n  \\foreach \\i in {0,1,2,3} {\\fill (1.8+0.45*\\i,-0.2) circle (0.14);}\n  \\node[anchor=west] at (0,-1.1) {Key: each circle $= 4$ cartons};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tuesday has 6 circles and Monday has 3; difference 3 circles times key 4 is 12 cartons. Using raw circle counts swaps the key. Taking Tuesday alone reverses the difference. Dividing circle counts uses the wrong operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source triangle as a three-row pictograph of juice cartons."
+  }
+}

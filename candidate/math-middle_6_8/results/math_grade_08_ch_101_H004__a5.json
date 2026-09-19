@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Zubin lists $38$, $49$, and $70$ and wants to rule out impossible perfect squares using last-digit patterns. Perfect squares end only in $0$, $1$, $4$, $5$, $6$, or $9$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$38$ is a perfect-square label."
+    },
+    {
+      "id": "B",
+      "text": "$38$ cannot be a perfect square, because a perfect square cannot end in $8$."
+    },
+    {
+      "id": "C",
+      "text": "$49$ cannot be ruled out by last digit alone, because $9$ is an allowed ending."
+    },
+    {
+      "id": "D",
+      "text": "Reject $70$ only because the printed tens digit $7$ looks odd."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Last digit 8 forbids 38 as a square. Last digit 9 does not rule out 49. Labelling without the digit test, or rejecting 70 for its tens digit, miss the last-digit rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

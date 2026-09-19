@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H004",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H004",
+    "stem": "Rachna studies the diagram of triangles $DEF$ and $LMN$. Each angle of $DEF$ equals the matching angle of $LMN$, but the sides of $LMN$ are longer.\n\nWhich claim correctly decides whether the triangles are congruent?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The triangles are not congruent: equal angles give the same shape, but different sizes mean they need not be congruent.",
+      "B": "The triangles are congruent because they have the same shape.",
+      "C": "The triangles are congruent from the equal angles alone.",
+      "D": "The triangles are congruent because the printed angle marks match."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (2.2,0);\n  \\coordinate (F) at (0.7,1.5);\n  \\draw[line width=1.0pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D) {$D$};\n  \\node[below right] at (E) {$E$};\n  \\node[above] at (F) {$F$};\n  \\draw[line width=0.6pt] (0.28,0) arc (0:65:0.28);\n  \\draw[line width=0.6pt] (1.92,0) arc (180:120:0.28);\n  \\coordinate (L) at (4.0,0);\n  \\coordinate (M) at (7.4,0);\n  \\coordinate (N) at (5.1,2.35);\n  \\draw[line width=1.0pt] (L)--(M)--(N)--cycle;\n  \\node[below left] at (L) {$L$};\n  \\node[below right] at (M) {$M$};\n  \\node[above] at (N) {$N$};\n  \\draw[line width=0.6pt] (4.35,0) arc (0:65:0.35);\n  \\draw[line width=0.6pt] (6.95,0) arc (180:120:0.35);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

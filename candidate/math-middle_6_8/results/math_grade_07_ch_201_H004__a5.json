@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (2.2,0);\n  \\coordinate (F) at (0.7,1.5);\n  \\draw[line width=1.0pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D) {$D$};\n  \\node[below right] at (E) {$E$};\n  \\node[above] at (F) {$F$};\n  \\draw[line width=0.6pt] (0.28,0) arc (0:65:0.28);\n  \\draw[line width=0.6pt] (1.92,0) arc (180:120:0.28);\n  \\coordinate (L) at (4.0,0);\n  \\coordinate (M) at (7.4,0);\n  \\coordinate (N) at (5.1,2.35);\n  \\draw[line width=1.0pt] (L)--(M)--(N)--cycle;\n  \\node[below left] at (L) {$L$};\n  \\node[below right] at (M) {$M$};\n  \\node[above] at (N) {$N$};\n  \\draw[line width=0.6pt] (4.35,0) arc (0:65:0.35);\n  \\draw[line width=0.6pt] (6.95,0) arc (180:120:0.35);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are not congruent: equal angles give the same shape, but different sizes mean they need not be congruent."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent because they have the same shape."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent from the equal angles alone."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent because the printed angle marks match."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Rachna studies the diagram of triangles $DEF$ and $LMN$. Each angle of $DEF$ equals the matching angle of $LMN$, but the sides of $LMN$ are longer.\n\nWhich claim correctly decides whether the triangles are congruent?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal corresponding angles make the triangles the same shape (similar) but not necessarily the same size, so they need not be congruent. Treating same shape as congruence, relying on angles alone, or grabbing the marks all miss that distinction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as two similar triangles DEF and LMN of different sizes with matching angle marks."
+  }
+}

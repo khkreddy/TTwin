@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about this arrangement is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The lamp glows, because both cell terminals are joined to the lamp."
+        },
+        {
+          "id": "B",
+          "text": "The lamp glows with only Wire 1 from the positive terminal to the lamp."
+        },
+        {
+          "id": "C",
+          "text": "The lamp does not glow, even though both cell terminals are joined to the lamp."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Kabir connects a small lamp to one cell with copper wires. Wire 1 joins one end of the lamp to the positive terminal. Wire 2 joins the other end of the lamp to the negative terminal.\n\nAnswer both parts.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A complete path needs both cell terminals joined to the lamp so current can flow through it."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The lamp glows when both terminals of the cell are connected to the lamp, forming a complete circuit. One wire alone or denying glow when both are joined miss that condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

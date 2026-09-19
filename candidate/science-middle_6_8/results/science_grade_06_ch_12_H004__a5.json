@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pihu compares the Sun with other stars on a clear evening chart. The Sun looks large and bright by day. Other stars look like tiny points at night and are not seen in the daytime sky.\n\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Sun is the star closest to Earth, so it appears much larger and brighter than farther stars."
+    },
+    {
+      "id": "B",
+      "text": "Every star equally powerful looks equally bright from Earth at any distance."
+    },
+    {
+      "id": "C",
+      "text": "An identical star farther from Earth appears larger and brighter than a nearer one."
+    },
+    {
+      "id": "D",
+      "text": "The Sun appears as a tiny point from Earth, just like every other star."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Sun is the nearest star, so it looks large and bright. Distance matters for brightness and size on the sky; reversing nearer/farther or treating the Sun as a tiny point are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

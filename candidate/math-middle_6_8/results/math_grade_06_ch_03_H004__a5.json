@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Imran's number line from $4000$ to $6000$. The interval is divided into four equal parts with marks at equal spacing.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly reads the second mark after $4000$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The second mark after $4000$ shows $5000$, because each equal part is $500$."
+        },
+        {
+          "id": "B",
+          "text": "The second mark after $4000$ shows $4002$, treating each mark as one unit."
+        },
+        {
+          "id": "C",
+          "text": "Reading $5000$ on the mark is what creates the equal spacing on the number line."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,font=\\sffamily\\small]\n  \\draw[thick,<->] (-0.5,0)--(8.5,0);\n  \\foreach \\x/\\lab in {0/4000,2/4500,4/5000,6/5500,8/6000} {\n    \\draw (\\x,0.2)--(\\x,-0.2);\n    \\node[below] at (\\x,-0.25) {$\\lab$};\n  }\n  \\node[above] at (0,0.25) {};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The $2000$-unit span splits into four equal parts of $500$, so two steps past $4000$ land on $5000$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal parts of a 2000 span are 500 each; two steps give 5000. Counting marks as +1 swaps the step size. Saying the reading creates the spacing reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source triangle diagram as a 4000–6000 number line with four equal parts."
+  }
+}

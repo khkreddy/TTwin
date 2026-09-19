@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Change only the hours of sunlight; keep the water volume and pot size the same in both trays."
+    },
+    {
+      "id": "B",
+      "text": "Keep the hours of sunlight the same; change the water volume and the pot size together."
+    },
+    {
+      "id": "C",
+      "text": "Change the hours of sunlight and the water volume together; keep only the pot size the same."
+    },
+    {
+      "id": "D",
+      "text": "A fair sunlight test must use the same hours of sunlight, the same water volume, and the same pot size in both trays."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Aditya wants to find out whether hours of sunlight affect how tall mustard seedlings grow.\n\nHe can change hours of sunlight, water volume, and pot size.\n\nWhich plan is a fair test of sunlight?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fair test of sunlight changes only hours of sunlight and keeps water volume and pot size the same.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
