@@ -9,7 +9,7 @@ Agent law and contract for TTwin Test-maker Modify (slot T-MOD). This package re
 3. `harness/modify/schema/modify_packet.v1.json` and `harness/modify/schema/modify_result.v1.json` — the contracts. Build to the first; validate against the second.
 4. `harness/modify/MODIFY_TASK.md` — the implementer task. Read if you are changing code.
 5. `harness/modify/JOURNAL_G68_GROK.md` — **required** if you author Science 6–8 CANDIDATEs with `ingest`. Good/bad examples from owner review. Do not repeat those faults.
-6. `harness/modify/EXAMPLES_G68.md` — short good/bad library (Force C is a good distractor; H001 a3/a4 are bad encodings).
+6. `harness/modify/EXAMPLES_G68.md` — executions, not categories. Force C is a good distractor. Two-tier MCQ is a good format; only a sloppy paste of A/B/C into part text is a bad item.
 
 Governing law outside this package: `00_PRECEDENCE.md`, `10_KERNEL.md`, `11_FREEZE.md`, `15_SLOTS.md`, `40_PACKETS.md`, `80_ISOGEN.md`, `82_LBS_COMPILER.md`, `isogen/ISO_GENERATION_PROTOCOL.md`. This package points; it does not restate them.
 
