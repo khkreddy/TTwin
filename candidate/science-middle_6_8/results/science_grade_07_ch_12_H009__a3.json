@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin watches the full Moon slowly darken during a lunar eclipse.\n\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon comes between the Sun and Earth, so the Moon's shadow falls on Earth."
+    },
+    {
+      "id": "B",
+      "text": "Earth comes between the Sun and the Moon, so Earth's shadow falls on the Moon."
+    },
+    {
+      "id": "C",
+      "text": "The Moon stops giving out its own light for a while."
+    },
+    {
+      "id": "D",
+      "text": "Clouds cover the Moon and make it look dark."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "mechanism_conflation",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar eclipse is Earth between Sun and Moon with Earth's shadow on the Moon. Moon between Sun and Earth is a solar eclipse. The Moon does not emit its own light. Clouds are a different kind of darkening.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

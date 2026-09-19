@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Diya compares how a cow and a bird break down food. A cow may bring partially digested grass back to its mouth and chew cud again. A bird has no teeth; its gizzard has muscular walls that contract and relax, often with grit. Human chewing is different from these adaptations.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A cow chewing freshly bitten grass for the first time is chewing cud."
+    },
+    {
+      "id": "B",
+      "text": "Cud chewing in the cow and grinding in the bird's gizzard are adaptations that are not the same process as human chewing."
+    },
+    {
+      "id": "C",
+      "text": "The bird also brings swallowed grass back to its mouth and chews cud."
+    },
+    {
+      "id": "D",
+      "text": "A bird's gizzard contains teeth that chew its food."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cud chewing and the bird gizzard are digestive adaptations, not the same as human chewing. First chewing is not cud; birds do not chew cud; the gizzard grinds with muscular walls and grit, not teeth.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Packet CWO names horses; stem keeps cow and bird only, so cud is wrongly scoped onto the bird."
+      }
+    ]
+  }
+}

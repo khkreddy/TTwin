@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit sits behind a wall and uses a Z-shaped periscope with two plane mirrors to see the stage. He wonders whether reflection or refraction carries the light.\n\nHow does he see the stage?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Light from the stage reflects from the first mirror and then from the second mirror to his eye."
+    },
+    {
+      "id": "B",
+      "text": "Light from the stage is refracted by both mirrors to his eye."
+    },
+    {
+      "id": "C",
+      "text": "One plane mirror is enough for this Z-shaped periscope."
+    },
+    {
+      "id": "D",
+      "text": "His eye sends light through the two mirrors to the stage."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A Z-periscope needs two reflections so light from the stage reaches the eye. Refraction swaps the wrong process. One mirror omits the second reflection. Eye-to-stage reverses the light path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

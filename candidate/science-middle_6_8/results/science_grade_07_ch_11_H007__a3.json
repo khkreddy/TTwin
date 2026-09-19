@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit stands in front of a plane mirror and looks at his image. He asks whether the image can be obtained on a screen.\n\nWhich set of properties is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The image is upright, the same size as Lalit, appears behind the mirror and cannot be obtained on a screen."
+    },
+    {
+      "id": "B",
+      "text": "The image is upright, smaller than Lalit, appears behind the mirror and cannot be obtained on a screen."
+    },
+    {
+      "id": "C",
+      "text": "The image is upright, the same size as Lalit, appears behind the mirror and can be obtained on a screen."
+    },
+    {
+      "id": "D",
+      "text": "Every mirror forms an upright image the same size as the object."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "UNRESOLVED",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane-mirror image is upright, same size, virtual (behind the mirror, not on a screen). Calling it smaller is a surface size error. Claiming it can be caught on a screen treats it as real. Extending the claim to every mirror over-scopes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

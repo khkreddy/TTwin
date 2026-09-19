@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona lives far north of the Equator. Nitin lives near the Equator. Both note daytime length on 21 June.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mona records her longest day of the year, while Nitin's day stays close to 12 hours."
+    },
+    {
+      "id": "B",
+      "text": "Mona and Nitin both record about 12 hours, because day length is the same everywhere on that day."
+    },
+    {
+      "id": "C",
+      "text": "Nitin records his longest day of the year, while Mona's day stays close to 12 hours."
+    },
+    {
+      "id": "D",
+      "text": "Mona records her shortest day of the year, because June is winter in the Northern Hemisphere."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Around 21 June the Northern Hemisphere has its longest day; near the Equator day length stays near 12 hours. Day length is not the same everywhere. Swapping who has the long day reverses the pattern. June is not Northern winter.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

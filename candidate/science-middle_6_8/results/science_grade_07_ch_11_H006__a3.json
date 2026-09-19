@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya shines a torch at a glass mirror, a polished steel plate and a rough brick wall.\n\nWhich claim about reflection is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The glass mirror and the polished steel plate change the direction of the light by reflection."
+    },
+    {
+      "id": "B",
+      "text": "Only the glass mirror can reflect light; the polished steel plate cannot."
+    },
+    {
+      "id": "C",
+      "text": "The torch beam changes direction toward the wall even when it passes beside the mirror."
+    },
+    {
+      "id": "D",
+      "text": "No reflection occurs at the glass mirror unless the rough brick wall also looks bright."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shiny surfaces such as a glass mirror and polished steel change light direction by reflection. Limiting reflection to glass only is too narrow. Passing beside the mirror omits the hit condition. Tying mirror reflection to the brick wall looking bright is a surface cue.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

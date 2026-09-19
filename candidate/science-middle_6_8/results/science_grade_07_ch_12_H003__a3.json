@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar watches the night sky for three hours. The Pole Star stays nearly fixed, while other stars seem to move around it.\n\nWhy does the Pole Star appear nearly stationary?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's rotation axis points very close to the Pole Star."
+    },
+    {
+      "id": "B",
+      "text": "Other stars actually orbit the Pole Star."
+    },
+    {
+      "id": "C",
+      "text": "Stars circling the Pole Star make Earth rotate."
+    },
+    {
+      "id": "D",
+      "text": "The Pole Star is the nearly fixed centre of star trails in both hemispheres."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Pole Star looks nearly fixed because Earth's rotation axis points close to it. Other stars do not really orbit it. Star trails do not cause Earth's rotation. The nearly fixed centre is a northern-sky pattern, not both hemispheres.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

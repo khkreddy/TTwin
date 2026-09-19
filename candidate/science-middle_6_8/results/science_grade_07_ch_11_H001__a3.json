@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya compares a burning candle, the Moon, a glowing lamp and a steel plate that reflects the candle.\n\nWhich claim about luminous objects is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The burning candle is luminous because it emits its own light."
+    },
+    {
+      "id": "B",
+      "text": "The Moon is luminous because it looks bright."
+    },
+    {
+      "id": "C",
+      "text": "The glowing lamp is non-luminous."
+    },
+    {
+      "id": "D",
+      "text": "The steel plate is luminous because it looks bright in the candlelight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A luminous object emits its own light; the candle does. The Moon looks bright but reflects light. Calling a glowing lamp non-luminous mis-scopes the idea. The steel plate only reflects.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

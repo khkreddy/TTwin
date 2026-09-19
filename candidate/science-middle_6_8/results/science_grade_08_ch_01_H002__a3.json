@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona fries puris. Some puff well; others do not. She wants to investigate what makes a puri puff up.\n\nA factor is something that can be changed and may change the result.\n\nWhich of these are possible factors she could change?\n\n1  The thickness of the rolled dough.\n2  How much the puri puffs up in the hot oil.\n3  The temperature of the oil.\n4  The golden-brown colour of the fried puri.",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3"
+    },
+    {
+      "id": "C",
+      "text": "2 and 4"
+    },
+    {
+      "id": "D",
+      "text": "3 and 4"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dough thickness and oil temperature can be changed and may change puffing. How much it puffs and its colour are results, not factors. A mixes a factor with a result. C takes only results. D mixes a factor with a result.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

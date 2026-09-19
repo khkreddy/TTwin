@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Bina traces food after it leaves the stomach and enters the small intestine. The small intestine receives digestive secretions, including basic pancreatic juice from the pancreas. The liver also sends a secretion. Carbohydrates, proteins and fats are major food components. Digested nutrients can enter blood vessels in the small-intestine wall.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The small intestine receives digestive secretions, uses basic pancreatic juice to help neutralise acidic food, digests major food components, and absorbs digested nutrients into blood."
+    },
+    {
+      "id": "B",
+      "text": "The liver secretes pancreatic juice into the small intestine."
+    },
+    {
+      "id": "C",
+      "text": "Undigested carbohydrates, proteins and fats pass directly through the small-intestine wall into blood."
+    },
+    {
+      "id": "D",
+      "text": "During absorption, digested nutrients move from blood vessels into the small intestine."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The small intestine receives secretions, neutralises acid with basic pancreatic juice, digests major components, and absorbs digested nutrients into blood. Pancreatic juice comes from the pancreas; undigested material is not absorbed; absorption is into blood, not out of it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

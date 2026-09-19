@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Bina bubbles exhaled air through lime water in one tube. Fresh inhaled air is passed through lime water in a second tube. Only the exhaled-air tube turns milky. Carbon dioxide and oxygen are both gases in air.\n\nWhat should Bina conclude?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Exhaled air contains more carbon dioxide than inhaled air, but it still contains some oxygen."
+    },
+    {
+      "id": "B",
+      "text": "Lime water turning milky shows that oxygen is present."
+    },
+    {
+      "id": "C",
+      "text": "Inhaled air contains more carbon dioxide than exhaled air."
+    },
+    {
+      "id": "D",
+      "text": "Exhaled air contains 0% oxygen."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Milkiness shows more carbon dioxide in exhaled air than in inhaled air; exhaled air still contains some oxygen. Milkiness is not an oxygen test; the CO2 ranking is not reversed; oxygen is not zero.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

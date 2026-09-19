@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_09/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_09/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_09/H008",
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Packet CWO names horses; stem keeps cow and bird only, so cud is wrongly scoped onto the bird."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_09:H008:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_07/ch_09",
+    "chapter_label": "Nutrition in animals",
+    "subtopic_id": "science/grade_07/ch_09/H008",
+    "stem": "Diya compares how a cow and a bird break down food. A cow may bring partially digested grass back to its mouth and chew cud again. A bird has no teeth; its gizzard has muscular walls that contract and relax, often with grit. Human chewing is different from these adaptations.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A cow chewing freshly bitten grass for the first time is chewing cud.",
+      "B": "Cud chewing in the cow and grinding in the bird's gizzard are adaptations that are not the same process as human chewing.",
+      "C": "The bird also brings swallowed grass back to its mouth and chews cud.",
+      "D": "A bird's gizzard contains teeth that chew its food."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_09/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

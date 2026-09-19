@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Anil uses a breathing model: two balloons represent the lungs, and a rubber sheet at the bottom represents the diaphragm. He pulls the rubber sheet down. In the same kind of breath, the ribs move up and outwards. Air can be drawn in or forced out. Not all breathing animals use ribs and a diaphragm in this way.\n\nWhat happens next in this breath?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The rubber sheet represents the lungs, so pulling it down empties the balloons."
+    },
+    {
+      "id": "B",
+      "text": "Air is drawn into the lungs."
+    },
+    {
+      "id": "C",
+      "text": "All breathing animals inhale by moving their ribs up and out and their diaphragm down in this same way."
+    },
+    {
+      "id": "D",
+      "text": "Air is forced out of the lungs."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pulling the diaphragm down and raising the ribs increases chest space, so air is drawn in. The rubber sheet is the diaphragm, not the lungs; this human pattern is not claimed for all animals; forcing air out is exhalation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

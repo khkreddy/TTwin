@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin notices it is daytime where he is, while it is night in another place on Earth at the same time.\n\nWhat causes day and night?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's rotation moves each place into and out of the side facing the Sun."
+    },
+    {
+      "id": "B",
+      "text": "Earth orbits the Sun once each year."
+    },
+    {
+      "id": "C",
+      "text": "It is daytime everywhere on Earth at the same time."
+    },
+    {
+      "id": "D",
+      "text": "The Moon blocks the Sun each evening."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "condition_omission",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Day and night happen because rotation turns each place toward and away from the Sun. Yearly orbit is a different mechanism. Daytime is not the same everywhere at once.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

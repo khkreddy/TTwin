@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_10/H013",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_10/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_10/H013",
+    "mx_swap": [
+      {
+        "from": "relationship_reversal",
+        "reason": "Cannot state 'later = faster' as a fair-test plan without breaking the parallel plan frame; used surface_feature_capture instead."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_10:H013:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_07/ch_10",
+    "chapter_label": "Respiration and transport in plants",
+    "subtopic_id": "science/grade_07/ch_10/H013",
+    "stem": "Javed wants to test whether warm or cold conditions change how fast water moves up a plant stem. He has two similar cut twigs, some with flowers and some without, and two glasses of red-coloured water.\n\nWhich plan is a fair test?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Put one twig in a warm place and the other in a cold place, keeping twig size, water amount and light the same.",
+      "B": "Put a short twig in the warm place and a long twig in the cold place, then see which turns red first.",
+      "C": "Use only a twig without flowers, because a twig with flowers cannot show water transport.",
+      "D": "Choose the twig whose leaves look darkest red, even if those leaves turned red later."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_10/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

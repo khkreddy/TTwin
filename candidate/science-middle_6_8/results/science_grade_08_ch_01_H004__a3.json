@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parul wants to find out whether the temperature of water affects how quickly sugar dissolves.\n\nShe plans two trials.\n\nWhich row shows a fair test?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C; Trial 2: 40 g sugar, 100 cm³ water at 60 °C"
+    },
+    {
+      "id": "B",
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C; Trial 2: 60 g sugar, 100 cm³ water at 60 °C"
+    },
+    {
+      "id": "C",
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 60 °C; Trial 2: 40 g sugar, 150 cm³ water at 60 °C"
+    },
+    {
+      "id": "D",
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C, stirred; Trial 2: 40 g sugar, 100 cm³ water at 60 °C, not stirred"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fair temperature test changes only water temperature and keeps sugar mass, water volume, and stirring the same. B also changes sugar mass. C changes volume at fixed temperature. D also changes stirring.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

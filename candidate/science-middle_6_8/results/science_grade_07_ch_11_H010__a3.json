@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya points the tiny hole of a pinhole camera at a lamp and looks at the tracing-paper screen at the back.\n\nWhat appears on the screen?",
+  "options": [
+    {
+      "id": "A",
+      "text": "an upside-down image of the lamp, reversed left to right"
+    },
+    {
+      "id": "B",
+      "text": "an upright image of the lamp, reversed left to right"
+    },
+    {
+      "id": "C",
+      "text": "a bright patch with the same shape as the hole"
+    },
+    {
+      "id": "D",
+      "text": "an upside-down image of the lamp even when the pinhole faces away from the lamp"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rays through a pinhole cross, so the screen image is upside down and left-right reversed. Upright-but-reversed conflates mechanisms. Matching the hole shape captures a surface feature. Facing away omits the need for light from the lamp.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

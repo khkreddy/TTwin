@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Diya swallows a soft bite of food. The food enters her food pipe (oesophagus) on its way to the stomach. Nearby is the windpipe. The walls of the food pipe can contract and relax in waves. Body position may be upright or upside down.\n\nWhat moves the food down the food pipe?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The windpipe contracts and relaxes in waves to push the food into the stomach."
+    },
+    {
+      "id": "B",
+      "text": "The walls of the food pipe contract and relax in a wave-like motion that pushes the food forward."
+    },
+    {
+      "id": "C",
+      "text": "Food sliding down the food pipe makes its walls contract and relax in waves."
+    },
+    {
+      "id": "D",
+      "text": "If Diya were upside down, the swallowed food could not reach the stomach."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wave-like contraction and relaxation of the food-pipe walls push food forward. The windpipe is the wrong tube; the waves cause movement rather than result from sliding; orientation does not stop the wall waves.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

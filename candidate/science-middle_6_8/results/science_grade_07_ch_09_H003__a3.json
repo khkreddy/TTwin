@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Chetan studies how teeth, saliva and the tongue prepare food in the mouth before it enters the food pipe. Saliva can begin starch digestion. Softened food must be ready for swallowing.\n\nWhat do the teeth, saliva and tongue do together?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The tongue chews the food into smaller pieces, and the teeth mix it with saliva."
+    },
+    {
+      "id": "B",
+      "text": "Chewing alone prepares the food for swallowing; saliva and the tongue are not needed."
+    },
+    {
+      "id": "C",
+      "text": "They crush and moisten the food, mix it with saliva, and push the softened food so it can be swallowed."
+    },
+    {
+      "id": "D",
+      "text": "Saliva starts digesting every part of the food in the mouth, not just starch."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Teeth crush, saliva moistens and begins starch digestion, and the tongue mixes and pushes food for swallowing. Roles are not swapped; chewing alone is incomplete; saliva does not digest every food part.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

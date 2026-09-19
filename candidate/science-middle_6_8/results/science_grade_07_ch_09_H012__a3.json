@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Diya compares breathing and respiration. Breathing moves air into and out of the body as a physical process. Respiration is a chemical process inside the body that uses oxygen with a food substance such as sugar to help release energy. A new substance may form even if we cannot see it.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Oxygen alone releases energy in respiration; no food substance is needed."
+    },
+    {
+      "id": "B",
+      "text": "Breathing is a physical process of taking in and giving out air, while respiration is a chemical process that helps release energy inside the body."
+    },
+    {
+      "id": "C",
+      "text": "Respiration produces oxygen, which breathing carries out of the body."
+    },
+    {
+      "id": "D",
+      "text": "Respiration is a physical process because we cannot see a new substance forming."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Breathing is physical air movement; respiration is a chemical process that releases energy using oxygen with food such as sugar. Oxygen alone is not enough; respiration does not produce oxygen; invisibility does not make it physical.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Anil lists four jobs in the stomach: churning food, breaking proteins into simpler components, killing many harmful bacteria, and protecting the stomach lining from acid during ordinary digestion. The agents he may match are wall movements, digestive juice, acid and mucus.\n\nWhich matching is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Churning — wall movements; protein breakdown — mucus; killing bacteria — acid; protecting the lining — digestive juice."
+    },
+    {
+      "id": "B",
+      "text": "Churning — wall movements; protein breakdown — digestive juice; killing bacteria — acid; protecting the lining — mucus."
+    },
+    {
+      "id": "C",
+      "text": "Churning — wall movements; protein breakdown — digestive juice; killing bacteria — acid; stomach lining — damaged by acid during ordinary digestion."
+    },
+    {
+      "id": "D",
+      "text": "Churning — wall movements that break proteins into simpler components; killing bacteria — acid; protecting the lining — mucus; digestive juice unused."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wall movements churn; digestive juice breaks proteins; acid kills many harmful bacteria; mucus protects the lining. Mucus does not digest protein; ordinary digestion does not leave the lining unprotected; churning is not chemical protein breakdown.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

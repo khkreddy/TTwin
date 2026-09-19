@@ -1,0 +1,57 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed faces a plane mirror and raises his right hand.\n\nHow does the raised hand appear in the mirror?",
+  "options": [
+    {
+      "id": "A",
+      "text": "as the left hand, raised on the opposite side"
+    },
+    {
+      "id": "B",
+      "text": "as the right hand, with no change of side"
+    },
+    {
+      "id": "C",
+      "text": "pointing downward"
+    },
+    {
+      "id": "D",
+      "text": "it does not appear in the mirror"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane mirror laterally inverts left and right, so a raised right hand appears as a raised left hand. No side change omits inversion. Downward substitutes vertical flip for lateral inversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Photograph/right-arm CWO invents a photograph not in the stem; kept term_substitution and condition_omission on the hand-raise hinge."
+      }
+    ]
+  }
+}

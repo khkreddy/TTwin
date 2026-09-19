@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Bina chews plain boiled rice for about one minute and compares it with unchewed boiled rice using iodine. She also has egg white as a protein food that is not starch. Iodine can give a blue-black colour with starch, and chewed rice may taste sweet when sugar forms.\n\nWhich observation best supports that saliva breaks starch into sugar?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Unchewed boiled rice also gives little or no blue-black colour with iodine."
+    },
+    {
+      "id": "B",
+      "text": "The chewed boiled rice shows little or no blue-black colour with iodine."
+    },
+    {
+      "id": "C",
+      "text": "Saliva changes sugar into starch, so iodine turns darker after chewing."
+    },
+    {
+      "id": "D",
+      "text": "Saliva changes the protein in egg white into sugar."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Weaker iodine colour after chewing shows some starch has changed into sugar. The unchewed control should still stain; saliva does not make starch from sugar or turn egg-white protein into sugar.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

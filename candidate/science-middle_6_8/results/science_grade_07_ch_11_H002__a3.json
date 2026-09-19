@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit wants to see a candle flame through three holes punched in three cardboard sheets.\n\nIn which case can he see the flame?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The three holes are in a straight line with Lalit's eye."
+    },
+    {
+      "id": "B",
+      "text": "The three holes are in a straight line, but the middle hole is higher than the other two."
+    },
+    {
+      "id": "C",
+      "text": "The light bends between the sheets to reach Lalit's eye."
+    },
+    {
+      "id": "D",
+      "text": "The candle is made brighter, so he can see through any arrangement of the holes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light travels in straight lines, so the holes and eye must share one line. A raised middle hole breaks alignment. Curved travel is out of scope here. Brightness does not remove the alignment need.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

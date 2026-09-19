@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira stands 3 m in front of a plane mirror. She then walks closer until she is 1 m from the mirror.\n\nWhat happens to the apparent distance of her image behind the mirror?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It decreases from 3 m to 1 m."
+    },
+    {
+      "id": "B",
+      "text": "It increases from 3 m to 5 m."
+    },
+    {
+      "id": "C",
+      "text": "It becomes zero because the image lies on the mirror surface."
+    },
+    {
+      "id": "D",
+      "text": "The same change from 3 m to 1 m would hold for every kind of mirror."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For a plane mirror, image distance equals object distance, so walking from 3 m to 1 m moves the image from 3 m to 1 m behind. Increasing reverses that link. Placing the image on the surface is a surface error. Extending the rule to every kind of mirror over-scopes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
