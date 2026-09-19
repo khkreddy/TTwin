@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Walia's father has type 2 diabetes. The doctor explains how the family should manage this non-communicable disease through medicine, physical activity, heart-disease risk, checkups, diet, exercise, and lifestyle.\n\nWhich statement gives the correct approach?",
+  "options": [
+    {
+      "id": "A",
+      "text": "One complete course of diabetes medicine will cure him permanently, so no further care is needed."
+    },
+    {
+      "id": "B",
+      "text": "Reducing his physical activity will lower his risk of heart disease."
+    },
+    {
+      "id": "C",
+      "text": "He needs continuous care, regular checkups, a balanced diet, and daily exercise to manage the disease."
+    },
+    {
+      "id": "D",
+      "text": "Since he looks healthy, he does not need regular checkups or any change in lifestyle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Type 2 diabetes needs continuous care, checkups, diet, and exercise. One medicine course omits ongoing management. Less activity reverses the activity–risk link. Looking healthy captures appearance over need for care.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

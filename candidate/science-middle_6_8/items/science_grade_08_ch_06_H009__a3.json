@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_06/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_06/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_06/H009"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_06:H009:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_06",
+    "chapter_label": "Pressure",
+    "subtopic_id": "science/grade_08/ch_06/H009",
+    "stem": "Farhan reads about a large storm that forms over warm ocean water. Warm moist air rises, water vapour condenses into raindrops, and a lowest-pressure centre called the eye develops.\n\nWhich statement correctly describes the cyclone and its eye?",
+    "item_type": "mcq",
+    "options": {
+      "A": "It forms over warm ocean water; the eye is calm while surrounding regions have strong winds and heavy rain.",
+      "B": "It forms over warm ocean water; winds are calm throughout the cyclone, including the region around the eye.",
+      "C": "It forms just as readily over cold ocean water; the eye is calm while surrounding regions have strong winds and heavy rain.",
+      "D": "It forms over warm ocean water; rising water vapour evaporates into raindrops, and the eye is calm."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_06/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

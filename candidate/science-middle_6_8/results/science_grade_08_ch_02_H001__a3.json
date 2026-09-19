@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir looks at a clear drop of pond water. With his unaided eyes he sees nothing moving in it. His teacher says the tiniest living organisms may still be present. He considers a microscope, an ordinary magnifying glass, his unaided eyes again, or a flat windowpane.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "He should use a microscope, because those organisms are too small for the unaided eye."
+    },
+    {
+      "id": "B",
+      "text": "An ordinary magnifying glass is enough to see the tiniest organisms clearly."
+    },
+    {
+      "id": "C",
+      "text": "His unaided eyes are enough, because clear pond water has nothing tiny to observe."
+    },
+    {
+      "id": "D",
+      "text": "A flat windowpane will magnify them, because any clear glass makes small things look larger."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tiny organisms in the drop need a microscope because they are below the unaided eye's size limit. An ordinary magnifying glass is not enough for the tiniest detail; clear water does not mean nothing is there; flat clear glass does not magnify.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Adult-butterfly CWO invents a butterfly not in the stem; kept term_substitution, condition_omission, and surface_feature_capture on the pond-drop hinge."
+      }
+    ]
+  }
+}

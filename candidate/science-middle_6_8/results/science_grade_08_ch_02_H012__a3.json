@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil prepares two balls of dough with flour, sugar, and warm water. He adds yeast to the first ball and leaves yeast out of the second. After one hour, only the first ball has risen.\n\nWhy does the dough with yeast rise while the dough without yeast does not?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The yeast dough rises immediately when the yeast is mixed in."
+    },
+    {
+      "id": "B",
+      "text": "Yeast grows in the warm dough and makes the dough rise after some time."
+    },
+    {
+      "id": "C",
+      "text": "The dough must expand first to give the yeast room to grow."
+    },
+    {
+      "id": "D",
+      "text": "Both doughs stay the same size later because they look identical just after mixing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Yeast in warm dough acts over time and makes the dough rise. Rising is not immediate; expansion does not come before yeast action; matching looks at mix time do not mean matching sizes later.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Near-boiling CWO invents boiling conditions not in the stem; kept condition_omission, relationship_reversal, and surface_feature_capture."
+      }
+    ]
+  }
+}

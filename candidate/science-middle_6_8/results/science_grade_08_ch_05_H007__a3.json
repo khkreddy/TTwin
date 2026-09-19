@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zaid rubs a plastic comb on dry hair and holds it near tiny paper pieces; the pieces jump to the comb. He rubs a second comb the same way and brings the two charged combs near each other.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The two charged combs repel because they carry like charges."
+    },
+    {
+      "id": "B",
+      "text": "The two charged combs attract because they carry like charges."
+    },
+    {
+      "id": "C",
+      "text": "The paper sticks to the comb even if the combs were never rubbed."
+    },
+    {
+      "id": "D",
+      "text": "Like-charge repulsion applies only to combs, not to any other rubbed objects."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like charges on the two rubbed combs repel. Attraction for like charges reverses the rule. Saying paper sticks with no rubbing drops the charge-by-rubbing condition. Limiting like-charge repulsion to combs alone over-narrows the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "term_substitution",
+        "reason": "Sibling-term swap for static charge invents a neighbouring label not in the stem; kept relationship_reversal, condition_omission, and scope_error on the charge interaction."
+      }
+    ]
+  }
+}

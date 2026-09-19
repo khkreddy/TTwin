@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier uses a lifting electromagnet on a crane to move an iron sheet.\n\nWhen the current in the electromagnet is switched ON, what happens to the iron sheet, and what happens when the current is switched OFF?",
+  "options": [
+    {
+      "id": "A",
+      "text": "ON: the iron sheet is released. OFF: the iron sheet is lifted."
+    },
+    {
+      "id": "B",
+      "text": "ON: the iron sheet is lifted. OFF: the iron sheet is released."
+    },
+    {
+      "id": "C",
+      "text": "ON: the iron sheet is lifted. OFF: the iron sheet keeps being held."
+    },
+    {
+      "id": "D",
+      "text": "ON: the iron sheet is released. OFF: the iron sheet stays released."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Current ON lifts iron; current OFF releases it. A reverses ON/OFF. C keeps holding after OFF, conflating temporary electromagnet behaviour with a permanent hold. D omits the ON lift.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

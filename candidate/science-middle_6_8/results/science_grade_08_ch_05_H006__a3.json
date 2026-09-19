@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yamini holds a bar magnet near iron pins, a wooden block and a copper strip on the table.\n\nWhich claim about magnetic force is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The magnet can pull the iron pins without contact between the magnet and the pins."
+    },
+    {
+      "id": "B",
+      "text": "The magnet can pull the wooden block without contact in the same way."
+    },
+    {
+      "id": "C",
+      "text": "The pull of Earth on a pin that falls off the table is magnetic force."
+    },
+    {
+      "id": "D",
+      "text": "The magnet pulls the copper strip because the strip looks shiny."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic force acts without contact on magnets or magnetic materials such as iron pins. Extending the same pull to wood drops the magnetic-material condition. Calling Earth's pull magnetic over-scopes the force type. Judging copper by shine captures a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

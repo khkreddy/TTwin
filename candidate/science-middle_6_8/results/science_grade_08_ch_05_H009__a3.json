@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat hangs a metal pot from a spring balance and reads the scale.\n\nWhat does this reading measure?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The weight of the pot — the pull of the Earth on the pot — in newtons."
+    },
+    {
+      "id": "B",
+      "text": "The mass of the pot in kilograms."
+    },
+    {
+      "id": "C",
+      "text": "Stretching the spring further increases the Earth's pull on the same pot."
+    },
+    {
+      "id": "D",
+      "text": "The downward push of Bharat's hand on the pot is the pot's weight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Weight is the gravitational pull of Earth on the pot and is measured in newtons. Kilograms name mass instead of weight. Claiming a longer stretch increases Earth's pull on the same pot reverses the force-stretch reading. Calling Bharat's hand push the pot's weight mis-scopes weight.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

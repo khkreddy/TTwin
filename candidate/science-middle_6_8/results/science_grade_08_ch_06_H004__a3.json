@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ekta presses a rubber sucker onto a smooth steel cupboard. After she pushes air out from under the sucker, it stays firmly in place.\n\nWhy does the sucker stick?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The air pressure outside the sucker is greater than the air pressure under it, so the outside air presses it against the steel."
+    },
+    {
+      "id": "B",
+      "text": "The atmospheric pressure outside sticks the sucker to the steel even when air was not pushed out from under it."
+    },
+    {
+      "id": "C",
+      "text": "The air pressure under the sucker is greater than the air pressure outside, so the inside air presses it against the steel."
+    },
+    {
+      "id": "D",
+      "text": "The sucker sticks even when the air pressure outside equals the air pressure under it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pushing air out lowers pressure under the sucker; higher outside atmospheric pressure presses it onto the steel. B applies air-pressure sticking without the lowered inside pressure. C reverses which side has higher pressure. D drops the need for a pressure difference.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": "B remapped to scope_error; surface_feature_capture not in packet first-four mx"
+  }
+}

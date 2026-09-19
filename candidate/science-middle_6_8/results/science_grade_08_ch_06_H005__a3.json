@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dhruv opens a window of his warm kitchen. The air pressure inside the kitchen is higher than the air pressure outside, and the open window connects the two regions.\n\nWhat happens to the air?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Air flows from the kitchen to the outside, and a larger pressure difference makes the flow faster."
+    },
+    {
+      "id": "B",
+      "text": "Air flows from the outside into the kitchen, and a larger pressure difference makes the flow faster."
+    },
+    {
+      "id": "C",
+      "text": "Air flows from the kitchen to the outside, and the flow speed stays the same no matter how large the pressure difference is."
+    },
+    {
+      "id": "D",
+      "text": "Air flows from the kitchen to the outside even if the window is closed and no path connects the two regions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "build_logic": {
+    "mx_swap": "C mapped to scope_error (difference size ignored); term_substitution not used"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air flows from higher pressure to lower pressure; a larger difference gives faster flow. Kitchen pressure is higher, so air flows out faster when the difference is larger. B reverses flow direction. C treats difference size as irrelevant to speed. D drops the need for a connecting path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

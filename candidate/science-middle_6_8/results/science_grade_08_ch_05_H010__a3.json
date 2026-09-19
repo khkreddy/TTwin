@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra uses a spring balance to weigh a bag of rice.\nOn its scale, the difference between two consecutive numbered marks is 5 N, and there are 10 equal small divisions between them.\n\nWhat is the smallest weight value she can read on this spring balance?",
+  "options": [
+    {
+      "id": "A",
+      "text": "0.5 N"
+    },
+    {
+      "id": "B",
+      "text": "5 N"
+    },
+    {
+      "id": "C",
+      "text": "50 N"
+    },
+    {
+      "id": "D",
+      "text": "2 N"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "build_logic": {
+    "mx_swap": "B/C remapped onto packet's first-four mx (condition_omission, scope_error); surface_feature_capture and operation_confusion not in packet mx list"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Smallest readable value = 5 N ÷ 10 = 0.5 N. B ignores the small divisions and takes the numbered interval alone. C multiplies as if the scale range rule applied that way. D reverses the division as 10 ÷ 5.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

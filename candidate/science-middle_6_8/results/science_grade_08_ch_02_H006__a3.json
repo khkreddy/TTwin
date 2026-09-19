@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir places body structures in this sequence: cell, tissue, organ, organ system, organism.\n\nWhere does the stomach belong in that sequence?",
+  "options": [
+    {
+      "id": "A",
+      "text": "cell"
+    },
+    {
+      "id": "B",
+      "text": "tissue"
+    },
+    {
+      "id": "C",
+      "text": "organ"
+    },
+    {
+      "id": "D",
+      "text": "organ system"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The stomach is an organ: tissues working together as one structure. Cell and tissue are lower levels; organ system is the wider digestive set, not the stomach alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "relationship_reversal",
+        "reason": "Tissues-combine-to-form-cells CWO does not fit a four-level placement frame; kept scope_error, surface_feature_capture, and term_substitution on level placement."
+      }
+    ]
+  }
+}

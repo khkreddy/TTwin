@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier's school holds a measles vaccination camp. His grandmother asks why healthy children are being vaccinated.\n\nWhich statement best explains how vaccination reduces serious infections and their spread?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Vaccines are medicines taken after someone falls sick, so they cure measles and stop it spreading."
+    },
+    {
+      "id": "B",
+      "text": "Vaccines prepare the immune system before exposure, so vaccinated children are less likely to become seriously ill and less likely to pass the infection to others."
+    },
+    {
+      "id": "C",
+      "text": "The first exposure to measles produces the stronger immune response, so vaccination is useful only after a child has already had measles once."
+    },
+    {
+      "id": "D",
+      "text": "Children in the same class share the same immunity, so vaccinating a few children protects the whole class equally."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vaccination prepares immunity before exposure, lowering severe illness and spread. Calling vaccines post-illness cures swaps prevention for treatment. Saying first natural exposure is stronger reverses the vaccination logic. Shared classroom immunity captures a surface group feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

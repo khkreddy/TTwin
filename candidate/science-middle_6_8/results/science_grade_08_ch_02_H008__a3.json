@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil collects a drop of pond water and a pinch of moist soil mixed in water. With his unaided eyes he sees nothing living in either sample. Under a microscope he sees tiny moving beings, and also some tiny living beings that stay still.\n\nWhat should he conclude?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A nonliving soil grain seen only under the microscope is a microorganism."
+    },
+    {
+      "id": "B",
+      "text": "The tiny beings are microorganisms, because they are living and too small for the unaided eye."
+    },
+    {
+      "id": "C",
+      "text": "Microorganisms occur only in the pond water, not in the moist soil."
+    },
+    {
+      "id": "D",
+      "text": "The tiny living beings that stay still are not microorganisms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Microorganisms are living beings too small for the unaided eye, in pond water or moist soil. Being microscopic alone does not make a nonliving grain a microorganism; soil is in scope; stillness does not remove living microbes from the group.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

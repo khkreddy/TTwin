@@ -1,0 +1,57 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara looks at a drop of pond water under a microscope. She sees a tiny living thing that changes shape as it moves by pushing out part of its body. Microorganisms include protozoa, fungi, bacteria, and some algae. Viruses are microscopic and multiply only inside living cells.\n\nWhich group does this organism belong to?",
+  "options": [
+    {
+      "id": "A",
+      "text": "bacterium"
+    },
+    {
+      "id": "B",
+      "text": "virus"
+    },
+    {
+      "id": "C",
+      "text": "protozoan"
+    },
+    {
+      "id": "D",
+      "text": "fungus"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "UNRESOLVED",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An organism that moves by changing shape in pond water is a protozoan such as Amoeba. Bacterium captures only the microscopic look; fungus is the wrong group for this mover.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Viruses-multiply-outside-cells CWO is a second claim about viruses, not a parallel group label for the shape-changing pond organism; left virus as UNRESOLVED and kept surface_feature_capture and scope_error."
+      }
+    ]
+  }
+}

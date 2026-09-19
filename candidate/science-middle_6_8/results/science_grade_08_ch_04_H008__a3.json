@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat finds a cell for a torch. Its electrolyte is a moist paste, not a free liquid.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a dry cell because the electrolyte is not a free liquid, so it is convenient for everyday use."
+    },
+    {
+      "id": "B",
+      "text": "It is a Voltaic cell because it has two terminals and an electrolyte."
+    },
+    {
+      "id": "C",
+      "text": "It is a Voltaic cell because a paste electrolyte is used only in Voltaic cells."
+    },
+    {
+      "id": "D",
+      "text": "It is a dry cell only when used in a torch, not in any other everyday device."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A dry cell holds electrolyte as a paste rather than a free liquid, which makes everyday use convenient. Calling it a Voltaic cell from shared terminals swaps the cell type. Saying paste belongs only to Voltaic cells reverses the classification cue. Limiting dry cells to torches alone over-narrows everyday use.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Ignoring paste-vs-liquid inside the key claim duplicates term_substitution; used scope_error on torch-only use instead."
+      }
+    ]
+  }
+}

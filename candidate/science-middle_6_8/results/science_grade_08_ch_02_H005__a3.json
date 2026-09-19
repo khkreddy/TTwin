@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara observes human cells under a microscope. One cell is very long and thin, with thread-like branches. She knows nerve cells carry messages, cheek cells form a protective lining, and muscle cells help move food.\n\nWhich statement best explains how this long, branched shape helps the cell?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The long, branched shape helps the nerve cell carry messages over long distances."
+    },
+    {
+      "id": "B",
+      "text": "The long, branched shape forms because carrying messages stretches the cell."
+    },
+    {
+      "id": "C",
+      "text": "Cheek cells and nerve cells in the same person have this same long, branched shape."
+    },
+    {
+      "id": "D",
+      "text": "The long, branched shape helps the cell move food."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A long, branched nerve cell is suited to carrying messages over long distances. Stretching is not what creates the shape; cheek cells are not shaped like nerve cells; length alone does not mean the cell moves food.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Contracting-to-push-messages CWO needs a contraction claim not parallel to the shape-function frame; kept relationship_reversal, scope_error, and surface_feature_capture."
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu adds vegetable peels and cow dung to a closed pit. After a few weeks the waste has turned into dark, nutrient-rich manure. Bacteria, fungi, and viruses can be found in soil.\n\nWhich statement best explains the change?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Bacteria and fungi break the plant and animal waste down into simpler, nutrient-rich manure."
+    },
+    {
+      "id": "B",
+      "text": "The waste becomes manure on its own, and then microorganisms arrive to feed on it."
+    },
+    {
+      "id": "C",
+      "text": "Viruses in the soil break the waste down into nutrient-rich manure."
+    },
+    {
+      "id": "D",
+      "text": "Fresh peels that look dark are already nutrient-rich manure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Soil bacteria and fungi decompose plant and animal waste into manure. Manure does not form first and then attract microbes; viruses are not the decomposers here; dark colour alone does not mean finished manure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Open-heap biogas CWO invents biogas and aeration not in the stem; kept relationship_reversal, scope_error, and surface_feature_capture on the manure pit hinge."
+      }
+    ]
+  }
+}

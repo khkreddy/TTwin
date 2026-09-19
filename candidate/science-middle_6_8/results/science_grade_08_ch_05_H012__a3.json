@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ekta lowers a closed empty plastic bottle into a bucket of water. The bottle feels lighter in the water than in the air, and it tends to move upward.\n\nWhy does the immersed bottle feel lighter?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The water applies an upward force on the bottle equal to the weight of the water it displaces."
+    },
+    {
+      "id": "B",
+      "text": "The water removes the downward pull of Earth on the bottle."
+    },
+    {
+      "id": "C",
+      "text": "The mass of the bottle decreases while it is in the water."
+    },
+    {
+      "id": "D",
+      "text": "The water applies only a downward force on the bottle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An immersed object feels an upward force from the liquid equal to the weight of liquid displaced; Earth's pull still acts. B drops that gravity still acts. C swaps mass for the force effect. D reverses the direction of the liquid force.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

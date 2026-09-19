@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "During a storm, strong wind blows fast over the tin roof of Farhan's house. The air inside the house below the roof is still.\n\nWhy can the roof be lifted?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The fast-moving air above the roof has lower pressure, so the higher pressure of the still air below pushes the roof upward."
+    },
+    {
+      "id": "B",
+      "text": "The fast-moving air above the roof has higher pressure, so that higher pressure pushes the roof upward from above."
+    },
+    {
+      "id": "C",
+      "text": "The roof lifts even when the pressure of the still air below equals the pressure of the fast-moving air above."
+    },
+    {
+      "id": "D",
+      "text": "The pressure above the roof is lower simply because it is above, whether the air is moving or still."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fast air above the roof has lower pressure; higher pressure of still air below can lift the roof. B reverses the speed–pressure link. C drops the need for higher pressure on the opposite side. D judges from being above rather than from air speed.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

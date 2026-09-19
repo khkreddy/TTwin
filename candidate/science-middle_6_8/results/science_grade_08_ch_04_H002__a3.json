@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek wraps insulated copper wire around an iron nail and connects the ends to a cell to make an electromagnet. He uses it to pick up steel paper clips.\n\nWhich statement about his electromagnet is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The nail stays magnetised and keeps holding the clips even after the current is switched off."
+    },
+    {
+      "id": "B",
+      "text": "The iron nail inside the coil makes the electromagnet weaker."
+    },
+    {
+      "id": "C",
+      "text": "Without the iron nail, the current-carrying coil cannot behave like a magnet at all."
+    },
+    {
+      "id": "D",
+      "text": "The current-carrying coil behaves like a magnet, and the iron nail inside the coil makes the electromagnet stronger."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "C": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A current-carrying coil acts like a magnet; an iron nail core makes it stronger. Holding clips after current stops omits that the effect is temporary. Saying the nail weakens reverses the core effect. Saying the coil cannot act without the nail over-scopes the nail's role.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "On a hot afternoon, Chitra watches dark thunderstorm clouds build over heated fields. The air above the fields is warm and moist.\n\nWhich sequence correctly explains how the thunderstorm develops?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heated land warms the moist air; the warm air rises and creates low pressure; cooler air flows in; the rising air cools and its water vapour condenses into clouds and rain."
+    },
+    {
+      "id": "B",
+      "text": "Warm moist air warms the heated land; the land rises and creates low pressure; cooler air flows in; water vapour condenses into clouds and rain."
+    },
+    {
+      "id": "C",
+      "text": "Heated land warms dry air; the dry air rises and creates low pressure; cooler air flows in; clouds and rain form without moist air."
+    },
+    {
+      "id": "D",
+      "text": "The same chain produces a thunderstorm even when the air above the fields is cool and dry."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heated land warms moist air; rising air makes low pressure; cooler air flows in; rising moist air cools and condenses into clouds and rain. B swaps which body rises. C drops the moist-air condition. D applies the rule when air is cool and dry.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

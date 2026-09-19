@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_02/H013",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_02/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_02/H013",
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Boiling-hot milk CWO invents boiling not in the stem; kept condition_omission, relationship_reversal, and surface_feature_capture."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_02:H013:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_02",
+    "chapter_label": "Microorganisms: friend and foe",
+    "subtopic_id": "science/grade_08/ch_02/H013",
+    "stem": "Tara mixes a small spoonful of curd into a bowl of lukewarm milk and into a bowl of cold milk. She leaves both for a few hours. Only the lukewarm milk sets into curd. The cold milk may taste a little sour but does not set the same way.\n\nWhich statement best explains this difference?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Microorganisms in the curd starter grow and multiply faster in lukewarm milk, turning it into curd.",
+      "B": "Lukewarm milk turns into curd immediately when the starter is mixed in.",
+      "C": "Only the cold milk forms curd; lukewarm milk stays liquid because warmth stops the starter.",
+      "D": "Both bowls have formed curd because both can taste a little sour."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_02/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

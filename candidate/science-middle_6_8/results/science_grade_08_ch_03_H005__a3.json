@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek's classmate has influenza, which spreads through cough droplets in the air. Vivek considers washing his hands once after morning assembly, drinking tap water because it looks clear, wearing a mask and sitting away while the classmate coughs, and never touching the classmate's towel.\n\nWhich step best protects Vivek from catching that influenza?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Washing his hands once after morning assembly."
+    },
+    {
+      "id": "B",
+      "text": "Drinking water from the tap because it looks clear."
+    },
+    {
+      "id": "C",
+      "text": "Wearing a mask and sitting away from the classmate while the classmate coughs."
+    },
+    {
+      "id": "D",
+      "text": "Making sure he never touches the classmate's towel."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Influenza here spreads by cough droplets in air, so a mask and distance block that route. Handwashing alone omits the air route. Clear-looking water captures appearance. Avoiding a towel swaps in a contact route that is not the named spread path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

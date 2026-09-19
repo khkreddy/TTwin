@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil studies a plant cell under a microscope. He wants to explain what gives the plant cell its firmness and rigidity.\n\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cell membrane gives the plant cell its firmness and rigidity."
+    },
+    {
+      "id": "B",
+      "text": "The cell wall gives the plant cell its firmness and rigidity."
+    },
+    {
+      "id": "C",
+      "text": "Every plastid in the plant cell gives it its firmness and rigidity."
+    },
+    {
+      "id": "D",
+      "text": "The plant cell is firm because it looks green under the microscope."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In plant cells the cell wall provides firmness and rigidity. The membrane is the wrong structure; plastids are not the firmness structures; green appearance alone does not explain firmness.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Chlorophyll-without-photosynthesis CWO is a second idea; stem holds the firmness hinge only."
+      },
+      {
+        "from": "relationship_reversal",
+        "reason": "Photosynthesis-produces-chlorophyll CWO is a second idea; stem holds the firmness hinge only."
+      }
+    ]
+  }
+}

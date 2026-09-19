@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek's class decides who can be called healthy. Health means physical, mental, and social well-being, not only the absence of disease.\n\nThey compare four classmates:\n1  Walia has no disease, but she feels lonely, sleeps poorly, and avoids her classmates.\n2  Xavier is free from illness, eats balanced food, stays cheerful, and shares a good bond with friends and family.\n3  Uma has strong muscles and wins races, yet she often quarrels with everyone.\n4  A classmate has had no fever this month, so nothing else is checked.\n\nWhose situation shows complete health?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Walia has no disease, but she feels lonely, sleeps poorly, and avoids her classmates."
+    },
+    {
+      "id": "B",
+      "text": "Xavier is free from illness, eats balanced food, stays cheerful, and shares a good bond with friends and family."
+    },
+    {
+      "id": "C",
+      "text": "Uma has strong muscles and wins races, so she must be healthy even though she often quarrels with everyone."
+    },
+    {
+      "id": "D",
+      "text": "A classmate has had no fever this month, so nothing else needs to be checked."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Complete health needs physical, mental, and social well-being. A and D treat disease absence alone as enough. C treats muscles and races as enough while social well-being fails.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

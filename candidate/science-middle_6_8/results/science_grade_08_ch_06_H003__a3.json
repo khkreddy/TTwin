@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan fills a tall plastic bottle with water and closes the cap. He then makes a small hole in the side wall of the bottle, near the bottom.\n\nWhat does he observe, and what does it show about the pressure exerted by the water?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water flows out through the hole, showing that water also pushes on the side walls of the bottle."
+    },
+    {
+      "id": "B",
+      "text": "No water comes out, showing that water pushes only downward on the bottom of the bottle."
+    },
+    {
+      "id": "C",
+      "text": "No water comes out, because the closed cap stops water from pushing on the side wall."
+    },
+    {
+      "id": "D",
+      "text": "Water flows out through the hole, showing that water pushes on the side walls only near the bottom."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water flows from a side hole because liquid pressure acts on the side walls, not only downward. B judges from water sitting on the bottom. C treats the closed cap as cancelling side-wall pressure. D over-limits the side-wall rule to the bottom only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

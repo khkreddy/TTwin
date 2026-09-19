@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uma has a sore throat and fever. Her mother wants to give leftover antibiotic tablets from an earlier illness. The doctor advises against this.\n\nWhy should antibiotics be taken only when a doctor prescribes them for a bacterial infection?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Antibiotics work against every infection, so taking them early always cures the illness faster."
+    },
+    {
+      "id": "B",
+      "text": "Antibiotics kill bacteria, and careless use can let resistant bacteria develop, making future infections harder to treat."
+    },
+    {
+      "id": "C",
+      "text": "A fever alone means an antibiotic is needed."
+    },
+    {
+      "id": "D",
+      "text": "Antibiotics become stronger each time they are used, so frequent use keeps them powerful."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Antibiotics target bacteria; careless use breeds resistance. Saying they work on every infection omits the bacterial limit. Fever alone captures one symptom as a prescription rule. Saying they get stronger reverses the resistance effect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

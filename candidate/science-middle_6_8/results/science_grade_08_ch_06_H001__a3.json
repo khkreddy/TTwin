@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dhruv stands on soft soil in flat sandals. He then stands on the same soil in narrow-heeled shoes. His weight is the same in both cases.\n\nWhich statement about the pressure on the soil is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The pressure is greater in the narrow heels, because the same force acts on a smaller contact area."
+    },
+    {
+      "id": "B",
+      "text": "The pressure is smaller in the narrow heels, because a smaller contact area always lowers pressure."
+    },
+    {
+      "id": "C",
+      "text": "The pressure is the same in both cases, because his weight does not change."
+    },
+    {
+      "id": "D",
+      "text": "The pressure is greater in the flat sandals, because the flat sandals cover more soft soil."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "At the same perpendicular force, pressure rises when contact area falls. Narrow heels have smaller area, so greater pressure. B reverses the area–pressure link. C ignores area. D judges from how much soil is covered without the force-per-area rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

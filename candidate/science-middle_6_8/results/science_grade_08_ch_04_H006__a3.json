@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zaid connects the same nichrome wire to one cell for 5 minutes, then to two cells for 5 minutes. He also thinks about heat in an electric iron and heat at a hot plug.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Two cells produce more heat than one cell in the same time, and that heating is useful in an iron but harmful when a plug overheats."
+    },
+    {
+      "id": "B",
+      "text": "Two cells always produce more heat than one cell, even when the connection times are different."
+    },
+    {
+      "id": "C",
+      "text": "One cell produces more heat than two cells in the same wire over the same time."
+    },
+    {
+      "id": "D",
+      "text": "Overheating at a plug is useful heating, just like the heat in an electric iron."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For equal duration on the same wire, two cells heat more than one; appliance heat can be useful while plug overheating is harmful. Ignoring equal time drops the comparison condition. One-cell-more reverses the relation. Calling plug overheating useful mis-scopes useful heating.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

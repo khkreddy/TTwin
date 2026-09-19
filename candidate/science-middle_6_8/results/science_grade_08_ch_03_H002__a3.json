@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Walia wants daily habits and surroundings that support a healthy body and a healthy mind. She compares staying awake late watching videos, eating a balanced meal with timely sleep and play with friends, eating only sweets she likes, and keeping her classroom clean while ignoring broken furniture and unsafe corners.\n\nWhich choice best supports good health?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Staying awake late watching videos on her phone."
+    },
+    {
+      "id": "B",
+      "text": "Eating a balanced meal, sleeping on time, and playing outside with friends."
+    },
+    {
+      "id": "C",
+      "text": "Eating only the sweets she likes most because they taste good."
+    },
+    {
+      "id": "D",
+      "text": "Keeping her classroom clean but ignoring broken furniture and unsafe corners."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balanced food, timely sleep, and play with friends support body and mind. Late videos swap away sleep. Sweets capture taste over nutrition. A clean room with unsafe furniture omits safe surroundings.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

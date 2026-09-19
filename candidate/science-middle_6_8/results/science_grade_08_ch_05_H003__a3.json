@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zaid's steel lunch box sits at rest on the table.\n\nWhich claim about the forces on the lunch box is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Balanced forces act on the lunch box, including the push between the table and the lunch box, so it stays at rest."
+    },
+    {
+      "id": "B",
+      "text": "No force acts on the lunch box because it is not moving."
+    },
+    {
+      "id": "C",
+      "text": "An object at rest always has an unbalanced force acting on it."
+    },
+    {
+      "id": "D",
+      "text": "A moving lunch box cannot have balanced forces."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rest does not mean zero force; balanced interactions, including table on lunch box, can keep it still. Judging from 'not moving' alone captures a surface cue. Swapping balanced for unbalanced misnames the force state. Saying moving objects cannot be balanced over-narrows the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
