@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nisha puts one hand in warm water and the other in cool water, then both into the same basin of tap water.\n\nCan she trust touch to say whether the tap water is hot or cold?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes: the same tap water will feel warm to one hand and cool to the other, and that is the true temperature."
+    },
+    {
+      "id": "B",
+      "text": "No: after the two hands go into the same basin, touch disagrees, so temperature must be measured."
+    },
+    {
+      "id": "C",
+      "text": "Thermometers that sat in the warm and cool bowls will still disagree after they settle in the tap water, so measurement is useless."
+    },
+    {
+      "id": "D",
+      "text": "The reddish bowl is hotter than the bluish bowl even if both thermometers read the same."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Touch after different prior temperatures disagrees, so hot-or-cold needs a measurement. Settled thermometers in the same water agree. Colour is not temperature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

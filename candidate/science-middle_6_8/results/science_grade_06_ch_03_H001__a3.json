@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela packs lunch. Which choices support healthy eating as wholesome food, in a sensible amount, eaten at a suitable time? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The smallest possible nibble of dal, because the smallest portion is always the healthiest."
+    },
+    {
+      "id": "B",
+      "text": "A bowl of dal and rice at midday, in an amount she can finish without feeling stuffed."
+    },
+    {
+      "id": "C",
+      "text": "Fruit after games, because it is wholesome and the timing fits her hunger."
+    },
+    {
+      "id": "D",
+      "text": "A brightly iced cupcake, chosen only because the icing is colourful."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Healthy eating here is wholesome food, a sensible amount, at a suitable time. Dal-rice at lunch and fruit after games fit. Tiny-as-always and colour-only do not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

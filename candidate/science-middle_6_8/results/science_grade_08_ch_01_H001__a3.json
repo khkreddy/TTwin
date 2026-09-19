@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Alia writes two questions after a rain shower.\n\nWhich one has been made scientific by turning curiosity into a focused, testable question?",
+  "options": [
+    {
+      "id": "A",
+      "text": "'Why does all energy do things?' because it is a big curiosity question."
+    },
+    {
+      "id": "B",
+      "text": "'Does sugar dissolve faster in warm water or in cold water?' because it is focused and can be checked."
+    },
+    {
+      "id": "C",
+      "text": "'Does sugar dissolve faster in warm or cold water?' is not scientific because it uses kitchen materials."
+    },
+    {
+      "id": "D",
+      "text": "Neither, because science questions must already name the answer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A scientific question here is focused and testable. Warm vs cold water for dissolving is. 'All energy' is not focused. Kitchen materials do not disqualify it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

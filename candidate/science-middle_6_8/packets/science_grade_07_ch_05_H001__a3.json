@@ -1,0 +1,136 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q23",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T00:27:06.217Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q23",
+    "item_type": "three_statement",
+    "stem": "Metal X lies between zinc and iron in the reactivity series.\n\nWhich statements about metal X are correct?\n\n1  It reacts with steam to produce hydrogen gas.\n2  It does not react with steam but will produce hydrogen with dilute acid.\n3  The metal can be obtained from its oxide by heating strongly with charcoal.\n4  The metal oxide cannot be reduced using carbon.",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 and 3"
+      },
+      {
+        "id": "B",
+        "text": "1 and 4"
+      },
+      {
+        "id": "C",
+        "text": "2 and 3"
+      },
+      {
+        "id": "D",
+        "text": "2 and 4"
+      }
+    ],
+    "statements": [
+      {
+        "id": "1",
+        "text": "It reacts with steam to produce hydrogen gas."
+      },
+      {
+        "id": "2",
+        "text": "It does not react with steam but will produce hydrogen with dilute acid."
+      },
+      {
+        "id": "3",
+        "text": "The metal can be obtained from its oxide by heating strongly with charcoal."
+      },
+      {
+        "id": "4",
+        "text": "The metal oxide cannot be reduced using carbon."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Physical vs chemical change",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Rusting is a physical change."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Crushing chalk is a chemical change."
+      }
+    ],
+    "enrichment": "A physical change changes physical properties while no new substance is formed; a chemical change forms one or more new substances. Observed evidence of the material staying the same leads to a physical-change classification; evidence that a different substance has formed leads to a chemical-change classification. The learner classifies a change by checking whether the material remains the same or whether one or more new substances are formed. If an object looks different after a change, the change must be chemical.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_05/H001",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student including statement 4 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Physical and chemical changes. The student must decide: Decide whether a change is physical or chemical by checking whether a new substance has formed. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "three_statement",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_m15_qp_12:q23",
+    "hinge": "science/grade_07/ch_05/H001",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "relationship_reversal",
+      "C": "surface_feature_capture",
+      "D": "UNRESOLVED",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_05/H001"
+  }
+}

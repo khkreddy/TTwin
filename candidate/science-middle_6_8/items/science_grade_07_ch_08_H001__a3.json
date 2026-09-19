@@ -1,0 +1,147 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0620_m18_qp_12:q1",
+  "target_unit_id": "science/grade_07/ch_08/H001",
+  "build_logic": {
+    "source_uid": "0620_m18_qp_12:q1",
+    "hinge": "science/grade_07/ch_08/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_08/H001"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_08:H001:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_07/ch_08",
+    "chapter_label": "Measurement of time",
+    "subtopic_id": "science/grade_07/ch_08/H001",
+    "stem": "Farah needs a way to mark equal intervals of time with no clock in the room.\n\nWhich process can be used to measure time?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Irregular handclaps, because any sound can mark time.",
+      "B": "A pendulum that swings regularly, even if it has no clock face.",
+      "C": "An old mechanical clock cannot measure time because it looks worn.",
+      "D": "A regularly swinging pendulum without a numbered face cannot measure time."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_08/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": {
+        "solve": "Decide whether a mixture is homogeneous or heterogeneous from uniformity, visible particles, and settling.",
+        "wrong": {
+          "A": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
+            }
+          },
+          "B": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
+            }
+          },
+          "D": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
+            }
+          }
+        },
+        "key": "C",
+        "hinge_id": "science/grade_09/ch_05/H001",
+        "hinge_label": "Decide whether a mixture is homogeneous or heterogeneous from uniformity, visible particles, and settling."
+      },
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q14",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T00:27:02.220Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q14",
+    "item_type": "option_table",
+    "stem": "Three chemicals, P, Q and R, were each dissolved in water. The table shows some of the reactions of these solutions.\n\nsolution | reaction when solid sodium carbonate is added | reaction when heated with solid ammonium chloride P | gas evolved | no reaction Q | no reaction | gas evolved R | no reaction | no reaction\n\nThe pH of the three solutions was also measured.\n\nWhat are the correct pH values of these solutions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "P = 2, Q = 7, R = 13"
+      },
+      {
+        "id": "B",
+        "text": "P = 2, Q = 13, R = 7"
+      },
+      {
+        "id": "C",
+        "text": "P = 7, Q = 2, R = 13"
+      },
+      {
+        "id": "D",
+        "text": "P = 13, Q = 7, R = 2"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"solution\",\"reaction when solid sodium carbonate is added\",\"reaction when heated with solid ammonium chloride\"],\"rows\":[[\"P\",\"gas evolved\",\"no reaction\"],[\"Q\",\"no reaction\",\"gas evolved\"],[\"R\",\"no reaction\",\"no reaction\"]],\"row_labels\":[\"P\",\"Q\",\"R\"],\"caption\":\"\"}",
+      "{\"headers\":[\"\",\"P\",\"Q\",\"R\"],\"rows\":[[\"A\",\"2\",\"7\",\"13\"],[\"B\",\"2\",\"13\",\"7\"],[\"C\",\"7\",\"2\",\"13\"],[\"D\",\"13\",\"7\",\"2\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Force and pressure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The SI unit of force is pascal (Pa)."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The isolated ball applies a force to itself."
+      }
+    ],
+    "enrichment": "A force is a push or pull on an object resulting from the object's interaction with another object; the SI unit of force is newton (N). interaction between two objects -> push or pull on an object -> force identified and measured in newtons The learner correctly applies this rule: A force is a push or pull on an object resulting from the object's interaction with another object; the SI unit of force is newton (N). Any visible movement is a force, so the interacting objects and the unit newton do not matter.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_05/H001",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “P = 2, Q = 7, R = 13” looked possible instead of “P = 2, Q = 13, R = 7”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “P = 7, Q = 2, R = 13” looked possible instead of “P = 2, Q = 13, R = 7”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “P = 13, Q = 7, R = 2” looked possible instead of “P = 2, Q = 13, R = 7”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Force. The student must decide: Decide whether an observed push or pull is a force and identify the interacting objects involved. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "option_table",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_m15_qp_12:q14",
+    "hinge": "science/grade_08/ch_05/H001",
+    "item_type_target": "option_table",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_05/H001"
+  }
+}

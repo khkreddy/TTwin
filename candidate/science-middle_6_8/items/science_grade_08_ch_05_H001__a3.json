@@ -1,0 +1,148 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0620_m15_qp_12:q14",
+  "target_unit_id": "science/grade_08/ch_05/H001",
+  "build_logic": {
+    "source_uid": "0620_m15_qp_12:q14",
+    "hinge": "science/grade_08/ch_05/H001",
+    "item_type_target": "option_table",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_05/H001"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_05:H001:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_05",
+    "chapter_label": "Force",
+    "subtopic_id": "science/grade_08/ch_05/H001",
+    "stem": "Vikram lists four playground events. Which row correctly names a force as a push or pull between two objects?",
+    "item_type": "mcq_table",
+    "options": {
+      "A": "Row 1",
+      "B": "Row 2",
+      "C": "Row 3",
+      "D": "Row 4"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"event\",\"claimed force\"],\"rows\":[[\"Vikram kicks a football\",\"a push between Vikram's foot and the ball\"],[\"a ball sits still on grass\",\"the ball applies a force to itself to stay put\"],[\"Noor pulls a wagon\",\"the SI unit of that pull is the pascal\"],[\"a leaf falls\",\"no objects are interacting\"]],\"row_labels\":[\"1\",\"2\",\"3\",\"4\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_05/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": {
+        "solve": "Can the learner use indicator observations to decide whether a tested substance is acidic, basic, or neutral?",
+        "wrong": {
+          "A": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "Acids turn blue litmus red, bases turn red litmus blue, and indicators or olfactory indicators signal acidic or basic media by observable colour or odour changes. This is the hinge move, not a reprint of the clicked option."
+            }
+          },
+          "C": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "Acids turn blue litmus red, bases turn red litmus blue, and indicators or olfactory indicators signal acidic or basic media by observable colour or odour changes. This is the hinge move, not a reprint of the clicked option."
+            }
+          },
+          "D": {
+            "mx_type": "intermediate_omission",
+            "pathway": "intermediate_omission",
+            "followup": {
+              "format": "fill_blank",
+              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
+              "terms": [
+                "oxidised",
+                "reduced",
+                "unchanged"
+              ],
+              "key": {
+                "1": "oxidised",
+                "2": "reduced",
+                "3": "unchanged"
+              },
+              "why": "Acids turn blue litmus red, bases turn red litmus blue, and indicators or olfactory indicators signal acidic or basic media by observable colour or odour changes. This is the hinge move, not a reprint of the clicked option."
+            }
+          }
+        },
+        "key": "B",
+        "hinge_id": "science/grade_10/ch_02/H001",
+        "hinge_label": "Can the learner use indicator observations to decide whether a tested substance is acidic, basic, or neutral?"
+      },
+      "mark_scheme": null
+    }
+  }
+}

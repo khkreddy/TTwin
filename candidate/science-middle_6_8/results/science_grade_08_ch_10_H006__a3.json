@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Imran sends several torch rays that are parallel to one another onto the same plane mirror shown below.\n\nWhat happens to those rays after reflection?",
+  "options": [
+    {
+      "id": "A",
+      "text": "They must meet at a point behind the mirror, because that is what every mirror does."
+    },
+    {
+      "id": "B",
+      "text": "They stay parallel to one another after reflection from the flat sheet."
+    },
+    {
+      "id": "C",
+      "text": "They spread apart as if the sheet were a convex surface, even though the sheet is flat."
+    },
+    {
+      "id": "D",
+      "text": "Only the hatch marks on the back of the mirror decide whether the rays meet."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,scale=1.2]\\coordinate (O) at (0,0);\\draw (-2.4,0)--(2.4,0);\\foreach \\x in {-2.3,-2.1,...,2.3}{\\draw[thin] (\\x,0)--++(-0.18,-0.18);}\\draw[dashed,thin] (O)--(0,1.85);\\draw[->,thick] (-1.9,1.6)--(-0.72,0.61);\\draw[thick] (-0.72,0.61)--(O);\\draw[->,thick] (O)--(0.85,0.72);\\draw[thick] (0.85,0.72)--(1.9,1.6);\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane mirror keeps a bundle of parallel rays parallel. Meeting at a point is a concave-mirror story, not this flat sheet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Same plane-mirror tikzpicture as 0625_m19_qp_12:q22, used as the flat sheet."
+  }
+}

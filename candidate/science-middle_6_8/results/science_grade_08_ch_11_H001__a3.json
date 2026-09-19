@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev sketches the Moon on five nights and sees the bright part change shape.\n\nWhat is changing?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon itself is swelling and shrinking, because phase is another word for size."
+    },
+    {
+      "id": "B",
+      "text": "The bright part we see from Earth changes, even though the Moon does not emit its own light."
+    },
+    {
+      "id": "C",
+      "text": "Earth sees only the night side, so the bright part we see is the Moon's unlit half."
+    },
+    {
+      "id": "D",
+      "text": "The rule holds even if we drop the fact that the Moon does not shine by itself."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Phases are the changing bright part seen from Earth. The Moon does not grow. We see the sunlit part facing us, not the unlit half.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}
