@@ -373,7 +373,7 @@ function resultToCandidate(result, packet, source, unit, attempt) {
     if (san.ok) { tikz = san.tikz; packages = san.packages; }
   }
   if (live === "mcq" && tikz && source && source.item_type === "mcq_diagram") live = "mcq_diagram";
-  const lbs = (result.learn_by_solve) || (source && source.assessment && source.assessment.learn_by_solve) || null;
+  const lbs = result.learn_by_solve || null;
   const uid = "candidate:g68:" + String(unit.unit_id).replace(/\//g, ":") + ":a" + attempt;
   const mxMap = result.mx_option_map || (result.teacher && result.teacher.mx_option_map) || {};
   const build = Object.assign({}, packet.build_logic || {}, result.build_logic || {});

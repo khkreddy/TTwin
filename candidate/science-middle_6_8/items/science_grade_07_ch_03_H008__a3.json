@@ -80,57 +80,7 @@
         "present": false
       },
       "one_or_more": false,
-      "learn_by_solve": {
-        "solve": "Which lamps light? Required: A — lamp 1 only. B would need “lamp 2 only”, but the item needs “lamp 1 only”. C would need “lamp 1 and lamp 2”, but the item needs “lamp 1 only”. D would need “neither lamp 1 nor lamp 2”, but the item needs “lamp 1 only”.",
-        "wrong": {
-          "B": {
-            "mx_type": "condition_omission",
-            "pathway": "dropping a stated condition so “lamp 2 only” looked possible instead of “lamp 1 only”",
-            "followup": {
-              "stem": "Option B. Is “lamp 2 only” lamps light?",
-              "options": {
-                "A": "Yes — “lamp 2 only” is lamps light",
-                "B": "No — “lamp 2 only” is not lamps light",
-                "C": "“lamp 2 only” is a different quantity or structure in the same item",
-                "D": "“lamp 2 only” would apply to a different process or organism"
-              },
-              "key": "B",
-              "why": "Option B used “lamp 2 only”; the item needs “lamp 1 only”."
-            }
-          },
-          "C": {
-            "mx_type": "condition_omission",
-            "pathway": "dropping a stated condition so “lamp 1 and lamp 2” looked possible instead of “lamp 1 only”",
-            "followup": {
-              "stem": "Option C. Is “lamp 1 and lamp 2” lamps light?",
-              "options": {
-                "A": "Yes — “lamp 1 and lamp 2” is lamps light",
-                "B": "“lamp 1 and lamp 2” is a different quantity or structure in the same item",
-                "C": "“lamp 1 and lamp 2” would apply to a different process or organism",
-                "D": "No — “lamp 1 and lamp 2” is not lamps light"
-              },
-              "key": "D",
-              "why": "Option C used “lamp 1 and lamp 2”; the item needs “lamp 1 only”."
-            }
-          },
-          "D": {
-            "mx_type": "term_substitution",
-            "pathway": "swapping the sibling term “neither lamp 1 nor lamp 2” for the required “lamp 1 only”",
-            "followup": {
-              "stem": "Option D. Is “neither lamp 1 nor lamp 2” lamps light?",
-              "options": {
-                "A": "Yes — “neither lamp 1 nor lamp 2” is lamps light",
-                "B": "“neither lamp 1 nor lamp 2” is a different quantity or structure in the same item",
-                "C": "“neither lamp 1 nor lamp 2” would apply to a different process or organism",
-                "D": "No — “neither lamp 1 nor lamp 2” is not lamps light"
-              },
-              "key": "D",
-              "why": "Option D used “neither lamp 1 nor lamp 2”; the item needs “lamp 1 only”."
-            }
-          }
-        },
-        "key": "A"
-      },
+      "learn_by_solve": null,
       "mark_scheme": null
     }
   }

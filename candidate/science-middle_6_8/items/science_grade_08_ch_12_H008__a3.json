@@ -77,57 +77,7 @@
         "present": false
       },
       "one_or_more": false,
-      "learn_by_solve": {
-        "solve": "which trophic levels is the leopard feeding? Required: D — third / and / fifth. A would need “second”, but the item needs “fifth”. B would need “third”, but the item needs “fifth”. C would need “fourth”, but the item needs “fifth”.",
-        "wrong": {
-          "A": {
-            "mx_type": "term_substitution",
-            "pathway": "swapping the sibling term “second” for the required “fifth”",
-            "followup": {
-              "stem": "Option A. This row is “first / and / second”. Should the first listed feature be marked third or first?",
-              "options": {
-                "A": "the first listed feature should be third",
-                "B": "the first listed feature should be first",
-                "C": "the first listed feature is not used in this item",
-                "D": "both third and first at once"
-              },
-              "key": "A",
-              "why": "Option A marks the first listed feature as first; the keyed row marks it as third."
-            }
-          },
-          "B": {
-            "mx_type": "condition_omission",
-            "pathway": "dropping a stated condition so “third” looked possible instead of “fifth”",
-            "followup": {
-              "stem": "Option B. This row is “second / and / third”. Should the first listed feature be marked third or second?",
-              "options": {
-                "A": "the first listed feature should be third",
-                "B": "the first listed feature should be second",
-                "C": "the first listed feature is not used in this item",
-                "D": "both third and second at once"
-              },
-              "key": "A",
-              "why": "Option B marks the first listed feature as second; the keyed row marks it as third."
-            }
-          },
-          "C": {
-            "mx_type": "term_substitution",
-            "pathway": "swapping the sibling term “fourth” for the required “fifth”",
-            "followup": {
-              "stem": "Option C. This row is “second / and / fourth”. Should the first listed feature be marked third or second?",
-              "options": {
-                "A": "the first listed feature should be second",
-                "B": "the first listed feature is not used in this item",
-                "C": "both third and second at once",
-                "D": "the first listed feature should be third"
-              },
-              "key": "D",
-              "why": "Option C marks the first listed feature as second; the keyed row marks it as third."
-            }
-          }
-        },
-        "key": "D"
-      },
+      "learn_by_solve": null,
       "mark_scheme": null
     }
   }
