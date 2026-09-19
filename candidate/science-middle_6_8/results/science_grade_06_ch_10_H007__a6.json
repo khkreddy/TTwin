@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which description of the mosquito stages is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Egg → larva → pupa → adult mosquito."
+        },
+        {
+          "id": "B",
+          "text": "Egg → pupa → larva → adult mosquito."
+        },
+        {
+          "id": "C",
+          "text": "The adult mosquito stays in the rainwater throughout its life."
+        },
+        {
+          "id": "D",
+          "text": "The wriggling form and the comma-shaped form belong to different species sharing the tyre."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Rohit watches a discarded tyre that holds rainwater. He sees wriggling forms, then quieter comma-shaped forms, before winged adults leave the water.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The wriggling larva comes before the quieter pupa; adults leave the water, so the order is egg, larva, pupa, adult."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquitoes develop egg → larva → pupa → adult. Observation of wriggling then comma-shaped forms places larva before pupa. Adults leave the water; larva and pupa are stages of one species.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

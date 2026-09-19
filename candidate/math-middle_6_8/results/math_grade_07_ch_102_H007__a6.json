@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Jatin must remove the brackets in $14-(9-4)$.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Removing the brackets gives $14-9+4$."
+    },
+    {
+      "id": "2",
+      "text": "The minus sign before the brackets changes the signs of the terms inside."
+    },
+    {
+      "id": "3",
+      "text": "Removing the brackets leaves $14-9-4$."
+    }
+  ],
+  "options": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A minus before brackets flips each inner sign: 14−(9−4) becomes 14−9+4. Statement 3 keeps both inner signs minus and is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

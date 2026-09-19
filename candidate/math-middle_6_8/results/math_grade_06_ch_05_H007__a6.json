@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia checks whether $9$ and $16$ are co-prime by looking at their common factors before calling them a safe treasure pair.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$9$ and $16$ are co-prime, because their only common factor is $1$."
+    },
+    {
+      "id": "B",
+      "text": "$9$ and $16$ form a safe pair because the word co-prime is printed in the check."
+    },
+    {
+      "id": "C",
+      "text": "Having no common factor greater than $1$ is the result of already calling $9$ and $16$ a safe pair."
+    },
+    {
+      "id": "D",
+      "text": "$9$ and $16$ are co-prime because $9$ ends in $9$ and $16$ ends in $6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "9 = 3×3 and 16 = 2^4 share no common factor other than 1, so they are co-prime and a safe pair. The label alone does not decide the pair; ending digits are a different divisibility test; calling them safe first reverses the check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

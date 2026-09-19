@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bhavna must decide which is larger, $\\dfrac{5}{8}$ or $\\dfrac{7}{12}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly compares the fractions?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Rewrite as $\\dfrac{15}{24}$ and $\\dfrac{14}{24}$; then $\\dfrac{5}{8}$ is larger because $15>14$."
+        },
+        {
+          "id": "B",
+          "text": "Compare the denominators $8$ and $12$ alone; the fraction with denominator $8$ is larger."
+        },
+        {
+          "id": "C",
+          "text": "Having a common denominator is the result of already knowing that $\\dfrac{5}{8}$ is larger."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A common denominator lets the numerators be compared directly; 15/24 is greater than 14/24, so 5/8 is larger."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "LCD 24 gives 15/24 and 14/24, so 5/8 is larger. Comparing denominators alone is the wrong test. Treating the common denominator as a result of already knowing which is larger reverses the comparison plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

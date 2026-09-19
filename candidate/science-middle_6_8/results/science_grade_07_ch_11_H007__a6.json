@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows an object in front of a plane mirror and the image the mirror forms for Aarav.\n\nWhich claims about the image are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The image is upright and the same size as the object."
+    },
+    {
+      "id": "B",
+      "text": "The image appears behind the mirror and cannot be obtained on a screen."
+    },
+    {
+      "id": "C",
+      "text": "The image is smaller than the object."
+    },
+    {
+      "id": "D",
+      "text": "Every mirror forms an upright image the same size as the object."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]\n\\draw[line width=1.2pt] (0,-0.2) -- (0,3.2);\n\\foreach \\y in {0.0,0.4,...,3.0} {\\draw[line width=0.45pt] (0,\\y) -- (0.22,\\y-0.18);}\n\\node[above] at (0,3.25) {plane mirror};\n\\draw[line width=0.9pt,->] (-2.2,0.7) -- (-2.2,2.5);\n\\node[left] at (-2.2,1.6) {object};\n\\draw[line width=0.9pt,dashed,->] (2.2,0.7) -- (2.2,2.5);\n\\node[right] at (2.2,1.6) {image};\n\\draw[<->,line width=0.6pt] (-2.2,0.35) -- (0,0.35);\n\\node[below] at (-1.1,0.35) {d};\n\\draw[<->,line width=0.6pt,dashed] (0,0.35) -- (2.2,0.35);\n\\node[below] at (1.1,0.35) {d};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane-mirror image is upright, same size as the object, appears behind the mirror, and is virtual. Claiming it is smaller captures a wrong surface feature; extending the claim to every mirror overscopes the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote converging-lens figure into plane mirror with object and image at equal distance."
+  }
+}

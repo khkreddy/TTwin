@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal must choose which of $5.1$, $5.6$, and $5.9$ is closest to the target $5.4$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5.6$ is closest, because its distance from $5.4$ is $0.2$, smaller than $0.3$ and $0.5$."
+    },
+    {
+      "id": "B",
+      "text": "$5.9$ is closest, because it is the largest of the three decimals."
+    },
+    {
+      "id": "C",
+      "text": "The closest decimal is whichever option first names the word distance."
+    },
+    {
+      "id": "D",
+      "text": "Knowing that $5.6$ is closest is what comes before comparing the three distances."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distances from 5.4 are 0.3, 0.2, and 0.5, so 5.6 is closest. Largest value and the word distance are not the closeness test. Claiming the answer is known before comparing distances reverses the check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

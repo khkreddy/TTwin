@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_08/H007",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_08/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_08/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H007:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H007",
+    "stem": "Chirag must divide the $16$ cm by $12$ cm rectangle in the diagram into identical squares that fill it with no gaps and no overlaps.\n\nWhich claim correctly plans the equal segments?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Mark equal $4$ cm segments along the $16$ cm and $12$ cm sides so squares of side $4$ cm fill the rectangle.",
+      "B": "Mark segments of length $16$ cm only, and ignore making the $12$ cm side match equal square sides.",
+      "C": "The rough diagram of the rectangle produces identical squares even when corresponding sides are unequal.",
+      "D": "Square the side lengths $16$ and $12$ to decide the square size."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.32,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (16,12);\n  \\node[below] at (8,0) {$16\\,\\mathrm{cm}$};\n  \\node[left] at (0,6) {$12\\,\\mathrm{cm}$};\n  \\draw[densely dashed] (4,0)--(4,12) (8,0)--(8,12) (12,0)--(12,12);\n  \\draw[densely dashed] (0,4)--(16,4) (0,8)--(16,8);\n  \\node[anchor=west,align=center] at (16.5,11) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

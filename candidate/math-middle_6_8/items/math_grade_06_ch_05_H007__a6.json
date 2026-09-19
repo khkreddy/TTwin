@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_05/H007",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_05/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_05/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_05:H007:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_06/ch_05",
+    "chapter_label": "math/grade_06/ch_05",
+    "subtopic_id": "math/grade_06/ch_05/H007",
+    "stem": "Sonia checks whether $9$ and $16$ are co-prime by looking at their common factors before calling them a safe treasure pair.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$9$ and $16$ are co-prime, because their only common factor is $1$.",
+      "B": "$9$ and $16$ form a safe pair because the word co-prime is printed in the check.",
+      "C": "Having no common factor greater than $1$ is the result of already calling $9$ and $16$ a safe pair.",
+      "D": "$9$ and $16$ are co-prime because $9$ ends in $9$ and $16$ ends in $6$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_05/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

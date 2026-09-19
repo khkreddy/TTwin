@@ -1,0 +1,98 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_09/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_09/H007",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "relationship_reversal",
+        "scope_error",
+        "surface_feature_capture",
+        "mechanism_conflation"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_09/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_09:H007:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_07/ch_09",
+    "chapter_label": "Nutrition in animals",
+    "subtopic_id": "science/grade_07/ch_09/H007",
+    "stem": "Reyansh follows a meal after most nutrients have been digested and absorbed in the small intestine. He considers the remaining undigested food, the large intestine, and blood vessels in the small-intestine wall.\n\nMark each statement true (T) or false (F).",
+    "item_type": "three_statement",
+    "options": {},
+    "statements": [
+      {
+        "id": "1",
+        "text": "The remaining undigested food moves from the small intestine into the large intestine."
+      },
+      {
+        "id": "2",
+        "text": "Undigested food moves from the large intestine back into the small intestine for more digestion."
+      },
+      {
+        "id": "3",
+        "text": "Undigested food passes through the small-intestine wall into the blood."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_09/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

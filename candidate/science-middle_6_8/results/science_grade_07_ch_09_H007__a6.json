@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Reyansh follows a meal after most nutrients have been digested and absorbed in the small intestine. He considers the remaining undigested food, the large intestine, and blood vessels in the small-intestine wall.\n\nMark each statement true (T) or false (F).",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The remaining undigested food moves from the small intestine into the large intestine."
+    },
+    {
+      "id": "2",
+      "text": "Undigested food moves from the large intestine back into the small intestine for more digestion."
+    },
+    {
+      "id": "3",
+      "text": "Undigested food passes through the small-intestine wall into the blood."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After absorption in the small intestine, undigested food moves on to the large intestine. It does not reverse into the small intestine, and undigested food does not pass into blood through the wall.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

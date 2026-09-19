@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_03/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_03/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_03/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_03:H007:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_08/ch_03",
+    "chapter_label": "Health: reaching the unreached",
+    "subtopic_id": "science/grade_08/ch_03/H007",
+    "stem": "Aisha's school holds a tetanus vaccination camp. Her uncle asks how immunity and vaccination reduce serious infections such as tetanus and measles and their spread among classmates.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Vaccination prepares the immune system so the body can fight the disease agent more effectively and serious infections are less likely to spread.",
+      "B": "A tetanus shot contains live active tetanus bacteria that cause a full tetanus infection on purpose.",
+      "C": "The first natural exposure always produces a stronger immune response than a later vaccine dose.",
+      "D": "Children living on the same street must have the same immunity after the camp."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_03/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

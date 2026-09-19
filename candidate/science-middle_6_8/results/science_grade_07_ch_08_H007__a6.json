@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zara times two carts on a straight path. Cart P covers 80 m in 20 s. Cart Q covers 50 m in 10 s. She also reads a chart that lists 3 m/s and 180 m/min.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly compares how fast they are?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Cart Q is faster than cart P because 50 m in 10 s is 5 m/s while 80 m in 20 s is 4 m/s."
+        },
+        {
+          "id": "B",
+          "text": "Cart P is faster than cart Q because 80 m is a greater distance than 50 m."
+        },
+        {
+          "id": "C",
+          "text": "Cart P and cart Q cannot be compared because their times are different."
+        },
+        {
+          "id": "D",
+          "text": "180 m/min is faster than 3 m/s."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Speed is distance divided by time, so Q at 5 m/s is faster than P at 4 m/s; distance alone, mismatched times as a barrier, or raw unit numbers without conversion are wrong."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compare distance/time: Q is 5 m/s, P is 4 m/s, so Q is faster. Distance alone omits time; different times do not block comparison; 180 m/min equals 3 m/s after conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

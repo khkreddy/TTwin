@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What are the range and the value of the smallest division?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Range −5 °C to 105 °C; smallest division 2 °C."
+        },
+        {
+          "id": "B",
+          "text": "Range 0 °C to 100 °C; smallest division 2 °C."
+        },
+        {
+          "id": "C",
+          "text": "Range −5 °C to 105 °C; each of the 5 small divisions measures 10 °C."
+        },
+        {
+          "id": "D",
+          "text": "Range −5 °C to 105 °C; with 5 divisions, each division measures 50 °C."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Kavya finds a laboratory thermometer. Its scale runs from −5 °C to 105 °C. Between the 20 °C and 30 °C marks there are 5 equal small divisions.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The printed ends give the range −5 °C to 105 °C; 10 °C split into 5 equal divisions makes each division 2 °C."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Range is read from the lowest and highest marked values. Between 20 and 30 °C, five equal divisions mean each is 2 °C, not 10 °C or 50 °C. The clinical 0–100 °C band is not this thermometer's marked range.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

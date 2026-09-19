@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Imran records sports-day medals as Gold $8$, Silver $5$, and Bronze $3$. The diagram shows the bar graph he wants to match that table.\n\nWhich claim correctly constructs a valid bar graph from that category-value data?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Categories sit on one axis, one uniform number scale sits on the other, and equal-width bars reach heights $8$, $5$, and $3$."
+    },
+    {
+      "id": "B",
+      "text": "The vertical axis label alone is the finished bar graph for the three medals."
+    },
+    {
+      "id": "C",
+      "text": "The three bars may have different widths as long as the Gold bar is the tallest."
+    },
+    {
+      "id": "D",
+      "text": "The printed number $8$ from the table is itself the bar graph."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Medal};\n  \\draw[->] (0,0) -- (0,8.6) node[above] {Count};\n  \\foreach \\y in {1,2,3,4,5,6,7,8} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!40] (0.5,0) rectangle (1.4,8);\n  \\node at (0.95,-0.4) {Gold};\n  \\fill[gray!40] (2.0,0) rectangle (2.9,5);\n  \\node at (2.45,-0.4) {Silver};\n  \\fill[gray!40] (3.5,0) rectangle (4.4,3);\n  \\node at (3.95,-0.4) {Bronze};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid bar graph needs categories on one axis, a uniform numerical scale on the other, and equal-width bars whose heights match 8, 5, and 3. An axis label or a printed table number is not the graph, and unequal bar widths omit a required condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle figures as a Gold/Silver/Bronze bar graph with uniform vertical scale."
+  }
+}

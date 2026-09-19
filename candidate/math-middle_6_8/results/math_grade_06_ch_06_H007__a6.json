@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Tushar has two $6$ cm by $2$ cm rectangles. He joins them along a shared $2$ cm edge to make one $12$ cm by $2$ cm rectangle and asks how the perimeter changes.\n\nOne or more options may be correct. Which two claims are both correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After the join, the perimeter is the outer boundary of the $12$ cm by $2$ cm rectangle, which is $28$ cm."
+    },
+    {
+      "id": "B",
+      "text": "The perimeter stays $32$ cm, the sum of the perimeters of the two separate rectangles."
+    },
+    {
+      "id": "C",
+      "text": "The shared $2$ cm edge is not part of the new outside boundary, so the perimeter is less than the sum of the separate perimeters."
+    },
+    {
+      "id": "D",
+      "text": "The perimeter is the printed label joined arrangement."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Separate perimeters sum to 32 cm. Joining along a 2 cm edge removes 2 cm from each piece's boundary, so the new outer perimeter is 28 cm. Keeping the separate sum omits the new arrangement. The phrase joined arrangement is not a length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

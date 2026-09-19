@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Use vanilla essence as an odour-based indicator and note how the smell changes in each liquid."
+    },
+    {
+      "id": "B",
+      "text": "Use vanilla essence and conclude that the vanilla's smell change makes orange juice acidic."
+    },
+    {
+      "id": "C",
+      "text": "Use a strongly scented strip whose odour does not change in either liquid, because a strong smell alone is enough."
+    },
+    {
+      "id": "D",
+      "text": "Use red litmus paper, because any coloured paper is the right tool when colour vision is difficult."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Pihu cannot tell indicator colours apart clearly. Her teacher asks her to test orange juice and soap solution using a change she can notice without colour, and offers vanilla essence.\n\nWhich choice is best?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An olfactory indicator such as vanilla essence works when colour-based indicators do not. The odour change reports acidity; it does not make the juice acidic. An unchanged strong smell is not a test; litmus still needs colour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

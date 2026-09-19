@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Esha folds two paper wedges for a craft display. The diagram shows angle $J$ and angle $K$.\n\nOne or more options may be correct. Which two claims correctly decide which angle is larger by overlaying?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Match the vertices and align one arm; the free arm of angle $K$ opens farther, so angle $K$ is larger."
+    },
+    {
+      "id": "B",
+      "text": "Judge which opening is larger while the vertices stay apart on the desk."
+    },
+    {
+      "id": "C",
+      "text": "After the vertices coincide and one arm is aligned, the free arm that sticks out farther belongs to the larger angle."
+    },
+    {
+      "id": "D",
+      "text": "The printed letter names $J$ and $K$ alone decide which angle is larger."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=1.0,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[thick] (2.1,0)--(0,0)--(1.95,0.85);\n  \\fill (0,0) circle (1.4pt);\n  \\node[below left] at (0,0) {$J$};\n  \\draw (0.55,0) arc (0:23:0.55);\n  \\begin{scope}[shift={(4.0,0)}]\n    \\draw[thick] (2.2,0)--(0,0)--(1.55,1.55);\n    \\fill (0,0) circle (1.4pt);\n    \\node[below left] at (0,0) {$K$};\n    \\draw (0.55,0) arc (0:45:0.55);\n  \\end{scope}\n  \\node[anchor=west,align=center] at (7.0,0.9) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Overlay requires coinciding vertices and one aligned arm; the free arm that opens farther marks the larger angle. Here that is angle K. Judging with vertices apart omits the overlay condition. Letter names alone are not a size test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as two separate paper-wedge angles J (narrow) and K (wider)."
+  }
+}

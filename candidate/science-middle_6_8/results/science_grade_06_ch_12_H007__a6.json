@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n% dusk sky\n\\fill[blue!35!black] (0,0.8) rectangle (6.0,3.0);\n\\fill[orange!50!black] (0,0.35) rectangle (6.0,0.8);\n% ground\n\\fill[black!75] (0,0) rectangle (6.0,0.35);\n\\node[white] at (1.2,0.18) {horizon};\n% one bright object\n\\fill[yellow!95!white] (4.5,2.2) circle (0.14);\n\\draw[white] (4.5,2.2) circle (0.14);\n\\node[white] at (4.5,1.65) {bright object};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The bright object is Venus, a planet that looks bright at dusk but is not a star."
+    },
+    {
+      "id": "B",
+      "text": "Venus looks bright by reflected sunlight; it does not make its own light like a star."
+    },
+    {
+      "id": "C",
+      "text": "It must be a star because people call it the Evening Star."
+    },
+    {
+      "id": "D",
+      "text": "Venus is the brightest object in the whole sky at all times."
+    }
+  ],
+  "mx_option_map": {
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "The diagram shows the dusk sky with one bright object. People call this object the Evening Star. Dev asks what it is.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Evening Star is Venus, a planet that looks bright by reflected sunlight and is not a star. The common name does not make it a star, and it is not brighter than the Sun and Moon at all times.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source force diagram into a dusk sky with one bright object on the horizon."
+  }
+}

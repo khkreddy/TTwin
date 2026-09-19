@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The deer gets the Sun's energy indirectly by eating the shoots that used sunlight to make food."
+        },
+        {
+          "id": "B",
+          "text": "When the deer eats the shoots, energy passes from the deer to the shoots."
+        },
+        {
+          "id": "C",
+          "text": "The deer eating shoots in the shade gets no energy linked to the Sun."
+        },
+        {
+          "id": "D",
+          "text": "The deer can get the Sun's energy for growth just by standing in sunlight without eating."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Anaya watches a deer eat tender shoots under a shady canopy. She asks how the deer is linked to the Sun's energy through plant food.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Shoots store energy from sunlight as food; the deer receives that energy by eating the shoots, even in the shade."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Animals receive the Sun's energy indirectly through plants and food. Energy does not flow from deer to shoots; shade does not cut the link; standing in sun without eating does not supply food energy.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

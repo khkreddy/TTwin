@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows two cloth samples of the same thickness in sunlight: a white sample and a black sample. Vihaan packs for a hot sunny afternoon and for a cold winter morning.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Choose the white sample idea for the hot afternoon because light-coloured cloth reflects more of the heat that falls on it; choose the black sample idea for the cold morning because dark-coloured cloth absorbs more heat."
+        },
+        {
+          "id": "B",
+          "text": "Choose the black sample idea for the hot afternoon and the white sample idea for the cold morning."
+        },
+        {
+          "id": "C",
+          "text": "Even with no sunlight on either sample, the black sample still gains more heat from its colour alone."
+        },
+        {
+          "id": "D",
+          "text": "The black sample reflects more heat than the white sample because black looks stronger."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1cm,y=1cm]\n\\draw[yellow!70!orange,fill=yellow!25] (2.4,3.4) circle (0.35);\n\\foreach \\a in {0,45,...,315} {\\draw[yellow!70!orange,line width=0.7pt] (2.4,3.4) ++(\\a:0.45) -- ++(\\a:0.25);}\n\\node at (2.4,4.05) {sunlight};\n\\draw[thick,fill=white] (0.2,0.2) rectangle (2.0,2.2);\n\\node at (1.1,1.2) {white};\n\\node at (1.1,-0.15) {sample};\n\\draw[thick,fill=black!75] (2.8,0.2) rectangle (4.6,2.2);\n\\node[white] at (3.7,1.2) {black};\n\\node at (3.7,-0.15) {sample};\n\\draw[->,thick] (2.05,3.1) -- (1.1,2.25);\n\\draw[->,thick] (2.75,3.1) -- (3.7,2.25);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Light-coloured surfaces reflect more of the heat that falls on them, so they suit hot sunny weather; dark surfaces absorb more heat, so they suit cold weather."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light cloth reflects more incident heat (better in summer); dark cloth absorbs more (better in winter). Reversing the seasons, inventing heating with no sunlight, or judging by how strong black looks miss the reflect-vs-absorb hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote converging-lens ray diagram into two cloth samples under sunlight for the colour–heat hinge."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Washing soda is soluble in water."
+    },
+    {
+      "id": "B",
+      "text": "Flour is insoluble in water."
+    },
+    {
+      "id": "C",
+      "text": "Washing soda is insoluble in water. Flour is soluble in water."
+    },
+    {
+      "id": "D",
+      "text": "Washing soda and flour are neither soluble nor insoluble, because those labels apply only to liquids."
+    }
+  ],
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Farhan stirs washing soda and flour into separate glasses of water and waits. The washing soda disappears completely. The flour stays as cloudy bits you can still see.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A material that disappears completely in water is soluble; one that remains as solid bits is insoluble. The labels apply to these solids; swapping them reverses the evidence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

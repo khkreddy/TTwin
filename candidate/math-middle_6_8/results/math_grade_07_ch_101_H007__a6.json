@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Hema's calculator starts at $0$ and has only $+1$, $+10$, $+100$, and $+1000$ buttons. She wants the display to show exactly $2804$ with the fewest clicks.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly gives the fewest clicks?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Press $+1000$ twice, $+100$ eight times, and $+1$ four times — $14$ clicks in all."
+        },
+        {
+          "id": "B",
+          "text": "Press $+1$ a total of $2804$ times, because any sequence of buttons is allowed without using place value."
+        },
+        {
+          "id": "C",
+          "text": "The fewest-click count is the printed label Systematic Sippy."
+        },
+        {
+          "id": "D",
+          "text": "Press $+1000$ twice and stop at $2000$, treating the remaining digits as optional."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The fewest clicks follow the place-value digits: 2 thousands, 8 hundreds, 0 tens, and 4 ones, so 2+8+0+4 = 14 clicks."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2804 = 2×1000 + 8×100 + 4×1, so the minimum is 14 clicks. Using only +1 ignores place-value buttons. A chapter label is not a click count. Stopping at 2000 omits the remaining digits.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

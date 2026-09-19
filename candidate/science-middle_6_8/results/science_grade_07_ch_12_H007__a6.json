@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara lines up a lamp, a small ball, and a globe on her desk so the ball sits between the lamp and the globe and casts a small dark patch on only part of the globe. She asks how this models a solar eclipse.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A solar eclipse occurs when the Moon comes between the Sun and Earth and blocks sunlight from a small area of Earth."
+        },
+        {
+          "id": "B",
+          "text": "A solar eclipse occurs when Earth comes between the Sun and the Moon."
+        },
+        {
+          "id": "C",
+          "text": "A total solar eclipse is visible everywhere on Earth's sunlit side at the same time."
+        },
+        {
+          "id": "D",
+          "text": "A solar eclipse occurs whenever the Moon is on the Sun-facing side of Earth, even if it is not lined up to cast a shadow on Earth."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In a solar eclipse the Moon is between the Sun and Earth and casts a shadow on only a small region of Earth, matching Kiara's lamp–ball–globe line-up."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solar eclipse: Moon between Sun and Earth, shadow on a small area. Earth between Sun and Moon is a lunar eclipse. The shadow is local, not everywhere on the day side. Alignment that casts a shadow is required, not merely being Sun-facing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

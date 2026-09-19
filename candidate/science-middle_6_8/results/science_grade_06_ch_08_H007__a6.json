@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "With the same amount of water, the flat cloth on the sunny sill dries faster than the crumpled cloth in the cool cupboard."
+    },
+    {
+      "id": "2",
+      "text": "Warmth and a larger surface open to air both help water evaporate faster."
+    },
+    {
+      "id": "3",
+      "text": "Water on the cloth cannot evaporate at all until the cloth reaches boiling temperature."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "three_statement",
+  "stem": "Ishaan spreads a wet cloth flat on a sunny sill. He also leaves an identical wet cloth crumpled in a cool cupboard.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "More exposed surface and higher temperature speed evaporation. Boiling is not required for evaporation near room temperature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

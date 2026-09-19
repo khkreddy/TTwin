@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_09/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_09/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_09/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_09:H007:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MIXTURE",
+    "chapter_id": "science/grade_06/ch_09",
+    "chapter_label": "Methods of separation",
+    "subtopic_id": "science/grade_06/ch_09/H007",
+    "stem": "Tanya leaves a mixture of water and playground sand undisturbed in a tall jar. After the sand settles, she carefully pours off the clearer water.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Sedimentation lets heavier sand settle, and decantation pours off the liquid above it.",
+      "B": "The settling of sand at the bottom is itself called decantation.",
+      "C": "The same settling-and-pour method will separate dissolved sugar from sugar water.",
+      "D": "After pouring, no tiny sand grain can remain in the liquid that was poured off."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_09/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chirag must divide the $16$ cm by $12$ cm rectangle in the diagram into identical squares that fill it with no gaps and no overlaps.\n\nWhich claim correctly plans the equal segments?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark equal $4$ cm segments along the $16$ cm and $12$ cm sides so squares of side $4$ cm fill the rectangle."
+    },
+    {
+      "id": "B",
+      "text": "Mark segments of length $16$ cm only, and ignore making the $12$ cm side match equal square sides."
+    },
+    {
+      "id": "C",
+      "text": "The rough diagram of the rectangle produces identical squares even when corresponding sides are unequal."
+    },
+    {
+      "id": "D",
+      "text": "Square the side lengths $16$ and $12$ to decide the square size."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.32,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (16,12);\n  \\node[below] at (8,0) {$16\\,\\mathrm{cm}$};\n  \\node[left] at (0,6) {$12\\,\\mathrm{cm}$};\n  \\draw[densely dashed] (4,0)--(4,12) (8,0)--(8,12) (12,0)--(12,12);\n  \\draw[densely dashed] (0,4)--(16,4) (0,8)--(16,8);\n  \\node[anchor=west,align=center] at (16.5,11) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Identical squares need equal side lengths that divide both 16 and 12; side 4 cm works. Ignoring one side omits the identical-square condition. A rough diagram does not create equal sides, and squaring the rectangle sides confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source kite/grid as a 16 by 12 rectangle with dashed 4 cm square grid."
+  }
+}

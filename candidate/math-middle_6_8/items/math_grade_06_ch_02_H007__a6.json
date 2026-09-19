@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_02/H007",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_02/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": null,
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_02/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H007:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H007",
+    "stem": "Esha folds two paper wedges for a craft display. The diagram shows angle $J$ and angle $K$.\n\nOne or more options may be correct. Which two claims correctly decide which angle is larger by overlaying?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Match the vertices and align one arm; the free arm of angle $K$ opens farther, so angle $K$ is larger.",
+      "B": "Judge which opening is larger while the vertices stay apart on the desk.",
+      "C": "After the vertices coincide and one arm is aligned, the free arm that sticks out farther belongs to the larger angle.",
+      "D": "The printed letter names $J$ and $K$ alone decide which angle is larger."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=1.0,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[thick] (2.1,0)--(0,0)--(1.95,0.85);\n  \\fill (0,0) circle (1.4pt);\n  \\node[below left] at (0,0) {$J$};\n  \\draw (0.55,0) arc (0:23:0.55);\n  \\begin{scope}[shift={(4.0,0)}]\n    \\draw[thick] (2.2,0)--(0,0)--(1.55,1.55);\n    \\fill (0,0) circle (1.4pt);\n    \\node[below left] at (0,0) {$K$};\n    \\draw (0.55,0) arc (0:45:0.55);\n  \\end{scope}\n  \\node[anchor=west,align=center] at (7.0,0.9) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

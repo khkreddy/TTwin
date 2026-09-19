@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_12/H007",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_12/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "mx_allowlist": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "UNRESOLVED",
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_12/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_12:H007:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_06/ch_12",
+    "chapter_label": "Beyond Earth",
+    "subtopic_id": "science/grade_06/ch_12/H007",
+    "stem": "The diagram shows the dusk sky with one bright object. People call this object the Evening Star. Dev asks what it is.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The bright object is Venus, a planet that looks bright at dusk but is not a star.",
+      "B": "Venus looks bright by reflected sunlight; it does not make its own light like a star.",
+      "C": "It must be a star because people call it the Evening Star.",
+      "D": "Venus is the brightest object in the whole sky at all times."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n% dusk sky\n\\fill[blue!35!black] (0,0.8) rectangle (6.0,3.0);\n\\fill[orange!50!black] (0,0.35) rectangle (6.0,0.8);\n% ground\n\\fill[black!75] (0,0) rectangle (6.0,0.35);\n\\node[white] at (1.2,0.18) {horizon};\n% one bright object\n\\fill[yellow!95!white] (4.5,2.2) circle (0.14);\n\\draw[white] (4.5,2.2) circle (0.14);\n\\node[white] at (4.5,1.65) {bright object};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_12/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

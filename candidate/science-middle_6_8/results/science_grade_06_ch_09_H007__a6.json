@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Sedimentation lets heavier sand settle, and decantation pours off the liquid above it."
+    },
+    {
+      "id": "B",
+      "text": "The settling of sand at the bottom is itself called decantation."
+    },
+    {
+      "id": "C",
+      "text": "The same settling-and-pour method will separate dissolved sugar from sugar water."
+    },
+    {
+      "id": "D",
+      "text": "After pouring, no tiny sand grain can remain in the liquid that was poured off."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Tanya leaves a mixture of water and playground sand undisturbed in a tall jar. After the sand settles, she carefully pours off the clearer water.\n\nWhich statement is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sedimentation settles heavier insoluble sand; decantation pours off the liquid above it. Dissolved sugar does not settle; some fine grains can remain suspended.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni studies a circular badge divided into $9$ equal sector parts that meet at the centre.\n\nWhich claim correctly states the smallest rotation angle about the centre that maps the badge onto itself, and the order of that rotation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The smallest angle is $40^{\\circ}$ and the order is $9$, because $360^{\\circ}\\div 9=40^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "The smallest angle is $40^{\\circ}$ even when the nine parts are not equal."
+    },
+    {
+      "id": "C",
+      "text": "The smallest angle is $360^{\\circ}\\times 9=3240^{\\circ}$ and the order is $9$."
+    },
+    {
+      "id": "D",
+      "text": "Line symmetry of the badge alone settles the smallest rotation angle and the order."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "operation_confusion",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Nine equal sectors give smallest rotational angle 360/9 = 40° and order 9. Unequal parts drop the equal-spacing condition. Multiplying instead of dividing confuses the operation. Line symmetry is a different test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}
