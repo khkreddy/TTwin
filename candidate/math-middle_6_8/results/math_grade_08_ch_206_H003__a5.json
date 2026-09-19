@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina fills a number pyramid. Each box is the sum of the two boxes directly below it. The top box is $25$ and the lower-left box touching it is $9$. The lower-right box touching the top is missing.\n\nWhich claim correctly finds the missing box?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The missing box is $25$, copying the top label into the lower-right entry."
+    },
+    {
+      "id": "B",
+      "text": "The missing box is $16$, because the missing lower box is $25-9$."
+    },
+    {
+      "id": "C",
+      "text": "The missing box is $34$, because the missing lower box is $25+9$."
+    },
+    {
+      "id": "D",
+      "text": "The missing box is $9$, matching the lower-left label already printed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Top equals sum of the two touching lower boxes, so missing = 25−9 = 16. Adding reverses the pyramid relation; copying 25 or 9 grabs a printed label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

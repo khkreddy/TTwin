@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_101/H012",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_101/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": null,
+      "C": "mechanism_conflation",
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_101/H012; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_101:H012:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_101",
+    "chapter_label": "math/grade_07/ch_101",
+    "subtopic_id": "math/grade_07/ch_101/H012",
+    "stem": "Alok's school stores $2400$ litres of water for a $3$-day camp with $100$ students. He assumes each student needs about $7$ litres per day.\n\nWhich claim correctly decides whether the stored water is enough?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Converting the $2400$ litres count is the method; the $7$ litres-per-day assumption is not used.",
+      "B": "Assume about $7$ litres per student per day, compute $100 \\times 7 \\times 3 = 2100$, and compare with $2400$: the store is enough.",
+      "C": "Comparing $2400$ with $100$ alone decides whether the water lasts.",
+      "D": "Divide $2400$ by $7$ only, skipping the student count and the number of days."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_101/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

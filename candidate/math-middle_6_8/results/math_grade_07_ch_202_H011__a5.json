@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Madhav asks what integer $q$ satisfies $(-8)\\times q = 56$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$q = -7$, because $(-8)\\times(-7) = 56$ and unlike signs for $56$ and $-8$ make $q$ negative."
+    },
+    {
+      "id": "B",
+      "text": "$q = 7$, from $56\\div 8$, with the sign pattern omitted."
+    },
+    {
+      "id": "C",
+      "text": "$q = (-8)\\div 56$, treating the dividend as the missing factor run backwards."
+    },
+    {
+      "id": "D",
+      "text": "$q = 448$, from multiplying $56$ by $8$ instead of dividing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Missing-factor view: (-8)×q=56 so q=56÷(-8)=-7. Dropping the sign, reversing dividend/divisor roles, or multiplying instead of dividing all miss the integer-division hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

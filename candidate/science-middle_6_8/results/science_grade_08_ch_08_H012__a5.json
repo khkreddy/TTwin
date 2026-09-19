@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya examines a rock with several different minerals visible under a magnifying glass. She also studies a native mineral that is a pure element, and another mineral made of more than one element.\n\nWhich statements correctly classify these materials?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The rock with several visible minerals is a mixture of minerals."
+    },
+    {
+      "id": "2",
+      "text": "The mineral made of more than one element is a compound."
+    },
+    {
+      "id": "3",
+      "text": "The native mineral that is a pure element is a compound because it is found in the Earth with other rocks."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Most rocks are mixtures of minerals; a multi-element mineral is a compound; a native pure-element mineral is not a compound. Statement 3 is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

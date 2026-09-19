@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan compares two rectangles. Both have perimeter $30\\,\\mathrm{cm}$. One is $9\\,\\mathrm{cm}$ by $6\\,\\mathrm{cm}$; the other is $10\\,\\mathrm{cm}$ by $5\\,\\mathrm{cm}$.\n\nWhich claim correctly decides what the equal perimeters tell about area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The areas must be equal because both shapes are described with the word perimeter."
+    },
+    {
+      "id": "B",
+      "text": "Equal perimeters guarantee equal areas."
+    },
+    {
+      "id": "C",
+      "text": "The perimeters match but the areas differ ($54\\,\\mathrm{cm}^{2}$ versus $50\\,\\mathrm{cm}^{2}$), so perimeter alone does not fix area."
+    },
+    {
+      "id": "D",
+      "text": "Each area is $30\\,\\mathrm{cm}^{2}$ because $30$ is the number given as the perimeter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeters are both 30 cm, but areas are 9×6=54 and 10×5=50, so equal perimeter does not imply equal area.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ojas compares spinach grown on a nearby field with the same kind of spinach brought by truck from far away. Food miles are the travel from producer to consumer.\n\nWhy can choosing the nearby spinach help?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Shorter producer-to-consumer travel means fewer food miles, which can cut transport cost and pollution."
+    },
+    {
+      "id": "B",
+      "text": "Spinach grown nearby always has fewer food miles, even if it travels through a distant warehouse first."
+    },
+    {
+      "id": "C",
+      "text": "Putting the far-away spinach on sale reduces its food miles even when the truck route stays unchanged."
+    },
+    {
+      "id": "D",
+      "text": "The greener-looking bunch has fewer food miles, even if it travelled farther."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Food miles measure producer-to-consumer travel. Nearby spinach with a shorter route has fewer food miles, which can lower transport cost and pollution. A distant warehouse, a sale price, or greener looks do not by themselves cut food miles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

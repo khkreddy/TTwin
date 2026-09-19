@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H011",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_201/H011; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H011:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H011",
+    "stem": "The diagram shows lines $LM$ and $NO$ cut by transversal $BD$. Lalit notes that triangles $LBD$ and $NDB$ are congruent, and that congruence makes a pair of alternate interior angles equal.\n\nWhich claim correctly concludes that $LM \\parallel NO$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$LM \\parallel NO$, because the congruent triangles make a pair of alternate interior angles equal for transversal $BD$.",
+      "B": "Lines $LM$ and $NO$ are the alternate interior angles on transversal $BD$.",
+      "C": "$LM \\parallel NO$, because the triangles are congruent, even when those alternate interior angles are unequal.",
+      "D": "$LM \\parallel NO$, because matching sides of the triangles are equal, and equal sides alone settle parallelism."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (L) at (0,2.8);\n  \\coordinate (M) at (5.2,2.8);\n  \\coordinate (N) at (0,0.4);\n  \\coordinate (O) at (5.2,0.4);\n  \\coordinate (B) at (1.2,3.4);\n  \\coordinate (D) at (4.0,-0.2);\n  \\draw[line width=1.05pt] (L)--(M);\n  \\draw[line width=1.05pt] (N)--(O);\n  \\draw[line width=1.05pt] (B)--(D);\n  \\fill (B) circle (1.3pt);\n  \\fill (D) circle (1.3pt);\n  \\node[above left] at (L) {L};\n  \\node[above right] at (M) {M};\n  \\node[below left] at (N) {N};\n  \\node[below right] at (O) {O};\n  \\node[above] at (B) {B};\n  \\node[below] at (D) {D};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

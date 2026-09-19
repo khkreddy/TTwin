@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_103/H011",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_103/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_103/H011; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_103:H011:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-PLACEVALUE",
+    "chapter_id": "math/grade_07/ch_103",
+    "chapter_label": "math/grade_07/ch_103",
+    "subtopic_id": "math/grade_07/ch_103/H011",
+    "stem": "Gopal computes $9.6 + 4.7$ and writes $1.43$ as the sum.\n\nWhich claim correctly checks whether that sum is reasonable?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Reject $1.43$, because the whole-number parts alone are about $9+4=13$, so the sum must be near $14$, not near $1$.",
+      "B": "Report the word range as the check and stop.",
+      "C": "Accept $1.43$ as the exact place-value answer, treating the estimate as a replacement for the sum.",
+      "D": "The range produces the estimate, so start from a chosen interval and invent $9.6$ and $4.7$ afterward."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_103/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

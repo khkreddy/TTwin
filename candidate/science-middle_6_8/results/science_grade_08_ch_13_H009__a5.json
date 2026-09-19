@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zara's class visits a village pond with reeds, small fish, insects, muddy banks, air, and sunlight. They ask how living beings and non-living parts keep this place in balance.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Plants make food, animals feed on plants or other animals, and decomposers return nutrients to the pond and mud."
+    },
+    {
+      "id": "B",
+      "text": "Land, air, water, and living things work together as a connected system, not living things alone."
+    },
+    {
+      "id": "C",
+      "text": "Only the fish keep the pond in balance; mud, air, and sunlight play no role."
+    },
+    {
+      "id": "D",
+      "text": "Balance among living things appears first, and that produces mud, air, and water in the pond."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balance needs producers, consumers, decomposers plus non-living parts together. Ignoring non-living parts or reversing cause and effect is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

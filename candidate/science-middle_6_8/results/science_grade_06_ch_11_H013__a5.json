@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Charu makes a fuels chart for class. She lists coal, petroleum, natural gas, petrol, diesel, kerosene, CNG, LPG, wood, and dung cakes. Some autos run on CNG; her kitchen uses LPG.\n\nWhich claims correctly group these fuels? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Coal, petroleum, and natural gas are fossil fuels."
+    },
+    {
+      "id": "B",
+      "text": "Petrol, diesel, and kerosene are obtained from petroleum."
+    },
+    {
+      "id": "C",
+      "text": "Wood and dung cakes are fossil fuels because they burn for cooking."
+    },
+    {
+      "id": "D",
+      "text": "CNG is compressed LPG."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Coal, petroleum, and natural gas are fossil fuels; petrol, diesel, and kerosene come from petroleum. Wood and dung cakes are not fossil fuels. CNG is compressed natural gas, not compressed LPG.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha draws rectangle $PQRS$ with diagonal $PR$. Triangle $PQR$ uses three corners of the rectangle.\n\nWhich claim about the areas is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Triangle $PQR$ has half the area of rectangle $PQRS$."
+    },
+    {
+      "id": "B",
+      "text": "The area of triangle $PQR$ equals the length of diagonal $PR$."
+    },
+    {
+      "id": "C",
+      "text": "Rectangle $PQRS$ has half the area of triangle $PQR$."
+    },
+    {
+      "id": "D",
+      "text": "Triangle $PQR$ and rectangle $PQRS$ have the same area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A diagonal splits a rectangle into two equal-area triangles, so triangle PQR has half the area of rectangle PQRS.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

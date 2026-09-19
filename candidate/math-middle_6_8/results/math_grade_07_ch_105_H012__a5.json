@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Sonia knows that lines $m$ and $n$ are parallel. Transversal $s$ crosses both lines. Angle $u$ measures $55^{\\circ}$. Angle $v$ is alternate to angle $u$.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Angle $v$ equals $55^{\\circ}$ because alternate angles are equal when the lines are parallel."
+    },
+    {
+      "id": "2",
+      "text": "Angle $v$ equals $55^{\\circ}$ even if $m$ and $n$ are not parallel."
+    },
+    {
+      "id": "3",
+      "text": "The same alternate-angle equality holds for any two lines cut by a transversal, parallel or not."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Alternate angles are equal only when the cut lines are parallel. Statements 2 and 3 drop that condition or over-extend the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

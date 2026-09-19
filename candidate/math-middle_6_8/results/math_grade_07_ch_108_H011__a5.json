@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal will compute $24 \\div 0.4$. Before calculating, she wants to predict how the quotient compares with the dividend $24$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The quotient is greater than $24$, because the divisor $0.4$ is between $0$ and $1$."
+    },
+    {
+      "id": "B",
+      "text": "The quotient is less than $24$, because dividing always makes a positive quantity smaller."
+    },
+    {
+      "id": "C",
+      "text": "Because the quotient will be larger, the divisor must be greater than $1$."
+    },
+    {
+      "id": "D",
+      "text": "Skip the size check; this comparison is only for whole-number divisors."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For positive quantities, dividing by a number between 0 and 1 makes the quotient larger than the dividend. Claiming division always shrinks, reversing the divisor-size implication, or restricting the rule to whole-number divisors miss that prediction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

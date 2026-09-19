@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Ishaan lowering a closed empty plastic bottle into a bucket of water. The bottle feels lighter in the water than in the air, and it tends to bounce upward.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best explains why the immersed bottle feels lighter?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The water applies an upward force on the bottle equal to the weight of the water the bottle displaces."
+        },
+        {
+          "id": "B",
+          "text": "The water removes the downward pull of Earth on the bottle."
+        },
+        {
+          "id": "C",
+          "text": "The mass of the bottle decreases while it is in the water."
+        },
+        {
+          "id": "D",
+          "text": "The water applies only a downward force on the bottle."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% bucket\n\\draw[thick] (0,0) -- (0,2.4) -- (3.2,2.4) -- (3.2,0);\n\\draw[thick] (0,0) -- (3.2,0);\n% water surface\n\\draw[thick,blue!60!black] (0.15,1.9) -- (3.05,1.9);\n\\node[blue!60!black,right] at (3.05,1.9) {water};\n% bottle (immersed)\n\\draw[thick,fill=gray!10] (1.1,0.55) rectangle (2.1,1.65);\n\\node at (1.6,1.1) {bottle};\n% upward force\n\\draw[->,thick] (1.6,1.7) -- (1.6,2.55);\n\\node[above] at (1.6,2.55) {upward force};\n% weight\n\\draw[->,thick] (1.6,0.5) -- (1.6,-0.2);\n\\node[below] at (1.6,-0.2) {weight};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Liquids apply an upward force on immersed objects equal to the weight of the liquid displaced, so the bottle feels lighter and tends to move upward."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An immersed object experiences an upward buoyant force equal to the weight of the liquid displaced. Gravity is not removed, mass does not decrease, and the liquid does not push only downward.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source lens ray diagram into a bucket with an immersed bottle and force arrows."
+  }
+}

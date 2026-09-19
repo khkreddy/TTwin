@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows lines $LM$ and $NO$ cut by transversal $BD$. Lalit notes that triangles $LBD$ and $NDB$ are congruent, and that congruence makes a pair of alternate interior angles equal.\n\nWhich claim correctly concludes that $LM \\parallel NO$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$LM \\parallel NO$, because the congruent triangles make a pair of alternate interior angles equal for transversal $BD$."
+    },
+    {
+      "id": "B",
+      "text": "Lines $LM$ and $NO$ are the alternate interior angles on transversal $BD$."
+    },
+    {
+      "id": "C",
+      "text": "$LM \\parallel NO$, because the triangles are congruent, even when those alternate interior angles are unequal."
+    },
+    {
+      "id": "D",
+      "text": "$LM \\parallel NO$, because matching sides of the triangles are equal, and equal sides alone settle parallelism."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (L) at (0,2.8);\n  \\coordinate (M) at (5.2,2.8);\n  \\coordinate (N) at (0,0.4);\n  \\coordinate (O) at (5.2,0.4);\n  \\coordinate (B) at (1.2,3.4);\n  \\coordinate (D) at (4.0,-0.2);\n  \\draw[line width=1.05pt] (L)--(M);\n  \\draw[line width=1.05pt] (N)--(O);\n  \\draw[line width=1.05pt] (B)--(D);\n  \\fill (B) circle (1.3pt);\n  \\fill (D) circle (1.3pt);\n  \\node[above left] at (L) {L};\n  \\node[above right] at (M) {M};\n  \\node[below left] at (N) {N};\n  \\node[below right] at (O) {O};\n  \\node[above] at (B) {B};\n  \\node[below] at (D) {D};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal alternate interior angles from the congruence force LM∥NO. Renaming the lines as the angles swaps terms. Dropping the equal-angle step, or treating equal sides alone as enough, misses the parallel hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as lines LM and NO cut by transversal BD."
+  }
+}

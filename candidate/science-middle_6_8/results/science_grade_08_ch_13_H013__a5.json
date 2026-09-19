@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Ira labels a flower chart showing anthers, pollen grains, and ovules. She then compares fertilisation in a frog with fertilisation in a hen.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "In the flower, pollen grains in the anther are male gametes and ovules are female gametes."
+    },
+    {
+      "id": "2",
+      "text": "In a frog, sperm and eggs may be released into water for fertilisation."
+    },
+    {
+      "id": "3",
+      "text": "In a hen, the male and female gametes are pollen grains and ovules."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Flower male gametes are pollen in anthers and female gametes are ovules; frogs may fertilise in water. Petals and roots are not animal gametes. Correct pair is 1 and 2.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

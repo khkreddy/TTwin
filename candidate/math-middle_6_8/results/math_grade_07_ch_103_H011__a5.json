@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gopal computes $9.6 + 4.7$ and writes $1.43$ as the sum.\n\nWhich claim correctly checks whether that sum is reasonable?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Reject $1.43$, because the whole-number parts alone are about $9+4=13$, so the sum must be near $14$, not near $1$."
+    },
+    {
+      "id": "B",
+      "text": "Report the word range as the check and stop."
+    },
+    {
+      "id": "C",
+      "text": "Accept $1.43$ as the exact place-value answer, treating the estimate as a replacement for the sum."
+    },
+    {
+      "id": "D",
+      "text": "The range produces the estimate, so start from a chosen interval and invent $9.6$ and $4.7$ afterward."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "9.6+4.7 is near 14 by place-value estimate, so 1.43 is unreasonable. Naming range alone, treating estimate as the exact sum, or reversing range into the addends miss the check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

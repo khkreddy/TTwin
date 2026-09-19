@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni multiplies a $2$-digit whole number by a $2$-digit whole number. She wants how many digits the product can have, without multiplying every pair.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The product can have $3$ digits or $4$ digits."
+    },
+    {
+      "id": "B",
+      "text": "Report the word product as the digit count and stop."
+    },
+    {
+      "id": "C",
+      "text": "The product always has exactly $2+2=4$ digits, with no need to check the smallest case."
+    },
+    {
+      "id": "D",
+      "text": "The digit count produces the factors, so start from a chosen digit length and invent the two factors afterward."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Smallest 2-digit×2-digit product is 10×10=100 (3 digits); largest is 99×99=9801 (4 digits). Naming the word product, forcing 4 digits only, or reversing digit count into factors miss that range.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

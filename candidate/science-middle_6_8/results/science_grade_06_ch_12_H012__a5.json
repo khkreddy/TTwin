@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bilal camps on a dark moonless hill far from city lights. He sees a faint band of light across the sky and later reads that astronomers found planets revolving around stars other than the Sun.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best organises the Milky Way, other galaxies, exoplanets, and the question of life elsewhere?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The faint band is the Milky Way, our home galaxy; other galaxies lie beyond it; exoplanets orbit other stars; whether life exists elsewhere is still unknown."
+        },
+        {
+          "id": "B",
+          "text": "A planet revolving around another star in the Milky Way is itself a galaxy."
+        },
+        {
+          "id": "C",
+          "text": "The Milky Way Galaxy sits inside the Solar System."
+        },
+        {
+          "id": "D",
+          "text": "On a moonless night the Milky Way band is equally easy to see from a brightly lit city and from a dark countryside hill."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The Milky Way is our galaxy and can appear as a faint band from a dark site; exoplanets orbit other stars; life elsewhere remains an open question."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Milky Way is our galaxy; other galaxies lie beyond it; exoplanets orbit other stars; life elsewhere is unknown. A planet is not a galaxy; the Solar System sits inside the Milky Way; city lights hide the faint band.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

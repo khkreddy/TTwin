@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_02/H012",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_02/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_02/H012; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H012:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H012",
+    "stem": "Esha must construct a $55^{\\circ}$ angle with ruler and protractor. The diagram shows vertex $V$ and base arm $VA$ already drawn.\n\nWhich plan correctly builds that angle?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Seat the protractor centre on $V$, align arm $VA$ with $0^{\\circ}$, mark $55^{\\circ}$ on the correct scale, and draw the second arm through that mark.",
+      "B": "Call the finished drawing the vertex and stop there.",
+      "C": "Seat the protractor centre on $V$ but leave arm $VA$ off the $0^{\\circ}$ mark before marking $55^{\\circ}$.",
+      "D": "Mark $55$ only because that number is printed in the stem."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (V) at (0,0);\n  \\coordinate (A) at (4.0,0);\n  \\coordinate (M) at ({3.6*cos(55)},{3.6*sin(55)});\n  \\draw[line width=0.85pt,->] (V)--(A) node[right] {$A$};\n  \\draw[dashed,line width=0.55pt,->] (V)--(M);\n  \\node[below left] at (V) {$V$};\n  \\draw[line width=0.5pt] (0.7,0) arc[start angle=0,end angle=55,radius=0.7];\n  \\node at (1.15,0.42) {$55^{\\circ}$};\n  \\node[align=center,anchor=west] at (4.8,1.8) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

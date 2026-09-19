@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Jatin works with Virahanka numbers that include $8$, $13$, $21$. Each next term is the sum of the two previous terms. The parity pattern odd, even, odd repeats along the list.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly extends the sequence?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The next term is $34$, and $34$ is even, matching the repeating parity pattern."
+        },
+        {
+          "id": "B",
+          "text": "The next term is $21$, because the last printed term repeats."
+        },
+        {
+          "id": "C",
+          "text": "The next term is $42$, because each term is double the one before."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "8+13=21 and 13+21=34; among odd, even, odd, the term after odd 21 is even, so 34 fits."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Next Virahanka term after 13 and 21 is 34, which is even in the odd-even-odd parity cycle. Repeating 21 or doubling 21 conflate other rules.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

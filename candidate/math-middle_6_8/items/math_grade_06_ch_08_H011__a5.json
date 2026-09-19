@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_08/H011",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_08/H011",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "term_substitution",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_08/H011; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H011:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H011",
+    "stem": "Bhavna must locate every point that is $6\\,\\mathrm{cm}$ from point $P$ and also $6\\,\\mathrm{cm}$ from point $Q$.\n\nWhich two claims correctly locate those points?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Take the intersection points of the circle centred at $P$ with radius $6\\,\\mathrm{cm}$ and the circle centred at $Q$ with radius $6\\,\\mathrm{cm}$.",
+      "B": "Take the intersection points of an arc of radius $6\\,\\mathrm{cm}$ drawn from $P$ with an arc of radius $6\\,\\mathrm{cm}$ drawn from $Q$.",
+      "C": "Treat point $P$ itself as every such point.",
+      "D": "Take the midpoint of segment $PQ$ only because $6$ is printed, without drawing equal-radius arcs."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

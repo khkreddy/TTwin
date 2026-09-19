@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zubin marks point $R$ above a flat floor. He drops a perpendicular from $R$ to the floor, meeting it at $H$. He also draws a slanted segment from $R$ to another floor point $K$.\n\nWhich claim correctly describes the perpendicular projection of $R$ onto the floor?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The foot $H$ is the perpendicular projection of $R$ onto the floor."
+    },
+    {
+      "id": "B",
+      "text": "Name the answer as plane only, with no choice between $H$ and $K$."
+    },
+    {
+      "id": "C",
+      "text": "Point $K$ is the projection because $K$ is farther along the floor from under $R$."
+    },
+    {
+      "id": "D",
+      "text": "Any point on the floor is the projection of $R$, even when the joining segment is not perpendicular."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The perpendicular projection of a point onto a plane (here the floor) is the foot of the perpendicular from the point to the plane, so H is the projection, not slanted K.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

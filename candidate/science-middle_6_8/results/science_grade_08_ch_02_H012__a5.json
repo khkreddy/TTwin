@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya prepares two similar soft dough balls with flour, sugar, and warm water for a school bake sale. She mixes yeast into the first ball and leaves yeast out of the second. After some time, only the first ball has risen.\n\nWhy does the dough with yeast rise?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yeast grows in the warm dough and makes the dough rise after some time."
+    },
+    {
+      "id": "B",
+      "text": "The yeast dough rises immediately when the yeast is mixed in."
+    },
+    {
+      "id": "C",
+      "text": "The dough must expand first to give the yeast room to grow."
+    },
+    {
+      "id": "D",
+      "text": "Both doughs stay the same size later because they look identical just after mixing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Yeast is a fungus that grows well in warm conditions; after some time it makes the dough rise. The rise is not immediate, expansion is not a precondition for yeast growth, and identical look just after mixing does not predict later size.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

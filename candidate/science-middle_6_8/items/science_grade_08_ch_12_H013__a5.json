@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_12/H013",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_12/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_12/H013; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H013:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H013",
+    "stem": "Aarav's uncle reports that nilgai have begun entering crop fields after a dry season left forest grass scarce and nearby streams almost empty.\n\nWhich claim best explains why the animals moved?",
+    "item_type": "mcq",
+    "options": {
+      "A": "When food plants and water become scarce in the natural habitat, nilgai move into farms in search of resources.",
+      "B": "Nilgai enter farms for company even when forest grass and streams remain plentiful.",
+      "C": "Farms create extra forest grass and fuller streams, which then pull the nilgai in.",
+      "D": "Forest cover, rainfall, and water have no link to where nilgai find food and water."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

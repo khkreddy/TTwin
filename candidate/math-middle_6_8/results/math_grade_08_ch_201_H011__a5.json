@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wafa invests $\\mathrm{Rs}\\,400$ in goods and sells them for $\\mathrm{Rs}\\,500$. The profit amount is $\\mathrm{Rs}\\,100$.\n\nWhich claim correctly states the profit percentage?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer investment cost only, with no percentage computed from the profit amount."
+    },
+    {
+      "id": "B",
+      "text": "Profit percentage is $\\dfrac{100}{500}\\times 100\\% = 20\\%$, using the selling price as the base."
+    },
+    {
+      "id": "C",
+      "text": "Profit percentage is $\\dfrac{100}{400}\\times 100\\% = 25\\%$, measured against the investment cost."
+    },
+    {
+      "id": "D",
+      "text": "Profit percentage is $100\\%$, reading the printed profit amount $100$ as the percentage."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Profit percentage against investment cost is 100/400×100%=25%. Naming cost alone, using selling price as base, or reading 100 as the percentage miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

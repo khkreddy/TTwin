@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tejas draws parallelogram $ABCD$ with diagonals $AC$ and $BD$ meeting at $O$.\n\nWhich claim about the diagonals is correct for every parallelogram?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The diagonals are equal in length, because the figure is labelled parallelogram."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer diagonal only, with no statement about $O$, $AC$, or $BD$."
+    },
+    {
+      "id": "C",
+      "text": "The diagonals bisect each other: $O$ is the midpoint of both $AC$ and $BD$."
+    },
+    {
+      "id": "D",
+      "text": "Bisection holds for $AC$ even when $O$ is not the midpoint of $BD$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In every parallelogram the diagonals bisect each other at O. Equal length is not required; naming diagonal alone or dropping mutual midpoints misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

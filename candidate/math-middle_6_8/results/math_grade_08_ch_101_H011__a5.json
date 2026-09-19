@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qasim checks whether whole numbers are perfect cubes and computes simple cubes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5^{3} = 125$, so $125$ is a perfect cube; also $2^{3} = 8$."
+    },
+    {
+      "id": "B",
+      "text": "Call $125$ a perfect cube label only, with no check that some whole number cubes to $125$."
+    },
+    {
+      "id": "C",
+      "text": "$80$ is a perfect cube because it ends with a zero."
+    },
+    {
+      "id": "D",
+      "text": "$8$ is a perfect cube even when the edge length is not a whole number of unit cubes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5³=125 and 2³=8 are perfect cubes. Labelling without a cube check, reading a trailing zero, or dropping the whole-number edge condition all miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

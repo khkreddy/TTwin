@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yamini knows that $(8, 15, 17)$ is a Baudhāyana triple. She multiplies every entry by $4$ to get $(32, 60, 68)$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(32, 60, 68)$ is a Baudhāyana triple because $32^{2}+60^{2}=68^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "The answer is the common scale factor $4$, not whether $(32, 60, 68)$ stays a Baudhāyana triple."
+    },
+    {
+      "id": "C",
+      "text": "$(32, 60, 68)$ stays a Baudhāyana triple even if $8^{2}+15^{2}=17^{2}$ is never checked."
+    },
+    {
+      "id": "D",
+      "text": "$(32, 60, 68)$ prints larger digits than $(8, 15, 17)$, so it cannot stay a Baudhāyana triple."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scaling every entry of a Baudhāyana triple by the same positive integer preserves a²+b²=c², and 32²+60²=68² confirms (32,60,68) is still a triple.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

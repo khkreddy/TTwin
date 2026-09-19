@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Alok searches 12-hour clock times for a digit pattern: all four digits are the same, and the time must be valid on a 12-hour clock.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$11{:}11$ works, because its four digits match and it is a valid 12-hour time."
+    },
+    {
+      "id": "B",
+      "text": "$13{:}13$ works, because its four digits match, even though $13$ is not a 12-hour hour."
+    },
+    {
+      "id": "C",
+      "text": "A valid 12-hour time produces the matching-digit pattern, so first pick any valid time and then force its digits to match."
+    },
+    {
+      "id": "D",
+      "text": "$22{:}22$ on a 24-hour clock counts the same way, so the 12-hour validity check can be skipped."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "11:11 has four matching digits and is valid on a 12-hour clock. 13:13 omits 12-hour validity; reversing so a time invents the pattern, or scoring 24-hour displays the same way, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

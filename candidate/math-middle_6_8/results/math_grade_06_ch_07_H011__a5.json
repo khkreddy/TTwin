@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar measures a ribbon using the fractional unit $\\dfrac{1}{6}$ metre. Exactly $11$ of those units cover the ribbon end to end.\n\nWhich claim correctly writes the ribbon length?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ribbon length is $\\dfrac{11}{6}$ metres."
+    },
+    {
+      "id": "B",
+      "text": "The ribbon length is $\\dfrac{11}{6}$ metres even if a different whole is used for the unit $\\dfrac{1}{6}$."
+    },
+    {
+      "id": "C",
+      "text": "The count $11$ produces the unit $\\dfrac{1}{6}$, so start from $11$ and invent the fractional unit afterward."
+    },
+    {
+      "id": "D",
+      "text": "The ribbon length is $11.6$ metres, by reading the digits as a decimal conversion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Eleven copies of 1/6 metre make 11/6 metres when the unit whole is fixed. Dropping the fixed-whole condition, reversing so the count invents the unit, or treating the digits as a decimal conversion miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

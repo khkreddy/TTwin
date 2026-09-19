@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leela makes a science-fair poster. She must label coal, petroleum, sunlight, and wind using two checks: how quickly each resource can be replenished, and whether continued use can exhaust it.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sunlight and wind are renewable; coal and petroleum are non-renewable because they take millions of years to form and get exhausted once used."
+    },
+    {
+      "id": "B",
+      "text": "Petroleum is renewable because it can still be pumped from the ground today."
+    },
+    {
+      "id": "C",
+      "text": "Sunlight is non-renewable because it feels hot like burning coal."
+    },
+    {
+      "id": "D",
+      "text": "Wind is non-renewable because a calm day shows it can be used up."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Renewable resources replenish in a reasonable time; fossil fuels form over millions of years, are limited, and are exhausted once used.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

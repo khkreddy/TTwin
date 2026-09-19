@@ -1,0 +1,106 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_12/H014",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_12/H014",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": null,
+      "C": "scope_error",
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_12/H014; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H014:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H014",
+    "stem": "Aisha helps manage a village fish pond and a kitchen garden. The group debates how to keep these human-made ecosystems healthy while meeting food needs.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 and 2 only",
+      "B": "1 and 3 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "A fish pond can meet human needs and still support ecosystem health if it is well designed and managed with environment-friendly practices."
+      },
+      {
+        "id": "2",
+        "text": "Any kitchen garden supports ecosystem health automatically, even if it pollutes soil and water, because it is a human-made ecosystem."
+      },
+      {
+        "id": "3",
+        "text": "Practices that reduce pollution, protect soil health, and keep useful living variety help judge whether a managed ecosystem supports long-term farming."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
