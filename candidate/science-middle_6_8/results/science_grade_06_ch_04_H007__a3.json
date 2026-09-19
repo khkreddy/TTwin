@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohan puts a thin paper sheet between a magnet and a compass needle.\n\nWhat should happen to the needle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needle must stop responding, because any sheet blocks magnetism."
+    },
+    {
+      "id": "B",
+      "text": "The needle can still turn; a common thin sheet does not cut off the magnet's effect."
+    },
+    {
+      "id": "C",
+      "text": "The needle works only if the sheet is metal."
+    },
+    {
+      "id": "D",
+      "text": "The compass becomes a magnet itself and ignores the bar."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A thin common sheet between magnet and compass does not stop the needle from responding. It is not 'any sheet blocks' and not metal-only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

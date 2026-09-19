@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A bus looks still to Aditi sitting in it, but moving to Kabir on the road.\n\nIs the bus in motion?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It cannot be both; motion does not depend on a reference."
+    },
+    {
+      "id": "B",
+      "text": "It is at rest relative to Aditi and in motion relative to Kabir."
+    },
+    {
+      "id": "C",
+      "text": "It is moving only if the driver says so."
+    },
+    {
+      "id": "D",
+      "text": "Rest and motion are the same for every observer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "UNRESOLVED",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Motion or rest is judged against a chosen reference. Different references can disagree honestly.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

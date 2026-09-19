@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev's 15 cm scale is broken at the zero end, so he starts at the 1 cm mark and the other end of a pencil is at 8 cm.\n\nWhat is the pencil's length?",
+  "options": [
+    {
+      "id": "A",
+      "text": "8 cm, because that is the number he sees."
+    },
+    {
+      "id": "B",
+      "text": "7 cm: 8 cm minus 1 cm."
+    },
+    {
+      "id": "C",
+      "text": "9 cm, by adding 1 and 8."
+    },
+    {
+      "id": "D",
+      "text": "Length cannot be found on a broken scale."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "operation_confusion",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When zero is not used, length is the difference of the two marks. Seeing 8 is not the length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

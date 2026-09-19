@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Noor has to measure a curved leaf edge.\n\nWhat should she do?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a straight scale along a chord and call that the edge."
+    },
+    {
+      "id": "B",
+      "text": "Lay thread along the curve, then measure the thread on a scale."
+    },
+    {
+      "id": "C",
+      "text": "Guess from how green the leaf looks."
+    },
+    {
+      "id": "D",
+      "text": "Curved lengths cannot be measured."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "surface_feature_capture",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A curved edge is measured by following it (thread) then reading a scale, not by a straight shortcut or colour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

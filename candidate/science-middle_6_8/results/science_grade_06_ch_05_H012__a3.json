@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A swing moves to and fro about its rest position.\n\nHow should that motion be classified?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Linear, because it is in a playground."
+    },
+    {
+      "id": "B",
+      "text": "Oscillatory: to-and-fro about a fixed position."
+    },
+    {
+      "id": "C",
+      "text": "Not motion unless it goes in a circle."
+    },
+    {
+      "id": "D",
+      "text": "Linear, because the seat is a straight plank."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To-and-fro about a rest position is oscillatory. A straight seat or a playground does not make it linear.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}
