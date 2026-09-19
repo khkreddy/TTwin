@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:42.637Z",
+  "created_at": "2026-09-19T09:33:06.501Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -38,52 +38,52 @@
   "intelligence": {
     "join_status": "BOUND",
     "hinge": {
-      "primary": "math/grade_09/ch_01/H002",
-      "unit_id": "math/grade_09/ch_01/H002",
-      "title": "Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant.",
+      "primary": "math/grade_08/ch_203/H005",
+      "unit_id": "math/grade_08/ch_203/H005",
+      "title": "Decide how many degrees each category should occupy when representing proportions in a pie chart.",
       "node_labels": [
-        "Practical & laboratory technique"
+        "Euclidean geometry, congruence, similarity and proof"
       ]
     },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "maths",
       "level": "SECONDARY",
-      "topic": "Practical & laboratory technique",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
       "paper_hint": ""
     },
     "mx": [
       {
         "mx_type": "term_substitution",
         "name": "term_substitution",
-        "teacher_note": "X-coordinate is the label that belongs on this item, so 'Decide how the entries, zeros, and signs in an ordered pair determine' is answered as x-coordinate rather than ordered pair."
+        "teacher_note": "Category count is the label that belongs on this item, so 'Decide how many degrees each category should occupy when representing' is answered as category count rather than pie chart."
       },
       {
         "mx_type": "condition_omission",
         "name": "condition_omission",
-        "teacher_note": "ordered pair still holds here even though Quadrant classification applies only to points that are not on either axis is missing from the stem — on the item about Decide how the entries, zeros, and signs in an ordered."
+        "teacher_note": "pie chart still holds here even though The categories must together represent one complete whole is missing from the stem — on the item about Decide how many degrees each category should occupy."
       },
       {
         "mx_type": "surface_feature_capture",
         "name": "surface_feature_capture",
-        "teacher_note": "The answer is ordered pair because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how the entries, zeros, and signs in an ordered pair determine' as the operative test."
+        "teacher_note": "The answer is pie chart because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how many degrees each category should occupy when representing' as the operative test."
       }
     ],
-    "enrichment": "In (x, y), x gives the signed horizontal position from the y-axis and y gives the signed vertical position from the x-axis; points on the x-axis have y = 0, points on the y-axis have x = 0, the origin is (0, 0), and quadrants follow the sign pairs (+,+), (-,+), (-,-), and (+,-).",
+    "enrichment": "In a pie chart, each slice angle is proportional to its category's part of the whole, and the total angle around the circle is 360 degrees.",
     "lbs_recipe": null,
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_01. The student must decide: Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V3",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_203. The student must decide: Decide how many degrees each category should occupy when representing proportions in a pie chart. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
     "figure": {
-      "mode": "preserve",
-      "tikz_required": false
+      "mode": "add",
+      "tikz_required": true
     }
   },
   "caps": {
@@ -97,10 +97,10 @@
   },
   "build_logic": {
     "source_uid": "math_7b_rjb_ch8_s1_t122",
-    "hinge": "math/grade_09/ch_01/H002",
-    "item_type_target": "preserve",
+    "hinge": "math/grade_08/ch_203/H005",
+    "item_type_target": "single_mcq",
     "figure_decision": {
-      "mode": "preserve",
+      "mode": "add",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [
@@ -114,6 +114,6 @@
       "D": "surface_feature_capture",
       "C": null
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_01/H002"
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_203/H005"
   }
 }

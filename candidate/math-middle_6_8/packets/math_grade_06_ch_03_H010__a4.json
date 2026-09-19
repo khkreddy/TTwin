@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:42.637Z",
+  "created_at": "2026-09-19T09:32:33.575Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -38,9 +38,9 @@
   "intelligence": {
     "join_status": "BOUND",
     "hinge": {
-      "primary": "math/grade_09/ch_01/H002",
-      "unit_id": "math/grade_09/ch_01/H002",
-      "title": "Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant.",
+      "primary": "math/grade_06/ch_03/H010",
+      "unit_id": "math/grade_06/ch_03/H010",
+      "title": "Use place-value positions and palindrome symmetry to solve digit clues.",
       "node_labels": [
         "Practical & laboratory technique"
       ]
@@ -56,28 +56,33 @@
       {
         "mx_type": "term_substitution",
         "name": "term_substitution",
-        "teacher_note": "X-coordinate is the label that belongs on this item, so 'Decide how the entries, zeros, and signs in an ordered pair determine' is answered as x-coordinate rather than ordered pair."
+        "teacher_note": "Thousands digit is the label that belongs on this item, so 'Use place-value positions and palindrome symmetry to solve digit' is answered as thousands digit rather than ten-thousands digit."
       },
       {
-        "mx_type": "condition_omission",
-        "name": "condition_omission",
-        "teacher_note": "ordered pair still holds here even though Quadrant classification applies only to points that are not on either axis is missing from the stem — on the item about Decide how the entries, zeros, and signs in an ordered."
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Thousands digit is what produces ten-thousands digit, so the usual direction of this relation is run backwards — on the item about Use place-value positions and palindrome symmetry to."
       },
       {
         "mx_type": "surface_feature_capture",
         "name": "surface_feature_capture",
-        "teacher_note": "The answer is ordered pair because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how the entries, zeros, and signs in an ordered pair determine' as the operative test."
+        "teacher_note": "The answer is ten-thousands digit because of the most obvious label, colour, size or printed number in the stem, without using 'Use place-value positions and palindrome symmetry to solve digit' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "ten-thousands digit is settled by running 'Decide whether a number is a palindrome and generate palindromes from': A palindromic number reads the same from left to right and from right to left — on the item about Use place-value positions and palindrome symmetry to."
       }
     ],
-    "enrichment": "In (x, y), x gives the signed horizontal position from the y-axis and y gives the signed vertical position from the x-axis; points on the x-axis have y = 0, points on the y-axis have x = 0, the origin is (0, 0), and quadrants follow the sign pairs (+,+), (-,+), (-,-), and (+,-).",
+    "enrichment": "In a 5-digit palindrome, the ten-thousands digit matches the units digit and the thousands digit matches the tens digit; digit clues such as double relationships fix linked place values together.",
     "lbs_recipe": null,
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_01. The student must decide: Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V3",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_03. The student must decide: Use place-value positions and palindrome symmetry to solve digit clues. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -97,23 +102,24 @@
   },
   "build_logic": {
     "source_uid": "math_7b_rjb_ch8_s1_t122",
-    "hinge": "math/grade_09/ch_01/H002",
-    "item_type_target": "preserve",
+    "hinge": "math/grade_06/ch_03/H010",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [
       "term_substitution",
-      "condition_omission",
-      "surface_feature_capture"
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
     ],
     "option_plan": {
       "A": "term_substitution",
-      "B": "condition_omission",
+      "B": "relationship_reversal",
       "D": "surface_feature_capture",
       "C": null
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_01/H002"
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_03/H010"
   }
 }

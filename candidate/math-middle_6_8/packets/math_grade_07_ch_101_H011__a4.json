@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:42.637Z",
+  "created_at": "2026-09-19T09:31:55.971Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -38,9 +38,9 @@
   "intelligence": {
     "join_status": "BOUND",
     "hinge": {
-      "primary": "math/grade_09/ch_01/H002",
-      "unit_id": "math/grade_09/ch_01/H002",
-      "title": "Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant.",
+      "primary": "math/grade_07/ch_101/H011",
+      "unit_id": "math/grade_07/ch_101/H011",
+      "title": "Decide how many digits a product can have from the digit counts of the factors without multiplying every case.",
       "node_labels": [
         "Practical & laboratory technique"
       ]
@@ -56,28 +56,33 @@
       {
         "mx_type": "term_substitution",
         "name": "term_substitution",
-        "teacher_note": "X-coordinate is the label that belongs on this item, so 'Decide how the entries, zeros, and signs in an ordered pair determine' is answered as x-coordinate rather than ordered pair."
+        "teacher_note": "Product is the label that belongs on this item, so 'Decide how many digits a product can have from the digit counts of the' is answered as product rather than digit count."
       },
       {
         "mx_type": "condition_omission",
         "name": "condition_omission",
-        "teacher_note": "ordered pair still holds here even though Quadrant classification applies only to points that are not on either axis is missing from the stem — on the item about Decide how the entries, zeros, and signs in an ordered."
+        "teacher_note": "digit count still holds here even though Use this for products of positive whole numbers with known digit counts is missing from the stem — on the item about Decide how many digits a product can have from the."
       },
       {
-        "mx_type": "surface_feature_capture",
-        "name": "surface_feature_capture",
-        "teacher_note": "The answer is ordered pair because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how the entries, zeros, and signs in an ordered pair determine' as the operative test."
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Product is what produces digit count, so the usual direction of this relation is run backwards — on the item about Decide how many digits a product can have from the."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The digit count rule also covers this: multiplication shortcuts for exact products, so it is not an exception — on the item about Decide how many digits a product can have from the."
       }
     ],
-    "enrichment": "In (x, y), x gives the signed horizontal position from the y-axis and y gives the signed vertical position from the x-axis; points on the x-axis have y = 0, points on the y-axis have x = 0, the origin is (0, 0), and quadrants follow the sign pairs (+,+), (-,+), (-,-), and (+,-).",
+    "enrichment": "The product of an m-digit number and an n-digit number can have either m+n-1 digits or m+n digits; checking the smallest and largest possible products gives the range.",
     "lbs_recipe": null,
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_01. The student must decide: Decide how the entries, zeros, and signs in an ordered pair determine axis position and quadrant. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V3",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_101. The student must decide: Decide how many digits a product can have from the digit counts of the factors without multiplying every case. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -97,8 +102,8 @@
   },
   "build_logic": {
     "source_uid": "math_7b_rjb_ch8_s1_t122",
-    "hinge": "math/grade_09/ch_01/H002",
-    "item_type_target": "preserve",
+    "hinge": "math/grade_07/ch_101/H011",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -106,14 +111,15 @@
     "mx_seeds_used": [
       "term_substitution",
       "condition_omission",
-      "surface_feature_capture"
+      "relationship_reversal",
+      "scope_error"
     ],
     "option_plan": {
       "A": "term_substitution",
       "B": "condition_omission",
-      "D": "surface_feature_capture",
+      "D": "relationship_reversal",
       "C": null
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_01/H002"
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_101/H011"
   }
 }
