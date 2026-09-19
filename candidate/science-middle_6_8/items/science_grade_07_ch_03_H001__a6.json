@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_07/ch_03/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_03/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "scope_error",
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_03/H001; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H001:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H001",
+    "stem": "The diagram shows Kabir's electric cell joined to a small lamp. End X is the raised metal cap. End Y is the flat metal disc. The lamp lights.\n\nWhich claim about the cell is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "X is the positive terminal and Y is the negative terminal; a closed path through the lamp lets the cell supply energy.",
+      "B": "X is the negative terminal and Y is the positive terminal; the raised cap is always negative.",
+      "C": "Both X and Y are positive terminals, so the lamp can glow without a return path.",
+      "D": "The cell can run the lamp even if the wire at Y is left disconnected."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=gray!15] (0,0) rectangle (2.4,1.0);\n\\draw[thick,fill=gray!45] (2.4,0.3) rectangle (2.75,0.7);\n\\node at (1.2,0.5) {cell};\n\\node at (3.15,0.5) {X};\n\\draw[thick,->] (2.95,0.5) -- (2.75,0.5);\n\\node at (-0.4,0.5) {Y};\n\\draw[thick,->] (-0.2,0.5) -- (0,0.5);\n\\draw[thick] (2.75,0.5) -- (3.9,0.5) -- (3.9,1.9);\n\\draw[thick] (0,0.5) -- (-1.0,0.5) -- (-1.0,1.9);\n\\draw[thick] (-1.0,1.9) -- (3.9,1.9);\n\\draw[thick,fill=yellow!55] (1.2,1.55) circle (0.28);\n\\node[font=\\small] at (1.2,2.25) {lamp};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

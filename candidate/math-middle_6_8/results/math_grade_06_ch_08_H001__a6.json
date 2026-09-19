@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "A circle with centre $F$, because every pencil point stays the same distance from $F$."
+    },
+    {
+      "id": "B",
+      "text": "A circle with centre at the pencil tip, not at $F$."
+    },
+    {
+      "id": "C",
+      "text": "A straight line segment whose length is the compass opening."
+    },
+    {
+      "id": "D",
+      "text": "The fixed length is the centre, and $F$ is the radius."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "term_substitution"
+  },
+  "item_type": "single_mcq",
+  "stem": "Falguni opens a compass to a fixed length, keeps the metal point fixed at $F$, and moves only the pencil.\n\nWhat path does the pencil draw?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fixed point F and fixed opening make every pencil position equidistant from F, so the path is a circle centred at F. Putting the centre at the pencil reverses centre and moving point. A straight segment conflates a different construction. Swapping the names centre and radius substitutes terms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

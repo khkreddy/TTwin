@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira places a compass beside a straight copper wire that forms a closed loop with a cell and a switch.\n\nShe closes the switch so that electric current flows through the wire. What should happen to the compass needle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needle should deflect while current flows in the closed loop."
+    },
+    {
+      "id": "B",
+      "text": "The needle should deflect even if a wire is disconnected and the loop is broken."
+    },
+    {
+      "id": "C",
+      "text": "A resting compass, by itself, drives a steady current through the nearby wire without a cell."
+    },
+    {
+      "id": "D",
+      "text": "The needle starts deflecting only after the current-carrying wire becomes hot."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Current in a closed conductor produces a magnetic field that can deflect a nearby compass. A broken loop carries no current, a compass does not drive current, and heating is not required for the deflection.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

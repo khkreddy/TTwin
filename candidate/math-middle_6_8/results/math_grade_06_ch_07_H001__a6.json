@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$1/4$ is greater than $1/12$ because fewer equal shares make each share larger."
+    },
+    {
+      "id": "2",
+      "text": "$1/12$ is greater than $1/4$ because $12$ is greater than $4$."
+    },
+    {
+      "id": "3",
+      "text": "$1/4$ and $1/12$ are equal because each numerator is $1$."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "three_statement",
+  "stem": "Chirag shares one bar of chocolate equally. He compares the unit fractions $1/4$ and $1/12$ from that whole.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For the same whole, a larger denominator makes each equal share smaller, so 1/4 > 1/12. Treating the larger denominator as the larger share reverses the size relation. Equating the fractions because both numerators are 1 captures a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

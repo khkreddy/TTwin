@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Imran's \"$2$\" reports the count of pencils he sharpened today under the class rule."
+    },
+    {
+      "id": "2",
+      "text": "Imran's \"$2$\" still reports that pencil count even if the class rule is ignored."
+    },
+    {
+      "id": "3",
+      "text": "The class rule is produced by the spoken number \"$2$\"."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Imran's class uses this rule: each child says how many pencils that child sharpened today. Imran says \"$2$\".\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only statement 1 matches the rule: 2 is Imran's sharpened-pencil count. Statement 2 drops the need for the rule. Statement 3 runs the relation backwards. Selecting any mix that keeps 2 or 3 is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

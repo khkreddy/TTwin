@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick] (0,0) rectangle (3.2,3.2);\n  \\draw[thick] (0.6,0.6)--(2.6,0.6)--(2.6,2.6)--(0.6,2.6)--cycle;\n  \\draw[thick,dashed] (1.6,0)--(1.6,3.2);\n  \\node[below] at (1.6,-0.15) {fold?};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly decides that?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Check whether a fold along the dashed mid-line, or a turn about the centre, maps the design onto itself."
+        },
+        {
+          "id": "B",
+          "text": "Decide by how attractive the grill looks, without naming a fold or turn."
+        },
+        {
+          "id": "C",
+          "text": "Call the dashed mid-line the name mathematical symmetry."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Gopal's square window grill with a painted inner square. He wants to know whether the design has mathematical symmetry.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Mathematical symmetry needs a fold or rotation that maps the figure onto itself, not attractiveness alone."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Symmetry is decided by a fold or rotation that matches the design to itself. Judging by looks alone omits that transformation. Naming the dashed line as the word symmetry swaps terms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": "Rewrote source right triangle as a square grill with inner square and a dashed mid-line fold check."
+  }
+}

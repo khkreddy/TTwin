@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The largest $6$-digit number is $9,99,999$, and its successor is $10,00,000$, which is ten lakh."
+    },
+    {
+      "id": "2",
+      "text": "The successor of $9,99,999$ is $9,99,998$."
+    },
+    {
+      "id": "3",
+      "text": "The successor $10,00,000$ is one crore."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Jatin takes the largest $6$-digit number and writes its successor, then names the place-value unit.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "9,99,999 + 1 = 10,00,000 (ten lakh). Calling the successor the previous number reverses successor. Naming 10,00,000 as one crore conflates crore (1 followed by 7 zeroes) with ten lakh.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

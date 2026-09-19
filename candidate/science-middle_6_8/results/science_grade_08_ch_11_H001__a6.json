@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows the Sun, the Moon, and Earth. Bilal sketches the Moon on several nights and sees the bright part change shape.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A phase is a change in the bright part of the Moon seen from Earth."
+    },
+    {
+      "id": "B",
+      "text": "A phase means the Moon's own solid body is swelling and shrinking."
+    },
+    {
+      "id": "C",
+      "text": "The Moon does not emit its own light; the bright part is sunlight reflected toward Earth."
+    },
+    {
+      "id": "D",
+      "text": "A phase is the Moon giving off more or less of its own light."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-3.2,0) circle (0.45);\n\\node[font=\\small] at (-3.2,-0.75) {Sun};\n\\begin{scope}\n\\clip (0,0) circle (0.55);\n\\fill[black!70] (0,0) circle (0.55);\n\\fill[white] (-0.55,-0.55) rectangle (0,0.55);\n\\end{scope}\n\\draw[line width=0.8pt] (0,0) circle (0.55);\n\\node[font=\\small] at (0,-0.9) {Moon};\n\\draw[->,line width=0.7pt] (0.7,0.25) -- (1.35,0.55);\n\\node[font=\\footnotesize,anchor=west] at (1.4,0.55) {bright part};\n\\draw[line width=0.8pt,fill=cyan!15] (3.2,0) circle (0.7);\n\\node[font=\\small] at (3.2,-1.05) {Earth};\n\\node[font=\\bfseries\\small] at (0,-1.85) {diagram};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Phases are changes in the bright part seen from Earth. The Moon keeps its solid shape and reflects sunlight; it does not emit its own light or swell and shrink.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source lens rays into a Sun–Moon–Earth sketch with the lit half labeled."
+  }
+}

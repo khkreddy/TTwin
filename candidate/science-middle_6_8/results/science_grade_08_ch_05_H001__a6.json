@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows four events Krish studies: P, a bat hits a cricket ball; Q, a pebble sits still on a path; R, Krish pulls a school bag; S, a feather drifts down.\n\nWhich claims correctly treat a force as a push or pull between two objects? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Event P names a force: a push between the bat and the cricket ball."
+    },
+    {
+      "id": "B",
+      "text": "Event Q names a force: the resting pebble applies a force to itself."
+    },
+    {
+      "id": "C",
+      "text": "Event R names a force: a pull between Krish's hand and the school bag."
+    },
+    {
+      "id": "D",
+      "text": "Event R names a force: the pull acts only on the school bag."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily\\small]\n\\node[anchor=west] at (0,3.4) {P};\n\\draw[thick] (1.0,3.4) circle (0.28);\n\\draw[->,thick] (0.45,3.4) -- (0.72,3.4);\n\\node[font=\\footnotesize,anchor=west] at (1.45,3.4) {bat $\\rightarrow$ ball};\n\\node[anchor=west] at (0,2.3) {Q};\n\\draw[thick] (1.0,2.3) circle (0.22);\n\\node[font=\\footnotesize,anchor=west] at (1.45,2.3) {pebble alone};\n\\node[anchor=west] at (0,1.2) {R};\n\\draw[thick] (0.7,1.05) rectangle (1.5,1.35);\n\\draw[->,thick] (2.15,1.2) -- (1.55,1.2);\n\\node[font=\\footnotesize,anchor=west] at (2.3,1.2) {hand pulls bag};\n\\node[anchor=west] at (0,0.1) {S};\n\\draw[thick] (0.9,0.25) .. controls (1.05,0.45) and (1.15,0.05) .. (1.3,0.2);\n\\draw[->,thick] (1.1,0.7) -- (1.1,0.4);\n\\node[font=\\footnotesize,anchor=west] at (1.55,0.2) {feather falls};\n\\node[font=\\bfseries\\small] at (2.0,-0.7) {diagram};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A force is a push or pull between two objects. The bat-ball push and the hand-bag pull name those pairs. A pebble does not apply a force to itself, and a pull is between hand and bag, not only on the bag.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": "Rewrote source force arrows into four labeled interaction events P–S."
+  }
+}

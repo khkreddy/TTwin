@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "Collect fresh colour choices from the students in Class $6$B."
+    },
+    {
+      "id": "B",
+      "text": "Treat the words Class $6$B as the answer, and collect no colour choices."
+    },
+    {
+      "id": "C",
+      "text": "Use last year's Class $5$B colour votes, because those votes are already written down."
+    },
+    {
+      "id": "D",
+      "text": "The target class is produced by already knowing the favourite colour."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item_type": "single_mcq",
+  "stem": "Sonia wants to answer this question: which colour do the students in Class $6$B like most for the house T-shirt?\n\nWhich plan correctly sets up the inquiry?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The question names Class 6B and asks what those students like, so fresh choices must come from that group. Treating the class name as the answer swaps terms. Using last year's Class 5B omits the named population. Saying the class is produced by the colour runs the relation backwards.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

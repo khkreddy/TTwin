@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows four objects Vivaan labels P, Q, R and S: a torch that is switched on, the Moon, a lit match flame, and a white wall.\n\nWhich claim about luminous and non-luminous objects is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and R are luminous because they emit their own light; Q and S are non-luminous."
+    },
+    {
+      "id": "B",
+      "text": "Q is luminous because the Moon looks bright in the night sky."
+    },
+    {
+      "id": "C",
+      "text": "S is luminous because a white wall looks bright in sunlight."
+    },
+    {
+      "id": "D",
+      "text": "Only P is luminous; a lit match flame does not emit its own light."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n% P torch (on)\n\\draw[thick,fill=gray!30] (0.2,0.4) rectangle (1.0,0.9);\n\\draw[thick,fill=yellow!75] (1.0,0.45) -- (1.55,0.65) -- (1.0,0.85) -- cycle;\n\\node at (0.85,-0.15) {P};\n\\node[font=\\small] at (0.85,1.35) {torch on};\n% Q Moon\n\\draw[thick,fill=gray!15] (3.0,0.7) circle (0.4);\n\\node at (3.0,-0.15) {Q};\n\\node[font=\\small] at (3.0,1.35) {Moon};\n% R firefly / lit bulb substitute: star-like spark - use lit match flame\n\\draw[thick,fill=red!25] (5.0,0.25) rectangle (5.15,0.85);\n\\draw[thick,fill=yellow!70] (4.9,0.85) .. controls (5.07,1.35) .. (5.25,0.85) -- cycle;\n\\node at (5.07,-0.15) {R};\n\\node[font=\\small] at (5.07,1.55) {lit match};\n% S white wall\n\\draw[thick,fill=white] (6.7,0.2) rectangle (8.0,1.3);\n\\node at (7.35,-0.15) {S};\n\\node[font=\\small] at (7.35,1.55) {white wall};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Luminous objects emit their own light (torch, flame). The Moon and wall only reflect light.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "rewritten four-object luminous/non-luminous set"
+  },
+  "learn_by_solve": null
+}

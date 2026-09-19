@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Myra's PE teacher asks the class to mark equal intervals of time for a shuttle-run drill, but nobody has a watch.\n\nWhich process can be used to measure time?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A simple pendulum that swings back and forth with a steady period."
+    },
+    {
+      "id": "B",
+      "text": "Irregular handclaps that come at different gaps each time."
+    },
+    {
+      "id": "C",
+      "text": "An old mechanical clock that looks worn cannot measure time at all."
+    },
+    {
+      "id": "D",
+      "text": "A regularly swinging pendulum without a numbered face cannot measure time."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A process that repeats after definite intervals can mark equal times; irregular claps cannot, and a face is not required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

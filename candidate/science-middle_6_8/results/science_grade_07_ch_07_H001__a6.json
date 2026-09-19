@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Reyansh's brass strip. A flame heats the left end. Drawing pins W, X, Y and Z are stuck with wax along the strip, with W nearest the flame and Z farthest.\n\nWhich claim about heat transfer along the strip is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heat moves by conduction from the hot end toward colder parts, so the pins fall in the order W, then X, then Y, then Z."
+    },
+    {
+      "id": "B",
+      "text": "Heat moves by conduction from the cold end toward the flame, so the pins fall in the order Z, then Y, then X, then W."
+    },
+    {
+      "id": "C",
+      "text": "All four pins fall at the same instant because brass is one solid piece."
+    },
+    {
+      "id": "D",
+      "text": "Only pin W can fall, because heat never leaves the flame end of a solid strip."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=gray!25] (0,1.0) rectangle (6.4,1.35);\n\\node at (3.2,1.7) {brass strip};\n\\draw[thick,fill=orange!70] (-0.15,0.1) -- (0.45,0.9) -- (0.7,0.1) -- cycle;\n\\node at (0.3,-0.25) {flame};\n\\foreach \\x/\\lab in {1.2/W, 2.8/X, 4.3/Y, 5.7/Z} {\n  \\draw[thick,fill=yellow!50] (\\x,1.35) rectangle (\\x+0.28,1.9);\n  \\node at (\\x+0.14,2.2) {\\lab};\n}\n\\node at (3.2,0.45) {wax + pins};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In conduction, heat travels from the heated end along the strip, so wax nearest the flame melts first.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "rewritten brass strip with pins W–Z"
+  },
+  "learn_by_solve": null
+}

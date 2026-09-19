@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly decides that question?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$48$ is a multiple of both $6$ and $8$, so $48$ is a common multiple of the pair."
+        },
+        {
+          "id": "B",
+          "text": "$48$ is a multiple of $6$ alone, and that is enough to call it a common multiple."
+        },
+        {
+          "id": "C",
+          "text": "Any multiple of $8$ from a single-number list is automatically a common multiple of $6$ and $8$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Tushar asks whether $48$ is a common multiple of $6$ and $8$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "48÷6=8 and 48÷8=6 with no remainders, so 48 is a multiple of both numbers and therefore a common multiple."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A common multiple must be a multiple of each number in the pair; 48 meets both. Accepting a multiple of only one number omits the both-condition. Extending any single-list multiple of 8 to the pair overreaches.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "Each term is $7$ more than the one before, because we keep adding $7$."
+    },
+    {
+      "id": "B",
+      "text": "The list looks neat, so it is a pattern even with no rule stated."
+    },
+    {
+      "id": "C",
+      "text": "The same add-$7$ rule explains why $35$ comes next after $28$."
+    },
+    {
+      "id": "D",
+      "text": "The same list also proves a new theorem about every infinite sequence."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Esha counts floor tiles laid in a strip: $7$, $14$, $21$, $28$, $\\ldots$\n\nOne or more options may be correct. Which two claims treat the list as a mathematical pattern?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A mathematical pattern needs a clear regularity and a reason it continues; here each term grows by adding 7, which also yields 35 next. Neat looks alone omit the rule. Stretching the strip into a theorem about every sequence overreaches the chapter.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

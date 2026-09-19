@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The perimeter is $5+6+7=18$ m."
+        },
+        {
+          "id": "B",
+          "text": "The perimeter is $5\\times 6\\times 7=210$ m."
+        },
+        {
+          "id": "C",
+          "text": "The perimeter is $5+6=11$ m, leaving out the third side."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Bhavna's triangular flower bed has side lengths $5$ m, $6$ m, and $7$ m. She wants the distance around the bed once, along the boundary.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Perimeter is the sum of all boundary side lengths once around, so add 5, 6, and 7 to get 18 m."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter adds each side once: 5+6+7=18. Multiplying the sides swaps perimeter for a product. Omitting a side drops the closed-boundary condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_08/ch_05/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_08/ch_05/H001",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": null,
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_05/H001; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_05:H001:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_05",
+    "chapter_label": "Force",
+    "subtopic_id": "science/grade_08/ch_05/H001",
+    "stem": "The diagram shows four events Krish studies: P, a bat hits a cricket ball; Q, a pebble sits still on a path; R, Krish pulls a school bag; S, a feather drifts down.\n\nWhich claims correctly treat a force as a push or pull between two objects? One or more options may be correct.",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Event P names a force: a push between the bat and the cricket ball.",
+      "B": "Event Q names a force: the resting pebble applies a force to itself.",
+      "C": "Event R names a force: a pull between Krish's hand and the school bag.",
+      "D": "Event R names a force: the pull acts only on the school bag."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily\\small]\n\\node[anchor=west] at (0,3.4) {P};\n\\draw[thick] (1.0,3.4) circle (0.28);\n\\draw[->,thick] (0.45,3.4) -- (0.72,3.4);\n\\node[font=\\footnotesize,anchor=west] at (1.45,3.4) {bat $\\rightarrow$ ball};\n\\node[anchor=west] at (0,2.3) {Q};\n\\draw[thick] (1.0,2.3) circle (0.22);\n\\node[font=\\footnotesize,anchor=west] at (1.45,2.3) {pebble alone};\n\\node[anchor=west] at (0,1.2) {R};\n\\draw[thick] (0.7,1.05) rectangle (1.5,1.35);\n\\draw[->,thick] (2.15,1.2) -- (1.55,1.2);\n\\node[font=\\footnotesize,anchor=west] at (2.3,1.2) {hand pulls bag};\n\\node[anchor=west] at (0,0.1) {S};\n\\draw[thick] (0.9,0.25) .. controls (1.05,0.45) and (1.15,0.05) .. (1.3,0.2);\n\\draw[->,thick] (1.1,0.7) -- (1.1,0.4);\n\\node[font=\\footnotesize,anchor=west] at (1.55,0.2) {feather falls};\n\\node[font=\\bfseries\\small] at (2.0,-0.7) {diagram};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_05/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

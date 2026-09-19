@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_11/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_11/H001",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_11/H001; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_11:H001:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_08/ch_11",
+    "chapter_label": "The night sky: Moon and calendars",
+    "subtopic_id": "science/grade_08/ch_11/H001",
+    "stem": "The diagram shows the Sun, the Moon, and Earth. Bilal sketches the Moon on several nights and sees the bright part change shape.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "A phase is a change in the bright part of the Moon seen from Earth.",
+      "B": "A phase means the Moon's own solid body is swelling and shrinking.",
+      "C": "The Moon does not emit its own light; the bright part is sunlight reflected toward Earth.",
+      "D": "A phase is the Moon giving off more or less of its own light."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-3.2,0) circle (0.45);\n\\node[font=\\small] at (-3.2,-0.75) {Sun};\n\\begin{scope}\n\\clip (0,0) circle (0.55);\n\\fill[black!70] (0,0) circle (0.55);\n\\fill[white] (-0.55,-0.55) rectangle (0,0.55);\n\\end{scope}\n\\draw[line width=0.8pt] (0,0) circle (0.55);\n\\node[font=\\small] at (0,-0.9) {Moon};\n\\draw[->,line width=0.7pt] (0.7,0.25) -- (1.35,0.55);\n\\node[font=\\footnotesize,anchor=west] at (1.4,0.55) {bright part};\n\\draw[line width=0.8pt,fill=cyan!15] (3.2,0) circle (0.7);\n\\node[font=\\small] at (3.2,-1.05) {Earth};\n\\node[font=\\bfseries\\small] at (0,-1.85) {diagram};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_11/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

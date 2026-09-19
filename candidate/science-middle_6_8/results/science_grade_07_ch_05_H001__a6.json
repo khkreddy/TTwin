@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Vihaan watches two changes in the lab.\nChange P: sugar crystals dissolve completely in a glass of water; the water tastes sweet and no new solid appears.\nChange Q: a strip of magnesium burns in air with a bright flame and leaves a white powder.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Change P is physical because no new substance forms."
+    },
+    {
+      "id": "B",
+      "text": "Change Q is chemical because a new substance (the white powder) forms."
+    },
+    {
+      "id": "C",
+      "text": "Change Q is physical because burning only rearranges the same magnesium strip."
+    },
+    {
+      "id": "D",
+      "text": "Change P is chemical because the sugar no longer looks like crystals."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dissolving sugar forms no new substance; burning magnesium forms a new white powder.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

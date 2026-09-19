@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Siddharth's class decides who can be called healthy. Health means physical, mental, and social well-being, not only the absence of disease.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "2 only"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "A classmate with no disease who feels lonely, sleeps poorly, and avoids friends is fully healthy."
+    },
+    {
+      "id": "2",
+      "text": "Health is physical, mental, and social well-being together, not merely freedom from disease."
+    },
+    {
+      "id": "3",
+      "text": "A classmate with strong muscles who wins races is fully healthy even if she often quarrels with everyone."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "condition_omission",
+    "C": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only statement 2 is correct. Absence of disease alone is not full health, and strong muscles with social conflict do not prove full health.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

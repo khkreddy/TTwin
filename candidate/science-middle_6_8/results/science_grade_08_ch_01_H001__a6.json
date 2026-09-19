@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aditya watches a candle burn on a table. He writes two questions: \"Why does fire exist everywhere?\" and \"Does a candle burn longer under a glass jar or in open air?\"",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which question has been made scientific by turning curiosity into a focused question that can guide careful observation and a check?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "\"Does a candle burn longer under a glass jar or in open air?\" because it is focused and can be checked."
+        },
+        {
+          "id": "B",
+          "text": "\"Why does fire exist everywhere?\" because a big curiosity question is already scientific."
+        },
+        {
+          "id": "C",
+          "text": "The candle question is not scientific because it uses a household candle."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The candle question is focused and can guide observation or a fair test; the fire question is too broad to check."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A scientific question is focused and can guide careful observation and explanation. The candle-jar question can; the fire question is too broad.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

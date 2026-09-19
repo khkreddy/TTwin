@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "$5 \\times 8 + 6$ is an arithmetic expression for the total, and its value is $46$."
+    },
+    {
+      "id": "B",
+      "text": "$46$ is the expression; $5 \\times 8 + 6$ is only a name for that value."
+    },
+    {
+      "id": "C",
+      "text": "The expression must be the printed $6$ alone, because $6$ is the last number she sees."
+    },
+    {
+      "id": "D",
+      "text": "$5 \\times 8 + 6$ is an expression only when the value $46$ is written first."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "Komal buys $5$ pencils at Rs $8$ each and an eraser for Rs $6$. She writes $5 \\times 8 + 6$ for the total she should pay.\n\nWhich statement is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5×8+6 is the arithmetic phrase for the total and evaluates to 46. Calling 46 the expression swaps value and expression. Taking the last printed digit alone captures a surface feature. Requiring the value to be written first drops the condition that an expression already has a value.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

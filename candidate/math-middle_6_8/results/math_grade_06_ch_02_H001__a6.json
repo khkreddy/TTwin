@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The mark stands for a point: a precise location with no length, breadth, or thickness, named by the letter $A$."
+        },
+        {
+          "id": "B",
+          "text": "The ink blob itself is the geometric object, so its visible size on the paper is the point."
+        },
+        {
+          "id": "C",
+          "text": "Any decorative smudge is a point, even when it does not name a location."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Alok makes a tiny ink pin-prick on plain paper and labels it $A$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A point is an exact location with no size; the ink mark is only a model, and the capital letter A names that location."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The pin-prick models a sizeless location named A. Treating the ink size as the point omits the no-size condition. Calling any smudge a point stretches the idea beyond named locations.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

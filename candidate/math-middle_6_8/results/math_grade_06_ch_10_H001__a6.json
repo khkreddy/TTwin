@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-50$ is below zero, $80$ is above zero, and $0$ is neither positive nor negative."
+        },
+        {
+          "id": "B",
+          "text": "$0$ is a positive amount because it is written without a minus sign."
+        },
+        {
+          "id": "C",
+          "text": "$-50$ is above zero, and $80$ is below zero."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice that uses positions relative to zero."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Hema marks three amounts on a number line with zero balance as $0$: $-50$ (debt), $0$, and $80$ (credit).",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Negative amounts sit below the zero reference, positive amounts sit above it, and zero itself is the neutral reference."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Signed integers name positions relative to zero: −50 below, 80 above, and 0 neither. Calling 0 positive misreads the reference. Swapping above/below reverses the signed positions.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}
