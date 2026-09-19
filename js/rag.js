@@ -183,6 +183,9 @@
       const want = String(sel.item_type) === "free_response" ? "open_response" : String(sel.item_type);
       if ((row.item_type || "") !== want) return false;
     }
+    if (sel.quality_tier) {
+      if (String(row.quality_tier || "") !== String(sel.quality_tier)) return false;
+    }
     const wantPack = normalizePack(sel.pack);
     const rowPack = row.pack;
     const rowBand = row.grade_band || bandForPack(rowPack);

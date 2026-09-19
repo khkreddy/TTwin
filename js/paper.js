@@ -352,6 +352,19 @@
       "<button type='button' class='sec q-mod-revert' data-uid='" + esc(uid) + "'>Revert</button> " +
       "<span class='muted q-mod-status'></span></p></div></div>";
   }
+  function qualityHTML(it) {
+    const q = it.quality;
+    if (!q || !q.tier) return "";
+    const tier = String(q.tier);
+    const label = tier.charAt(0).toUpperCase() + tier.slice(1);
+    let html = "<div class='quality-box qt-" + esc(tier) + "'><span class='qt-badge qt-badge-" + esc(tier) + "'>Quality: " + esc(label) + "</span>";
+    if (typeof q.score === "number") html += " <span class='qt-score'>" + q.score + "/100</span>";
+    const rs = (q.reasons || []).filter(Boolean);
+    if (rs.length) {
+      html += "<ul class='qt-reasons'>" + rs.map((r) => "<li>" + esc(r) + "</li>").join("") + "</ul>";
+    }
+    return html + "</div>";
+  }
   function itemHTML(it, i, opts) {
     opts = opts || {};
     const n = i == null ? "" : (i + 1);
@@ -381,6 +394,7 @@
       (opts.showUid === false ? "" : "<span class='uid'>" + esc(uid) + "</span>") +
       (it.modified && opts.showUid !== false ? " <span class='tag'>modified</span>" : "") +
       "</div>" +
+      qualityHTML(it) +
       (function () {
         const lead = leadInStem(it);
         const more = it.assessment && (it.assessment.one_or_more ||

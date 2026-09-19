@@ -14,6 +14,11 @@ const SRC = path.join(ROOT, "candidate", TRAY, "items");
 const OUT_PACK = path.join(ROOT, "candidate", TRAY, "pack.json");
 const OUT_NAV = path.join(ROOT, "candidate", TRAY, "nav.json");
 const SCIENCE = path.join(ROOT, "data", "maps", IS_MATH ? "maths.json" : "science.json");
+const QUALITY = path.join(ROOT, "candidate", TRAY, "quality.json");
+let QUALITY_MAP = null;
+function readQuality(p) {
+  try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch (e) { return null; }
+}
 
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
@@ -55,6 +60,7 @@ function flatten(doc, unit) {
   }
   const chapter = it.chapter_label || (unit && unit.chapter_title) || "";
   if (chapter && !it.chapter_label) it.chapter_label = chapter;
+  if (QUALITY_MAP && it.uid && QUALITY_MAP[it.uid]) it.quality = QUALITY_MAP[it.uid];
   return it;
 }
 function navRow(it, unit) {
@@ -76,10 +82,12 @@ function navRow(it, unit) {
     item_type: it.item_type || "mcq",
     lifecycle: "CANDIDATE",
     author: it.author || null,
+    quality_tier: (it.quality && it.quality.tier) || null,
   };
 }
 function pack() {
   const science = readJson(SCIENCE);
+  QUALITY_MAP = readQuality(QUALITY);
   const byId = {};
   (science.units || []).forEach((u) => { if (u.unit_id) byId[u.unit_id] = u; });
   const files = fs.readdirSync(SRC).filter((f) => f.endsWith(".json")).sort();

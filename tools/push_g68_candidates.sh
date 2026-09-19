@@ -8,6 +8,7 @@ else
   export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -4 -i /home/harik/.ssh/id_ed25519 -o IdentitiesOnly=yes}"
 fi
 
+node tools/grade_g68_quality.js >/dev/null
 node tools/pack_g68_candidates.js >/dev/null
 if [ -d candidate/math-middle_6_8/items ]; then
   TTWIN_G68_SUBJECT=maths node tools/pack_g68_candidates.js --maths >/dev/null || true
@@ -18,12 +19,18 @@ git add \
   candidate/math-middle_6_8 \
   tools/modify_g68.js \
   tools/pack_g68_candidates.js \
+  tools/grade_g68_quality.js \
   tools/push_g68_candidates.sh \
   tools/tests/test_modify_packet.js \
   tools/tests/test_modify_gates.js \
   tools/tests/test_modify_g68.js \
   tools/tests/test_g68_overlay.js \
-  js/kimi.js
+  tools/tests/test_g68_quality.js \
+  js/kimi.js \
+  js/app.js \
+  js/paper.js \
+  harness/modify/QUALITY_RUBRIC_G68.md \
+  candidate/QUALITY_AUDIT_G68.md
 
 if git diff --cached --name-only | grep -E 'BIOLOGY_MAP|CHEMISTRY_MAP_COMBINED|MATHEMATICS_MAP|PHYSICS_MAP'; then
   echo "refusing to commit full map blobs" >&2

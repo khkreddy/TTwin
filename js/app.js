@@ -362,6 +362,14 @@
       "<option value='structured'>Structured</option>" +
       "<option value='open_response'>Open response</option>" +
       "</select></div>" +
+      (bankMode() === "grok" || bankMode() === "ai"
+        ? "<div><label>Quality tier</label><select id='" + prefix + "-qtier'>" +
+          "<option value=''>any</option>" +
+          "<option value='top'>Top</option>" +
+          "<option value='medium'>Medium</option>" +
+          "<option value='low'>Low</option>" +
+          "</select></div>"
+        : "") +
       "</div></div>";
   }
 
@@ -416,6 +424,8 @@
     if (sub) sel.families = [sub];
     const typ = $(prefix + "-type") && $(prefix + "-type").value;
     if (typ) sel.item_type = typ;
+    const qt = $(prefix + "-qtier") && $(prefix + "-qtier").value;
+    if (qt) sel.quality_tier = qt;
     return sel;
   }
   function bindFilters(prefix, onchange) {
@@ -446,6 +456,8 @@
     $(prefix + "-sub").addEventListener("change", onchange);
     const typeEl = $(prefix + "-type");
     if (typeEl) typeEl.addEventListener("change", onchange);
+    const qtEl = $(prefix + "-qtier");
+    if (qtEl) qtEl.addEventListener("change", onchange);
     const bankEl = $(prefix + "-bank");
     if (bankEl) {
       bankEl.addEventListener("change", async () => {
@@ -481,6 +493,14 @@
       $("br-out").innerHTML =
         "<div class='banner'><span class='stat'><b>" + r.receipt.n_questions + "</b> questions</span>" +
         "<span class='stat'><b>" + r.receipt.n_hinge_unit_ids_before_cap + "</b> hinges</span>" +
+        (function () {
+          if (!(bankMode() === "grok" || bankMode() === "ai")) return "";
+          const t = { top: 0, medium: 0, low: 0 };
+          (S.nav || []).forEach((x) => { if (x && t[x.quality_tier] != null) t[x.quality_tier]++; });
+          return "<span class='stat'>quality <b class='qt-badge qt-badge-top'>top " + t.top + "</b> " +
+            "<b class='qt-badge qt-badge-medium'>med " + t.medium + "</b> " +
+            "<b class='qt-badge qt-badge-low'>low " + t.low + "</b></span>";
+        })() +
         "<span class='stat'>preview <b>" + items.length + "</b></span></div>" +
         TTwinPaper.paperHTML({ title: "Question preview", subject: (S.spec && S.spec.label) || sel.subject, subtitle: [sel.subject, (sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · ")].filter(Boolean).join(" · ") }, items) +
         (r.question_uids.length > 8 ? "<p class='muted no-print'>Showing 8 of " + r.question_uids.length + ". Use Test maker for a full paper.</p>" : "");
