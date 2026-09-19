@@ -22,17 +22,25 @@
       "scope_error",
       "mechanism_conflation"
     ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
     "option_plan": {
       "A": "condition_omission",
-      "B": "relationship_reversal",
+      "B": "mechanism_conflation",
+      "C": null,
       "D": "scope_error",
-      "C": null
+      "bind": "result"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H002"
+    "format_rationale": "retarget hinge to math/grade_06/ch_01/H002; do not copy source.key",
+    "option_plan_bind": "result"
   },
   "mx_option_map": {
     "A": "condition_omission",
-    "B": "relationship_reversal",
+    "B": "mechanism_conflation",
     "D": "scope_error"
   },
   "item": {
@@ -43,13 +51,13 @@
     "chapter_id": "math/grade_06/ch_01",
     "chapter_label": "math/grade_06/ch_01",
     "subtopic_id": "math/grade_06/ch_01/H002",
-    "stem": "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list using its generative rule?",
+    "stem": "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list?",
     "item_type": "mcq",
     "options": {
-      "A": "The next term is 10, because the list of whole numbers always grows by 1.",
-      "B": "Writing the next odd number is what creates the odd numbers in the first place.",
+      "A": "The next term is 10, because whole numbers always grow by 1.",
+      "B": "The next term is 13, because each term is 4 more than the one before.",
       "C": "The next term is 11, because each term is 2 more than the one before.",
-      "D": "The next term needs a closed formula for triangular numbers before it can be named."
+      "D": "The next term is 25, because 1 + 3 + 5 + 7 + 9 = 25."
     },
     "statements": [],
     "parts": [],

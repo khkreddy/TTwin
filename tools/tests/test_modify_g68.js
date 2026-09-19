@@ -138,8 +138,116 @@ const g11 = g68.gateG11({
 if (g11.ok || g11.gate !== "G11") throw new Error("nested A/B/C in part text must fail G11");
 const forceRes = JSON.parse(fs.readFileSync(path.join(ROOT, "candidate/science-middle_6_8/results/science_grade_08_ch_05_H001__a3.json"), "utf8"));
 const forcePkt = JSON.parse(fs.readFileSync(path.join(ROOT, "candidate/science-middle_6_8/packets/science_grade_08_ch_05_H001__a3.json"), "utf8"));
-const forceGates = g68.ingestGates(forceRes, forcePkt);
+const forcePktFresh = JSON.parse(JSON.stringify(forcePkt));
+forcePktFresh.build_logic = forcePktFresh.build_logic || {};
+forcePktFresh.build_logic.option_plan = { mx_allowlist: ["term_substitution", "condition_omission"], bind: "wrong_letters_after_result" };
+const forceGates = g68.ingestGates(forceRes, forcePktFresh);
 if (!forceGates.ok) throw new Error("force example must pass ingestGates " + forceGates.gate);
+const forceOld = g68.gateG13(forceRes, forcePkt);
+if (forceOld.ok) throw new Error("stored source-key plan B=null vs result key A must fail G13");
+
+if (packet.build_logic.option_plan && packet.build_logic.option_plan.C === null) {
+  throw new Error("compile must not null source.key letter C");
+}
+if (!packet.build_logic.option_plan || packet.build_logic.option_plan.bind !== "wrong_letters_after_result") {
+  throw new Error("compile option_plan must defer letter bind");
+}
+if (JSON.stringify(packet.build_logic.option_plan).indexOf("source.key") >= 0) throw new Error("source.key leaked into plan");
+
+const h002a3orig = {
+  item_type: "single_mcq",
+  stem: "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list using its generative rule?",
+  options: [
+    { id: "A", text: "The next term is 10, because the list of whole numbers always grows by 1." },
+    { id: "B", text: "Writing the next odd number is what creates the odd numbers in the first place." },
+    { id: "C", text: "The next term is 11, because each term is 2 more than the one before." },
+    { id: "D", text: "The next term needs a closed formula for triangular numbers before it can be named." },
+  ],
+  answer: { kind: "single_letter", letter: "C" },
+  mx_option_map: { A: "condition_omission", B: "relationship_reversal", D: "scope_error" },
+};
+const h002pkt = {
+  intelligence: { hinge: { unit_id: "math/grade_06/ch_01/H002", title: "Decide which generative rule defines a whole-number sequence and use that rule to continue the sequence." }, mx: [{ mx_type: "condition_omission" }, { mx_type: "relationship_reversal" }, { mx_type: "scope_error" }] },
+  build_logic: { hinge: "math/grade_06/ch_01/H002", option_plan: { A: "condition_omission", B: "relationship_reversal", D: "scope_error", C: null } },
+};
+const h002gates = g68.ingestGates(h002a3orig, h002pkt);
+if (h002gates.ok) throw new Error("original H002 a3 reverse-causation/jargon must fail closed");
+if (["G13", "G14", "G15", "G16"].indexOf(h002gates.gate) < 0) throw new Error("H002 a3 must fail a new gate, got " + h002gates.gate);
+
+const rewritten = {
+  item_type: "single_mcq",
+  stem: "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list?",
+  options: [
+    { id: "A", text: "The next term is 10, because whole numbers always grow by 1." },
+    { id: "B", text: "The next term is 13, because each term is 4 more than the one before." },
+    { id: "C", text: "The next term is 11, because each term is 2 more than the one before." },
+    { id: "D", text: "The next term is 25, because 1+3+5+7+9 = 25." },
+  ],
+  answer: { kind: "single_letter", letter: "C" },
+  mx_option_map: { A: "condition_omission", B: "relationship_reversal", D: "scope_error" },
+};
+const rwPkt = {
+  intelligence: { hinge: { unit_id: "math/grade_06/ch_01/H002", title: "Decide which generative rule defines a whole-number sequence." }, mx: [{ mx_type: "condition_omission" }, { mx_type: "relationship_reversal" }, { mx_type: "scope_error" }] },
+  build_logic: { hinge: "math/grade_06/ch_01/H002", option_plan: { mx_allowlist: ["condition_omission", "relationship_reversal", "scope_error"], bind: "wrong_letters_after_result" } },
+};
+const rwGates = g68.ingestGates(rewritten, rwPkt);
+if (!rwGates.ok) throw new Error("rewritten H002 a3 must pass " + rwGates.gate);
+const stamped = g68.stampOptionPlan(rewritten, rwPkt);
+if (stamped.C !== null) throw new Error("stamp must null the result key");
+if (stamped.A !== "condition_omission" || stamped.bind !== "result") throw new Error("stamp must bind wrong letters from the result");
+
+const g13src = g68.gateG13(rewritten, {
+  build_logic: { option_plan: { A: "condition_omission", B: "relationship_reversal", D: "scope_error", C: null } },
+});
+if (!g13src.ok) throw new Error("result key C matching old source-null C must still pass G13");
+const g13mismatch = g68.gateG13(Object.assign({}, rewritten, { answer: { kind: "single_letter", letter: "A" } }), {
+  build_logic: { option_plan: { A: "condition_omission", B: "relationship_reversal", D: "scope_error", C: null } },
+});
+if (g13mismatch.ok || g13mismatch.gate !== "G13") throw new Error("plan-null C vs result key A must fail G13");
+
+const g14hit = g68.gateG14({
+  options: [
+    { id: "A", text: "The next term is 11." },
+    { id: "B", text: "Writing 11 is what creates the odd numbers." },
+  ],
+  answer: { kind: "single_letter", letter: "A" },
+});
+if (g14hit.ok || g14hit.gate !== "G14") throw new Error("is what creates on a distractor must fail G14");
+const g14ok = g68.gateG14({
+  options: [
+    { id: "A", text: "Activity 4, because writing a looked-up fact in a notebook is not doing science." },
+    { id: "B", text: "Activity 2, because he observed." },
+  ],
+  answer: { kind: "single_letter", letter: "B" },
+});
+if (!g14ok.ok) throw new Error("bare writing must pass G14");
+
+const g15fail = g68.gateG15({
+  stem: "Karan writes the whole-number list 4, 7, 10, 13, …\nWhich claim continues the list?",
+  options: [
+    { id: "A", text: "Each term is 3 more than the one before, so the next term is 16." },
+    { id: "B", text: "Naming the next term is what creates the whole-number list in the first place." },
+  ],
+  answer: { kind: "single_letter", letter: "A" },
+});
+if (g15fail.ok || g15fail.gate !== "G15") throw new Error("numeric-list stem with no digit in a distractor must fail G15");
+const treasure = {
+  stem: "Bharat places a treasure on the number 24 on a number strip. He may jump by a fixed whole-number size from 0 and wants every jump to land exactly on 24.",
+  options: [
+    { id: "A", text: "The answer is 24, because that is the treasure number itself." },
+    { id: "B", text: "Jump size 5 works, because repeated jumps of 5 stay on whole numbers." },
+    { id: "C", text: "Jump sizes 1, 2, 3, 4, 6, 8, 12 and 24 all land exactly on 24." },
+    { id: "D", text: "Jump size 24 is forced, because 24 is the largest printed mark." },
+  ],
+};
+if (!g68.gateG15(treasure).ok) throw new Error("treasure-on-24 must pass G15 (no numeric list of 3+ terms)");
+
+const g16fail = g68.gateG16({
+  stem: "Continue 1, 3, 5.",
+  options: [{ id: "A", text: "Needs a closed formula for triangular numbers." }, { id: "B", text: "Next is 7." }],
+  answer: { kind: "single_letter", letter: "B" },
+}, { intelligence: { hinge: { unit_id: "math/grade_06/ch_01/H002", title: "Decide which generative rule defines a sequence." } } });
+if (g16fail.ok || g16fail.gate !== "G16") throw new Error("grade 6 closed formula / triangular must fail G16");
 
 const remElig = g68.remainingEligibleUnits(science);
 const nCh = new Set(remElig.map((u) => g68.chapterKey(u))).size;

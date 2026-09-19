@@ -59,6 +59,18 @@ node tools/modify_g68.js ingest --unit UNIT --source SOURCE --result FILE --atte
 
 SOURCE: prefer `biology_7a_rjb_exe1` (Science junior) unless the hinge needs a figure — then an IGCSE tikz source + `--figure rewrite`, and keep the tikzpicture. Never invent TikZ from scratch.
 
+## Maths 6–8 addendum
+
+Same laws. `TTWIN_G68_SUBJECT=maths`. Source default `math_7b_rjb_ch8_s1_t122`. Figure: IGCSE tikz + `--figure rewrite`.
+
+Extra bad execution seen in Grok maths options: `without using the two equal angles` / `Name the product alone…`. That is mix-up **recipe**, same family as `by reversing the 100s`. Write the wrong **claim** (`The triangles are congruent because DF equals XZ.`) not the construction.
+
+one_or_more: exactly two key letters so two wrong letters exist for G9. Two-tier: first-class `part.options`.
+
+## Source-key option_plan (2026-09-19)
+
+`compileMxPlan` used to assign mix-up letters against `packet.source.key.letter`. Default maths source `math_7b_rjb_ch8_s1_t122` is a linear-equations MCQ keyed C, so hundreds of sequence/geometry items planned C as the key even when the result key was A. Companion `math/grade_06/ch_01/H002:a5` is the smoking gun (result A, plan C=null). Relationship-reversal CWOs were instantiated as “writing/naming X is what creates Y” — not a live Grade 6 error. Kimi K3 Max (independent): keys on H002 a3/a4 were sound; distractors B/D and C were dead; the defect is systematic. Harness now defers letter bind until the result, then G13–G16 fail closed.
+
 ## Uniform hinge coverage
 
 Do **not** fill one chapter or one S-node before touching the others. Next units come from `nextUniformUnits` in `tools/modify_g68.js`: remaining map hinges with ≥2 Mx types, **round-robin by chapter** (`science/grade_xx/ch_yy`). One hinge per remaining chapter per cycle, then repeat. List:

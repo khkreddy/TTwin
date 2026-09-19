@@ -2,15 +2,15 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list using its generative rule?",
+  "stem": "Anya studies the whole-number list 1, 3, 5, 7, 9, …\n\nWhich claim correctly continues the list?",
   "options": [
     {
       "id": "A",
-      "text": "The next term is 10, because the list of whole numbers always grows by 1."
+      "text": "The next term is 10, because whole numbers always grow by 1."
     },
     {
       "id": "B",
-      "text": "Writing the next odd number is what creates the odd numbers in the first place."
+      "text": "The next term is 13, because each term is 4 more than the one before."
     },
     {
       "id": "C",
@@ -18,7 +18,7 @@
     },
     {
       "id": "D",
-      "text": "The next term needs a closed formula for triangular numbers before it can be named."
+      "text": "The next term is 25, because 1 + 3 + 5 + 7 + 9 = 25."
     }
   ],
   "statements": [],
@@ -26,23 +26,24 @@
   "equations": [],
   "tables": [],
   "tikz": null,
+  "learn_by_solve": null,
   "answer": {
     "kind": "single_letter",
     "letter": "C"
   },
   "mx_option_map": {
     "A": "condition_omission",
-    "B": "relationship_reversal",
+    "B": "mechanism_conflation",
     "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "The list is the odd numbers: each term is 2 more than the previous, so 11 follows 9. Growing by 1 ignores that rule. The explanation does not create the odds. Triangular-number formulas are outside this hinge.",
+    "key_rationale": "The list increases by 2 each time, so 11 follows 9. Growing by 1 confuses this list with counting numbers. A jump of 4 is not the visible step. Adding the terms gives a total, not the next term.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "condition_omission",
-      "relationship_reversal",
+      "mechanism_conflation",
       "scope_error"
     ],
     "figure_note": null

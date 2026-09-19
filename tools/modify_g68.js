@@ -219,8 +219,9 @@ function instructionFor(unit, variation, figureMode) {
     s += "Supply exactly one complete tikzpicture. The stem must refer to that figure. ";
   }
   s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. ";
+  s += "Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem. If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. ";
   s += "If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.";
-  return s.slice(0, 1000);
+  return s.slice(0, 1600);
 }
 function packetHasPedagogy(packet) {
   const stem = (packet.source && packet.source.stem) || "";
@@ -272,34 +273,85 @@ function mxIds(packet) {
     .map((m) => m && (m.mx_type || m.name))
     .filter(Boolean);
 }
-function compileMxPlan(unit, keyLetter, itemType) {
-  const live = liveItemType(itemType) || itemType;
-  if (live === "structured" || itemType === "structured_parts") return {};
-  const mx = (unit && unit.mx) || [];
+function mxTypesFromUnit(unit) {
   const types = [];
-  mx.forEach((m) => {
-    const id = m.type || m.mx_type;
+  ((unit && unit.mx) || []).forEach((m) => {
+    const id = m && (m.type || m.mx_type);
     if (id && types.indexOf(id) < 0) types.push(id);
   });
-  const letters = ["A", "B", "C", "D"].filter((L) => L !== (keyLetter || "A"));
-  const plan = {};
-  letters.forEach((L, i) => {
-    plan[L] = types[i] || "UNRESOLVED";
+  return types;
+}
+function compileMxPlan(unit, _keyLetter, itemType) {
+  // Compile-time plan must NOT bind letters to packet.source.key.
+  // The new item's key is unknown until the result exists.
+  const types = mxTypesFromUnit(unit);
+  return {
+    mx_allowlist: types,
+    bind: "wrong_letters_after_result",
+  };
+}
+function resultKeySet(result) {
+  const keySet = {};
+  const ans = (result && result.answer) || {};
+  if (ans.kind === "letter_set") (ans.letters || []).forEach((L) => { keySet[String(L)] = true; });
+  else if (ans.letter) keySet[String(ans.letter)] = true;
+  else if (ans.kind === "part_answers") {
+    (ans.part_answers || []).forEach((row) => {
+      const v = row && row.answer;
+      if (v && /^[A-D]$/.test(String(v))) keySet[String(v)] = true;
+    });
+  }
+  return keySet;
+}
+function allOptionEntries(result) {
+  const out = [];
+  (result && result.options || []).forEach((o) => {
+    if (o && o.id) out.push({ id: String(o.id), text: o.text || "" });
   });
-  if (keyLetter) plan[keyLetter] = null;
+  (result && result.parts || []).forEach((p) => {
+    (p && p.options || []).forEach((o) => {
+      const obj = typeof o === "string" ? null : o;
+      if (obj && obj.id) out.push({ id: String(obj.id), text: obj.text || "" });
+    });
+  });
+  return out;
+}
+function letterPlanKeys(plan) {
+  return Object.keys(plan || {}).filter((k) => /^[A-D]$/.test(k) && plan[k] != null);
+}
+function letterPlanNulls(plan) {
+  return Object.keys(plan || {}).filter((k) => /^[A-D]$/.test(k) && plan[k] == null);
+}
+function stampOptionPlan(result, packet) {
+  const keySet = resultKeySet(result);
+  const map = (result && result.mx_option_map) || (result && result.teacher && result.teacher.mx_option_map) || {};
+  const entries = allOptionEntries(result);
+  const plan = {};
+  if (!entries.length) {
+    plan.mx_allowlist = ((packet && packet.build_logic && packet.build_logic.option_plan) || {}).mx_allowlist || mxIds(packet);
+    plan.bind = "wrong_letters_after_result";
+    return plan;
+  }
+  entries.forEach((e) => {
+    if (keySet[e.id]) plan[e.id] = null;
+    else plan[e.id] = map[e.id] || "UNRESOLVED";
+  });
+  plan.bind = "result";
   return plan;
 }
 function compileBuildLogic(packet, unit, source, spec, figureMode) {
   const mx = mxIds(packet);
   const targetType = (spec && spec.target_item_type) || "preserve";
+  const types = mxTypesFromUnit(unit);
   return {
     source_uid: source && source.uid,
     hinge: unit && unit.unit_id,
     item_type_target: targetType,
     figure_decision: { mode: figureMode, reason: hingeWantsFigure(unit) ? "hinge_names_visual" : "no_visual_referent" },
     mx_seeds_used: mx.slice(0, 4),
-    option_plan: compileMxPlan(unit, packet && packet.source && packet.source.key && packet.source.key.letter, targetType),
-    format_rationale: "preserve source skeleton; retarget hinge to " + ((unit && unit.unit_id) || ""),
+    mx_allowlist: types,
+    option_plan: compileMxPlan(unit, null, targetType),
+    format_rationale: "retarget hinge to " + ((unit && unit.unit_id) || "") + "; do not copy source.key",
   };
 }
 function gateG9(result, packet) {
@@ -395,9 +447,9 @@ function gateG12(result, packet) {
   const live = liveItemType(result && result.item_type);
   const plan = (packet && packet.build_logic && packet.build_logic.option_plan) || {};
   const ids = optionIdsFromResult(result);
-  const planKeys = Object.keys(plan).filter((k) => plan[k] != null);
+  const planKeys = letterPlanKeys(plan);
   if (live === "structured" || (result && result.item_type === "structured_parts")) {
-    if (planKeys.length && !ids.length) return { ok: false, gate: "G12" };
+    if (planKeys.length && !ids.length && !allOptionEntries(result).length) return { ok: false, gate: "G12" };
     return { ok: true };
   }
   if (live === "mcq" || live === "mcq_diagram" || live === "mcq_table") {
@@ -407,6 +459,80 @@ function gateG12(result, packet) {
   }
   return { ok: true };
 }
+function gateG13(result, packet) {
+  const keySet = resultKeySet(result);
+  const map = (result && result.mx_option_map) || (result && result.teacher && result.teacher.mx_option_map) || {};
+  const ids = allOptionEntries(result).map((e) => e.id);
+  const keyLetters = Object.keys(keySet);
+  if (!keyLetters.length) return { ok: true };
+  for (let i = 0; i < keyLetters.length; i++) {
+    const L = keyLetters[i];
+    const v = map[L];
+    if (v && v !== "UNRESOLVED") return { ok: false, gate: "G13" };
+  }
+  if (ids.length) {
+    const mapped = Object.keys(map).filter((L) => /^[A-D]$/.test(L) && map[L] && map[L] !== "UNRESOLVED");
+    for (let i = 0; i < mapped.length; i++) {
+      if (ids.indexOf(mapped[i]) < 0) return { ok: false, gate: "G13" };
+    }
+  }
+  const plan = (packet && packet.build_logic && packet.build_logic.option_plan) || {};
+  const nulls = letterPlanNulls(plan);
+  if (nulls.length) {
+    const nk = keyLetters.slice().sort().join("");
+    const nl = nulls.slice().sort().join("");
+    if (nk !== nl) return { ok: false, gate: "G13" };
+  }
+  return { ok: true };
+}
+function gateG14(result) {
+  const re = /\bis what (creates|produces)\b/i;
+  const keySet = resultKeySet(result);
+  const entries = allOptionEntries(result);
+  for (let i = 0; i < entries.length; i++) {
+    const e = entries[i];
+    if (keySet[e.id]) continue;
+    if (re.test(e.text)) return { ok: false, gate: "G14" };
+  }
+  return { ok: true };
+}
+function stemHasNumericList(stem) {
+  const s = String(stem || "");
+  if (/(\d+\s*,\s*){2,}\d+/.test(s)) return true;
+  if (/\b(whole-number list|number list)\b/i.test(s)) return true;
+  return false;
+}
+function gateG15(result) {
+  const stem = String((result && result.stem) || "");
+  if (!stemHasNumericList(stem)) return { ok: true };
+  const entries = allOptionEntries(result);
+  if (entries.length < 2) return { ok: true };
+  for (let i = 0; i < entries.length; i++) {
+    if (!/\d/.test(entries[i].text || "")) return { ok: false, gate: "G15" };
+  }
+  return { ok: true };
+}
+function packetUnitId(packet) {
+  const h = packet && packet.intelligence && packet.intelligence.hinge;
+  if (h && h.unit_id) return String(h.unit_id);
+  if (h && h.primary) return String(h.primary);
+  if (packet && packet.build_logic && packet.build_logic.hinge) return String(packet.build_logic.hinge);
+  return "";
+}
+function packetHingeText(packet) {
+  const h = packet && packet.intelligence && packet.intelligence.hinge;
+  if (!h) return "";
+  return String(h.title || h.decision_hinge || "");
+}
+function gateG16(result, packet) {
+  const uid = packetUnitId(packet);
+  if (!/grade_06/.test(uid)) return { ok: true };
+  const hinge = packetHingeText(packet);
+  const blob = [result && result.stem].concat(allOptionEntries(result).map((e) => e.text)).join("\n");
+  if (/\bclosed formula\b/i.test(blob)) return { ok: false, gate: "G16" };
+  if (/\btriangular numbers?\b/i.test(blob) && !/triangular/i.test(hinge)) return { ok: false, gate: "G16" };
+  return { ok: true };
+}
 function ingestGates(result, packet) {
   const g9 = gateG9(result, packet);
   if (!g9.ok) return g9;
@@ -414,7 +540,15 @@ function ingestGates(result, packet) {
   if (!g10.ok) return g10;
   const g11 = gateG11(result);
   if (!g11.ok) return g11;
-  return gateG12(result, packet);
+  const g12 = gateG12(result, packet);
+  if (!g12.ok) return g12;
+  const g13 = gateG13(result, packet);
+  if (!g13.ok) return g13;
+  const g14 = gateG14(result);
+  if (!g14.ok) return g14;
+  const g15 = gateG15(result);
+  if (!g15.ok) return g15;
+  return gateG16(result, packet);
 }
 function compileUnit(K, unit, source, science, spec) {
   spec = spec || {};
@@ -480,6 +614,8 @@ function resultToCandidate(result, packet, source, unit, attempt) {
   const build = Object.assign({}, packet.build_logic || {}, result.build_logic || {});
   if (!build.source_uid) build.source_uid = source && source.uid;
   if (!build.hinge) build.hinge = unit.unit_id;
+  build.option_plan = stampOptionPlan(result, packet);
+  build.option_plan_bind = "result";
   return {
     schema: "ttwin.candidate.v1",
     lifecycle: "CANDIDATE",
@@ -860,6 +996,10 @@ async function main() {
       console.log(JSON.stringify(row));
       return;
     }
+    packet.build_logic = packet.build_logic || {};
+    packet.build_logic.option_plan = stampOptionPlan(out, packet);
+    packet.build_logic.option_plan_bind = "result";
+    writeJson(path.join(OUT, "packets", tag + ".json"), packet);
     const cand = resultToCandidate(out, packet, source, unit, attempt);
     if (cand && cand.keepOriginal) {
       const row = { status: "fail_closed", gate: cand.gate || "G2", unit_id: unitId };
@@ -970,7 +1110,7 @@ module.exports = {
   loadKimi, compileUnit, pickSource, packetHasPedagogy, instructionFor,
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
   variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy,
-  sanitizeTikz, gateG9, gateG10, gateG11, gateG12, ingestGates, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
+  sanitizeTikz, gateG9, gateG10, gateG11, gateG12, gateG13, gateG14, gateG15, gateG16, ingestGates, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic, compileMxPlan, stampOptionPlan, resultKeySet, allOptionEntries,
   normalizeResultTables, grokCoveredUnits, remainingEligibleUnits, nextUniformUnits, chapterKey,
   OUT, ROOT,
 };

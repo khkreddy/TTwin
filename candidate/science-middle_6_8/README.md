@@ -24,6 +24,12 @@ Harness edits after freeze `ttwin.g68_harness_freeze.v1`. Moonshot Test-maker, l
 
 Grok authors via `node tools/modify_g68.js ingest --unit … --source … --result result.json`. No Moonshot stem writes on this path.
 
+## CHANGELOG (Modify plan/key bind 2026-09-19)
+
+- **C10** `compileMxPlan` no longer nulls `packet.source.key.letter`. Compile-time `option_plan` is `{ mx_allowlist, bind: "wrong_letters_after_result" }`. After ingest, `stampOptionPlan` binds letters from the *result* key. Why: donor keys (often C from an equations MCQ) were planning the wrong letter; 186 Grok items had plan-key ≠ result-key.
+- **C11** Gates **G13–G16** (g68 ingest only): G13 plan-null / mx map must match the result key; G14 fail-closed on distractor prose `is what creates|is what produces`; G15 numeric-list stems require a digit in every option; G16 grade_06 bans `closed formula` / `triangular numbers` unless the hinge names triangular. Why: relationship_reversal slots were filled with reverse-causation theatre that a Grade 6 child cannot evaluate.
+- **C12** `instructionFor` forbids copying `source.key`, requires options that could answer the stem, and forbids “naming/writing creates the list.” Cap 1600 chars.
+
 ## Grok tray style (2026-09-19 rectification)
 
 Learner options must not leak mix-up recipes. One hinge per item. Four options in one grammatical frame. No extra objects or city padding. `mx_option_map` is teacher-side and advisory. Do not edit Kimi a1/a2 files.

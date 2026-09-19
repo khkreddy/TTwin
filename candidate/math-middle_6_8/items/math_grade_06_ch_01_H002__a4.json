@@ -22,8 +22,20 @@
       "scope_error",
       "mechanism_conflation"
     ],
-    "option_plan": {},
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H002"
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_01/H002; do not copy source.key",
+    "option_plan_bind": "result"
   },
   "mx_option_map": {},
   "item": {
@@ -34,27 +46,27 @@
     "chapter_id": "math/grade_06/ch_01",
     "chapter_label": "math/grade_06/ch_01",
     "subtopic_id": "math/grade_06/ch_01/H002",
-    "stem": "Karan writes the whole-number list $4$, $7$, $10$, $13$, $\\ldots$",
+    "stem": "Karan writes the whole-number list 4, 7, 10, 13, …",
     "item_type": "structured",
     "options": {},
     "statements": [],
     "parts": [
       {
         "id": "i",
-        "text": "Which claim correctly names the generative rule that continues the list?",
+        "text": "Which claim correctly continues the list?",
         "marks": 1,
         "options": [
           {
             "id": "A",
-            "text": "Each term is $3$ more than the one before, so the next term is $16$."
+            "text": "Each term is 3 more than the one before, so the next term is 16."
           },
           {
             "id": "B",
-            "text": "The list looks neat, so no generative rule is needed to continue it."
+            "text": "Each term is 4 more than the one before, so the next term is 17."
           },
           {
             "id": "C",
-            "text": "Naming the next term is what creates the whole-number list in the first place."
+            "text": "The next term is 14, because 14 comes after 13 when counting."
           }
         ]
       },
