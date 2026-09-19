@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir lines up four samples on the science table. Which of these are behaving as liquids? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ice cubes in a tray that keep a fixed shape."
+    },
+    {
+      "id": "B",
+      "text": "Water poured into a bottle, taking the shape of the bottle and able to flow."
+    },
+    {
+      "id": "C",
+      "text": "Cooking oil poured into a bottle, taking the shape of the bottle and able to flow."
+    },
+    {
+      "id": "D",
+      "text": "The white mist above a boiling kettle, treated as liquid water because you can see it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A liquid flows and takes the container's shape. Water and oil do that. Ice keeps a shape (solid). Visible mist is condensed droplets or vapour, not a sample behaving as a liquid in a container.",
+    "variation_applied": "V4",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

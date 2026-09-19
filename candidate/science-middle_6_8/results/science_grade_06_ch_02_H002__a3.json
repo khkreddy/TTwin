@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohan has to group these living things: rose, cow, cat, mango tree, hen.\n\nWhich grouping uses a valid basis from similarities and differences you can observe?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Plants that bring good luck versus plants that bring bad luck."
+    },
+    {
+      "id": "B",
+      "text": "Animals grouped only by the place they live, with no other feature allowed."
+    },
+    {
+      "id": "C",
+      "text": "Things that make their own food (rose, mango tree) versus things that eat food (cow, cat, hen)."
+    },
+    {
+      "id": "D",
+      "text": "Cat with cow because both names start with C."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid group uses an observable similarity: making food versus eating food. Luck is not an observed feature. Place-only is too narrow. Shared first letter is a name surface, not a living-thing feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

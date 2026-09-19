@@ -1,0 +1,134 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V5",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0610_m15_qp_12:q34",
+  "target_unit_id": "science/grade_08/ch_12/H008",
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q34",
+    "hinge": "science/grade_08/ch_12/H008",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_12/H008"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H008:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H008",
+    "stem": "Fatima copies the feeding diagram shown below from a Class 8 field booklet.\n\nIs the diagram a food chain or a food web, and why?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "A food chain, because any diagram with arrows between living things is called a food chain.",
+      "B": "A food web, because more than one feeding path reaches the leopard.",
+      "C": "A food chain, because grass is drawn at the bottom so there can be only one sequence.",
+      "D": "Neither, because the labels are animal names rather than the word producer or consumer."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily,>=stealth]\\node (grass) at (0,-2.0) {grass};\\node (locust) at (-1.8,-1.35) {locust};\\node (scorpion) at (-2.25,-0.35) {scorpion};\\node (baboon) at (-2.25,0.75) {baboon};\\node (leopard) at (-0.45,1.65) {leopard};\\node (impala) at (0.65,-0.25) {impala};\\draw[->,thick] (grass) -- (locust);\\draw[->,thick] (locust) -- (scorpion);\\draw[->,thick] (scorpion) -- (baboon);\\draw[->,thick] (baboon) -- (leopard);\\draw[->,thick] (grass) -- (impala);\\draw[->,thick] (impala) -- (leopard);\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": {
+        "solve": "which trophic levels is the leopard feeding? Required: D — third / and / fifth. A would need “second”, but the item needs “fifth”. B would need “third”, but the item needs “fifth”. C would need “fourth”, but the item needs “fifth”.",
+        "wrong": {
+          "A": {
+            "mx_type": "term_substitution",
+            "pathway": "swapping the sibling term “second” for the required “fifth”",
+            "followup": {
+              "stem": "Option A. This row is “first / and / second”. Should the first listed feature be marked third or first?",
+              "options": {
+                "A": "the first listed feature should be third",
+                "B": "the first listed feature should be first",
+                "C": "the first listed feature is not used in this item",
+                "D": "both third and first at once"
+              },
+              "key": "A",
+              "why": "Option A marks the first listed feature as first; the keyed row marks it as third."
+            }
+          },
+          "B": {
+            "mx_type": "condition_omission",
+            "pathway": "dropping a stated condition so “third” looked possible instead of “fifth”",
+            "followup": {
+              "stem": "Option B. This row is “second / and / third”. Should the first listed feature be marked third or second?",
+              "options": {
+                "A": "the first listed feature should be third",
+                "B": "the first listed feature should be second",
+                "C": "the first listed feature is not used in this item",
+                "D": "both third and second at once"
+              },
+              "key": "A",
+              "why": "Option B marks the first listed feature as second; the keyed row marks it as third."
+            }
+          },
+          "C": {
+            "mx_type": "term_substitution",
+            "pathway": "swapping the sibling term “fourth” for the required “fifth”",
+            "followup": {
+              "stem": "Option C. This row is “second / and / fourth”. Should the first listed feature be marked third or second?",
+              "options": {
+                "A": "the first listed feature should be second",
+                "B": "the first listed feature is not used in this item",
+                "C": "both third and second at once",
+                "D": "the first listed feature should be third"
+              },
+              "key": "D",
+              "why": "Option C marks the first listed feature as second; the keyed row marks it as third."
+            }
+          }
+        },
+        "key": "D"
+      },
+      "mark_scheme": null
+    }
+  }
+}

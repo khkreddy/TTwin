@@ -181,7 +181,10 @@
     const rawTikz = it.tikz;
     const code = (Array.isArray(rawTikz) ? rawTikz.join("\n") : String(rawTikz || "")).trim();
     if (!code) return "";
-    const pkgs = (it.tikz_packages || []).filter(Boolean);
+    const pkgs = ((it.tikz_packages || []).filter(Boolean)).slice();
+    if (!pkgs.length && (/\\begin\{circuitikz\}/.test(code) || /to\s*\[(battery|lamp|short|nos|switch)/i.test(code))) {
+      pkgs.push("circuitikz");
+    }
     const pkgAttr = pkgs.length
       ? " data-packages='" + esc(JSON.stringify(Object.fromEntries(pkgs.map((p) => [p, ""])))) + "'"
       : "";

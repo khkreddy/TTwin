@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Fatima copies the feeding diagram shown below from a Class 8 field booklet.\n\nIs the diagram a food chain or a food web, and why?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A food chain, because any diagram with arrows between living things is called a food chain."
+    },
+    {
+      "id": "B",
+      "text": "A food web, because more than one feeding path reaches the leopard."
+    },
+    {
+      "id": "C",
+      "text": "A food chain, because grass is drawn at the bottom so there can be only one sequence."
+    },
+    {
+      "id": "D",
+      "text": "Neither, because the labels are animal names rather than the word producer or consumer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily,>=stealth]\\node (grass) at (0,-2.0) {grass};\\node (locust) at (-1.8,-1.35) {locust};\\node (scorpion) at (-2.25,-0.35) {scorpion};\\node (baboon) at (-2.25,0.75) {baboon};\\node (leopard) at (-0.45,1.65) {leopard};\\node (impala) at (0.65,-0.25) {impala};\\draw[->,thick] (grass) -- (locust);\\draw[->,thick] (locust) -- (scorpion);\\draw[->,thick] (scorpion) -- (baboon);\\draw[->,thick] (baboon) -- (leopard);\\draw[->,thick] (grass) -- (impala);\\draw[->,thick] (impala) -- (leopard);\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A food web has more than one feeding path. Grass to locust to scorpion to baboon to leopard, and grass to impala to leopard, so two paths meet at the leopard.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Source 0610_m15_qp_12:q34 food-web tikzpicture kept; hinge is chain vs web."
+  }
+}

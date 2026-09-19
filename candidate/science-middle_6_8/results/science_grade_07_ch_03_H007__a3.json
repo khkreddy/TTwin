@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Arjun built the loop shown below on his desk: one cell, a lamp, an ammeter, and a variable resistor. He now wants a circuit diagram of the same loop using standard symbols.\n\nWhich statement about that diagram is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp may be drawn as any neat sketch of a torch bulb, because a circuit diagram is just a tidy picture of the parts."
+    },
+    {
+      "id": "B",
+      "text": "Each part must use its standard symbol: the cell as a long line and a short line, the lamp as a circle with a cross, and the ammeter as a circle marked A."
+    },
+    {
+      "id": "C",
+      "text": "The cell should be drawn with two separate lamp branches leaving it, so both the lamp and the ammeter get their own loop."
+    },
+    {
+      "id": "D",
+      "text": "The long and short lines of the cell may be drawn either way round, because the direction of the cell does not matter in a diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line width=0.8pt,line cap=round,line join=round]\\draw (0,0) -- (0,0.78); \\draw (0,1.22) -- (0,2) -- (1.55,2); \\draw (1.55,2) -- (1.93,2); \\draw (2.12,2) -- (3.5,2) -- (3.5,1.5); \\draw (3.5,0.5) -- (3.5,0) -- (2.15,0); \\draw (1.35,0) -- (0,0); \\draw[fill=white] (0,1) circle (0.22); \\node at (0,1) {A}; \\draw (1.55,1.66) -- (1.55,2.34); \\draw (1.93,1.78) -- (1.93,2.22); \\draw[fill=white] (1.75,0) circle (0.4); \\draw (1.47,-0.28) -- (2.03,0.28); \\draw (1.47,0.28) -- (2.03,-0.28); \\draw[fill=white] (3.36,0.5) rectangle (3.64,1.5); \\draw[->] (3.12,0.55) -- (3.88,1.52);\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A circuit diagram uses standard symbols, not a sketch of the real parts. The source figure already shows those symbols for cell, lamp, ammeter and variable resistor.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Source 0625_m18_qp_12:q31 tikzpicture kept; stem retargeted to translating a built loop into symbols."
+  }
+}

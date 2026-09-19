@@ -1,0 +1,133 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m18_qp_12:q31",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T00:17:14.695Z",
+  "source": {
+    "item_ref": "session:0625_m18_qp_12:q31",
+    "item_type": "single_mcq",
+    "stem": "The diagram shows a circuit containing a cell, an ammeter, a lamp and a variable resistor.\nThe resistance of the variable resistor is increased.\nWhat happens to the ammeter reading and what happens to the brightness of the lamp?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ammeter reading decreases; lamp brightness decreases"
+      },
+      {
+        "id": "B",
+        "text": "ammeter reading decreases; lamp brightness increases"
+      },
+      {
+        "id": "C",
+        "text": "ammeter reading increases; lamp brightness decreases"
+      },
+      {
+        "id": "D",
+        "text": "ammeter reading increases; lamp brightness increases"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"ammeter reading\",\"lamp brightness\"],\"rows\":[[\"decreases\",\"decreases\"],[\"decreases\",\"increases\"],[\"increases\",\"decreases\"],[\"increases\",\"increases\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "\\begin{tikzpicture}[line width=0.8pt,line cap=round,line join=round]\\draw (0,0) -- (0,0.78); \\draw (0,1.22) -- (0,2) -- (1.55,2); \\draw (1.55,2) -- (1.93,2); \\draw (2.12,2) -- (3.5,2) -- (3.5,1.5); \\draw (3.5,0.5) -- (3.5,0) -- (2.15,0); \\draw (1.35,0) -- (0,0); \\draw[fill=white] (0,1) circle (0.22); \\node at (0,1) {A}; \\draw (1.55,1.66) -- (1.55,2.34); \\draw (1.93,1.78) -- (1.93,2.22); \\draw[fill=white] (1.75,0) circle (0.4); \\draw (1.47,-0.28) -- (2.03,0.28); \\draw (1.47,0.28) -- (2.03,-0.28); \\draw[fill=white] (3.36,0.5) rectangle (3.64,1.5); \\draw[->] (3.12,0.55) -- (3.88,1.52);\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "LED: a circle with a cross inside."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Cell with two parallel lamp branches."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "For rightward current, the LED triangle points left."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The diagram is incorrect because the lamp is on the opposite side, even though its connections match."
+      }
+    ],
+    "enrichment": "Electrical components can be represented by standard symbols, and a circuit diagram is a representation of an electrical circuit using those symbols. component recognition + symbol choice + terminal orientation -> readable circuit diagram The learner correctly applies this rule: Electrical components can be represented by standard symbols, and a circuit diagram is a representation of an electrical circuit using those symbols. A circuit diagram is any neat picture of the parts, so exact symbols and terminal orientation are optional.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_03/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student reversing the directed relation (lamp brightness increases vs lamp brightness decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student reversing the directed relation (ammeter reading increases vs ammeter reading decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student reversing the directed relation (lamp brightness increases vs lamp brightness decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Electricity: circuits and cells. The student must decide: Decide how to translate an actual circuit into a circuit diagram. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m18_qp_12:q31",
+    "hinge": "science/grade_07/ch_03/H007",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H007"
+  }
+}

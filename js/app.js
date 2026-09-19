@@ -473,7 +473,8 @@
     };
     bindFilters("br", () => { go(); });
     if (spec && spec.default_pack) $("br-pack").value = spec.default_pack;
-    $("br-node").innerHTML = "<option value=''>any</option>" + nodeOptions(spec && spec.default_node, $("br-pack").value);
+    const startNode = (bankMode() === "ai") ? "" : (spec && spec.default_node);
+    $("br-node").innerHTML = "<option value=''>any</option>" + nodeOptions(startNode, $("br-pack").value);
     fillChapters("br");
     go();
   }

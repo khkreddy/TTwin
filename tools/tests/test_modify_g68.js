@@ -92,4 +92,32 @@ if (c.uncovered === 0) {
   }
 }
 
+const circ = g68.sanitizeTikz("\\begin{circuitikz}\\draw (0,0) to[battery1] (1,0);\\end{circuitikz}");
+if (!circ.ok || circ.tikz.indexOf("tikzpicture") < 0) throw new Error("sanitize circuitikz");
+if (circ.packages.indexOf("circuitikz") < 0) throw new Error("circuitikz package");
+if (g68.liveItemType("one_or_more") !== "mcq") throw new Error("one_or_more maps to mcq");
+if (g68.liveItemType("assertion_reason") !== "structured") throw new Error("assertion_reason maps to structured");
+const fakeMcq = {
+  item_type: "single_mcq",
+  stem: "Which change moves particles further apart?",
+  options: [{ id: "A", text: "melting only" }, { id: "B", text: "freezing" }, { id: "C", text: "melting and evaporating" }, { id: "D", text: "condensing" }],
+  answer: { kind: "single_letter", letter: "C" },
+  mx_option_map: { A: "condition_omission", B: "scope_error", D: "UNRESOLVED" },
+  teacher: { proposed_key_status: "UNVERIFIED", variation_applied: p2.spec.variation_class, fidelity_selfcheck: "FAITHFUL_TRANSFER" },
+};
+const g9ok = g68.gateG9(fakeMcq, p2);
+if (!g9ok.ok) throw new Error("G9 should pass two distinct mx");
+const g9fail = g68.gateG9(Object.assign({}, fakeMcq, { mx_option_map: { A: "UNRESOLVED", B: "UNRESOLVED", D: "UNRESOLVED" } }), p2);
+if (g9fail.ok || g9fail.gate !== "G9") throw new Error("G9 fail closed");
+const cand = g68.resultToCandidate(Object.assign({ status: "OK", schema: "modify_result.v1" }, fakeMcq, {
+  item_type: "one_or_more",
+  answer: { kind: "letter_set", letters: ["B", "C"] },
+}), p2, igcse, unit, 9);
+if (cand.item.item_type !== "mcq") throw new Error("live type");
+if (!cand.item.assessment.one_or_more) throw new Error("one_or_more flag");
+if (cand.item.assessment.mcq_key !== "BC") throw new Error("mcq_key BC");
+if (cand.item.assessment.proposed_key_status !== "UNVERIFIED") throw new Error("stay UNVERIFIED");
+if (!cand.build_logic) throw new Error("build_logic");
+if (JSON.stringify(cand.item).indexOf("build_logic") >= 0) throw new Error("build_logic leaked into learner item");
+
 console.log("modify_g68_ok", packet.intelligence.join_status, p2.intelligence.join_status, p2.spec.variation_class, c.uncovered);

@@ -303,8 +303,12 @@ function compileUnit(K, unit, source, science, spec) {
   let figureMode = spec.figureMode;
   if (!figureMode) {
     if (hingeWantsFigure(unit)) figureMode = p0.tikz ? "rewrite" : "add";
-    else if (p0.tikz && spec.variation_class !== "V5") figureMode = "remove";
+    else if (p0.tikz && !hingeWantsFigure(unit)) figureMode = "remove";
     else figureMode = "preserve";
+  }
+  if (figureMode === "rewrite" || figureMode === "preserve" || figureMode === "add") {
+    const san = sanitizeTikz(source && source.tikz);
+    if ((figureMode === "rewrite" || figureMode === "preserve") && p0.tikz && !san.ok) figureMode = "remove";
   }
   const ctx = {
     map: science,
@@ -319,24 +323,34 @@ function compileUnit(K, unit, source, science, spec) {
   const probe = K.assembleModifyPacket(source, "probe", ctx);
   const variation = probe.spec.variation_class;
   const instruction = spec.instruction || instructionFor(unit, variation, figureMode);
-  return K.assembleModifyPacket(source, instruction, ctx);
+  const packet = K.assembleModifyPacket(source, instruction, ctx);
+  packet.build_logic = compileBuildLogic(packet, unit, source, spec, figureMode);
+  return packet;
 }
 function resultToCandidate(result, packet, source, unit, attempt) {
-  const typeMap = {
-    single_mcq: "mcq",
-    one_or_more: "mcq",
-    three_statement: "three_statement",
-    structured_parts: "structured",
-    open_response: "open_response",
-    option_table: "mcq_table",
-    options_are_figure: "mcq_diagram",
-  };
+  let live = liveItemType(result.item_type);
+  if (!live || LIVE_ITEM_TYPES.indexOf(live) < 0) return { ok: false, gate: "G2", keepOriginal: true };
   const options = {};
   (result.options || []).forEach((o) => { if (o && o.id) options[o.id] = o.text || ""; });
   let key = null;
   if (result.answer && result.answer.kind === "letter_set") key = (result.answer.letters || []).join("");
   else if (result.answer && result.answer.letter) key = result.answer.letter;
+  const oneOrMore = result.item_type === "one_or_more" || (typeof key === "string" && key.length > 1);
+  const figMode = (packet.spec && packet.spec.figure && packet.spec.figure.mode) || "preserve";
+  let tikz = null;
+  let packages = [];
+  if (figMode !== "remove") {
+    const raw = result.tikz || (figMode === "preserve" ? (source && source.tikz) : result.tikz);
+    const san = sanitizeTikz(raw);
+    if (san.ok) { tikz = san.tikz; packages = san.packages; }
+  }
+  if (live === "mcq" && tikz && source && source.item_type === "mcq_diagram") live = "mcq_diagram";
+  const lbs = (result.learn_by_solve) || (source && source.assessment && source.assessment.learn_by_solve) || null;
   const uid = "candidate:g68:" + String(unit.unit_id).replace(/\//g, ":") + ":a" + attempt;
+  const mxMap = result.mx_option_map || (result.teacher && result.teacher.mx_option_map) || {};
+  const build = Object.assign({}, packet.build_logic || {}, result.build_logic || {});
+  if (!build.source_uid) build.source_uid = source && source.uid;
+  if (!build.hinge) build.hinge = unit.unit_id;
   return {
     schema: "ttwin.candidate.v1",
     lifecycle: "CANDIDATE",
@@ -347,6 +361,8 @@ function resultToCandidate(result, packet, source, unit, attempt) {
     fidelity_mode: packet.spec.fidelity_mode,
     source_ref: packet.source.item_ref,
     target_unit_id: unit.unit_id,
+    build_logic: build,
+    mx_option_map: mxMap,
     item: {
       uid: uid,
       subject: "science",
@@ -356,25 +372,27 @@ function resultToCandidate(result, packet, source, unit, attempt) {
       chapter_label: unit.chapter_title || null,
       subtopic_id: unit.unit_id,
       stem: result.stem,
-      item_type: typeMap[result.item_type] || "mcq",
+      item_type: live,
       options: options,
       statements: result.statements || [],
       parts: result.parts || [],
       equations: result.equations || [],
       tables: result.tables || [],
-      tikz: result.tikz || null,
-      has_figure: !!(result.tikz && String(result.tikz).trim()),
+      tikz: tikz,
+      tikz_packages: packages,
+      has_figure: !!(tikz && String(tikz).trim()),
       options_are_figure: result.item_type === "options_are_figure",
       complete_exam: false,
       serve_eligible: false,
       hinges: { primary: unit.unit_id, supporting: [], binder: { method: "modify_g68_named_gap" } },
       assessment: {
-        key_source: "none",
+        key_source: live === "structured" ? "none" : "none",
         key_status: "available",
         mcq_key: key,
         proposed_key_status: "UNVERIFIED",
         examiner_comment: { present: false },
-        one_or_more: result.item_type === "one_or_more",
+        one_or_more: !!oneOrMore,
+        learn_by_solve: lbs,
         mark_scheme: result.answer && result.answer.kind === "rubric"
           ? { text: (result.answer.rubric || []).join("\n") } : null,
       },
@@ -547,7 +565,20 @@ async function runOne(K, unit, source, science, spec, attempt) {
     logLine(row);
     return row;
   }
+  const g9 = gateG9(out, packet);
+  if (!g9.ok) {
+    row.status = "fail_closed";
+    row.gate = g9.gate;
+    logLine(row);
+    return row;
+  }
   const cand = resultToCandidate(out, packet, source, unit, attempt);
+  if (cand && cand.keepOriginal) {
+    row.status = "fail_closed";
+    row.gate = cand.gate || "G2";
+    logLine(row);
+    return row;
+  }
   writeJson(path.join(OUT, "items", tag + ".json"), cand);
   row.status = "ok";
   row.candidate_uid = cand.item.uid;
@@ -579,6 +610,46 @@ async function main() {
     const c = census(science, junior);
     writeJson(path.join(OUT, "status.json"), c);
     console.log(JSON.stringify(c, null, 2));
+    return;
+  }
+  if (cmd === "ingest") {
+    const unitId = args.unit;
+    const sourceUid = args.source;
+    const resultPath = args.result;
+    const attempt = parseInt(args.attempt || "1", 10);
+    if (!unitId || !sourceUid || !resultPath) throw new Error("ingest needs --unit --source --result");
+    const unit = science.units.find((x) => x.unit_id === unitId);
+    if (!unit) throw new Error("unknown unit " + unitId);
+    const source = findByUid(sourceUid);
+    if (!source) throw new Error("unknown source " + sourceUid);
+    const out = readJson(resultPath);
+    const spec = {};
+    if (args.variation) spec.variation_class = args.variation;
+    if (args["item-type"]) spec.target_item_type = args["item-type"];
+    if (args.figure) spec.figureMode = String(args.figure);
+    const packet = compileUnit(K, unit, source, science, spec);
+    const tag = safeUnit(unit.unit_id) + "__a" + attempt;
+    writeJson(path.join(OUT, "packets", tag + ".json"), packet);
+    writeJson(path.join(OUT, "results", tag + ".json"), out);
+    const gate = K.applyModifyOutcome(out, packet, source);
+    const g9 = gate.ok ? gateG9(out, packet) : gate;
+    if (!gate.ok || !g9.ok) {
+      const row = { status: "fail_closed", gate: (g9 && g9.gate) || gate.gate, unit_id: unitId, source_uid: sourceUid };
+      logLine(row);
+      console.log(JSON.stringify(row));
+      return;
+    }
+    const cand = resultToCandidate(out, packet, source, unit, attempt);
+    if (cand && cand.keepOriginal) {
+      const row = { status: "fail_closed", gate: cand.gate || "G2", unit_id: unitId };
+      logLine(row);
+      console.log(JSON.stringify(row));
+      return;
+    }
+    writeJson(path.join(OUT, "items", tag + ".json"), cand);
+    const row = { status: "ok", unit_id: unitId, candidate_uid: cand.item.uid, item: "items/" + tag + ".json" };
+    logLine(row);
+    console.log(JSON.stringify(row));
     return;
   }
   if (cmd === "compile" || cmd === "generate") {
@@ -677,7 +748,9 @@ async function main() {
 module.exports = {
   loadKimi, compileUnit, pickSource, packetHasPedagogy, instructionFor,
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
-  variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy, OUT, ROOT,
+  variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy,
+  sanitizeTikz, gateG9, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
+  OUT, ROOT,
 };
 
 if (require.main === module) {
