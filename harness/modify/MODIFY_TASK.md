@@ -23,6 +23,7 @@ Defect to fix: `js/kimi.js` `modifyItem`/`modifySys` sends a thin packet (stem, 
 - No fetching full maps in the browser.
 - No silent coercion to four-option MCQ. `item_type` changes only via spec.
 - No freeze uids. Session references only.
+- For Science 6–8 Grok ingest: read `JOURNAL_G68_GROK.md`. Do not copy source LBS. Do not leak mix-up recipes into options. One hinge. Parallel option frames.
 - No mx_type, mix-up names, examiner codes, or SMILES-print in learner fields.
 - No invented figures. A figure is added only via `spec.figure.mode = add`, TikZ fully specified.
 - No claim-ledger or ability writes.
