@@ -120,9 +120,11 @@ if (cand.item.assessment.proposed_key_status !== "UNVERIFIED") throw new Error("
 if (!cand.build_logic) throw new Error("build_logic");
 if (JSON.stringify(cand.item).indexOf("build_logic") >= 0) throw new Error("build_logic leaked into learner item");
 
-const uniform = g68.nextUniformUnits(science, 14);
-if (uniform.length < 7) throw new Error("uniform remaining too small");
-const chans = uniform.slice(0, 7).map((u) => g68.chapterKey(u));
-if (new Set(chans).size < Math.min(7, chans.length)) throw new Error("uniform not round-robin by chapter");
+const remElig = g68.remainingEligibleUnits(science);
+const nCh = new Set(remElig.map((u) => g68.chapterKey(u))).size;
+const uniform = g68.nextUniformUnits(science, Math.max(nCh * 2, 1));
+if (nCh && uniform.length < nCh) throw new Error("uniform remaining too small");
+const chans = uniform.slice(0, nCh).map((u) => g68.chapterKey(u));
+if (nCh && new Set(chans).size !== nCh) throw new Error("uniform not round-robin by chapter");
 
 console.log("modify_g68_ok", packet.intelligence.join_status, p2.intelligence.join_status, p2.spec.variation_class, c.uncovered);
