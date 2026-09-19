@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pallavi is given the front view, the top view, and the side view of one solid, drawn as three mutually perpendicular projections.\n\nWhich claim correctly decides how to identify the solid?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Match the solid from the front view alone."
+    },
+    {
+      "id": "B",
+      "text": "Use the front, top, and side views together; one projection alone is not enough."
+    },
+    {
+      "id": "C",
+      "text": "Naming the solid first forces those three views to exist."
+    },
+    {
+      "id": "D",
+      "text": "Also treat any single corner sketch as enough under the same three-view rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A single projection does not fix a unique solid, so the front, top, and side views must be used together. Front alone, reversing name and views, or stretching the rule to any corner sketch miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

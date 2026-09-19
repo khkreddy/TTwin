@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which value of $B$ makes the addition true?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$B=3$"
+        },
+        {
+          "id": "B",
+          "text": "$B=5$"
+        },
+        {
+          "id": "C",
+          "text": "$B=8$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses place value or a carry.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Chirag solves this digit-in-disguise addition. Each letter stands for one fixed digit from $0$ to $9$, and different letters stand for different digits.\n\n$$\\begin{array}{c@{}c@{}c} & 3 & B \\\\ + & B & 3 \\\\ \\hline & 8 & 8 \\end{array}$$",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Units: B+3 gives ones digit 8, so B=5 with no carry. Tens: 3+B=8, which also holds for B=5."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Units B+3 ends in 8 forces B=5; tens 3+5=8 confirms. B=3 repeats a printed digit inconsistently with the sum; B=8 fails the units column.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

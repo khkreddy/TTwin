@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nisha writes the prime factorisation $2744=2^{3}\\times 7^{3}$ and checks for a perfect cube and its cube root.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What should she conclude?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$2744$ is a perfect cube and its cube root is $14$."
+        },
+        {
+          "id": "B",
+          "text": "$2744$ is a perfect cube and its cube root is $28$."
+        },
+        {
+          "id": "C",
+          "text": "$2744$ is not a perfect cube because one exponent is odd."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The primes split into triplets: $2^{3}$ and $7^{3}$, so $2744=(2\\times 7)^{3}=14^{3}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Both primes appear in complete triplets, so 2744 is a cube and the cube root is 2×7=14. Taking 28 doubles the root. Odd exponents here are already in triplets, so they do not block a cube.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

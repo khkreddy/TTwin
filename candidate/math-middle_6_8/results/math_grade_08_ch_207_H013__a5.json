@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$5\\,\\mathrm{m}^{2}=5\\times 100=500\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "$5\\,\\mathrm{m}^{2}=5\\times 100^{2}=50000\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "C",
+      "text": "$5\\,\\mathrm{m}^{2}=5\\,\\mathrm{cm}^{2}$ because the number $5$ stays the same."
+    },
+    {
+      "id": "D",
+      "text": "Length conversion is the label that belongs as the area answer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Aisha has a garden of area $5\\,\\mathrm{m}^{2}$. She knows $1\\,\\mathrm{m}=100\\,\\mathrm{cm}$.\n\nWhich claim correctly converts the area to square centimetres?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1 m = 100 cm so 1 m² = 100² cm²; multiply area by 100²: 5×10000=50000 cm².",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

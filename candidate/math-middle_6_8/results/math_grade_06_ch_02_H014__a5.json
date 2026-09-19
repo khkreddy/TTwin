@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (O) at (0,0);\n  \\coordinate (R) at (-2.7,0);\n  \\coordinate (S) at (2.9,0);\n  \\coordinate (T) at (1.4,2.2);\n  \\draw[line width=1.05pt] (R)--(S);\n  \\draw[line width=1.05pt] (O)--(T);\n  \\node[below left] at (R){$R$};\n  \\node[below right] at (S){$S$};\n  \\node[below] at (O){$O$};\n  \\node[above right] at (T){$T$};\n  \\draw[line width=0.7pt] (0.55,0) arc (0:57:0.55);\n  \\node[right] at (0.72,0.38){$55^{\\circ}$};\n  \\draw[line width=0.7pt] (-0.55,0) arc (180:57:0.55);\n  \\node[above left] at (-0.5,0.55){$\\angle TOS$};\n  \\node[align=center] at (0.1,-1.05){$ROS$ is a straight line.};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Esha looks at the diagram. Straight line $ROS$ passes through $O$, and ray $OT$ cuts the straight angle into adjacent angles $\\angle ROT$ and $\\angle TOS$. The marked angle $\\angle ROT$ is $55^{\\circ}$.\n\nWhich claim correctly finds $\\angle TOS$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\angle TOS=180^{\\circ}$, the measure of the whole straight angle at $O$."
+    },
+    {
+      "id": "B",
+      "text": "$\\angle TOS=180^{\\circ}-55^{\\circ}=125^{\\circ}$, because the adjacent parts of the straight angle add to $180^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "$\\angle TOS=55^{\\circ}$, matching the printed degree mark on $\\angle ROT$."
+    },
+    {
+      "id": "D",
+      "text": "$\\angle TOS=90^{\\circ}-55^{\\circ}=35^{\\circ}$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adjacent angles on straight line ROS sum to 180°, so ∠TOS=180−55=125. Naming only the whole, copying 55, or using a right-angle complement all miss that split.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source triangle as straight line ROS with ray OT and marked adjacent angle 55°."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Farida has triangle $ABC$ with $M$ the midpoint of $BC$, so $BM=MC$. She draws $AM$.",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$\\triangle ABM$ and $\\triangle ACM$ have equal bases $BM$ and $MC$ and the same height from $A$ to $BC$, so their areas are equal."
+    },
+    {
+      "id": "2",
+      "text": "Equal areas for $\\triangle ABM$ and $\\triangle ACM$ require the two small triangles to be congruent."
+    },
+    {
+      "id": "3",
+      "text": "A line from a vertex to the midpoint of the opposite side divides a triangle into two equal-area triangles."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Statements 1 and 3 are true: equal base segments with shared height give equal area, and a median divides a triangle into equal-area parts. Statement 2 wrongly requires congruence. Key is 1 and 3 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

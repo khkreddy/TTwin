@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vikram builds two shapes from the same $9$ unit squares, side-aligned with no gaps. Shape $P$ is a $3$-by-$3$ square. Shape $Q$ is an L-shape made by moving squares.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly compares area and perimeter?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Area and perimeter both stay the same for every rearrangement of the $9$ squares."
+        },
+        {
+          "id": "B",
+          "text": "Changing the arrangement creates the $9$ unit squares."
+        },
+        {
+          "id": "C",
+          "text": "Area stays the same because both shapes use $9$ unit squares, but the perimeter can change."
+        },
+        {
+          "id": "D",
+          "text": "Only Shape $P$ has an area, because it is a square."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Same number of unit squares means equal area; different outlines can share different numbers of edges, so perimeters need not match."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal count of unit squares keeps area $9$, while rearranging can change how many outer edges remain, so perimeter can differ. Treating both as fixed, reversing arrangement and squares, or denying area for the L-shape miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

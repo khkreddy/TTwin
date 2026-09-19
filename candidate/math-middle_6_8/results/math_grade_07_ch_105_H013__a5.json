@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "item_type": "one_or_more",
+  "stem": "Parallel lines $p$ and $q$ are cut by transversal $r$. One same-side interior angle measures $80^{\\circ}$.\n\nWhich two claims correctly give the other same-side interior angle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The other same-side interior angle is $100^{\\circ}$, because same-side interior angles on parallel lines add to $180^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "The other same-side interior angle is $80^{\\circ}$, because same-side interior angles on parallel lines are equal."
+    },
+    {
+      "id": "C",
+      "text": "The other same-side interior angle is $180^{\\circ}-80^{\\circ}=100^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "The other same-side interior angle is $160^{\\circ}$, from doubling $80^{\\circ}$."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-side interior angles on parallel lines are supplementary: 180−80=100. Treating them as equal or doubling 80 misses that sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

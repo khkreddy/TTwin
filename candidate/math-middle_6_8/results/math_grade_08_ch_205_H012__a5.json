@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the word trend as the Day $3$ water level."
+    },
+    {
+      "id": "B",
+      "text": "The water level peaks on Day $3$ at $40\\,\\mathrm{L}$, and the steepest rise is from Day $2$ to Day $3$."
+    },
+    {
+      "id": "C",
+      "text": "The water level on Day $6$ is $50\\,\\mathrm{L}$."
+    },
+    {
+      "id": "D",
+      "text": "The peak value equals the day number printed on the axis."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\draw[->,thick] (0,0)--(6.2,0) node[right] {Day};\n  \\draw[->,thick] (0,0)--(0,4.6) node[above] {L};\n  \\foreach \\x/\\lab in {1/1,2/2,3/3,4/4,5/5} {\n    \\draw (\\x,0.08)--(\\x,-0.08) node[below] {\\lab};\n  }\n  \\foreach \\y/\\lab in {1/10,2/20,3/30,4/40} {\n    \\draw (0.08,\\y)--(-0.08,\\y) node[left] {\\lab};\n  }\n  \\draw[thick] (1,2.0)--(2,2.5)--(3,4.0)--(4,3.5)--(5,3.0);\n  \\foreach \\p in {(1,2.0),(2,2.5),(3,4.0),(4,3.5),(5,3.0)} {\n    \\fill \\p circle (2.2pt);\n  }\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The graph shows the water level in litres in Wahid's tank over five days.\n\nWhich claim is supported by the graph?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plotted values peak on Day 3 at 40 L; the largest rise over one day interval is from Day 2 (25 L) to Day 3 (40 L).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Line graph of tank water level over five days."
+  }
+}

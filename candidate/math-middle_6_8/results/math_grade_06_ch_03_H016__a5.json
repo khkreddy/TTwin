@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Kalyani's board shows this pattern of scores:\n\n$2$  $2$  $2$\n$2$  $2$  $2$\n$7$  $7$  $7$  $7$\n\nWhich claim finds the total most quickly by grouping?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Six $2$s and four $7$s give $6\\times 2+4\\times 7=40$."
+    },
+    {
+      "id": "B",
+      "text": "Add only the distinct values $2$ and $7$ to get $9$."
+    },
+    {
+      "id": "C",
+      "text": "The total $40$ is read first, and that reading lays out the rows of $2$s and $7$s."
+    },
+    {
+      "id": "D",
+      "text": "Use the same grouping to find a total for a blank board with no scores shown."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Group six 2s and four 7s: 12+28=40. Adding distinct values once omits multiplicity. Reading the total first to invent the rows reverses the task. Grouping does not apply to an empty board.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

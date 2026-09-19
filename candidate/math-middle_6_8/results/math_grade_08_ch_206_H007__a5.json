@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Ekta's algebra grid. One row has three identical green squares with sum $15$. The next row has two identical yellow circles and one green square with sum $17$. Each shape stands for one unknown value.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds the shape values?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "From three green squares summing to $15$, one green square is $5$. Then two yellow circles and one green square summing to $17$ give one yellow circle equal to $6$."
+        },
+        {
+          "id": "B",
+          "text": "Call each shape an unknown and stop, leaving the sums $15$ and $17$ unused."
+        },
+        {
+          "id": "C",
+          "text": "Factorise $15$ and $17$ into primes and treat those factors as the shape values."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,every node/.style={font=\\small}]\n  \\draw[thick,fill=green!25] (0,2) rectangle (1.2,3.2);\n  \\draw[thick,fill=green!25] (1.4,2) rectangle (2.6,3.2);\n  \\draw[thick,fill=green!25] (2.8,2) rectangle (4.0,3.2);\n  \\node at (4.8,2.6) {$=$};\n  \\draw[thick] (5.2,2) rectangle (6.6,3.2);\n  \\node at (5.9,2.6) {$15$};\n  \\node[below] at (2.0,1.9) {three green squares};\n  \\draw[thick,fill=yellow!35] (0,0) circle (0.55);\n  \\draw[thick,fill=yellow!35] (1.5,0) circle (0.55);\n  \\draw[thick,fill=green!25] (2.7,-0.55) rectangle (3.9,0.65);\n  \\node at (4.8,0) {$=$};\n  \\draw[thick] (5.2,-0.55) rectangle (6.6,0.65);\n  \\node at (5.9,0.05) {$17$};\n  \\node[below] at (2.0,-0.9) {two yellow circles and one green square};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Row sums fix each identical shape's value: 15÷3=5 for a green square, then (17−5)÷2=6 for a yellow circle."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3 green = 15 → green=5; 2 yellow + 5 = 17 → yellow=6. Stopping at the word unknown or using prime factors ignores the row-sum mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion"
+    ],
+    "figure_note": "Algebra grid: three green squares =15; two yellow circles and one green square =17."
+  }
+}

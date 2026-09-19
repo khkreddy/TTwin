@@ -1,0 +1,61 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states what percent $Q$ is of $P$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$Q$ is $80\\%$ of $P$, because $100-20=80$."
+        },
+        {
+          "id": "B",
+          "text": "$Q$ is $500\\%$ of $P$, because $Q/P=1/(20/100)=5$."
+        },
+        {
+          "id": "C",
+          "text": "$Q$ is $20\\%$ of $P$, because the percentage stays the same when the comparison is reversed."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Vidya is told that mass $P$ is $20\\%$ of mass $Q$.\n\nShe wants what percent $Q$ is of $P$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "If $P$ is $20\\%$ of $Q$, then $P=0.2Q$, so $Q/P=5$ and $Q$ is $500\\%$ of $P$. Subtracting from $100$ does not reverse the reference quantity."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reversing the comparison makes P the new whole: Q/P = 5, so Q is 500% of P.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

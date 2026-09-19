@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$+55$ means Region $T$ uses no tea at all."
+    },
+    {
+      "id": "B",
+      "text": "$+55$ means stronger milk preference than tea for Region $T$ on that scale."
+    },
+    {
+      "id": "C",
+      "text": "Preferring milk is settled by finding the mean of an unrelated data list."
+    },
+    {
+      "id": "D",
+      "text": "$-55$ and $+55$ mean the same preference direction as well as the same strength."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Aarav reads an infographic of regions. A colour scale from $-100$ to $+100$ encodes the difference between per person milk use and tea use. Region $T$ is marked with value $+55$.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Positive scale values mean stronger milk preference; +55 is not zero tea and is not the same direction as -55.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "A rope is $9.6\\,\\mathrm{m}$ long. Abhay cuts it into pieces of $0.8\\,\\mathrm{m}$ each with no rope left over.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds how many pieces he gets?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Add $9.6$ and $0.8$ to get the number of pieces."
+        },
+        {
+          "id": "B",
+          "text": "The number of pieces is $9.6$, because that is the longer printed measure."
+        },
+        {
+          "id": "C",
+          "text": "Divide $9.6$ by $0.8$ to get $12$ pieces."
+        },
+        {
+          "id": "D",
+          "text": "The number of pieces is $0.8$, because that is the piece length printed on the rope."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In one common unit (metres), the count of equal pieces is the quotient $9.6\\div0.8=12$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sharing uses division of total length by piece length: $9.6\\div0.8=12$. Adding the measures, or reading either printed length as the count, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Hemant knows six test scores have mean $12$. Five of the scores are $10$, $11$, $14$, $9$ and $13$. One score is missing.\n\nWhich two claims correctly recover the missing score?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Treat the known mean $12$ itself as the missing score."
+    },
+    {
+      "id": "B",
+      "text": "First form the total $6\\times 12=72$."
+    },
+    {
+      "id": "C",
+      "text": "The missing score is $72-(10+11+14+9+13)=15$."
+    },
+    {
+      "id": "D",
+      "text": "Call the answer the number of values $6$ alone."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean×count gives total 72; subtract the five known scores to get missing 15. Using the mean or the count alone as the missing score skips recovering the total.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_104/H017",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_104/H017",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "surface_feature_capture",
+      "B": null,
+      "C": null,
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_104/H017; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H017:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H017",
+    "stem": "The diagram shows trapezium $ABCD$ with $AB\\parallel DC$ and equal non-parallel sides $AD=BC$. Diya studies whether the base angles are equal.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The trapezium has equal base angles because it is labelled $ABCD$.",
+      "B": "Angles at $A$ and $B$ are equal.",
+      "C": "Angles at $D$ and $C$ are equal.",
+      "D": "The non-parallel sides are equal because the base angles are already equal."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5,0);\n  \\coordinate (C) at (3.7,2.0);\n  \\coordinate (D) at (1.3,2.0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node at (0.55,1.1) {\\small$=$};\n  \\node at (4.45,1.1) {\\small$=$};\n  \\node[below] at (2.5,-0.35) {$AB\\parallel DC$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H017",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

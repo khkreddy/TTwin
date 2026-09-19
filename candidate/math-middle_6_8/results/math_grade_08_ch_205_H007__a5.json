@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Qasim has the sorted scores $5$, $7$, $9$, $11$, $13$ (median $9$). He inserts the value $15$ into the list.\n\nWhich two claims correctly describe how the median changes?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "After inserting $15$, the sorted list is $5$, $7$, $9$, $11$, $13$, $15$; the middle pair is $9$ and $11$, so the median becomes $10$."
+    },
+    {
+      "id": "B",
+      "text": "Say the median moves after inserting $15$, skipping that the list must stay sorted and the new middle position(s) must be checked."
+    },
+    {
+      "id": "C",
+      "text": "The median moves upward because $15$ is greater than the earlier median $9$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same middle-tracking rule to decide how the mean changes when $15$ is inserted."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inserting $15$ above the old median yields sorted $5,7,9,11,13,15$; the middle pair averages to $10$, so the median rises. Skipping the sorted middle check, or stretching the rule to the mean, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

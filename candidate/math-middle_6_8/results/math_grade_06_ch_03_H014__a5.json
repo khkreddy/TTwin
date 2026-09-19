@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Alok's addition-only number-box activity allows the middle numbers $4$, $6$, and $6$ to be used as many times as needed. The side target is $16$.\n\nWhich two plans correctly build that target?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use $6-4$ together with addition to reach $16$."
+    },
+    {
+      "id": "B",
+      "text": "Add middle numbers as needed, for example $4+6+6=16$, using only addition."
+    },
+    {
+      "id": "C",
+      "text": "Reuse a middle number, for example $6+6+4=16$, still using only addition."
+    },
+    {
+      "id": "D",
+      "text": "Use $4\\times 4=16$ with the middle numbers."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Addition-only reuse of 4, 6, and 6 reaches 16 as 4+6+6 or 6+6+4. Subtraction or multiplication steps break the activity rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Base $AB=12$ cm and perpendicular height $CH=4$ cm give area $\\frac{1}{2}\\times 12\\times 4=24$ cm$^{2}$."
+    },
+    {
+      "id": "2",
+      "text": "A slanted side from $C$ that is not perpendicular to the line through $AB$ can replace $CH$ as the height."
+    },
+    {
+      "id": "3",
+      "text": "The same base–perpendicular-height product gives the area for every type of triangle."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Javed has triangle $ABC$ with $AB=12$ cm. From $C$ he draws a perpendicular to the line through $AB$, meeting it at $H$, and measures $CH=4$ cm.",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area is ½×base×perpendicular height, so statements 1 and 3 are true. Statement 2 drops the perpendicular condition. Including 2 with 1, or only 2 with 3, or all three, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

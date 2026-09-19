@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Chetan writes $6700$ in scientific notation, with coefficient $x$ satisfying $1\\le x<10$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$6700=67\\times 10^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "$6700=6.7\\times 10^{3}$, with coefficient $6.7$ satisfying $1\\le x<10$."
+    },
+    {
+      "id": "C",
+      "text": "The exponent $3$ is chosen first, and that choice allows the coefficient to be $67$."
+    },
+    {
+      "id": "D",
+      "text": "$0.67\\times 10^{4}$ is also scientific notation for $6700$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "6700=6.7×10^3 with 1≤6.7<10. 67×10^2 has coefficient outside [1,10). Choosing the exponent first to allow 67 reverses the coefficient constraint. 0.67×10^4 violates 1≤x<10.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

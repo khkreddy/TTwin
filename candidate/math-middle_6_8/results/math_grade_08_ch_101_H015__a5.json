@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zoya works with the perfect cube $216=6^{3}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cube root of $216$ can be decided with no link to a number that cubes to $216$."
+    },
+    {
+      "id": "B",
+      "text": "The cube root of $216$ is $6$."
+    },
+    {
+      "id": "C",
+      "text": "The cube root of $216$ is $216\\div 3=72$."
+    },
+    {
+      "id": "D",
+      "text": "The cube root of $216$ is $216^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Because 6³=216, the cube root of 216 is 6. Omitting the inverse link, dividing by 3, or squaring each miss the cube-root operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

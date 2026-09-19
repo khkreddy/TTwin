@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H013",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "operation_confusion",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_06/H013; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "operation_confusion",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H013:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H013",
+    "stem": "The figure shows Sonia's garden plot: rectangle $ABCD$ is $10\\ \\mathrm{cm}$ by $5\\ \\mathrm{cm}$, and right triangle $AEB$ has base $10\\ \\mathrm{cm}$ and height $4\\ \\mathrm{cm}$ on top of the rectangle.\n\nHow should she find the area of the figure?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Add the rectangle area $10\\times 5$ and the triangle area $\\dfrac{1}{2}\\times 10\\times 4$.",
+      "B": "Use only the rectangle area $10\\times 5$, because the triangle sits on the rectangle.",
+      "C": "Multiply the rectangle area by the triangle area to get the composite area.",
+      "D": "Any closed garden plot has area $10\\times 5$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.45cm,y=0.45cm,font=\\small,line join=round]\n  \\draw[line width=1.05pt] (0,0)--(10,0)--(10,5)--(0,5)--cycle;\n  \\draw[line width=1.05pt] (0,5)--(5,9)--(10,5);\n  \\node[below] at (5,0){$10\\,\\mathrm{cm}$};\n  \\node[left] at (0,2.5){$5\\,\\mathrm{cm}$};\n  \\node[above left] at (2.2,7.2){$4\\,\\mathrm{cm}$};\n  \\node[below left] at (0,0){$D$};\n  \\node[below right] at (10,0){$C$};\n  \\node[above right] at (10,5){$B$};\n  \\node[above left] at (0,5){$A$};\n  \\node[above] at (5,9){$E$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

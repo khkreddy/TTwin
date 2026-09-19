@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "A line graph with two lines shows how each person's steps change across the days and makes the comparison clear."
+    },
+    {
+      "id": "B",
+      "text": "The display is a pie chart of the step totals."
+    },
+    {
+      "id": "C",
+      "text": "Ordered times suit a line graph better than many crowded clustered bars for comparing the two series."
+    },
+    {
+      "id": "D",
+      "text": "Only the tallest plotted point matters for comparing the two people."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95, font=\\small]\n  \\draw[->,thick] (0,0) -- (5.2,0) node[right] {Day};\n  \\draw[->,thick] (0,0) -- (0,3.6) node[above] {Steps ($100$s)};\n  \\foreach \\x/\\lab in {1/Mon,2/Tue,3/Wed,4/Thu}\n    \\draw (\\x,0.08) -- (\\x,-0.08) node[below] {\\lab};\n  \\foreach \\y in {1,2,3}\n    \\draw (0.08,\\y) -- (-0.08,\\y) node[left] {\\y0};\n  \\draw[thick,blue] (1,1.5) -- (2,2.2) -- (3,1.8) -- (4,2.8);\n  \\draw[thick,orange] (1,1.0) -- (2,1.4) -- (3,2.4) -- (4,2.0);\n  \\foreach \\p in {(1,1.5),(2,2.2),(3,1.8),(4,2.8)} \\fill[blue] \\p circle (1.5pt);\n  \\foreach \\p in {(1,1.0),(2,1.4),(3,2.4),(4,2.0)} \\fill[orange] \\p circle (1.5pt);\n  \\node[anchor=west] at (5.4,2.8) {\\textcolor{blue}{Arjun}};\n  \\node[anchor=west] at (5.4,2.0) {\\textcolor{orange}{Bina}};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "The graph shows steps walked (in hundreds) for Arjun and Bina across four weekdays that Zara recorded in order. She is choosing between this line graph and a display with many clustered bars.\n\nWhich two claims about this display are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two time series over ordered days are clearer as lines than as crowded clustered bars; both A and C state that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Two-series line graph of daily steps."
+  }
+}

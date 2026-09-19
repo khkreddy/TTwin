@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_201/H015",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_201/H015",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "mechanism_conflation",
+      "C": null,
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_201/H015; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_201:H015:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-RATIO",
+    "chapter_id": "math/grade_08/ch_201",
+    "chapter_label": "math/grade_08/ch_201",
+    "subtopic_id": "math/grade_08/ch_201/H015",
+    "stem": "Cyrus's school projector is worth $\\mathrm{Rs}\\,12000$. Each year it loses $25\\%$ of its value at the start of that year.\n\nAfter $2$ years, which claim correctly gives its value?",
+    "item_type": "mcq",
+    "options": {
+      "A": "After $2$ years the value is $\\mathrm{Rs}\\,12000\\times 0.75=\\mathrm{Rs}\\,9000$, applying the $25\\%$ drop only once.",
+      "B": "Each year subtract $\\mathrm{Rs}\\,3000$ from $\\mathrm{Rs}\\,12000$ as if the drop were a fixed amount from the original cost, giving $\\mathrm{Rs}\\,6000$.",
+      "C": "After year $1$ the value is $\\mathrm{Rs}\\,9000$; after year $2$ it is $\\mathrm{Rs}\\,9000\\times 0.75=\\mathrm{Rs}\\,6750$.",
+      "D": "The value is $25\\%$, the printed depreciation rate."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_201/H015",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

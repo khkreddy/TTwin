@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item_type": "single_mcq",
+  "stem": "Madhav works on a multiplication cryptarithm. Each letter stands for one digit, different letters stand for different digits, and the first digit of a multi-digit number is never $0$. He wants to narrow possible digits before trying every full substitution.\n\n$$\\begin{array}{c@{}c@{}c} & & A \\\\ \\times & & B \\\\ \\hline & C & D \\end{array}$$\n\nWhich claim correctly narrows a digit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$A$ and $B$ cannot be $0$, and the product $CD$ is a two-digit number, so $A\\times B$ is between $10$ and $99$."
+    },
+    {
+      "id": "B",
+      "text": "Letter $C$ must equal letter $A$, with no further constraint from the product size."
+    },
+    {
+      "id": "C",
+      "text": "Any digits for $A$, $B$, $C$, and $D$ work as long as each letter is a single digit, including $0$ for a leading place."
+    },
+    {
+      "id": "D",
+      "text": "The product $CD$ must be smaller than one factor $A$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Leading digits cannot be 0, and a two-digit product forces 10≤A×B≤99, which narrows candidates before full search. Equating C with A, allowing leading zeros, or requiring the product to be smaller than a factor miss those constraints.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

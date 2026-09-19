@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha lists $1$, $4$, $9$, $16$, $25$ (squares) and $1$, $8$, $27$, $64$, $125$ (cubes). She forms first differences of the square list as $3$, $5$, $7$, $9$, then second differences $2$, $2$, $2$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Constant second differences equal to $2$ match a sequence of perfect squares."
+    },
+    {
+      "id": "B",
+      "text": "Constant second differences equal to $2$ match a sequence of perfect cubes."
+    },
+    {
+      "id": "C",
+      "text": "The constant second differences of $2$ mean the list is perfect cubes."
+    },
+    {
+      "id": "D",
+      "text": "Constant first differences alone already match cubes, so further differences are not needed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For perfect squares, second differences are constantly 2. That pattern does not identify cubes; cubes need further difference levels. Reading the square pattern as cubes swaps the sequence type. Stopping at first differences omits the successive-difference check for cubes versus squares.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

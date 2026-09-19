@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_104/H012",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_104/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": null,
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_104/H012; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H012:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H012",
+    "stem": "Lalit looks at the diagram of quadrilateral $PQRS$. All four sides carry the same tick mark. No right-angle mark is shown.\n\nWhich claim correctly classifies $PQRS$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call $PQRS$ a rhombus while the four sides are allowed to be unequal.",
+      "B": "$PQRS$ is a rhombus and a parallelogram; it is not a square because no right angle is shown.",
+      "C": "Being a parallelogram forces the four equal side lengths on $PQRS$.",
+      "D": "Call $PQRS$ a square under the same marks, with right angles that are not shown."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95,line join=round,font=\\small]\n  \\coordinate (P) at (0,1.6);\n  \\coordinate (Q) at (2.4,2.4);\n  \\coordinate (R) at (3.2,0.6);\n  \\coordinate (S) at (0.8,-0.2);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.75pt] (1.12,1.92)--(1.28,2.08);\n  \\draw[line width=0.75pt] (2.72,1.42)--(2.88,1.58);\n  \\draw[line width=0.75pt] (1.92,0.12)--(2.08,0.28);\n  \\draw[line width=0.75pt] (0.32,0.62)--(0.48,0.78);\n  \\node[above left] at (P){$P$};\n  \\node[above right] at (Q){$Q$};\n  \\node[below right] at (R){$R$};\n  \\node[below left] at (S){$S$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

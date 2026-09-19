@@ -1,0 +1,61 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the study time is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Study lasts $8\\times 30=240$ minutes ($4$ hours)."
+        },
+        {
+          "id": "B",
+          "text": "Study lasts $8$ hours because each box stands for one hour."
+        },
+        {
+          "id": "C",
+          "text": "The colour label alone gives the duration without counting boxes."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Vivaan draws an activity strip for a $12$-hour stretch using $24$ equal boxes. Each box stands for $30$ minutes. Study is coloured in $8$ boxes.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Count the study boxes and multiply by $30$ minutes per box: $8\\times 30=240$ minutes."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Eight boxes at 30 minutes each is 240 minutes; boxes are not one hour in this strip.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

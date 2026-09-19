@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ravi compares two savings plans that both start with ₹500.\nPlan L: add ₹50 at the end of every week (linear growth).\nPlan E: multiply the current amount by $1.2$ at the end of every week (exponential growth).\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Both plans show linear growth by adding ₹50 each week."
+    },
+    {
+      "id": "B",
+      "text": "Plan L shows exponential growth, and Plan E shows linear growth."
+    },
+    {
+      "id": "C",
+      "text": "Plan L shows linear growth; Plan E shows exponential growth."
+    },
+    {
+      "id": "D",
+      "text": "Only Plan E can be used for more than one week."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plan L adds a fixed amount each week (linear). Plan E multiplies by a fixed factor each week (exponential). Calling both linear omits the multiply-by-factor rule. Swapping the labels reverses the relation. Limiting Plan E to one week is outside the growth-type decision.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

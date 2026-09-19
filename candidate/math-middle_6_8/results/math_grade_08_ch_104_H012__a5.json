@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line join=round,font=\\small]\n  \\coordinate (P) at (0,1.6);\n  \\coordinate (Q) at (2.4,2.4);\n  \\coordinate (R) at (3.2,0.6);\n  \\coordinate (S) at (0.8,-0.2);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.75pt] (1.12,1.92)--(1.28,2.08);\n  \\draw[line width=0.75pt] (2.72,1.42)--(2.88,1.58);\n  \\draw[line width=0.75pt] (1.92,0.12)--(2.08,0.28);\n  \\draw[line width=0.75pt] (0.32,0.62)--(0.48,0.78);\n  \\node[above left] at (P){$P$};\n  \\node[above right] at (Q){$Q$};\n  \\node[below right] at (R){$R$};\n  \\node[below left] at (S){$S$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Lalit looks at the diagram of quadrilateral $PQRS$. All four sides carry the same tick mark. No right-angle mark is shown.\n\nWhich claim correctly classifies $PQRS$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $PQRS$ a rhombus while the four sides are allowed to be unequal."
+    },
+    {
+      "id": "B",
+      "text": "$PQRS$ is a rhombus and a parallelogram; it is not a square because no right angle is shown."
+    },
+    {
+      "id": "C",
+      "text": "Being a parallelogram forces the four equal side lengths on $PQRS$."
+    },
+    {
+      "id": "D",
+      "text": "Call $PQRS$ a square under the same marks, with right angles that are not shown."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sides make a rhombus (hence a parallelogram). Without a right-angle mark it is not shown to be a square. Allowing unequal sides, reversing parallelogram→equal sides, or forcing a square miss the classification.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite as rhombus PQRS with equal-side tick marks and no right-angle marks."
+  }
+}

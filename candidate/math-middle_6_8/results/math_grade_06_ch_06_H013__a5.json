@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.45cm,y=0.45cm,font=\\small,line join=round]\n  \\draw[line width=1.05pt] (0,0)--(10,0)--(10,5)--(0,5)--cycle;\n  \\draw[line width=1.05pt] (0,5)--(5,9)--(10,5);\n  \\node[below] at (5,0){$10\\,\\mathrm{cm}$};\n  \\node[left] at (0,2.5){$5\\,\\mathrm{cm}$};\n  \\node[above left] at (2.2,7.2){$4\\,\\mathrm{cm}$};\n  \\node[below left] at (0,0){$D$};\n  \\node[below right] at (10,0){$C$};\n  \\node[above right] at (10,5){$B$};\n  \\node[above left] at (0,5){$A$};\n  \\node[above] at (5,9){$E$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "operation_confusion",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The figure shows Sonia's garden plot: rectangle $ABCD$ is $10\\ \\mathrm{cm}$ by $5\\ \\mathrm{cm}$, and right triangle $AEB$ has base $10\\ \\mathrm{cm}$ and height $4\\ \\mathrm{cm}$ on top of the rectangle.\n\nHow should she find the area of the figure?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the rectangle area $10\\times 5$ and the triangle area $\\dfrac{1}{2}\\times 10\\times 4$."
+    },
+    {
+      "id": "B",
+      "text": "Use only the rectangle area $10\\times 5$, because the triangle sits on the rectangle."
+    },
+    {
+      "id": "C",
+      "text": "Multiply the rectangle area by the triangle area to get the composite area."
+    },
+    {
+      "id": "D",
+      "text": "Any closed garden plot has area $10\\times 5$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partition into rectangle 10×5 and triangle ½×10×4, then add. Omitting the triangle, multiplying part areas, or treating every plot as 10×5 miss the composite plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite as rectangle ABCD 10 by 5 with triangle AEB of height 4 on top."
+  }
+}

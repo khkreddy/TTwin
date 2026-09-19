@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina notes that $4104=2^{3}+16^{3}$ and $4104=9^{3}+15^{3}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4104$ is a taxicab number because $4104$ is itself a perfect cube."
+    },
+    {
+      "id": "B",
+      "text": "The two cube-sum writings force the digits of $4104$ to appear."
+    },
+    {
+      "id": "C",
+      "text": "$4104$ is a taxicab number because it is a sum of two positive cubes in two different ways."
+    },
+    {
+      "id": "D",
+      "text": "$4104$ is a taxicab number because it ends with $4$, like $16^{3}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A taxicab number has two distinct positive-cube pair sums; $2^{3}+16^{3}=9^{3}+15^{3}=4104$ meets that test. Being a cube, reversing writings and digits, or matching a final digit miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

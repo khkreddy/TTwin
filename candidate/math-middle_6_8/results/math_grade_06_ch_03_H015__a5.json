@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tejas adds two 4-digit numbers.\n\nWhich claim about the number of digits in the sum is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sum is always a 5-digit number."
+    },
+    {
+      "id": "B",
+      "text": "The sum is never a 4-digit number."
+    },
+    {
+      "id": "C",
+      "text": "The sum is sometimes a 5-digit number."
+    },
+    {
+      "id": "D",
+      "text": "The sum is always a 4-digit number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two 4-digit numbers range from $1000+1000=2000$ (4 digits) to $9999+9999=19998$ (5 digits), so the sum is sometimes 5-digit and sometimes 4-digit — not always either.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

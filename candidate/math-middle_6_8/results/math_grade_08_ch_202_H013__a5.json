@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sameer compares $p^{2}+q^{2}=r^{2}$ with $p^{n}+q^{n}=r^{n}$ for integers $n>2$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Both equations are Baudhāyana triples under one shared name."
+    },
+    {
+      "id": "B",
+      "text": "Positive natural-number solutions exist for the square case, but Fermat's claim says none when $n>2$."
+    },
+    {
+      "id": "C",
+      "text": "The equations match because both print a plus sign between powers."
+    },
+    {
+      "id": "D",
+      "text": "Applying $a^{2}+b^{2}=c^{2}$ to a right triangle also settles $p^{n}+q^{n}=r^{n}$ for $n>2$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Baudhāyana triples solve the square-power equation. Fermat's Last Theorem denies positive natural-number solutions for n>2. Shared plus signs or right-triangle reasoning do not settle the higher-power case.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

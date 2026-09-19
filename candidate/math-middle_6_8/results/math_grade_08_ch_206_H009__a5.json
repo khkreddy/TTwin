@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$(10p+q)-(10q+p)=9(p-q)$, so the difference of the number and its reverse is a multiple of $9$."
+    },
+    {
+      "id": "B",
+      "text": "The difference is a multiple of $9$ even if $10p+q$ and $10q+p$ are read as products of letters, not place-value numbers."
+    },
+    {
+      "id": "C",
+      "text": "The same place-value difference settles successive percentage discounts on a price."
+    },
+    {
+      "id": "D",
+      "text": "Digits $p$ and $q$ as letters multiply to give the two-digit number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Anaya writes a two-digit number as $10p+q$ and the number with its digits reversed as $10q+p$, with digits $p\\neq q$.\n\nWhich claim correctly justifies a divisibility fact with place value?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place value gives (10p+q)-(10q+p)=9(p-q), a multiple of 9 when p and q are digits.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

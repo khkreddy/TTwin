@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows trapezium $ABCD$ with $AB\\parallel DC$ and equal non-parallel sides $AD=BC$. Diya studies whether the base angles are equal.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The trapezium has equal base angles because it is labelled $ABCD$."
+    },
+    {
+      "id": "B",
+      "text": "Angles at $A$ and $B$ are equal."
+    },
+    {
+      "id": "C",
+      "text": "Angles at $D$ and $C$ are equal."
+    },
+    {
+      "id": "D",
+      "text": "The non-parallel sides are equal because the base angles are already equal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5,0);\n  \\coordinate (C) at (3.7,2.0);\n  \\coordinate (D) at (1.3,2.0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node at (0.55,1.1) {\\small$=$};\n  \\node at (4.45,1.1) {\\small$=$};\n  \\node[below] at (2.5,-0.35) {$AB\\parallel DC$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal non-parallel sides make an isosceles trapezium, so base angles at A and B are equal and base angles at D and C are equal. Labelling ABCD alone does not force equal angles. Treating equal base angles as the cause of equal legs reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source triangle into isosceles trapezium ABCD with equal non-parallel sides marked."
+  }
+}

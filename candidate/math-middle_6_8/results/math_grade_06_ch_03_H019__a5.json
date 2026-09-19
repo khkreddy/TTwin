@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev and Lata take turns adding $1$ or $2$ to a running total that starts at $0$. The player who makes the total exactly $12$ wins.\n\nWhich claim about the winning totals is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any running total can be a winning move, because the printed target is $12$."
+    },
+    {
+      "id": "B",
+      "text": "If Dev makes the total $9$, then whatever Lata adds ($1$ or $2$), Dev can reach $12$ on the next turn."
+    },
+    {
+      "id": "C",
+      "text": "Safe totals to leave for the other player are spaced by $2$, such as $2$, $4$, $6$, and $8$."
+    },
+    {
+      "id": "D",
+      "text": "Count how many times the digit $1$ is written from $1$ to $12$, and treat that count as the winning pattern."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With adds of 1 or 2, the winning step is 3. Leaving 9 forces a win: opponent reaches 10 or 11, then Dev takes 12. Treating any total as winning captures the printed 12. Spacing by 2 omits that the step is one more than the max add. Digit counting is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The area is $\\frac{1}{2}\\times 5\\times(18+12)=75\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "The area is $\\frac{1}{2}\\times 5\\times(18+6)$ using a non-parallel side in the sum."
+    },
+    {
+      "id": "C",
+      "text": "The lengths added in the trapezium area formula must be the two parallel sides."
+    },
+    {
+      "id": "D",
+      "text": "The area is $18\\times 12\\div 5$ by dividing the given lengths."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kiara finds the area of trapezium $ABCD$. Sides $AB=18\\,\\mathrm{cm}$ and $DC=12\\,\\mathrm{cm}$ are parallel. The height between those parallel sides is $5\\,\\mathrm{cm}$. The non-parallel side $AD$ measures $6\\,\\mathrm{cm}$.\n\nWhich two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trapezium area is ½×height×(sum of parallel sides)=½×5×30=75; only parallel sides enter the sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

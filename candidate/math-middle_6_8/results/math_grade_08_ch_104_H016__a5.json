@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows trapezium $PQRS$ with $PQ\\parallel SR$. Angle $QPS=65^{\\circ}$. Farhan wants angle $PSR$ on the same non-parallel side as angle $QPS$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $PSR=65^{\\circ}$ because angle $PSR$ must equal angle $QPS$ in a trapezium."
+    },
+    {
+      "id": "B",
+      "text": "Angle $PSR$ cannot be found from the parallel sides alone."
+    },
+    {
+      "id": "C",
+      "text": "Angle $PSR=115^{\\circ}$ because the angles on the same non-parallel side between the parallel sides add to $180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Angle $PSR=65^{\\circ}$ because $PQ$ equals $SR$ on the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]\n  \\coordinate (P) at (1.0,2.2);\n  \\coordinate (Q) at (3.8,2.2);\n  \\coordinate (R) at (5,0);\n  \\coordinate (S) at (0,0);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[<->] (1.0,2.55)--(3.8,2.55);\n  \\node[above] at (2.4,2.55) {PQ};\n  \\draw[<->] (0,-0.55)--(5,-0.55);\n  \\node[below] at (2.5,-0.55) {SR};\n  \\node[above left] at (P) {$P$};\n  \\node[above right] at (Q) {$Q$};\n  \\node[below right] at (R) {$R$};\n  \\node[below left] at (S) {$S$};\n  \\node at (0.85,1.55) {$65^\\circ$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With PQ∥SR, co-interior angles on the same non-parallel side PS add to 180°, so angle PSR=180−65=115°. Equal corresponding angles confuse the parallel-side property. Saying the angle cannot be found omits the co-interior sum. Equality of PQ and SR is not given and is not the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle into labelled trapezium PQRS with PQ∥SR and marked 65°."
+  }
+}

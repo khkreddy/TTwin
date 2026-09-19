@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanvi records scores in a frequency table: score $3$ appears $4$ times, score $5$ appears $3$ times, and score $7$ appears $3$ times.\n\nWhich claim correctly finds the mean of these scores?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mean is $\\dfrac{3+5+7}{3}$, averaging the listed score values only."
+    },
+    {
+      "id": "B",
+      "text": "The mean is the middle cumulative-frequency position among the ordered scores."
+    },
+    {
+      "id": "C",
+      "text": "The mean is $\\dfrac{3\\times4+5\\times3+7\\times3}{4+3+3}=\\dfrac{48}{10}=4.8$."
+    },
+    {
+      "id": "D",
+      "text": "The mean is $4$, the largest frequency printed in the table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Weighted total 3×4+5×3+7×3=48 over total frequency 10 gives mean 4.8. Averaging the three labels, using the median position, or reading the largest frequency each miss the weighted mean.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

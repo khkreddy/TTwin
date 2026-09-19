@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Lata looks at the number $480$ and checks divisibility using only its final digit.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$480$ is even, so it is divisible by $10$."
+    },
+    {
+      "id": "B",
+      "text": "$480$ is divisible by $10$, by $5$, and by $2$, because it ends in $0$."
+    },
+    {
+      "id": "C",
+      "text": "Ending in $0$ is not enough for divisibility by $5$."
+    },
+    {
+      "id": "D",
+      "text": "Use the divisibility rules for $4$ and $8$ on the last digit alone for this check."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ending in 0 means divisible by 10, 5, and 2. Being even is the rule for 2, not for 10. Ending in 0 does satisfy divisibility by 5. Rules for 4 and 8 need more than the final digit alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

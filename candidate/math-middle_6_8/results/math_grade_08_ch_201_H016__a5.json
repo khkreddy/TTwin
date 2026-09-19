@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leela buys a bag with marked price ₹800. The shop gives a $25\\%$ discount, then a further $10\\%$ discount on the reduced price.\n\nWhich claim correctly finds the final price?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The final price is ₹800 because a $25\\%$ cut and a $10\\%$ cut cancel toward the marked price."
+    },
+    {
+      "id": "B",
+      "text": "The final price is ₹540, from successive factors $0.75\\times 0.9$ on ₹800."
+    },
+    {
+      "id": "C",
+      "text": "The final price is ₹800$-25-10=$₹765 from the printed $25$ and $10$ labels."
+    },
+    {
+      "id": "D",
+      "text": "A single $35\\%$ discount on ₹800 gives the same final price as the two successive discounts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each discount uses the changed base: 800×0.75×0.9=540. Treating the cuts as cancelling omits successive bases. Subtracting the printed labels captures surface numbers. Equating to a single 35% discount confuses successive factors with adding percentages.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

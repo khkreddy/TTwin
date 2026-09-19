@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Varun may use the digits $2$, $4$ and $7$ exactly once to make a two-digit number times a one-digit number.\n\nWhich claim gives the largest product?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$72\\times 4=288$ is the largest product."
+    },
+    {
+      "id": "B",
+      "text": "$42\\times 7=294$ is the largest product."
+    },
+    {
+      "id": "C",
+      "text": "$74\\times 2=148$ is the largest product."
+    },
+    {
+      "id": "D",
+      "text": "Call the answer multiplicand only, with no product formed from the three digits."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With 2<4<7, the largest product is 42×7=294. 72×4=288 and 74×2=148 are smaller. Naming multiplicand alone substitutes a label for the product comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

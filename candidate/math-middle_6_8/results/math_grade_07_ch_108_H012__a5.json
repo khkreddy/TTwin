@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Falguni starts with a full bottle. She pours out $\\dfrac{1}{3}$ of the bottle, then pours out $\\dfrac{1}{2}$ of what remains.\n\nWhich claim correctly tracks the amounts?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After the first pour, $\\dfrac{2}{3}$ remains; $\\dfrac{1}{2}$ of that remaining is $\\dfrac{1}{3}$ of the bottle, so $\\dfrac{1}{3}$ of the bottle is left."
+    },
+    {
+      "id": "B",
+      "text": "She pours $\\dfrac{1}{3}$ of the bottle and then $\\dfrac{1}{2}$ of the original bottle, so $\\dfrac{5}{6}$ is poured in total."
+    },
+    {
+      "id": "C",
+      "text": "The second pour of $\\dfrac{1}{2}$ of the original rebuilds the remaining $\\dfrac{2}{3}$."
+    },
+    {
+      "id": "D",
+      "text": "The two pour fractions multiply to make the remaining amount, so the bottle ends with $\\dfrac{1}{3}\\times\\dfrac{1}{2}=\\dfrac{1}{6}$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After removing 1/3, 2/3 remains; half of that remaining is 1/3 of the bottle, leaving 1/3. Applying the second fraction to the original whole, reversing remaining and pour, or multiplying the pour fractions as the leftover all miss the changing whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

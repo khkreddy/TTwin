@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows kite $ABCD$ that Bharti draws. Equal marks show $AB=BC$ and $AD=DC$. Diagonal $BD$ is drawn solid; diagonal $AC$ is dashed.\n\nWhich claim about the kite and its special diagonal is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The kite has all four sides equal because the diagram shows four sides."
+    },
+    {
+      "id": "B",
+      "text": "Diagonal $AC$ is the axis of symmetry of the kite."
+    },
+    {
+      "id": "C",
+      "text": "Diagonal $BD$ is the axis of symmetry; it bisects $AC$ at right angles."
+    },
+    {
+      "id": "D",
+      "text": "The figure is a kite because it is labelled $ABCD$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,line join=round]\n  \\coordinate (A) at (0,2.4);\n  \\coordinate (B) at (1.7,0);\n  \\coordinate (C) at (0,-1.9);\n  \\coordinate (D) at (-1.7,0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[thick,dashed] (A)--(C);\n  \\draw[thick] (B)--(D);\n  \\node[above] at (A) {$A$};\n  \\node[right] at (B) {$B$};\n  \\node[below] at (C) {$C$};\n  \\node[left] at (D) {$D$};\n  \\node at (1.0,1.2) {\\small$=$};\n  \\node at (1.0,-1.0) {\\small$=$};\n  \\node at (-1.0,1.2) {\\small$=$};\n  \\node at (-1.0,-1.0) {\\small$=$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With AB=BC and AD=DC, BD is the symmetry diagonal: it bisects AC at right angles. Claiming all sides equal, swapping to AC, or relying on the label alone miss that property.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Kite ABCD with equal marks on AB=BC and AD=DC; BD solid, AC dashed."
+  }
+}

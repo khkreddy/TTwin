@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Firoz uses the odd-number square identity $(n-1)^{2}+(2n-1)=n^{2}$. When $2n-1$ is itself a square $m^{2}$, the triple $(m,\\,n-1,\\,n)$ is a Baudh\\={a}yana triple. Here $2n-1=49$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The case gives the triple $(7,\\,24,\\,25)$."
+    },
+    {
+      "id": "B",
+      "text": "The case gives the triple $(49,\\,24,\\,25)$."
+    },
+    {
+      "id": "C",
+      "text": "The case gives the triple $(7,\\,25,\\,24)$."
+    },
+    {
+      "id": "D",
+      "text": "The same case still gives a Baudh\\={a}yana triple when $2n-1$ is an odd number that is not a square."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2n-1=49=7² so m=7 and n=25; the triple is (m,n-1,n)=(7,24,25). Using 49 as the first entry confuses m with m². Swapping 24 and 25 breaks the ordered triple. The construction requires 2n-1 to be a square.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

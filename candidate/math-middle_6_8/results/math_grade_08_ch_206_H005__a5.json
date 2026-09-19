@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "How can she express the top directly from the bottom row?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The top is $2+2\\times 6+3=17$, because the middle bottom value feeds both middle boxes."
+        },
+        {
+          "id": "B",
+          "text": "The top is $2+6+3=11$."
+        },
+        {
+          "id": "C",
+          "text": "Call the answer the top-row label only."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "options": [],
+  "stem": "Indira has a three-row number pyramid. Each box is the sum of the two boxes directly below it. The bottom row is $2$, $6$, $3$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Middle boxes are 2+6 and 6+3, so the top is (2+6)+(6+3)=2+2×6+3=17; adding 2+6+3 once undercounts the middle entry."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For bottom a,b,c the top is a+2b+c. Omitting the double count of b, or naming only the top-row label, misses the direct expression.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

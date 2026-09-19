@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly settles that decision?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "They are co-prime, because each product is greater than $1$."
+        },
+        {
+          "id": "B",
+          "text": "They are not co-prime, because the prime $13$ appears in both factorisations."
+        },
+        {
+          "id": "C",
+          "text": "They are co-prime, because $26$ and $39$ are the printed numbers in the stem."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses the prime factorisations.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Imran has $26=2\\times 13$ and $39=3\\times 13$. He wants to decide whether $26$ and $39$ are co-prime from those prime factorisations.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Co-prime numbers share no common prime factor. Here 13 appears in both 26=2×13 and 39=3×13, so they are not co-prime."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A shared prime factor 13 means 26 and 39 are not co-prime. Looking only at product size or printed labels skips the common-prime test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

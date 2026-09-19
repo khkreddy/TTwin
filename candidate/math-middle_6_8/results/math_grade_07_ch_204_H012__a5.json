@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Hema knows a common calendar year has $365$ days and Earth's revolution is about $365.2422$ days. She asks which years get an extra leap day under the usual calendar divisibility rules.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A year gets a leap day when it is divisible by $4$, with the usual century exceptions."
+    },
+    {
+      "id": "B",
+      "text": "The leap-day rule is just another name for the decimal $0.2422$ itself."
+    },
+    {
+      "id": "C",
+      "text": "Every year needs a leap day because $365$ is shorter than $365.2422$."
+    },
+    {
+      "id": "D",
+      "text": "A year gets a leap day when its last digit is $2$, because $0.2422$ begins with $2$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Accumulated fractional days motivate leap days, but the usual rule still uses divisibility by 4 with century exceptions. Equating the rule with 0.2422, leaping every year, or reading the digit 2 from the decimal all miss that rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir needs a sense of how many chairs are in the school hall so he can order programmes for a play. There are about $18$ rows with about $20$ chairs in each row. An exact chair count is not needed.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "An estimate near $360$ chairs is enough for ordering programmes."
+    },
+    {
+      "id": "B",
+      "text": "Estimation means treating $18\\times 20$ as a finished chair-by-chair census of every chair."
+    },
+    {
+      "id": "C",
+      "text": "He must finish an exact tally of every chair before any estimate can be used for the order."
+    },
+    {
+      "id": "D",
+      "text": "The chair total is settled by finding the winning totals in a reach-$21$ adding game with moves $1$, $2$, or $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "About 18×20 gives a reasonable estimate near 360; an exact census is unnecessary for ordering programmes. Treating the product as a finished census confuses estimate with exact count. Requiring a full tally first reverses when an estimate is enough. The adding-game pattern is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

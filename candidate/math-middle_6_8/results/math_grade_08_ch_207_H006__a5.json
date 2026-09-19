@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vedika's triangle has area $36$. One base is $9$ with corresponding height $8$. Another base is $12$; she wants that base's corresponding height $h$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds $h$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Set $\\dfrac{1}{2}\\times 9\\times 8 = \\dfrac{1}{2}\\times 12\\times h$, so $h = 6$."
+        },
+        {
+          "id": "B",
+          "text": "Call the answer area expression, without setting two valid base-height products equal."
+        },
+        {
+          "id": "C",
+          "text": "Choose $h = 9$ only because the printed $9$ stands out, without equating areas."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The same triangle has one area, so two corresponding base-height expressions can be set equal to solve for the missing height."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "½×9×8=36 and ½×12×h=36 give h=6. Labelling without equating, or grabbing the printed 9, does not find the corresponding height.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

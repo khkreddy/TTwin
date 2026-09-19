@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Komal writes the place value of each digit in $60.83$ using powers of $10$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words power of $10$ as the digit $6$."
+    },
+    {
+      "id": "B",
+      "text": "$60.83=6\\times 10^{1}+0\\times 10^{0}+8\\times 10^{-1}+3\\times 10^{-2}$."
+    },
+    {
+      "id": "C",
+      "text": "The $8$ in $60.83$ has place value $8\\times 10^{1}$."
+    },
+    {
+      "id": "D",
+      "text": "The value is $60$, because those digits are printed largest before the point."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expand each digit by its power of 10: tens, ones, tenths, hundredths. Naming “power of 10” as a digit, putting 8 in the tens place, or keeping only the whole-number part miss decimal place value.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

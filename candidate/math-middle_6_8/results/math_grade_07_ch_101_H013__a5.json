@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "operation_confusion",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Tushar may use each of the digits $9$, $1$, $0$, and $4$ exactly once. He wants the largest possible $4$-digit even number.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the digit constraint itself."
+    },
+    {
+      "id": "B",
+      "text": "Write $9410$, placing the largest digits as far left as possible with units digit $0$ so the number stays even."
+    },
+    {
+      "id": "C",
+      "text": "Write $9104$, with units digit $4$ to keep the number even."
+    },
+    {
+      "id": "D",
+      "text": "Form an even value by adding and subtracting until a $4$-digit even number appears."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For a largest even 4-digit number, put the smallest available even digit 0 in units and arrange 9,4,1 leftward as 9410. Naming the constraint, choosing 9104, or using button-click arithmetic miss place-value dominance under the even-units rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

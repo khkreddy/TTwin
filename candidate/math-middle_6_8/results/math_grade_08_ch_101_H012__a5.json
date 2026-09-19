@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly applies those patterns?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$700$ can be a perfect cube because it ends in $0$, as some cubes do."
+        },
+        {
+          "id": "B",
+          "text": "$700$ cannot be a perfect cube because it ends in exactly two zeros, and trailing zeros in a perfect cube come in groups of three."
+        },
+        {
+          "id": "C",
+          "text": "$27000$ cannot be a perfect cube because it ends in $0$, and cubes never end in $0$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses a trailing-zero or last-digit pattern.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Jatin checks whether $700$ and $27000$ could be perfect cubes by using last-digit and trailing-zero patterns.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A perfect cube's trailing zeros come in threes, so ending in exactly two zeros rules 700 out. Cubes may end in 0, and 27000 ends in three zeros, so the trailing-zero test alone does not reject 27000."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trailing zeros in cubes group by threes, so exactly two zeros blocks 700. Ending in 0 is allowed for cubes; rejecting every trailing zero confuses the square-ending list with cubes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}
