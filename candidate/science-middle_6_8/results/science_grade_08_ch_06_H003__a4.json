@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Devansh fills a closed plastic bottle with water. He makes a small hole in the side wall near the bottom. Water streams out sideways through the hole.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water flowing out the side hole shows that the liquid pushes on the side walls as well as downward."
+    },
+    {
+      "id": "B",
+      "text": "A fluid in a closed container exerts pressure on the bottom and on the side walls."
+    },
+    {
+      "id": "C",
+      "text": "Water pushes only straight down on the bottom, so a side hole cannot release water."
+    },
+    {
+      "id": "D",
+      "text": "The closed cap alone stops all pressure on the side walls."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sideways flow from a wall hole shows liquid pressure acts on the sides, not only downward. A closed cap does not remove side-wall pressure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

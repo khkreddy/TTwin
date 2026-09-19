@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_06/ch_04/H006",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_06/ch_04/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H006"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H006:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H006",
+    "stem": "The diagram shows a known bar magnet and an unmarked bar X. Indu holds them so the facing ends push apart.\n\nWhat does this tell her about bar X?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Bar X is a magnet; only a magnet can repel another magnet.",
+      "B": "Bar X is ordinary iron; the push apart is not needed to decide.",
+      "C": "Bar X is a magnet because it is drawn the same shape as the known magnet.",
+      "D": "Bar X is a magnet only if it attracts the known magnet, not if it pushes it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% known magnet: S then N facing bar X\n\\draw[thick,fill=blue!30] (0.0,1.6) rectangle (1.5,2.3);\n\\draw[thick,fill=red!30] (1.5,1.6) rectangle (3.0,2.3);\n\\node at (0.75,1.95) {S};\n\\node at (2.25,1.95) {N};\n\\node at (1.5,2.7) {known magnet};\n% repulsion arrows\n\\draw[thick,<-] (3.15,1.95) -- (3.55,1.95);\n\\draw[thick,->] (3.75,1.95) -- (4.15,1.95);\n\\node at (3.65,2.45) {push apart};\n% unmarked bar X\n\\draw[thick,fill=gray!30] (4.3,1.6) rectangle (7.3,2.3);\n\\node at (5.8,1.95) {bar X};\n\\node at (5.8,1.2) {unmarked bar};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

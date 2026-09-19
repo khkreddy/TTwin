@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Karan writes the two expressions $9 + 6$ and $4 \\times 4$.\n\nWhich two claims correctly compare them?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the phrase expression value, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "$9 + 6 = 15$ and $4 \\times 4 = 16$, so $9 + 6 < 4 \\times 4$."
+    },
+    {
+      "id": "C",
+      "text": "Evaluating both expressions and comparing the results shows $15$ is less than $16$."
+    },
+    {
+      "id": "D",
+      "text": "The comparison sign can be decided from the printed symbols alone, even when the expressions are not evaluated."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaluate then compare: 15 < 16. Naming expression value alone substitutes a label. Skipping evaluation omits the comparison step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

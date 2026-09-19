@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Boman has a paper heart with a possible mid-line drawn on it.\n\nWhich two claims correctly decide whether that mid-line is a line of symmetry?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mid-line is a line of symmetry whenever the heart looks balanced, even if the two halves need not be folded onto each other."
+    },
+    {
+      "id": "B",
+      "text": "Fold the heart along the mid-line; the mid-line is a line of symmetry only when the two halves overlap exactly."
+    },
+    {
+      "id": "C",
+      "text": "Exact fold-overlap of the two halves is the test that decides the mid-line is a line of symmetry."
+    },
+    {
+      "id": "D",
+      "text": "A line of symmetry is what creates the fold along the mid-line."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The fold-overlap test decides a line of symmetry. Looking balanced without folding omits the test. Saying symmetry creates the fold reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

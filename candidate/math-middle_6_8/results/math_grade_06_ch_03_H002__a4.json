@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Boman writes this number grid. Immediate neighbours are only left, right, top, and bottom.\n\n$5\\quad 8\\quad 2$\n$7\\quad 9\\quad 4$\n$3\\quad 6\\quad 1$\n\nA supercell is greater than every immediate neighbour.\n\nWhich cell is a supercell?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cell $9$"
+    },
+    {
+      "id": "B",
+      "text": "The cell $8$"
+    },
+    {
+      "id": "C",
+      "text": "The cell $7$"
+    },
+    {
+      "id": "D",
+      "text": "Calling $9$ a supercell is what makes its neighbours smaller."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "9 beats its neighbours 8, 7, 4 and 6. 8 fails against 9. 7 fails against 5 and 9. Saying the label creates the neighbour sizes reverses the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

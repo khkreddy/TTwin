@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Faiz dissolves rock salt in water. He wants the dry salt back from the leftover solution.\n\nWhich claims correctly say how evaporation can recover the dissolved solid? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Allow the water to evaporate completely so the dissolved salt is left as a solid."
+    },
+    {
+      "id": "B",
+      "text": "Warm the solution only briefly; dry salt appears as soon as the liquid feels warm."
+    },
+    {
+      "id": "C",
+      "text": "Let the water leave as vapour until only the solid salt remains."
+    },
+    {
+      "id": "D",
+      "text": "Wait for sunlight to make the solution bubble; without bubbles the salt cannot return."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation removes the liquid water and leaves the dissolved salt as a solid. Brief warming or bubbles are not the recovery rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Jatin starts factorising $84$ as $6 \\times 14$ and wants a complete prime factorisation.\n\nWhich two claims correctly finish the work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Stop at $6 \\times 14$, because those factors are already named composite factors."
+    },
+    {
+      "id": "B",
+      "text": "Rewrite $6$ as $2 \\times 3$ and rewrite $14$ as $2 \\times 7$."
+    },
+    {
+      "id": "C",
+      "text": "Continue until every remaining factor is prime: $84 = 2 \\times 2 \\times 3 \\times 7$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $84$ itself as the answer, because $84$ is the largest number printed in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Prime factorisation continues until only primes remain: 84 = 2×2×3×7. Stopping at composites, or grabbing the printed 84, miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

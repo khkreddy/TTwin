@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q5",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:22:34.562Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q5",
+    "item_type": "single_mcq",
+    "stem": "A person measures the length, width, height and mass of a metal block with rectangular sides.\nWhich of these measurements must be used in order to calculate the density of the metal?",
+    "options": [
+      {
+        "id": "A",
+        "text": "mass only"
+      },
+      {
+        "id": "B",
+        "text": "height and mass only"
+      },
+      {
+        "id": "C",
+        "text": "length, width and height only"
+      },
+      {
+        "id": "D",
+        "text": "length, width, height and mass"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Linear motion"
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Not linear motion"
+      }
+    ],
+    "enrichment": "When an object moves along a straight line, its motion is called linear motion. straight-line path -> linear motion classification The learner correctly applies this rule: When an object moves along a straight line, its motion is called linear motion. Linear motion means any object moving forward or along something that looks ordinary, regardless of the actual path shape.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H010",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “mass only” for the required “length, width, height and mass”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “height and mass only” looked possible instead of “length, width, height and mass”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “length, width and height only” looked possible instead of “length, width, height and mass”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Classify a motion as linear when the object's path is a straight line. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q5",
+    "hinge": "science/grade_06/ch_05/H010",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "C": "UNRESOLVED",
+      "D": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H010"
+  }
+}

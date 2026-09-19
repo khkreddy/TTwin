@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Sia's rectangular garden. Opposite sides are equal. The marked length is $8\\,\\mathrm{m}$ and the marked breadth is $3\\,\\mathrm{m}$.\n\nWhich claim correctly gives the perimeter of the garden?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Perimeter $= 2 \\times (8 + 3) = 22\\,\\mathrm{m}$."
+    },
+    {
+      "id": "B",
+      "text": "Perimeter $= 8 \\times 3 = 24\\,\\mathrm{m}$."
+    },
+    {
+      "id": "C",
+      "text": "Perimeter $= 8 + 3 = 11\\,\\mathrm{m}$."
+    },
+    {
+      "id": "D",
+      "text": "The perimeter number is what creates the $8\\,\\mathrm{m}$ length and $3\\,\\mathrm{m}$ breadth."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (8,3);\n  \\node[below] at (4,0) {8 m};\n  \\node[above] at (4,3) {8 m};\n  \\node[left] at (0,1.5) {3 m};\n  \\node[right] at (8,1.5) {3 m};\n  \\node[above right] at (0,3) {A};\n  \\node[above left] at (8,3) {B};\n  \\node[below left] at (8,0) {C};\n  \\node[below right] at (0,0) {D};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rectangle perimeter is 2(l+b)=2(8+3)=22 m. Multiplying sides swaps in area. Adding once omits the two pairs of sides. Saying perimeter creates the sides reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a labeled 8 m by 3 m rectangle; stem refers to the diagram."
+  }
+}

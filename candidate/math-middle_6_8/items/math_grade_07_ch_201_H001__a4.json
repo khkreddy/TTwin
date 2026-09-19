@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H001",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H001"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H001:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H001",
+    "stem": "Feroz studies the diagram of figures $F$ and $G$. Figure $G$ is the same shape and size as figure $F$, and $G$ is shown after a flip.\n\nWhich claim correctly decides whether $F$ and $G$ are congruent?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$F$ and $G$ are congruent: same shape and size under exact superimposition, and flipping is allowed.",
+      "B": "$F$ and $G$ are congruent because they are both called figures on the page.",
+      "C": "Exact fit under superimposition is needed only after congruence is already known.",
+      "D": "Congruence here requires a right angle, hypotenuse, and one matching side before the flip can be used."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  % figure F (L-shape)\n  \\draw[line width=1.05pt] (0,0)--(2.2,0)--(2.2,1.0)--(1.0,1.0)--(1.0,2.2)--(0,2.2)--cycle;\n  \\node[below] at (1.1,-0.25){$F$};\n  % figure G: F flipped horizontally\n  \\begin{scope}[xshift=4.2cm]\n    \\draw[line width=1.05pt] (2.2,0)--(0,0)--(0,1.0)--(1.2,1.0)--(1.2,2.2)--(2.2,2.2)--cycle;\n    \\node[below] at (1.1,-0.25){$G$};\n  \\end{scope}\n  \\node[align=center] at (3.2,-1.0){same shape and size;\\\\$G$ is a flip of $F$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q34",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:22:40.836Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q34",
+    "item_type": "option_table",
+    "stem": "The diagram shows the structure of a compound.\n\nDisplayed structure: C=CCCO.\n\nWhich functional groups does this molecule contain?",
+    "options": [
+      {
+        "id": "A",
+        "text": "carboxylic acid: no; alkene: no; alcohol: no"
+      },
+      {
+        "id": "B",
+        "text": "carboxylic acid: no; alkene: yes; alcohol: yes"
+      },
+      {
+        "id": "C",
+        "text": "carboxylic acid: yes; alkene: no; alcohol: yes"
+      },
+      {
+        "id": "D",
+        "text": "carboxylic acid: yes; alkene: yes; alcohol: yes"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"carboxylic acid\",\"alkene\",\"alcohol\"],\"rows\":[[\"no\",\"no\",\"no\"],[\"no\",\"yes\",\"yes\"],[\"yes\",\"no\",\"yes\"],[\"yes\",\"yes\",\"yes\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line width=0.7pt,every node/.style={font=\\sffamily\\large,inner sep=1pt}] \\node (c1) at (0,0) {C}; \\node (c2) at (1,0) {C}; \\node (c3) at (2,0) {C}; \\node (c4) at (3,0) {C}; \\node (o) at (4,0) {O}; \\node (hr) at (5,0) {H}; \\draw (0.18,0.07)--(0.82,0.07); \\draw (0.18,-0.07)--(0.82,-0.07); \\draw (1.18,0)--(1.82,0); \\draw (2.18,0)--(2.82,0); \\draw (3.18,0)--(3.82,0); \\draw (4.18,0)--(4.82,0); \\foreach \\x/\\top/\\bottom in {0/H/H,2/H/H,3/H/H}{\\node at (\\x,0.88) {\\top}; \\draw (\\x,0.22)--(\\x,0.66); \\node at (\\x,-0.88) {\\bottom}; \\draw (\\x,-0.22)--(\\x,-0.66);} \\node at (1,0.88) {H}; \\draw (1,0.22)--(1,0.66); \\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The two identical tumblers contain equal volumes of water."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The narrow vessel contains more water because its water level is higher."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The tumbler with the lower water level contains the larger volume of water."
+      }
+    ],
+    "enrichment": "The space occupied by water represents its volume. Two containers can have the same capacity while holding different volumes if the amounts of water in them are different. amount of substance and space occupied -> observed volume and level in the container The learner correctly applies this rule: The space occupied by water represents its volume. Two containers can have the same capacity while holding different volumes if the amounts of water in them are different. Volume is the container capacity, so equal tumblers always contain equal volume of water.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_06/H009",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “alcohol: no” looked possible instead of “alcohol: yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “alkene: no” looked possible instead of “alkene: yes”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “carboxylic acid: yes” looked possible instead of “carboxylic acid: no”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Materials around us. The student must decide: When comparing amounts in containers, decide the volume from the space occupied, not only from the container's capacity. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "remove",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_m15_qp_12:q34",
+    "hinge": "science/grade_06/ch_06/H009",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_06/H009"
+  }
+}

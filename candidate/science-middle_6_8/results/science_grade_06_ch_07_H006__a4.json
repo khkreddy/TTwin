@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Shaurya writes that a warm cup of tea is at 60 °C, which is the same as 140 °F.\n\nWhich claims correctly match the scales and that temperature? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "60 °C and 140 °F name the same temperature on two different scales."
+    },
+    {
+      "id": "B",
+      "text": "°C means degree Fahrenheit, so the symbols can be swapped freely."
+    },
+    {
+      "id": "C",
+      "text": "140 °F is a hotter temperature than 60 °C because 140 is a larger number."
+    },
+    {
+      "id": "D",
+      "text": "Both readings can name one temperature when each uses its own scale correctly."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "D"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The two readings name one temperature on Celsius and Fahrenheit. A larger number is not automatically hotter across scales. Symbols must stay matched.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

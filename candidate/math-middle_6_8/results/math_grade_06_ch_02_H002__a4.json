@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Inaya draws a straight path that starts at point $P$, passes through point $Q$, and continues forever only past $Q$.\n\nWhich two claims correctly name that path?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The path is a line segment $PQ$, because it stops at both $P$ and $Q$."
+    },
+    {
+      "id": "B",
+      "text": "The path is a ray that starts at $P$ and goes through $Q$ forever."
+    },
+    {
+      "id": "C",
+      "text": "The path has one endpoint at $P$ and no endpoint past $Q$."
+    },
+    {
+      "id": "D",
+      "text": "The path is a full line, because any straight mark through $P$ and $Q$ must extend both ways forever."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A ray has one endpoint and extends forever in one direction: here from P through Q. Stopping at both ends names a segment and omits the forever side. Calling it a full line substitutes the wrong term.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

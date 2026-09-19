@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Karan writes the whole-number list $4$, $7$, $10$, $13$, $\\ldots$",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the generative rule that continues the list?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Each term is $3$ more than the one before, so the next term is $16$."
+        },
+        {
+          "id": "B",
+          "text": "The list looks neat, so no generative rule is needed to continue it."
+        },
+        {
+          "id": "C",
+          "text": "Naming the next term is what creates the whole-number list in the first place."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The list grows by adding 3 each time, so the same rule gives 16 after 13."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adding 3 each time is the generative rule that continues the list. Neat looks alone omit the rule. Claiming the naming creates the list reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

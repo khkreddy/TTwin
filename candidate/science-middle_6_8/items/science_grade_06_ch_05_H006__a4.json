@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_05/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_05/H006",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "scope_error",
+      "C": "operation_confusion",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H006"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_05:H006:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_06/ch_05",
+    "chapter_label": "Measurement of length and motion",
+    "subtopic_id": "science/grade_06/ch_05/H006",
+    "stem": "Faiz's 15 cm scale is broken at the zero end. He places one end of a ribbon at the 2.0 cm mark; the other end is at 9.5 cm.\n\nWhich claims give the ribbon's length correctly? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "9.5 cm, because that is the larger mark he reads.",
+      "B": "7.5 cm: 9.5 cm minus 2.0 cm.",
+      "C": "11.5 cm: 9.5 cm plus 2.0 cm.",
+      "D": "7.5 cm by subtracting the starting mark from the ending mark."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_05/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BD",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

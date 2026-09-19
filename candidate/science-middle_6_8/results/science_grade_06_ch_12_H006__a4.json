@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indu lines up eight planet models in order of increasing distance from the Sun and then splits them into inner and outer groups.\n\nWhich arrangement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Inner: Mercury, Venus, Earth, Mars; outer: Jupiter, Saturn, Uranus, Neptune — with the Moon counted as a ninth planet."
+    },
+    {
+      "id": "B",
+      "text": "Inner: Jupiter, Saturn, Uranus, Neptune; outer: Mercury, Venus, Earth, Mars."
+    },
+    {
+      "id": "C",
+      "text": "Inner rocky planets Mercury–Mars, then outer gas giants Jupiter–Neptune; the Moon is not a planet."
+    },
+    {
+      "id": "D",
+      "text": "All eight planets are mostly gas, so the inner–outer split is only about colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mercury to Mars are the inner rocky planets; Jupiter to Neptune are the outer giants. The Moon is not a planet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Urvi starts with $n$ notebooks. She buys $6$ more and then gives $2$ away.\n\nWhich two claims correctly turn that story into an expression?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write the words notebooks + 6 − 2 as the expression."
+    },
+    {
+      "id": "B",
+      "text": "Use letter-number $n$ for the starting count, then write $n + 6 - 2$."
+    },
+    {
+      "id": "C",
+      "text": "Buying $6$ more adds $6$, and giving $2$ away subtracts $2$, so those operations join $n$."
+    },
+    {
+      "id": "D",
+      "text": "Use only $6 - 2$, because $6$ and $2$ are the printed numbers that stand out."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The starting count becomes letter-number n; buy adds and give away subtracts, so n+6−2. Keeping the word notebooks, or dropping n for the printed 6 and 2 alone, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Misha looks at the diagram. Endpoints $X$ and $Y$ are marked. Points $P$ and $Q$ each lie at the same distance from $X$ as from $Y$. Line $m$ is drawn through $P$ and $Q$.\n\nWhich claim correctly names line $m$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Line $m$ is the perpendicular bisector of segment $XY$."
+    },
+    {
+      "id": "B",
+      "text": "Line $m$ is the segment $XY$ itself."
+    },
+    {
+      "id": "C",
+      "text": "Equal distances from $X$ and $Y$ appear only after line $m$ is already drawn."
+    },
+    {
+      "id": "D",
+      "text": "Line $m$ is named by the letter $m$ alone, because $m$ is printed largest."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (X) at (0,0);\n  \\coordinate (Y) at (5.0,0);\n  \\coordinate (P) at (2.5,2.2);\n  \\coordinate (Q) at (2.5,-2.0);\n  \\draw[line width=1.05pt] (X)--(Y);\n  \\fill (X) circle (1.5pt);\\fill (Y) circle (1.5pt);\n  \\fill (P) circle (1.5pt);\\fill (Q) circle (1.5pt);\n  \\node[below left] at (X){$X$};\n  \\node[below right] at (Y){$Y$};\n  \\node[above] at (P){$P$};\n  \\node[below] at (Q){$Q$};\n  \\draw[line width=1.05pt] (2.5,-2.6)--(2.5,2.8) node[above]{$m$};\n  \\draw[line width=0.55pt,dashed] (X)--(P)--(Y);\n  \\draw[line width=0.55pt,dashed] (X)--(Q)--(Y);\n  \\draw[line width=0.7pt] (2.5,0)--(2.7,0)--(2.7,0.2)--(2.5,0.2);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Points equidistant from both endpoints determine the perpendicular bisector of XY. Calling m the segment itself, reversing the distance condition, or grabbing the letter m miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as segment XY with equidistant points P,Q and perpendicular bisector m through them."
+  }
+}

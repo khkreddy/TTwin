@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Karan asks whether $24$ is a common multiple of $4$ and $6$.\n\nWhich two claims correctly decide that question?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$24$ is a multiple of $4$ alone, and that is enough to call it a common multiple."
+    },
+    {
+      "id": "B",
+      "text": "$24$ is a multiple of both $4$ and $6$, so $24$ is a common multiple of the pair."
+    },
+    {
+      "id": "C",
+      "text": "Because $24 \\div 4 = 6$ and $24 \\div 6 = 4$ with no remainders, both conditions hold."
+    },
+    {
+      "id": "D",
+      "text": "Any multiple of $4$ from a single-number list is automatically a common multiple of $4$ and $6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A common multiple must be a multiple of both numbers. 24 meets both. Checking only 4 omits the pair test. Stretching a single-number multiple list over-extends the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

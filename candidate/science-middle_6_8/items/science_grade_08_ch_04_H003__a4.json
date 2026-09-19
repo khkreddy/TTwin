@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H003"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H003:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H003",
+    "stem": "The diagram shows Irfan's electromagnet: a coil on an iron nail joined to a cell. Ends of the nail are labelled X and Y. A magnetic compass is held near end X; the north pole of the compass needle is attracted towards X.\n\nWhich claim about the poles is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "End X is a South pole and end Y is a North pole.",
+      "B": "End X is a North pole and end Y is a South pole.",
+      "C": "Both ends X and Y are North poles.",
+      "D": "Both ends X and Y are South poles."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick] (0,0) rectangle (1.1,0.65);\n\\node at (0.55,0.32) {cell};\n\\node[font=\\bfseries] at (-0.25,0.32) {$-$};\n\\node[font=\\bfseries] at (1.35,0.32) {$+$};\n% wires\n\\draw[thick] (1.1,0.32)--(1.9,0.32)--(1.9,1.55);\n\\draw[thick] (0,0.32)--(-0.45,0.32)--(-0.45,1.55)--(1.9,1.55);\n% iron nail\n\\draw[thick,fill=gray!30] (2.1,1.3) rectangle (5.3,1.8);\n\\node at (2.35,2.15) {X};\n\\node at (5.05,2.15) {Y};\n\\node at (3.7,2.15) {iron nail};\n% coil\n\\foreach \\x in {2.5,2.85,3.2,3.55,3.9,4.25,4.6} {\n  \\draw[thick] (\\x,1.2) arc (240:-60:0.2 and 0.4);\n}\n\\node at (3.7,0.8) {coil};\n% compass near X\n\\draw[thick] (0.9,2.55) circle (0.55);\n\\draw[->,thick] (0.9,2.55)--(1.55,2.55);\n\\node[font=\\footnotesize] at (1.7,2.75) {N};\n\\node[font=\\footnotesize] at (0.35,2.55) {S};\n\\node[font=\\footnotesize] at (0.9,3.3) {compass};\n\\draw[dashed,thin] (1.45,2.55)--(2.1,1.7);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

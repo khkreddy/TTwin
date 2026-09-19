@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Jatin has drawn base $AB$ of length $6\\,\\mathrm{cm}$. He must build triangle $ABC$ with $AC = 5\\,\\mathrm{cm}$ and $BC = 4\\,\\mathrm{cm}$.\n\nWhich two claims correctly decide where to place point $C$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place $C$ anywhere on a single arc drawn from $A$ alone."
+    },
+    {
+      "id": "B",
+      "text": "Draw an arc centred at $A$ with radius $5\\,\\mathrm{cm}$ and an arc centred at $B$ with radius $4\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "C",
+      "text": "Place $C$ at a meeting point of those two arcs."
+    },
+    {
+      "id": "D",
+      "text": "Place $C$ at the darkest printed midpoint mark on segment $AB$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The third vertex is an intersection of the two radius arcs from the base endpoints. One arc alone omits the second side length; the midpoint mark on AB is not the third vertex.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

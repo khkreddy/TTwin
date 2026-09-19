@@ -1,0 +1,42 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a cell, a lamp, and a switch S. The switch is open, so its contacts do not touch.\n\nIs the circuit ON or OFF?",
+  "options": [
+    {
+      "id": "A",
+      "text": "OFF — the open switch breaks the path, so current cannot flow."
+    },
+    {
+      "id": "B",
+      "text": "ON — the cell still sends current across the open gap."
+    },
+    {
+      "id": "C",
+      "text": "ON — the switch itself supplies current to the lamp."
+    },
+    {
+      "id": "D",
+      "text": "OFF — a lamp cannot glow unless two switches are used."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick,fill=white] (0,0) rectangle (1.2,0.55);\n\\node at (0.6,0.275) {cell};\n\\node[font=\\bfseries] at (-0.2,0.275) {$-$};\n\\node[font=\\bfseries] at (1.4,0.275) {$+$};\n% wires\n\\draw[thick] (1.2,0.275) -- (2.4,0.275);\n\\draw[thick] (2.4,0.275) -- (2.4,1.7) -- (5.0,1.7);\n% lamp\n\\draw[thick,fill=white] (5.0,1.45) circle (0.35);\n\\draw[thick] (4.75,1.2) -- (5.25,1.7);\n\\draw[thick] (4.75,1.7) -- (5.25,1.2);\n\\node at (5.0,2.15) {lamp};\n\\draw[thick] (5.35,1.7) -- (6.2,1.7) -- (6.2,0.275);\n% open switch\n\\draw[thick] (6.2,0.275) -- (4.0,0.275);\n\\draw[thick] (4.0,0.275) -- (3.55,0.65);\n\\fill (4.0,0.275) circle (0.05);\n\\fill (2.9,0.275) circle (0.05);\n\\draw[thick] (2.9,0.275) -- (2.4,0.275);\n\\node at (3.5,1.0) {switch S};\n\\node at (3.5,-0.25) {open};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An open switch leaves a gap, so the circuit is OFF and the lamp stays dark.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source crocodile-clip circuit into a cell–lamp–open-switch loop for the ON/OFF hinge."
+  }
+}

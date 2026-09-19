@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H002",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H002"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H002",
+    "stem": "The diagram shows Sia's rectangular garden. Opposite sides are equal. The marked length is $8\\,\\mathrm{m}$ and the marked breadth is $3\\,\\mathrm{m}$.\n\nWhich claim correctly gives the perimeter of the garden?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Perimeter $= 2 \\times (8 + 3) = 22\\,\\mathrm{m}$.",
+      "B": "Perimeter $= 8 \\times 3 = 24\\,\\mathrm{m}$.",
+      "C": "Perimeter $= 8 + 3 = 11\\,\\mathrm{m}$.",
+      "D": "The perimeter number is what creates the $8\\,\\mathrm{m}$ length and $3\\,\\mathrm{m}$ breadth."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (8,3);\n  \\node[below] at (4,0) {8 m};\n  \\node[above] at (4,3) {8 m};\n  \\node[left] at (0,1.5) {3 m};\n  \\node[right] at (8,1.5) {3 m};\n  \\node[above right] at (0,3) {A};\n  \\node[above left] at (8,3) {B};\n  \\node[below left] at (8,0) {C};\n  \\node[below right] at (0,0) {D};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

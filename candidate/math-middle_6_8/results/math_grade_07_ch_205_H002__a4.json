@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Feroz compares two class teams. Team A has $5$ players and scored $45$ goals in all. Team B has $9$ players and scored $63$ goals in all. He wants a fair comparison of typical scoring when the teams have different sizes.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim chooses a fair representative basis?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the totals $45$ and $63$ only, and say Team B is ahead because $63$ is larger."
+        },
+        {
+          "id": "B",
+          "text": "Compare goals per player ($9$ versus $7$), because the teams have different sizes."
+        },
+        {
+          "id": "C",
+          "text": "Say Team A is ahead because $5$ is smaller than $9$, using team size alone as the score."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The teams have different sizes, so goals per player is a fairer basis than totals or team size alone."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With unequal group sizes, compare per player (45/5=9 vs 63/9=7). Totals alone or team size alone are not a fair typical-score basis.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

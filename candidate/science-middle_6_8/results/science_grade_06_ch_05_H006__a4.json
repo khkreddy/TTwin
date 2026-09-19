@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Faiz's 15 cm scale is broken at the zero end. He places one end of a ribbon at the 2.0 cm mark; the other end is at 9.5 cm.\n\nWhich claims give the ribbon's length correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "9.5 cm, because that is the larger mark he reads."
+    },
+    {
+      "id": "B",
+      "text": "7.5 cm: 9.5 cm minus 2.0 cm."
+    },
+    {
+      "id": "C",
+      "text": "11.5 cm: 9.5 cm plus 2.0 cm."
+    },
+    {
+      "id": "D",
+      "text": "7.5 cm by subtracting the starting mark from the ending mark."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "D"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When zero is broken, length is ending mark minus starting mark: 9.5 − 2.0 = 7.5 cm.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

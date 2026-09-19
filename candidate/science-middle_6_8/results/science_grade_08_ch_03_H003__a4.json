@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "single_mcq",
+  "stem": "Palak's class uses this rule: a person is unwell when symptoms or signs show that the body or mind is not working normally.\n\nWhich claim applies the rule correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Irfan has a high fever and body ache for two days, so he is unwell."
+    },
+    {
+      "id": "B",
+      "text": "Jyoti feels tired after a football match but feels fine after rest, so she is unwell."
+    },
+    {
+      "id": "C",
+      "text": "Devansh cannot sleep or concentrate for many days, so he is still well if his body looks fine."
+    },
+    {
+      "id": "D",
+      "text": "Palak's mild headache caused her organs to stop working normally."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fever and body ache lasting days show the body is not working normally. Ordinary tiredness after sport that clears with rest does not. Ongoing sleep and concentration problems can mark an unwell mind even if the body looks fine. A mild headache does not mean organs have already stopped working.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

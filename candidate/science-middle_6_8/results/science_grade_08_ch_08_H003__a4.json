@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Irfan lists the main gases in air: nitrogen, oxygen, argon, carbon dioxide, and water vapour. These gases are not chemically combined into one substance.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Air is a mixture because several gases are present together without forming one new substance."
+    },
+    {
+      "id": "B",
+      "text": "The gases in air keep their own properties and are not chemically combined."
+    },
+    {
+      "id": "C",
+      "text": "Air is a compound because several gases are listed together."
+    },
+    {
+      "id": "D",
+      "text": "Air is pure oxygen because living beings need oxygen."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air has several gases that are not chemically combined, so it is a mixture. Listing gases does not make a compound, and needing oxygen does not make air pure oxygen.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

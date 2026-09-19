@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Karan's square card of side $8\\,\\mathrm{cm}$ with centre marked $O$. He wants a circular hole of radius $2\\,\\mathrm{cm}$ at that centre, drawn with a compass.\n\nWhich claim correctly states where the compass point must sit and what radius to use?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place the compass point at $O$ and set the radius to $2\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "B",
+      "text": "Place the compass point anywhere on the card; only the $2\\,\\mathrm{cm}$ opening matters."
+    },
+    {
+      "id": "C",
+      "text": "Place the compass point on the dashed circle and set the radius from there to $O$."
+    },
+    {
+      "id": "D",
+      "text": "Draw the hole freehand, because neat artwork on the square card is enough."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (4,4);\n  \\coordinate (O) at (2,2);\n  \\fill (O) circle (1.4pt);\n  \\node[below right] at (O) {O};\n  \\draw[thick,dashed] (O) circle (1.2);\n  \\draw[thick] (O) -- (3.2,2);\n  \\node[below] at (2.6,2) {2 cm};\n  \\node[above] at (2,4.15) {square card};\n  \\node[below] at (2,-0.35) {side 8 cm};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The hole needs the tip at centre O with radius 2 cm. Ignoring the centre omits a required condition. Putting the tip on the rim and measuring back to O reverses centre and radius roles. Freehand neatness is outside the compass decision.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as a square card with centre O, dashed circle radius 2 cm, and radius mark; stem refers to the diagram."
+  }
+}

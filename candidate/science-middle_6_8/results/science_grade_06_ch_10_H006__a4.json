@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Rhea lists stages in a bean plant's life: seed, germination, young plant with leaves, flowers, then pods.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "New bean seeds form inside the pods after flowering."
+    },
+    {
+      "id": "2",
+      "text": "The stages run seed → germination → leaves → pods → flowers."
+    },
+    {
+      "id": "3",
+      "text": "Those new seeds in the pods can start another generation."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "T"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Flowers come before pods; new seeds form in pods and can start the next generation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
