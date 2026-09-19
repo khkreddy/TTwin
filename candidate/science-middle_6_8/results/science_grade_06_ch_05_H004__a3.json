@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aisha wants to measure the thickness of a coin.\n\nWhich choice fits the size of what she is measuring?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Kilometres, because bigger units are always more accurate."
+    },
+    {
+      "id": "B",
+      "text": "Millimetres, with a scale that can show small lengths."
+    },
+    {
+      "id": "C",
+      "text": "Ignoring the zero mark and guessing from the colour of the coin."
+    },
+    {
+      "id": "D",
+      "text": "Using a map scale meant for cities."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A coin's thickness needs a small unit and a suitable scale. Kilometres and city maps are the wrong size. Colour is not length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

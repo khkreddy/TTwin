@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sunil and his sister measure the same table in handspans and get different numbers.\n\nWhy?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The table changed length between the two tries."
+    },
+    {
+      "id": "B",
+      "text": "Handspans are not the same size, so the same table can give different counts."
+    },
+    {
+      "id": "C",
+      "text": "Only the older child can measure length."
+    },
+    {
+      "id": "D",
+      "text": "Length cannot be measured without a clock."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Different handspans give different counts for the same table. The table did not have to change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

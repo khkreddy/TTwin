@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Preeti has an iron nail and a bar magnet that look similar when painted.\n\nHow can she tell which one is the magnet?",
+  "options": [
+    {
+      "id": "A",
+      "text": "By colour of the paint."
+    },
+    {
+      "id": "B",
+      "text": "By seeing which one can repel the other; repulsion identifies a magnet."
+    },
+    {
+      "id": "C",
+      "text": "By seeing attraction only; both can attract, so that test is enough."
+    },
+    {
+      "id": "D",
+      "text": "Neither can be identified without a battery."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Attraction is not enough because iron is attracted too. Repulsion identifies a magnet. Paint and batteries are not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
