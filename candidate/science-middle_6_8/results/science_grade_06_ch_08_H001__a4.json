@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavita compares ice from the freezer, liquid water in a steel glass, and water vapour rising from a boiling kettle.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ice, liquid water, and water vapour are three different substances."
+    },
+    {
+      "id": "B",
+      "text": "Ice, liquid water, and water vapour are the same substance—water—in different states."
+    },
+    {
+      "id": "C",
+      "text": "Changing between ice, liquid water, and water vapour changes the state, not the substance."
+    },
+    {
+      "id": "D",
+      "text": "Water vapour is a different substance from ice and liquid water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ice, liquid water, and water vapour are states of the same substance, water. They are not different substances.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

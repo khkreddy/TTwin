@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_202/H008",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_202/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H008:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H008",
+    "stem": "A bamboo pole leans from the ground up to a wall. The diagram shows the right triangle formed by the pole, the wall, and the ground.\n\nBefore writing an \\(a^2 + b^2 = c^2\\) equation, what must Chirag identify?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The ground distance and the wall height as the two legs, and the pole as the hypotenuse opposite the right angle.",
+      "B": "Perpendicular distances as the answer label, without naming which segments are legs or hypotenuse.",
+      "C": "Write \\(a^2 + b^2 = c^2\\) first; checking that the lengths form a right triangle can wait.",
+      "D": "Form the equation for any three lengths nearby, even if they do not make a right triangle."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95]\\coordinate (G) at (0,0);\\coordinate (W) at (0,3.2);\\coordinate (B) at (2.4,0);\\draw[line width=0.75pt] (G)--(W)--(B)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=4pt] at (0,1.6) {wall};\\node[below=4pt] at (1.2,0) {ground};\\node[above right=-2pt] at (1.15,1.7) {pole};\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

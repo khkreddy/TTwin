@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H001"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H001",
+    "stem": "The diagram shows four objects Nikhil labels P, Q, R and S: the Sun, a glowing lamp, a book, and the Moon.\n\nWhich claim about luminous and non-luminous objects is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "P and Q are luminous because they emit their own light; R and S are non-luminous.",
+      "B": "P, Q and S are luminous because they look bright; R is non-luminous.",
+      "C": "Only P is luminous; Q, R and S are non-luminous.",
+      "D": "R is luminous because a book can be seen in daylight."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick, fill=yellow!70] (0,2) circle (0.55);\n\\node at (0,2) {Sun};\n\\node at (0,1.1) {P};\n\\draw[thick, fill=yellow!40] (3.2,2.3) -- (3.5,1.7) -- (3.8,2.3) -- cycle;\n\\draw[thick] (3.5,1.7) -- (3.5,1.2);\n\\node at (3.5,0.85) {lamp};\n\\node at (3.5,0.45) {Q};\n\\draw[thick, fill=gray!15] (0.6,-0.2) rectangle (1.8,0.5);\n\\node at (1.2,0.15) {book};\n\\node at (1.2,-0.55) {R};\n\\draw[thick, fill=gray!30] (3.0,-0.1) circle (0.4);\n\\node at (3.0,-0.1) {Moon};\n\\node at (3.0,-0.75) {S};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

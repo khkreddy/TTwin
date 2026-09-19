@@ -1,0 +1,79 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:45:12.962Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_04/H001",
+      "unit_id": "science/grade_07/ch_04/H001",
+      "title": "When a material is observed, decide whether its lustre, hardness, malleability, ductility, sonority, and conductivity point to a metal or to a non-metal, while allowing named exceptions.",
+      "node_labels": [
+        "Materials and their properties",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [],
+    "enrichment": "Metals are generally lustrous, hard, malleable, ductile, sonorous, and good conductors of heat and electricity; most non-metals lack these properties. Sodium and potassium are soft metals, and mercury is a liquid metal at room temperature. Observed material properties support classification as metal or non-metal, with exceptions checked before making the final classification. The learner correctly applies this rule: Metals are generally lustrous, hard, malleable, ductile, sonorous, and good conductors of heat and electricity; most non-metals lack these properties. Sodium and potassium are soft metals, and mercury is a liquid metal at room temperature. Metals are always hard, shiny solids, so anything soft or liquid is a non-metal.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When a material is observed, decide whether its lustre, hardness, malleability, ductility, sonority, and conductivity point to a metal or to a non-metal, while allowing named exceptions. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_04/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "option_plan": {
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H001"
+  }
+}

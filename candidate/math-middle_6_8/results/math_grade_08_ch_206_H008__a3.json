@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nalini may use the digits 2, 6 and 9 exactly once to make a two-digit number times a one-digit number.\n\nWhich claim gives the largest product?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any arrangement is largest if it uses a multiplicand; report that label."
+    },
+    {
+      "id": "B",
+      "text": "Digits may be reused, so try 99 × 6."
+    },
+    {
+      "id": "C",
+      "text": "Compare the placements systematically: 62 × 9 = 558 is larger than 92 × 6 = 552 and 96 × 2 = 192, so 62 × 9 is largest."
+    },
+    {
+      "id": "D",
+      "text": "Compare the digit sums of the arrangements instead of the products."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With digits 2 < 6 < 9 used once, qp × r = 62 × 9 = 558 is largest among the three placements. Naming multiplicand is not a product. Reusing digits drops the once-each condition. Digit sums are outside the product comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pooja's board shows this pattern of scores:\n\n3  3  3  3\n5  5  5  5\n5  5  5  5\n\nWhich claim finds the total most quickly and correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the distinct values 3 and 5 to get 8."
+    },
+    {
+      "id": "B",
+      "text": "Finding the total is what produces the rows of 3s and 5s."
+    },
+    {
+      "id": "C",
+      "text": "$4 \\times 3 + 8 \\times 5 = 52$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same grouping to find a total for an empty board with no scores shown."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Group repeats: four 3s and eight 5s give 12+40=52. A drops multiplicity. B reverses sum and pattern. D stretches grouping beyond the displayed scores.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

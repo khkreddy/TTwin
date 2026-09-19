@@ -1,0 +1,110 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m19_qp_12:q23",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:37:22.783Z",
+  "source": {
+    "item_ref": "session:0580_m19_qp_12:q23",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a quadrilateral on a 1 cm² grid.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Write down the mathematical name of this quadrilateral. [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Work out the area of this quadrilateral. Give the units of your answer. [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.7cm,y=0.7cm]\\draw[gray!75,densely dashed,line width=0.35pt] (0,0) grid[step=1] (10,8);\\draw[black,line width=1.15pt,line join=round] (5,8)--(8,6)--(5,0)--(2,6)--cycle;\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_206/H008",
+      "unit_id": "math/grade_07/ch_206/H008",
+      "title": "Decide why six congruent equilateral triangles can be assembled to construct a regular hexagon.",
+      "node_labels": [
+        "Geometric proof, congruence and similarity criteria",
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Geometric proof, congruence and similarity criteria",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Regular hexagon is the label that belongs on this item, so 'Decide why six congruent equilateral triangles can be assembled to' is answered as regular hexagon rather than regular polygon."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "regular polygon still holds here even though The six triangles must be congruent and equilateral is missing from the stem — on the item about Decide why six congruent equilateral triangles can be."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The regular polygon rule also covers this: regular pentagon construction, so it is not an exception — on the item about Decide why six congruent equilateral triangles can be."
+      }
+    ],
+    "enrichment": "Six congruent equilateral triangles fit around a common point because their 60 degree angles add to 360 degrees; the resulting outside boundary has equal sides and each hexagon angle is 60 degrees plus 60 degrees, or 120 degrees.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_206. The student must decide: Decide why six congruent equilateral triangles can be assembled to construct a regular hexagon. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_07/ch_206/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H008"
+  }
+}

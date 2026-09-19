@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_07/ch_03/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_03/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H001"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H001",
+    "stem": "The diagram shows one electric cell joined to a small lamp in Zoya's circuit. The ends of the cell are marked + and −. The lamp lights.\n\nWhich claim about the cell is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The + end is the positive terminal and the − end is the negative terminal; the cell can supply energy to run this small circuit.",
+      "B": "The + end is the negative terminal and the − end is the positive terminal; the cell can supply energy to run this small circuit.",
+      "C": "The + and − marks do not name terminals; either end can be called positive.",
+      "D": "The + end is the positive terminal, but one cell cannot run a lamp in a small circuit."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick] (0,0) rectangle (1.4,0.7);\n\\node at (0.7,0.35) {cell};\n\\node[font=\\bfseries] at (-0.25,0.35) {$-$};\n\\node[font=\\bfseries] at (1.65,0.35) {$+$};\n\\draw[thick] (1.4,0.35) -- (2.6,0.35) -- (2.6,1.1);\n\\draw[thick] (2.35,1.1) rectangle (2.85,1.6);\n\\node at (2.6,1.85) {lamp};\n\\draw[thick] (2.6,1.6) -- (2.6,2.2) -- (-0.5,2.2) -- (-0.5,0.35) -- (0,0.35);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

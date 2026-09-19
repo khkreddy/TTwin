@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela and Rohan measure the same classroom table in handspans. Leela gets 8 handspans. Rohan gets 6 handspans.\n\nWhich claims correctly explain why the numbers differ? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The table grew longer between the two measurements."
+    },
+    {
+      "id": "B",
+      "text": "Their handspans are different sizes, so the same table can give different counts."
+    },
+    {
+      "id": "C",
+      "text": "A body unit like a handspan is not the same for every student."
+    },
+    {
+      "id": "D",
+      "text": "Length cannot be measured unless a clock is used."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Handspans differ from person to person, so the same table yields different counts. The table did not change length, and a clock is not required for length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A bamboo pole leans from the ground up to a wall. The diagram shows the right triangle formed by the pole, the wall, and the ground.\n\nBefore writing an \\(a^2 + b^2 = c^2\\) equation, what must Chirag identify?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ground distance and the wall height as the two legs, and the pole as the hypotenuse opposite the right angle."
+    },
+    {
+      "id": "B",
+      "text": "Perpendicular distances as the answer label, without naming which segments are legs or hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "Write \\(a^2 + b^2 = c^2\\) first; checking that the lengths form a right triangle can wait."
+    },
+    {
+      "id": "D",
+      "text": "Form the equation for any three lengths nearby, even if they do not make a right triangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95]\\coordinate (G) at (0,0);\\coordinate (W) at (0,3.2);\\coordinate (B) at (2.4,0);\\draw[line width=0.75pt] (G)--(W)--(B)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=4pt] at (0,1.6) {wall};\\node[below=4pt] at (1.2,0) {ground};\\node[above right=-2pt] at (1.15,1.7) {pole};\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The equation needs a right triangle: perpendicular ground and wall as legs, pole as hypotenuse. Naming perpendicular distances alone is not the model. Writing the equation before the right-triangle model omits the condition. Non-right triples are outside the scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle as a labelled wall–ground–pole right triangle matching the stem story."
+  }
+}

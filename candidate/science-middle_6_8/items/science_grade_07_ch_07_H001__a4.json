@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_07/ch_07/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_07/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_07/H001"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_07:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_07/ch_07",
+    "chapter_label": "Heat transfer",
+    "subtopic_id": "science/grade_07/ch_07/H001",
+    "stem": "The diagram shows Farhan's metal strip. A flame heats one end. Wax marks P, Q, R and S are placed along the strip, with P nearest the flame and S farthest.\n\nWhich claim about heat in the strip is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Heat moves along the strip from the hot end to the colder end, so the wax marks melt from P toward S.",
+      "B": "Heat moves along the strip from the colder end to the hot end, so the wax marks melt from S toward P.",
+      "C": "Heat stays only under the flame; the wax marks farther along the strip never melt.",
+      "D": "All wax marks melt at the same moment because the whole strip is one object."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick, fill=gray!20] (0,1) rectangle (6,1.4);\n\\node at (3,1.7) {metal strip};\n\\draw[thick, fill=orange!60] (-0.15,0.2) -- (0.35,0.9) -- (0.55,0.2) -- cycle;\n\\node at (0.2,-0.15) {flame};\n\\foreach \\x/\\lab in {1.2/P, 2.6/Q, 4.0/R, 5.4/S} {\n  \\draw[thick, fill=yellow!40] (\\x,1.4) rectangle (\\x+0.25,1.85);\n  \\node at (\\x+0.12,2.15) {\\lab};\n}\n\\node at (3,0.5) {wax marks};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_07/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

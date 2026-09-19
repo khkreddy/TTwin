@@ -1,0 +1,78 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_04/H001",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_04/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "option_plan": {
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H001"
+  },
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_04:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_04",
+    "chapter_label": "The world of metals and non-metals",
+    "subtopic_id": "science/grade_07/ch_04/H001",
+    "stem": "Aditi observes a sample. It is shiny, can be hammered into a thin sheet, can be drawn into a wire, and rings when struck. It also feels hard compared with chalk.\n\nWhich decision about these observations is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Lustre, hardness, malleability, ductility and sonority are used here as metal tests, so the sample is likely a metal.",
+      "B": "Only shininess matters; hardness, malleability, ductility and sonority are not used as metal tests.",
+      "C": "These observations show the sample must be a non-metal.",
+      "D": "Malleability and ductility are used only for non-metals, not for metals."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_04/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naveen adds two 3-digit numbers.\n\nWhich claim about the number of digits in the sum is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sum is always a 4-digit number."
+    },
+    {
+      "id": "B",
+      "text": "The sum is never a 3-digit number."
+    },
+    {
+      "id": "C",
+      "text": "The sum is sometimes a 4-digit number."
+    },
+    {
+      "id": "D",
+      "text": "The sum is always a 3-digit number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two 3-digit numbers can sum to 3 digits (100+100=200) or 4 digits (500+600=1100), so a 4-digit sum is sometimes possible, not always or never. Fixating on the stem's 3-digit label makes D look safe.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

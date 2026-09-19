@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows six congruent equilateral triangles meeting at a common point.\n\nWhy can they be assembled to form a regular hexagon?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each triangle angle is $60^{\\circ}$, six of them make $360^{\\circ}$ at the centre, and the outer sides are equal."
+    },
+    {
+      "id": "B",
+      "text": "A regular hexagon is simply the label for any figure built from triangles."
+    },
+    {
+      "id": "C",
+      "text": "Any six triangles around a point form a regular hexagon."
+    },
+    {
+      "id": "D",
+      "text": "The same assembly also builds a regular pentagon from five equilateral triangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85]\n\\foreach \\i in {0,60,...,300} {\\draw[thick] (0,0) -- (\\i:2.2);}\n\\draw[thick] (0:2.2) -- (60:2.2) -- (120:2.2) -- (180:2.2) -- (240:2.2) -- (300:2.2) -- cycle;\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Six 60° angles fill 360° around a point; congruent equilateral triangles give equal outer sides and equal hexagon angles. B renames without the angle reason. C drops congruence and equilateral. D extends the rule to a pentagon, where five 60° angles do not fill 360°.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source tikz to six equilateral triangles around a point forming a regular hexagon."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha wants a quicker way to compute $36 \\times 50$.\n\nWhich claim correctly speeds up the multiplication?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Replace 36 with $100 \\div 2$ to speed up $36 \\times 50$."
+    },
+    {
+      "id": "B",
+      "text": "Replace 50 with $100 \\div 2$, so compute $(36 \\times 2) \\times 100$."
+    },
+    {
+      "id": "C",
+      "text": "Replace 50 with $100 \\div 2$, so compute $(36 \\div 2) \\times 100$."
+    },
+    {
+      "id": "D",
+      "text": "Replace 50 with $100 \\div 2$ when reading a place-value comma in a numeral."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "50 = 100÷2, so 36×50 = (36÷2)×100 = 1800. A applies the rewrite when the factor is not linked to a power of ten. B multiplies by 2 instead of dividing. D takes the rewrite outside multiplication.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

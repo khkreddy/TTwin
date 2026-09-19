@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m16_qp_12:q24",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:42:26.670Z",
+  "source": {
+    "item_ref": "session:0580_m16_qp_12:q24",
+    "item_type": "structured_parts",
+    "stem": "Some children were asked to choose their favourite type of pet.\nThe pie chart shows the results.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "41 children chose Cat. Work out how many children were asked altogether. [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Work out how many children chose Hamster. [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\small,line cap=round,line join=round]\\def\\R{3}\\draw[line width=0.7pt] (0,0) circle (\\R);\\foreach \\a in {15,90,111,234}{\\draw[line width=0.7pt] (0,0)--(\\a:\\R);}\\node at (100.5:2.35) {Fish};\\node at (52.5:1.85) {Hamster};\\node at (304.5:1.85) {Rabbit};\\node at (172.5:2.05) {Cat};\\draw[line width=0.55pt] (111:0.58) arc[start angle=111,end angle=234,radius=0.58];\\node[fill=white,inner sep=1pt] at (180:0.33) {$123^{\\circ}$};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_205/H008",
+      "unit_id": "math/grade_07/ch_205/H008",
+      "title": "Represent and compare two or more related datasets with clustered or double column graphs by using adjacent bars, a common scale, and visual distinctions such as colours, patterns, or legends.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Double column graph is the label that belongs on this item, so 'Represent and compare two or more related datasets with clustered or' is answered as double column graph rather than clustered column graph."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Double column graph is what produces clustered column graph, so the usual direction of this relation is run backwards — on the item about Represent and compare two or more related datasets with."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is clustered column graph because of the visible appearance named in the stem, without using 'Represent and compare two or more related datasets with clustered or' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "clustered column graph is settled by running 'Decide whether a broader claim, comparison, estimate, or prediction is': Looking closely at data can reveal stories, mysteries, changes, and trends, but data from — on the item about Represent and compare two or more related datasets with."
+      }
+    ],
+    "enrichment": "A clustered column graph combines related column graphs by drawing bars side by side for each category, using different visual encodings to separate datasets and a common scale to compare bar heights or lengths.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_205. The student must decide: Represent and compare two or more related datasets with clustered or double column graphs by using adjacent bars, a common scale, and visual distinctions such as colours, patterns, or legends. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_07/ch_205/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_205/H008"
+  }
+}

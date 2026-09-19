@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish computes $4.8 + 3.2$ and writes $0.8$ as the sum.\n\nWhich claim correctly checks whether that sum is reasonable?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The check is a range, not an estimate of $4.8 + 3.2$."
+    },
+    {
+      "id": "B",
+      "text": "The estimate alone is the exact place-value sum."
+    },
+    {
+      "id": "C",
+      "text": "Estimate $5 + 3 = 8$, so $0.8$ is not reasonable."
+    },
+    {
+      "id": "D",
+      "text": "The exact answer must equal the estimate 8."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Whole-number parts near 5 and 3 give an estimate near 8, so 0.8 is not reasonable. A renames the check without using place-value size. B treats estimate as the exact sum. D reverses estimate and exact answer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

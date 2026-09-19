@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s16_qp_11:q39",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:39:52.232Z",
+  "source": {
+    "item_ref": "session:0620_s16_qp_11:q39",
+    "item_type": "single_mcq",
+    "stem": "Ethene forms an addition polymer as shown.\n\n[Displayed reaction scheme: multiple ethene molecules, CH₂=CH₂, add together to form a polymer chain with repeating saturated –CH₂–CH₂– units.]\n\nWhich terms describe this polymer?",
+    "options": [
+      {
+        "id": "A",
+        "text": "a saturated compound called poly(ethane)"
+      },
+      {
+        "id": "B",
+        "text": "a saturated compound called poly(ethene)"
+      },
+      {
+        "id": "C",
+        "text": "an unsaturated compound called poly(ethane)"
+      },
+      {
+        "id": "D",
+        "text": "an unsaturated compound called poly(ethene)"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily,line width=.65pt,>=stealth]\n\\newcommand{\\ethene}[1]{%\n  \\node at (#1,0){C}; \\node at ({#1+1},0){C};\n  \\draw ({#1+.18},.08)--({#1+.82},.08);\n  \\draw ({#1+.18},-.08)--({#1+.82},-.08);\n  \\foreach \\x in {#1,{#1+1}} {\n    \\draw (\\x,.22)--(\\x,.72); \\draw (\\x,-.22)--(\\x,-.72);\n    \\node at (\\x,.94){H}; \\node at (\\x,-.94){H};\n  }}\n\\node at (-1.15,0){\\ldots};\n\\ethene{0}\n\\node at (1.75,0){+};\n\\ethene{2.5}\n\\node at (4.65,0){+\\ \\ldots};\n\\draw[->] (5.45,0)--(6.8,0);\n\\node at (7.35,0){\\ldots};\n\\foreach \\x in {8.2,9.2,10.2,11.2} {\n  \\node at (\\x,0){C};\n  \\draw (\\x,.22)--(\\x,.72); \\draw (\\x,-.22)--(\\x,-.72);\n  \\node at (\\x,.94){H}; \\node at (\\x,-.94){H};\n}\n\\draw (7.65,0)--(8.02,0);\n\\draw (8.38,0)--(9.02,0) (9.38,0)--(10.02,0)\n      (10.38,0)--(11.02,0) (11.38,0)--(11.8,0);\n\\node at (12.25,0){\\ldots};\n\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Anyone solving a daily-life problem is working like a scientist."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A cook systematically testing why dough rises is not working like a scientist because the investigation happens in a kitchen."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A professional scientist guessing which switch is faulty is working like a scientist because that is their job title."
+      }
+    ],
+    "enrichment": "Scientists follow the scientific method to solve problems or discover new things, and anyone who follows the scientific method is working like a scientist. Following the scientific method in a problem situation makes the activity scientific in character, even when the person is not in a science laboratory. The learner classifies a daily-life person as working like a scientist when the person follows the scientific method to solve a problem or discover something. Only people with the job title scientist do science.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_01/H004",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “a saturated compound called poly(ethane)” looked possible instead of “a saturated compound called poly(ethene)”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “an unsaturated compound called poly(ethane)” looked possible instead of “a saturated compound called poly(ethene)”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “an unsaturated compound called poly(ethene)” looked possible instead of “a saturated compound called poly(ethene)”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When judging a daily-life problem, decide that a person is working like a scientist if they use the scientific method to solve the problem or discover something. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "remove",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_s16_qp_11:q39",
+    "hinge": "science/grade_06/ch_01/H004",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H004"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows four objects Nikhil labels P, Q, R and S: the Sun, a glowing lamp, a book, and the Moon.\n\nWhich claim about luminous and non-luminous objects is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q are luminous because they emit their own light; R and S are non-luminous."
+    },
+    {
+      "id": "B",
+      "text": "P, Q and S are luminous because they look bright; R is non-luminous."
+    },
+    {
+      "id": "C",
+      "text": "Only P is luminous; Q, R and S are non-luminous."
+    },
+    {
+      "id": "D",
+      "text": "R is luminous because a book can be seen in daylight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick, fill=yellow!70] (0,2) circle (0.55);\n\\node at (0,2) {Sun};\n\\node at (0,1.1) {P};\n\\draw[thick, fill=yellow!40] (3.2,2.3) -- (3.5,1.7) -- (3.8,2.3) -- cycle;\n\\draw[thick] (3.5,1.7) -- (3.5,1.2);\n\\node at (3.5,0.85) {lamp};\n\\node at (3.5,0.45) {Q};\n\\draw[thick, fill=gray!15] (0.6,-0.2) rectangle (1.8,0.5);\n\\node at (1.2,0.15) {book};\n\\node at (1.2,-0.55) {R};\n\\draw[thick, fill=gray!30] (3.0,-0.1) circle (0.4);\n\\node at (3.0,-0.1) {Moon};\n\\node at (3.0,-0.75) {S};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Luminous objects emit their own light. The Sun and lamp do. The book and Moon do not; the Moon only reflects light.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Sun and lamp versus book and Moon."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zoya talks about human digestion along the alimentary canal from mouth to anus.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Digestion breaks complex food components into simpler forms."
+    },
+    {
+      "id": "B",
+      "text": "This breakdown continues along the alimentary canal from mouth to anus."
+    },
+    {
+      "id": "C",
+      "text": "Digestion joins simple food substances into more complex ones along the canal."
+    },
+    {
+      "id": "D",
+      "text": "Digestion is only the chewing of food in the mouth."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digestion is breakdown of complex food into simpler forms along the canal from mouth to anus, not joining or mouth-only chewing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

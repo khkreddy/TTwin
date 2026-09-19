@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_06/ch_04/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_06/ch_04/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": "relationship_reversal",
+      "B": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H001"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H001",
+    "stem": "The diagram shows a bar magnet, an iron nail, and a plastic comb. Rohan brings the magnet near each object. The nail is attracted. The comb is not.\n\nWhich conclusion is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The nail is made of a magnetic material; the comb is not.",
+      "B": "The comb is made of a magnetic material; the nail is not.",
+      "C": "Both are magnetic because Rohan used a magnet.",
+      "D": "Both are non-magnetic because only one object moved."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!35] (0,2.0) rectangle (1.5,2.55);\n\\draw[thick,fill=blue!35] (1.5,2.0) rectangle (3.0,2.55);\n\\node at (0.75,2.275) {N};\n\\node at (2.25,2.275) {S};\n\\node at (1.5,2.95) {bar magnet};\n% iron nail\n\\draw[thick,fill=gray!45] (0.15,0.55) -- (0.15,0.85) -- (1.55,0.85) -- (1.85,0.70) -- (1.55,0.55) -- cycle;\n\\node at (0.95,0.15) {iron nail};\n% plastic comb\n\\draw[thick,fill=white] (2.1,0.55) rectangle (3.5,0.95);\n\\foreach \\x in {2.25,2.5,2.75,3.0,3.25} {\\draw[thick] (\\x,0.55) -- (\\x,0.20);}\n\\node at (2.8,0.0) {plastic comb};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Naveen checks flat card cut-outs meant as nets for a cube.\n\nWhich arrangements are valid mathematical nets for a cube? Two options are correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Six squares in a straight row."
+    },
+    {
+      "id": "B",
+      "text": "A cross of five squares with one more square joined to a side of the centre strip."
+    },
+    {
+      "id": "C",
+      "text": "Four squares in a row, with one square joined above the second and one joined below the third."
+    },
+    {
+      "id": "D",
+      "text": "Six face squares plus thin joining flaps treated as extra faces."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "B and C fold into a cube without face overlap. A has six faces but cannot wrap a cube. D treats support flaps as net faces, which a mathematical net excludes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A square floor tile has area 81 cm². Shreya needs the side length of the tile.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The square roots of 81 are +9 and −9, and −9 cm can be used as the side length of the tile."
+    },
+    {
+      "id": "B",
+      "text": "The side length produces the perfect square, so the side length is 81 cm."
+    },
+    {
+      "id": "C",
+      "text": "The side length is 9 cm, the positive square root of 81."
+    },
+    {
+      "id": "D",
+      "text": "A negative number is an allowed physical side length for this tile."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "81 = 9², and a geometric side length is the positive root 9 cm. Using −9 omits the positive-length condition. Reversing area and side gives 81 cm. Negative length is outside physical side length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

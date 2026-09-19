@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ishaan solves $3(x-2)=12$. Four solution steps are offered.\n\nWhich steps preserve equality and handle the brackets and coefficients correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $x=6$ at once, without checking any transformation from $3(x-2)=12$."
+    },
+    {
+      "id": "B",
+      "text": "Expand to $3x-6=12$, distributing $3$ over $(x-2)$."
+    },
+    {
+      "id": "C",
+      "text": "Then write $3x=18$ by adding $6$ to both sides."
+    },
+    {
+      "id": "D",
+      "text": "Accept a step because the handwriting looks neat, without checking signs or brackets."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Valid steps expand 3(x-2)=12 to 3x-6=12 and add 6 to both sides to reach 3x=18. Skipping checks or judging by layout does not preserve equality.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

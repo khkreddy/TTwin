@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The mean of five scores is $14$. Four of the scores are $10$, $12$, $15$ and $16$.\n\nWhat is the missing score?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$5$, the number of scores."
+    },
+    {
+      "id": "B",
+      "text": "$14$, taking the mean itself as the missing score."
+    },
+    {
+      "id": "C",
+      "text": "$17$, after recovering the total $5\\times14=70$ and subtracting $10+12+15+16=53$ to get $17$."
+    },
+    {
+      "id": "D",
+      "text": "$53$, the sum of the four known scores, treated as if it were the missing score."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Total = mean × count = 70. Missing score = 70 − (10+12+15+16) = 17. Naming the count, treating the mean as the missing value, or reversing to report the known sum all miss recovering the total first.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

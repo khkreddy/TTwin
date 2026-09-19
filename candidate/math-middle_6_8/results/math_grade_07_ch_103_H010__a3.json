@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chirag writes the decimal sequence 0.8, 1.1, 1.4, 1.7, …\n\nWhich claim correctly extends the sequence?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the list a sequence and stop; naming it is enough to extend it."
+    },
+    {
+      "id": "B",
+      "text": "The terms produce the change 0.3, so write 0.3 as the next term."
+    },
+    {
+      "id": "C",
+      "text": "Each term is 0.3 more than the one before, so the next term is 2.0."
+    },
+    {
+      "id": "D",
+      "text": "The next term is 1.7, because that is the last printed number in the list."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Common difference is +0.3, so 1.7 + 0.3 = 2.0. Naming the sequence does not extend it. The change is not itself the next term. Repeating the last printed term ignores the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

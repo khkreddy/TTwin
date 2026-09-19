@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri compares triangles DEF and XYZ. Angle D equals angle X, angle E equals angle Y, and side DF equals side XZ. Side DF is not between angles D and E, and side XZ is not between angles X and Y.\n\nWhich claim correctly decides whether the triangles are congruent?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent because DF equals XZ."
+    },
+    {
+      "id": "B",
+      "text": "The equal non-included sides are what produce the two pairs of equal angles."
+    },
+    {
+      "id": "C",
+      "text": "The third angles are equal by the angle sum, so the triangles satisfy ASA and are congruent."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent because DF and XZ are the longest printed lengths in the list."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two equal angles determine the third by the 180° sum. With the matching non-included side, the data become ASA, so the triangles are congruent.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

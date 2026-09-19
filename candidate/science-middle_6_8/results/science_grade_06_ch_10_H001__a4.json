@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela finds a dry dormant mustard seed, a potted mint plant, and a toy bus near the garden. She wants to decide which is living.\n\nWhich claims use the shared life characteristics correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The dry dormant mustard seed is dead because it is not moving right now."
+    },
+    {
+      "id": "B",
+      "text": "The potted mint plant is living because it shows life processes such as growth and needing food."
+    },
+    {
+      "id": "C",
+      "text": "Living things are judged by shared life characteristics, not by one visible feature alone."
+    },
+    {
+      "id": "D",
+      "text": "The toy bus rolling down a slope is living because it shows movement."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Living status rests on shared life characteristics, not on one visible sign such as movement. The mint plant shows life processes. A dormant seed is not proven dead by stillness alone. A rolling toy is non-living.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rohan holds one hand under a warm tap and the other under a cool tap. Then he puts both hands into the same bucket of room water.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Can he trust touch alone to say whether the room water is hot or cold?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "No. The two hands disagree, so he should measure the temperature."
+        },
+        {
+          "id": "B",
+          "text": "Yes. Touch still tells the true temperature of the room water."
+        },
+        {
+          "id": "C",
+          "text": "Yes. The hand that was under the warm tap feels the true temperature."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "After different prior temperatures, the hands disagree, so touch is not enough."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Touch depends on what the hands felt before. When the hands disagree, temperature must be measured.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar paints $\\dfrac{1}{6}$ of a wall in one hour. Pallavi paints $\\dfrac{1}{3}$ of the same wall in one hour. They work together on that wall.\n\nWhich claim correctly combines their work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep only one individual rate as the answer, without combining the two hourly amounts."
+    },
+    {
+      "id": "B",
+      "text": "The finishing time is what produces each painter's individual rate."
+    },
+    {
+      "id": "C",
+      "text": "Add the hourly amounts: $\\dfrac{1}{6}+\\dfrac{1}{3}=\\dfrac{1}{2}$ of the wall per hour, so together they finish in $2$ hours."
+    },
+    {
+      "id": "D",
+      "text": "Multiply $\\dfrac{1}{6}$ by $\\dfrac{1}{3}$ as if inverse proportion alone settled the shared task."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For one shared task, add the work each person completes per hour. Combined rate 1/2 wall per hour means 2 hours for the whole wall.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

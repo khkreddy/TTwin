@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parul watches the Sun after sunrise. It appears to move from east toward west across the sky.\n\nWhy does the Sun appear to move from east to west?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth rotates from west to east on its own axis."
+    },
+    {
+      "id": "B",
+      "text": "Earth rotates from east to west on its own axis."
+    },
+    {
+      "id": "C",
+      "text": "Earth revolves around the Sun once each year, and that alone causes the daily path."
+    },
+    {
+      "id": "D",
+      "text": "The Sun orbits Earth from east to west each day."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Sun appears to move east to west because Earth rotates west to east on its axis.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

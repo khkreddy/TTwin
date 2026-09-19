@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Divya writes division for two milk problems.\nProblem 1: Share $\\frac{3}{4}$ litre equally among 3 cups.\nProblem 2: How many $\\frac{1}{8}$ litre servings are in $\\frac{3}{4}$ litre?\n\nWhich expressions are correct? Two options are correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Problem 1 is $\\frac{3}{4} \\div 3$."
+    },
+    {
+      "id": "B",
+      "text": "Problem 1 is $3 \\div \\frac{3}{4}$."
+    },
+    {
+      "id": "C",
+      "text": "Problem 2 is $\\frac{3}{4} \\div \\frac{1}{8}$."
+    },
+    {
+      "id": "D",
+      "text": "Problem 2 is $\\frac{3}{4} \\times \\frac{1}{8}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sharing is total ÷ number of shares: (3/4)÷3. How-many-groups is total ÷ group size: (3/4)÷(1/8). B reverses dividend and divisor. D multiplies instead of dividing for the groups question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

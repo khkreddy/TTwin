@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir needs equal intervals of time for a class activity and has no clock.\n\nWhich processes can be used to measure time? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A pendulum that swings with a steady repeating beat."
+    },
+    {
+      "id": "B",
+      "text": "Water drops from a tap that fall at equal repeating intervals."
+    },
+    {
+      "id": "C",
+      "text": "Handclaps made at random with no steady beat."
+    },
+    {
+      "id": "D",
+      "text": "A single shout that happens only once."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A repeating steady process can mark equal time intervals. Random claps and a one-off shout cannot.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

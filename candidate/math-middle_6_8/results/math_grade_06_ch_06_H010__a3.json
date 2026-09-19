@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nalini draws the irregular closed shape shown in the diagram on 1 cm² squared paper.\n\nHow should she estimate its area in square centimetres?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count every whole square fully inside the shape and estimate each partly covered square as a fraction of one square centimetre."
+    },
+    {
+      "id": "B",
+      "text": "Answer with the words squared paper; that label is the estimate."
+    },
+    {
+      "id": "C",
+      "text": "The squared paper produces the shape, so the area equals the area of the whole grid."
+    },
+    {
+      "id": "D",
+      "text": "Measure the perimeter of the shape in centimetres and take that number as the area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.65cm,y=0.65cm]\\draw[gray!75,densely dashed,line width=0.35pt] (0,0) grid[step=1] (8,6);\\draw[black,line width=1.15pt,line join=round] (1,2)--(2,4.2)--(4,5.2)--(6.2,4)--(7,2.2)--(5.5,0.8)--(3,1)--cycle;\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On 1 cm² paper, area is estimated by counting full interior squares and estimating partial squares. Naming squared paper is not a method. The grid does not produce the shape. Perimeter is a different quantity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote kite to an irregular closed polygon on an 8 by 6 one-centimetre grid."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Shreya multiplies \\((-3) \\times 4 \\times (-5)\\).\n\nWhich claims keep the same product? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the word product as the value of the calculation."
+    },
+    {
+      "id": "B",
+      "text": "\\((-3) \\times 4 \\times (-5) = 4 \\times (-3) \\times (-5)\\)."
+    },
+    {
+      "id": "C",
+      "text": "\\((-3) \\times \\bigl(4 \\times (-5)\\bigr) = \\bigl((-3) \\times 4\\bigr) \\times (-5)\\)."
+    },
+    {
+      "id": "D",
+      "text": "The factors are −3, 4 and −5, so the product equals −3 because that is the first printed number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Integer multiplication is commutative and associative, so reordering and regrouping keep the product. Naming product is not a value. Copying the first printed factor ignores the product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

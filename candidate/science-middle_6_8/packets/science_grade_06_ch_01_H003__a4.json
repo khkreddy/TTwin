@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s06_qp_1:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:39:52.197Z",
+  "source": {
+    "item_ref": "session:0620_s06_qp_1:q27",
+    "item_type": "single_mcq",
+    "stem": "Which diagram shows a common use of stainless steel?",
+    "options": [
+      {
+        "id": "A",
+        "text": "diagram of a knife and fork"
+      },
+      {
+        "id": "B",
+        "text": "diagram of an aeroplane"
+      },
+      {
+        "id": "C",
+        "text": "diagram of an electrical plug"
+      },
+      {
+        "id": "D",
+        "text": "diagram of a car"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,line width=0.7pt,font=\\sffamily]\n% A: clear upright four-tine fork and table knife\n\\begin{scope}[shift={(0,.1)}]\n \\node[font=\\bfseries] at (1.20,3.25){A};\n % fork on left: four vertical tines, shoulders, neck and rounded handle\n \\foreach \\x in {.28,.45,.62,.79}{\\draw (\\x,2.05)--(\\x,2.75);}\n \\draw (.28,2.05)--(.28,1.88) .. controls (.28,1.72) and (.43,1.62) .. (.47,1.48);\n \\draw (.79,2.05)--(.79,1.88) .. controls (.79,1.72) and (.66,1.62) .. (.62,1.48);\n \\draw (.47,1.48)--(.45,.38) .. controls (.45,.12) and (.64,.12) .. (.64,.38)--(.62,1.48)--cycle;\n \\draw (.28,2.05)--(.79,2.05);\n % table knife on right: distinct handle, bolster and rounded blade\n \\draw (1.42,.20) .. controls (1.32,.32) and (1.35,.65) .. (1.38,1.40)\n  --(1.72,1.40) .. controls (1.76,.70) and (1.78,.34) .. (1.67,.20)\n  .. controls (1.60,.12) and (1.49,.12) .. (1.42,.20)--cycle;\n \\draw (1.34,1.40)--(1.78,1.40);\n \\draw (1.38,1.40)--(1.40,2.55)\n  .. controls (1.42,2.76) and (1.67,2.82) .. (1.88,2.68)\n  .. controls (1.98,2.60) and (1.94,2.46) .. (1.88,2.34)\n  --(1.72,1.40)--cycle;\n \\draw (1.48,.32)--(1.64,.32);\n\\end{scope}\n% B: commercial jet, side-front three-quarter view\n\\begin{scope}[shift={(3.55,.05)}]\n \\node[font=\\bfseries] at (2.6,3.3){B};\n % fuselage with rounded nose at right\n \\draw (.75,1.55) .. controls (1.55,1.5) and (3.75,1.35) .. (4.8,1.05)\n  .. controls (5.55,.85) and (5.85,.48) .. (5.55,.25)\n  .. controls (5.2,-.05) and (4.25,.15) .. (3.55,.28)\n  .. controls (2.35,.5) and (1.55,.72) .. (.8,.88)--cycle;\n % tail fin and tailplane\n \\draw (.95,1.5)--(.65,2.75)--(1.02,2.7)--(1.72,1.43);\n \\draw (.9,1.25)--(.05,1.1)--(.0,.9)--(1.4,1.05);\n % far wing and near large swept wing\n \\draw (2.0,1.25)--(3.95,2.22)--(4.28,2.15)--(3.22,1.05);\n \\draw (2.45,.65)--(.55,-.15)--(.05,-.08)--(3.65,.45);\n % cockpit and passenger windows\n \\draw (5.05,.83)--(5.32,.7)--(5.08,.61); \\draw (4.73,.91)--(4.93,.78);\n \\foreach \\x/\\y in {2.25/1.02,2.48/1.00,2.71/.98,2.94/.96,3.17/.94,3.40/.92,3.63/.90,3.85/.88}{\\fill (\\x,\\y) circle (.035);}\n % engines under the visible wings\n \\draw[fill=white] (1.45,.2) ellipse (.32 and .18); \\fill (1.35,.17) circle (.09);\n \\draw[fill=white] (3.05,.18) ellipse (.34 and .2); \\fill (2.94,.15) circle (.1);\n % landing gear accents\n \\draw (4.65,.25)--(4.62,.02); \\fill (4.62,-.02) circle (.07);\n\\end{scope}\n% C: UK Type G plug face\n\\begin{scope}[shift={(10.2,.2)}]\n \\node[font=\\bfseries] at (1.25,3.15){C};\n \\draw (.35,.2) .. controls (-.05,.6) and (-.05,2.25) .. (.38,2.62)\n  .. controls (.78,2.95) and (1.72,2.95) .. (2.12,2.62)\n  .. controls (2.55,2.25) and (2.55,.6) .. (2.15,.2)\n  .. controls (1.72,-.08) and (.78,-.08) .. (.35,.2);\n \\draw (.48,.35) .. controls (.2,.8) and (.2,2.05) .. (.55,2.42)\n  .. controls (.9,2.68) and (1.62,2.68) .. (1.95,2.42);\n % earth pin vertical at top\n \\draw (1.03,1.92) rectangle (1.47,2.48);\n % live and neutral pins horizontal below\n \\draw (.48,.72) rectangle (1.02,1.02); \\draw (1.48,.72) rectangle (2.02,1.02);\n % centre screw and lower hole\n \\draw (1.25,1.42) circle (.14); \\fill (1.25,1.42) circle (.035); \\draw (1.25,.38) circle (.06);\n % two-line cord from bottom\n \\draw (1.1,.02) .. controls (1.08,-.35) and (1.08,-.55) .. (1.08,-.8);\n \\draw (1.4,.02) .. controls (1.42,-.35) and (1.42,-.55) .. (1.42,-.8);\n\\end{scope}\n% D: side-view four-door sedan\n\\begin{scope}[shift={(13.55,.35)}]\n \\node[font=\\bfseries] at (2.35,3.0){D};\n \\draw (0,.55)--(.15,1.25)--(.95,1.42)--(1.62,2.02)--(3.12,2.08)--(4.05,1.43)--(4.65,1.25)--(4.82,.55)--cycle;\n \\draw (.25,1.27)--(4.45,1.27); \\draw (.18,.82)--(4.72,.82);\n % four windows and door divisions\n \\draw (1.15,1.43)--(1.72,1.93)--(2.18,1.98)--(2.18,1.43);\n \\draw (2.38,1.43)--(2.38,1.99)--(2.95,2.0)--(3.65,1.43);\n \\draw (2.28,.83)--(2.28,1.42); \\draw (3.72,.83)--(3.72,1.42);\n \\draw (1.8,1.08)--(2.02,1.08); \\draw (2.72,1.08)--(2.94,1.08);\n \\draw (0,.66)--(.55,.66); \\draw (4.25,.66)--(4.8,.66);\n \\foreach \\x in {1.02,3.85}{\n  \\draw[fill=white] (\\x,.52) circle (.42); \\draw (\\x,.52) circle (.18);\n  \\foreach \\a in {0,72,...,288}{\\draw (\\x,.52)--++(\\a:.18);}\n }\n\\end{scope}\n\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The empty refill proves that finished ink is the only possible explanation."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The refill still contains ink, but the ink-finished guess is supported because we tested it."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The refill is empty, so the ink-finished guess is not supported; try another reason."
+      }
+    ],
+    "enrichment": "A test result is used to judge a guess: if the result matches the guess, the guess is supported; if the result does not match, another possible answer should be considered. The outcome of the test changes the status of the guess, which then determines whether to accept that explanation or search for another one. The learner uses the test result to decide whether the guess is supported or whether another possible answer is needed. The first guess is probably true unless someone gives a different answer.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_01/H003",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “diagram of an aeroplane” for the required “diagram of a knife and fork”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “diagram of an electrical plug” for the required “diagram of a knife and fork”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “diagram of a car” for the required “diagram of a knife and fork”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: After testing a guess, decide from the result whether the guess is supported or whether a different reason must be tried. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "remove",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_s06_qp_1:q27",
+    "hinge": "science/grade_06/ch_01/H003",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H003"
+  }
+}

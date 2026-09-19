@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Soham writes the prime factorisations $180=2\\times2\\times3\\times3\\times5$ and $12=2\\times2\\times3$.\n\nWhich claim about divisibility is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$180$ is divisible by $12$ because both factorisations include the prime $2$."
+    },
+    {
+      "id": "B",
+      "text": "$180$ is not divisible by $12$ because $180$ has prime factors that $12$ does not have."
+    },
+    {
+      "id": "C",
+      "text": "$180$ is divisible by $12$ because $2\\times2\\times3$ from $12$ is included in the factorisation of $180$."
+    },
+    {
+      "id": "D",
+      "text": "Whether $180$ and $12$ are co-prime settles whether $180$ is divisible by $12$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "180 is divisible by 12 iff every prime factor of 12 appears in 180 with at least the same multiplicity; 2×2×3 sits inside 2×2×3×3×5. Sharing only some primes, reversing the inclusion, or switching to a co-prime test all miss that check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

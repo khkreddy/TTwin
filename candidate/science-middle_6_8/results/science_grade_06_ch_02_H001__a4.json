@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Amit lists neem tree, grass, butterfly, sparrow, and frog from the school park and pond.\n\nWhich claims correctly say that this set shows biodiversity of living things in that place? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "No: biodiversity counts only the animals on the list."
+    },
+    {
+      "id": "B",
+      "text": "Yes: several kinds of plants and animals are present there."
+    },
+    {
+      "id": "C",
+      "text": "Yes: the list includes different living things found in that place."
+    },
+    {
+      "id": "D",
+      "text": "No: a mixed list of plants and animals cannot show biodiversity."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Biodiversity is the variety of living things in a place. Amit's plant and animal list shows that variety. Limiting to animals alone, or counting rocks, misses the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

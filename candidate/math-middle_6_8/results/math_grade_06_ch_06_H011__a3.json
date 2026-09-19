@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Padma cuts a paper rectangle into two triangles and rearranges those same pieces into a parallelogram with no gaps and no overlaps.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Same area is only a label for the activity, not a conclusion about the pieces."
+    },
+    {
+      "id": "B",
+      "text": "The rearranged parallelogram has the same total area as the original rectangle."
+    },
+    {
+      "id": "C",
+      "text": "Matching the two triangles on top of each other shows that the two pieces have equal areas."
+    },
+    {
+      "id": "D",
+      "text": "The question asks for perimeter, so add the outer lengths of the parallelogram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rearrangement without gaps or overlaps keeps total area. Matching triangles shows equal piece areas. Naming same area is not a claim. Perimeter is a different hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

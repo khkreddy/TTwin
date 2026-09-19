@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir tests two liquids with blue litmus and red litmus.\nLiquid P: blue litmus turns red; red litmus stays red.\nLiquid Q: blue litmus stays blue; red litmus turns blue.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Liquid P is acidic."
+    },
+    {
+      "id": "B",
+      "text": "Liquid Q is basic."
+    },
+    {
+      "id": "C",
+      "text": "Liquid P is neutral because red litmus did not change colour."
+    },
+    {
+      "id": "D",
+      "text": "Liquid Q is acidic because one of the papers changed colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Blue to red with red unchanged means acidic. Blue unchanged with red to blue means basic. Unchanged red alone does not make P neutral. A single colour change does not make Q acidic.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

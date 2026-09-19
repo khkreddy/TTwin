@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rekha must walk from house $H$ to a straight path $L$, then to shop $S$. She wants the shortest broken path $H$-$P$-$S$ with $P$ on $L$.\n\nWhich claims correctly describe how to choose $P$? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the path $L$ itself, so every point on $L$ gives the same shortest length."
+    },
+    {
+      "id": "B",
+      "text": "Reflect $S$ across $L$ to $S'$, then choose $P$ where segment $HS'$ meets $L$."
+    },
+    {
+      "id": "C",
+      "text": "That point $P$ makes $H$-$P$-$S$ equal in length to the straight segment $HS'$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $P$ as the foot of the perpendicular from the midpoint of $HS$ onto $L$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reflect one endpoint across the line and join the other endpoint to the image; the intersection with the line is the shortest broken-path point, and that broken length equals the straight segment to the image. Not every point on L works, and the midpoint perpendicular foot is a different construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

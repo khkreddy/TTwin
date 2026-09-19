@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rina looks at the number $340$ and checks divisibility using only its final digit.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$340$ is even, so it is divisible by $10$."
+    },
+    {
+      "id": "B",
+      "text": "$340$ is divisible by $10$ because it ends in $0$."
+    },
+    {
+      "id": "C",
+      "text": "$340$ is divisible by $5$ because it ends in $0$."
+    },
+    {
+      "id": "D",
+      "text": "$340$ is divisible by $4$ by the same final-digit rules used for $2$, $5$ and $10$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ending in 0 makes 340 divisible by 10 and by 5. Being even only guarantees divisibility by 2, not by 10. Final-digit rules for 2, 5 and 10 do not decide divisibility by 4.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

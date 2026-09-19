@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m16_qp_12:q24",
+  "target_unit_id": "math/grade_07/ch_205/H008",
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_07/ch_205/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_205/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_205:H008:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_205",
+    "chapter_label": "math/grade_07/ch_205",
+    "subtopic_id": "math/grade_07/ch_205/H008",
+    "stem": "The graph compares Maths and Science quiz marks for Ishaan, Rekha, and Tushar with adjacent bars, one common scale, and a legend.\n\nWhich claim correctly describes how the graph is built?",
+    "item_type": "mcq",
+    "options": {
+      "A": "For each student, two adjacent bars share the category, use the same vertical scale, and the legend separates Maths from Science.",
+      "B": "The display is finished by naming it a double column graph, without comparing any bar heights.",
+      "C": "Drawing the clustered bars is what creates the Maths and Science quiz marks.",
+      "D": "Only the tallest bar matters, because it is the most obvious height on the graph."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.75,font=\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (7.2,0) node[right] {Student};\n  \\draw[->] (0,0) -- (0,6.4) node[above] {Marks};\n  \\foreach \\y in {1,2,3,4,5,6} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y0};}\n  % Ishaan: Maths 40, Science 50\n  \\fill[blue!55] (0.7,0) rectangle (1.3,4);\n  \\fill[orange!70] (1.35,0) rectangle (1.95,5);\n  % Rekha: Maths 60, Science 30\n  \\fill[blue!55] (2.7,0) rectangle (3.3,6);\n  \\fill[orange!70] (3.35,0) rectangle (3.95,3);\n  % Tushar: Maths 50, Science 40\n  \\fill[blue!55] (4.7,0) rectangle (5.3,5);\n  \\fill[orange!70] (5.35,0) rectangle (5.95,4);\n  \\node[below] at (1.35,-0.15) {Ishaan};\n  \\node[below] at (3.35,-0.15) {Rekha};\n  \\node[below] at (5.35,-0.15) {Tushar};\n  \\fill[blue!55] (6.3,5.2) rectangle (6.7,5.6);\n  \\node[right] at (6.75,5.4) {Maths};\n  \\fill[orange!70] (6.3,4.4) rectangle (6.7,4.8);\n  \\node[right] at (6.75,4.6) {Science};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_205/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

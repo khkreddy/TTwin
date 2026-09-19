@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anjali knows that $x=5$ satisfies $x+3=8$. She wants a new equation that still has solution $x=5$.\n\nWhich equation works?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$2x+3=16$, multiplying only the left side by $2$."
+    },
+    {
+      "id": "B",
+      "text": "$x^2-1=24$, an equation not built by the same operation on both sides of $x+3=8$."
+    },
+    {
+      "id": "C",
+      "text": "$2(x+3)=16$, multiplying both sides of $x+3=8$ by $2$."
+    },
+    {
+      "id": "D",
+      "text": "$x+3=8$ itself, because the printed $8$ is already visible."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Applying the same operation to both sides yields an equivalent equation: 2(x+3)=16 still has solution x=5. Operating on one side only, switching to an unrelated equation, or clinging to the printed 8 all miss that chain rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

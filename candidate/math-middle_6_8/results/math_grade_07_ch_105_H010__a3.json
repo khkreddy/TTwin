@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows line AB, point P not on AB, and three trial lines through P labelled m, n, and k.\n\nWhich claim correctly identifies a line through P parallel to AB?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Line m, because it keeps the same direction as AB and does not meet AB."
+    },
+    {
+      "id": "B",
+      "text": "Any line through the given point P is already parallel to AB."
+    },
+    {
+      "id": "C",
+      "text": "Point P is what produces line AB, so drawing line k through P creates AB first."
+    },
+    {
+      "id": "D",
+      "text": "Line n, because it meets AB at right angles and perpendicular marks settle parallelism."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (6,0);\n  \\coordinate (P) at (2.5,2.4);\n  \\draw[thick] (A) -- (B);\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\fill (P) circle (1.6pt) node[above] {$P$};\n  \\draw[thick] (0.3,2.4) -- (5.5,2.4);\n  \\node[right] at (5.5,2.4) {$m$};\n  \\draw[thick] (2.5,3.6) -- (2.5,-0.8);\n  \\node[above] at (2.5,3.6) {$n$};\n  \\draw[thick] (0.8,3.5) -- (4.6,0.4);\n  \\node[above left] at (0.8,3.5) {$k$};\n  \\node[align=center] at (7.2,1.6) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A line through P parallel to AB keeps AB's direction and never meets AB. Point P alone does not make every line parallel, P does not produce AB, and a perpendicular through P is not parallel.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source triangle figure as line AB, external point P, and trial lines m (parallel), n (perpendicular), and k (secant)."
+  }
+}

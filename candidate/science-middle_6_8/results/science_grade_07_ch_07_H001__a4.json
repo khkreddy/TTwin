@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Farhan's metal strip. A flame heats one end. Wax marks P, Q, R and S are placed along the strip, with P nearest the flame and S farthest.\n\nWhich claim about heat in the strip is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heat moves along the strip from the hot end to the colder end, so the wax marks melt from P toward S."
+    },
+    {
+      "id": "B",
+      "text": "Heat moves along the strip from the colder end to the hot end, so the wax marks melt from S toward P."
+    },
+    {
+      "id": "C",
+      "text": "Heat stays only under the flame; the wax marks farther along the strip never melt."
+    },
+    {
+      "id": "D",
+      "text": "All wax marks melt at the same moment because the whole strip is one object."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\n\\draw[thick, fill=gray!20] (0,1) rectangle (6,1.4);\n\\node at (3,1.7) {metal strip};\n\\draw[thick, fill=orange!60] (-0.15,0.2) -- (0.35,0.9) -- (0.55,0.2) -- cycle;\n\\node at (0.2,-0.15) {flame};\n\\foreach \\x/\\lab in {1.2/P, 2.6/Q, 4.0/R, 5.4/S} {\n  \\draw[thick, fill=yellow!40] (\\x,1.4) rectangle (\\x+0.25,1.85);\n  \\node at (\\x+0.12,2.15) {\\lab};\n}\n\\node at (3,0.5) {wax marks};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When one end is heated, heat moves along the solid strip toward colder parts, so marks nearer the flame melt first.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Metal strip with flame and wax marks P–S."
+  }
+}
