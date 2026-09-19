@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wasim labels a flowering-plant chart that shows pollen grains, anthers, ovules, petals, roots, and leaves. He must state where the male and female gametes are found.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Male gametes are in the pollen grains inside the anther, and female gametes are in the ovules inside the flower."
+    },
+    {
+      "id": "B",
+      "text": "Male gametes are in the ovules, and female gametes are in the pollen grains."
+    },
+    {
+      "id": "C",
+      "text": "Both male and female gametes are only in the petals of the flower."
+    },
+    {
+      "id": "D",
+      "text": "Male gametes are in the roots, and female gametes are in the leaves."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In flowering plants, male gametes are in pollen in the anther and female gametes are in the ovules. Swapping those sites reverses the pairing. Putting both only in petals mis-scopes the organs. Roots and leaves drop the flower-organ condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

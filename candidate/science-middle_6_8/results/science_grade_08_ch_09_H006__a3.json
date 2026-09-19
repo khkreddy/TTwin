@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Om compares cold pond water and warm pond water. Fish need the dissolved oxygen in the water.\n\nWhich claim about dissolved oxygen is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cold water can hold more dissolved oxygen than warm water."
+    },
+    {
+      "id": "B",
+      "text": "Warm water can hold more dissolved oxygen than cold water."
+    },
+    {
+      "id": "C",
+      "text": "Water temperature does not affect how much oxygen dissolves, because only a small amount ever dissolves."
+    },
+    {
+      "id": "D",
+      "text": "Warm water holds more dissolved oxygen because warm water looks clearer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gas solubility in water generally falls as temperature rises, so cold water holds more dissolved oxygen. The small absolute amount does not cancel the temperature effect. Surface bubbles are not the measure of dissolved oxygen.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

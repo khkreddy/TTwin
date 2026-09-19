@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uday stirs a spoon of sugar into a glass of water. Soon no sugar grains can be seen, yet the water tastes sweet throughout the glass.\n\nWhich statement best explains this?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sugar particles spread into the spaces between the water particles, so sugar is present throughout the water."
+    },
+    {
+      "id": "B",
+      "text": "The sugar particles gather only at the top of the water, and only that top layer tastes sweet."
+    },
+    {
+      "id": "C",
+      "text": "The sugar vanishes completely, and only a sweet taste remains with no sugar particles left."
+    },
+    {
+      "id": "D",
+      "text": "Each water particle takes a sugar particle inside itself, which makes that water particle sweet."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dissolved sugar particles occupy spaces among water particles and remain present, so the whole glass tastes sweet. A floating melt layer judges from a surface look. Saying sugar vanishes drops the particles-still-present condition. Swallowing sugar into water particles conflates dissolving with a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

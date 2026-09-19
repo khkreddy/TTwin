@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qasim stirs sugar into a glass of water until no sugar grains can be seen. He stirs sand into a second glass of water; the sand settles on the bottom.\n\nWhich claim correctly decides which mixture is a solution?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sugar-water is a solution because its components are evenly distributed."
+    },
+    {
+      "id": "B",
+      "text": "Sand-water is a solution because both mixtures were stirred."
+    },
+    {
+      "id": "C",
+      "text": "Sugar-water is not a solution because sugar and water began as separate substances."
+    },
+    {
+      "id": "D",
+      "text": "Sand-water is a solution because sand and water share one glass."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A solution is a uniform mixture whose components are evenly distributed. Sugar-water meets that test; sand that settles does not. Stirring or sharing a glass is not enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

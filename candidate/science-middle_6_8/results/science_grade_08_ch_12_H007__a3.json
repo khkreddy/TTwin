@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uday studies this pond food chain: algae → small insects → small fish → large fish → heron.\n\nWhich statement correctly assigns the trophic levels?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Algae are at the first trophic level, small insects at the second, small fish at the third, and the heron at a later level."
+    },
+    {
+      "id": "B",
+      "text": "The heron is at the first trophic level because it is the largest animal in the chain."
+    },
+    {
+      "id": "C",
+      "text": "The large fish is at the first trophic level because it is bigger and stronger than the insects."
+    },
+    {
+      "id": "D",
+      "text": "Every organism in the pond is at the same trophic level because they share one pond."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Producers start at level one; each consumer steps up the chain. Ranking by body size is a surface cue. Putting a large fish first drops the producer-first rule. Treating the whole habitat as one level over-widens trophic level.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

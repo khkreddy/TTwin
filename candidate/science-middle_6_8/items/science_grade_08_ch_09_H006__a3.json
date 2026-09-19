@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_09/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_09/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_09/H006"
+  },
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_09:H006:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MIXTURE",
+    "chapter_id": "science/grade_08/ch_09",
+    "chapter_label": "Solutions and density",
+    "subtopic_id": "science/grade_08/ch_09/H006",
+    "stem": "Om compares cold pond water and warm pond water. Fish need the dissolved oxygen in the water.\n\nWhich claim about dissolved oxygen is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Cold water can hold more dissolved oxygen than warm water.",
+      "B": "Warm water can hold more dissolved oxygen than cold water.",
+      "C": "Water temperature does not affect how much oxygen dissolves, because only a small amount ever dissolves.",
+      "D": "Warm water holds more dissolved oxygen because warm water looks clearer."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_09/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

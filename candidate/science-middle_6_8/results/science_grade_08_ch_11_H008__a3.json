@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gita notes that a Moon-linked festival shifts on the Gregorian calendar from year to year, while a solar festival falls on almost the same Gregorian date each year. She considers whether festival dates follow the full Moon, the solar cycle, an extra month added every year for every festival, or a single fixed Gregorian date for every festival.\n\nWhy does the solar festival stay on nearly the same Gregorian date?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is set by the full Moon each year."
+    },
+    {
+      "id": "B",
+      "text": "It follows the solar cycle, which matches the Gregorian calendar closely."
+    },
+    {
+      "id": "C",
+      "text": "An extra month is added every year for every festival."
+    },
+    {
+      "id": "D",
+      "text": "Every festival is fixed to one Gregorian date."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solar festivals track the solar cycle, so their Gregorian dates stay nearly fixed. Moon-linked dates shift with the Moon; an extra month is not added for every festival every year.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Om adds salt little by little to a fixed amount of water at room temperature, stirring each time. After several additions, some salt stays undissolved at the bottom.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The water has reached its dissolving limit for salt under these conditions."
+    },
+    {
+      "id": "B",
+      "text": "The water will dissolve the remaining salt if Om only stirs longer, with no other change."
+    },
+    {
+      "id": "C",
+      "text": "Solubility means the first amount of salt that dissolves, not the maximum."
+    },
+    {
+      "id": "D",
+      "text": "Undissolved salt at the bottom means the water never dissolved any salt."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Undissolved solute after adding to a fixed amount of solvent shows the dissolving limit. Stirring alone does not raise that limit. Solubility is the maximum amount. Leftover solid does not mean none dissolved.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

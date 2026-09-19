@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira's family follows a purely lunar calendar. Each month begins with a new Moon, and twelve lunar months make one lunar year of about 354 days. A festival fixed to one lunar month falls in cool weather one year but, after several years, falls in hot weather.\n\nWhy does a purely lunar calendar not keep the same months aligned with the same seasons year after year?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon's phases change randomly, so no lunar calendar can repeat in a regular way."
+    },
+    {
+      "id": "B",
+      "text": "Twelve lunar months total about 354 days, which is shorter than the roughly 365-day seasonal year, so the lunar year ends earlier and the months drift through the seasons."
+    },
+    {
+      "id": "C",
+      "text": "The seasons themselves become a little shorter each year, so the lunar months can no longer keep pace with them."
+    },
+    {
+      "id": "D",
+      "text": "Twelve lunar months total more than 365 days, so the lunar year runs long and the months drift the other way."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar year of about 354 days is shorter than the seasonal year of about 365 days, so lunar months shift relative to the seasons.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal",
+      "term_substitution"
+    ]
+  }
+}

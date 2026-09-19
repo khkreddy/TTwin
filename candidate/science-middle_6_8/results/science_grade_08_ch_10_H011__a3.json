@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a concave mirror held close to a tooth so the tooth can be examined. Plane mirrors and convex mirrors are also available.\n\nWhich choice correctly matches the tool to the need?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A concave mirror, because it can give an enlarged image when the tooth is close to it."
+    },
+    {
+      "id": "B",
+      "text": "A plane mirror, because every mirror always gives an enlarged image."
+    },
+    {
+      "id": "C",
+      "text": "A convex mirror, because it gives an enlarged image of a nearby tooth."
+    },
+    {
+      "id": "D",
+      "text": "A concave mirror, because it is chosen only when the tooth is far from the mirror."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,scale=1.0]\n% concave mirror close to a small object (tooth)\n\\draw[thick] (0,1.4) .. controls (1.0,0.4) and (1.0,-0.4) .. (0,-1.4);\n\\foreach \\y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2} {\\draw[thin] (-0.05,\\y)--++(-0.25,0);}\n\\node[font=\\small] at (0.2,1.75) {concave mirror};\n% small object close to mirror\n\\draw[thick,fill=gray!20] (1.35,-0.25) rectangle (1.65,0.25);\n\\node[font=\\footnotesize] at (1.5,-0.55) {tooth};\n% enlarged erect image sketched farther left of viewer? show dashed larger tooth near mirror face\n\\draw[dashed,thick] (0.55,-0.55) rectangle (1.05,0.55);\n\\node[font=\\footnotesize] at (0.8,0.8) {enlarged image};\n\\draw[->,thick] (1.5,0.35)--(0.95,0.45);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A concave mirror gives an enlarged image when the object is close. Saying every mirror enlarges over-widens the rule. A convex mirror is the wrong tool for enlargement. Requiring the tooth to be far drops the close-object condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote plane-mirror angle figure into a close-up concave mirror with an enlarged image of a tooth."
+  }
+}

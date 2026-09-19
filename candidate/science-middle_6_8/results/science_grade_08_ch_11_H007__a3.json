@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena's school uses a solar calendar of 365 days most years, and adds one extra day every fourth year. Classmates mention the Earth, the Sun, the Moon, and the seasons.\n\nWhy is that leap day needed?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Earth takes about 365¼ days to revolve around the Sun, so the spare quarter-days must be collected to keep the calendar aligned with the seasons."
+    },
+    {
+      "id": "B",
+      "text": "The Moon takes extra days to orbit the Earth, so the solar calendar must add a day."
+    },
+    {
+      "id": "C",
+      "text": "The calendar is lengthened so that the seasons will drift farther from the same dates each year."
+    },
+    {
+      "id": "D",
+      "text": "The leap day is needed only as a school holiday and has no link to the Earth's motion around the Sun."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A year is about 365¼ days, so leap days keep a solar calendar with the seasons. Swapping in the Moon's orbit substitutes the wrong body. Saying the calendar should drift reverses the purpose of the adjustment. Calling it only a holiday drops the Earth-orbit condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

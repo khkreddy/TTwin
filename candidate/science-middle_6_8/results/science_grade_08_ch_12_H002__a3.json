@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gita counts the sparrows on the school playground one afternoon. Her friend says this count is a population. A population is a group of the same kind of organisms in the same habitat at a given place and time.\n\nWhich condition must be true for Gita's count to be a population?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The count includes every kind of organism living anywhere near the playground."
+    },
+    {
+      "id": "B",
+      "text": "The count includes only sparrows, all counted on the same playground at the same time."
+    },
+    {
+      "id": "C",
+      "text": "The count includes sparrows mixed with other kinds of organisms counted in different places on different days."
+    },
+    {
+      "id": "D",
+      "text": "The count includes sparrows from many distant habitats, added together from different times."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A population counts one kind of organism in one habitat at one place and time. Only the sparrow-only, same-playground, same-time count fits.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ]
+  }
+}

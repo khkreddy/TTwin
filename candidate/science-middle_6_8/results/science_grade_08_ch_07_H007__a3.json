@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya sorts these classroom samples into fluids and solids: water, mustard oil, sand, rice grains, ice cubes, candle wax, chalk pieces, and pebbles. Fluids are materials that flow and do not keep a fixed shape.\n\nWhich pair should she classify as fluids?",
+  "options": [
+    {
+      "id": "A",
+      "text": "water and mustard oil"
+    },
+    {
+      "id": "B",
+      "text": "sand and rice grains"
+    },
+    {
+      "id": "C",
+      "text": "ice cubes and candle wax"
+    },
+    {
+      "id": "D",
+      "text": "chalk pieces and pebbles"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water and mustard oil flow and do not keep a fixed shape, so they are fluids. Treating pourable sand and rice grains as fluids swaps fluid for a pile of solids. Ice cubes and candle wax do not flow here, dropping the flow condition. Chalk pieces and pebbles stay outside the fluid class.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "relationship_reversal",
+        "reason": "A clean fluid/solid reversal needs props not in the stem; used term_substitution for pourable grains mistaken as fluids."
+      }
+    ]
+  }
+}

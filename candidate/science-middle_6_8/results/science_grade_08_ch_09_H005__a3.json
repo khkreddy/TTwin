@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Soham adds baking soda to water at about 20 °C. Some baking soda stays undissolved at the bottom. He heats the mixture to about 50 °C while stirring.\n\nWhich prediction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The undissolved baking soda dissolves, and more baking soda can dissolve at the higher temperature."
+    },
+    {
+      "id": "B",
+      "text": "The undissolved baking soda stays at the bottom, and the amount that can dissolve stays the same."
+    },
+    {
+      "id": "C",
+      "text": "The undissolved baking soda dissolves, but less baking soda can dissolve at the higher temperature."
+    },
+    {
+      "id": "D",
+      "text": "Heating only makes the water look cloudy; the amount that can dissolve does not change."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the baking soda and water activity, heating while stirring dissolves undissolved baking soda and allows more to dissolve at the higher temperature. Cloudiness alone is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

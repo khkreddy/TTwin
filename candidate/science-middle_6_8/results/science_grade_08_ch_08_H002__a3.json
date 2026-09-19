@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Jatin prepares four mixtures: honey stirred completely into warm water until nothing separate can be seen; poha mixed with peanuts and green chilli pieces; mustard oil poured onto a bowl of water; and chalk powder stirred into a bucket of water. In a uniform mixture the components are spread so evenly that they cannot be seen separately, even with a microscope.\n\nWhich mixture is uniform?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Honey stirred completely into warm water until nothing separate can be seen."
+    },
+    {
+      "id": "B",
+      "text": "Poha mixed with peanuts and green chilli pieces."
+    },
+    {
+      "id": "C",
+      "text": "Mustard oil poured onto a bowl of water."
+    },
+    {
+      "id": "D",
+      "text": "Chalk powder stirred into a bucket of water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Honey fully mixed into water is uniform: the components are spread evenly and cannot be seen separately. The other three show separate parts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error",
+      "condition_omission"
+    ]
+  }
+}

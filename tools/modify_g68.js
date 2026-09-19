@@ -440,6 +440,60 @@ function existingCandidateUnits() {
   });
   return have;
 }
+function grokCoveredUnits() {
+  const dir = path.join(OUT, "items");
+  const have = new Set();
+  if (!fs.existsSync(dir)) return have;
+  fs.readdirSync(dir).forEach((f) => {
+    if (!f.endsWith(".json")) return;
+    try {
+      const doc = readJson(path.join(dir, f));
+      if ((doc.build_logic || doc.mx_option_map) && doc.target_unit_id) have.add(doc.target_unit_id);
+    } catch (e) { /* skip */ }
+  });
+  return have;
+}
+function mxTypeCount(unit) {
+  const seen = [];
+  ((unit && unit.mx) || []).forEach((m) => {
+    const t = m.type || m.mx_type;
+    if (t && seen.indexOf(t) < 0) seen.push(t);
+  });
+  return seen.length;
+}
+function remainingEligibleUnits(science) {
+  const have = grokCoveredUnits();
+  return (science.units || []).filter((u) => {
+    return u.unit_id && mxTypeCount(u) >= 2 && !have.has(u.unit_id);
+  });
+}
+function chapterKey(unit) {
+  return String(unit.unit_id || "").split("/").slice(0, 3).join("/");
+}
+function nextUniformUnits(science, limit) {
+  limit = limit || 12;
+  const rem = remainingEligibleUnits(science);
+  const buckets = {};
+  rem.forEach((u) => {
+    const k = chapterKey(u);
+    if (!buckets[k]) buckets[k] = [];
+    buckets[k].push(u);
+  });
+  const keys = Object.keys(buckets).sort();
+  const out = [];
+  while (out.length < limit) {
+    let progressed = false;
+    for (let i = 0; i < keys.length && out.length < limit; i++) {
+      const ch = keys[i];
+      if (buckets[ch] && buckets[ch].length) {
+        out.push(buckets[ch].shift());
+        progressed = true;
+      }
+    }
+    if (!progressed) break;
+  }
+  return out;
+}
 function maxAttempt(unitId) {
   const dir = path.join(OUT, "items");
   const prefix = safeUnit(unitId) + "__a";
@@ -640,6 +694,14 @@ async function main() {
     console.log(JSON.stringify(c, null, 2));
     return;
   }
+  if (cmd === "remaining") {
+    const n = parseInt(args.limit || "48", 10);
+    const units = nextUniformUnits(science, n);
+    units.forEach((u) => {
+      console.log([originOf(u), u.unit_id, chapterKey(u)].join("\t"));
+    });
+    return;
+  }
   if (cmd === "ingest") {
     const unitId = args.unit;
     const sourceUid = args.source;
@@ -770,7 +832,7 @@ async function main() {
     console.log(JSON.stringify(c.last_run, null, 2));
     return;
   }
-  throw new Error("usage: modify_g68.js census|compile|generate [--unit ID] [--source UID] [--limit N] [--repeat N]");
+  throw new Error("usage: modify_g68.js census|remaining|compile|generate|ingest [--unit ID] [--source UID] [--limit N] [--repeat N]");
 }
 
 module.exports = {
@@ -778,7 +840,7 @@ module.exports = {
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
   variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy,
   sanitizeTikz, gateG9, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
-  normalizeResultTables,
+  normalizeResultTables, grokCoveredUnits, remainingEligibleUnits, nextUniformUnits, chapterKey,
   OUT, ROOT,
 };
 

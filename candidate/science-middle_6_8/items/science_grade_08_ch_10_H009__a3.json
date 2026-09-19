@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m19_qp_12:q22",
+  "target_unit_id": "science/grade_08/ch_10/H009",
+  "build_logic": {
+    "source_uid": "0625_m19_qp_12:q22",
+    "hinge": "science/grade_08/ch_10/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H009"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H009:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H009",
+    "stem": "The diagram shows a small letter viewed through three pieces of glass held close to the page: a convex lens (P), a concave lens (Q), and a flat transparent glass piece (R).\n\nHow does the letter appear in each case?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Through P the letter looks erect and enlarged; through Q it looks erect and smaller; through R it looks the same size and shape.",
+      "B": "Through P, Q, and R the letter looks erect and enlarged.",
+      "C": "Through P the letter looks smaller; through Q it looks enlarged; through R it looks inverted.",
+      "D": "Through R the letter looks enlarged, because any clear glass enlarges the letter."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% three panels: convex lens, concave lens, flat glass\n\\draw[thick] (-4.4,-1.7) rectangle (-1.5,1.7);\n\\draw[thick] (-1.2,-1.7) rectangle (1.7,1.7);\n\\draw[thick] (2.0,-1.7) rectangle (4.9,1.7);\n\\node[font=\\small] at (-2.95,1.95) {P: convex lens};\n\\node[font=\\small] at (0.25,1.95) {Q: concave lens};\n\\node[font=\\small] at (3.45,1.95) {R: flat glass};\n% object letter o in each panel (small)\n\\node[font=\\scriptsize] at (-3.9,0) {o};\n\\node[font=\\scriptsize] at (-0.7,0) {o};\n\\node[font=\\scriptsize] at (2.5,0) {o};\n% P convex lens (biconvex)\n\\draw[thick] (-2.55,1.1) .. controls (-2.15,0) .. (-2.55,-1.1);\n\\draw[thick] (-2.55,1.1) .. controls (-2.95,0) .. (-2.55,-1.1);\n\\node[font=\\scriptsize] at (-2.1,0) {\\textbf{O}};\n% Q concave lens (biconcave)\n\\draw[thick] (0.55,1.1) .. controls (0.15,0) .. (0.55,-1.1);\n\\draw[thick] (0.15,1.1) .. controls (0.55,0) .. (0.15,-1.1);\n\\node[font=\\scriptsize] at (1.0,0) {o};\n% R flat glass\n\\draw[thick] (3.55,1.1) rectangle (3.85,-1.1);\n\\node[font=\\scriptsize] at (4.25,0) {o};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

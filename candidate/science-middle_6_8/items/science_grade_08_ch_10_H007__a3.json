@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m19_qp_12:q22",
+  "target_unit_id": "science/grade_08/ch_10/H007",
+  "build_logic": {
+    "source_uid": "0625_m19_qp_12:q22",
+    "hinge": "science/grade_08/ch_10/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H007"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H007:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H007",
+    "stem": "The diagram shows sunlight reaching a concave mirror. Parallel rays meet at one place on a scrap of paper.\n\nWhy does a bright hot spot form on the paper?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The concave mirror reflects the parallel rays so that they meet at one small point, concentrating the light energy there.",
+      "B": "The concave mirror spreads the parallel rays evenly across the paper, so the whole paper warms at once.",
+      "C": "Any mirror makes a hot spot on the paper; the concave shape does not matter.",
+      "D": "The paper heats first, and that heat then bends the rays toward the bright spot."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,scale=1.0]\n% concave mirror; shading on non-reflecting back (left)\n\\draw[thick] (-0.2,1.5) .. controls (0.85,0.45) and (0.85,-0.45) .. (-0.2,-1.5);\n\\foreach \\y in {-1.3,-0.9,-0.5,-0.1,0.3,0.7,1.1} {\\draw[thin] (-0.25,\\y)--++(-0.28,0);}\n\\node[font=\\small] at (-0.1,1.85) {concave mirror};\n% parallel sunlight from the right\n\\draw[->,thick] (3.4,1.05)--(0.55,1.05);\n\\draw[->,thick] (3.4,0.0)--(0.75,0.0);\n\\draw[->,thick] (3.4,-1.05)--(0.55,-1.05);\n% reflected rays meet at a bright spot on paper\n\\draw[->,thick] (0.55,1.05)--(2.05,0.08);\n\\draw[->,thick] (0.75,0.0)--(2.05,0.0);\n\\draw[->,thick] (0.55,-1.05)--(2.05,-0.08);\n\\draw[thick] (1.9,-0.5) rectangle (2.2,0.5);\n\\fill (2.05,0) circle (1.6pt);\n\\node[font=\\footnotesize] at (2.9,0.55) {bright spot};\n\\node[font=\\footnotesize] at (2.7,-0.75) {paper};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

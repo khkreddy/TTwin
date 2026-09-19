@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a small letter viewed through three pieces of glass held close to the page: a convex lens (P), a concave lens (Q), and a flat transparent glass piece (R).\n\nHow does the letter appear in each case?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Through P the letter looks erect and enlarged; through Q it looks erect and smaller; through R it looks the same size and shape."
+    },
+    {
+      "id": "B",
+      "text": "Through P, Q, and R the letter looks erect and enlarged."
+    },
+    {
+      "id": "C",
+      "text": "Through P the letter looks smaller; through Q it looks enlarged; through R it looks inverted."
+    },
+    {
+      "id": "D",
+      "text": "Through R the letter looks enlarged, because any clear glass enlarges the letter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% three panels: convex lens, concave lens, flat glass\n\\draw[thick] (-4.4,-1.7) rectangle (-1.5,1.7);\n\\draw[thick] (-1.2,-1.7) rectangle (1.7,1.7);\n\\draw[thick] (2.0,-1.7) rectangle (4.9,1.7);\n\\node[font=\\small] at (-2.95,1.95) {P: convex lens};\n\\node[font=\\small] at (0.25,1.95) {Q: concave lens};\n\\node[font=\\small] at (3.45,1.95) {R: flat glass};\n% object letter o in each panel (small)\n\\node[font=\\scriptsize] at (-3.9,0) {o};\n\\node[font=\\scriptsize] at (-0.7,0) {o};\n\\node[font=\\scriptsize] at (2.5,0) {o};\n% P convex lens (biconvex)\n\\draw[thick] (-2.55,1.1) .. controls (-2.15,0) .. (-2.55,-1.1);\n\\draw[thick] (-2.55,1.1) .. controls (-2.95,0) .. (-2.55,-1.1);\n\\node[font=\\scriptsize] at (-2.1,0) {\\textbf{O}};\n% Q concave lens (biconcave)\n\\draw[thick] (0.55,1.1) .. controls (0.15,0) .. (0.55,-1.1);\n\\draw[thick] (0.15,1.1) .. controls (0.55,0) .. (0.15,-1.1);\n\\node[font=\\scriptsize] at (1.0,0) {o};\n% R flat glass\n\\draw[thick] (3.55,1.1) rectangle (3.85,-1.1);\n\\node[font=\\scriptsize] at (4.25,0) {o};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Close to the page, a convex lens magnifies erect, a concave lens makes a diminished erect image, and flat glass does not change size. Saying all three enlarge over-widens the rule. Swapping which lens enlarges drops the lens-type condition. Judging from clear glass alone is a surface cue.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote plane-mirror ray figure into three close-up viewing panels for convex lens, concave lens, and flat glass."
+  }
+}

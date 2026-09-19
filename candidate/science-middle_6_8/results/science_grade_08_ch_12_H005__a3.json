@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nalini observes a green plant that makes its own food by photosynthesis, and a rabbit that eats only plant parts.\n\nWhich claim correctly classifies them by how they obtain food?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The plant is a producer; the rabbit is a consumer."
+    },
+    {
+      "id": "B",
+      "text": "The plant is a consumer; the rabbit is a producer."
+    },
+    {
+      "id": "C",
+      "text": "The plant is a producer only if the rabbit eats it."
+    },
+    {
+      "id": "D",
+      "text": "The plant is a producer because it is green, even if it does not make food."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Photosynthesis makes the plant a producer; the rabbit cannot make food so it is a consumer. Swapping the roles is wrong. Being eaten is not required for producer status. Green colour alone is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

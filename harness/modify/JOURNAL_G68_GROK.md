@@ -57,6 +57,16 @@ node tools/modify_g68.js ingest --unit UNIT --source SOURCE --result FILE --atte
 
 SOURCE: prefer `biology_7a_rjb_exe1` (Science junior) unless the hinge needs a figure — then an IGCSE tikz source + `--figure rewrite`, and keep the tikzpicture. Never invent TikZ from scratch.
 
+## Uniform hinge coverage
+
+Do **not** fill one chapter or one S-node before touching the others. Next units come from `nextUniformUnits` in `tools/modify_g68.js`: remaining map hinges with ≥2 Mx types, **round-robin by chapter** (`science/grade_xx/ch_yy`). One hinge per remaining chapter per cycle, then repeat. List:
+
+```
+node tools/modify_g68.js remaining --limit 48
+```
+
+Split that list across agents by stride (agent 0 takes 0,4,8…), never 12 consecutive rows from one chapter. S1 and S4 eligible hinges are already Grok-covered; remaining work is S2/S3/S5/S6 grade-8 chapters still short. Keep draining them in parallel until each remaining chapter is empty.
+
 ## Owner review surface
 
 Science → **Grok tray · unverified**. Hourly job packs `pack.json`/`nav.json` and pushes CANDIDATE-only. Live `science-junior.json` stays 109.

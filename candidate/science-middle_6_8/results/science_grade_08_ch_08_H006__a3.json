@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira studies four pure samples: distilled water, made of identical molecules each containing hydrogen and oxygen; oxygen gas, made of identical molecules each containing only oxygen; carbon dioxide gas, made of identical molecules each containing carbon and oxygen; and sugar crystals, made of molecules containing carbon, hydrogen and oxygen. An element is a pure substance made of only one kind of identical particle.\n\nWhich sample should she classify as an element?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Distilled water, made of identical molecules each containing hydrogen and oxygen."
+    },
+    {
+      "id": "B",
+      "text": "Oxygen gas, made of identical molecules each containing only oxygen."
+    },
+    {
+      "id": "C",
+      "text": "Carbon dioxide gas, made of identical molecules each containing carbon and oxygen."
+    },
+    {
+      "id": "D",
+      "text": "Sugar crystals, made of molecules containing carbon, hydrogen and oxygen."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Oxygen gas has only one kind of particle (oxygen), so it is an element. Water, carbon dioxide, and sugar each contain more than one kind of atom.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ]
+  }
+}

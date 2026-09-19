@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Jatin observes these organisms in a grassland: grass, grasshopper, frog, and snake. The grass is eaten by the grasshopper, the grasshopper is eaten by the frog, and the frog is eaten by the snake.\n\nWhich sequence shows a valid food chain for this grassland?",
+  "options": [
+    {
+      "id": "A",
+      "text": "snake → frog → grasshopper → grass"
+    },
+    {
+      "id": "B",
+      "text": "grass → grasshopper → frog → snake"
+    },
+    {
+      "id": "C",
+      "text": "grass → frog → grasshopper → snake"
+    },
+    {
+      "id": "D",
+      "text": "grasshopper → grass → frog → snake"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "operation_confusion",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A food chain follows who eats whom: grass → grasshopper → frog → snake.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "scope_error",
+      "condition_omission"
+    ]
+  }
+}
