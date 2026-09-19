@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav looks at the diagram: a flat arrangement of six rectangles labelled $A$–$F$.\n\nWhich claim correctly decides whether this arrangement is a valid net for a cuboid?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a valid net: the six faces fold into a cuboid with no overlaps, and joining flaps are not counted as extra faces."
+    },
+    {
+      "id": "B",
+      "text": "Call it a net even when the faces cannot meet edge-to-edge when folded from paper or cardboard."
+    },
+    {
+      "id": "C",
+      "text": "Accept it as a net only because it has six regions, even if some faces would overlap when folded."
+    },
+    {
+      "id": "D",
+      "text": "Call it a net only because the word net is the most obvious printed label near the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  % valid net for a cuboid: cross of 6 rectangles\n  \\draw[line width=1.0pt] (0,2) rectangle (3,4);\n  \\draw[line width=1.0pt] (3,2) rectangle (6,4);\n  \\draw[line width=1.0pt] (6,2) rectangle (9,4);\n  \\draw[line width=1.0pt] (9,2) rectangle (12,4);\n  \\draw[line width=1.0pt] (3,0) rectangle (6,2);\n  \\draw[line width=1.0pt] (3,4) rectangle (6,6);\n  \\node at (1.5,3){$A$};\n  \\node at (4.5,3){$B$};\n  \\node at (7.5,3){$C$};\n  \\node at (10.5,3){$D$};\n  \\node at (4.5,1){$E$};\n  \\node at (4.5,5){$F$};\n  \\node[below] at (6,-0.6){flat arrangement of 6 rectangles};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid net folds into the solid without face overlaps; flaps are not extra mathematical faces. Skipping foldability, counting regions alone, or grabbing the printed word miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source cuboid net as a labelled six-rectangle cross net for a cuboid."
+  }
+}

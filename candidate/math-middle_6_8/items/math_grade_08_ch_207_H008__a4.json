@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0607_w19_qp_33:q4",
+  "target_unit_id": "math/grade_08/ch_207/H008",
+  "build_logic": {
+    "source_uid": "0607_w19_qp_33:q4",
+    "hinge": "math/grade_08/ch_207/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_207/H008"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_207:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_207",
+    "chapter_label": "math/grade_08/ch_207",
+    "subtopic_id": "math/grade_08/ch_207/H008",
+    "stem": "The diagram shows house $H$ and shop $S$ on the same side of straight path $L$. Kavya must walk from $H$ to a point $P$ on $L$, then to $S$, and wants the shortest broken path $H$-$P$-$S$. Point $S'$ is the reflection of $S$ across $L$.\n\nWhich claim correctly chooses $P$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Take $P$ as the foot of the perpendicular from $H$ to $L$ alone, and ignore $S$ and $S'$.",
+      "B": "Call the answer line only, with no choice of $P$ on $L$.",
+      "C": "Join $H$ to $S'$ by a straight segment; let $P$ be where that segment meets $L$.",
+      "D": "Reflection still chooses $P$ even when $S'$ is not the same distance from $L$ as $S$ is."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (-0.5,0)--(6.5,0) node[right] {$L$};\n  \\coordinate (H) at (1.0,2.2);\n  \\coordinate (S) at (5.2,1.6);\n  \\coordinate (Sp) at (5.2,-1.6);\n  \\coordinate (P) at (3.2,0);\n  \\fill (H) circle (1.7pt) node[above left] {$H$};\n  \\fill (S) circle (1.7pt) node[above right] {$S$};\n  \\fill (Sp) circle (1.7pt) node[below right] {$S'$};\n  \\fill (P) circle (1.7pt) node[below left] {$P$};\n  \\draw[thick] (H)--(P)--(S);\n  \\draw[dashed] (S)--(Sp);\n  \\draw[densely dashed] (H)--(Sp);\n  \\node[above] at (3.0,2.4) {house to shop via $L$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_207/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

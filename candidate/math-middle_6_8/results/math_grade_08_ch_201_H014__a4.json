@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Avni invests $\\mathrm{Rs}\\,8000$ at $5\\%$ per year, compounded annually, for $2$ years.\n\nWhich claim correctly gives the amount after $2$ years?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each year adds $\\mathrm{Rs}\\,400$ on the original $\\mathrm{Rs}\\,8000$ only, so the amount is $\\mathrm{Rs}\\,8800$."
+    },
+    {
+      "id": "B",
+      "text": "Compounding also covers interest paid out each year with the principal kept fixed at $\\mathrm{Rs}\\,8000$."
+    },
+    {
+      "id": "C",
+      "text": "After year $1$ the amount is $\\mathrm{Rs}\\,8400$; year $2$ interest on $\\mathrm{Rs}\\,8400$ gives amount $\\mathrm{Rs}\\,8820$."
+    },
+    {
+      "id": "D",
+      "text": "The amount is $5\\%$, the printed rate."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compound interest updates the base: 8000→8400 after year 1, then 5% of 8400 gives 8820. Keeping the principal fixed is simple interest. Reading only the printed rate is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

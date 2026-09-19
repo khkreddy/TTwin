@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya writes a two-digit number as $10a+b$ and the number with its digits reversed as $10b+a$, with digits $a \\neq b$.\n\nWhich two claims correctly justify a divisibility fact with place value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(10a+b)-(10b+a)=9(a-b)$, so the difference of the number and its reverse is a multiple of $9$."
+    },
+    {
+      "id": "B",
+      "text": "Read $a$ and $b$ as separate digit marks only, with no place-value expression for either number."
+    },
+    {
+      "id": "C",
+      "text": "Because the difference factors as $9(a-b)$, both $10a+b$ and $10b+a$ leave the same remainder on division by $9$."
+    },
+    {
+      "id": "D",
+      "text": "Choose the largest product among placements of $a$ and $b$, and treat that product rule as this reverse-digit test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place-value forms give difference 9(a-b), hence same remainder mod 9. Digits as marks only omit place value. Largest-product placement is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

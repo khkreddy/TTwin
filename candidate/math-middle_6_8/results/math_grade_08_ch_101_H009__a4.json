@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nitya writes the prime factorisation $360=2^3\\times 3^2\\times 5$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides whether $360$ is a perfect square?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer a factor pair of $360$, and stop."
+        },
+        {
+          "id": "B",
+          "text": "$360$ is not a perfect square, because in the prime factorisation the exponents of $2$ and of $5$ are not even."
+        },
+        {
+          "id": "C",
+          "text": "Say that listing a factor pair is what creates the prime factorisation of $360$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A perfect square needs every prime exponent even. Here 3 and 1 are odd, so 360 is not a square."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Even exponents in the prime factorisation decide a perfect square. Naming a factor pair alone, or reversing pair and factorisation, miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

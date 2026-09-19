@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sia records scores in a frequency table: score $1$ appears $4$ times, score $3$ appears $6$ times, and score $5$ appears $2$ times.\n\nWhich claim correctly finds the mean of these scores?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mean is $\\dfrac{1+3+5}{3}$, averaging the listed score values only."
+    },
+    {
+      "id": "B",
+      "text": "The mean is the middle cumulative-frequency position among the ordered scores."
+    },
+    {
+      "id": "C",
+      "text": "The mean is $\\dfrac{1\\times4+3\\times6+5\\times2}{4+6+2}=\\dfrac{32}{12}=\\dfrac{8}{3}$."
+    },
+    {
+      "id": "D",
+      "text": "The mean is $6$, the largest frequency printed in the table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [
+    "score | frequency || 1 | 4 || 3 | 6 || 5 | 2"
+  ],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Weighted mean uses Σ(score×freq)/Σfreq = (4+18+10)/12 = 32/12 = 8/3. Averaging score labels only, using median machinery, or reading the largest frequency, miss the weighted mean.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

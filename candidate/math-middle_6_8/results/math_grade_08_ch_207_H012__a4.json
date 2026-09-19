@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Neil finds the area of trapezium $ABCD$ in the diagram. Sides $AB = 16\\,\\mathrm{cm}$ and $DC = 10\\,\\mathrm{cm}$ are parallel. The height between those parallel sides is $6\\,\\mathrm{cm}$. The non-parallel sides are $7\\,\\mathrm{cm}$ and $9\\,\\mathrm{cm}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Area $= \\dfrac{1}{2} \\times 6 \\times (16 + 10) = 78\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "Area $= \\dfrac{1}{2} \\times 6 \\times (7 + 9)$, adding the non-parallel sides."
+    },
+    {
+      "id": "C",
+      "text": "The parallel sides $16\\,\\mathrm{cm}$ and $10\\,\\mathrm{cm}$ are produced by the area formula."
+    },
+    {
+      "id": "D",
+      "text": "Area $= (16 + 10) \\div (2 \\times 6) = 2.17\\,\\mathrm{cm}^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line join=round,scale=0.55]\\draw[thick,fill=gray!12] (0,0)--(16,0)--(12,6)--(3,6)--cycle;\\draw[<->] (16.6,0)--(16.6,6) node[midway,right]{$6\\,\\mathrm{cm}$};\\node[below] at (8,0){$AB=16\\,\\mathrm{cm}$};\\node[above] at (7.5,6){$DC=10\\,\\mathrm{cm}$};\\node[left] at (1.2,3){$7$};\\node[right] at (14.2,3){$9$};\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trapezium area is half the height times the sum of the parallel sides: (1/2)×6×(16+10)=78. Using non-parallel sides, reversing formula and sides, or dividing instead of multiplying all miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote the square-grid kite into trapezium ABCD with parallel sides 16 and 10 and height 6."
+  },
+  "learn_by_solve": null
+}

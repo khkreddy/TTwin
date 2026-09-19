@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows kite $ABCD$ that Krish draws. Equal marks show $AB=AD$ and $CB=CD$. Diagonal $AC$ is drawn solid; diagonal $BD$ is dashed.\n\nWhich claim about the kite and its special diagonal is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The kite has all four sides equal because the diagram shows four sides."
+    },
+    {
+      "id": "B",
+      "text": "Diagonal $BD$ is the axis of symmetry of the kite."
+    },
+    {
+      "id": "C",
+      "text": "Diagonal $AC$ is the axis of symmetry; it bisects $BD$ at right angles."
+    },
+    {
+      "id": "D",
+      "text": "The figure is a kite because it is labelled $ABCD$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,line join=round]\n  \\coordinate (A) at (0,2.4);\n  \\coordinate (B) at (1.7,0);\n  \\coordinate (C) at (0,-1.9);\n  \\coordinate (D) at (-1.7,0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[thick] (A)--(C);\n  \\draw[thick,dashed] (B)--(D);\n  \\node[above] at (A) {$A$};\n  \\node[right] at (B) {$B$};\n  \\node[below] at (C) {$C$};\n  \\node[left] at (D) {$D$};\n  \\node at (0.95,1.35) {\\small$=$};\n  \\node at (-0.95,1.35) {\\small$=$};\n  \\node at (0.95,-1.05) {\\small$=$};\n  \\node at (-0.95,-1.05) {\\small$=$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With AB=AD and CB=CD, AC is the symmetry diagonal: it bisects angles at A and C and meets BD at right angles at its midpoint. BD is not the symmetry axis. Four sides alone do not make a rhombus, and the ABCD label is not the kite test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Added labelled kite ABCD with equal adjacent sides and both diagonals."
+  }
+}

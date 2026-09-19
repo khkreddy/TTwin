@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ritu looks at the odd sums $1+3+5$, then $1+3+5+7$, then $1+3+5+7+9$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly explains the pattern by rewriting the terms?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Each sum rewrites as $k^{2}$ where $2k-1$ is the last odd term, so the sums are $3^{2}$, $4^{2}$, and $5^{2}$."
+        },
+        {
+          "id": "B",
+          "text": "Each sum equals the last odd term alone."
+        },
+        {
+          "id": "C",
+          "text": "The square values are what produce the odd addends in reverse."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The first $k$ odd numbers sum to $k^{2}$. With last terms $5$, $7$, and $9$, one has $k=3,4,5$, so the sums are $9$, $16$, and $25$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rewriting the odd sums as $k^{2}$ explains the pattern algebraically. Equating a sum to its last term alone, or saying the squares create the odd addends, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

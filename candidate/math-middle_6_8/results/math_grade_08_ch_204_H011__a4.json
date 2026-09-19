@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher looks at the diagram. It shows the front, top, and side views of one solid.\n\nWhich claim correctly decides how to identify the solid from those views?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use the front, top, and side views together; one projection alone is not enough."
+    },
+    {
+      "id": "B",
+      "text": "Match the solid from the front view alone."
+    },
+    {
+      "id": "C",
+      "text": "Having named the solid is what creates the three views."
+    },
+    {
+      "id": "D",
+      "text": "Also treat any single corner sketch as enough under the same three-view rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line join=round,font=\\small]\n  % front\n  \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n  \\draw[line width=1.05pt] (0,2) rectangle (2,4);\n  \\node[below] at (2,-0.55){front};\n  % top\n  \\begin{scope}[shift={(7,0)}]\n    \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n    \\draw[line width=1.05pt] (0,0) rectangle (2,4);\n    \\node[below] at (2,-0.55){top};\n  \\end{scope}\n  % side\n  \\begin{scope}[shift={(14,0)}]\n    \\draw[line width=1.05pt] (0,0) rectangle (2,4);\n    \\node[below] at (1,-0.55){side};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A single projection is not unique, so front, top, and side views together identify the solid. Front alone, reversing cause, or stretching to one corner sketch miss that need.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source cuboid net as labelled front, top, and side orthographic views of an L-shaped solid."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m24_qp_12:q12",
+  "target_unit_id": "math/grade_08/ch_204/H011",
+  "build_logic": {
+    "source_uid": "0580_m24_qp_12:q12",
+    "hinge": "math/grade_08/ch_204/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H011"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H011:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H011",
+    "stem": "Meher looks at the diagram. It shows the front, top, and side views of one solid.\n\nWhich claim correctly decides how to identify the solid from those views?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Use the front, top, and side views together; one projection alone is not enough.",
+      "B": "Match the solid from the front view alone.",
+      "C": "Having named the solid is what creates the three views.",
+      "D": "Also treat any single corner sketch as enough under the same three-view rule."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line join=round,font=\\small]\n  % front\n  \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n  \\draw[line width=1.05pt] (0,2) rectangle (2,4);\n  \\node[below] at (2,-0.55){front};\n  % top\n  \\begin{scope}[shift={(7,0)}]\n    \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n    \\draw[line width=1.05pt] (0,0) rectangle (2,4);\n    \\node[below] at (2,-0.55){top};\n  \\end{scope}\n  % side\n  \\begin{scope}[shift={(14,0)}]\n    \\draw[line width=1.05pt] (0,0) rectangle (2,4);\n    \\node[below] at (1,-0.55){side};\n  \\end{scope}\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishaan may use the digits $3$, $5$ and $8$ exactly once to form a two-digit number times a one-digit number.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which product is the largest?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$85 \\times 3$"
+        },
+        {
+          "id": "B",
+          "text": "$53 \\times 8$"
+        },
+        {
+          "id": "C",
+          "text": "Call the answer multiplicand only, with no product formed from the three digits."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$53 \\times 8 = 424$, while $85 \\times 3 = 255$ and $83 \\times 5 = 415$; with digits $3<5<8$, the largest product is the two-digit number $53$ times $8$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For digits p<q<r used once, the largest product is qp×r. Here 53×8=424 beats 85×3 and 83×5. Naming only multiplicand skips the placement comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

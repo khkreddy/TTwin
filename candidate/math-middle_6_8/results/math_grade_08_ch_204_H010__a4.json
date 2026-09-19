@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows point $P$, line $L$, and points $F$ and $Q$ on $L$. Segment $PF$ meets $L$ at right angles. Segment $PQ$ is slanted.\n\nWhich two claims correctly describe the perpendicular projection of $P$ onto $L$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The foot $F$ is the perpendicular projection of $P$ onto $L$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer plane only, with no choice between $F$ and $Q$."
+    },
+    {
+      "id": "C",
+      "text": "$PF$ is shorter than $PQ$ because the perpendicular segment is the shortest path from $P$ to $L$."
+    },
+    {
+      "id": "D",
+      "text": "Point $Q$ is the projection because $Q$ is the rightmost labelled point on $L$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (-0.5,0)--(6.0,0) node[right] {$L$};\n  \\coordinate (P) at (2.2,2.4);\n  \\coordinate (F) at (2.2,0);\n  \\coordinate (Q) at (4.8,0);\n  \\fill (P) circle (1.7pt) node[above] {$P$};\n  \\fill (F) circle (1.7pt) node[below left] {$F$};\n  \\fill (Q) circle (1.7pt) node[below] {$Q$};\n  \\draw[thick] (P)--(F);\n  \\draw[thick] (P)--(Q);\n  \\draw[thick] (F)--++(0.28,0)--++(0,0.28);\n  \\node[above right] at (3.2,1.2) {segments from $P$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perpendicular foot F is the projection; PF is shortest to L. Naming only plane skips the foot. Choosing rightmost Q captures a surface label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote quadrilateral grid into P, F, Q on line L."
+  }
+}

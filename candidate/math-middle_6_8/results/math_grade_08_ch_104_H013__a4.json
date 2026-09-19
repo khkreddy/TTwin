@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira knows one angle of a rhombus is $70^{\\circ}$. She needs the other three angles.\n\nWhich two claims correctly give those angles?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the full answer the label opposite angles, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "The opposite angle is also $70^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "Each adjacent angle is $110^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "All four angles are $70^{\\circ}$, mixing in a rectangle's equal-angle pattern."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a rhombus, opposite angles are equal and adjacent angles add to 180°, so 70°, 110°, 70°, 110°. Naming opposite angles alone, or forcing all four equal, miss that pair of rules.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

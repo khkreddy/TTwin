@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The graph shows afternoon temperature in $^{\\circ}$C over five days.\n\nWhich two claims are supported by the graph?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Temperature peaks on Day $3$ at $34^{\\circ}$C, and the steepest rise is from Day $1$ to Day $2$."
+    },
+    {
+      "id": "B",
+      "text": "Report the word trend as the Day $3$ temperature."
+    },
+    {
+      "id": "C",
+      "text": "Temperature falls from Day $3$ to Day $5$."
+    },
+    {
+      "id": "D",
+      "text": "Temperature on Day $6$ is $40^{\\circ}$C."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\small,line cap=round,line join=round,x=1.1cm,y=0.18cm]\\draw[->] (0,0)--(6.2,0) node[right]{Day};\\draw[->] (0,0)--(0,40) node[above]{$^{\\circ}$C};\\foreach \\x in {1,2,3,4,5}{\\draw (\\x,0.4)--(\\x,-0.4) node[below]{\\x};}\\foreach \\y in {10,20,30,40}{\\draw (0.08,\\y)--(-0.08,\\y) node[left]{\\y};}\\draw[thick] (1,22)--(2,30)--(3,34)--(4,28)--(5,24);\\fill (1,22) circle (2pt);\\fill (2,30) circle (2pt);\\fill (3,34) circle (2pt);\\fill (4,28) circle (2pt);\\fill (5,24) circle (2pt);\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Points show a peak of 34°C on Day 3, a steep rise Day 1→2, and a fall Day 3→5. Calling the peak 'trend' swaps the term. Reading Day 6 invents a point outside the graph.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote the pet pie chart into a five-day afternoon temperature line graph; stem refers to the graph."
+  },
+  "learn_by_solve": null
+}

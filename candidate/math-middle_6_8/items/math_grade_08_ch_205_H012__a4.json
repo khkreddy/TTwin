@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m16_qp_12:q24",
+  "target_unit_id": "math/grade_08/ch_205/H012",
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_08/ch_205/H012",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H012"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H012:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H012",
+    "stem": "The graph shows afternoon temperature in $^{\\circ}$C over five days.\n\nWhich two claims are supported by the graph?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Temperature peaks on Day $3$ at $34^{\\circ}$C, and the steepest rise is from Day $1$ to Day $2$.",
+      "B": "Report the word trend as the Day $3$ temperature.",
+      "C": "Temperature falls from Day $3$ to Day $5$.",
+      "D": "Temperature on Day $6$ is $40^{\\circ}$C."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\small,line cap=round,line join=round,x=1.1cm,y=0.18cm]\\draw[->] (0,0)--(6.2,0) node[right]{Day};\\draw[->] (0,0)--(0,40) node[above]{$^{\\circ}$C};\\foreach \\x in {1,2,3,4,5}{\\draw (\\x,0.4)--(\\x,-0.4) node[below]{\\x};}\\foreach \\y in {10,20,30,40}{\\draw (0.08,\\y)--(-0.08,\\y) node[left]{\\y};}\\draw[thick] (1,22)--(2,30)--(3,34)--(4,28)--(5,24);\\fill (1,22) circle (2pt);\\fill (2,30) circle (2pt);\\fill (3,34) circle (2pt);\\fill (4,28) circle (2pt);\\fill (5,24) circle (2pt);\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

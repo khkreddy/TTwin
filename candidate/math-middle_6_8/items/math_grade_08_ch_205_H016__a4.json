@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_205/H016",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_205/H016",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H016"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H016:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H016",
+    "stem": "The diagram shows Anvi's evening activity strip. Each block is 1 hour. Green is play, blue is study, orange is meal, grey is rest.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Study lasts 1 hour because study is one colour.",
+      "B": "Study lasts 8 hours because the strip has 8 blocks.",
+      "C": "Study lasts 3 hours because three blue blocks are study.",
+      "D": "Play lasts 3 hours because play sits before study."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85]\n  \\foreach \\i in {0,1,...,7} {\n    \\draw[thick] (\\i,0) rectangle (\\i+1,1.2);\n  }\n  \\fill[green!40] (0,0) rectangle (1,1.2);\n  \\fill[green!40] (1,0) rectangle (2,1.2);\n  \\fill[blue!35] (2,0) rectangle (3,1.2);\n  \\fill[blue!35] (3,0) rectangle (4,1.2);\n  \\fill[blue!35] (4,0) rectangle (5,1.2);\n  \\fill[orange!50] (5,0) rectangle (6,1.2);\n  \\fill[orange!50] (6,0) rectangle (7,1.2);\n  \\fill[gray!35] (7,0) rectangle (8,1.2);\n  \\node[below] at (1,-0.05) {\\scriptsize play};\n  \\node[below] at (3.5,-0.05) {\\scriptsize study};\n  \\node[below] at (6,-0.05) {\\scriptsize meal};\n  \\node[below] at (7.5,-0.05) {\\scriptsize rest};\n  \\node[above] at (4,1.2) {\\small each block $=1$ hour};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H016",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

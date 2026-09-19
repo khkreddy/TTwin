@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Adil looks at the diagram of parallelogram $ABCD$. Base $AB=8\\,\\mathrm{cm}$. The perpendicular height from $D$ to line $AB$ is $5\\,\\mathrm{cm}$. Side $AD=6\\,\\mathrm{cm}$.\n\nWhich claim correctly finds the area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Area $= 8 \\times 5 = 40\\,\\mathrm{cm}^{2}$, using base $AB$ and its corresponding perpendicular height."
+    },
+    {
+      "id": "B",
+      "text": "Call the full answer the label base, and stop there."
+    },
+    {
+      "id": "C",
+      "text": "Area $= 8 \\times 6$, using side $AD$ as the height for base $AB$."
+    },
+    {
+      "id": "D",
+      "text": "Finding the area is what creates the perpendicular height from $D$ to $AB$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line join=round,font=\\small,scale=0.95]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5.2,0);\n  \\coordinate (C) at (6.6,2.8);\n  \\coordinate (D) at (1.4,2.8);\n  \\draw[line width=1.1pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=0.85pt,dashed] (D)--(1.4,0);\n  \\draw[line width=0.7pt] (1.4,0.35)--(1.75,0.35)--(1.75,0);\n  \\node[below left] at (A){$A$};\n  \\node[below right] at (B){$B$};\n  \\node[above right] at (C){$C$};\n  \\node[above left] at (D){$D$};\n  \\node[below] at (2.6,-0.35){$8\\,\\mathrm{cm}$};\n  \\node[left] at (1.25,1.4){$5\\,\\mathrm{cm}$};\n  \\node[above left] at (0.55,1.5){$6\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Parallelogram area is base times corresponding perpendicular height: 8×5. Naming base alone, using the slanted side as height, or reversing cause miss that pairing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source parallelogram as ABCD with base 8 cm, perpendicular height 5 cm marked, and slanted side 6 cm."
+  }
+}

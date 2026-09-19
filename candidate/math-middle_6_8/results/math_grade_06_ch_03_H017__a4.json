@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aarav starts at $7$ and applies the Collatz rule: if the current term is even, halve it; if it is odd, take $3n+1$. He writes $7$, $22$, $11$, $34$, $17$, $52$, $26$, $13$, $40$, $20$, $10$, $5$, $16$, $8$, $4$, $2$, $1$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly separates this chain from the Collatz conjecture?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The chain is one Collatz example that reaches $1$; it does not prove the rule for every whole-number start."
+        },
+        {
+          "id": "B",
+          "text": "Reaching $1$ from $7$ proves that every whole-number start reaches $1$."
+        },
+        {
+          "id": "C",
+          "text": "The Collatz rule applies only to even starts, so the odd terms such as $7$ and $11$ are mistakes."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "One finished chain that reaches 1 is an example of the process; the conjecture claims every start reaches 1, which this single run cannot prove."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An example that reaches 1 is not a proof for every start. Treating one run as a universal proof, or banning odd starts, miss that distinction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

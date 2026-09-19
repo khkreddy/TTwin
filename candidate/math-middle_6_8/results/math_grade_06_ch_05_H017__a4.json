@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Sia checks whether $73824$ is divisible by $8$ by testing one digit block of $73824$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the block to test?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Test whether $73$, formed by the first two digits, is divisible by $8$."
+        },
+        {
+          "id": "B",
+          "text": "Test whether $824$, formed by the last three digits, is divisible by $8$."
+        },
+        {
+          "id": "C",
+          "text": "Test whether the digit sum $7+3+8+2+4$ is divisible by $8$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A whole number is divisible by 8 exactly when the number formed by its last three digits is divisible by 8; here that block is 824, and 824÷8=103."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divisibility by 8 uses the last three digits. 824÷8=103, so 73824 is divisible by 8. Leading digits or digit sum are other tests.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

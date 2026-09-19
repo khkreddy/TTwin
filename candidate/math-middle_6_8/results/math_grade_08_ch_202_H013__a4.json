@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Avni compares $a^{2}+b^{2}=c^{2}$ with $a^{n}+b^{n}=c^{n}$ for integers $n>2$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive natural-number solutions exist for the square case, but not when $n>2$."
+        },
+        {
+          "id": "B",
+          "text": "Both equations are Baudhāyana triples under one shared name."
+        },
+        {
+          "id": "C",
+          "text": "Solutions for $n>2$ are what produce the square-power triples."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Baudhāyana triples solve the square-power equation. Fermat's claim for $n>2$ says no positive natural-number solutions exist for that higher-power equation."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The square-power equation has Baudhāyana triples; the higher-power equation does not have positive natural-number solutions. Merging both under one name or reversing which equation produces triples misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

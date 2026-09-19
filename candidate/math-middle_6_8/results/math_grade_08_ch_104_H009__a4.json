@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir looks at the diagram of parallelogram $PQRS$. Angle $P$ is marked $70^{\\circ}$.\n\nWhich claim correctly determines the adjacent and opposite angles?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Adjacent angle $Q$ is $110^{\\circ}$ (co-interior with $P$ on parallel sides), and opposite angle $R$ equals angle $P$, so $R=70^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "Call $PQRS$ a parallelogram even when the co-interior pair on parallel sides is not used to find angle $Q$."
+    },
+    {
+      "id": "C",
+      "text": "Say that equal adjacent angles are what create parallelogram $PQRS$."
+    },
+    {
+      "id": "D",
+      "text": "Apply equality of opposite angles also to a kite that is not a parallelogram, using only the printed $70^{\\circ}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.2,0);\n  \\coordinate (R) at (5.3,2.1);\n  \\coordinate (S) at (1.1,2.1);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\node[below left] at (P){$P$};\n  \\node[below right] at (Q){$Q$};\n  \\node[above right] at (R){$R$};\n  \\node[above left] at (S){$S$};\n  \\draw[line width=0.7pt] (0.55,0) arc (0:62:0.55);\n  \\node[above right] at (0.7,0.35){$70^{\\circ}$};\n  \\node[below] at (2.1,-0.55){parallelogram $PQRS$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a parallelogram, adjacent angles on parallel sides are supplementary (70+110) and opposite angles are equal (R=70). Skipping the co-interior step, reversing cause, or stretching equality to a non-parallelogram miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source parallelogram ABCD as PQRS with angle P marked 70°."
+  }
+}

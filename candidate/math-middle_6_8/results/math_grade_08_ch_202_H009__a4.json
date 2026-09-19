@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Nitya checks whether the positive-integer triple $(5, 12, 13)$ is a Baudhāyana triple.\n\nWhich two claims correctly classify it?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the legs $5$ and $12$ alone, and stop."
+    },
+    {
+      "id": "B",
+      "text": "The largest entry is $13$, and $5^2+12^2=25+144=169=13^2$, so the triple satisfies $a^2+b^2=c^2$."
+    },
+    {
+      "id": "C",
+      "text": "Because $a^2+b^2=c^2$ holds with largest entry $c=13$, $(5, 12, 13)$ is a Baudhāyana triple."
+    },
+    {
+      "id": "D",
+      "text": "Decide only because $13$ is the largest printed number in the triple, with no square check."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A Baudhāyana triple needs a²+b²=c² with c the largest entry. Naming the legs alone, or grabbing the largest print, miss that check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

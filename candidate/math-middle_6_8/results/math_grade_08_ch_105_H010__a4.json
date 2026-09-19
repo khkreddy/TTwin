@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sia tests $3520$ for divisibility by $11$ using alternating digit sums, starting from the units digit: $0-2+5-3$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only the units digit $0$ needs to be checked for divisibility by $11$."
+    },
+    {
+      "id": "B",
+      "text": "The alternating sum $0-2+5-3=0$ is divisible by $11$, so $3520$ is divisible by $11$."
+    },
+    {
+      "id": "C",
+      "text": "A zero alternating sum counts as a multiple of $11$, so the divisibility test passes."
+    },
+    {
+      "id": "D",
+      "text": "Alternating digit sums are what create the place values of $3520$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Alternating sum 0-2+5-3=0, and 0 is a multiple of 11, so 3520 passes. Checking only units omits the rule; saying the sum creates place values reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_204/H009",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_204/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H009"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H009:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H009",
+    "stem": "The diagram shows a net of a cuboid with edges $5$ cm, $4$ cm and $3$ cm. An ant crawls on the surface from corner $A$ to opposite corner $G$.\n\nWhich claim correctly identifies a shortest surface path?",
+    "item_type": "mcq",
+    "options": {
+      "A": "On the net that joins a $5$-by-$4$ face to a $5$-by-$3$ face into a $5$-by-$7$ rectangle, the straight $A$-to-$G$ segment has length $\\sqrt{5^{2}+7^{2}}=\\sqrt{74}$ cm, shortest among the three standard unfolds.",
+      "B": "The shortest surface path is $\\sqrt{5^{2}+4^{2}+3^{2}}$ cm, the interior space diagonal.",
+      "C": "Adding $5+4+3$ gives the shortest surface path.",
+      "D": "The unfold of length $\\sqrt{3^{2}+9^{2}}=\\sqrt{90}$ cm is shortest because that net covers more area."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.45,line cap=round,line join=round,every node/.style={font=\\small}]\n  % net: 4x3 left | 5x3 middle | 4x3 right, with 5x4 above middle → path on 5 by 7 unfold\n  \\draw[thick] (0,0) rectangle (4,3);\n  \\draw[thick] (4,0) rectangle (9,3);\n  \\draw[thick] (9,0) rectangle (13,3);\n  \\draw[thick] (4,3) rectangle (9,7);\n  \\node at (2,1.5) {$4\\times3$};\n  \\node at (6.5,1.5) {$5\\times3$};\n  \\node at (11,1.5) {$4\\times3$};\n  \\node at (6.5,5) {$5\\times4$};\n  \\fill (4,0) circle (2.5pt) node[below left] {$A$};\n  \\fill (9,7) circle (2.5pt) node[above right] {$G$};\n  \\draw[very thick,dashed] (4,0)--(9,7);\n  \\node at (6.5,-1.0) {edges $5$, $4$, $3$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_206/H007",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_206/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_206/H007"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_206:H007:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M2",
+    "chapter_id": "math/grade_08/ch_206",
+    "chapter_label": "math/grade_08/ch_206",
+    "subtopic_id": "math/grade_08/ch_206/H007",
+    "stem": "The diagram shows Vihaan's algebra grid. One row has three identical blue squares with sum $24$. The next row has two identical red circles and one blue square with sum $22$. Each shape stands for one unknown value.\n\nWhich plan finds the values correctly?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call each shape an unknown and stop, leaving the sums $24$ and $22$ unused.",
+      "B": "Filling empty cells is what produces the row sums $24$ and $22$.",
+      "C": "From three blue squares summing to $24$, one blue square is $8$. Then two red circles plus $8$ sum to $22$, so one red circle is $7$.",
+      "D": "Factorise $24$ and $22$ into primes and treat those factors as the shape values."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.7,every node/.style={font=\\small}]\n  \\draw[thick] (0,2) rectangle (1.2,3.2);\n  \\draw[thick] (1.4,2) rectangle (2.6,3.2);\n  \\draw[thick] (2.8,2) rectangle (4.0,3.2);\n  \\node at (0.6,2.6) {};\n  \\node at (4.8,2.6) {$=$};\n  \\draw[thick] (5.2,2) rectangle (6.6,3.2);\n  \\node at (5.9,2.6) {$24$};\n  \\node[below] at (2.0,1.9) {three blue squares};\n  \\draw[thick] (0,0) circle (0.55);\n  \\draw[thick] (1.5,0) circle (0.55);\n  \\draw[thick] (2.7,-0.55) rectangle (3.9,0.65);\n  \\node at (4.8,0) {$=$};\n  \\draw[thick] (5.2,-0.55) rectangle (6.6,0.65);\n  \\node at (5.9,0.05) {$22$};\n  \\node[below] at (2.0,-0.9) {two red circles and one blue square};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_206/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

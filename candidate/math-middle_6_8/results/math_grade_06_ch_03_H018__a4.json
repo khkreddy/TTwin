@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan packs about $25$ boxes with about $12$ notebooks in each box for a school sale. An exact notebook count is not needed to order labels.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Estimation means treating $25\\times12$ as a finished notebook-by-notebook census of every notebook."
+    },
+    {
+      "id": "B",
+      "text": "An estimate near $300$ notebooks is enough for ordering labels."
+    },
+    {
+      "id": "C",
+      "text": "A reasonable estimate suits this purpose because an exact count is unnecessary here."
+    },
+    {
+      "id": "D",
+      "text": "Exact counting is what produces estimates, so he must finish a full tally first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "25×12≈300 is a fit estimate when exact counting is unnecessary. Treating estimate as census, or saying exact counting creates estimates, miss the purpose hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

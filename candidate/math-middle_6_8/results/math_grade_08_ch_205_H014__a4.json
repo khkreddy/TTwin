@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The graph shows rainfall in millimetres for stations P and Q across four months that Imran recorded in order. He is choosing between this line graph and a display with many clustered bars.\n\nWhich claim about this display is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The display is a chart of clustered bars for the four months."
+    },
+    {
+      "id": "B",
+      "text": "Month order can be ignored because the points are already plotted."
+    },
+    {
+      "id": "C",
+      "text": "The line graph compares the two stations across the ordered months more clearly than many clustered bars."
+    },
+    {
+      "id": "D",
+      "text": "Only the highest rainfall point on the graph matters for the comparison."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9]\n  \\draw[->] (0,0)--(5.2,0) node[right]{month};\n  \\draw[->] (0,0)--(0,3.2) node[above]{mm};\n  \\foreach \\x/\\lab in {1/1,2/2,3/3,4/4}\n    \\draw (\\x,0.05)--(\\x,-0.05) node[below]{\\lab};\n  \\foreach \\y in {1,2,3}\n    \\draw (0.05,\\y)--(-0.05,\\y) node[left]{\\y0};\n  % series P\n  \\draw[thick,blue] (1,1.2)--(2,1.8)--(3,1.5)--(4,2.4);\n  \\fill[blue] (1,1.2) circle (1.5pt) (2,1.8) circle (1.5pt) (3,1.5) circle (1.5pt) (4,2.4) circle (1.5pt);\n  % series Q\n  \\draw[thick,orange] (1,2.0)--(2,1.6)--(3,2.2)--(4,1.9);\n  \\fill[orange] (1,2.0) circle (1.5pt) (2,1.6) circle (1.5pt) (3,2.2) circle (1.5pt) (4,1.9) circle (1.5pt);\n  \\node[blue,right] at (4.1,2.4) {P};\n  \\node[orange,right] at (4.1,1.9) {Q};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two time series over ordered months are clearer as lines than as many clustered bars. Calling it a bar chart misnames the display. Dropping month order or using only the peak misses how the comparison runs across time.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Added dual line series for stations P and Q over four months."
+  }
+}

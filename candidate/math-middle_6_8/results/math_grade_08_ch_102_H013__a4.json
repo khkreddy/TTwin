@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash must write $59000$ in scientific notation, with coefficient $x$ satisfying $1 \\le x < 10$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$59000 = 59 \\times 10^{3}$"
+    },
+    {
+      "id": "B",
+      "text": "The exponent $4$ is what creates the coefficient $5.9$."
+    },
+    {
+      "id": "C",
+      "text": "$59000 = 5.9 \\times 10^{4}$"
+    },
+    {
+      "id": "D",
+      "text": "Also allow $0.59 \\times 10^{5}$ under the same scientific-notation rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scientific notation needs 1 ≤ x < 10, so 5.9×10^4. Coefficient 59 omits that bound; reversing cause; or allowing 0.59 stretches past the coefficient rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

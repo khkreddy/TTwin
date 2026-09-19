@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira sees a shirt with marked price ₹$500$. The shop offers a $10\\%$ discount on that marked price.\n\nWhich claim correctly applies the discount?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The discount is ₹$50$ with no reference to the marked price ₹$500$."
+    },
+    {
+      "id": "B",
+      "text": "The same $10\\%$ discount step also settles a later profit percent after the discount."
+    },
+    {
+      "id": "C",
+      "text": "Discount $= 10\\%$ of ₹$500$ = ₹$50$, so the selling price is ₹$450$."
+    },
+    {
+      "id": "D",
+      "text": "Selling price is ₹$10$ because $10$ is the largest printed number in the offer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A discount is a percentage of the marked price being discounted: 10% of 500 is 50, so SP is 450. Dropping the marked-price base, stretching into profit percent, or grabbing printed 10 miss that step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

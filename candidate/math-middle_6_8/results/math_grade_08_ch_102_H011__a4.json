@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ishaan compares the powers $5^{6}$ and $5^{4}$ with the same positive base.\n\nWhich two claims correctly use the exponent difference?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer same positive base only, with no comparison of $5^{6}$ and $5^{4}$."
+    },
+    {
+      "id": "B",
+      "text": "$5^{6} = 5^{4} \\times 5^{2}$, so $5^{6}$ is $25$ times $5^{4}$."
+    },
+    {
+      "id": "C",
+      "text": "Because the exponents differ by $2$ and the base $5>1$, $5^{6}$ is greater than $5^{4}$."
+    },
+    {
+      "id": "D",
+      "text": "$5^{4}$ is greater than $5^{6}$, because the usual order of the exponents is read backwards."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same base >1: larger exponent wins; difference 2 gives factor 5²=25. Naming only the base skips the comparison. Reversing which power is larger flips the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

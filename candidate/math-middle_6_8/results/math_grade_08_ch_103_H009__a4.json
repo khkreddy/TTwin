@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya records three hundreds and two ones in a place-value numeral. The tens place is empty.\n\nWhich claim correctly fills that empty place?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the word placeholder alone, and stop."
+    },
+    {
+      "id": "B",
+      "text": "Leave the tens place blank and still claim the numeral clearly shows three hundreds and two ones."
+    },
+    {
+      "id": "C",
+      "text": "Write $0$ in the tens place so the numeral $302$ keeps hundreds and ones in their correct positions."
+    },
+    {
+      "id": "D",
+      "text": "Carry tens into the next place the way base-$n$ addition carries when there are $n$ copies of a unit."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An empty place needs a written 0 so positions stay unambiguous: 302. Naming placeholder alone, leaving a blank, or swapping in carry-from-addition miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

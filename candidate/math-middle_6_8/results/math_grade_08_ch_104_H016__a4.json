@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows trapezium $ABCD$ with $AB\\parallel DC$. Angle $DAB=70^\\circ$. Imran wants angle $ADC$ on the same non-parallel side as angle $DAB$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $ADC=70^\\circ$ because angle $ADC$ must equal angle $DAB$ in a trapezium."
+    },
+    {
+      "id": "B",
+      "text": "Angle $ADC$ cannot be found from the parallel sides alone."
+    },
+    {
+      "id": "C",
+      "text": "Angle $ADC=110^\\circ$ because the angles on the same non-parallel side between the parallel sides add to $180^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "Angle $ADC=70^\\circ$ because $AB$ equals $DC$ on the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5,0);\n  \\coordinate (C) at (3.8,2.2);\n  \\coordinate (D) at (1.0,2.2);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[<->] (0,-0.55)--(5,-0.55);\n  \\node[below] at (2.5,-0.55) {AB};\n  \\draw[<->] (1.0,2.55)--(3.8,2.55);\n  \\node[above] at (2.4,2.55) {DC};\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node at (0.55,0.35) {$70^\\circ$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Co-interior angles between parallel lines on leg AD sum to 180°, so angle ADC=110°. Opposite angles need not be equal in a trapezium. The parallel sides are enough for this pair. AB and DC are not marked equal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Added trapezium ABCD with AB parallel DC and angle A marked 70°."
+  }
+}

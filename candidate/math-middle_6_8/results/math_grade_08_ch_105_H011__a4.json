@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Tara finds the digital root of $378$ by repeated digit sums: $3+7+8=18$, then $1+8=9$.\n\nWhich two claims correctly interpret that digital root?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer repeated digit sum only, with no link to a remainder on division by $9$."
+    },
+    {
+      "id": "B",
+      "text": "The digital root $9$ matches the remainder information for $378$ on division by $9$ (a multiple of $9$ reports digital root $9$)."
+    },
+    {
+      "id": "C",
+      "text": "Because $378 = 9 \\times 42$, the digit-sum process agrees with remainder $0$ on division by $9$, reported as digital root $9$."
+    },
+    {
+      "id": "D",
+      "text": "The digital root is what creates the number $378$, so the sums run backwards from $9$ to rebuild $378$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digital root encodes n mod 9 (with 9 for nonzero multiples of 9). 378=9×42 fits. Naming only the procedure skips remainder meaning. Saying the root creates 378 reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

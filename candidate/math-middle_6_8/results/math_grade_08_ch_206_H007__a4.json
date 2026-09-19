@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Vihaan's algebra grid. One row has three identical blue squares with sum $24$. The next row has two identical red circles and one blue square with sum $22$. Each shape stands for one unknown value.\n\nWhich plan finds the values correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call each shape an unknown and stop, leaving the sums $24$ and $22$ unused."
+    },
+    {
+      "id": "B",
+      "text": "Filling empty cells is what produces the row sums $24$ and $22$."
+    },
+    {
+      "id": "C",
+      "text": "From three blue squares summing to $24$, one blue square is $8$. Then two red circles plus $8$ sum to $22$, so one red circle is $7$."
+    },
+    {
+      "id": "D",
+      "text": "Factorise $24$ and $22$ into primes and treat those factors as the shape values."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,every node/.style={font=\\small}]\n  \\draw[thick] (0,2) rectangle (1.2,3.2);\n  \\draw[thick] (1.4,2) rectangle (2.6,3.2);\n  \\draw[thick] (2.8,2) rectangle (4.0,3.2);\n  \\node at (0.6,2.6) {};\n  \\node at (4.8,2.6) {$=$};\n  \\draw[thick] (5.2,2) rectangle (6.6,3.2);\n  \\node at (5.9,2.6) {$24$};\n  \\node[below] at (2.0,1.9) {three blue squares};\n  \\draw[thick] (0,0) circle (0.55);\n  \\draw[thick] (1.5,0) circle (0.55);\n  \\draw[thick] (2.7,-0.55) rectangle (3.9,0.65);\n  \\node at (4.8,0) {$=$};\n  \\draw[thick] (5.2,-0.55) rectangle (6.6,0.65);\n  \\node at (5.9,0.05) {$22$};\n  \\node[below] at (2.0,-0.9) {two red circles and one blue square};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3 blue = 24 so blue=8; 2 red + 8 = 22 so red=7. Using row sums to find shape values is the hinge. Naming unknown alone, reversing cause of the sums, or swapping in prime factors miss that plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Added algebra-grid diagram of three blue squares (=24) and two red circles plus one blue square (=22)."
+  }
+}

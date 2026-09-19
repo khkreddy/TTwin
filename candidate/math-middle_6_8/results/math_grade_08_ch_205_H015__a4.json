@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a colour scale from $-100$ to $+100$ for the difference between per capita rice and wheat use. Region R is marked with value $+40$. Krish reads the infographic.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Region R has per capita rice and wheat use of 40 in total."
+    },
+    {
+      "id": "B",
+      "text": "Region R prefers wheat more strongly than rice."
+    },
+    {
+      "id": "C",
+      "text": "Region R shows a stronger rice preference than wheat by the encoded difference 40."
+    },
+    {
+      "id": "D",
+      "text": "Any coloured region can be ranked by shade alone before reading the scale."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85]\n  % colour scale bar\n  \\shade[left color=blue!70,right color=red!70] (0,0) rectangle (6,0.45);\n  \\draw (0,0) rectangle (6,0.45);\n  \\foreach \\x/\\lab in {0/-100,1.5/-50,3/0,4.5/+50,6/+100}\n    \\draw (\\x,0)--(\\x,-0.12) node[below]{\\scriptsize\\lab};\n  \\node[above] at (3,0.45) {\\small rice $-$ wheat scale};\n  % region chip\n  \\fill[red!40] (1.2,1.2) rectangle (2.6,2.2);\n  \\node at (1.9,1.7) {R};\n  \\node[right] at (2.7,1.7) {value $+40$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Positive values encode stronger rice preference on this difference scale, so +40 means rice over wheat by that encoded amount. 40 kg total invents a new quantity. Preferring wheat reverses the sign. Ranking by shade before the scale skips what the numbers mean.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": "Added colour scale legend and region R marked +40."
+  }
+}

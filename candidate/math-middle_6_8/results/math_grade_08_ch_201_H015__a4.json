@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anvi's school printer is worth ₹8000. Each year it loses 10% of its value at the start of that year. After 2 years, what is its value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "₹6400"
+    },
+    {
+      "id": "B",
+      "text": "₹7200"
+    },
+    {
+      "id": "C",
+      "text": "₹6480"
+    },
+    {
+      "id": "D",
+      "text": "₹800"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each year multiplies by 0.9 from the current value: 8000×0.9×0.9=6480. 6400 subtracts 10% of the original twice. 7200 applies only one year. 800 is 10% of 8000, not the remaining value.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

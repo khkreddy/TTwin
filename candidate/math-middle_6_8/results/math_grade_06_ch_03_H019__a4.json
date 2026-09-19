@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Farhan and Tara take turns adding $1$, $2$, or $3$ to a running total that starts at $0$. The player who makes the total exactly $21$ wins.\n\nWhich two claims correctly describe the winning pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any running total can be a winning move, because the printed target is $21$."
+    },
+    {
+      "id": "B",
+      "text": "If Farhan makes the total $17$, then whatever Tara adds ($1$, $2$, or $3$), Farhan can reach $21$ on the next turn."
+    },
+    {
+      "id": "C",
+      "text": "Safe totals to leave for the other player are $4$, $8$, $12$, and $16$."
+    },
+    {
+      "id": "D",
+      "text": "Count how many times the digit $2$ is written from $1$ to $21$, and treat that count as the winning pattern."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With adds of 1–3, modulus 4 controls the game: leave 4,8,12,16; from 17 the next player can always hit 21. The printed 21 alone is not every total. Digit-counting is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

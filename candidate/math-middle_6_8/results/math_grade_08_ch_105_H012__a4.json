@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yash works on a multiplication cryptarithm. Each letter stands for one digit, different letters different digits, and he wants to narrow possible digits before trying every full substitution.\n\nWhich two claims correctly help him narrow the digits first?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the full answer the label letter-number, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "A leading letter of a multi-digit number cannot be $0$."
+    },
+    {
+      "id": "C",
+      "text": "The units digit of the product constrains which digit pairs are still possible."
+    },
+    {
+      "id": "D",
+      "text": "Listing every full substitution is what creates the leading-digit rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Leading digits cannot be 0, and the units digit of a product constrains pairs before full trial. Naming letter-number alone, or reversing cause, miss that narrowing step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a net of a cuboid with edges $5$ cm, $4$ cm and $3$ cm. An ant crawls on the surface from corner $A$ to opposite corner $G$.\n\nWhich claim correctly identifies a shortest surface path?",
+  "options": [
+    {
+      "id": "A",
+      "text": "On the net that joins a $5$-by-$4$ face to a $5$-by-$3$ face into a $5$-by-$7$ rectangle, the straight $A$-to-$G$ segment has length $\\sqrt{5^{2}+7^{2}}=\\sqrt{74}$ cm, shortest among the three standard unfolds."
+    },
+    {
+      "id": "B",
+      "text": "The shortest surface path is $\\sqrt{5^{2}+4^{2}+3^{2}}$ cm, the interior space diagonal."
+    },
+    {
+      "id": "C",
+      "text": "Adding $5+4+3$ gives the shortest surface path."
+    },
+    {
+      "id": "D",
+      "text": "The unfold of length $\\sqrt{3^{2}+9^{2}}=\\sqrt{90}$ cm is shortest because that net covers more area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.45,line cap=round,line join=round,every node/.style={font=\\small}]\n  % net: 4x3 left | 5x3 middle | 4x3 right, with 5x4 above middle → path on 5 by 7 unfold\n  \\draw[thick] (0,0) rectangle (4,3);\n  \\draw[thick] (4,0) rectangle (9,3);\n  \\draw[thick] (9,0) rectangle (13,3);\n  \\draw[thick] (4,3) rectangle (9,7);\n  \\node at (2,1.5) {$4\\times3$};\n  \\node at (6.5,1.5) {$5\\times3$};\n  \\node at (11,1.5) {$4\\times3$};\n  \\node at (6.5,5) {$5\\times4$};\n  \\fill (4,0) circle (2.5pt) node[below left] {$A$};\n  \\fill (9,7) circle (2.5pt) node[above right] {$G$};\n  \\draw[very thick,dashed] (4,0)--(9,7);\n  \\node at (6.5,-1.0) {edges $5$, $4$, $3$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Unfolds: √(5²+7²)=√74, √(4²+8²)=√80, √(3²+9²)=√90. Shortest √74 on the 5-by-7 net. Space diagonal and edge sum are not surface paths; larger net area does not decide length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source grid quadrilateral as cuboid net 5×4×3 with dashed A-to-G straight path."
+  }
+}

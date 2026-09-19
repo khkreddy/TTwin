@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "A jacket costs ₹1000. The shop raises the price by 20%, then offers 20% off the new price. Diya tracks the final price.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The final price is ₹1000 because +20% and −20% cancel."
+    },
+    {
+      "id": "B",
+      "text": "The final price is ₹960."
+    },
+    {
+      "id": "C",
+      "text": "Each change uses the price after the previous change, so the factors multiply: $1.2\\times 0.8$."
+    },
+    {
+      "id": "D",
+      "text": "The final price is ₹1000−20=₹980 from the printed 20 labels."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Successive changes multiply on the updated base: 1000×1.2×0.8=960. Treating +20% and −20% as cancelling omits the new base. Subtracting the digit 20 from 1000 is a surface reading of the labels.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

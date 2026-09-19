@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Aarav wants an easier way to compute $48\\times 52$ while keeping the same value.\n\nWhich two claims correctly choose and justify a decomposition?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the place-value base $10$ alone, and stop."
+    },
+    {
+      "id": "B",
+      "text": "Write $48\\times 52=(50-2)(50+2)=50^2-2^2$, which equals the original product."
+    },
+    {
+      "id": "C",
+      "text": "The identity $(a-b)(a+b)=a^2-b^2$ preserves the value of $48\\times 52$ when $a=50$ and $b=2$."
+    },
+    {
+      "id": "D",
+      "text": "Choose the decomposition only because $50$ is the largest printed number nearby."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A value-preserving identity such as (50−2)(50+2)=50²−2² equals 48×52. Naming base 10 alone, or grabbing printed 50 for looks, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

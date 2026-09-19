@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya works with the nonzero base $4$ and integer exponents.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4^{-3}=-64$"
+    },
+    {
+      "id": "B",
+      "text": "$4^{-3}=\\dfrac{1}{4^{3}}=\\dfrac{1}{64}$"
+    },
+    {
+      "id": "C",
+      "text": "$4^{3}=\\dfrac{1}{4^{-3}}$"
+    },
+    {
+      "id": "D",
+      "text": "$4^{-3}=-\\dfrac{1}{64}$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "operation_confusion",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Negative exponent means reciprocal power: 4^{-3}=1/64, and equivalently 4^3=1/4^{-3}. A leading minus sign confuses sign with reciprocal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

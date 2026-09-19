@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows trapezium $ABCD$ with $AB\\parallel DC$ and equal non-parallel sides $AD=BC$. Diya studies whether the base angles are equal.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The trapezium has equal base angles because it is labelled $ABCD$."
+    },
+    {
+      "id": "B",
+      "text": "Angles at $A$ and $D$ are equal because they sit on leg $AD$."
+    },
+    {
+      "id": "C",
+      "text": "Angles at $A$ and $B$ are equal, and angles at $D$ and $C$ are equal."
+    },
+    {
+      "id": "D",
+      "text": "Every trapezium has equal base angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5,0);\n  \\coordinate (C) at (3.7,2.0);\n  \\coordinate (D) at (1.3,2.0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[thick] (A)--(D);\n  \\draw[thick] (B)--(C);\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node at (0.55,1.1) {\\small$=$};\n  \\node at (4.45,1.1) {\\small$=$};\n  \\node[below] at (2.5,-0.15) {$AB\\parallel DC$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal non-parallel sides make an isosceles trapezium, so the base angles on AB are equal and the base angles on DC are equal. The ABCD label is not the test. Angles on the same leg are co-interior supplements, not a base-angle pair. Not every trapezium is isosceles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": "Added isosceles trapezium with AB parallel DC and equal legs marked."
+  }
+}

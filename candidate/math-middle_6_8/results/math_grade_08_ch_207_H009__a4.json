@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash looks at the diagram of a pentagon on a $1\\,\\mathrm{cm}^{2}$ grid. Dashed lines from one vertex split the pentagon into triangles. He wants the area of the pentagon in square centimetres.\n\nWhich claim correctly tells how to find that area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find the area of each triangle from the dashed split, then add those areas."
+    },
+    {
+      "id": "B",
+      "text": "Report the word pentagon as the area on the grid."
+    },
+    {
+      "id": "C",
+      "text": "Splitting into triangles is what creates the pentagon on the grid."
+    },
+    {
+      "id": "D",
+      "text": "The area equals $1$ because the grid is labelled $1\\,\\mathrm{cm}^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.6cm,y=0.6cm,line join=round,font=\\small]\n  \\draw[gray!65,densely dashed,line width=0.3pt] (0,0) grid[step=1] (10,7);\n  \\draw[line width=1.15pt] (1,1)--(8,1)--(9,4)--(6,6)--(2,5)--cycle;\n  \\draw[line width=0.95pt,dashed] (1,1)--(6,6);\n  \\draw[line width=0.95pt,dashed] (1,1)--(9,4);\n  \\node[below] at (5,-0.35){pentagon split into triangles};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Any polygon area is the sum of the areas of triangles that cover it without gaps or overlaps. Naming the shape, reversing cause, or grabbing the printed 1 all miss that reduction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source grid quadrilateral as a pentagon on a 1 cm² grid with dashed splits into triangles."
+  }
+}

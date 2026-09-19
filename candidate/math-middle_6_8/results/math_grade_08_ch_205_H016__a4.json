@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Anvi's evening activity strip. Each block is 1 hour. Green is play, blue is study, orange is meal, grey is rest.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Study lasts 1 hour because study is one colour."
+    },
+    {
+      "id": "B",
+      "text": "Study lasts 8 hours because the strip has 8 blocks."
+    },
+    {
+      "id": "C",
+      "text": "Study lasts 3 hours because three blue blocks are study."
+    },
+    {
+      "id": "D",
+      "text": "Play lasts 3 hours because play sits before study."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85]\n  \\foreach \\i in {0,1,...,7} {\n    \\draw[thick] (\\i,0) rectangle (\\i+1,1.2);\n  }\n  \\fill[green!40] (0,0) rectangle (1,1.2);\n  \\fill[green!40] (1,0) rectangle (2,1.2);\n  \\fill[blue!35] (2,0) rectangle (3,1.2);\n  \\fill[blue!35] (3,0) rectangle (4,1.2);\n  \\fill[blue!35] (4,0) rectangle (5,1.2);\n  \\fill[orange!50] (5,0) rectangle (6,1.2);\n  \\fill[orange!50] (6,0) rectangle (7,1.2);\n  \\fill[gray!35] (7,0) rectangle (8,1.2);\n  \\node[below] at (1,-0.05) {\\scriptsize play};\n  \\node[below] at (3.5,-0.05) {\\scriptsize study};\n  \\node[below] at (6,-0.05) {\\scriptsize meal};\n  \\node[below] at (7.5,-0.05) {\\scriptsize rest};\n  \\node[above] at (4,1.2) {\\small each block $=1$ hour};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Duration is the count of blocks of that colour times 1 hour, so three blue study blocks are 3 hours. One colour is not one hour. The whole strip length is not study time. Play has two green blocks, not three from order alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": "Added 8-block activity strip with play/study/meal/rest colours."
+  }
+}

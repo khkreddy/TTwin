@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_w16_qp_12:q1",
+  "target_unit_id": "math/grade_08/ch_205/H011",
+  "build_logic": {
+    "source_uid": "0580_w16_qp_12:q1",
+    "hinge": "math/grade_08/ch_205/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H011"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H011:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H011",
+    "stem": "Yash looks at the graph of a cycle journey. Before he reads any value or pattern, he must decide what each axis, scale, marker, and line represents.\n\nWhich claim correctly states that first step?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Read the horizontal axis as time in minutes and the vertical axis as distance in kilometres from the labelled scales, then read points.",
+      "B": "Read a distance from a marker before the axis scales are identified.",
+      "C": "Reading the plotted points is what creates the axis labels.",
+      "D": "Apply a pie-slice legend rule to these line-graph axes."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.75cm,y=0.55cm,>=stealth,font=\\small]\n  \\draw[->,line width=0.9pt] (0,0)--(11,0) node[right]{time (min)};\n  \\draw[->,line width=0.9pt] (0,0)--(0,8) node[above]{distance (km)};\n  \\foreach \\x in {0,2,4,6,8,10} \\draw[line width=0.5pt] (\\x,0.12)--(\\x,-0.12) node[below]{\\x};\n  \\foreach \\y in {0,1,2,3,4,5,6} \\draw[line width=0.5pt] (0.12,\\y)--(-0.12,\\y) node[left]{\\y};\n  \\draw[line width=1.15pt] (0,0)--(4,3)--(7,3)--(10,6);\n  \\fill (0,0) circle (1.6pt);\n  \\fill (4,3) circle (1.6pt);\n  \\fill (7,3) circle (1.6pt);\n  \\fill (10,6) circle (1.6pt);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

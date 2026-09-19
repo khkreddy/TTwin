@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows parallelogram $ABCD$ with diagonals $AC$ and $BD$ meeting at $O$.\n\nWhich claim about the diagonals is correct for every parallelogram?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The diagonals are equal in length, because the figure is labelled parallelogram."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer diagonal only, with no statement about $O$, $AC$, or $BD$."
+    },
+    {
+      "id": "C",
+      "text": "The diagonals bisect each other: $O$ is the midpoint of both $AC$ and $BD$."
+    },
+    {
+      "id": "D",
+      "text": "Bisection holds for $AC$ even when $O$ is not the midpoint of $BD$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (5.4,2.3);\n  \\coordinate (D) at (1.2,2.3);\n  \\coordinate (O) at (2.7,1.15);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[thick] (A)--(C);\n  \\draw[thick] (B)--(D);\n  \\fill (A) circle (1.6pt) node[below left] {$A$};\n  \\fill (B) circle (1.6pt) node[below right] {$B$};\n  \\fill (C) circle (1.6pt) node[above right] {$C$};\n  \\fill (D) circle (1.6pt) node[above left] {$D$};\n  \\fill (O) circle (1.6pt) node[above right=1pt] {$O$};\n  \\node[below] at (2.1,-0.55) {parallelogram $ABCD$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In every parallelogram the diagonals bisect each other; equal length needs a special case (rectangle/square/rhombus constraints). The label alone does not force equal diagonals. Naming only diagonal skips the property. One-sided midpoint drops full bisection.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote parallelogram source into ABCD with diagonals at O."
+  }
+}

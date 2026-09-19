@@ -1,0 +1,139 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_s15_qp_31:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:55:28.512Z",
+  "source": {
+    "item_ref": "session:0580_s15_qp_31:q6",
+    "item_type": "structured_parts",
+    "stem": "ABCD is a parallelogram.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Write down",
+        "marks": 0
+      },
+      {
+        "id": "i",
+        "text": "the order of rotational symmetry of ABCD,",
+        "marks": 0
+      },
+      {
+        "id": "i",
+        "text": "[1]",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "the number of lines of symmetry of ABCD,",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "[1]",
+        "marks": 0
+      },
+      {
+        "id": "iii",
+        "text": "the sum of the interior angles of ABCD.",
+        "marks": 0
+      },
+      {
+        "id": "iii",
+        "text": "[1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "(i) Complete this part using a straight edge and compasses only. All construction arcs must be clearly shown. On the diagram, construct the bisector of angle BAD. Extend this bisector to cut DC at E. Mark E on your diagram. [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (D) at (0,0);\\coordinate (C) at (5.3,0);\\coordinate (B) at (7.5,3.1);\\coordinate (A) at (2.2,3.1);\\draw[line width=0.65pt] (A)--(B)--(C)--(D)--cycle;\\draw[line width=0.65pt] (3.62,3.17)--(3.76,3.10)--(3.62,3.03) (3.76,3.17)--(3.90,3.10)--(3.76,3.03);\\draw[line width=0.65pt] (2.48,0.07)--(2.62,0)--(2.48,-0.07) (2.62,0.07)--(2.76,0)--(2.62,-0.07);\\begin{scope}[shift={(1.10,1.55)},rotate=54.63]\\draw[line width=0.65pt] (-0.15,0.07)--(0,0)--(-0.15,-0.07);\\end{scope}\\begin{scope}[shift={(6.40,1.55)},rotate=54.63]\\draw[line width=0.65pt] (-0.15,0.07)--(0,0)--(-0.15,-0.07);\\end{scope}\\node[above left=1pt] at (A) {$A$};\\node[above right=1pt] at (B) {$B$};\\node[below right=1pt] at (C) {$C$};\\node[below left=1pt] at (D) {$D$};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_104/H011",
+      "unit_id": "math/grade_08/ch_104/H011",
+      "title": "Do the diagonals of a parallelogram have to be equal, bisect each other, or both?",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Diagonal is the label that belongs on this item, so 'Do the diagonals of a parallelogram have to be equal, bisect each' is answered as diagonal rather than parallelogram."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "parallelogram still holds here even though Bisection means the intersection point is the midpoint of each diagonal is missing from the stem — on the item about Do the diagonals of a parallelogram have to be equal."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is parallelogram because of the most obvious label, colour, size or printed number in the stem, without using 'Do the diagonals of a parallelogram have to be equal, bisect each' as the operative test."
+      }
+    ],
+    "enrichment": "The diagonals of a parallelogram bisect each other, but they need not be equal.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_104. The student must decide: Do the diagonals of a parallelogram have to be equal, bisect each other, or both? Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_s15_qp_31:q6",
+    "hinge": "math/grade_08/ch_104/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_104/H011"
+  }
+}

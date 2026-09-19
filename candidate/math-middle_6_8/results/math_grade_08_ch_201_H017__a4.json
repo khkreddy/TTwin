@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Krish notes that 40 is 25% of 160.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "160 is also 25% of 40."
+    },
+    {
+      "id": "B",
+      "text": "160 is 400% of 40."
+    },
+    {
+      "id": "C",
+      "text": "Reversing the comparison changes the percentage because the whole changes."
+    },
+    {
+      "id": "D",
+      "text": "160 is 75% of 40."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "160/40=4, so 160 is 400% of 40. The percentage must change when the reference whole swaps. Keeping 25% reverses incorrectly. 75% is 100%−25% and uses the wrong whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

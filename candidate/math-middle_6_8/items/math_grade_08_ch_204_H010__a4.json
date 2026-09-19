@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_204/H010",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_204/H010",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H010"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H010:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H010",
+    "stem": "The diagram shows point $P$, line $L$, and points $F$ and $Q$ on $L$. Segment $PF$ meets $L$ at right angles. Segment $PQ$ is slanted.\n\nWhich two claims correctly describe the perpendicular projection of $P$ onto $L$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The foot $F$ is the perpendicular projection of $P$ onto $L$.",
+      "B": "Call the answer plane only, with no choice between $F$ and $Q$.",
+      "C": "$PF$ is shorter than $PQ$ because the perpendicular segment is the shortest path from $P$ to $L$.",
+      "D": "Point $Q$ is the projection because $Q$ is the rightmost labelled point on $L$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (-0.5,0)--(6.0,0) node[right] {$L$};\n  \\coordinate (P) at (2.2,2.4);\n  \\coordinate (F) at (2.2,0);\n  \\coordinate (Q) at (4.8,0);\n  \\fill (P) circle (1.7pt) node[above] {$P$};\n  \\fill (F) circle (1.7pt) node[below left] {$F$};\n  \\fill (Q) circle (1.7pt) node[below] {$Q$};\n  \\draw[thick] (P)--(F);\n  \\draw[thick] (P)--(Q);\n  \\draw[thick] (F)--++(0.28,0)--++(0,0.28);\n  \\node[above right] at (3.2,1.2) {segments from $P$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

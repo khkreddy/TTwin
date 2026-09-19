@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira's puzzle: a farmer has only cows and hens. Together they have $10$ heads and $28$ legs. She must find how many cows there are.\n\nWhich two claims correctly set up the unknown quantities before solving?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the full answer the label condition, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Let $c$ be the number of cows and $h$ the number of hens; write $c+h=10$ and $4c+2h=28$."
+    },
+    {
+      "id": "C",
+      "text": "Solve those two equations for $c$ and $h$ before naming a cow count."
+    },
+    {
+      "id": "D",
+      "text": "Also drop the heads equation and solve from the legs count alone under the same puzzle rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each unknown must be named and each stated relation used as an equation. Naming condition alone, or dropping the heads equation, miss that translation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

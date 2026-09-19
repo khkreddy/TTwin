@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya knows that $(3,4,5)$ is a Baudhāyana triple. She multiplies every entry by $2$ to get $(6,8,10)$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(6,8,10)$ is a Baudhāyana triple only if the factor $2$ is renamed hypotenuse."
+    },
+    {
+      "id": "B",
+      "text": "$(6,8,10)$ satisfies $6^{2}+8^{2}=10^{2}$, so it is still a Baudhāyana triple."
+    },
+    {
+      "id": "C",
+      "text": "Multiplying every entry of a Baudhāyana triple by the same positive integer preserves the triple relation."
+    },
+    {
+      "id": "D",
+      "text": "$(6,8,10)$ looks larger in print than $(3,4,5)$, so it cannot stay a Baudhāyana triple."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "6²+8²=36+64=100=10², so scaling by 2 preserves the relation. Renaming the factor, or judging by printed size, miss the preservation hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

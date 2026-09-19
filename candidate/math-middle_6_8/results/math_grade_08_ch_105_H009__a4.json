@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nitya asks whether $2\\,457$ is divisible by $9$. She may use the sum of its digits.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly applies the digit-sum test?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer \"divisibility by $9$\" as a label only, and stop."
+        },
+        {
+          "id": "B",
+          "text": "Sum the digits $2+4+5+7=18$; because $18$ is divisible by $9$, so is $2\\,457$."
+        },
+        {
+          "id": "C",
+          "text": "Say that divisibility by $9$ is what creates the digit sum $18$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A whole number is divisible by 9 exactly when the sum of its digits is divisible by 9; here 18 works, so 2457 is divisible by 9."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The digit-sum test decides divisibility by 9. Naming the label alone, or reversing digit sum as the effect of divisibility, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

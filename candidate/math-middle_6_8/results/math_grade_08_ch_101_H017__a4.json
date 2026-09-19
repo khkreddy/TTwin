@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Anvi lists $1,4,9,16,25$ and forms first differences $3,5,7,9$, then second differences $2,2,2$. She compares this pattern with perfect squares and perfect cubes.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What should she conclude?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The second differences stay at 2, which matches a sequence of perfect squares."
+        },
+        {
+          "id": "B",
+          "text": "The second differences stay at 2, which matches a sequence of perfect cubes."
+        },
+        {
+          "id": "C",
+          "text": "Constant first differences mean the sequence is cubes."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "For perfect squares the second differences are constant and equal to 2. Cubes need further difference levels before a constant appears."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Square sequences give constant second differences of 2. Cubes are not settled at the second-difference level. Constant first differences would be linear, not cubes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_106/H010",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_106/H010",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_106/H010"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_106:H010:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_08/ch_106",
+    "chapter_label": "math/grade_08/ch_106",
+    "subtopic_id": "math/grade_08/ch_106/H010",
+    "stem": "The diagram shows Rohan's matchstick pattern. Step $1$ uses $4$ matchsticks for one square. Each new step adds one square that shares one side with the previous square, so $3$ new matchsticks are added each time.\n\nWhich expression gives the number of matchsticks at Step $k$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$4k$",
+      "B": "$3k$",
+      "C": "$3k+1$",
+      "D": "Only Step $1$ has a matchstick count; later steps have no expression in $k$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line join=round]\n  % Step 1: one pentagon-like matchstick house: square + top\n  \\draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;\n  \\node at (1,-0.7) {Step $1$};\n  % Step 2: two squares sharing a side\n  \\begin{scope}[shift={(4.5,0)}]\n    \\draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;\n    \\draw[thick] (2,0)--(4,0)--(4,2)--(2,2);\n    \\node at (2,-0.7) {Step $2$};\n  \\end{scope}\n  % Step 3\n  \\begin{scope}[shift={(10,0)}]\n    \\draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;\n    \\draw[thick] (2,0)--(4,0)--(4,2)--(2,2);\n    \\draw[thick] (4,0)--(6,0)--(6,2)--(4,2);\n    \\node at (3,-0.7) {Step $3$};\n  \\end{scope}\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_106/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

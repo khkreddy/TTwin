@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya has a rectangular board of area $2\\,\\mathrm{m}^{2}$. She knows $1\\,\\mathrm{m}=100\\,\\mathrm{cm}$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The area is $200\\,\\mathrm{cm}^{2}$ because $2\\times 100=200$."
+    },
+    {
+      "id": "B",
+      "text": "The area is $20000\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "C",
+      "text": "Each length factor of 100 must be squared, so the area factor is $100^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "The area is $2\\,\\mathrm{cm}^{2}$ because the number 2 stays the same."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area scales by the square of the length factor: 2×100²=20000 cm². Multiplying by 100 once omits the second dimension. Keeping the number 2 with new units ignores the conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

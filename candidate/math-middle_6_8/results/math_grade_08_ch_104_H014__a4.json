@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ritu studies the diagonals of a rhombus.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The diagonals of a rhombus meet at $90^{\\circ}$ and bisect each other."
+        },
+        {
+          "id": "B",
+          "text": "The diagonals of a rhombus are always equal in length."
+        },
+        {
+          "id": "C",
+          "text": "Each diagonal of a rhombus equals a side of the rhombus."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In a rhombus the diagonals are perpendicular bisectors of each other. They need not be equal unless the rhombus is a square, and a diagonal need not equal a side."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rhombus diagonals meet at 90° and bisect each other. Equal diagonals and diagonal-equals-side are square or surface confusions, not general rhombus facts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

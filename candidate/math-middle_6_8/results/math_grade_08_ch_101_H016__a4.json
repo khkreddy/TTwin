@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Krish writes the prime factorisation $1728=2^{6}\\times 3^{3}$ and checks for a perfect cube and its cube root.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What should he conclude?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "1728 is a perfect cube and its cube root is 12."
+        },
+        {
+          "id": "B",
+          "text": "1728 is a perfect cube and its cube root is 24."
+        },
+        {
+          "id": "C",
+          "text": "1728 is not a perfect cube because an exponent is even."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The primes split into triplets: $2^{6}=(2^{2})^{3}$ and $3^{3}$, so $1728=(2^{2}\\times 3)^{3}=12^{3}$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Exponents in a perfect cube are multiples of 3. Here 6 and 3 work, and one factor from each triplet gives 2²×3=12. 24 would square-root style overshoot; an even exponent alone does not block a cube.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

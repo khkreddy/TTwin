@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_205/H015",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_205/H015",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H015"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H015:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M8",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H015",
+    "stem": "The diagram shows a colour scale from $-100$ to $+100$ for the difference between per capita rice and wheat use. Region R is marked with value $+40$. Krish reads the infographic.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Region R has per capita rice and wheat use of 40 in total.",
+      "B": "Region R prefers wheat more strongly than rice.",
+      "C": "Region R shows a stronger rice preference than wheat by the encoded difference 40.",
+      "D": "Any coloured region can be ranked by shade alone before reading the scale."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85]\n  % colour scale bar\n  \\shade[left color=blue!70,right color=red!70] (0,0) rectangle (6,0.45);\n  \\draw (0,0) rectangle (6,0.45);\n  \\foreach \\x/\\lab in {0/-100,1.5/-50,3/0,4.5/+50,6/+100}\n    \\draw (\\x,0)--(\\x,-0.12) node[below]{\\scriptsize\\lab};\n  \\node[above] at (3,0.45) {\\small rice $-$ wheat scale};\n  % region chip\n  \\fill[red!40] (1.2,1.2) rectangle (2.6,2.2);\n  \\node at (1.9,1.7) {R};\n  \\node[right] at (2.7,1.7) {value $+40$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H015",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vihaan buys a bag for $\\mathrm{Rs}\\,450$. The tag shows $\\mathrm{Rs}\\,600$. He sells the bag for $\\mathrm{Rs}\\,540$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the three prices before profit or discount is calculated?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$\\mathrm{Rs}\\,450$ is the selling price, $\\mathrm{Rs}\\,600$ is the cost price, and $\\mathrm{Rs}\\,540$ is the marked price."
+        },
+        {
+          "id": "B",
+          "text": "$\\mathrm{Rs}\\,450$ is the cost price, $\\mathrm{Rs}\\,600$ is the marked price, and $\\mathrm{Rs}\\,540$ is the selling price."
+        },
+        {
+          "id": "C",
+          "text": "Profit percent must use the marked price $\\mathrm{Rs}\\,600$ as the $100\\%$ base in every case."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Cost price is what he paid (Rs 450), marked price is the tag (Rs 600), and selling price is what the buyer pays (Rs 540). Those names come before any profit or discount percent."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "CP=450, MP=600, SP=540. Swapping the three names, or forcing MP as every profit base, misses the naming hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ishaan's spreadsheet has scores in cells $B2$, $B3$, $B4$ and $B5$. He wants the total of that column block.\n\nWhich claim correctly matches the need?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use $=B2+B3$ only, leaving $B4$ and $B5$ out of the total."
+    },
+    {
+      "id": "B",
+      "text": "Use $=\\mathrm{SUM}(A2:A5)$, which totals a different column than the scores."
+    },
+    {
+      "id": "C",
+      "text": "Use $=\\mathrm{SUM}(B2:B5)$ to add every score in that column block."
+    },
+    {
+      "id": "D",
+      "text": "Use $=B2\\times B3\\times B4\\times B5$, multiplying the scores instead of adding them."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Column total needs SUM over B2:B5. Partial B2+B3 omits cells. A2:A5 is the wrong column. Product confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

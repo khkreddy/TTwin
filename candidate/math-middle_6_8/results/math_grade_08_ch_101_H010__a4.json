@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vihaan wants a whole-number bound for $\\sqrt{80}$. He knows $8^{2}=64$ and $9^{2}=81$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\sqrt{80}=40$, by halving $80$."
+    },
+    {
+      "id": "B",
+      "text": "$\\sqrt{80}$ lies between $8$ and $9$ only when $80$ is a perfect square."
+    },
+    {
+      "id": "C",
+      "text": "$\\sqrt{80}$ lies between $8$ and $9$, because $64<80<81$."
+    },
+    {
+      "id": "D",
+      "text": "The nearby squares $64$ and $81$ settle $\\sqrt{80}$ as exactly $8$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "64<80<81 so 8<√80<9. Halving, requiring a perfect square for a bound, or forcing exact 8, miss the nearby-square bound.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows house $H$ and shop $S$ on the same side of straight path $L$. Kavya must walk from $H$ to a point $P$ on $L$, then to $S$, and wants the shortest broken path $H$-$P$-$S$. Point $S'$ is the reflection of $S$ across $L$.\n\nWhich claim correctly chooses $P$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Take $P$ as the foot of the perpendicular from $H$ to $L$ alone, and ignore $S$ and $S'$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer line only, with no choice of $P$ on $L$."
+    },
+    {
+      "id": "C",
+      "text": "Join $H$ to $S'$ by a straight segment; let $P$ be where that segment meets $L$."
+    },
+    {
+      "id": "D",
+      "text": "Reflection still chooses $P$ even when $S'$ is not the same distance from $L$ as $S$ is."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (-0.5,0)--(6.5,0) node[right] {$L$};\n  \\coordinate (H) at (1.0,2.2);\n  \\coordinate (S) at (5.2,1.6);\n  \\coordinate (Sp) at (5.2,-1.6);\n  \\coordinate (P) at (3.2,0);\n  \\fill (H) circle (1.7pt) node[above left] {$H$};\n  \\fill (S) circle (1.7pt) node[above right] {$S$};\n  \\fill (Sp) circle (1.7pt) node[below right] {$S'$};\n  \\fill (P) circle (1.7pt) node[below left] {$P$};\n  \\draw[thick] (H)--(P)--(S);\n  \\draw[dashed] (S)--(Sp);\n  \\draw[densely dashed] (H)--(Sp);\n  \\node[above] at (3.0,2.4) {house to shop via $L$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The shortest H-P-S equals the straight path H to S' meeting L at P. A perpendicular from H alone is a different case. Naming only line skips the construction. Dropping equal distance drops the reflection condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote grid source into path-line reflection sketch."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_207/H009",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_207/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_207/H009"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_207:H009:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_08/ch_207",
+    "chapter_label": "math/grade_08/ch_207",
+    "subtopic_id": "math/grade_08/ch_207/H009",
+    "stem": "Yash looks at the diagram of a pentagon on a $1\\,\\mathrm{cm}^{2}$ grid. Dashed lines from one vertex split the pentagon into triangles. He wants the area of the pentagon in square centimetres.\n\nWhich claim correctly tells how to find that area?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Find the area of each triangle from the dashed split, then add those areas.",
+      "B": "Report the word pentagon as the area on the grid.",
+      "C": "Splitting into triangles is what creates the pentagon on the grid.",
+      "D": "The area equals $1$ because the grid is labelled $1\\,\\mathrm{cm}^{2}$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.6cm,y=0.6cm,line join=round,font=\\small]\n  \\draw[gray!65,densely dashed,line width=0.3pt] (0,0) grid[step=1] (10,7);\n  \\draw[line width=1.15pt] (1,1)--(8,1)--(9,4)--(6,6)--(2,5)--cycle;\n  \\draw[line width=0.95pt,dashed] (1,1)--(6,6);\n  \\draw[line width=0.95pt,dashed] (1,1)--(9,4);\n  \\node[below] at (5,-0.35){pentagon split into triangles};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_207/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

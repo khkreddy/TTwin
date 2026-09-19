@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira checks whether $2500$ and $8000$ could be perfect cubes by using last-digit and trailing-zero patterns.\n\nWhich two claims correctly apply those patterns?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the full answer the label units digit, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "$8000$ may be a perfect cube: trailing zeros in a cube come in groups of three."
+    },
+    {
+      "id": "C",
+      "text": "$2500$ cannot be a perfect cube: a cube cannot end in exactly two zeros."
+    },
+    {
+      "id": "D",
+      "text": "Call $2500$ a cube only because the printed $25$ looks largest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trailing zeros of a perfect cube come in threes, so 8000 is possible and 2500 is not. Naming units digit alone, or grabbing printed 25, miss the trailing-zero test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

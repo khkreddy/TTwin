@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Adil writes the place value of each digit in $3.74$ using powers of $10$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which product correctly writes the place value of the digit $7$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$7 \\times 10^{1}$"
+        },
+        {
+          "id": "B",
+          "text": "$7 \\times 10^{-1}$"
+        },
+        {
+          "id": "C",
+          "text": "$7 \\times 10^{-2}$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In $3.74$, the digit $7$ sits in the tenths place, one place right of ones, so its place value is $7 \\times 10^{-1}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Places right of ones use negative powers of 10. Tenths is 10^{-1}; 10^1 is tens; 10^{-2} is the place of the 4.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

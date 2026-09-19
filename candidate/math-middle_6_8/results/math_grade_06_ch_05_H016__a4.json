@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya checks whether $3\\,572$ is divisible by $4$. She knows the test uses the number formed by the last two digits.\n\nWhich two claims correctly apply that test?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer \"divisibility by $4$\" as a label only, and stop."
+    },
+    {
+      "id": "B",
+      "text": "Form the two-digit number $72$ from the last two digits of $3\\,572$."
+    },
+    {
+      "id": "C",
+      "text": "Decide yes or no by checking whether $72$ itself is divisible by $4$."
+    },
+    {
+      "id": "D",
+      "text": "Decide only from the leading digit $3$, because $3$ is the largest printed digit."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divisibility by 4 is settled by the last two digits: form 72 and test whether 72 is divisible by 4. Naming the label alone, or grabbing the leading 3, miss the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

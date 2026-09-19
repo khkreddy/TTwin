@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Neil puts $\\mathrm{Rs}\\,4000$ in a simple-interest account at $8\\%$ per year for $2$ years.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Year-$2$ interest is $8\\%$ of the amount after year $1$, so the principal has grown."
+    },
+    {
+      "id": "B",
+      "text": "Each year the interest is $8\\%$ of the same principal $\\mathrm{Rs}\\,4000$."
+    },
+    {
+      "id": "C",
+      "text": "Over $2$ years the interest totals $\\mathrm{Rs}\\,640$, because $2\\times 0.08\\times 4000=640$."
+    },
+    {
+      "id": "D",
+      "text": "Simple interest at $8\\%$ also covers every loan and deposit Neil will ever open."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Simple interest keeps the principal fixed, so each year uses 8% of Rs 4000 and two years give Rs 640. Treating year 2 as interest on a grown amount swaps in compounding. Claiming the same rule for every future account over-extends the scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}
