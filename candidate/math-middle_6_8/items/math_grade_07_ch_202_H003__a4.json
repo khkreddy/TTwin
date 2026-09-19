@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_202/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_202/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_202/H003"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_202:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_202",
+    "chapter_label": "math/grade_07/ch_202",
+    "subtopic_id": "math/grade_07/ch_202/H003",
+    "stem": "Amaya starts at $0$ on a number line. She moves $4$ steps to the right, then $7$ steps to the left. The movements are written as $+4$ and $-7$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly gives her final position?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Her final position is $+4$, from the first movement alone."
+          },
+          {
+            "id": "B",
+            "text": "Her final position is $+11$, from adding $4$ and $7$ as unsigned lengths."
+          },
+          {
+            "id": "C",
+            "text": "Her final position is $-3$, from $0 + 4 + (-7)$."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice that uses the signed movements.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_202/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

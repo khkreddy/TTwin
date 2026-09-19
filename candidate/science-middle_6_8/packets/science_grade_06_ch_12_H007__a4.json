@@ -1,0 +1,87 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:37:33.618Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_12/H007",
+      "unit_id": "science/grade_06/ch_12/H007",
+      "title": "Decide whether a bright object called a Morning Star or Evening Star is actually a star or the planet Venus.",
+      "node_labels": [
+        "Sun, Moon, stars and time",
+        "Earth, sky, time and resources"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Venus is the brightest object in the sky."
+      }
+    ],
+    "enrichment": "Stars shine with their own light, but Venus is a planet; Venus is often seen shining brightly at dawn or dusk and is commonly called the Morning Star or Evening Star even though it is not a star. A nickname based on brightness does not make Venus a star; its identity as a planet means its shine is understood with planets and reflected sunlight rather than starlight produced by itself. The learner correctly applies this rule: Stars shine with their own light, but Venus is a planet; Venus is often seen shining brightly at dawn or dusk and is commonly called the Morning Star or Evening Star even though it is not a star. The name Star in Morning Star means Venus produces its own light like other stars.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Decide whether a bright object called a Morning Star or Evening Star is actually a star or the planet Venus. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "three_statement",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_12/H007",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_12/H007"
+  }
+}

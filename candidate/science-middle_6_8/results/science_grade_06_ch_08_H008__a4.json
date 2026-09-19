@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Water vapour condenses on the skin, and that condensation cools the skin."
+    },
+    {
+      "id": "B",
+      "text": "Evaporating water takes heat from the skin, so the skin feels cooler."
+    },
+    {
+      "id": "C",
+      "text": "Water cools the skin just by wetting it, even if none evaporates."
+    },
+    {
+      "id": "D",
+      "text": "Water evaporates because the skin has already become cooler."
+    }
+  ],
+  "item_type": "single_mcq",
+  "stem": "Mohit wets his skin with water. As the water evaporates, heat leaves the skin and his skin feels cooler. He wonders whether wetting alone, condensation of water vapour, or evaporation causes the cooling.\n\nWhy does the skin feel cooler?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation uses heat from the skin, so the skin feels cooler as water turns to vapour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

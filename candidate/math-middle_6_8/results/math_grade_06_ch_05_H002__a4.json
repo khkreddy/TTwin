@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Veer lists multiples of $3$ as $3$, $6$, $9$, $12$, $15$, $18$, $\\ldots$ and multiples of $5$ as $5$, $10$, $15$, $20$, $\\ldots$\n\nWhich two claims correctly name the smallest common multiple of $3$ and $5$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the phrase nth common multiple, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "$15$ is the smallest number that appears in both multiple lists."
+    },
+    {
+      "id": "C",
+      "text": "Among the shared multiples $15$, $30$, $\\ldots$, the smallest is $15$."
+    },
+    {
+      "id": "D",
+      "text": "$5$, because $5$ is the first printed number in the second list."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shared multiples begin 15, 30, ... so the smallest common multiple is 15. Naming nth common multiple alone substitutes a label. Picking the first printed 5 grabs a surface number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

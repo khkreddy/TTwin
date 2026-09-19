@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% crane arm\n\\draw[thick] (0,3.2)--(4.2,3.2)--(4.2,2.7);\n\\draw[thick] (0,2.4)--(0,3.4);\n\\node[font=\\footnotesize] at (0.55,3.55) {crane};\n% cell and switch\n\\draw[thick,fill=white] (0.3,1.6) rectangle (1.4,2.15);\n\\node at (0.85,1.875) {cell};\n\\node[font=\\bfseries] at (0.1,1.875) {$-$};\n\\node[font=\\bfseries] at (1.55,1.875) {$+$};\n\\draw[thick] (1.4,1.875)--(2.2,1.875);\n\\draw[thick] (2.2,1.875)--(2.55,2.2);\n\\fill (2.2,1.875) circle (1.2pt);\n\\fill (2.85,1.875) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.55,2.45) {switch};\n\\draw[thick] (2.85,1.875)--(3.5,1.875)--(3.5,2.7);\n\\draw[thick] (0.3,1.875)--(0.3,2.7)--(3.5,2.7);\n% electromagnet core + coil\n\\draw[thick,fill=gray!35] (3.15,2.05) rectangle (4.85,2.7);\n\\foreach \\x in {3.35,3.65,3.95,4.25,4.55} {\n  \\draw[thick] (\\x,1.95) arc (240:-60:0.18 and 0.35);\n}\n\\node[font=\\footnotesize] at (4.0,3.0) {electromagnet};\n% iron scrap\n\\draw[thick,fill=gray!20] (3.4,0.9) rectangle (4.1,1.25);\n\\draw[thick,fill=gray!20] (4.2,0.85) rectangle (4.7,1.2);\n\\node[font=\\footnotesize] at (4.05,0.55) {iron scrap};\n% plastic button\n\\draw[thick,fill=white] (5.4,0.95) circle (0.28);\n\\node[font=\\footnotesize] at (5.4,0.45) {plastic};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Harun's lifting electromagnet on a crane. A coil on an iron core is joined to a cell through a switch. Iron scrap sits under the electromagnet. A plastic button sits nearby.\n\nWhich prediction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Switch ON: the electromagnet picks up the iron scrap. Switch OFF: it releases the iron scrap."
+    },
+    {
+      "id": "B",
+      "text": "Switch ON: the electromagnet releases the iron scrap. Switch OFF: it picks up the iron scrap."
+    },
+    {
+      "id": "C",
+      "text": "Switch ON: the electromagnet picks up the iron scrap and the plastic button."
+    },
+    {
+      "id": "D",
+      "text": "Switch OFF: the electromagnet keeps holding the iron scrap as strongly as when the switch was ON."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Current ON makes the electromagnet attract iron, so scrap is lifted; OFF removes that magnetism and the scrap is released. Plastic is not attracted. Holding after OFF treats the electromagnet like a permanent magnet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Crane electromagnet with cell, switch, iron scrap, and plastic button."
+  }
+}

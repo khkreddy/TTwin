@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Shaan places the fraction $\\dfrac{2}{5}$ on a number line marked from $0$ to $1$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly places $\\dfrac{2}{5}$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Divide the interval from $0$ to $1$ into $5$ equal lengths and count $2$ of those lengths from $0$."
+        },
+        {
+          "id": "B",
+          "text": "Mark a point near $1$ because the printed $5$ looks large."
+        },
+        {
+          "id": "C",
+          "text": "The number-line placement rule also requires changing $\\dfrac{2}{5}$ into a decimal first."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Partition the unit interval into 5 equal parts and take 2 of them from 0 to locate 2/5."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal partitioning of the unit interval and counting places the fraction. Printed digit size is a surface grab. Decimal conversion is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

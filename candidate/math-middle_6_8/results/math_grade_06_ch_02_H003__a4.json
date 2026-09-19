@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anvi marks three distinct points $P$, $Q$, and $R$ on her paper that do not lie on one straight path.\n\nWhich two claims correctly count the distinct lines fixed by those points?",
+  "options": [
+    {
+      "id": "A",
+      "text": "One line, because any three points always share a single line."
+    },
+    {
+      "id": "B",
+      "text": "Three lines $PQ$, $QR$, and $RP$, because each pair of distinct points fixes exactly one line."
+    },
+    {
+      "id": "C",
+      "text": "Each pair among $P$, $Q$, and $R$ determines one unique line, giving three lines in all."
+    },
+    {
+      "id": "D",
+      "text": "Nine lines, by multiplying three points by three possible directions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Non-collinear distinct points determine one line per pair, so three lines. Claiming one shared line omits distinctness. Multiplying points by directions confuses the count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

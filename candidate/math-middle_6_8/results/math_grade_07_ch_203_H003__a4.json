@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Darsh writes $84 = 2^{2} \\times 3 \\times 7$. He asks whether $12$ is a factor of $84$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$12$ is a factor only when $12$ appears as a single printed prime in the factorisation."
+    },
+    {
+      "id": "B",
+      "text": "$12 = 2^{2} \\times 3$, and that product is formed from a subpart of $2^{2} \\times 3 \\times 7$."
+    },
+    {
+      "id": "C",
+      "text": "$12$ is a factor of $84$, because its primes sit inside the prime factorisation of $84$."
+    },
+    {
+      "id": "D",
+      "text": "$12$ is not a factor, because $84$ divided by $12$ must be checked by long division alone."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A factor can be assembled from a subproduct of the prime factorisation; 12=2^2*3 sits inside 84=2^2*3*7. Requiring 12 as a printed prime or insisting only on long division misses that subpart test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

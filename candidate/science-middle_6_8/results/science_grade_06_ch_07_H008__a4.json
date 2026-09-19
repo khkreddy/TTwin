@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Immerse the bulb in the water and keep the stem above the water."
+    },
+    {
+      "id": "B",
+      "text": "Immerse the stem in the water and leave the bulb above the water."
+    },
+    {
+      "id": "C",
+      "text": "Wait until the liquid column stops rising, then read while the bulb is still in the water."
+    },
+    {
+      "id": "D",
+      "text": "Wait until the liquid column stops rising, remove the thermometer from the water, then read it."
+    }
+  ],
+  "item_type": "one_or_more",
+  "stem": "Zara measures the temperature of warm water in a beaker with a laboratory thermometer. The thermometer has a bulb and a stem with a liquid column. She must place the bulb correctly, wait, and then read.\n\nWhich steps are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The bulb stays in the water; read after the column stops rising, without removing the thermometer first.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

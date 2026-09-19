@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!25] (0.0,1.4) rectangle (1.8,2.1);\n\\draw[thick,fill=blue!25] (1.8,1.4) rectangle (3.6,2.1);\n\\node at (0.9,1.75) {N};\n\\node at (2.7,1.75) {S};\n\\node at (1.8,1.05) {bar magnet};\n% thin paper sheet\n\\draw[thick,fill=yellow!20] (4.0,1.2) rectangle (4.35,2.3);\n\\node at (4.175,2.55) {paper};\n\\node at (4.175,0.85) {sheet};\n% compass\n\\draw[thick,fill=white] (5.6,1.75) circle (0.55);\n\\draw[thick,->] (5.6,1.75) -- (5.35,2.15);\n\\node at (5.6,0.85) {compass};\n\\node at (5.6,0.55) {needle};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a bar magnet, a thin paper sheet, and a compass. Yusuf places the sheet between the magnet and the compass needle.\n\nWhat should he expect?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needle stops responding; any sheet blocks the magnet."
+    },
+    {
+      "id": "B",
+      "text": "The needle can still turn; a thin paper sheet does not cut off the magnet's effect."
+    },
+    {
+      "id": "C",
+      "text": "The needle responds only if the sheet is removed."
+    },
+    {
+      "id": "D",
+      "text": "The compass becomes a magnet because the sheet is white."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A common thin paper sheet between a magnet and a compass does not stop the magnetic effect, so the needle can still turn. Not every sheet blocks magnetism; removing the sheet is not required for a response; the sheet's colour does not make the compass a magnet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source gap circuit into bar magnet, thin paper sheet, and compass needle in a line."
+  }
+}

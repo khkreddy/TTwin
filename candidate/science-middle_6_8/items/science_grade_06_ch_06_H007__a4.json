@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_06/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_06/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "relationship_reversal",
+      "C": "scope_error",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_06/H007"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_06:H007:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_06/ch_06",
+    "chapter_label": "Materials around us",
+    "subtopic_id": "science/grade_06/ch_06/H007",
+    "stem": "Arhaan stirs sugar and chalk powder into separate glasses of water and waits. The sugar disappears completely. The chalk remains as solid bits and some water above it looks cloudy.\n\nWhich classification is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Sugar that dissolves completely is soluble; chalk that remains undissolved is insoluble.",
+      "B": "Sugar that dissolves completely is insoluble; chalk that remains undissolved is soluble.",
+      "C": "Soluble and insoluble apply only when the water looks cloudy.",
+      "D": "Chalk that remains undissolved is still soluble because the water above it looks cloudy."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_06/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

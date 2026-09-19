@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly gives her final position?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Her final position is $+4$, from the first movement alone."
+        },
+        {
+          "id": "B",
+          "text": "Her final position is $+11$, from adding $4$ and $7$ as unsigned lengths."
+        },
+        {
+          "id": "C",
+          "text": "Her final position is $-3$, from $0 + 4 + (-7)$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses the signed movements.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "structured_parts",
+  "stem": "Amaya starts at $0$ on a number line. She moves $4$ steps to the right, then $7$ steps to the left. The movements are written as $+4$ and $-7$.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Each signed movement adds to the current position, so 0+4+(-7)=-3."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Final position is the sum of signed movements from the start. Keeping only the first move or adding unsigned lengths misses that sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

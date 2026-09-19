@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is best?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Earth is at a distance where temperatures allow water to stay liquid."
+        },
+        {
+          "id": "B",
+          "text": "Earth is the largest planet, so it can hold more water."
+        },
+        {
+          "id": "C",
+          "text": "Any distance from the Sun would still keep water liquid on Earth."
+        },
+        {
+          "id": "D",
+          "text": "Earth is the fastest planet, so its water never freezes."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Jhanvi builds a simple Solar System model. Her teacher asks why Earth's distance from the Sun matters for liquid water and for life.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Earth's orbital distance keeps a temperature range where liquid water can exist, which supports habitability."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's distance from the Sun sets a temperature range that allows liquid water. Size or orbital speed alone, or claiming any distance works, miss that position-to-habitability link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

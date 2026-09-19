@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_206/H002",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_206/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H002"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_206:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_206",
+    "chapter_label": "math/grade_07/ch_206",
+    "subtopic_id": "math/grade_07/ch_206/H002",
+    "stem": "Amaya looks at the diagram. Point $O$ lies on a straight line, and a right angle is to be built at $O$.\n\nWhich plan correctly constructs the $90^\\circ$ angle at $O$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Mark points $X$ and $Y$ on the line at equal distances from $O$ so that $O$ is the midpoint of $XY$, then construct the perpendicular bisector of $XY$.",
+      "B": "Keep $O$ on the line and draw any upright ray from $O$.",
+      "C": "First draw a line that looks upright through $O$, then mark equal distances from $O$.",
+      "D": "Treat $O$ as a point off the line and drop a perpendicular from outside."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.5,0)--(5.5,0);\n  \\fill (2.5,0) circle (1.6pt);\n  \\node[below] at (2.5,-0.15){$O$};\n  \\fill (0.8,0) circle (1.4pt);\n  \\fill (4.2,0) circle (1.4pt);\n  \\node[below] at (0.8,-0.15){$X$};\n  \\node[below] at (4.2,-0.15){$Y$};\n  \\draw[line width=0.85pt,dashed] (2.5,-1.8)--(2.5,2.2);\n  \\draw[line width=0.7pt] (2.5,0)--(2.5,0.35)--(2.85,0.35)--(2.85,0);\n  \\node[above right] at (2.65,1.6){$90^\\circ$};\n  \\draw[line width=0.55pt] (0.8,0) arc (180:40:1.7);\n  \\draw[line width=0.55pt] (4.2,0) arc (0:140:1.7);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_206/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

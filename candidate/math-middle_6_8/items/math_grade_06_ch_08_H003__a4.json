@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_08/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_08/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_08/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H003",
+    "stem": "The diagram shows Rumi's four-sided card, tilted on the page. Every side is $4\\,\\mathrm{cm}$, and every corner is $90^\\circ$.\n\nWhich claim correctly names the figure?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A square, because all sides are equal and all angles are $90^\\circ$, even though the card is tilted.",
+      "B": "A rectangle only, because any four-sided shape with right angles is called a rectangle.",
+      "C": "A square, because the four sides are equal.",
+      "D": "Not a square, because tilting the card is what changes its side lengths and angles."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,line join=round]\n  \\coordinate (P) at (0,2.2);\n  \\coordinate (Q) at (2.2,0);\n  \\coordinate (R) at (0,-2.2);\n  \\coordinate (S) at (-2.2,0);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[thick] (-0.28,1.92)--(-0.28,1.64)--(0,1.64);\n  \\node[above right] at (1.2,1.2) {$4\\,\\mathrm{cm}$};\n  \\node[below right] at (1.2,-1.2) {$4\\,\\mathrm{cm}$};\n  \\node[below left] at (-1.2,-1.2) {$4\\,\\mathrm{cm}$};\n  \\node[above left] at (-1.2,1.2) {$4\\,\\mathrm{cm}$};\n  \\node[above] at (P) {P};\n  \\node[right] at (Q) {Q};\n  \\node[below] at (R) {R};\n  \\node[left] at (S) {S};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

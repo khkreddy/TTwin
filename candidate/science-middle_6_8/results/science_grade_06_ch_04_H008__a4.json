@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Unlike poles on the same side, wood between them, and hard steel pieces across the ends."
+    },
+    {
+      "id": "B",
+      "text": "Unlike poles on the same side, wood between them, and soft iron keepers across the ends."
+    },
+    {
+      "id": "C",
+      "text": "Unlike poles on the same side, soft iron between them, and wood across the ends."
+    },
+    {
+      "id": "D",
+      "text": "Unlike poles on the same side, magnets touching with no wood, and soft iron keepers across the ends."
+    }
+  ],
+  "item_type": "single_mcq",
+  "stem": "Mohit stores a pair of bar magnets. Safe storage uses unlike poles on the same side, a wooden piece between the magnets, and soft iron keepers across the ends. He also has hard steel pieces and could leave out the wood.\n\nWhich storage choice is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "operation_confusion",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Safe pair storage keeps unlike poles aligned, wood between the magnets, and soft iron keepers across the ends.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

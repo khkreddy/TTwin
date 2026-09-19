@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rumi must evaluate $5 \\times (6 - 2) + 3$.\n\nWhich two claims correctly decide the order of working?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the word grouping, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "First evaluate $6 - 2$ inside the brackets to get $4$, then compute $5 \\times 4 + 3 = 23$."
+    },
+    {
+      "id": "C",
+      "text": "The brackets force $6 - 2$ to be done before the multiplication by $5$."
+    },
+    {
+      "id": "D",
+      "text": "Multiply $5 \\times 6$ first, then subtract $2$, giving $31$ after adding $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Brackets require 6−2 first, then 5×4+3=23. Naming grouping alone substitutes a label. Ignoring brackets and multiplying 5×6 first uses the unbracketed order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

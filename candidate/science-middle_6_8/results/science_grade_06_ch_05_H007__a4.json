@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Leena must measure the length of a curved path drawn on paper.\n\nWhich methods measure the curved length correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lay a thread along the curve, mark the ends, straighten the thread, and measure it on a scale."
+    },
+    {
+      "id": "B",
+      "text": "Place a straight scale along a chord of the curve and call that length the curved path."
+    },
+    {
+      "id": "C",
+      "text": "Fit several short straight scale segments along the curve and add those lengths."
+    },
+    {
+      "id": "D",
+      "text": "Say a curved path cannot be measured with a scale or thread."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A curved length can be taken with thread along the curve then measured straight, or by adding short straight segments along the curve. A single chord is not the curved path. Curved lengths are measurable.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H003",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H003",
+    "stem": "The diagram shows Anvi's triangular plot. The side lengths are $6\\,\\mathrm{m}$, $8\\,\\mathrm{m}$, and $10\\,\\mathrm{m}$.\n\nWhich claim correctly gives the perimeter of the plot?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Perimeter $= 6 + 8 + 10 = 24\\,\\mathrm{m}$.",
+      "B": "Perimeter $= 10\\,\\mathrm{m}$, taking the longest side length as the perimeter.",
+      "C": "Each side equals $24\\,\\mathrm{m}$, because the perimeter produces each side.",
+      "D": "Perimeter $= 3\\,\\mathrm{m}$, because a triangle is named by having three sides."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.42,line cap=round,line join=round]\n  \\draw[thick] (0,0) -- (10,0) -- (3.6,6.4) -- cycle;\n  \\node[below] at (5,0) {$10\\,\\mathrm{m}$};\n  \\node[left] at (1.7,3.2) {$6\\,\\mathrm{m}$};\n  \\node[right] at (7.0,3.2) {$8\\,\\mathrm{m}$};\n  \\node[below left] at (0,0) {A};\n  \\node[below right] at (10,0) {B};\n  \\node[above] at (3.6,6.4) {C};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

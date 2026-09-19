@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Yusuf compares how fast equal amounts of water dry. He can use a shallow wide plate or a narrow-necked bottle, and he can change temperature and how humid the air is.\n\nWhich claims about evaporation are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "With the same amount, temperature, and humidity, water in the shallow wide plate evaporates faster than water in the narrow-necked bottle."
+    },
+    {
+      "id": "B",
+      "text": "The wide plate always finishes first, even if it holds much more water than the bottle."
+    },
+    {
+      "id": "C",
+      "text": "With temperature and exposed area equal, water evaporates faster in dry air than in humid air."
+    },
+    {
+      "id": "D",
+      "text": "Water near room temperature cannot evaporate at all until it boils."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Larger exposed surface and drier air speed evaporation when other factors match. Amount must be controlled; boiling is not required for evaporation at room temperature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

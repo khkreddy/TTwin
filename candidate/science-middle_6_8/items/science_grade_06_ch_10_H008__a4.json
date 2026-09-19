@@ -1,0 +1,87 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_10/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_10/H008",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_10/H008"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_10:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_06/ch_10",
+    "chapter_label": "Living creatures: exploring their characteristics",
+    "subtopic_id": "science/grade_06/ch_10/H008",
+    "stem": "Qasim sees mosquito larvae in stagnant water. A thin, transparent kerosene layer covers the water surface and blocks contact between the water and air. Adult mosquitoes fly above the water.",
+    "item_type": "three_statement",
+    "options": {},
+    "statements": [
+      {
+        "id": "1",
+        "text": "Larvae need to reach air at the surface to breathe, so the kerosene layer disrupts their development."
+      },
+      {
+        "id": "2",
+        "text": "Adult mosquitoes flying above the water must also breathe through that water surface, so the layer stops them the same way."
+      },
+      {
+        "id": "3",
+        "text": "Because the kerosene layer is transparent, air still reaches the larvae and breathing is unchanged."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_10/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

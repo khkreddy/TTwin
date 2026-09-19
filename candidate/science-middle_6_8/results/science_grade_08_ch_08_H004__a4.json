@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Harun leaves a bottle of clear lime water open to the air. After some time the liquid turns milky.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Carbon dioxide from the air reacts with the lime water."
+    },
+    {
+      "id": "B",
+      "text": "The milky look is evidence that carbon dioxide took part in the change."
+    },
+    {
+      "id": "C",
+      "text": "Oxygen from the air is the gas that turns lime water milky."
+    },
+    {
+      "id": "D",
+      "text": "The milky look shows only that the bottle was open, not which gas reacted."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lime water turns milky because carbon dioxide from air reacts; that milkiness is evidence for CO2. Naming oxygen instead, or treating openness alone as the explanation, misses the gas identity hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

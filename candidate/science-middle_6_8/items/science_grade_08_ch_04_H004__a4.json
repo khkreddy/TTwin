@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H004"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H004:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H004",
+    "stem": "The diagram shows Harun's lifting electromagnet on a crane. A coil on an iron core is joined to a cell through a switch. Iron scrap sits under the electromagnet. A plastic button sits nearby.\n\nWhich prediction is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Switch ON: the electromagnet picks up the iron scrap. Switch OFF: it releases the iron scrap.",
+      "B": "Switch ON: the electromagnet releases the iron scrap. Switch OFF: it picks up the iron scrap.",
+      "C": "Switch ON: the electromagnet picks up the iron scrap and the plastic button.",
+      "D": "Switch OFF: the electromagnet keeps holding the iron scrap as strongly as when the switch was ON."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% crane arm\n\\draw[thick] (0,3.2)--(4.2,3.2)--(4.2,2.7);\n\\draw[thick] (0,2.4)--(0,3.4);\n\\node[font=\\footnotesize] at (0.55,3.55) {crane};\n% cell and switch\n\\draw[thick,fill=white] (0.3,1.6) rectangle (1.4,2.15);\n\\node at (0.85,1.875) {cell};\n\\node[font=\\bfseries] at (0.1,1.875) {$-$};\n\\node[font=\\bfseries] at (1.55,1.875) {$+$};\n\\draw[thick] (1.4,1.875)--(2.2,1.875);\n\\draw[thick] (2.2,1.875)--(2.55,2.2);\n\\fill (2.2,1.875) circle (1.2pt);\n\\fill (2.85,1.875) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.55,2.45) {switch};\n\\draw[thick] (2.85,1.875)--(3.5,1.875)--(3.5,2.7);\n\\draw[thick] (0.3,1.875)--(0.3,2.7)--(3.5,2.7);\n% electromagnet core + coil\n\\draw[thick,fill=gray!35] (3.15,2.05) rectangle (4.85,2.7);\n\\foreach \\x in {3.35,3.65,3.95,4.25,4.55} {\n  \\draw[thick] (\\x,1.95) arc (240:-60:0.18 and 0.35);\n}\n\\node[font=\\footnotesize] at (4.0,3.0) {electromagnet};\n% iron scrap\n\\draw[thick,fill=gray!20] (3.4,0.9) rectangle (4.1,1.25);\n\\draw[thick,fill=gray!20] (4.2,0.85) rectangle (4.7,1.2);\n\\node[font=\\footnotesize] at (4.05,0.55) {iron scrap};\n% plastic button\n\\draw[thick,fill=white] (5.4,0.95) circle (0.28);\n\\node[font=\\footnotesize] at (5.4,0.45) {plastic};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

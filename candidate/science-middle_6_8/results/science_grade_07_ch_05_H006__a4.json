@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly classifies the changes?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Melting the ice is reversible because the ice can be brought back; chopping the carrot is not reversible because the whole carrot cannot be brought back."
+        },
+        {
+          "id": "B",
+          "text": "Chopping the carrot is reversible because the carrot material is still there."
+        },
+        {
+          "id": "C",
+          "text": "Melting the ice is not reversible."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Bharti melts some ice to water and later freezes the water back to ice. She also chops a carrot into small pieces.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A change is reversible only if the original object or substance can be brought back. Ice can be recovered by freezing; the whole chopped carrot cannot."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reversibility asks whether the original object or substance can be brought back. Melting ice can be reversed by freezing; chopping cannot restore the whole carrot. Keeping the material alone does not make chopping reversible, and melting is reversible.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

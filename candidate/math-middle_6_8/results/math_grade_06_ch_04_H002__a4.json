@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rumi records favourite colours from her row: blue, red, blue, green, blue, red.\n\nWhich claim correctly converts that unordered list into frequencies that show the most common colour?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Leave the answers in the order she heard them and treat that list as the finished frequency table."
+    },
+    {
+      "id": "B",
+      "text": "Colour categories are what create the raw colour answers she wrote down."
+    },
+    {
+      "id": "C",
+      "text": "Group matching colours and count the frequency in each group; blue has the greatest count."
+    },
+    {
+      "id": "D",
+      "text": "The raw-list rule also covers decorative artwork choices that are not colour answers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Frequencies come from grouping matching colours and counting. Leaving the raw order omits categorising. Saying categories create the answers reverses the relation. Artwork is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

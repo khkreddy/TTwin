@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Arhaan watches mosquitoes in a tub of stagnant water. He wants the stage order and how watching the water can place larva before pupa.\n\nWhich statements are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The order is egg → larva → pupa → adult mosquito."
+    },
+    {
+      "id": "B",
+      "text": "In the water, the larva stage is seen before the pupa stage."
+    },
+    {
+      "id": "C",
+      "text": "The order is egg → pupa → larva → adult mosquito."
+    },
+    {
+      "id": "D",
+      "text": "Larva and pupa belong to different mosquito species."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquito order is egg, larva, pupa, then adult. Observation in water places larva before pupa. Swapping larva and pupa reverses the order. Larva and pupa are stages of one life cycle, not different species.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

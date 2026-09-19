@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Veer has a square paper. He wants to count its lines of symmetry by testing folds.\n\nWhich two claims correctly count those lines?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Infinitely many, because any line through the centre looks balanced at a glance."
+    },
+    {
+      "id": "B",
+      "text": "Four lines: two through midpoints of opposite sides and two through opposite corners, each passing the fold test."
+    },
+    {
+      "id": "C",
+      "text": "Systematic fold checks find exactly four valid fold lines on the square."
+    },
+    {
+      "id": "D",
+      "text": "Four folds are what create the square in the first place."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A square has four fold lines that each pass the overlap test. Glance balance omits the fold test. Saying folds create the square reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

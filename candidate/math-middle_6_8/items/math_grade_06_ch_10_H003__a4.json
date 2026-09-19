@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_10/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_10/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "mechanism_conflation",
+      "D": "operation_confusion",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_10/H003"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_10:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_10",
+    "chapter_label": "math/grade_06/ch_10",
+    "subtopic_id": "math/grade_06/ch_10/H003",
+    "stem": "Anvi stands at $+4$ on a number line and then moves $-7$.\n\nWhich claim correctly names where she finishes?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$-7$, reporting only the movement.",
+      "B": "$+11$, by adding $4$ and $7$ as same-direction jumps.",
+      "C": "$-3$, because start plus movement equals $4 + (-7)$.",
+      "D": "$53$, by computing $4 + 7^{2}$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_10/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

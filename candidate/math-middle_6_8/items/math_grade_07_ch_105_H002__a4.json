@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H002",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H002"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H002",
+    "stem": "Amaya looks at the diagram. Straight lines $\\ell$ and $m$ meet at $O$. One angle at $O$ is marked $65^\\circ$, and the adjacent angle on the same straight line is marked $x$.\n\nWhich measure of $x$ is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$x = 115^\\circ$.",
+      "B": "$x = 65^\\circ$.",
+      "C": "$x = 25^\\circ$.",
+      "D": "$x = 180^\\circ$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.8,0)--(5.2,0);\n  \\draw[line width=1.05pt] (2.2,-1.6)--(2.2,2.4);\n  \\fill (2.2,0) circle (1.6pt);\n  \\node[below left] at (2.05,-0.15){$O$};\n  \\draw[line width=0.7pt] (2.2,0) ++(0:0.7) arc (0:90:0.7);\n  \\node[above right] at (2.85,0.45){$65^\\circ$};\n  \\draw[line width=0.7pt] (2.2,0) ++(90:0.55) arc (90:180:0.55);\n  \\node[above left] at (1.45,0.55){$x$};\n  \\node[right] at (5.2,0){$\\ell$};\n  \\node[above] at (2.2,2.4){$m$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

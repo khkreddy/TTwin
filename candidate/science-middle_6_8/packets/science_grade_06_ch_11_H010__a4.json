@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_23:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:33:17.162Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_23:q27",
+    "item_type": "single_mcq",
+    "stem": "Aluminium is used to make containers for storing food.\n\nWhich property makes it suitable for this use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts heat"
+      },
+      {
+        "id": "B",
+        "text": "low density"
+      },
+      {
+        "id": "C",
+        "text": "resists corrosion"
+      },
+      {
+        "id": "D",
+        "text": "shiny surface"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Once the trunks are cut, nothing holds the soil together, even if all the roots remain intact."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Fresh leaves left behind by forest cutting immediately become new soil without decomposing."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Removing the forest plants and their roots reduces soil washing away because roots loosen the soil."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Normal seasonal leaf fall harms forest soil and removes animals' food and shelter just like cutting down the forest."
+      }
+    ],
+    "enrichment": "Plant roots hold soil and prevent it from being washed away. Leaves on the ground and decomposing plants and animals become part of soil, so cutting forests on a large scale harms soil quality and removes food and shelter for animals. When trees and other forest plants are removed, roots no longer hold soil in the same way, leaf cover and decomposition decrease, and animals lose the forest support they depended on. The learner correctly applies this rule: Plant roots hold soil and prevent it from being washed away. Leaves on the ground and decomposing plants and animals become part of soil, so cutting forests on a large scale harms soil quality and removes food and shelter for animals. Cutting trees affects only wood availability, not soil quality or animal living conditions.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H010",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts heat” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “low density” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “shiny surface” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Predict how cutting a large forest area affects soil quality and living conditions in the forest. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_s19_qp_23:q27",
+    "hinge": "science/grade_06/ch_11/H010",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_11/H010"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Rumi's four-sided card, tilted on the page. Every side is $4\\,\\mathrm{cm}$, and every corner is $90^\\circ$.\n\nWhich claim correctly names the figure?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A square, because all sides are equal and all angles are $90^\\circ$, even though the card is tilted."
+    },
+    {
+      "id": "B",
+      "text": "A rectangle only, because any four-sided shape with right angles is called a rectangle."
+    },
+    {
+      "id": "C",
+      "text": "A square, because the four sides are equal."
+    },
+    {
+      "id": "D",
+      "text": "Not a square, because tilting the card is what changes its side lengths and angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,line join=round]\n  \\coordinate (P) at (0,2.2);\n  \\coordinate (Q) at (2.2,0);\n  \\coordinate (R) at (0,-2.2);\n  \\coordinate (S) at (-2.2,0);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[thick] (-0.28,1.92)--(-0.28,1.64)--(0,1.64);\n  \\node[above right] at (1.2,1.2) {$4\\,\\mathrm{cm}$};\n  \\node[below right] at (1.2,-1.2) {$4\\,\\mathrm{cm}$};\n  \\node[below left] at (-1.2,-1.2) {$4\\,\\mathrm{cm}$};\n  \\node[above left] at (-1.2,1.2) {$4\\,\\mathrm{cm}$};\n  \\node[above] at (P) {P};\n  \\node[right] at (Q) {Q};\n  \\node[below] at (R) {R};\n  \\node[left] at (S) {S};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sides and four right angles make a square, tilt or not. Calling it only a rectangle substitutes the weaker label. Equal sides alone omit the angle condition. Saying tilt changes the measures reverses cause.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source right triangle as a tilted square PQRS with equal 4 cm sides and a right-angle mark; stem refers to the diagram."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The shortest shadow on a day marks when the Sun is highest in the sky."
+    },
+    {
+      "id": "2",
+      "text": "The time from the shortest shadow on day 1 to the shortest shadow on day 2 is nearly 24 hours."
+    },
+    {
+      "id": "3",
+      "text": "The longest shadow on a day marks when the Sun is highest in the sky."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Tia plants a vertical stick on the playground and marks the tip of its shadow through two school days. She wants to measure one day of nearly 24 hours.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shortest shadow marks the Sun's highest position; spacing those marks on successive days measures nearly 24 hours. The longest shadow is not noon, so statement 3 is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

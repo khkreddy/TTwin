@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (2.6,0);\n  \\coordinate (R) at (0.7,1.9);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P){$P$};\n  \\node[below right] at (Q){$Q$};\n  \\node[above] at (R){$R$};\n  \\coordinate (X) at (4.2,0.2);\n  \\coordinate (Y) at (6.8,0.2);\n  \\coordinate (Z) at (4.9,2.1);\n  \\draw[line width=1.05pt] (X)--(Y)--(Z)--cycle;\n  \\node[below left] at (X){$X$};\n  \\node[below right] at (Y){$Y$};\n  \\node[above] at (Z){$Z$};\n  \\node[align=center] at (3.4,-1.0){$\\triangle PQR \\cong \\triangle XYZ$};\n\\end{tikzpicture}",
+  "item_type": "single_mcq",
+  "stem": "Lochan looks at the diagram. The marking shows $\\triangle PQR \\cong \\triangle XYZ$.\n\nWhich claim correctly names the side that corresponds to side $PQ$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Side $PQ$ corresponds to side $XY$."
+    },
+    {
+      "id": "B",
+      "text": "Side $PQ$ corresponds to side $YZ$."
+    },
+    {
+      "id": "C",
+      "text": "Side $PQ$ corresponds to side $PR$."
+    },
+    {
+      "id": "D",
+      "text": "Side $PQ$ corresponds to side $XZ$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Congruence notation pairs vertices in order: P with X and Q with Y, so PQ corresponds to XY. Pairing with YZ, with a side of the same triangle, or with XZ misses that order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as two congruent triangles PQR and XYZ with congruence statement."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Leena leaves muddy water undisturbed in a tall glass. After the mud settles, she carefully pours off the clearer water.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sedimentation lets heavier mud settle, and decantation pours off the liquid above it."
+    },
+    {
+      "id": "B",
+      "text": "The settling of mud at the bottom is itself called decantation."
+    },
+    {
+      "id": "C",
+      "text": "The same settling-and-pour method will separate dissolved salt from salt water."
+    },
+    {
+      "id": "D",
+      "text": "After pouring, no tiny mud particle can remain in the liquid that was poured off."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sedimentation is settling of heavier matter; decantation is pouring off the liquid above. Settling is not decantation. Dissolved salt does not settle for this method. Some fine particles may remain after pouring.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

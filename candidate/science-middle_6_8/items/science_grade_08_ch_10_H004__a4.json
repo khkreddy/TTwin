@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_10/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_10/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H004"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H004:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H004",
+    "stem": "The diagram shows a ray of light reflected from a plane mirror in Eshan's optics activity. The dashed line is the normal. Angles at the point of incidence are labelled P, Q, R and S.\n\nWhich pair are the angle of incidence and the angle of reflection?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Q and R",
+      "B": "P and S",
+      "C": "P and Q",
+      "D": "R and S"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,font=\\sffamily\\small]\n% mirror\n\\draw[thick] (-2.8,0)--(2.8,0);\n\\foreach \\x in {-2.6,-2.2,-1.8,-1.4,-1.0,-0.6,-0.2,0.2,0.6,1.0,1.4,1.8,2.2,2.6} {\n  \\draw[thin] (\\x,0)--++(-0.15,-0.25);\n}\n\\node[font=\\footnotesize] at (2.1,-0.55) {mirror};\n% normal\n\\draw[dashed,thick] (0,0)--(0,3.2);\n\\node[font=\\footnotesize] at (0.55,3.0) {normal};\n% incident ray\n\\draw[->,thick] (-2.4,2.6)--(0,0);\n\\node[font=\\footnotesize] at (-2.55,2.85) {incident};\n% reflected ray\n\\draw[->,thick] (0,0)--(2.4,2.6);\n\\node[font=\\footnotesize] at (2.55,2.85) {reflected};\n% angle arcs: Q (i) and R (r) from normal; P and S from mirror\n\\draw[thick] (0,0.7) arc (90:132:0.7);\n\\node at (-0.55,1.05) {Q};\n\\draw[thick] (0,0.7) arc (90:48:0.7);\n\\node at (0.55,1.05) {R};\n\\draw[thick] (-0.85,0) arc (180:132:0.85);\n\\node at (-1.25,0.45) {P};\n\\draw[thick] (0.85,0) arc (0:48:0.85);\n\\node at (1.25,0.45) {S};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

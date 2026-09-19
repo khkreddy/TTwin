@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Omar uses a circuit tester with a cell, a bulb, and wires. He joins aluminium between the free ends and the bulb glows. The tester wires have rubber covering. He also has a piece of dull copper.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Aluminium is a good conductor of electricity because the bulb glows when the tester circuit is complete."
+    },
+    {
+      "id": "B",
+      "text": "Touching live metal parts is unsafe because metals that make the tester bulb glow can conduct electricity."
+    },
+    {
+      "id": "C",
+      "text": "Aluminium is a poor conductor because in another try the bulb stayed off when a tester wire was disconnected."
+    },
+    {
+      "id": "D",
+      "text": "Dull copper must be a poor conductor because it is not shiny."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A complete tester that lights shows the joined material conducts; that is why metals that light the bulb are unsafe to touch on live parts. A disconnected wire does not prove aluminium is a poor conductor, and shininess is not the conductivity test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

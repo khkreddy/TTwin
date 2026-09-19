@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Niyati stands beside a hot fire and also thinks about sunlight warming Earth. She may talk about conduction, convection, and radiation.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heat from the Sun reaches Earth by radiation."
+    },
+    {
+      "id": "B",
+      "text": "Warmth from the fire can reach Niyati by radiation without needing touch."
+    },
+    {
+      "id": "C",
+      "text": "The Sun heats Earth by conduction."
+    },
+    {
+      "id": "D",
+      "text": "The warmth reaching Niyati beside the fire is only convection because hot air carries it to her."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Radiation transfers heat without needing contact or a moving fluid, so sunlight and fire warmth can both arrive by radiation. Calling sunlight conduction, or saying fire warmth is only convection, misses radiation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

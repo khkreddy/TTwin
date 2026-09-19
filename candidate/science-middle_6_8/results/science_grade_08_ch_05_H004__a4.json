@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly classifies these forces?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The push on the book is a contact force; the magnet's pull on the pin is a non-contact force."
+        },
+        {
+          "id": "B",
+          "text": "Both are contact forces, because every force needs objects to touch."
+        },
+        {
+          "id": "C",
+          "text": "The magnet's pull is a contact force; the push on the book is a non-contact force."
+        },
+        {
+          "id": "D",
+          "text": "Both are non-contact forces, because the book and the pin both move."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Jhanvi pushes a book across a desk with her hand. Separately, a bar magnet pulls a steel pin from a short distance without touching the pin first.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A contact force needs touching (hand on book); a non-contact force can act without touching (magnet on pin)."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Contact forces act through touching; non-contact forces can act at a distance. The hand-book push is contact; the magnet-pin pull starts without contact. Swapping the labels, requiring every force to touch, or using motion alone as the test all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

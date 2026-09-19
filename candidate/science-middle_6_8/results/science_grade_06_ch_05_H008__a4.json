@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The school gate is the reference point for the 12 m distance."
+    },
+    {
+      "id": "B",
+      "text": "Both friends can report different distances for the same tap from the same gate."
+    },
+    {
+      "id": "C",
+      "text": "Naming the school gate with the 12 m describes the tap's position."
+    },
+    {
+      "id": "D",
+      "text": "The bright colour of the tap is what makes the 12 m a position."
+    }
+  ],
+  "item_type": "one_or_more",
+  "stem": "Inaya stands by a fixed school gate. She says the water tap is 12 m from the school gate. The tap is brightly coloured. A friend later looks at the same tap and the same gate.\n\nWhich claims correctly describe that position? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A position needs a distance and a named reference point; the school gate is that reference for the 12 m.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

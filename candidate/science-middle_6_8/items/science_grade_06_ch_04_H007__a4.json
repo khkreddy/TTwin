@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_06/ch_04/H007",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_06/ch_04/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H007"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H007:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H007",
+    "stem": "The diagram shows a bar magnet, a thin paper sheet, and a compass. Yusuf places the sheet between the magnet and the compass needle.\n\nWhat should he expect?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The needle stops responding; any sheet blocks the magnet.",
+      "B": "The needle can still turn; a thin paper sheet does not cut off the magnet's effect.",
+      "C": "The needle responds only if the sheet is removed.",
+      "D": "The compass becomes a magnet because the sheet is white."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!25] (0.0,1.4) rectangle (1.8,2.1);\n\\draw[thick,fill=blue!25] (1.8,1.4) rectangle (3.6,2.1);\n\\node at (0.9,1.75) {N};\n\\node at (2.7,1.75) {S};\n\\node at (1.8,1.05) {bar magnet};\n% thin paper sheet\n\\draw[thick,fill=yellow!20] (4.0,1.2) rectangle (4.35,2.3);\n\\node at (4.175,2.55) {paper};\n\\node at (4.175,0.85) {sheet};\n% compass\n\\draw[thick,fill=white] (5.6,1.75) circle (0.55);\n\\draw[thick,->] (5.6,1.75) -- (5.35,2.15);\n\\node at (5.6,0.85) {compass};\n\\node at (5.6,0.55) {needle};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

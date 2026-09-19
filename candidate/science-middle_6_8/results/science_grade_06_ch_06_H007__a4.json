@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Arhaan stirs sugar and chalk powder into separate glasses of water and waits. The sugar disappears completely. The chalk remains as solid bits and some water above it looks cloudy.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sugar that dissolves completely is soluble; chalk that remains undissolved is insoluble."
+    },
+    {
+      "id": "B",
+      "text": "Sugar that dissolves completely is insoluble; chalk that remains undissolved is soluble."
+    },
+    {
+      "id": "C",
+      "text": "Soluble and insoluble apply only when the water looks cloudy."
+    },
+    {
+      "id": "D",
+      "text": "Chalk that remains undissolved is still soluble because the water above it looks cloudy."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A material that dissolves completely in water is soluble; one that does not is insoluble. Reversing the labels is wrong. Cloudiness is not required to use the terms, and cloudiness alone does not make undissolved chalk soluble.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

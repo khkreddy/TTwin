@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Pia evaluates the expression $2a + 5b$ when $a = 3$ and $b = 4$.\n\nWhich two claims correctly turn those letter-numbers into one numerical value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The value is $2 + 5$, with $a$ and $b$ left out."
+    },
+    {
+      "id": "B",
+      "text": "Replace $a$ by $3$ and $b$ by $4$, then compute $2 \\times 3 + 5 \\times 4$."
+    },
+    {
+      "id": "C",
+      "text": "The value of $2a + 5b$ is $26$."
+    },
+    {
+      "id": "D",
+      "text": "Add $2 + 3 + 5 + 4$ in one chain to get the value."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Substitute the given letter-numbers, then multiply and add: 2*3+5*4=26. Dropping the letters or adding all printed numbers as one chain is wrong about that evaluation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ved explains firmness, green colour, and photosynthesis in plant cells. He may mention the cell wall, cell membrane, plastids, and chloroplasts.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cell wall gives plant cells firmness and strength."
+    },
+    {
+      "id": "B",
+      "text": "Chloroplasts with chlorophyll carry out photosynthesis and help explain green colour."
+    },
+    {
+      "id": "C",
+      "text": "The cell membrane gives plant cells rigidity and strength."
+    },
+    {
+      "id": "D",
+      "text": "Every plastid in every plant part carries out photosynthesis."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Firmness comes from the cell wall, not the membrane alone. Green colour and photosynthesis are explained by chloroplasts with chlorophyll, not by every plastid in every plant part.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

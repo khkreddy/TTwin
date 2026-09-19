@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.5,0)--(5.5,0);\n  \\fill (2.5,0) circle (1.6pt);\n  \\node[below] at (2.5,-0.15){$O$};\n  \\fill (0.8,0) circle (1.4pt);\n  \\fill (4.2,0) circle (1.4pt);\n  \\node[below] at (0.8,-0.15){$X$};\n  \\node[below] at (4.2,-0.15){$Y$};\n  \\draw[line width=0.85pt,dashed] (2.5,-1.8)--(2.5,2.2);\n  \\draw[line width=0.7pt] (2.5,0)--(2.5,0.35)--(2.85,0.35)--(2.85,0);\n  \\node[above right] at (2.65,1.6){$90^\\circ$};\n  \\draw[line width=0.55pt] (0.8,0) arc (180:40:1.7);\n  \\draw[line width=0.55pt] (4.2,0) arc (0:140:1.7);\n\\end{tikzpicture}",
+  "item_type": "single_mcq",
+  "stem": "Amaya looks at the diagram. Point $O$ lies on a straight line, and a right angle is to be built at $O$.\n\nWhich plan correctly constructs the $90^\\circ$ angle at $O$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark points $X$ and $Y$ on the line at equal distances from $O$ so that $O$ is the midpoint of $XY$, then construct the perpendicular bisector of $XY$."
+    },
+    {
+      "id": "B",
+      "text": "Keep $O$ on the line and draw any upright ray from $O$."
+    },
+    {
+      "id": "C",
+      "text": "First draw a line that looks upright through $O$, then mark equal distances from $O$."
+    },
+    {
+      "id": "D",
+      "text": "Treat $O$ as a point off the line and drop a perpendicular from outside."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 90° at O on a line is made by taking O as midpoint of a segment on the line, then erecting the perpendicular bisector. Skipping the midpoint step, reversing the order, or treating O as off the line miss that construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle as line with midpoint O of XY and perpendicular at O marked 90°."
+  }
+}

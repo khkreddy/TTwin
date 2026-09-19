@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_07/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_07/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_07/H003"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_07:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_07",
+    "chapter_label": "math/grade_06/ch_07",
+    "subtopic_id": "math/grade_06/ch_07/H003",
+    "stem": "Shaan places the fraction $\\dfrac{2}{5}$ on a number line marked from $0$ to $1$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly places $\\dfrac{2}{5}$?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Divide the interval from $0$ to $1$ into $5$ equal lengths and count $2$ of those lengths from $0$."
+          },
+          {
+            "id": "B",
+            "text": "Mark a point near $1$ because the printed $5$ looks large."
+          },
+          {
+            "id": "C",
+            "text": "The number-line placement rule also requires changing $\\dfrac{2}{5}$ into a decimal first."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_07/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

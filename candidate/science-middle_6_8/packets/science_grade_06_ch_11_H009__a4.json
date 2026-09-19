@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_22:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:33:17.113Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_22:q27",
+    "item_type": "single_mcq",
+    "stem": "Which property of aluminium makes it useful in the manufacture of aircraft?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts electricity"
+      },
+      {
+        "id": "B",
+        "text": "high boiling point"
+      },
+      {
+        "id": "C",
+        "text": "low density"
+      },
+      {
+        "id": "D",
+        "text": "silver colour"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A large area with only a few scattered plants is a forest if those plants give animals food and shelter."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Forests grow dense and varied plants because many animals need food and shelter there."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Forests are homes for large wild animals, but not for birds or insects."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A green lawn is a forest home for many life forms because it is green."
+      }
+    ],
+    "enrichment": "Forests are large areas with dense growth of various types of plants. They are natural homes for many wild animals, including birds and insects, and provide food and shelter to them. Dense and varied plant growth creates food and shelter, so many animals and other life forms can survive in forests. The learner correctly applies this rule: Forests are large areas with dense growth of various types of plants. They are natural homes for many wild animals, including birds and insects, and provide food and shelter to them. A forest is just many trees grouped together.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H009",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts electricity” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “high boiling point” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “silver colour” for the required “low density”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Decide why a forest is an ecosystem-like home for many life forms, not just a group of trees. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_s19_qp_22:q27",
+    "hinge": "science/grade_06/ch_11/H009",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_11/H009"
+  }
+}

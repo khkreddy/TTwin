@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Smiti compares raw cabbage with cooked cabbage. The cooked cabbage is softer, and a test shows it has less vitamin C than the raw cabbage.\n\nWhat is the best conclusion?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cooking can change texture and may reduce some nutrients such as vitamin C."
+    },
+    {
+      "id": "B",
+      "text": "Cooking adds vitamin C to the cabbage."
+    },
+    {
+      "id": "C",
+      "text": "Cooking destroys every nutrient in every vegetable."
+    },
+    {
+      "id": "D",
+      "text": "The softer texture proves every mineral in the cabbage is gone."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cooking can change colour or texture and may reduce some nutrients such as vitamin C. It does not add vitamin C, does not wipe out every nutrient in every vegetable, and softer texture alone does not prove every mineral is gone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

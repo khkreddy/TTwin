@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_07/ch_03/H008",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_03/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "UNRESOLVED",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H008"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_03:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_07/ch_03",
+    "chapter_label": "Electricity: circuits and cells",
+    "subtopic_id": "science/grade_07/ch_03/H008",
+    "stem": "The diagram shows Qasim's circuit: a cell, a lamp, and a gap. A metal strip (a conductor) closes the gap so a current path can form.\n\nWill the lamp glow?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Yes — the metal strip is a conductor, so it completes the current path and the lamp can glow.",
+      "B": "No — a metal strip across the gap blocks the current path, so the lamp stays dark.",
+      "C": "Yes — the lamp glows even if the gap is left open, because the cell is still in the circuit.",
+      "D": "No — the lamp glows only if two metal strips are placed in the gap."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm,font=\\sffamily\\small]\n\\draw[thick,fill=white] (0,0) rectangle (1.3,0.55);\n\\node at (0.65,0.275) {cell};\n\\node[font=\\bfseries] at (-0.25,0.275) {$-$};\n\\node[font=\\bfseries] at (1.55,0.275) {$+$};\n\\draw[thick] (1.3,0.275) -- (2.2,0.275) -- (2.2,1.8) -- (4.6,1.8);\n\\draw[thick,fill=white] (5.0,1.8) circle (0.38);\n\\draw[thick] (4.72,1.52) -- (5.28,2.08);\n\\draw[thick] (4.72,2.08) -- (5.28,1.52);\n\\node at (5.0,2.35) {lamp};\n\\draw[thick] (5.38,1.8) -- (6.4,1.8) -- (6.4,0.275) -- (4.55,0.275);\n\\fill (4.55,0.275) circle (0.06);\n\\fill (3.15,0.275) circle (0.06);\n\\draw[thick] (3.15,0.275) -- (2.2,0.275);\n\\draw[thick,fill=gray!35] (3.15,0.12) rectangle (4.55,0.43);\n\\node at (3.85,-0.25) {metal strip};\n\\node at (3.85,0.75) {gap};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_03/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

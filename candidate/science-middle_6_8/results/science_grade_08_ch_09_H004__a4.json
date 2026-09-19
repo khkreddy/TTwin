@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Jhanvi adds sugar little by little to a fixed amount of water at room temperature, stirring each time. After several additions, some sugar stays undissolved at the bottom no matter how long she stirs.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The fixed amount of water has reached its dissolving limit for sugar under these conditions."
+    },
+    {
+      "id": "B",
+      "text": "The remaining sugar will dissolve if she only stirs longer, with no other change."
+    },
+    {
+      "id": "C",
+      "text": "Undissolved sugar at the bottom means the water never dissolved any sugar."
+    },
+    {
+      "id": "D",
+      "text": "A dissolving limit applies only when the water is boiling, not at room temperature."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When undissolved solute remains in a fixed amount of solvent despite stirring, the dissolving limit under those conditions has been reached. Longer stirring alone, reading leftover solid as 'never dissolved', or restricting the limit to boiling water all miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

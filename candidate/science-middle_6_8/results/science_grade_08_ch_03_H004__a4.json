@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Tia's classmate has influenza. The school nurse says it is caused by a virus and spreads from person to person through coughs and close contact. The class sorts diseases as communicable, non-communicable, or chronic.\n\nWhich label fits influenza best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Communicable disease."
+    },
+    {
+      "id": "B",
+      "text": "Non-communicable disease."
+    },
+    {
+      "id": "C",
+      "text": "Non-communicable disease, because a virus is involved."
+    },
+    {
+      "id": "D",
+      "text": "Chronic disease only, because it can last a few days."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Influenza is caused by a pathogen and spreads person to person, so it is communicable. Calling it non-communicable reverses that mapping. Pathogen cause alone without spread does not define communicable here, and a few days does not make it chronic.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

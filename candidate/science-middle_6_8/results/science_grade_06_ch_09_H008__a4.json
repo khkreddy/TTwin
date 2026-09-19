@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Filtration through the fine cloth can remove the remaining solid particles."
+    },
+    {
+      "id": "B",
+      "text": "Decanting alone will always remove every fine particle that keeps the water cloudy."
+    },
+    {
+      "id": "C",
+      "text": "When particles stay suspended after settling, filtration is needed rather than decanting alone."
+    },
+    {
+      "id": "D",
+      "text": "A cloth with pores larger than the fine particles will still trap those particles."
+    }
+  ],
+  "item_type": "one_or_more",
+  "stem": "Inaya has muddy water. After standing, some mud settles, but fine particles still make the water cloudy. She can pour off (decant) the upper liquid or filter it through a fine cloth. The cloth has small pores.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fine suspended particles need filtration; decanting alone does not clear them, and pores must be smaller than the particles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

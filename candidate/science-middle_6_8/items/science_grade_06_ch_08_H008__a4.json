@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_08/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_08/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_08/H008"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_08:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-STATES",
+    "chapter_id": "science/grade_06/ch_08",
+    "chapter_label": "A journey through states of water",
+    "subtopic_id": "science/grade_06/ch_08/H008",
+    "stem": "Mohit wets his skin with water. As the water evaporates, heat leaves the skin and his skin feels cooler. He wonders whether wetting alone, condensation of water vapour, or evaporation causes the cooling.\n\nWhy does the skin feel cooler?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Water vapour condenses on the skin, and that condensation cools the skin.",
+      "B": "Evaporating water takes heat from the skin, so the skin feels cooler.",
+      "C": "Water cools the skin just by wetting it, even if none evaporates.",
+      "D": "Water evaporates because the skin has already become cooler."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_08/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Eshan visits a dry sandy yard with cactus and a cool shady wall with ferns. He asks why the plants in the two places differ.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Different conditions of water, heat, and soil support different plants in the two places."
+    },
+    {
+      "id": "B",
+      "text": "The plants found in a region depend on the living conditions there."
+    },
+    {
+      "id": "C",
+      "text": "The dry yard is dry because cactus and ferns made it dry."
+    },
+    {
+      "id": "D",
+      "text": "No plant can ever live in both a dry yard and a cool shady place."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Regional plant and animal differences follow from different living conditions. Saying the plants caused the dryness reverses cause and effect; saying no kind can live in both places overextends collection-level differences.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

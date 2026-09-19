@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Arhaan watches a pigeon fly using its wings, a rabbit hop using its hind legs, and a fish swim using its fins.\n\nWhich statements group the animals by type of movement and by the body parts used? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The pigeon flies using its wings."
+    },
+    {
+      "id": "B",
+      "text": "The rabbit hops using its hind legs; the fish swims using its fins."
+    },
+    {
+      "id": "C",
+      "text": "The pigeon flies using its legs."
+    },
+    {
+      "id": "D",
+      "text": "Group all three only as outdoor animals, with no split by how they move."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Correct grouping names both the movement type and the body part: wings to fly, hind legs to hop, fins to swim. Saying the pigeon flies with legs swaps the body part. Grouping only as outdoor animals drops the movement hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

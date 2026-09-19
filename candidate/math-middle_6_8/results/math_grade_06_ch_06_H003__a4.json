@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Anvi's triangular plot. The side lengths are $6\\,\\mathrm{m}$, $8\\,\\mathrm{m}$, and $10\\,\\mathrm{m}$.\n\nWhich claim correctly gives the perimeter of the plot?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Perimeter $= 6 + 8 + 10 = 24\\,\\mathrm{m}$."
+    },
+    {
+      "id": "B",
+      "text": "Perimeter $= 10\\,\\mathrm{m}$, taking the longest side length as the perimeter."
+    },
+    {
+      "id": "C",
+      "text": "Each side equals $24\\,\\mathrm{m}$, because the perimeter produces each side."
+    },
+    {
+      "id": "D",
+      "text": "Perimeter $= 3\\,\\mathrm{m}$, because a triangle is named by having three sides."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.42,line cap=round,line join=round]\n  \\draw[thick] (0,0) -- (10,0) -- (3.6,6.4) -- cycle;\n  \\node[below] at (5,0) {$10\\,\\mathrm{m}$};\n  \\node[left] at (1.7,3.2) {$6\\,\\mathrm{m}$};\n  \\node[right] at (7.0,3.2) {$8\\,\\mathrm{m}$};\n  \\node[below left] at (0,0) {A};\n  \\node[below right] at (10,0) {B};\n  \\node[above] at (3.6,6.4) {C};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Triangle perimeter is the sum of the three side lengths: 6+8+10=24 m. Taking one side swaps in a side length. Saying perimeter produces the sides reverses the relation. Using 3 from the triangle name grabs a surface count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a labeled 6 m, 8 m, 10 m triangle; stem refers to the diagram."
+  }
+}

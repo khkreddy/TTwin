@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Darsh has three sticks of lengths $4\\,\\mathrm{cm}$, $6\\,\\mathrm{cm}$ and $11\\,\\mathrm{cm}$. He asks whether they can be the side lengths of a triangle.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is $11\\,\\mathrm{cm}$, because that is the longest length."
+    },
+    {
+      "id": "B",
+      "text": "No, because $4 + 6 = 10$ is not greater than $11$."
+    },
+    {
+      "id": "C",
+      "text": "The two shorter lengths must sum to more than the longest length for a triangle to form."
+    },
+    {
+      "id": "D",
+      "text": "Yes, because each length is a positive whole number."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Triangle inequality needs each pair sum greater than the third; here 4+6 is not greater than 11. Naming the longest alone or accepting any positive lengths miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

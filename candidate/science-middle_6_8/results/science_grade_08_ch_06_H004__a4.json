@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Eshan presses a rubber sucker onto a smooth steel cupboard door and pushes the air out from under it. The sucker stays firmly in place.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Air pressure outside the sucker is greater than the pressure under it, so the outside air presses the sucker onto the door."
+    },
+    {
+      "id": "B",
+      "text": "The sticking is caused by a pressure difference across the sucker after air is pushed out from under it."
+    },
+    {
+      "id": "C",
+      "text": "Air pressure under the sucker is greater than outside, so the inside air presses the sucker onto the door."
+    },
+    {
+      "id": "D",
+      "text": "The sucker sticks even when the pressure outside equals the pressure under it."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pushing air out lowers pressure under the sucker, so higher outside atmospheric pressure presses it on. Reversing which side has higher pressure, or saying equal pressures still stick, misses the pressure-difference hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

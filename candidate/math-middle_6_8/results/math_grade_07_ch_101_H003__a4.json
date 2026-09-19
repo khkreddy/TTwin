@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Shaan's school flagpole is $15\\,\\mathrm{m}$ tall. A classmate standing beside it is about $1.5\\,\\mathrm{m}$ tall. Shaan wants to make sense of the $15\\,\\mathrm{m}$ height.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly compares the flagpole height with a familiar height?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Read only the printed $15$ and stop there."
+        },
+        {
+          "id": "B",
+          "text": "Compare with the classmate: the flagpole is about $10$ classmate-heights, or $13.5\\,\\mathrm{m}$ taller."
+        },
+        {
+          "id": "C",
+          "text": "Choose $15$ because it is the largest printed number in the stem."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Same-unit comparison with the classmate gives a multiple of about 10 and a difference of 13.5 m."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A familiar same-unit reference (difference or multiple) makes sense of 15 m. Reading 15 alone omits the reference. Picking the largest print is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

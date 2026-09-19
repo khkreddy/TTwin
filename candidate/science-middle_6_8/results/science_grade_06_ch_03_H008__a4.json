@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Roughage and water are the same diet group as vitamins and minerals."
+    },
+    {
+      "id": "B",
+      "text": "Roughage and water are still needed even though they are not vitamins or minerals."
+    },
+    {
+      "id": "C",
+      "text": "Any small amount of water is enough for absorbing nutrients and removing waste."
+    },
+    {
+      "id": "D",
+      "text": "Water is needed because it gives the body energy the way sugars do."
+    }
+  ],
+  "item_type": "single_mcq",
+  "stem": "Zara lists diet components: vitamins, minerals, roughage, and water. Roughage and water help the body remove waste and absorb nutrients. They are not vitamins or minerals and do not give the body energy the way sugars do.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Roughage and water are essential diet components but are not vitamins or minerals; they still support absorption and waste removal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}
