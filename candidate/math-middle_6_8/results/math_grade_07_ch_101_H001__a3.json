@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil writes the successor of 99,999 and names the place-value unit.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The successor is 99,998."
+    },
+    {
+      "id": "B",
+      "text": "The successor is 1,00,000, which is one crore."
+    },
+    {
+      "id": "C",
+      "text": "The successor is 1,00,000, which is one lakh (1 followed by 5 zeroes)."
+    },
+    {
+      "id": "D",
+      "text": "99,999 already counts as one lakh because it looks nearly as large."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adding 1 to 99,999 gives 1,00,000, which is one lakh (1 followed by 5 zeroes). 99,998 reverses successor; calling it one crore conflates the crore naming rule (7 zeroes); treating nearness as mastery is a scope error.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Successor still holds without restating the 99,999→1,00,000 tip as a missing clause; used relationship_reversal, mechanism_conflation, scope_error as cleaner distractors on the same hinge."
+      }
+    ]
+  }
+}

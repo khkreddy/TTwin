@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farid walks 600 m to the gate in 60 s without stopping. On another trip he walks toward the gate but stands still for 20 s at a shop, then continues.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "During the 20 s stop his speed is 10 m/s."
+    },
+    {
+      "id": "B",
+      "text": "His speed for the nonstop 600 m walk is 600 × 60 = 36000 m/s."
+    },
+    {
+      "id": "C",
+      "text": "His speed for the nonstop 600 m walk is 600 ÷ 60 = 10 m/s."
+    },
+    {
+      "id": "D",
+      "text": "His speed for the nonstop 600 m walk is 60 ÷ 600 = 0.1 m/s."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Speed is total distance over total time: 600 ÷ 60 = 10 m/s for the nonstop walk. That whole-walk value does not apply while he is standing still; multiplying distance by time or inverting the quotient is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

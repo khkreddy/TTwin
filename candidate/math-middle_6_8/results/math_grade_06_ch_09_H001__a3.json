@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya has a paper square with a design on it. She wants to know whether the design has mathematical symmetry.\n\nWhich check decides that?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The design looks attractive, so it is symmetric."
+    },
+    {
+      "id": "B",
+      "text": "The design has matching colours, so it is symmetric."
+    },
+    {
+      "id": "C",
+      "text": "A fold or a turn maps the design onto itself."
+    },
+    {
+      "id": "D",
+      "text": "A definite pattern of matching parts is what creates symmetry by itself."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Symmetry requires a fold or rotation that maps the figure onto itself. Attractiveness and colour alone do not. Matching parts do not create the transformation; the transformation shows the match.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "term_substitution",
+        "reason": "Term-substitution CWO swaps label language without a stem object; kept surface_feature_capture, condition_omission, relationship_reversal on the fold/turn hinge."
+      },
+      {
+        "from": "scope_error",
+        "reason": "Scope CWO pushes group-theory language not in the stem; kept the three stem-native mix-ups."
+      }
+    ]
+  }
+}

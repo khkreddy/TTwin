@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit measures a pencil on a ruler marked in centimetres. The tip ends between the 7 cm and 8 cm marks.\n\nWhat should he do to report the length more accurately?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report 7 cm, because the tip has not reached 8 cm."
+    },
+    {
+      "id": "B",
+      "text": "Split the gap into unequal marks of any sizes he likes."
+    },
+    {
+      "id": "C",
+      "text": "Split the 1 cm gap into equal smaller parts and count how many the tip passes."
+    },
+    {
+      "id": "D",
+      "text": "Ignore the ruler marks and use only the printed number 7 on the pencil."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When the tip falls between whole marks, the unit interval is divided into equal smaller parts. Whole-unit estimate alone is too coarse. Unequal parts break the unit. A printed number on the pencil is not the measure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO pulls number-line placement wording not needed for this ruler hinge; kept scope_error, condition_omission, surface_feature_capture."
+      }
+    ]
+  }
+}

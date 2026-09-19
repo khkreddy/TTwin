@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir stands in a height line with other children. The rule is: each child says the count of taller children standing immediately next to that child. Qadir says \"1\".\n\nWhat does Qadir's \"1\" report?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The count of taller children standing immediately next to him."
+    },
+    {
+      "id": "B",
+      "text": "His own height in centimetres."
+    },
+    {
+      "id": "C",
+      "text": "The total number of children in the whole line."
+    },
+    {
+      "id": "D",
+      "text": "How many children in the line are shorter than him."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Under the height-line rule, the spoken number is the count of taller children standing immediately next to that child. Height in centimetres answers a different label; the whole-line total drops the 'immediately next to' condition; counting shorter children reverses the taller relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Scope CWO about chapter-term mastery is teacher talk, not a learner claim with the height-line objects; kept term_substitution, condition_omission, relationship_reversal."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya cuts a paper rectangle into two pieces and rearranges the pieces into a new shape with no gaps and no overlaps.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The new shape must have smaller area, because the outline looks different."
+    },
+    {
+      "id": "B",
+      "text": "Equal area is what forces the new shape to be a rectangle again."
+    },
+    {
+      "id": "C",
+      "text": "The new shape has the same area as the original rectangle."
+    },
+    {
+      "id": "D",
+      "text": "Area stays equal even if she throws one piece away before rearranging."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cutting and rearranging without gaps or overlaps preserves area. A different outline does not shrink area. Equal area does not force the shape to stay a rectangle. Discarding a piece leaves the exclusion case.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

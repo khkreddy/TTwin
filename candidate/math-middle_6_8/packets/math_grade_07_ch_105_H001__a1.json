@@ -1,0 +1,121 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:02bd",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T06:29:22.797Z",
+  "source": {
+    "item_ref": "session:mathnet:02bd",
+    "item_type": "single_mcq",
+    "stem": "Problem:\nA professora Jussara gosta de fazer cópias reduzidas. Ela começa desenhando o triângulo retângulo $A B C$ abaixo:\n![](figures/mathnet_02bd__1.jpg)\nEm seguida, a professora Jussara traça um segmento $A P_{1}$ de forma que $A P_{1}$ seja perpendicular a $B C$, conforme mostra a figura abaixo.\n![](figures/mathnet_02bd__2.jpg)\nJussara afirma ent∫o que o triângulo $A P_{1} C$ é semelhante ao triângulo $A B C$ (ou seja, tem ângulos correspondentes iguais).\na) Mostre que a professora Jussara está certa!\nb) Calcule o comprimento do segmento $A P_{1}$.\nc) Calcule a raz∫o entre a área do triângulo $A B C$ e a área do triângulo $A P_{1} C$.\nd) A professora Jussara repete o processo, agora traçando um segmento $P_{1} P_{2}$ perpendicular ao lado $A C$, conforme a figura abaixo.\n![](figures/mathnet_02bd__3.jpg)\nQual a raz∫o entre as áreas dos triângulos $P_{1} P_{2} C$ e $A P_{1} C$ ?\ne) A professora Jussara repete o processo mais duas vezes, conforme mostra a figura abaixo.\n![](figures/mathnet_02bd__4.jpg)\nQual a área do triângulo $P_{5} P_{6} C$ ?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mostre que a professora Jussara está certa!"
+      },
+      {
+        "id": "B",
+        "text": "Calcule o comprimento do segmento $A P_{1}$."
+      },
+      {
+        "id": "C",
+        "text": "Calcule a razão entre a área do triângulo $A B C$ e a área do triângulo $A P_{1} C$."
+      },
+      {
+        "id": "D",
+        "text": "A professora Jussara repete o processo, agora traçando um segmento $P_{1} P_{2}$ perpendicular ao lado $A C$, conforme a figura abaixo.\n![](figures/mathnet_02bd__3.jpg)\nQual a razão entre as áreas dos triângulos $P_{1} P_{2} C$ e $A P_{1} C$ ?\ne) A professora Jussara repete o processo mais duas vezes, conforme mostra a figura abaixo.\n![](figures/mathnet_02bd__4.jpg)\nQual a área do triângulo $P_{5} P_{6} C$ ?"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_105/H001",
+      "unit_id": "math/grade_07/ch_105/H001",
+      "title": "Decide when two straight lines on a plane are intersecting lines and what angle structure their meeting point creates.",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "plane surface still holds here even though The relationship is considered on one plane surface is missing from the stem — on the item about Decide when two straight lines on a plane are."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Straight lines is what produces plane surface, so the usual direction of this relation is run backwards — on the item about Decide when two straight lines on a plane are."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The plane surface rule also covers this: {'exclusion': 'Do not score a response as mastered when it only repeats a chapter term without the deciding, so it is not an exception — on the item about Decide when two straight lines on a plane are."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "plane surface is settled by running 'Decide whether a pair of lines or extended line segments are parallel': Parallel lines lie on the same plane and do not meet however far they are extended; on — on the item about Decide when two straight lines on a plane are."
+      }
+    ],
+    "enrichment": "On a plane surface, two lines intersect when they meet at a point; two straight lines do not intersect at more than one point, and one intersection of two lines forms four angles.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_105. The student must decide: Decide when two straight lines on a plane are intersecting lines and what angle structure their meeting point creates. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:02bd",
+    "hinge": "math/grade_07/ch_105/H001",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H001"
+  }
+}

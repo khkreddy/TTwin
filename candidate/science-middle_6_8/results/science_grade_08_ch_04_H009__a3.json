@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gita’s torch uses a dry cell that lights the bulb for several evenings and then is thrown away. Her phone uses a battery that is connected to a charger and used again many times.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The phone battery is rechargeable because it can be recharged and reused many times."
+    },
+    {
+      "id": "B",
+      "text": "The dry cell is rechargeable because it powers the torch on several evenings before it is exhausted."
+    },
+    {
+      "id": "C",
+      "text": "The phone battery is single-use because every battery eventually stops working."
+    },
+    {
+      "id": "D",
+      "text": "The dry cell is rechargeable because it was bought in a shop for a torch."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rechargeable means restored by charging and reused for many cycles. Several evenings of use before disposal is still single-use; eventual failure does not make a rechargeable cell single-use; shop packaging does not decide rechargeability.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

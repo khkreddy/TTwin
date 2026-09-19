@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek marks endpoints X and Y. He finds two points P and Q so that each is the same distance from X as from Y. He draws the line through P and Q.\n\nWhat is that line?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The line that must pass through the endpoints X and Y only."
+    },
+    {
+      "id": "B",
+      "text": "A line that creates equal distances from X and Y after it is drawn."
+    },
+    {
+      "id": "C",
+      "text": "The perpendicular bisector of segment XY."
+    },
+    {
+      "id": "D",
+      "text": "A guide for tiling a rectangle with 2 by 1 tiles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two points each equidistant from X and Y determine the perpendicular bisector of XY. The equal-distance condition produces the line, not the other way round.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

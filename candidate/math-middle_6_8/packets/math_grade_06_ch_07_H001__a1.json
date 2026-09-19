@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:0eqf",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T06:29:21.622Z",
+  "source": {
+    "item_ref": "session:mathnet:0eqf",
+    "item_type": "single_mcq",
+    "stem": "If $a \\bullet b$ means the value of $ab + a + b$, and $5 \\bullet x = 35$, the value of $x$ must be\n\n(A) 5\n(B) 7\n(C) 9\n(D) 12\n(E) 15",
+    "options": [
+      {
+        "id": "A",
+        "text": "5"
+      },
+      {
+        "id": "B",
+        "text": "7"
+      },
+      {
+        "id": "C",
+        "text": "9"
+      },
+      {
+        "id": "D",
+        "text": "12\n(E) 15"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_07/H001",
+      "unit_id": "math/grade_06/ch_07/H001",
+      "title": "Decide how the denominator controls the size of a unit fraction when the same whole is shared equally.",
+      "node_labels": [
+        "Number: magnitude, representation and arithmetic structure"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Number: magnitude, representation and arithmetic structure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Denominator is the label that belongs on this item, so 'Decide how the denominator controls the size of a unit fraction when' is answered as denominator rather than unit fraction."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Denominator is what produces unit fraction, so the usual direction of this relation is run backwards — on the item about Decide how the denominator controls the size of a unit."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is unit fraction because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how the denominator controls the size of a unit fraction when' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "unit fraction is settled by running 'Decide how to measure a quantity as a multiple count of a chosen': A quantity measured with fractional units is written by counting how many copies of the — on the item about Decide how the denominator controls the size of a unit."
+      }
+    ],
+    "enrichment": "For unit fractions from the same whole, dividing the whole into more equal shares makes each share smaller; therefore 1/n is greater than 1/m when n is less than m.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_07. The student must decide: Decide how the denominator controls the size of a unit fraction when the same whole is shared equally. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:0eqf",
+    "hinge": "math/grade_06/ch_07/H001",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_07/H001"
+  }
+}

@@ -7,10 +7,13 @@
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
-const SRC = path.join(ROOT, "candidate", "science-middle_6_8", "items");
-const OUT_PACK = path.join(ROOT, "candidate", "science-middle_6_8", "pack.json");
-const OUT_NAV = path.join(ROOT, "candidate", "science-middle_6_8", "nav.json");
-const SCIENCE = path.join(ROOT, "data", "maps", "science.json");
+const IS_MATH = process.argv.indexOf("--maths") >= 0 || process.env.TTWIN_G68_SUBJECT === "maths";
+const TRAY = IS_MATH ? "math-middle_6_8" : "science-middle_6_8";
+const SUBJ = IS_MATH ? "maths" : "science";
+const SRC = path.join(ROOT, "candidate", TRAY, "items");
+const OUT_PACK = path.join(ROOT, "candidate", TRAY, "pack.json");
+const OUT_NAV = path.join(ROOT, "candidate", TRAY, "nav.json");
+const SCIENCE = path.join(ROOT, "data", "maps", IS_MATH ? "maths.json" : "science.json");
 
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
@@ -37,7 +40,7 @@ function flatten(doc, unit) {
   it.serve_eligible = false;
   it.complete_exam = false;
   it.owner_ratified = false;
-  it.subject = "science";
+  it.subject = SUBJ;
   it.pack = "middle_6_8";
   if (doc.variation_class) it.variation_class = doc.variation_class;
   if (doc.join_status) it.join_status = doc.join_status;
@@ -59,7 +62,7 @@ function navRow(it, unit) {
   const subLab = hingeLabel(unit, chapter);
   return {
     uid: it.uid,
-    subject: "science",
+    subject: SUBJ,
     pack: "middle_6_8",
     grade_band: "MIDDLE",
     node: it.node,

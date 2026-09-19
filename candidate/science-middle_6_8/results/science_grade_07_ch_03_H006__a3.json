@@ -1,0 +1,41 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows a cell, a lamp, and a switch S. The switch is open, so its contacts do not touch.\n\nIs the circuit ON or OFF?",
+  "options": [
+    {
+      "id": "A",
+      "text": "OFF — the open switch breaks the path, so current cannot flow."
+    },
+    {
+      "id": "B",
+      "text": "ON — the cell still sends current across the open gap."
+    },
+    {
+      "id": "C",
+      "text": "ON — the switch itself supplies current to the lamp."
+    },
+    {
+      "id": "D",
+      "text": "OFF — a lamp cannot glow unless two switches are used."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}\\draw (0,0) to[battery1] (0,2);\\draw (0,2)--(2,2);\\draw (2,2) to[lamp] (4,2);\\draw (4,2) to[nos] (6,2);\\draw (6,2)--(6,0)--(0,0);\\node[below] at (5,2) {S};\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An open switch leaves a gap, so the circuit is OFF and the lamp stays dark.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source circuit to a cell–lamp–open-switch loop matching the ON/OFF hinge."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil folds a sheet so each fold doubles the current thickness. The starting thickness is 0.1 mm. He wants the thickness after k folds.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add 2 mm at each fold to the starting thickness."
+    },
+    {
+      "id": "B",
+      "text": "Multiply the starting thickness by k only, ignoring that each fold acts on the current thickness."
+    },
+    {
+      "id": "C",
+      "text": "Replace \"double\" with \"add two\" and sum 0.1 + 2 + 2 + … for k folds."
+    },
+    {
+      "id": "D",
+      "text": "Start at 0.1 mm and multiply by 2 at each fold (repeated multiplication)."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "C": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Doubling each time is repeated multiplication by 2 on the current thickness. Adding 2 mm reverses multiplication into addition; multiplying only by k omits the successive-current condition; reading \"double\" as \"add two\" substitutes the wrong operation word.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Excluded-case prose about when to use repeated multiplication is author talk; kept relationship_reversal, condition_omission, term_substitution on the doubling hinge."
+      }
+    ]
+  }
+}

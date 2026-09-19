@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_08/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_08/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "scope_error",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_08/H008"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_08:H008:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_07/ch_08",
+    "chapter_label": "Measurement of time",
+    "subtopic_id": "science/grade_07/ch_08/H008",
+    "stem": "Farid walks 600 m to the gate in 60 s without stopping. On another trip he walks toward the gate but stands still for 20 s at a shop, then continues.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "During the 20 s stop his speed is 10 m/s.",
+      "B": "His speed for the nonstop 600 m walk is 600 × 60 = 36000 m/s.",
+      "C": "His speed for the nonstop 600 m walk is 600 ÷ 60 = 10 m/s.",
+      "D": "His speed for the nonstop 600 m walk is 60 ÷ 600 = 0.1 m/s."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_08/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

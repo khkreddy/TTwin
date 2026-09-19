@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Jatin needs a number that is a multiple of both 4 and 6.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "8 is such a number, because 8 is a multiple of 4."
+    },
+    {
+      "id": "B",
+      "text": "2 is such a number, because 2 divides both 4 and 6."
+    },
+    {
+      "id": "C",
+      "text": "12 is such a number, because 12 is a multiple of 4 and of 6."
+    },
+    {
+      "id": "D",
+      "text": "Any multiple of 4 alone is enough, even if it is not a multiple of 6."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A common multiple must be a multiple of both numbers. 12 works. 8 misses 6. 2 is a common factor, not a common multiple. Multiples of 4 alone are out of scope for this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

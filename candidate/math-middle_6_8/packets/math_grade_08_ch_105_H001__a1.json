@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:0e8t",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T06:29:25.158Z",
+  "source": {
+    "item_ref": "session:mathnet:0e8t",
+    "item_type": "single_mcq",
+    "stem": "Function $f$ satisfies $f(x) = x^2 + 1$. What is the value of $\\frac{f(f(x)+x)}{f(x)}$?\n\n(A) $x^2 + x + 1$\n\n(B) $x^2 + 2x + 2$\n\n(C) $x^2 + 1$\n\n(D) $x^2 + 2x + 1$\n\n(E) $x^2 + x$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$x^2 + x + 1$"
+      },
+      {
+        "id": "B",
+        "text": "$x^2 + 2x + 2$"
+      },
+      {
+        "id": "C",
+        "text": "$x^2 + 1$"
+      },
+      {
+        "id": "D",
+        "text": "$x^2 + 2x + 1$\n\n(E) $x^2 + x$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_105/H001",
+      "unit_id": "math/grade_08/ch_105/H001",
+      "title": "Can I decide whether changing + and - signs between the same four numbers can change the parity of the value?",
+      "node_labels": [
+        "Algebraic structure: expressions, identities, polynomials and discrete form"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Algebraic structure: expressions, identities, polynomials and discrete form",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "parity still holds here even though The numbers must stay fixed while only the signs between them change is missing from the stem — on the item about Can I decide whether changing + and - signs between the."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Have the same parity. is what produces A sign switch adds or subtracts 2 times the affected number, so the old value and the new value differ by an, so the usual direction of this relation is run backwards — on the item about Can I decide whether changing + and - signs between the."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The parity rule also covers this: {'excluded_case': 'Do not count sign choices before the first number as part of the eight expressions between, so it is not an exception — on the item about Can I decide whether changing + and - signs between the."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "parity is settled by running 'Can I keep the direction of a divisibility claim straight when adding': If a divides M and a divides N, then a divides M + N and M - N. The reverse direction is — on the item about Can I decide whether changing + and - signs between the."
+      }
+    ],
+    "enrichment": "For fixed integers a, b, c, and d, every expression a +/- b +/- c +/- d has the same parity. Changing one sign changes the value by twice one term, an even amount. For four consecutive numbers, the common parity is even.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_105. The student must decide: Can I decide whether changing + and - signs between the same four numbers can change the parity of the value? Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:0e8t",
+    "hinge": "math/grade_08/ch_105/H001",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_105/H001"
+  }
+}

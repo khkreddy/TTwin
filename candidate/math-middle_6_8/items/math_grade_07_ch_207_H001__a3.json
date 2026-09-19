@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_207/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_207/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_207/H001",
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO imports two-sided unknown-term algebra not in this one-packet stem; kept condition_omission, relationship_reversal, scope_error."
+      },
+      {
+        "from": "operation_confusion",
+        "reason": "Operation-confusion CWO invents squaring a pan; not sayable with the stem objects."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_207:H001:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_207",
+    "chapter_label": "math/grade_07/ch_207",
+    "subtopic_id": "math/grade_07/ch_207/H001",
+    "stem": "Kavya has a weighing scale that is balanced. The left pan holds one sealed packet and a 20 g weight. The right pan holds a 50 g weight.\n\nHow can she find the mass of the packet?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Remove the 20 g weight from the left pan only, then read the right pan.",
+      "B": "Add the packet mass to both pans so the scale tips.",
+      "C": "Remove 20 g from each pan so the packet alone balances a 30 g weight.",
+      "D": "Compare the pans while the scale is tipped and unbalanced."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_207/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

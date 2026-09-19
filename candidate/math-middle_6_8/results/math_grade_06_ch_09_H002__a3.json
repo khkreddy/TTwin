@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier has a paper heart and a possible vertical mid-line drawn on it.\n\nWhen is that mid-line a line of symmetry?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Whenever the heart looks roughly balanced, even if it is never folded."
+    },
+    {
+      "id": "B",
+      "text": "When folding along the mid-line is treated as a result produced by an already known line of symmetry."
+    },
+    {
+      "id": "C",
+      "text": "Only when folding along that mid-line makes the two parts overlap exactly point for point."
+    },
+    {
+      "id": "D",
+      "text": "Only when a group-theory symmetry order of 2 is named for the heart."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A line of symmetry requires the fold-overlap test: the two parts must match exactly point for point along that line.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

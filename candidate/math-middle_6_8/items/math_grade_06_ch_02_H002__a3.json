@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_02/H002",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_02/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H002"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "scope_error",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H002:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H002",
+    "stem": "Lalit draws a straight path that starts at point A, ends at point B, and does not continue past either point.\n\nWhat has he drawn?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A line, because it is straight.",
+      "B": "A ray starting at A and passing through B without ending.",
+      "C": "A line segment AB, because it has two endpoints A and B.",
+      "D": "A line segment even if he erases endpoint B and lets the path run on."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

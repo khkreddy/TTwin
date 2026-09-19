@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina tests a liquid with blue litmus and red litmus. Blue litmus stays blue. Red litmus stays red.\n\nHow should she classify the liquid?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Neutral — both litmus papers are unchanged."
+    },
+    {
+      "id": "B",
+      "text": "Acidic and basic — both papers show a colour result."
+    },
+    {
+      "id": "C",
+      "text": "Acidic — blue litmus did not turn red."
+    },
+    {
+      "id": "D",
+      "text": "Basic — red litmus did not turn blue."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "No change on blue litmus and no change on red litmus means the sample is neutral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_03/H002",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_03/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_03/H002"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_03:H002:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_03",
+    "chapter_label": "math/grade_06/ch_03",
+    "subtopic_id": "math/grade_06/ch_03/H002",
+    "stem": "Parul writes this number grid (neighbours are left, right, top, and bottom only):\n\n4  7  3\n6  9  5\n2  8  1\n\nA supercell is greater than every immediate neighbour.\n\nWhich cell is a supercell?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The cell with 9",
+      "B": "The cell with 8",
+      "C": "The cell with 7",
+      "D": "The cell with 6"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_03/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

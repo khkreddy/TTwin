@@ -124,7 +124,7 @@
 
   function overlayOf() {
     const spec = S.spec || specOf(S.subject);
-    return (spec && spec.id === "science" && spec.candidate_overlay) || null;
+    return (spec && spec.candidate_overlay) || null;
   }
   function bankMode() {
     if (!overlayOf()) return "live";

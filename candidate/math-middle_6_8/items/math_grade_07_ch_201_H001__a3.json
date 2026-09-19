@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_201/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_201/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H001"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H001:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H001",
+    "stem": "Qadir has two paper triangles of the same shape and size. One fits exactly over the other after he flips it.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "They are congruent only if he does not flip or rotate either triangle.",
+      "B": "They are congruent: exact copies under superimposition, and flipping is allowed.",
+      "C": "Same shape alone is enough for congruence even when the sizes differ.",
+      "D": "Congruence here requires a right angle, hypotenuse, and one matching side before he can decide."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

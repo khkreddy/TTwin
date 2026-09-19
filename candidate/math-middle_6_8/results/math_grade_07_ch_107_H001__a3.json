@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira draws a closed shape with three corner points P, Q and R joined by three straight sides.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The shape is named only by one corner point, such as P."
+    },
+    {
+      "id": "B",
+      "text": "The shape is a triangle even if one side is left open."
+    },
+    {
+      "id": "C",
+      "text": "The shape is triangle PQR, with three sides and three angles at P, Q and R."
+    },
+    {
+      "id": "D",
+      "text": "The shape is a triangle because the letter R is printed largest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A triangle is named by its three vertices and has three sides and three angles. One vertex alone is not the name. An open figure is not a triangle. Letter size is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

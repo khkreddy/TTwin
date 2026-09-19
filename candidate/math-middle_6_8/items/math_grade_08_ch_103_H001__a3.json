@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_103/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_103/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_103/H001"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_103:H001:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_08/ch_103",
+    "chapter_label": "math/grade_08/ch_103",
+    "subtopic_id": "math/grade_08/ch_103/H001",
+    "stem": "Walia counts seven pebbles by matching each pebble to one clap in order, from clap 1 through clap 7.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The ordered clap sequence alone counts the pebbles even if some pebbles are skipped.",
+      "B": "One-to-one matching works only with written Hindu numerals, not with claps.",
+      "C": "Each pebble is matched exactly once to one clap, so the ordered claps show that there are seven pebbles.",
+      "D": "Seven is correct because the word seven is the largest word written on the board."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_103/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

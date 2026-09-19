@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin studies a fern leaf in which each leaflet looks like a smaller copy of the whole leaf. He also looks at a plain rectangle with no smaller copies inside it.\n\nWhich claim about the fern leaf is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a fractal, because the same pattern repeats at smaller scales."
+    },
+    {
+      "id": "B",
+      "text": "It is a fractal, because any leaf counts as a fractal."
+    },
+    {
+      "id": "C",
+      "text": "It is not a fractal, because only computer drawings can be fractals."
+    },
+    {
+      "id": "D",
+      "text": "It is not a fractal, because the plain rectangle is the true fractal pattern."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fractal shows the same or a similar pattern again at smaller scales. The fern leaf does; the plain rectangle does not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

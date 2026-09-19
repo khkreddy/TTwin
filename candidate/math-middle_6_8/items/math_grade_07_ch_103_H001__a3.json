@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_103/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_103/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_103/H001",
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO pulls number-line placement wording not needed for this ruler hinge; kept scope_error, condition_omission, surface_feature_capture."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_103:H001:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_103",
+    "chapter_label": "math/grade_07/ch_103",
+    "subtopic_id": "math/grade_07/ch_103/H001",
+    "stem": "Lalit measures a pencil on a ruler marked in centimetres. The tip ends between the 7 cm and 8 cm marks.\n\nWhat should he do to report the length more accurately?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Report 7 cm, because the tip has not reached 8 cm.",
+      "B": "Split the gap into unequal marks of any sizes he likes.",
+      "C": "Split the 1 cm gap into equal smaller parts and count how many the tip passes.",
+      "D": "Ignore the ruler marks and use only the printed number 7 on the pencil."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_103/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

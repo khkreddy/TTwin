@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir has two paper triangles of the same shape and size. One fits exactly over the other after he flips it.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "They are congruent only if he does not flip or rotate either triangle."
+    },
+    {
+      "id": "B",
+      "text": "They are congruent: exact copies under superimposition, and flipping is allowed."
+    },
+    {
+      "id": "C",
+      "text": "Same shape alone is enough for congruence even when the sizes differ."
+    },
+    {
+      "id": "D",
+      "text": "Congruence here requires a right angle, hypotenuse, and one matching side before he can decide."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Congruent figures match in shape and size under exact superimposition; rotation or flipping is allowed. Banning flips reverses the allowed check; same shape without size substitutes a weaker label; requiring RHS conflates a right-triangle congruence test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

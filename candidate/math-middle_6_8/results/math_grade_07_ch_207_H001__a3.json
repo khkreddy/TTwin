@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya has a weighing scale that is balanced. The left pan holds one sealed packet and a 20 g weight. The right pan holds a 50 g weight.\n\nHow can she find the mass of the packet?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Remove the 20 g weight from the left pan only, then read the right pan."
+    },
+    {
+      "id": "B",
+      "text": "Add the packet mass to both pans so the scale tips."
+    },
+    {
+      "id": "C",
+      "text": "Remove 20 g from each pan so the packet alone balances a 30 g weight."
+    },
+    {
+      "id": "D",
+      "text": "Compare the pans while the scale is tipped and unbalanced."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A balanced scale is an equality. Removing equal mass from both sides preserves balance and isolates the packet as 30 g. Removing from one side only breaks the match. Adding the unknown or using an unbalanced scale misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO imports two-sided unknown-term algebra not in this one-packet stem; kept condition_omission, relationship_reversal, scope_error."
+      },
+      {
+        "from": "operation_confusion",
+        "reason": "Operation-confusion CWO invents squaring a pan; not sayable with the stem objects."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu's teacher asks the class: \"How many books do students in our class usually carry?\"\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The prompt is statistical: it is about data with expected variation across students."
+    },
+    {
+      "id": "B",
+      "text": "It is not statistical because the exact answer is not known yet."
+    },
+    {
+      "id": "C",
+      "text": "It is only a fixed fact about one named student, so it is not statistical."
+    },
+    {
+      "id": "D",
+      "text": "Any question that contains the word \"how many\" is automatically statistical."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A statistical question expects data with variation. Not knowing the answer yet does not remove that; treating it as one fixed named-student fact substitutes the wrong label; grabbing the words \"how many\" is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

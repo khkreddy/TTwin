@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira writes four claims about the number list 2, 4, 6, 8, 10, …\n\nWhich claim treats the list as a mathematical pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The list looks neat, so it is a pattern even with no rule stated."
+    },
+    {
+      "id": "B",
+      "text": "Explaining the list is what creates the even numbers in the first place."
+    },
+    {
+      "id": "C",
+      "text": "Each term is 2 more than the one before, because we keep adding 2."
+    },
+    {
+      "id": "D",
+      "text": "The same list also proves a new theorem about all infinite sequences."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A pattern needs a detectable regularity and a reason it continues. C states both. A has no rule. B reverses explanation and pattern. D reaches outside the chapter.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

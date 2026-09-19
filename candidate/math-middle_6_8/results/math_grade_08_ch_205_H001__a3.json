@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu's marks on five quizzes are 8, 8, 9, 10 and 10.\n\nWhich statement about the mean is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use only the distinct marks 8, 9 and 10, so divide their sum by 3."
+    },
+    {
+      "id": "B",
+      "text": "Mean = (8 + 8 + 9 + 10 + 10) / 5, counting each repeated mark."
+    },
+    {
+      "id": "C",
+      "text": "The mean is the middle mark 9, without summing."
+    },
+    {
+      "id": "D",
+      "text": "Find the mean by multiplying the five marks instead of dividing their sum by 5."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is the sum of all values divided by how many values there are; repeats count each time. Using only distinct values reverses that; taking the middle mark conflates median; multiplying confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "term_substitution",
+        "reason": "A bare 'sum of values' label distractor is weaker than reverse-counting, median conflation, and multiply-vs-divide on this stem; kept those three."
+      }
+    ]
+  }
+}

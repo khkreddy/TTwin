@@ -1,0 +1,113 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:039o",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T06:29:28.456Z",
+  "source": {
+    "item_ref": "session:mathnet:039o",
+    "item_type": "single_mcq",
+    "stem": "Some of the squares of an $n \\times n$ table are mined. In each square the number of the mined squares amongst this square and its neighbors (i.e. those which have common side or vertex with it) is written. Is it always possible to determine which squares are mined if:\na) $n = 2000$;\nb) $n = 2007$?",
+    "options": [
+      {
+        "id": "A",
+        "text": "$n = 2000$;"
+      },
+      {
+        "id": "B",
+        "text": "$n = 2007$?"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_08/H002",
+      "unit_id": "math/grade_06/ch_08/H002",
+      "title": "For a curved part of an artwork or a hole in a square, decide where the compass point must be placed and what radius is needed before drawing the arc or circle.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "compass tip still holds here even though The centre must be chosen so the arc passes through the intended points of the figure is missing from the stem — on the item about For a curved part of an artwork or a hole in a square."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Radius is what produces compass tip, so the usual direction of this relation is run backwards — on the item about For a curved part of an artwork or a hole in a square."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The compass tip rule also covers this: freehand drawing quality, so it is not an exception — on the item about For a curved part of an artwork or a hole in a square."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "compass tip is settled by running 'When a rectangle must be divided into identical squares, decide which': Identical squares have equal corresponding sides, and each square has all its sides equal — on the item about For a curved part of an artwork or a hole in a square."
+      }
+    ],
+    "enrichment": "A compass arc is part of a circle, so its shape is controlled by the chosen centre and radius.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_08. The student must decide: For a curved part of an artwork or a hole in a square, decide where the compass point must be placed and what radius is needed before drawing the arc or circle. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 2
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:039o",
+    "hinge": "math/grade_06/ch_08/H002",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_08/H002"
+  }
+}

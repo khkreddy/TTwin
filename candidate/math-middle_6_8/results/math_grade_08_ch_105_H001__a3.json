@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya keeps the four numbers 3, 4, 5 and 6 fixed. She only changes the + and − signs between them, writing expressions of the form 3 ± 4 ± 5 ± 6.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Every such value has the same parity; for these four consecutive numbers that common parity is even."
+    },
+    {
+      "id": "B",
+      "text": "Changing one sign can flip the parity of the value."
+    },
+    {
+      "id": "C",
+      "text": "The common parity depends on a sign written before the first number 3."
+    },
+    {
+      "id": "D",
+      "text": "Parity here is settled by whether 3 divides each partial sum."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Changing a sign alters the value by twice a term (even), so parity is unchanged; for four consecutive integers the common parity is even. Claiming a sign flip changes parity reverses that; counting a leading sign is out of scope; divisibility of partial sums conflates another mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "The stem already keeps the numbers fixed; a 'missing fixed-numbers' distractor would invent a second story. Kept relationship_reversal, scope_error, mechanism_conflation."
+      }
+    ]
+  }
+}

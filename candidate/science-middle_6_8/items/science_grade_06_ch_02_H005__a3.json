@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_02/H005",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_02/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "B": "relationship_reversal",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_02/H005"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_02:H005:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_06/ch_02",
+    "chapter_label": "Diversity in the living world",
+    "subtopic_id": "science/grade_06/ch_02/H005",
+    "stem": "Gita pulls up a wheat plant and a chickpea plant. The wheat plant has many thin roots of nearly the same size and no single main root. The chickpea plant has one main root with smaller side roots arising from it.\n\nWhich labelling is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Wheat has a taproot system; chickpea has a fibrous root system.",
+      "B": "Wheat has a fibrous root system; chickpea has a taproot system.",
+      "C": "Both plants have taproot systems because both have roots in soil.",
+      "D": "Both plants have fibrous root systems because both were pulled from soil."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_02/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

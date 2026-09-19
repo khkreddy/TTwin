@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu shares the same chapati equally. She compares the unit fractions 1/6 and 1/8 from that whole.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1/8 is greater than 1/6 because 8 is greater than 6."
+    },
+    {
+      "id": "B",
+      "text": "1/6 is greater than 1/8 because fewer equal shares make each share larger."
+    },
+    {
+      "id": "C",
+      "text": "1/6 and 1/8 are equal because each numerator is 1."
+    },
+    {
+      "id": "D",
+      "text": "1/8 is greater because the denominator is the size of the share."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For unit fractions of the same whole, more equal shares make each share smaller, so 1/6 > 1/8. Treating a larger denominator as a larger share reverses the relation; matching only the printed 1 captures a surface feature; calling the denominator the size of the share substitutes the wrong label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Multiple-count fractional-unit CWO invents a different hinge; kept relationship_reversal, surface_feature_capture, term_substitution on the unit-fraction size hinge."
+      }
+    ]
+  }
+}

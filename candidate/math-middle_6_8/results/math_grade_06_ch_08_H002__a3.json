@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya wants a circular hole of radius 2 cm at the centre of a square card of side 10 cm. She will use a compass.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place the compass tip at a corner of the square and set the radius to 2 cm."
+    },
+    {
+      "id": "B",
+      "text": "Place the tip anywhere on the card; only setting the radius to 2 cm matters."
+    },
+    {
+      "id": "C",
+      "text": "Place the tip at the centre of the square and set the radius to 2 cm."
+    },
+    {
+      "id": "D",
+      "text": "Draw the curve freehand without a fixed centre, because neat artwork is enough."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A compass arc is controlled by centre and radius: the hole needs the tip at the square's centre with radius 2 cm. A corner centre reverses the needed centre; ignoring centre omits a required condition; freehand neatness is out of scope for the compass decision.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Dividing a rectangle into identical squares invents a tiling task not in the stem; kept relationship_reversal, condition_omission, scope_error."
+      }
+    ]
+  }
+}

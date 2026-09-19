@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir has a square of side 3 cm. He makes a new square whose side is 6 cm, so the side length is multiplied by 2.\n\nWhich statement about the area is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The area becomes 2 times as large, matching the side factor."
+    },
+    {
+      "id": "B",
+      "text": "The area stays the same because both figures are still squares."
+    },
+    {
+      "id": "C",
+      "text": "The area becomes 4 times as large, because area scales with the square of the side factor."
+    },
+    {
+      "id": "D",
+      "text": "The perimeter becomes 4 times as large, and that same factor rule applies to area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area of a square is s², so multiplying the side by 2 multiplies the area by 4. Matching the side factor 2 is surface capture; saying area is unchanged omits the side-change condition; treating perimeter scaling as the area rule is a scope error.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Diagonal-doubling construction invents a diagonal not in the stem; kept surface_feature_capture, condition_omission, scope_error."
+      }
+    ]
+  }
+}

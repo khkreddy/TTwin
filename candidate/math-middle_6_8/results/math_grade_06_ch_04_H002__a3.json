@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil records favourite fruits from his row: mango, apple, mango, banana, apple, mango.\n\nHow should he find which fruit is most common?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Assign each answer to one fruit category and count the frequency in each category."
+    },
+    {
+      "id": "B",
+      "text": "Leave the answers in the order he heard them and treat that list as the finished result."
+    },
+    {
+      "id": "C",
+      "text": "Square the number of answers and report that square as the frequency of mango."
+    },
+    {
+      "id": "D",
+      "text": "Multiply each fruit name by how often it appears to get a total amount, skipping the frequency table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "operation_confusion",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Frequencies come from assigning each observation to one category and counting. Keeping only the raw ordered list omits categorising; squaring confuses the operation; multiplying names for a total amount conflates a different frequency-total mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "relationship_reversal",
+        "reason": "Reversing category→observation invents a production story not in the stem; kept condition_omission, operation_confusion, mechanism_conflation."
+      }
+    ]
+  }
+}

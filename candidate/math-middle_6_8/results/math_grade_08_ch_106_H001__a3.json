@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier multiplies the outside factor through the bracket: $3(x - 4)$.\n\nWhich expansion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$3x - 4$"
+    },
+    {
+      "id": "B",
+      "text": "$x - 4$"
+    },
+    {
+      "id": "C",
+      "text": "$3x - 12$"
+    },
+    {
+      "id": "D",
+      "text": "$3x + 12$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "operation_confusion",
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The factor 3 multiplies every term inside the bracket and keeps the minus sign, so 3(x - 4) = 3x - 12.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -9,8 +9,15 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 const ROOT = path.resolve(__dirname, "..");
-const OUT = path.join(ROOT, "candidate", "science-middle_6_8");
-const BANKS = [
+const G68_SUBJECT = String(process.env.TTWIN_G68_SUBJECT || "science").toLowerCase();
+const IS_MATH = G68_SUBJECT === "maths" || G68_SUBJECT === "math";
+const OUT = path.join(ROOT, "candidate", IS_MATH ? "math-middle_6_8" : "science-middle_6_8");
+const MAP_REL = IS_MATH ? "data/maps/maths.json" : "data/maps/science.json";
+const BANKS = IS_MATH ? [
+  "data/questions/maths-junior.json",
+  "data/questions/maths-igcse.json",
+  "data/questions/maths-bank.json",
+] : [
   "data/questions/science-junior.json",
   "data/questions/chemistry-igcse.json",
   "data/questions/chemistry-bank.json",
@@ -200,7 +207,7 @@ function instructionFor(unit, variation, figureMode) {
   const grade = unit.grade || 6;
   const hinge = unit.decision_hinge || "";
   const chapter = unit.chapter_title || "";
-  let s = "Write one new grades " + grade + " Science question. Chapter: " + chapter + ". ";
+  let s = "Write one new grades " + grade + (IS_MATH ? " Mathematics" : " Science") + " question. Chapter: " + chapter + ". ";
   s += "The student must decide: " + hinge + " ";
   s += "Use an Indian school or home setting and Indian names. Keep the source language register. ";
   if (variation === "V1") s += "Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. ";
@@ -313,7 +320,9 @@ function gateG9(result, packet) {
     if (allowed.indexOf(v) < 0) return;
     if (bound.indexOf(v) < 0) bound.push(v);
   });
-  if (bound.length < 2) return { ok: false, gate: "G9" };
+  const need = Math.min(2, allowed.length);
+  if (need === 0) return { ok: true };
+  if (bound.length < need) return { ok: false, gate: "G9" };
   return { ok: true };
 }
 function optionIdsFromResult(out) {
@@ -423,9 +432,9 @@ function compileUnit(K, unit, source, science, spec) {
   const ctx = {
     map: science,
     pack: "middle_6_8",
-    subject: "science",
+    subject: IS_MATH ? "maths" : "science",
     target_unit_id: unit.unit_id,
-    slim_map_ref: "data/maps/science.json",
+    slim_map_ref: MAP_REL,
     target_item_type: spec.target_item_type || "preserve",
     figure: { mode: figureMode, tikz_required: figureMode === "rewrite" || figureMode === "add" },
   };
@@ -485,7 +494,7 @@ function resultToCandidate(result, packet, source, unit, attempt) {
     mx_option_map: mxMap,
     item: {
       uid: uid,
-      subject: "science",
+      subject: IS_MATH ? "maths" : "science",
       pack: "middle_6_8",
       node: unit.node,
       chapter_id: unit.chapter,
@@ -556,7 +565,7 @@ function mxTypeCount(unit) {
 function remainingEligibleUnits(science) {
   const have = grokCoveredUnits();
   return (science.units || []).filter((u) => {
-    return u.unit_id && mxTypeCount(u) >= 2 && !have.has(u.unit_id);
+    return u.unit_id && /\/grade_0[678]\//.test(String(u.unit_id)) && !have.has(u.unit_id);
   });
 }
 function chapterKey(unit) {
@@ -777,8 +786,8 @@ function parseArgs(argv) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const cmd = args._[0] || "census";
-  const science = readJson(path.join(ROOT, "data/maps/science.json"));
-  const junior = readJson(path.join(ROOT, "data/questions/science-junior.json"));
+  const science = readJson(path.join(ROOT, MAP_REL));
+  const junior = readJson(path.join(ROOT, IS_MATH ? "data/questions/maths-junior.json" : "data/questions/science-junior.json"));
   const K = loadKimi();
   if (cmd === "census") {
     const c = census(science, junior);

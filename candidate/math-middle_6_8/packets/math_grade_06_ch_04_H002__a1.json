@@ -1,0 +1,113 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:02pd",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T06:29:27.527Z",
+  "source": {
+    "item_ref": "session:mathnet:02pd",
+    "item_type": "single_mcq",
+    "stem": "Problem:\nNum torneio de tênis cada jogador passa para a rodada seguinte somente em caso de vitória. Se n∫o for possível que sempre passe para a rodada seguinte um número par de jogadores, a organizaç∫o do torneio decide quais rodadas determinados jogadores devem jogar. Por exemplo, um cabeça de chave pode, a critério dos organizadores, entrar na segunda rodada, ou passar da primeira para a terceira, de modo que o total de jogadores que participem de cada rodada seja par.\n\na. Considere um torneio de tênis com 64 jogadores. Quantas partidas s∫o disputadas?\n\nb. E em um torneio com 2011 jogadores?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Considere um torneio de tênis com 64 jogadores. Quantas partidas são disputadas?"
+      },
+      {
+        "id": "B",
+        "text": "E em um torneio com 2011 jogadores?"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_04/H002",
+      "unit_id": "math/grade_06/ch_04/H002",
+      "title": "decide how to convert an unordered set of observations into frequencies that reveal most, least, tied, or ordered categories",
+      "node_labels": [
+        "Chance, data and statistical reduction"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Chance, data and statistical reduction",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "raw observations still holds here even though Categories must be recognizable so equivalent responses are not split under different is missing from the stem — on the item about decide how to convert an unordered set of observations."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Category is what produces raw observations, so the usual direction of this relation is run backwards — on the item about decide how to convert an unordered set of observations."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The raw observations rule also covers this: Do not assess decorative artwork unless it changes data interpretation, so it is not an exception — on the item about decide how to convert an unordered set of observations."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "raw observations is settled by running 'decide how to compute a total amount from a frequency distribution': For a frequency distribution of numerical outcomes, the total amount equals the sum of — on the item about decide how to convert an unordered set of observations."
+      }
+    ],
+    "enrichment": "Each observation is assigned to exactly one matching category or value, and the frequency is the count of observations in that category or value.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_04. The student must decide: decide how to convert an unordered set of observations into frequencies that reveal most, least, tied, or ordered categories Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 2
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:02pd",
+    "hinge": "math/grade_06/ch_04/H002",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H002"
+  }
+}

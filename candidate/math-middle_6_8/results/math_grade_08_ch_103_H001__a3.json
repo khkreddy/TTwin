@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Walia counts seven pebbles by matching each pebble to one clap in order, from clap 1 through clap 7.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ordered clap sequence alone counts the pebbles even if some pebbles are skipped."
+    },
+    {
+      "id": "B",
+      "text": "One-to-one matching works only with written Hindu numerals, not with claps."
+    },
+    {
+      "id": "C",
+      "text": "Each pebble is matched exactly once to one clap, so the ordered claps show that there are seven pebbles."
+    },
+    {
+      "id": "D",
+      "text": "Seven is correct because the word seven is the largest word written on the board."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Counting needs a one-to-one match between objects and an ordered standard sequence. Claps are a valid sequence when each pebble is matched exactly once.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

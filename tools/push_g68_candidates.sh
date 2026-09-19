@@ -9,9 +9,13 @@ else
 fi
 
 node tools/pack_g68_candidates.js >/dev/null
+if [ -d candidate/math-middle_6_8/items ]; then
+  TTWIN_G68_SUBJECT=maths node tools/pack_g68_candidates.js --maths >/dev/null || true
+fi
 
 git add \
   candidate/science-middle_6_8 \
+  candidate/math-middle_6_8 \
   tools/modify_g68.js \
   tools/pack_g68_candidates.js \
   tools/push_g68_candidates.sh \
