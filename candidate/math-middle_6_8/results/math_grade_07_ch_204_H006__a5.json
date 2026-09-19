@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Urvashi asks whether $\\dfrac{9}{25}$ can be written as a terminating decimal by finding an equivalent fraction with denominator $10$, $100$, $1000$, and so on.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply numerator and denominator by $4$ to get the equivalent fraction $\\dfrac{36}{100}$."
+    },
+    {
+      "id": "B",
+      "text": "$\\dfrac{9}{25}$ can be written as the terminating decimal $0.36$."
+    },
+    {
+      "id": "C",
+      "text": "$\\dfrac{9}{25}$ cannot become a terminating decimal because $25$ is not already $10$, $100$, or $1000$."
+    },
+    {
+      "id": "D",
+      "text": "Writing $0.36$ is what creates the original fraction $\\dfrac{9}{25}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An equivalent fraction with denominator $100$ is $\\dfrac{36}{100}$, so $\\dfrac{9}{25}=0.36$. The denominator need not start as $10$, $100$, or $1000$; the decimal form does not create the original fraction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

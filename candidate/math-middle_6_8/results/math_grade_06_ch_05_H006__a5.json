@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar runs the Sieve of Eratosthenes on the whole numbers from $1$ to $25$.\n\nWhich statement is correct when the sieve is finished?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$23$ stays circled as prime, while $1$ is crossed out and $25$ is crossed out as composite."
+    },
+    {
+      "id": "B",
+      "text": "$1$ is circled as a prime because it is the first uncrossed label on the list."
+    },
+    {
+      "id": "C",
+      "text": "Circling the primes is what produces the earlier crossing out of their multiples."
+    },
+    {
+      "id": "D",
+      "text": "$25$ is found by dividing values in the sieve instead of crossing out multiples of $5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the sieve, 1 is crossed out, primes such as 23 stay circled, and composites such as 25 are crossed. Calling 1 prime swaps the sieve labels. Saying circling produces the prior crossings reverses the sieve order. Dividing instead of crossing multiples confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

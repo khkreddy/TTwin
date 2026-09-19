@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The model is the expression $6p+8$."
+    },
+    {
+      "id": "B",
+      "text": "The situation is modeled by the operations multiply-by-$6$ and add-$8$ alone."
+    },
+    {
+      "id": "C",
+      "text": "The correct model is $6p+8=50$."
+    },
+    {
+      "id": "D",
+      "text": "The unknown $p$ equals $50$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Yamini buys $6$ identical pens and a sharpener that costs $\\mathrm{Rs}\\,8$. The bill is $\\mathrm{Rs}\\,50$. Let $p$ be the cost of one pen in rupees.\n\nWhich claim models the situation correctly?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One pen costs $p$, so six pens and the sharpener total $6p+8$, set equal to the bill $50$. An expression alone, operations with no equality, or taking the printed total as $p$ miss the equation model.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

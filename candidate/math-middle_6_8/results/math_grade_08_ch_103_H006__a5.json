@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Regrouping is the correct answer for this sum."
+    },
+    {
+      "id": "B",
+      "text": "The written sum keeps all $4$ copies of the $1$-landmark in the ones place."
+    },
+    {
+      "id": "C",
+      "text": "Exchange the $4$ copies of the $1$-landmark for one copy of the $4$-landmark before reading the result."
+    },
+    {
+      "id": "D",
+      "text": "In a base-$10$ system the same $4$ ones may also stay unregrouped."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Bina adds in a base-$4$ landmark system. In the ones place she holds $4$ copies of the $1$-landmark.\n\nWhich claim is correct before she reads the sum?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In base $4$, four $1$-landmarks exchange for one $4$-landmark before the sum is read. Naming regrouping alone, leaving the four ones, or applying the same leave-four habit in base $10$ misses the base-$n$ exchange.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

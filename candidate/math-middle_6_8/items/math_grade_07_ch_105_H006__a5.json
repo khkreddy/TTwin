@@ -1,0 +1,99 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_105/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_105/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H006"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H006:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H006",
+    "stem": "Nandini studies the figure. Lines $m$ and $n$ each carry a matching pair of arrow marks. Lines $u$ and $v$ meet with a small square at the meeting point.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which reading of the marks is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "The arrow marks are labels only, with no parallel relation shown."
+          },
+          {
+            "id": "B",
+            "text": "The matching double arrow marks show $m \\parallel n$, and the small square shows that $u$ is perpendicular to $v$."
+          },
+          {
+            "id": "C",
+            "text": "The small square marks any sharp corner, not a right angle."
+          },
+          {
+            "id": "D",
+            "text": "Drawing the arrow marks is what creates lines $m$ and $n$."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9,font=\\sffamily\\small]\n  \\draw[thick] (0,2.4) -- (4.4,2.4) node[right] {$m$};\n  \\draw[thick] (0,1.4) -- (4.4,1.4) node[right] {$n$};\n  \\draw[->,thick] (1.6,2.4) -- (2.0,2.4);\n  \\draw[->,thick] (2.05,2.4) -- (2.45,2.4);\n  \\draw[->,thick] (1.6,1.4) -- (2.0,1.4);\n  \\draw[->,thick] (2.05,1.4) -- (2.45,1.4);\n  \\draw[thick] (0.4,-0.3) -- (3.8,-0.3) node[right] {$u$};\n  \\draw[thick] (2.0,-1.6) -- (2.0,0.9) node[above] {$v$};\n  \\draw (2.0,-0.3) rectangle (2.25,-0.05);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

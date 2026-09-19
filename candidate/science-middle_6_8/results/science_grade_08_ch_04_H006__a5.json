@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% Setup M — one cell\n\\node[font=\\bfseries] at (1.5,3.4) {Setup M};\n\\draw[thick,fill=white] (0.2,2.45) rectangle (1.2,2.95);\n\\node at (0.7,2.7) {cell};\n\\node[font=\\bfseries] at (0.05,2.7) {$-$};\n\\node[font=\\bfseries] at (1.35,2.7) {$+$};\n\\draw[thick] (1.2,2.7)--(2.0,2.7);\n\\fill (2.0,2.7) circle (1.2pt);\n\\draw[thick] (2.0,2.7)--(2.35,3.0);\n\\fill (2.55,2.7) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.3,3.2) {switch};\n\\draw[thick] (2.55,2.7)--(3.3,2.7)--(3.3,1.55)--(0.2,1.55)--(0.2,2.45);\n\\draw[line width=2.2pt] (0.8,1.55)--(2.5,1.55);\n\\node[font=\\footnotesize] at (1.65,1.25) {same steel wire};\n% Setup N — two cells\n\\node[font=\\bfseries] at (7.0,3.4) {Setup N};\n\\draw[thick,fill=white] (5.2,2.45) rectangle (6.0,2.95);\n\\node[font=\\footnotesize] at (5.6,2.7) {cell};\n\\draw[thick,fill=white] (6.1,2.45) rectangle (6.9,2.95);\n\\node[font=\\footnotesize] at (6.5,2.7) {cell};\n\\node[font=\\bfseries] at (5.05,2.7) {$-$};\n\\node[font=\\bfseries] at (7.05,2.7) {$+$};\n\\draw[thick] (6.9,2.7)--(7.6,2.7);\n\\fill (7.6,2.7) circle (1.2pt);\n\\draw[thick] (7.6,2.7)--(7.95,3.0);\n\\fill (8.15,2.7) circle (1.2pt);\n\\node[font=\\footnotesize] at (7.9,3.2) {switch};\n\\draw[thick] (8.15,2.7)--(9.0,2.7)--(9.0,1.55)--(5.2,1.55)--(5.2,2.45);\n\\draw[line width=2.2pt] (5.9,1.55)--(7.8,1.55);\n\\node[font=\\footnotesize] at (6.85,1.25) {same steel wire};\n\\draw[thin] (6.4,1.85) .. controls (6.5,2.1) .. (6.35,2.25);\n\\draw[thin] (7.0,1.85) .. controls (7.1,2.1) .. (6.95,2.25);\n\\draw[thin] (7.5,1.85) .. controls (7.6,2.05) .. (7.45,2.2);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The wire in N heats more than in M; that heating can be useful in a room heater but harmful at a loose wall plug."
+    },
+    {
+      "id": "B",
+      "text": "The wire in M heats more than in N because one cell always produces more heat than two."
+    },
+    {
+      "id": "C",
+      "text": "N heats more than M for any connection time, even if the switches are closed for unequal times."
+    },
+    {
+      "id": "D",
+      "text": "Neither wire generates heat because neither wire glows."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows two setups Aditya builds with the same thin steel wire. Setup M uses one cell. Setup N uses two cells in series. He closes each switch for 3 minutes. He also thinks about heat from a room heater and heat at a loose wall plug.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For the same wire and same duration, two cells produce more heat than one. That heating can be useful (heater) or harmful (loose plug). Reversing which setup heats more, dropping the equal-time condition, or judging only from glow miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force-arrow source into Setup M (one cell) vs Setup N (two cells) with the same steel wire."
+  }
+}

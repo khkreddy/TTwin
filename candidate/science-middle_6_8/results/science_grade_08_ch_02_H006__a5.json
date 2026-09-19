@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vivaan lists four biological structures in order of organisation: a lung cell, a group of similar lung cells working together, a lung, and the respiratory system that includes the lungs and airways.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Where does the lung belong in the sequence cell → tissue → organ → organ system → organism?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "organ"
+        },
+        {
+          "id": "B",
+          "text": "tissue"
+        },
+        {
+          "id": "C",
+          "text": "organ system"
+        },
+        {
+          "id": "D",
+          "text": "cell"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A lung is an organ made of tissues that work together; the respiratory system is the organ system above it."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the sequence cell → tissue → organ → organ system → organism, the lung is an organ. Calling it a tissue, organ system, or cell places it at the wrong level.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

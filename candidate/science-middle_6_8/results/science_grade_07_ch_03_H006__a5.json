@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows a cell, a buzzer, and a switch S. The switch is closed, so its contacts touch.\n\nIs the circuit ON or OFF?",
+  "options": [
+    {
+      "id": "A",
+      "text": "ON — the closed switch completes the path, so current can flow."
+    },
+    {
+      "id": "B",
+      "text": "OFF — a closed switch always stops current."
+    },
+    {
+      "id": "C",
+      "text": "OFF — the buzzer blocks the cell even when the switch is closed."
+    },
+    {
+      "id": "D",
+      "text": "ON — only because the switch itself supplies current to the buzzer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=white] (0,0) rectangle (1.2,0.55);\n\\node at (0.6,0.275) {cell};\n\\node[font=\\bfseries] at (-0.2,0.275) {$-$};\n\\node[font=\\bfseries] at (1.4,0.275) {$+$};\n\\draw[thick] (1.2,0.275) -- (2.5,0.275) -- (2.5,1.7) -- (4.6,1.7);\n\\draw[thick,fill=white] (4.6,1.45) rectangle (5.6,1.95);\n\\node at (5.1,1.7) {buzzer};\n\\draw[thick] (5.6,1.7) -- (6.4,1.7) -- (6.4,0.275) -- (4.0,0.275);\n\\fill (4.0,0.275) circle (0.05);\n\\fill (2.9,0.275) circle (0.05);\n\\draw[thick] (4.0,0.275) -- (2.9,0.275);\n\\draw[thick] (2.9,0.275) -- (2.5,0.275);\n\\node at (3.45,0.7) {switch S};\n\\node at (3.45,-0.3) {closed};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When switch contacts touch, the path is complete, so the circuit is ON and current can flow. Claiming a closed switch stops current, that the buzzer blocks the cell, or that the switch supplies current are wrong about the same ON/OFF idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Cell, buzzer, and closed switch S forming a complete loop."
+  }
+}

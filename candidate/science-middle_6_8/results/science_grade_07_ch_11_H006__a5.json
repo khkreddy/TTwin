@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav shines a torch at a glass mirror, a shiny steel spoon, and a dull cardboard sheet.\n\nWhich claim about reflection is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The glass mirror and the shiny steel spoon change the direction of the light by reflection."
+    },
+    {
+      "id": "B",
+      "text": "Only the glass mirror can reflect light; the shiny steel spoon cannot."
+    },
+    {
+      "id": "C",
+      "text": "The torch beam changes direction toward the wall even when it passes beside the mirror."
+    },
+    {
+      "id": "D",
+      "text": "No reflection occurs because there is no bright spot on another surface."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reflection happens when light meets a mirror or shiny surface, so both the glass mirror and shiny steel spoon redirect the beam. Limiting reflection to glass only, claiming bending without hitting the mirror, or requiring a bright spot elsewhere are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

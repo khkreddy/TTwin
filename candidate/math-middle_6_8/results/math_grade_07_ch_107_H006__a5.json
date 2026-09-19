@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pallavi is given included side $DE = 7\\,\\mathrm{cm}$ with $\\angle D = 110^{\\circ}$ and $\\angle E = 85^{\\circ}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Treat $DE$ as any side of the triangle, not the side between $\\angle D$ and $\\angle E$."
+    },
+    {
+      "id": "B",
+      "text": "A triangle always forms, because drawing the two angle arms from $D$ and $E$ forces them to meet."
+    },
+    {
+      "id": "C",
+      "text": "No triangle forms, because $110^{\\circ}+85^{\\circ}$ is not less than $180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "A triangle forms because the printed length $7\\,\\mathrm{cm}$ is the standout given measure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With included side $DE$, the two given angles must leave a positive third angle. $110+85=195\\ge 180$, so the arms cannot form a triangle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

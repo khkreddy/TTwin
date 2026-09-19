@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya dissolves table salt in a shallow dish of water and leaves the dish in sunlight. The solution becomes warm. She wants the dry salt back from the leftover solution.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "When the water disappears, dry salt is left behind."
+    },
+    {
+      "id": "2",
+      "text": "Dry salt is recovered as soon as the solution becomes warm."
+    },
+    {
+      "id": "3",
+      "text": "Sunlight can recover the salt even if the solution does not bubble."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dry salt remains when water disappears; sunlight works without bubbling. Warmth alone does not finish recovery.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

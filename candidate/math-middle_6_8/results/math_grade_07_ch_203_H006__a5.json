@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tejas cuts paper strips of $9\\,\\mathrm{cm}$ and $12\\,\\mathrm{cm}$ to make matching-length torans. He wants the shortest common length both strip sizes can make.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any common multiple of $9$ and $12$ is the shortest common length."
+    },
+    {
+      "id": "B",
+      "text": "The shortest common length is $9\\times 12=108\\,\\mathrm{cm}$, with no smaller shared multiple."
+    },
+    {
+      "id": "C",
+      "text": "The shortest common length is the LCM of $9$ and $12$, which is $36\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "D",
+      "text": "The shortest common length is $9+12=21\\,\\mathrm{cm}$ because those are the printed strip lengths."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The earliest common reach of repeating $9$ cm and $12$ cm lengths is their LCM. $\\mathrm{LCM}(9,12)=36$. Any common multiple is not automatically the shortest; the product $108$ is a common multiple but not the least; adding the printed lengths is not the LCM rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

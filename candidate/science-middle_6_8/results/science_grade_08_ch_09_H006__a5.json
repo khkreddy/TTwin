@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Warming the water tends to reduce how much oxygen stays dissolved in it."
+    },
+    {
+      "id": "B",
+      "text": "Cold aquarium water can hold more dissolved oxygen than the same water after it is warmed."
+    },
+    {
+      "id": "C",
+      "text": "Warming the aquarium water increases how much oxygen stays dissolved in it."
+    },
+    {
+      "id": "D",
+      "text": "Dissolved oxygen stays the same because the water still looks clear."
+    }
+  ],
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Leela keeps fish in a home aquarium. She gently warms the aquarium water with a small heater. She does not bubble extra air into the tank herself.\n\nWhich claims correctly predict what happens to dissolved oxygen? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gas solubility in water generally falls as temperature rises, so warm water holds less dissolved oxygen than cold water. Clear look does not measure dissolved oxygen.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Nidhi's 15 cm scale is broken at the zero end. She places one end of an eraser at the 3.0 cm mark; the other end of the eraser is at 11.0 cm.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The eraser's length is 11.0 cm − 3.0 cm = 8.0 cm."
+    },
+    {
+      "id": "2",
+      "text": "Starting at the 3.0 cm mark is allowed when the zero end is broken."
+    },
+    {
+      "id": "3",
+      "text": "The eraser's length is 3.0 cm − 11.0 cm = −8.0 cm."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With a broken zero, length is the separation of the two clear marks: 11.0 − 3.0 = 8.0 cm. Starting at 3.0 cm is allowed. Subtracting the larger reading from the smaller gives a false negative length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

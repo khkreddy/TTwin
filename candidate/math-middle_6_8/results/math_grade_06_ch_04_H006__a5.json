@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Sonia's bar graph of library books borrowed in three categories. The vertical scale uses equal intervals.\n\nWhich category has the greatest number of books?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Science, because its bar is tallest on the equal-interval scale."
+    },
+    {
+      "id": "B",
+      "text": "Comics, because the category name alone settles the book count."
+    },
+    {
+      "id": "C",
+      "text": "Fiction, as if equal intervals on the vertical scale are not required."
+    },
+    {
+      "id": "D",
+      "text": "Science, because darker shading settles the book count."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Category};\n  \\draw[->] (0,0) -- (0,7.2) node[above] {Books};\n  \\foreach \\y in {1,2,3,4,5,6,7} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!45] (0.7,0) rectangle (1.5,5);\n  \\node at (1.1,-0.35) {Fiction};\n  \\fill[gray!45] (2.2,0) rectangle (3.0,7);\n  \\node at (2.6,-0.35) {Science};\n  \\fill[gray!45] (3.7,0) rectangle (4.5,3);\n  \\node at (4.1,-0.35) {Comics};\n  \\node[anchor=west] at (0,7.55) {Library books borrowed};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On an equal-interval vertical scale, the tallest bar (Science at 7) encodes the greatest category value. Using the category name alone swaps the label for the height. Ignoring equal intervals omits the scale condition. Using shading leaves the bar-height hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source rods triangle as a three-category library books bar graph with equal vertical intervals."
+  }
+}

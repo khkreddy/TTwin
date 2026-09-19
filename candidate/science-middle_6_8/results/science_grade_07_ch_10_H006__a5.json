@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Myra places a water plant under an inverted funnel in a beaker of water in sunlight. A test tube over the funnel stem collects gas bubbles.\n\nWhich claim about the collected gas is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is rich in oxygen released during photosynthesis."
+    },
+    {
+      "id": "B",
+      "text": "It is rich in carbon dioxide released during photosynthesis."
+    },
+    {
+      "id": "C",
+      "text": "It is rich in oxygen released during respiration."
+    },
+    {
+      "id": "D",
+      "text": "The water plant in sunlight does not release oxygen."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In sunlight the water plant photosynthesises and the collected gas is rich in oxygen. Calling it carbon dioxide, linking it to respiration, or denying oxygen release are wrong about that evidence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\mathrm{Rs}\\,45$ is the unknown whole $W$."
+    },
+    {
+      "id": "B",
+      "text": "Solve $25=45/W$ for $W$."
+    },
+    {
+      "id": "C",
+      "text": "Set $\\dfrac{25}{100}=\\dfrac{45}{W}$ and solve to get $W=180$."
+    },
+    {
+      "id": "D",
+      "text": "The unknown whole is $W=25$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Gauri knows that $\\mathrm{Rs}\\,45$ is $25\\%$ of an unknown whole amount $W$. She wants $W$.\n\nWhich plan is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Match $25\\%$ with $25/100=45/W$, so $W=180$. Calling $45$ the whole, dropping the hundredths, or reading the printed $25$ as $W$ fails the unknown-whole plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

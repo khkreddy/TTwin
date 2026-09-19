@@ -1,0 +1,99 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_04/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_04/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H006"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H006:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H006",
+    "stem": "Bilal has two identical-looking iron rods, P and Q. One may be a magnet and the other a plain iron rod. A paper sticker marked M is stuck on rod P. He also has a known bar magnet with clear North and South poles.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "How can he tell which rod is a magnet?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Find which rod is repelled by one pole of the known magnet."
+          },
+          {
+            "id": "B",
+            "text": "Find which rod is attracted by the known magnet."
+          },
+          {
+            "id": "C",
+            "text": "Choose the M-labelled rod as the magnet."
+          },
+          {
+            "id": "D",
+            "text": "Expect both ends of a magnetised rod to be attracted by the North pole of the known magnet."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

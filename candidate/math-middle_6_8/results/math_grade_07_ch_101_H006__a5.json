@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Jatin's calculator starts at $0$ and has buttons $+1$, $+10$, $+100$, and $+1000$. He wants the display to show exactly $420$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$4$ presses of $+100$ and $2$ presses of $+10$ make exactly $420$."
+        },
+        {
+          "id": "B",
+          "text": "The powers of ten are the display value $420$."
+        },
+        {
+          "id": "C",
+          "text": "Pressing buttons is what creates the place-value buttons $+1$, $+10$, $+100$, and $+1000$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "4×100 + 2×10 = 400 + 20 = 420, so those button clicks make the target."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "420 can be made as 4 hundreds and 2 tens. Calling the powers of ten the value 420 swaps terms. Saying presses create the buttons reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

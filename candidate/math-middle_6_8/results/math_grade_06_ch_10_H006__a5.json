@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema must rewrite $9-(-5)$ as addition of an inverse.\n\nOne or more options may be correct. Which two claims correctly describe that rewrite?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$9-(-5)$ rewrites as $9+(+5)$."
+    },
+    {
+      "id": "B",
+      "text": "The additive inverse of $-5$ is $-5$ itself."
+    },
+    {
+      "id": "C",
+      "text": "Subtracting $-5$ is the same as adding the additive inverse of $-5$, which is $+5$."
+    },
+    {
+      "id": "D",
+      "text": "Subtraction is rewritten by squaring the inverse and leaving the minus sign."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "a−b = a + (inverse of b), so 9−(−5)=9+(+5), and the inverse of −5 is +5. Saying −5 is its own inverse swaps the inverse. Squaring the inverse confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

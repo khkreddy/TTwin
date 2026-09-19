@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kabir dissolves sugar in water and later evaporates the water until solid sugar remains. He also tears a sheet of paper into strips.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly classifies the changes?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Dissolving the sugar is reversible because the sugar can be brought back; tearing the paper is not reversible because the whole sheet cannot be brought back."
+        },
+        {
+          "id": "B",
+          "text": "Tearing the paper is reversible because the paper material is still there."
+        },
+        {
+          "id": "C",
+          "text": "Dissolving the sugar is not reversible."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A change is reversible only if the original substance or object can be brought back in the form it started with; sugar can, but the whole paper sheet cannot."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Recovering solid sugar shows dissolving is reversible; the torn sheet cannot be restored as the original whole sheet, so tearing is not reversible.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

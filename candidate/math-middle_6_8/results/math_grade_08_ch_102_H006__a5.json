@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which rewrite is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$5^{3}\\times 4^{3}=20^{3}$."
+        },
+        {
+          "id": "B",
+          "text": "$5^{3}\\times 4^{3}=20^{6}$."
+        },
+        {
+          "id": "C",
+          "text": "$5^{3}\\times 4^{3}=9^{3}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Abhay must simplify $5^{3}\\times 4^{3}$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The exponents match, so the bases multiply: $5^{3}\\times 4^{3}=(5\\times 4)^{3}=20^{3}$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same exponent $3$ lets the bases multiply: $(5\\times 4)^{3}=20^{3}$. Adding exponents to get $20^{6}$ or adding bases to get $9^{3}$ breaks the same-exponent product rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

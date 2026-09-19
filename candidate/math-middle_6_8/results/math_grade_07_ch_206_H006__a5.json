@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wafa constructs a six-petal flower with ruler and compass. Equal radii from the centre and equal $60^{\\circ}$ turn angles are required before the outer petal arcs are traced.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Equal radii and $60^{\\circ}$ turns are names only, so the flower is finished with no support construction drawn."
+    },
+    {
+      "id": "B",
+      "text": "Trace the outer petal arcs first, and add equal radii and $60^{\\circ}$ turns afterwards."
+    },
+    {
+      "id": "C",
+      "text": "Construct the equal radii and $60^{\\circ}$ support angles first, then trace the outer petal arcs."
+    },
+    {
+      "id": "D",
+      "text": "Tracing the outer petal arcs is what creates the equal radii and $60^{\\circ}$ turn angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A ruler-and-compass flower is exact only after its support structure—equal radii and equal $60^{\\circ}$ turns—is built. The visible petal arcs are traced after those constraints.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

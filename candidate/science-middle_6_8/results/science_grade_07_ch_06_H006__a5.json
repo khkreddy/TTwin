@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Diya is writing a healthy growth plan for adolescence. She thinks about proteins, carbohydrates, fats, vitamins, minerals, sweets, soft drinks, and regular physical activity.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "A nutritious diet should include proteins, carbohydrates, fats, vitamins, and minerals."
+    },
+    {
+      "id": "2",
+      "text": "Regular physical activity should be part of the plan along with nutritious food."
+    },
+    {
+      "id": "3",
+      "text": "Sweets and soft drinks can replace the varied nutritious meals if regular exercise continues."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adolescents need both a varied nutritious diet and regular physical activity. Replacing nutritious meals with sweets and soft drinks is wrong even if exercise continues.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

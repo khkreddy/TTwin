@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni draws rectangle $WXYZ$. Point $P$ moves on side $WX$ and point $Q$ moves on side $ZY$. She wants to track how near or far $P$ and $Q$ are.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Measure the length of segment $PQ$; that length changes as $P$ and $Q$ move."
+    },
+    {
+      "id": "B",
+      "text": "Track only the position of $Q$; the position of $P$ is not needed."
+    },
+    {
+      "id": "C",
+      "text": "Nearness can be decided without placing $P$ on $WX$ and $Q$ on $ZY$."
+    },
+    {
+      "id": "D",
+      "text": "$P$ and $Q$ are near when the printed letters look close on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Nearness of P and Q is the length of segment PQ as both points move on their sides. Tracking only Q swaps away P. Dropping the side placements omits the setup. Judging by printed letter closeness is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Charu's cousin has bleeding gums after weeks with almost no fruit. The doctor mentions a Vitamin C shortage and scurvy, and also reminds the family that iodised salt supplies iodine. Charu learns that vitamins and minerals protect the body from diseases, and that citrus fruits such as lemons and oranges supply Vitamin C.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Vitamins and minerals act as protective nutrients that help prevent diseases."
+    },
+    {
+      "id": "B",
+      "text": "Vitamin C in lemons and oranges can help cure scurvy."
+    },
+    {
+      "id": "C",
+      "text": "Iodine deficiency causes scurvy."
+    },
+    {
+      "id": "D",
+      "text": "Scurvy causes Vitamin C deficiency."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vitamins and minerals are protective nutrients. Vitamin C in citrus fruits helps cure scurvy. Iodine deficiency does not cause scurvy, and scurvy does not cause the Vitamin C shortage.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

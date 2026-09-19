@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Twelve lunar months total about 354 days, which is shorter than the roughly 365-day seasonal cycle."
+    },
+    {
+      "id": "2",
+      "text": "Because the lunar year is shorter, the same lunar month drifts earlier relative to the seasons in later years."
+    },
+    {
+      "id": "3",
+      "text": "A purely lunar calendar keeps each lunar month locked to the same season every year because months are still based on Moon phases."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Mehak's family uses a purely lunar calendar. Each month starts with a new Moon. Twelve lunar months make about 354 days. Seasons on Earth repeat in about 365 days. A harvest day fixed to one lunar month falls earlier in the seasonal year after a few years.\n\nWhich statements correctly explain why the lunar months do not stay aligned with the same seasons?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar year of about 354 days is shorter than the seasonal year, so lunar months drift relative to seasons. Statement 3 wrongly claims they stay locked.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

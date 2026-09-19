@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bhavna traces a path on square-grid paper. One segment runs $4$ straight grid units along the lines; the next segment cuts diagonally across one square.\n\nOne or more options may be correct. Which two claims about the path length are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The straight segment measures $4$ straight grid units along the lines."
+    },
+    {
+      "id": "B",
+      "text": "The diagonal segment has the same unit length as one straight grid step."
+    },
+    {
+      "id": "C",
+      "text": "The diagonal segment must be measured or estimated as its own length, not counted as one straight grid unit."
+    },
+    {
+      "id": "D",
+      "text": "The path length is the printed label \"square-grid paper\"."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Straight grid steps and diagonal cuts can have different unit lengths, so the 4-unit straight part and the separately estimated diagonal are both needed. Treating the diagonal as one straight unit omits that difference. Calling the paper label the length swaps terms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bilal has two identical-looking iron rods, P and Q. One may be a magnet and the other a plain iron rod. A paper sticker marked M is stuck on rod P. He also has a known bar magnet with clear North and South poles.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "How can he tell which rod is a magnet?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Find which rod is repelled by one pole of the known magnet."
+        },
+        {
+          "id": "B",
+          "text": "Find which rod is attracted by the known magnet."
+        },
+        {
+          "id": "C",
+          "text": "Choose the M-labelled rod as the magnet."
+        },
+        {
+          "id": "D",
+          "text": "Expect both ends of a magnetised rod to be attracted by the North pole of the known magnet."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only another magnet can be repelled. A plain iron rod is attracted by both poles, so attraction alone cannot identify a magnet."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repulsion between like poles identifies a magnet. Attraction happens with plain iron too. Picking a rod first is not a magnetic test. Both ends of a magnet are not attracted by one North pole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

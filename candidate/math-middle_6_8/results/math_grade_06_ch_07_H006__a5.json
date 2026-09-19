@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Chirag reduces the fraction $\\dfrac{30}{45}$ to lowest terms.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes that reduction?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Divide numerator and denominator by $15$ to get $\\dfrac{2}{3}$."
+        },
+        {
+          "id": "B",
+          "text": "Multiply numerator and denominator by $15$ to get $\\dfrac{450}{675}$."
+        },
+        {
+          "id": "C",
+          "text": "Lowest terms is what produces the common factor $15$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "30 and 45 share the common factor 15; dividing both by 15 gives 2/3, which has no common factor except 1."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reducing divides both parts by a common factor (15) to reach 2/3. Multiplying enlarges instead of reducing (operation confusion). Saying lowest terms produces the common factor reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

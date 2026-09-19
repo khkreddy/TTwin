@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Alok draws two angles on paper. Angle $M$ has short arms and a wide turn about its vertex. Angle $N$ has long arms and a narrow turn about its vertex.\n\nOne or more options may be correct. Which two claims correctly decide which angle is larger?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $M$ is larger, because it has the greater amount of turn about the vertex."
+    },
+    {
+      "id": "B",
+      "text": "Angle $N$ is larger, because its arms are drawn longer."
+    },
+    {
+      "id": "C",
+      "text": "Arm length does not decide size when the amount of turn is what is compared."
+    },
+    {
+      "id": "D",
+      "text": "Angle $M$ and angle $N$ have the same size on Alok's paper."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Angle size is the amount of turn about the vertex, so M is larger and arm length does not decide size. Saying longer arms make N larger reverses the size relation. Claiming equal size on the paper omits comparing the turns.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

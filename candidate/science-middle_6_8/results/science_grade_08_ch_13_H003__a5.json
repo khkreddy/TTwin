@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth is at a distance where temperatures allow water to stay liquid."
+    },
+    {
+      "id": "B",
+      "text": "That liquid-water temperature range helps make Earth habitable."
+    },
+    {
+      "id": "C",
+      "text": "Earth's place for liquid water does not depend on its distance from the Sun."
+    },
+    {
+      "id": "D",
+      "text": "Liquid water would still be as easy on Earth if Earth orbited as close as Venus or as far as Mars."
+    }
+  ],
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Sanya places beads for Venus, Earth, and Mars on a string model of the Solar System. Her teacher asks why Earth's distance from the Sun matters for liquid water and for life.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's orbital distance puts it in a temperature range where liquid water can exist, which supports habitability. Spin alone or extreme Venus/Mars distances do not keep that liquid-water condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

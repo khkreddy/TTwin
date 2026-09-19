@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which mirror can bring those parallel rays together after reflection?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The concave mirror"
+        },
+        {
+          "id": "B",
+          "text": "The plane mirror"
+        },
+        {
+          "id": "C",
+          "text": "The convex mirror"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "State briefly what happens to the parallel rays after the plane mirror and after the convex mirror.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n% Plane\n\\node[font=\\bfseries] at (1.0,4.0) {plane};\n\\draw[thick] (0,0.4)--(0,3.4);\n\\foreach \\y in {0.7,1.2,1.7,2.2,2.7,3.2} {\\draw[thin] (0,\\y)--(-0.18,\\y-0.12);}\n\\draw[->,thick] (2.2,2.8)--(0.12,2.8);\n\\draw[->,thick] (2.2,2.0)--(0.12,2.0);\n\\draw[->,thick] (2.2,1.2)--(0.12,1.2);\n\\draw[->,thick] (0.12,2.8)--(-1.4,2.8);\n\\draw[->,thick] (0.12,2.0)--(-1.4,2.0);\n\\draw[->,thick] (0.12,1.2)--(-1.4,1.2);\n% Concave\n\\node[font=\\bfseries] at (5.0,4.0) {concave};\n\\draw[thick] (5.6,0.5) .. controls (4.4,1.9) .. (5.6,3.3);\n\\draw[->,thick] (7.4,2.9)--(5.35,2.9);\n\\draw[->,thick] (7.4,1.9)--(5.15,1.9);\n\\draw[->,thick] (7.4,0.9)--(5.35,0.9);\n\\draw[->,thick] (5.35,2.9)--(4.3,1.9);\n\\draw[->,thick] (5.15,1.9)--(4.2,1.9);\n\\draw[->,thick] (5.35,0.9)--(4.3,1.9);\n\\fill (4.25,1.9) circle (1.4pt);\n% Convex\n\\node[font=\\bfseries] at (9.8,4.0) {convex};\n\\draw[thick] (8.8,0.5) .. controls (10.0,1.9) .. (8.8,3.3);\n\\draw[->,thick] (11.2,2.9)--(9.15,2.9);\n\\draw[->,thick] (11.2,1.9)--(9.35,1.9);\n\\draw[->,thick] (11.2,0.9)--(9.15,0.9);\n\\draw[->,thick] (9.15,2.9)--(8.1,3.4);\n\\draw[->,thick] (9.35,1.9)--(8.0,1.9);\n\\draw[->,thick] (9.15,0.9)--(8.1,0.4);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows three parallel torch rays Harsh sends toward a plane mirror, a concave mirror, and a convex mirror.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "After the plane mirror the rays stay parallel; after the convex mirror they spread apart."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A concave mirror can converge parallel rays; a plane mirror keeps them parallel; a convex mirror diverges them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote converging-lens source into plane, concave, and convex mirrors with parallel incident rays."
+  }
+}

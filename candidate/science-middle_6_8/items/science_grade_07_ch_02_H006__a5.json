@@ -1,0 +1,96 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_02/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_02/H006",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_02/H006"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_02:H006:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_02",
+    "chapter_label": "Acids, bases and salts",
+    "subtopic_id": "science/grade_07/ch_02/H006",
+    "stem": "Pihu wants a fair comparison of lemon juice and soap water using one prepared hibiscus extract as the indicator. Lemon juice and soap water start with different colours. She has a dropper and will record final colours so she can later label each sample acid or base.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 and 2 only",
+      "B": "1 and 3 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "Using the same hibiscus extract, similar drop amounts of each sample, and recording both final colours makes the comparison fair."
+      },
+      {
+        "id": "2",
+        "text": "Using one drop of lemon juice and ten drops of soap water is fair if the indicator is the same and both final colours are recorded."
+      },
+      {
+        "id": "3",
+        "text": "Different starting colours of lemon juice and soap water do not make the comparison unfair when both final colours are clearly readable."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_02/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

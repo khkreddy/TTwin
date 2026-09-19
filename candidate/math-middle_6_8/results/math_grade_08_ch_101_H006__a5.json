@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$49$ is a perfect square because the test is a sum of odd numbers."
+    },
+    {
+      "id": "B",
+      "text": "Continuing $1$, $3$, $5$, $7$, $9$, $11$, $13$ in order reaches exactly $0$ after seven steps, so $49=7^{2}$."
+    },
+    {
+      "id": "C",
+      "text": "The sum of the first seven odd numbers starting at $1$ equals $49$."
+    },
+    {
+      "id": "D",
+      "text": "$49$ is a perfect square because its units digit is $9$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Zubin tests whether $49$ is a perfect square by subtracting consecutive odd numbers starting from $1$: $49-1=48$, $48-3=45$, $45-5=40$, and so on.\n\nOne or more options may be correct. Which two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Subtracting consecutive odds from $1$ reaches $0$ in seven steps, and the first seven odds sum to $49=7^{2}$. Naming the process alone or reading the digit $9$ does not prove the square.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

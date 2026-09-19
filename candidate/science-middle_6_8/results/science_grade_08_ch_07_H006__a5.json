@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Smoke particles move freely in all directions with negligible attractions, so the smoke spreads to fill the available space."
+    },
+    {
+      "id": "B",
+      "text": "Smoke particles stay tightly packed like the solid incense stick, so the smoke keeps one fixed shape and one fixed volume."
+    },
+    {
+      "id": "C",
+      "text": "The smoke spreads through the cupboard first, and that spreading then causes free motion of its particles."
+    },
+    {
+      "id": "D",
+      "text": "The same explanation applies to the solid incense stick itself, not only to the smoke gas."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Ira lights an incense stick in one corner of a closed cupboard. Soon the smoke spreads through the whole cupboard and fills every gap.\n\nWhy does this gas have no fixed shape or fixed volume?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gas particles move freely with negligible attractions, so a gas has no fixed shape or volume and fills available space.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The magnet pulls the steel screw without contact; that pull is magnetic force."
+    },
+    {
+      "id": "B",
+      "text": "Magnetic force acts on magnetic materials such as the steel screw even when the magnet is not touching them."
+    },
+    {
+      "id": "C",
+      "text": "The magnet attracts the plastic bead without contact in the same way."
+    },
+    {
+      "id": "D",
+      "text": "The magnet attracts the aluminium foil strip because the foil looks shiny."
+    }
+  ],
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Navya holds a bar magnet a short distance from a steel screw, a plastic bead, and an aluminium foil strip on her desk. The steel screw moves toward the magnet before anything touches.\n\nWhich claims correctly identify magnetic force? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic force acts without contact on magnets or magnetic materials such as steel. Plastic and aluminium are not pulled that way; shine is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

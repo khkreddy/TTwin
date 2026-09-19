@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\sqrt{2}$ is correctly described as a terminating decimal."
+    },
+    {
+      "id": "B",
+      "text": "$\\sqrt{2}$ cannot be written as a terminating decimal."
+    },
+    {
+      "id": "C",
+      "text": "$\\sqrt{2}$ cannot equal $m/n$ for counting numbers $m$ and $n$ with $n\\neq 0$."
+    },
+    {
+      "id": "D",
+      "text": "$\\sqrt{2}$ equals the terminating decimal $1.4$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Hemant asks which of these forms $\\sqrt{2}$ can take: a terminating decimal, or a fraction $m/n$ of counting numbers $m$ and $n$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$\\sqrt{2}$ is non-terminating as a decimal and is not $m/n$ for counting numbers, because $2n^{2}=m^{2}$ conflicts with even prime multiplicities in squares. Naming the label alone or reading the digit $2$ does not settle either form.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

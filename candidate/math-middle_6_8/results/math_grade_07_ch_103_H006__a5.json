@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit compares the decimals $0.73$ and $0.8$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$0.73 > 0.8$ because $7$ is larger than $0$ among the first digits that look unequal."
+    },
+    {
+      "id": "B",
+      "text": "$0.73 > 0.8$ because $0.73$ has more digits written after the decimal point."
+    },
+    {
+      "id": "C",
+      "text": "Align place values as $0.73$ and $0.80$; in the tenths place $8 > 7$, so $0.8 > 0.73$."
+    },
+    {
+      "id": "D",
+      "text": "Round both decimals to the nearest whole number and compare those integers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place-value comparison aligns $0.73$ with $0.80$. The tenths digits decide: $8>7$, so $0.8>0.73$. Extra digits alone do not make a decimal larger, and rounding to wholes changes the question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

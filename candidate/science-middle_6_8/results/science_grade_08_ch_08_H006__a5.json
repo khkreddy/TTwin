@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Sulphur powder and nitrogen gas are elements because each is a pure substance made of only one kind of identical particle."
+    },
+    {
+      "id": "B",
+      "text": "Sugar crystals are an element because the sample looks uniform and pure."
+    },
+    {
+      "id": "C",
+      "text": "Sulphur powder is an element even if its particles were of two different kinds mixed together."
+    },
+    {
+      "id": "D",
+      "text": "Nitrogen gas is a compound because each nitrogen molecule contains more than one nitrogen particle joined together."
+    }
+  ],
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item_type": "single_mcq",
+  "stem": "Krish studies three pure samples in the lab: sulphur powder made of only sulphur particles; sugar crystals made of particles that each contain carbon, hydrogen and oxygen joined together; and nitrogen gas made of identical molecules that each contain only nitrogen.\n\nWhich claim correctly classifies a substance as an element?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An element is a pure substance of identical particles of one kind. Sulphur and nitrogen fit; sugar has more than one kind of atom joined, so it is a compound. Uniform look or multi-atom molecules of one element do not change that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

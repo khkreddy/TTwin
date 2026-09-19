@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya's school eco-club lists actions about freshwater. Freshwater sources are limited, so the club wants actions that reduce wastage, keep trash out of freshwater, or store rainwater for later use.\n\nWhich claims correctly conserve freshwater? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Fixing dripping taps reduces wastage of freshwater."
+    },
+    {
+      "id": "B",
+      "text": "Collecting roof rainwater into a tank for later use is rainwater harvesting."
+    },
+    {
+      "id": "C",
+      "text": "Collecting used washing water for reuse is rainwater harvesting."
+    },
+    {
+      "id": "D",
+      "text": "Channeling roof rainwater straight into a drain is rainwater harvesting."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reducing wastage and storing roof rainwater conserve freshwater. Reusing washing water is not rainwater harvesting, and sending roof rainwater into a drain does not store it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}
