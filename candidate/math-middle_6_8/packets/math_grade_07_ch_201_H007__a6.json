@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T15:43:29.070Z",
+  "created_at": "2026-09-19T15:47:24.941Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -122,14 +122,13 @@
       "operation_confusion"
     ],
     "option_plan": {
-      "mx_allowlist": [
-        "condition_omission",
-        "relationship_reversal",
-        "scope_error",
-        "operation_confusion"
-      ],
-      "bind": "wrong_letters_after_result"
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
     },
-    "format_rationale": "retarget hinge to math/grade_07/ch_201/H007; do not copy source.key"
+    "format_rationale": "retarget hinge to math/grade_07/ch_201/H007; do not copy source.key",
+    "option_plan_bind": "result"
   }
 }

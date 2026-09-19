@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Roughage and water are needed in the diet even though they are not classed as nutrients."
+        },
+        {
+          "id": "B",
+          "text": "Roughage carries waste out of the body through sweat and urine."
+        },
+        {
+          "id": "C",
+          "text": "One sip of water on the trek is enough for nutrient absorption and waste removal."
+        },
+        {
+          "id": "D",
+          "text": "Cucumber peels contain no roughage because they look smooth."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Charu packs cucumber peels for roughage and a bottle of water for a trek. She knows proteins and fats are nutrients. She asks whether roughage and water still belong in the diet.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The body needs roughage and water for waste removal and absorption even though they are not nutrients."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Roughage and water are essential diet components though not nutrients. Roughage does not leave via sweat; one sip is not enough; smooth peels still have fibre.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

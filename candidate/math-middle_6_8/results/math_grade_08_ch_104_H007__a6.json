@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina sketches a quadrilateral with three interior angles marked $90^\\circ$ and wonders whether the fourth interior angle can be $80^\\circ$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "No: the four interior angles sum to $360^\\circ$, so three right angles force the fourth to be $90^\\circ$ as well."
+    },
+    {
+      "id": "B",
+      "text": "Call the figure an \"interior angle\" only, and skip the quadrilateral angle-sum."
+    },
+    {
+      "id": "C",
+      "text": "The fourth angle of $80^\\circ$ forces the three right-angle marks, so start from $80^\\circ$ and ignore the $360^\\circ$ sum."
+    },
+    {
+      "id": "D",
+      "text": "Answer \"yes\" only because the stem prints the numeral $90$ three times."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interior angles of a quadrilateral sum to 360°, so three 90° angles force a fourth 90°. Relabeling as \"interior angle\" alone drops the sum. Saying 80° forces the right angles reverses the constraint. Grabbing the printed 90 misses the sum hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

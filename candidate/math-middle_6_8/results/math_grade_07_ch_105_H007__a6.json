@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the transversal and organises the angles formed?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Line $n$ is the transversal of $a$ and $b$ because it meets both lines; eight angles form, with vertically opposite equal pairs at each crossing."
+        },
+        {
+          "id": "B",
+          "text": "Lines $a$ and $b$ are the transversal, and $n$ is only a third line."
+        },
+        {
+          "id": "C",
+          "text": "Line $n$ is a transversal even if it meets only one of $a$ or $b$."
+        },
+        {
+          "id": "D",
+          "text": "The eight angles come from first naming $n$ as something other than a transversal."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "n meets both a and b, so n is the transversal and organises eight angles with vertically opposite equal pairs. Calling a and b the transversal swaps the term. Dropping the both-lines condition omits a required fact.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "item_type": "structured_parts",
+  "stem": "Madhav draws line $n$ that crosses lines $a$ and $b$ at two different points.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A transversal must cut both lines; n does that and forms eight angles with vertically opposite equal pairs at each crossing."
+      }
+    ]
+  }
+}

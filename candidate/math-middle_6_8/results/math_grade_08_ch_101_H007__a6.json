@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Yamini's triangular dot pattern with rows of 1, then 2, then 3, then 4, then 5 dots, and a square 5-by-5 dot array.\n\nWhich two claims correctly connect the triangular pattern to the square pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Two adjacent triangular totals join into a square: $10+15=25$, matching the 5-by-5 array."
+    },
+    {
+      "id": "B",
+      "text": "The whole display is only a square-number pattern, so the triangular rows need no role."
+    },
+    {
+      "id": "C",
+      "text": "The next square built beside $T_4=10$ and $T_5=15$ has $25$ dots, the same as $5^2$."
+    },
+    {
+      "id": "D",
+      "text": "The 5-by-5 square array forces the triangular row counts to be 1 through 5."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.6,line cap=round,line join=round,font=\\sffamily\\small]\n  \\foreach \\i in {0,1,2,3,4} {\n    \\foreach \\j in {0,...,\\i} {\n      \\fill (0.5*\\j, -0.5*\\i) circle (2pt);\n    }\n  }\n  \\node[anchor=north] at (1.0,-2.8) {triangular};\n  \\begin{scope}[shift={(4.2,0)}]\n    \\foreach \\i in {0,1,2,3,4} {\n      \\foreach \\j in {0,1,2,3,4} {\n        \\fill (0.5*\\j, -0.5*\\i) circle (2pt);\n      }\n    }\n    \\node[anchor=north] at (1.0,-2.8) {square};\n  \\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "T4+T5=10+15=25=5², so adjacent triangular totals build the related square array. Calling the display only a square pattern swaps the connecting labels. Saying the square forces the triangular row counts reverses the join relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source into triangular rows 1–5 and a 5-by-5 square array; stem refers to the diagram."
+  }
+}

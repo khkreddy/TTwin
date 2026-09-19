@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The third interior angle is $180^{\\circ}-(71^{\\circ}+44^{\\circ})=65^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "The third interior angle is $71^{\\circ}+44^{\\circ}=115^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "The third interior angle is $180^{\\circ}-71^{\\circ}=109^{\\circ}$, ignoring $44^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "The third interior angle equals the exterior angle at the same vertex."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interior angles sum to 180°, so the missing angle is 180°−(71°+44°)=65°. Adding the two known angles substitutes the wrong operation. Dropping 44° omits a given angle. Equating to an exterior angle leaves this interior-sum hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "item_type": "single_mcq",
+  "stem": "Omar knows two interior angles of a triangle are $71^{\\circ}$ and $44^{\\circ}$. He wants the third interior angle.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  }
+}

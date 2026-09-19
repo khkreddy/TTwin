@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Imran has a solid with two parallel hexagon faces joined by six rectangular faces. He wants its type and its face, edge, and vertex counts for the $n$-sided case with $n=6$.\n\nWhich statements are correct?",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The solid is a hexagonal prism."
+    },
+    {
+      "id": "2",
+      "text": "For $n=6$, it has $n+2=8$ faces, $3n=18$ edges, and $2n=12$ vertices."
+    },
+    {
+      "id": "3",
+      "text": "The solid is a hexagonal pyramid because the face–edge–vertex counts produce the hexagon bases."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two parallel hexagon bases joined by six rectangles make a hexagonal prism; for n=6, faces=8, edges=18, vertices=12. Calling it a pyramid and saying counts produce the bases reverses classification, so only statements 1 and 2 are true.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

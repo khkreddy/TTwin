@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Damini wants to expand $(w+4)(w-4)$ by recognising a conjugate pair.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$(w+4)(w-4)=w^{2}-16$, because the factors share the same terms with opposite signs."
+        },
+        {
+          "id": "B",
+          "text": "$(w+4)(w+4)$ is the conjugate pair for this expansion."
+        },
+        {
+          "id": "C",
+          "text": "The expanded difference $w^{2}-16$ forces the factors $(w+4)$ and $(w-4)$, so start from the difference and skip recognising the pair."
+        },
+        {
+          "id": "D",
+          "text": "$(w+4)(w-4)=w^{2}+8w-16$, as if both middle terms stay after expansion."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Conjugate factors use the same terms with opposite signs, so the cross-terms cancel and the product is w²−16."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Conjugates (w+4)(w−4) expand to w²−16 with cross-terms cancelling. Same-sign factors drop the opposite-sign condition. Starting from the difference and skipping the pair reverses recognition. Keeping a middle ±8w uses a different expansion identity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

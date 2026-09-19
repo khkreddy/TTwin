@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the dot plot is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The plot shows values $2$, $5$ and $7$, with frequency $2$ at $2$, frequency $2$ at $5$, and frequency $1$ at $7$; the minimum is $2$, the maximum is $7$, and the range is $5$."
+        },
+        {
+          "id": "B",
+          "text": "The plot keeps the original quiz order $1$ through $5$ as labels on the dots."
+        },
+        {
+          "id": "C",
+          "text": "The number line is what comes from first drawing the finished dot plot."
+        },
+        {
+          "id": "D",
+          "text": "The plot shows only the single value $5$, because $5$ appears most often in the stem."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dot plots show values and frequencies; sequence labels may be lost. Min 2, max 7, range 5. Claiming order is kept omits that loss. Reversing number line and plot, or picking only the mode, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "item_type": "structured_parts",
+  "stem": "Urvashi has quiz scores $2,5,2,7,5$ for quizzes $1$ through $5$ in that order. She builds a dot plot of those scores on a number line.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A dot plot shows each value and its frequency on a number line; order labels are lost, so min 2, max 7, range 5 follow from the plotted values."
+      }
+    ]
+  }
+}

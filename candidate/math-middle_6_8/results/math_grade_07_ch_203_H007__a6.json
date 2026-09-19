@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Take each prime at its highest power: $2^{2}\\times 3\\times 7=84$."
+    },
+    {
+      "id": "B",
+      "text": "Take only the primes that appear in both factorisations: $2\\times 7=14$."
+    },
+    {
+      "id": "C",
+      "text": "Multiply every printed prime power from both lists without trimming: $2^{2}\\times 7\\times 2\\times 3\\times 7$."
+    },
+    {
+      "id": "D",
+      "text": "The LCM is $28$, because $28$ is the first number printed."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "LCM needs each prime at its highest power across the factorisations: 2²×3×7=84. Using only shared primes is HCF, not LCM. Keeping duplicate primes overcounts. Picking the first printed number is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "item_type": "single_mcq",
+  "stem": "Sagar has $28=2^{2}\\times 7$ and $42=2\\times 3\\times 7$. He wants their LCM from these prime factorisations.\n\nWhich plan is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  }
+}

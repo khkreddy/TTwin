@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_07/ch_106/H007",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_07/ch_106/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_106/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_106:H007:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_106",
+    "chapter_label": "math/grade_07/ch_106",
+    "subtopic_id": "math/grade_07/ch_106/H007",
+    "stem": "Nandini studies the diagram of a $3$ by $3$ grid. Each cell must hold a different number from $1$ through $9$. The outside numbers are the sums of their rows or columns.\n\nWhich claim correctly states how the grid may be filled or rejected?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Each outside number must equal the sum of its own row or column using the distinct entries $1$ through $9$.",
+      "B": "Any nine integers may fill the cells, even with repeats, if the printed outside sums look large.",
+      "C": "The $3$ by $3$ grid shape comes from first choosing the numbers $1$ through $9$.",
+      "D": "Only the printed word grid decides the fill, without using the outside sums."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1.05cm,y=1.05cm,font=\\small]\n  \\draw[line width=0.9pt] (0,0) grid (3,3);\n  \\node at (0.5,2.5){$?$};\n  \\node at (1.5,2.5){$4$};\n  \\node at (2.5,2.5){$?$};\n  \\node at (0.5,1.5){$8$};\n  \\node at (1.5,1.5){$?$};\n  \\node at (2.5,1.5){$?$};\n  \\node at (0.5,0.5){$?$};\n  \\node at (1.5,0.5){$?$};\n  \\node at (2.5,0.5){$6$};\n  \\node[right] at (3.15,2.5){$15$};\n  \\node[right] at (3.15,1.5){$18$};\n  \\node[right] at (3.15,0.5){$12$};\n  \\node[above] at (0.5,3.15){$14$};\n  \\node[above] at (1.5,3.15){$16$};\n  \\node[above] at (2.5,3.15){$15$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_106/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Let the smaller be $x$; then the larger is $x+12$, so $x+(x+12)=40$."
+    },
+    {
+      "id": "B",
+      "text": "Write $x+y=40$ and stop."
+    },
+    {
+      "id": "C",
+      "text": "The \"$12$ more\" relation comes from first solving for both numbers."
+    },
+    {
+      "id": "D",
+      "text": "Use elimination on a pair of equations in $x$ and $y$ as the first step."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expressing the larger as x+12 reduces both quantities to one variable, so x+(x+12)=40. Stopping at x+y=40 omits that reduction. Saying solving creates the relation reverses it. Elimination on two equations is outside this single-variable hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "item_type": "single_mcq",
+  "stem": "Wafa knows two numbers sum to $40$, and the larger is $12$ more than the smaller. She wants one equation in one unknown.\n\nWhich plan is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  }
+}

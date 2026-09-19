@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "For Step $k$ there are $k-1$ increases of $5$ after Step $1$, so the total is $6+5(k-1)$."
+    },
+    {
+      "id": "B",
+      "text": "For Step $k$ there are $k$ increases of $5$ after Step $1$, so the total is $6+5k$."
+    },
+    {
+      "id": "C",
+      "text": "The same growth rule written as $5k+1$ also gives the total at Step $k$."
+    },
+    {
+      "id": "D",
+      "text": "The Step number $k$ is obtained by first writing the formula $6+5(k-1)$."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After Step 1 there are k−1 increases of 5, so 6+5(k−1)=5k+1. Counting k increases omits the Step-1 start. Taking the Step number from the formula reverses the dependence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "item_type": "one_or_more",
+  "stem": "Lalit's number machine shows $6$ counters at Step $1$. Each next step adds $5$ counters.\n\nOne or more options may be correct. Which two claims give a formula that works for any Step $k$?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [
+    {
+      "id": "1",
+      "text": "The magnitude of the product is $8\\times 6=48$."
+    },
+    {
+      "id": "2",
+      "text": "Different signs make the product negative, so $(-8)\\times(+6)=-48$."
+    },
+    {
+      "id": "3",
+      "text": "Different signs make the product positive, so $(-8)\\times(+6)=+48$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnitude 8×6=48; opposite signs give a negative product, so −48. Claiming a positive product from different signs is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "item_type": "three_statement",
+  "stem": "Rachna must find $(-8)\\times(+6)$ from the signs and magnitudes of the two factors.\n\nWhich statements are true?",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  }
+}

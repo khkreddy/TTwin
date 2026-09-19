@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (X) at (5.2,0);\n  \\draw[line width=1.05pt,->] (A)--(X) node[right]{$X$};\n  \\fill (A) circle (1.5pt);\n  \\node[below left] at (A){$A$};\n  \\draw[line width=0.75pt,dashed] (A)--(2.8,3.2);\n  \\node[above] at (2.8,3.2){$?$};\n  \\draw[line width=0.65pt] (1.1,0) arc[start angle=0,end angle=60,radius=1.1];\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Build a $60^{\\circ}$ angle at $A$ with equal-radius arcs that form an equilateral triangle, bisect to $30^{\\circ}$, then bisect again to obtain $15^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "Name ray $AX$ as the finished $15^{\\circ}$ angle, and stop before drawing any arcs."
+    },
+    {
+      "id": "C",
+      "text": "The repeated bisections come from first marking $15^{\\circ}$ on ray $AX$."
+    },
+    {
+      "id": "D",
+      "text": "Construct a $45^{\\circ}$ angle at $A$ and treat it as $15^{\\circ}$."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal-radius arcs make 60°; two bisections give 30° then 15°. Naming ray AX as the angle skips construction. Taking bisections from a pre-marked 15° reverses the plan. Using 45° leaves the 60-30-15 hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle figure as ray AX at A with a dashed target ray for the 15° construction."
+  },
+  "item_type": "single_mcq",
+  "stem": "Vikram must construct an exact $15^{\\circ}$ angle at point $A$ on ray $AX$ in the diagram, using equal-radius arcs and angle bisection.\n\nWhich plan is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  }
+}

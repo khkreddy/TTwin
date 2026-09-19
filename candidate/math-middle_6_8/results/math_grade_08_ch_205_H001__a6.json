@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia records five quiz scores: $6$, $6$, $7$, $8$ and $8$.\n\nWhich claim about the mean score is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mean $= (6 + 6 + 7 + 8 + 8) / 5$, counting each repeated score."
+    },
+    {
+      "id": "B",
+      "text": "Use only the distinct scores $6$, $7$ and $8$, so divide their sum by $3$."
+    },
+    {
+      "id": "C",
+      "text": "The five scores are rebuilt from the mean alone, so ignore the listed values."
+    },
+    {
+      "id": "D",
+      "text": "Find the mean by multiplying the five scores instead of dividing their sum by $5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is the sum of all five scores divided by 5, so each repeat counts. Using only distinct scores swaps the mean for a different summary. Rebuilding the list from the mean alone reverses the relation. Multiplying instead of dividing confuses the operation. Mean = 35/5 = 7.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

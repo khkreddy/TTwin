@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Esha's right-angled triangle $PQR$ with right angle at $P$, legs $PQ=7$ and $PR=24$, and hypotenuse $QR=c$.\n\nWhich two claims correctly find $c$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rearrange $a^2+b^2=c^2$ to $c=\\sqrt{7^2+24^2}=\\sqrt{49+576}=\\sqrt{625}=25$."
+    },
+    {
+      "id": "B",
+      "text": "Use $c=\\sqrt{7^2+24^2}$ even when $c$ is treated as a leg rather than the hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "With both legs known, take the positive square root after adding the squared legs: $c=\\sqrt{7^2+24^2}$."
+    },
+    {
+      "id": "D",
+      "text": "Compute $c=7^2+24^2=625$ and leave the answer squared."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (0,2.0);\n  \\coordinate (R) at (4.0,0);\n  \\draw[thick] (P)--(Q)--(R)--cycle;\n  \\draw[thick] (P)--++(0.28,0)--++(0,0.28)--++(-0.28,0)--cycle;\n  \\node[left] at (Q) {$Q$};\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (R) {$R$};\n  \\node[left] at (0,1.0) {$7$};\n  \\node[below] at (2.0,0) {$24$};\n  \\node[above right] at (2.1,1.1) {$c$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With both legs known on a right triangle, c=√(a²+b²)=25. Dropping that c is the hypotenuse breaks the rearrangement. Stopping at 625 leaves the square root unused.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source right triangle into 7-24-c with right angle at P; stem refers to the diagram."
+  }
+}

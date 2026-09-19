@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_202/H007",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_202/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": null,
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_202/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H007:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H007",
+    "stem": "The diagram shows Esha's right-angled triangle $PQR$ with right angle at $P$, legs $PQ=7$ and $PR=24$, and hypotenuse $QR=c$.\n\nWhich two claims correctly find $c$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Rearrange $a^2+b^2=c^2$ to $c=\\sqrt{7^2+24^2}=\\sqrt{49+576}=\\sqrt{625}=25$.",
+      "B": "Use $c=\\sqrt{7^2+24^2}$ even when $c$ is treated as a leg rather than the hypotenuse.",
+      "C": "With both legs known, take the positive square root after adding the squared legs: $c=\\sqrt{7^2+24^2}$.",
+      "D": "Compute $c=7^2+24^2=625$ and leave the answer squared."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (0,2.0);\n  \\coordinate (R) at (4.0,0);\n  \\draw[thick] (P)--(Q)--(R)--cycle;\n  \\draw[thick] (P)--++(0.28,0)--++(0,0.28)--++(-0.28,0)--cycle;\n  \\node[left] at (Q) {$Q$};\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (R) {$R$};\n  \\node[left] at (0,1.0) {$7$};\n  \\node[below] at (2.0,0) {$24$};\n  \\node[above right] at (2.1,1.1) {$c$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

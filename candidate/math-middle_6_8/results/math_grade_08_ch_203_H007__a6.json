@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Alok knows the number of machines and the days to finish a fixed print job are inversely proportional. With $4$ machines the job takes $18$ days. He needs the time when $6$ machines work on the same job.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds the time?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep the product constant: $4\\times18=6\\times t$, so $t=\\dfrac{72}{6}=12$ days."
+        },
+        {
+          "id": "B",
+          "text": "The constant product is only a label, so ignore the fixed job and pick any time."
+        },
+        {
+          "id": "C",
+          "text": "Scale time the same way as machines: $t=18\\times\\dfrac{6}{4}=27$ days, as if the job size need not stay fixed."
+        },
+        {
+          "id": "D",
+          "text": "The answer is $18$ days because $18$ is the only time printed in the stem."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Inverse proportion keeps the product fixed for the same job: 4×18=6×t gives t=12 days."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inverse proportion keeps the product fixed: 4×18=6×t gives t=12. Treating 'constant product' as a mere label swaps the hinge. Direct scaling omits the fixed-job condition. Reusing the printed 18 is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

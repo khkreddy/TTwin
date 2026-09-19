@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Zubin packs a tiffin in three stages: first he picks one of 4 rice options, then one of 3 dals, then one of 2 sweets. Every rice–dal–sweet triple is allowed.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly counts the tiffin combinations?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiply the stage counts: $4\\times3\\times2=24$ tiffins."
+        },
+        {
+          "id": "B",
+          "text": "Count only the 4 rice options, because the later stages do not change the total."
+        },
+        {
+          "id": "C",
+          "text": "The 2 sweets produce the 4 rice options, so start from sweets and ignore the rice and dal choices."
+        },
+        {
+          "id": "D",
+          "text": "Count only tiffins that use the first rice option, so the total is $1\\times3\\times2=6$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Choices made in stages multiply: 4 rice options times 3 dals times 2 sweets gives 24 allowed tiffins."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multi-stage combinations multiply the per-stage counts: 4×3×2=24. Dropping later stages omits required choices. Treating sweets as producing rice reverses the stages. Counting only the first rice option excludes the other stated rice choices.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

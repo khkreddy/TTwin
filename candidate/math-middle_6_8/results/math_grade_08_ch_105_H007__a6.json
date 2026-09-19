@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Chetan works with whole numbers that leave remainder $2$ when divided by $6$. He writes them as $6k+2$ with whole number $k$, and keeps the remainder strictly between $0$ and $5$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any form $6k+r$ is fine even when $r$ is $6$ or larger, because the $6k$ part is present."
+    },
+    {
+      "id": "B",
+      "text": "Numbers of that kind are $6k+2$, and the remainder stays less than the divisor $6$."
+    },
+    {
+      "id": "C",
+      "text": "The same numbers can be written $6(k+1)-4$, using the matching deficit below the next multiple of $6$."
+    },
+    {
+      "id": "D",
+      "text": "The divisor $6$ is produced by the remainder $2$, so start from $2$ and ignore the $6k$ term."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remainder form is 6k+2 with 0≤r<6, and equivalently 6(k+1)−4. Allowing r≥6 drops the standard remainder condition. Treating the remainder as producing the divisor reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The canal bank and the hillside have different conditions, so different plants live there."
+        },
+        {
+          "id": "B",
+          "text": "Different regions always have different plants, even when their conditions are the same."
+        },
+        {
+          "id": "C",
+          "text": "The hillside is dry and rocky because cactus grows there."
+        },
+        {
+          "id": "D",
+          "text": "No kind of plant can live on both a wet canal bank and a dry rocky hillside."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Ojas compares reeds growing along a wet canal bank with cactus on a dry rocky hillside.\n\nWhy do the plants in the two regions differ?",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Plants differ across regions because conditions such as water and soil dryness differ."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plants differ across regions because conditions differ. Regions need not differ when conditions match; cactus does not cause the hillside climate; some plants can live in more than one kind of place.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

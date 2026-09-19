@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Abhay works in base ten with landmark powers of 10. He multiplies the landmark $100$ by $10$, then multiplies the grouped number $50+6$ by $10$.\n\nWhich statements are correct?",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$100\\times10$ becomes the next landmark $1000$."
+    },
+    {
+      "id": "2",
+      "text": "$10\\times(50+6)=500+60$, distributing the base across the grouped parts."
+    },
+    {
+      "id": "3",
+      "text": "Add the landmarks $100+10$ and $50+6$ instead of multiplying by $10$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Landmark×base advances one power (100×10=1000), and distribution keeps the base across grouped parts (500+60). Adding landmarks replaces the required products, so only statements 1 and 2 are true.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

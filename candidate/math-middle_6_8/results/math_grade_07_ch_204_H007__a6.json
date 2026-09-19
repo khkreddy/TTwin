@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Regroup the remainder $3$ ones as $30$ tenths, then divide $30$ tenths by $5$."
+    },
+    {
+      "id": "B",
+      "text": "Stop at the ones place and ignore the remainder $3$."
+    },
+    {
+      "id": "C",
+      "text": "After the tenths digit, any new remainder can be regrouped as hundredths to continue."
+    },
+    {
+      "id": "D",
+      "text": "Write the remainder $3$ itself as the tenths digit of the quotient."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remainder 3 ones regroup as 30 tenths for the next place; further remainders regroup as hundredths, and so on. Stopping ignores the remainder. Writing 3 as the tenths digit confuses remainder with quotient digit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "item_type": "one_or_more",
+  "stem": "Tejas uses long division for $13 \\div 5$. After the ones place he has remainder $3$ and wants to continue into decimals.\n\nOne or more options may be correct. Which two claims correctly extend the division?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  }
+}

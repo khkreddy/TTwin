@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz hears that this week's reading target is $140\\%$ of last week's base of $50$ pages.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "140% means the same as the base of 50 pages, because any percent names the base."
+    },
+    {
+      "id": "B",
+      "text": "The base of 50 pages is produced by this week's target, so start from this week and ignore the percent."
+    },
+    {
+      "id": "C",
+      "text": "140% of 50 is $1.4\\times50=70$ pages, which is more than the base."
+    },
+    {
+      "id": "D",
+      "text": "140% of 50 is 40 pages, reading only the digits above 100."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A percentage above 100 means the quantity exceeds the named base: 140% of 50 is 70 pages. Treating 140% as equal to the base drops that meaning. Reversing so the base comes from this week's count flips the relation. Reading only the excess digits as 40 is outside the percent-of-base hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
