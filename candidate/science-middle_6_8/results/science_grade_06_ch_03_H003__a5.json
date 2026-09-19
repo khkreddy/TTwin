@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Jiya's grandmother grinds spices on a stone. Her aunt uses an electric grinder for the same spices.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "These grinding practices can differ because culinary practices change over time."
+    },
+    {
+      "id": "2",
+      "text": "Any difference between the stone and the electric grinder is only personal taste, never change over time."
+    },
+    {
+      "id": "3",
+      "text": "Traditional and modern cooking practices can show significant differences."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cooking practices change over time, so traditional stone grinding and a modern electric grinder can differ. That difference is not only personal taste, and traditional versus modern practices can show significant differences.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

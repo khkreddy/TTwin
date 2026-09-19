@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Neel needs a material that can be drawn into thin wires for earphones. He compares copper, aluminium, and sulfur.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copper and aluminium are suitable because they are ductile; sulfur is not."
+    },
+    {
+      "id": "B",
+      "text": "Copper can be drawn into wires because of malleability."
+    },
+    {
+      "id": "C",
+      "text": "Aluminium is unsuitable for wires because it is a soft metal."
+    },
+    {
+      "id": "D",
+      "text": "Sulfur is suitable for drawing into wires because it looks shiny in the jar."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wire-making needs ductility, which metals such as copper and aluminium have; sulfur does not. Malleability is the wrong property name, soft aluminium can still form wires, and shine does not make sulfur ductile.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

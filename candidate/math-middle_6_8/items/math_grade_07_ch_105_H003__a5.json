@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_105/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_105/H003",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H003"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H003:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H003",
+    "stem": "Deepa looks at the diagram. Straight lines $EF$ and $GH$ cross at $N$. The marked angle $\\angle ENG$ is $58^{\\circ}$, and $q$ labels the angle vertically opposite $\\angle ENG$.\n\nWhich two claims are correct?\n\nOne or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "$q = 58^{\\circ}$.",
+      "B": "$q = 122^{\\circ}$.",
+      "C": "Vertically opposite angles at the same crossing are equal.",
+      "D": "Adjacent angles on a straight line are equal."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[line width=1.05pt] (-0.5,-1.5)--(5.1,1.8);\n  \\draw[line width=1.05pt] (-0.3,2.0)--(4.9,-1.7);\n  \\fill (2.3,0.2) circle (1.6pt);\n  \\node[above right] at (2.35,0.25){$N$};\n  \\draw[line width=0.7pt] (2.3,0.2) ++(30:0.7) arc (30:150:0.7);\n  \\node at (1.65,0.95){$58^{\\circ}$};\n  \\draw[line width=0.7pt] (2.3,0.2) ++(210:0.7) arc (210:330:0.7);\n  \\node at (2.95,-0.5){$q$};\n  \\node[below left] at (0.2,-1.0){$E$};\n  \\node[above right] at (4.7,1.5){$F$};\n  \\node[above left] at (0.3,1.5){$G$};\n  \\node[below right] at (4.5,-1.3){$H$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

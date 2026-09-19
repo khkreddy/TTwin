@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon will most likely appear in a different part of the sky."
+    },
+    {
+      "id": "B",
+      "text": "The Moon will be in exactly the same place in the sky both evenings."
+    },
+    {
+      "id": "C",
+      "text": "The Moon must rise exactly when the Sun sets on both evenings."
+    },
+    {
+      "id": "D",
+      "text": "Checking at the same clock time forces the Moon to stay fixed in the sky."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item_type": "single_mcq",
+  "stem": "Ishan notes the Moon's place in the sky from his terrace at 7:15 p.m. on Monday. He checks again at 7:15 p.m. on Tuesday.\n\nWhat should he expect?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "As the Moon advances in its orbit, its sky place at the same clock time shifts from one day to the next. It does not always rise at sunset.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

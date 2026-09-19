@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_04/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_04/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "scope_error",
+      "C": "surface_feature_capture",
+      "D": "UNRESOLVED",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H003"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H003:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H003",
+    "stem": "The diagram shows a bar magnet that Sahil cuts into three pieces. Each piece is labelled.\n\nWhat should he expect about magnetic poles?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Each piece still has both a north pole and a south pole.",
+      "B": "One piece is a lone north pole with no south pole.",
+      "C": "Only the red-painted end on each piece is a magnetic pole.",
+      "D": "The smallest piece has no poles at all."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n\\node at (3.3,2.6) {bar magnet cut into three pieces};\n% piece 1\n\\draw[thick,fill=red!30] (0.0,1.0) rectangle (1.4,1.6);\n\\draw[thick,fill=blue!30] (1.4,1.0) rectangle (2.8,1.6);\n\\node at (0.7,1.3) {N};\n\\node at (2.1,1.3) {S};\n\\node at (1.4,0.65) {piece 1};\n% piece 2\n\\draw[thick,fill=red!30] (3.2,1.0) rectangle (4.6,1.6);\n\\draw[thick,fill=blue!30] (4.6,1.0) rectangle (6.0,1.6);\n\\node at (3.9,1.3) {N};\n\\node at (5.3,1.3) {S};\n\\node at (4.6,0.65) {piece 2};\n% piece 3\n\\draw[thick,fill=red!30] (6.4,1.0) rectangle (7.8,1.6);\n\\draw[thick,fill=blue!30] (7.8,1.0) rectangle (9.2,1.6);\n\\node at (7.1,1.3) {N};\n\\node at (8.5,1.3) {S};\n\\node at (7.8,0.65) {piece 3};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

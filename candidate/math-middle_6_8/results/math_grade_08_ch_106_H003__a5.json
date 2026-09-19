@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Umesh starts with the product $9 \\times 14$. The factors are then changed to $11 \\times 16$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report only the adjustments $+2$ and $+2$, and call those adjustments the change in the product."
+    },
+    {
+      "id": "B",
+      "text": "The product increases by $50$, because $(9+2)(14+2) = 9\\times14 + 9\\times2 + 14\\times2 + 2\\times2$ and the change is $18 + 28 + 4$."
+    },
+    {
+      "id": "C",
+      "text": "The change from the original product is $9\\times2 + 14\\times2 + 2\\times2$."
+    },
+    {
+      "id": "D",
+      "text": "Say the adjustments $+2$ and $+2$ are what produce the original product $9 \\times 14$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expanding (9+2)(14+2) separates 9×14 from the change terms 18+28+4=50. Reporting only +2 and +2 as the product change, or saying those adjustments produce the original product, miss the expansion hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

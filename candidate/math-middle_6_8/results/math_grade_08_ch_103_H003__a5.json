@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rahul learns Gumulgal number names: urapon means $1$ and ukasar means $2$. Longer names are built as sums of these group words, so ukasar-urapon means $3$ and ukasar-ukasar means $4$. He wants the correct name for a count of $5$ sticks.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The name for $5$ is ukasar-ukasar-urapon, because it is $2 + 2 + 1$."
+        },
+        {
+          "id": "B",
+          "text": "The name for $5$ is urapon, because urapon is the leftover word for any odd count."
+        },
+        {
+          "id": "C",
+          "text": "Any new string of syllables may be used for $5$, ignoring the known meanings of $1$ and $2$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Five sticks are two groups of $2$ plus $1$ leftover, so the name is ukasar-ukasar-urapon."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gumulgal names sum known group words: 5 = 2+2+1 = ukasar-ukasar-urapon. Using only urapon for any odd count, or inventing an unrelated string, drops that sum rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

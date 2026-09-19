@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_01/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_01/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H003"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_01:H003:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_06/ch_01",
+    "chapter_label": "math/grade_06/ch_01",
+    "subtopic_id": "math/grade_06/ch_01/H003",
+    "stem": "Naveen studies the three pictures in the figure. Each picture is a triangular array of dots: $1$ dot, then a triangle of $3$ dots, then a triangle of $6$ dots.\n\nWhich claim correctly describes how to draw the next picture?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The next picture is a triangular array of $10$ dots, because the pictures show $1$, $1+2$, $1+2+3$, then $1+2+3+4$ dots.",
+      "B": "Any larger cluster of dots works, so the triangular row-by-row construction need not continue.",
+      "C": "Drawing the next triangular array is what creates the earlier counts $1$, $3$ and $6$.",
+      "D": "The next picture needs the full chapter shape-sequence table before it can be drawn."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\foreach \\x/\\y in {0/0} {\\fill (\\x,\\y) circle (2.2pt);}\n  \\node[below] at (0,-0.35) {Picture 1};\n  \\begin{scope}[shift={(2.2,0)}]\n    \\foreach \\x/\\y in {0/0.6, -0.35/0, 0.35/0} {\\fill (\\x,\\y) circle (2.2pt);}\n    \\node[below] at (0,-0.35) {Picture 2};\n  \\end{scope}\n  \\begin{scope}[shift={(4.6,0)}]\n    \\foreach \\x/\\y in {0/1.0, -0.35/0.5, 0.35/0.5, -0.7/0, 0/0, 0.7/0} {\\fill (\\x,\\y) circle (2.2pt);}\n    \\node[below] at (0,-0.35) {Picture 3};\n  \\end{scope}\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_01/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

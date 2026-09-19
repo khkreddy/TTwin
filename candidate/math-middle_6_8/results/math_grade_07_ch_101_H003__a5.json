@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zoya's school water tank is $12\\,\\mathrm{m}$ deep. A classmate standing beside the tank is about $1.5\\,\\mathrm{m}$ tall. Zoya wants to make sense of the $12\\,\\mathrm{m}$ depth.\n\nWhich two claims correctly compare the depth with that familiar height?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The tank is about eight times as deep as the classmate is tall."
+    },
+    {
+      "id": "B",
+      "text": "The tank is about $10.5\\,\\mathrm{m}$ deeper than the classmate is tall."
+    },
+    {
+      "id": "C",
+      "text": "The comparison also settles how to spell twelve in Indian place-value naming."
+    },
+    {
+      "id": "D",
+      "text": "The depth is $12\\,\\mathrm{m}$ because the printed digits look long."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "12 ÷ 1.5 = 8, so about eight times as deep; 12 − 1.5 = 10.5 m deeper. Place-value spelling is outside this comparison hinge. Grabbing printed digit length is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sia compares changes in the lab: a magnesium ribbon burns in air with heat and light; a sealed oxygen-free mixture still releases heat; and a classmate asks whether nitrogen is the gas that lets magnesium burn.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The magnesium ribbon burning in air is combustion because it reacts with oxygen and produces heat and light."
+    },
+    {
+      "id": "B",
+      "text": "A reaction with oxygen that releases heat can still be combustion even when no large flame is seen."
+    },
+    {
+      "id": "C",
+      "text": "Nitrogen is the gas required for the magnesium ribbon to burn."
+    },
+    {
+      "id": "D",
+      "text": "The oxygen-free mixture that releases heat is also combustion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Combustion needs reaction with oxygen plus heat or light. Nitrogen is the wrong gas, and an oxygen-free heat release fails the oxygen condition. A flameless oxygen reaction that still releases heat can still count as combustion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

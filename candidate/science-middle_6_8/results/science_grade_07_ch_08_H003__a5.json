@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Inaya's simple pendulum with a steel bob. O is the mean position; P and Q are the extreme positions.\n\nWhich motion of the bob is one complete oscillation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "From O to P, then through O to Q, then back to O."
+    },
+    {
+      "id": "B",
+      "text": "O to P, then back to O."
+    },
+    {
+      "id": "C",
+      "text": "O to P only."
+    },
+    {
+      "id": "D",
+      "text": "An oscillation cannot be completed if counting starts at P."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n\\fill (0,3.2) circle (0.06);\n\\draw[thick] (0,3.2) -- (0,0.6);\n\\draw[thick] (0,3.2) -- (-1.6,0.85);\n\\draw[thick] (0,3.2) -- (1.6,0.85);\n\\fill (0,0.6) circle (0.22);\n\\fill (-1.6,0.85) circle (0.18);\n\\fill (1.6,0.85) circle (0.18);\n\\node at (0,0.15) {O};\n\\node at (-1.6,0.4) {P};\n\\node at (1.6,0.4) {Q};\n\\node at (0,3.55) {support};\n\\node at (0,-0.35) {steel bob};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One oscillation from the mean goes to one extreme, then the other extreme, and returns to the mean. Stopping after one side, counting only the first swing out, or forbidding a start at an extreme, truncates or mis-scopes that path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote force diagram into a labelled simple pendulum with mean O and extremes P, Q."
+  }
+}

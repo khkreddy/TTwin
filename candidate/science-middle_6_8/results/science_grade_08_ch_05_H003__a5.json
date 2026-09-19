@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Balanced forces act on the bottle, so it can remain at rest."
+    },
+    {
+      "id": "B",
+      "text": "The desk still pushes up on the bottle even though the bottle is not moving."
+    },
+    {
+      "id": "C",
+      "text": "No force acts on the bottle because it is not moving."
+    },
+    {
+      "id": "D",
+      "text": "A bottle that stays at rest must have unbalanced forces on it."
+    }
+  ],
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "item_type": "one_or_more",
+  "stem": "Kartik's filled water bottle stands at rest on his desk. It does not slide or tip.\n\nWhich claims about the forces on the bottle are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rest does not mean zero force. Balanced forces, including the upward push from the desk, can keep the bottle at rest.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

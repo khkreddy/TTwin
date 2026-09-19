@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Why is a convex mirror chosen for this use?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "It forms erect, smaller images and gives a wider field of view than a plane mirror."
+        },
+        {
+          "id": "B",
+          "text": "It forms a magnified image so vehicles behind look larger than life."
+        },
+        {
+          "id": "C",
+          "text": "A concave mirror would give the same wide view for the same mirror size."
+        },
+        {
+          "id": "D",
+          "text": "It is chosen only because the glass looks shiny."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,>=stealth]\n% convex mirror (bulging toward objects on the right)\n\\draw[thick] (0,0) .. controls (0.85,0.9) and (0.85,2.1) .. (0,3.0);\n\\foreach \\y in {0.35,0.85,1.35,1.85,2.35,2.75} {\\draw[thin] (0.9,\\y)--++(0.22,0);}\n\\node[font=\\footnotesize] at (0.2,3.35) {convex mirror};\n% wide field rays from behind\n\\draw[->,thick] (3.0,2.7)--(0.95,2.2);\n\\draw[->,thick] (3.0,1.5)--(0.95,1.5);\n\\draw[->,thick] (3.0,0.3)--(0.95,0.8);\n\\node[font=\\footnotesize] at (3.3,1.5) {wide view};\n% scooter hint\n\\draw[thick] (3.6,0.1) rectangle (4.6,0.55);\n\\node[font=\\footnotesize] at (4.1,-0.2) {scooter};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows a convex mirror used as the side-view mirror on Mahika's scooter. Drivers use such mirrors to see more of the traffic behind them.\n\nMahika compares this mirror with a plane mirror of the same size.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A convex mirror gives erect, diminished images and a larger view area, which helps show more traffic behind the scooter."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Convex mirrors form erect, smaller images with a wider field of view than a plane mirror, which is why they are used as side-view mirrors.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Convex side-view mirror with wide-view rays toward scooter traffic behind."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Tanvi's triangular garden plot. The side lengths are $4\\,\\mathrm{m}$, $9\\,\\mathrm{m}$, and $11\\,\\mathrm{m}$.\n\nWhich claim correctly gives the perimeter of the plot?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Perimeter $= 4 + 9 + 11 = 24\\,\\mathrm{m}$."
+    },
+    {
+      "id": "B",
+      "text": "Perimeter $= 11\\,\\mathrm{m}$, taking the longest side length as the perimeter."
+    },
+    {
+      "id": "C",
+      "text": "Each side equals $24\\,\\mathrm{m}$, because the perimeter produces each side."
+    },
+    {
+      "id": "D",
+      "text": "Perimeter $= 3\\,\\mathrm{m}$, because a triangle is named by having three sides."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.4,0);\n  \\coordinate (C) at (1.5,2.4);\n  \\draw[thick] (A)--(B)--(C)--cycle;\n  \\node[below] at (2.2,0) {$11\\,\\mathrm{m}$};\n  \\node[left] at (0.7,1.2) {$4\\,\\mathrm{m}$};\n  \\node[right] at (3.1,1.2) {$9\\,\\mathrm{m}$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Triangle perimeter is the sum of the three sides: 4+9+11=24 m. Using only the longest side swaps perimeter for a side length. Saying the perimeter produces each side reverses the relation. Using 3 because a triangle has three sides is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as a labelled 4 m–9 m–11 m triangular plot."
+  }
+}

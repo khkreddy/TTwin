@@ -1,0 +1,128 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m16_qp_12:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:30:12.314Z",
+  "source": {
+    "item_ref": "session:0610_m16_qp_12:q1",
+    "item_type": "single_mcq",
+    "stem": "The equation shows a chemical reaction that occurs in living organisms.\nglucose + oxygen → carbon dioxide + water Which of these characteristics of living organisms is this equation associated with?",
+    "options": [
+      {
+        "id": "A",
+        "text": "respiration ✓; nutrition ✓"
+      },
+      {
+        "id": "B",
+        "text": "respiration ✓; nutrition ✗"
+      },
+      {
+        "id": "C",
+        "text": "respiration ✗; nutrition ✓"
+      },
+      {
+        "id": "D",
+        "text": "respiration ✗; nutrition ✗"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"respiration\",\"nutrition\"],\"rows\":[[\"✓\",\"✓\"],[\"✓\",\"✗\"],[\"✗\",\"✓\"],[\"✗\",\"✗\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "\\begin{tikzpicture}\\node[font=\\large] {$\\mathrm{glucose}+\\mathrm{oxygen}\\longrightarrow\\mathrm{carbon\\ dioxide}+\\mathrm{water}$};\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The blue-black patches show that cellulose was produced."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The green patches of the leaf kept in the dark will turn blue-black."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "In sunlight, both the green and non-green patches will turn blue-black."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "In sunlight, starch is detected only in the originally non-green patches."
+      }
+    ],
+    "enrichment": "Starch is produced where chlorophyll-containing green leaf tissue receives sunlight; non-green patches may lack enough chlorophyll, and a leaf kept in the dark does not show starch formation. Green patch plus sunlight -> detectable starch; non-green patch or darkness -> no detectable starch in the iodine test. The learner correctly applies this rule: Starch is produced where chlorophyll-containing green leaf tissue receives sunlight; non-green patches may lack enough chlorophyll, and a leaf kept in the dark does not show starch formation. Sunlight affects the whole leaf equally, so every patch on a sunlit leaf should give the same starch result.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_10/H003",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “nutrition ✓” looked possible instead of “nutrition ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “nutrition ✓” looked possible instead of “nutrition ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “respiration ✗” looked possible instead of “respiration ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Respiration and transport in plants. The student must decide: Predict that starch is detected in green patches of a leaf kept in sunlight, but not in non-green patches or in a leaf kept in the dark. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m16_qp_12:q1",
+    "hinge": "science/grade_07/ch_10/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_10/H003"
+  }
+}

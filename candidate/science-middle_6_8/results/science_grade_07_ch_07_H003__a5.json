@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Laksh heating a glass beaker of water from below. He wonders whether the same idea applies to a solid metal rod heated from below.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heated water expands, becomes lighter, and rises; cooler water moves down to replace it."
+    },
+    {
+      "id": "B",
+      "text": "The lighter heated water sinks, and the cooler water rises to replace it."
+    },
+    {
+      "id": "C",
+      "text": "In a solid metal rod heated from below, hot metal particles rise through the rod and cooler ones move down."
+    },
+    {
+      "id": "D",
+      "text": "Convection in the beaker begins only when the water boils and bubbles appear."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick] (0,0) -- (0,3.2) -- (2.4,3.2) -- (2.4,0);\n\\draw[thick] (-0.15,0) -- (2.55,0);\n\\fill[orange!70] (0.7,-0.55) -- (1.2,0) -- (1.7,-0.55) -- cycle;\n\\node at (1.2,-0.85) {heat};\n\\draw[->,thick] (1.2,0.35) -- (1.2,2.4);\n\\node at (1.55,1.5) {rises};\n\\draw[->,thick] (0.35,2.6) -- (0.35,0.6);\n\\draw[->,thick] (2.05,2.6) -- (2.05,0.6);\n\\node at (1.2,3.55) {cooler water};\n\\node at (1.2,-1.25) {beaker};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating fluid from below makes it expand, lighten, and rise while cooler fluid sinks to replace it. Reversing rise/sink, applying the same particle flow to a solid rod, or waiting for boiling bubbles misses convection.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force diagram into a beaker heated from below with convection arrows."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H003:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H003",
+    "stem": "Hina looks at the diagram. The marking shows $\\triangle LMN \\cong \\triangle RST$.\n\nWhich claim correctly names the side that corresponds to side $LM$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Side $LM$ corresponds to side $RS$.",
+      "B": "Side $LM$ corresponds to side $ST$.",
+      "C": "Side $LM$ corresponds to side $LN$.",
+      "D": "Side $LM$ corresponds to side $RT$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (L) at (0,0);\n  \\coordinate (M) at (2.6,0);\n  \\coordinate (N) at (0.7,1.9);\n  \\draw[line width=1.05pt] (L)--(M)--(N)--cycle;\n  \\node[below left] at (L){$L$};\n  \\node[below right] at (M){$M$};\n  \\node[above] at (N){$N$};\n  \\coordinate (R) at (4.2,0.2);\n  \\coordinate (S) at (6.8,0.2);\n  \\coordinate (T) at (4.9,2.1);\n  \\draw[line width=1.05pt] (R)--(S)--(T)--cycle;\n  \\node[below left] at (R){$R$};\n  \\node[below right] at (S){$S$};\n  \\node[above] at (T){$T$};\n  \\node[align=center] at (3.4,-1.0){$\\triangle LMN \\cong \\triangle RST$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q29",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:30:02.261Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q29",
+    "item_type": "single_mcq",
+    "stem": "A battery is connected to two crocodile clips and a lamp.\nThere is a gap between the crocodile clips.\nFour cylinders W, X, Y and Z are made of the same metal but have different dimensions. The cylinders are connected in turn, by their ends, between the crocodile clips. The diagrams of the cylinders are all drawn to the same scale.\nWhich cylinder makes the lamp glow most brightly and which cylinder makes the lamp glow least brightly?",
+    "options": [
+      {
+        "id": "A",
+        "text": "most brightly W; least brightly Y"
+      },
+      {
+        "id": "B",
+        "text": "most brightly W; least brightly Z"
+      },
+      {
+        "id": "C",
+        "text": "most brightly X; least brightly Y"
+      },
+      {
+        "id": "D",
+        "text": "most brightly X; least brightly Z"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"most brightly\",\"least brightly\"],\"rows\":[[\"W\",\"Y\"],[\"W\",\"Z\"],[\"X\",\"Y\"],[\"X\",\"Z\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "\\begin{circuitikz}[line cap=round,line join=round]\\draw (0,3.8)--(1.45,3.8); \\draw (1.45,3.52)--(1.45,4.08) (1.55,3.62)--(1.55,3.98) (1.92,3.52)--(1.92,4.08) (2.02,3.62)--(2.02,3.98); \\draw (2.02,3.8)--(4.15,3.8)--(4.15,2.15)--(3.93,2.15); \\draw (0,3.8)--(0,2.15)--(0.43,2.15); \\draw (2.72,2.15)--(3.37,2.15); \\draw[fill=white] (3.65,2.15) circle (0.28); \\draw (3.45,1.95)--(3.85,2.35) (3.45,2.35)--(3.85,1.95); \\draw (3.37,2.15)--(3.37,2.15) (3.93,2.15)--(4.15,2.15); \\draw (0.43,2.21)--(0.88,2.15)--(0.43,2.09)--(0.66,2.15)--cycle; \\draw (0.48,2.27)--(0.78,2.15)--(0.48,2.18); \\draw (2.72,2.21)--(2.27,2.15)--(2.72,2.09)--(2.49,2.15)--cycle; \\draw (2.67,2.27)--(2.37,2.15)--(2.67,2.18); \\node[anchor=east,font=\\small] at (0.35,1.55) {crocodile clips}; \\draw (0.42,1.60)--(0.67,2.02) (0.42,1.60)--(2.42,2.02); \\node[anchor=east] at (-0.15,0.75) {$W$}; \\draw[rounded corners=0.09cm,fill=white] (0.10,0.65) rectangle (2.45,0.85); \\draw[fill=gray!20] (2.45,0.75) ellipse (0.045 and 0.10); \\node[anchor=east] at (-0.15,0.15) {$X$}; \\draw[rounded corners=0.18cm,fill=white] (0.10,-0.03) rectangle (2.45,0.33); \\draw[fill=gray!20] (2.45,0.15) ellipse (0.09 and 0.18); \\node[anchor=east] at (-0.15,-0.48) {$Y$}; \\draw[rounded corners=0.09cm,fill=white] (0.10,-0.58) rectangle (4.92,-0.38); \\draw[fill=gray!20] (4.92,-0.48) ellipse (0.045 and 0.10); \\node[anchor=east] at (-0.15,-1.10) {$Z$}; \\draw[rounded corners=0.18cm,fill=white] (0.10,-1.28) rectangle (4.92,-0.92); \\draw[fill=gray!20] (4.92,-1.10) ellipse (0.09 and 0.18);\\end{circuitikz}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The glass bulb, not the filament, produces the light."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The disconnected lamp will glow because its filament is intact."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "This lamp is fused because it is not glowing."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "An LED cannot glow because it has no filament."
+      }
+    ],
+    "enrichment": "In an incandescent electric lamp, the thin wire inside the glass bulb is the filament that glows; if the filament is broken, the lamp is fused and will not glow. filament condition + current through lamp -> filament glows or lamp stays off The learner correctly applies this rule: In an incandescent electric lamp, the thin wire inside the glass bulb is the filament that glows; if the filament is broken, the lamp is fused and will not glow. A torch lamp glows if the outside glass bulb looks whole; the filament is just a visible detail.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_03/H003",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “most brightly W” looked possible instead of “most brightly X”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “least brightly Z” looked possible instead of “least brightly Y”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “least brightly Z” looked possible instead of “least brightly Y”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Electricity: circuits and cells. The student must decide: Decide whether an incandescent torch lamp can glow by checking its filament. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_07/ch_03/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H003"
+  }
+}

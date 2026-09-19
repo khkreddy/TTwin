@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Dhruv shining a torch at three sheets X, Y and Z. Through X almost all the light passes and shapes look clear. Through Y only some light passes and shapes look unclear. Through Z no light passes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Y is translucent because only some light passes and shapes look unclear."
+    },
+    {
+      "id": "B",
+      "text": "Y is transparent because some light passes through it."
+    },
+    {
+      "id": "C",
+      "text": "Y is opaque because shapes look unclear."
+    },
+    {
+      "id": "D",
+      "text": "X is translucent because almost all the light passes through it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.22);\n\\node at (0,0.55) {torch};\n% X transparent\n\\draw[thick,fill=cyan!8] (1.4,0.2) rectangle (1.7,2.2);\n\\node at (1.55,2.45) {X};\n\\draw[thick,dashed,->] (0.25,1.2) -- (1.35,1.2);\n\\draw[thick,dashed,->] (1.75,1.2) -- (2.55,1.2);\n\\node at (1.55,-0.15) {clear};\n% Y translucent\n\\draw[thick,fill=orange!25] (3.0,0.2) rectangle (3.3,2.2);\n\\node at (3.15,2.45) {Y};\n\\draw[thick,dashed,->] (2.7,1.2) -- (2.95,1.2);\n\\draw[thick,dashed,->] (3.35,1.35) -- (4.1,1.55);\n\\draw[thick,dashed,->] (3.35,1.05) -- (4.1,0.85);\n\\node at (3.15,-0.15) {unclear};\n% Z opaque\n\\draw[thick,fill=gray!55] (4.8,0.2) rectangle (5.1,2.2);\n\\node at (4.95,2.45) {Z};\n\\draw[thick,dashed,->] (4.4,1.2) -- (4.75,1.2);\n\\node at (4.95,-0.15) {blocked};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partial light with unclear shapes means translucent. Calling Y transparent or opaque, or calling clear full-pass X translucent, misclassifies the light evidence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source glass figure into torch through sheets X, Y, Z."
+  }
+}

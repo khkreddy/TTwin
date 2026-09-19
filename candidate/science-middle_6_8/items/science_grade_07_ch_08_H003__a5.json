@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_08/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_08/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_08/H003"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_08:H003:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_07/ch_08",
+    "chapter_label": "Measurement of time",
+    "subtopic_id": "science/grade_07/ch_08/H003",
+    "stem": "The diagram shows Inaya's simple pendulum with a steel bob. O is the mean position; P and Q are the extreme positions.\n\nWhich motion of the bob is one complete oscillation?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "From O to P, then through O to Q, then back to O.",
+      "B": "O to P, then back to O.",
+      "C": "O to P only.",
+      "D": "An oscillation cannot be completed if counting starts at P."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n\\fill (0,3.2) circle (0.06);\n\\draw[thick] (0,3.2) -- (0,0.6);\n\\draw[thick] (0,3.2) -- (-1.6,0.85);\n\\draw[thick] (0,3.2) -- (1.6,0.85);\n\\fill (0,0.6) circle (0.22);\n\\fill (-1.6,0.85) circle (0.18);\n\\fill (1.6,0.85) circle (0.18);\n\\node at (0,0.15) {O};\n\\node at (-1.6,0.4) {P};\n\\node at (1.6,0.4) {Q};\n\\node at (0,3.55) {support};\n\\node at (0,-0.35) {steel bob};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_08/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

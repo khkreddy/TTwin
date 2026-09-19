@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_02/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_02/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H003"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H003:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H003",
+    "stem": "Oditi marks four distinct points $S$, $T$, $U$ and $V$ on her paper. No three of the points lie on one straight path. The diagram shows the points.\n\nWhich claim correctly counts the distinct lines fixed by those points?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Six lines: each pair among $S$, $T$, $U$ and $V$ determines exactly one line.",
+      "B": "One line, because any set of points always lies on a single line.",
+      "C": "Infinitely many lines, because one point alone already fixes infinitely many lines.",
+      "D": "Sixteen lines, by multiplying four points by four possible directions."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\coordinate (S) at (0,1.6);\n  \\coordinate (T) at (2.4,2.0);\n  \\coordinate (U) at (2.0,0.2);\n  \\coordinate (V) at (0.3,0.0);\n  \\foreach \\P/\\L in {S/S, T/T, U/U, V/V} {\n    \\fill (\\P) circle (2.4pt);\n    \\node[above left] at (\\P) {$\\L$};\n  }\n  \\draw[gray!70,dashed,line width=0.6pt] (S)--(T)--(U)--(V)--(S) (S)--(U) (T)--(V);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

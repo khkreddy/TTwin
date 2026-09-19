@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Cyrus meets the compact writings $6k$ and $8(m-4)$ in his algebra notebook.\n\nWhich claim correctly states how he should read them before any calculation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$6k$ means $6$ multiplied by $k$, and $8(m-4)$ means $8$ multiplied by the whole group $(m-4)$."
+    },
+    {
+      "id": "B",
+      "text": "$6k$ means the omitted multiplication sign alone, with no product named."
+    },
+    {
+      "id": "C",
+      "text": "$6k$ means $6$ added to $k$, and $8(m-4)$ means $8$ added to $(m-4)$."
+    },
+    {
+      "id": "D",
+      "text": "$6k$ means $6$ because that digit is printed first, and $(m-4)$ can be ignored."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Juxtaposition means multiplication; a number before brackets multiplies the whole grouped expression. Naming only the omitted-sign label substitutes a term. Reading as addition omits the multiplication convention. Grabbing the leading digit alone is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

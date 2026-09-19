@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_12/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_12/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_12/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H003:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H003",
+    "stem": "The diagram shows Earth with its rotation axis and the Pole Star. Ahana studies a long-exposure photo where most stars leave circular trails while the Pole Star stays nearly fixed.\n\nWhy does the Pole Star appear nearly stationary?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Earth's rotation axis points very close to the Pole Star.",
+      "B": "Earth revolves around the Sun, and that revolution draws circular star trails around the Pole Star.",
+      "C": "Other stars actually orbit the Pole Star.",
+      "D": "Stars moving around the Pole Star make Earth rotate."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% Earth\n\\draw[thick,fill=blue!10] (0,0) circle (1.1);\n\\node at (0,-0.15) {Earth};\n% axis\n\\draw[thick,dashed] (0,-1.7)--(0,2.4);\n\\node[right] at (0.1,2.2) {axis};\n% North\n\\node[font=\\footnotesize] at (0,1.35) {N};\n% Pole Star\n\\draw[thick] (0,2.7)--++(0.12,0.18)--++(-0.24,0)--++(0.12,-0.18);\n\\fill (0,2.78) circle (0.05);\n\\node[right] at (0.25,2.85) {Pole Star};\n% other stars trails\n\\draw[->,thick] (-2.2,1.6) arc (200:320:1.15);\n\\draw[->,thick] (2.2,1.6) arc (-20:100:1.15);\n\\node[font=\\footnotesize] at (-2.5,0.6) {star trail};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

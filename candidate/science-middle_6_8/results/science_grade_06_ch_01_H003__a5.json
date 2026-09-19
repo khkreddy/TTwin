@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Pari guesses that sugar dissolves faster in warm water than in cold water. She stirs equal spoonfuls in a warm cup and a cold cup for two minutes. The warm cup has no sugar left; the cold cup still shows sugar crystals.\n\nWhich claims correctly use this result to judge a guess? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The result supports her guess that sugar dissolves faster in warm water."
+    },
+    {
+      "id": "B",
+      "text": "The cold cup still has crystals, so her warm-faster guess is not supported."
+    },
+    {
+      "id": "C",
+      "text": "A guess that both cups clear at the same speed is not supported by this result."
+    },
+    {
+      "id": "D",
+      "text": "The empty warm cup proves every possible guess about sugar is now finished."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The warm cup clears while the cold cup still has crystals, so the warm-faster guess is supported and a same-speed guess is not. Remaining crystals do not overturn the warm-faster match, and one result does not prove every possible guess.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naveen studies the three pictures in the figure. Each picture is a triangular array of dots: $1$ dot, then a triangle of $3$ dots, then a triangle of $6$ dots.\n\nWhich claim correctly describes how to draw the next picture?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The next picture is a triangular array of $10$ dots, because the pictures show $1$, $1+2$, $1+2+3$, then $1+2+3+4$ dots."
+    },
+    {
+      "id": "B",
+      "text": "Any larger cluster of dots works, so the triangular row-by-row construction need not continue."
+    },
+    {
+      "id": "C",
+      "text": "Drawing the next triangular array is what creates the earlier counts $1$, $3$ and $6$."
+    },
+    {
+      "id": "D",
+      "text": "The next picture needs the full chapter shape-sequence table before it can be drawn."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\foreach \\x/\\y in {0/0} {\\fill (\\x,\\y) circle (2.2pt);}\n  \\node[below] at (0,-0.35) {Picture 1};\n  \\begin{scope}[shift={(2.2,0)}]\n    \\foreach \\x/\\y in {0/0.6, -0.35/0, 0.35/0} {\\fill (\\x,\\y) circle (2.2pt);}\n    \\node[below] at (0,-0.35) {Picture 2};\n  \\end{scope}\n  \\begin{scope}[shift={(4.6,0)}]\n    \\foreach \\x/\\y in {0/1.0, -0.35/0.5, 0.35/0.5, -0.7/0, 0/0, 0.7/0} {\\fill (\\x,\\y) circle (2.2pt);}\n    \\node[below] at (0,-0.35) {Picture 3};\n  \\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The pictures encode triangular numbers 1, 3, 6, so the next is 10 with four rows. Dropping the row construction omits the pictorial rule. Saying the next picture creates earlier counts reverses the relation. Requiring the full chapter table over-extends the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as three triangular-number dot arrays."
+  }
+}

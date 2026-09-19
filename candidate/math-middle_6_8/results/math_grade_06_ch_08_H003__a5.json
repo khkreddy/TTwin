@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Vedika's four-sided card, tilted on the page. Opposite sides are $5\\,\\mathrm{cm}$ and $3\\,\\mathrm{cm}$, and every corner is $90^\\circ$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the figure?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A rectangle, because opposite sides are equal and all angles are $90^\\circ$, even though the card is tilted."
+        },
+        {
+          "id": "B",
+          "text": "A square, because any four-sided shape with right angles is called a square."
+        },
+        {
+          "id": "C",
+          "text": "A rectangle, because the opposite sides are equal."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\begin{scope}[rotate=28]\n    \\draw[thick,fill=gray!12] (0,0) rectangle (3.2,1.9);\n    \\node[below] at (1.6,0) {$5\\,\\mathrm{cm}$};\n    \\node[above] at (1.6,1.9) {$5\\,\\mathrm{cm}$};\n    \\node[left] at (0,0.95) {$3\\,\\mathrm{cm}$};\n    \\node[right] at (3.2,0.95) {$3\\,\\mathrm{cm}$};\n  \\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Opposite sides are equal and all angles are $90^\\circ$, but the sides are not all equal, so the figure is a rectangle and not a square; tilting does not change lengths or angles."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5 cm and 3 cm opposite sides with four right angles make a rectangle, not a square. Calling every right-angled quadrilateral a square swaps the label. Citing only opposite sides equal omits the right-angle condition needed in the full check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a tilted 5 cm by 3 cm rectangle."
+  }
+}

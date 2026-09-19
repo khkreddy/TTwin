@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharti reads the mass $4.268\\,\\mathrm{kg}$ on a digital scale marked with a decimal point.\n\nWhich claim correctly names the place of each digit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4$ is ones, $2$ is tenths, $6$ is hundredths, and $8$ is thousandths."
+    },
+    {
+      "id": "B",
+      "text": "$4$ is tenths, $2$ is hundredths, $6$ is thousandths, and $8$ is ones."
+    },
+    {
+      "id": "C",
+      "text": "The answer is the decimal point, because that mark is the most obvious symbol on the scale."
+    },
+    {
+      "id": "D",
+      "text": "$4$, $2$, $6$, and $8$ are combined by adding like place values as if the reading were a sum to find."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digits left of the point are whole-number places; to the right are tenths, hundredths, thousandths in order. Swapping those labels substitutes terms. Naming the decimal point alone is surface capture. Treating the reading as an addition task conflates a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

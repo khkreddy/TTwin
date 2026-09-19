@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ayaan needs a school bag that stays useful when empty and does not tear when books are packed. He compares strong cloth and thin paper.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which material better fits the purpose of this bag?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Strong cloth that can hold books without tearing."
+        },
+        {
+          "id": "B",
+          "text": "Thin paper, because it feels light in the hand."
+        },
+        {
+          "id": "C",
+          "text": "Either cloth or paper, because any material fits any bag."
+        },
+        {
+          "id": "D",
+          "text": "Thin paper, because a bag must be see-through."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The bag must hold books without tearing, so strong cloth matches that purpose better than thin paper."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A material is chosen when its properties fit the object's purpose. A school bag that must hold books needs strength; thin paper that only feels light or looks see-through does not meet that purpose.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

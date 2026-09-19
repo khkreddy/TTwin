@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Simran studies four Class 7 topics in one week: how vinegar reacts with baking soda, how a green leaf makes food in light, how a metal pan heats on a stove, and how seasons change as Earth moves around the Sun.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "These topics belong to different fields of science but are connected ways of studying the same world."
+    },
+    {
+      "id": "B",
+      "text": "Looking across materials, living things, heat, and Earth motion can show links between the topics."
+    },
+    {
+      "id": "C",
+      "text": "Materials and living things are connected, but heat and Earth motion are isolated topics."
+    },
+    {
+      "id": "D",
+      "text": "Topics from different chapters must be treated as isolated subjects."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Science fields and chapter topics are connected ways of studying one world. Splitting heat and Earth motion off, or treating every chapter as isolated, misses that link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

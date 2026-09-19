@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sameer places a treasure on the number $48$ on a number strip. He may jump by a fixed whole-number size from $0$ and wants every landing to hit $48$ exactly.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Jump sizes $1$, $2$, $3$, $4$, $6$, $8$, $12$, $16$, $24$ and $48$ all land exactly on $48$."
+    },
+    {
+      "id": "B",
+      "text": "The answer is $48$, because that is the treasure number itself."
+    },
+    {
+      "id": "C",
+      "text": "Jump size $5$ works, because repeated jumps of $5$ stay on whole numbers."
+    },
+    {
+      "id": "D",
+      "text": "Jump size $48$ is forced, because $48$ is the largest printed mark on the strip."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A jump size lands on 48 exactly when it divides 48. Those sizes are the factors listed in A. Naming the treasure number itself swaps the jump-size answer. Jump 5 omits the no-remainder condition. Picking 48 only because it is the largest mark is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

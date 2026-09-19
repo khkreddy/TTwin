@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Isha's aunt brings harvested rice stalks. The grains are still stuck to the stalks.\n\nWhich claims correctly say what should happen before they separate grains from husk? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "They should beat the stalks so the grains come off the stalks."
+    },
+    {
+      "id": "B",
+      "text": "Beating the stalks to detach the grains is winnowing."
+    },
+    {
+      "id": "C",
+      "text": "After the grains are beaten off, they may still be mixed with husk."
+    },
+    {
+      "id": "D",
+      "text": "They should blow air over the harvested stalks to detach the grains from the stalks."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Threshing beats stalks to detach grains; those grains can still be mixed with husk, so husk separation is a further step. Beating is not winnowing, and blowing air is not what detaches grains from stalks.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

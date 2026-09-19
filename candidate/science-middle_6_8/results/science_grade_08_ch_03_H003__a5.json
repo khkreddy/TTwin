@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Ritvik has had fever and body ache for two days, so he is unwell."
+    },
+    {
+      "id": "2",
+      "text": "The classmate who feels briefly tired after a short walk upstairs and then recovers is unwell."
+    },
+    {
+      "id": "3",
+      "text": "The classmate who cannot sleep or concentrate for many days may be unwell even if the body seems fine."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Ritvik's class uses this rule: a person is unwell when symptoms or signs show that the body or mind is not working normally. The class discusses Ritvik, a classmate after a short walk upstairs, and a classmate who cannot sleep or concentrate for many days.\n\nWhich statements apply the rule correctly?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fever with ache and lasting mind symptoms indicate unwell. Ordinary short-lived tiredness after mild activity does not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Timing how long the fizzing lasts is useful evidence of the change."
+    },
+    {
+      "id": "B",
+      "text": "Noting whether bubbles formed is useful evidence, even though it is only yes or no."
+    },
+    {
+      "id": "C",
+      "text": "The brand name printed on the baking soda packet is useful evidence of the change in the cup."
+    },
+    {
+      "id": "D",
+      "text": "A yes-or-no observation cannot count as evidence."
+    }
+  ],
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Shaurya mixes baking soda with vinegar in a steel cup. The mixture fizzes and feels cooler. He wants evidence to make sense of the changes.\n\nWhich claims about useful evidence are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Timed fizzing and whether bubbles formed are observable results of the change. Packet brand names are not evidence of the reaction, and yes/no observations can still be evidence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

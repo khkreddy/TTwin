@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Lata tracks a number trick with one letter-number $x$ for the starting number, kept the same in every step: multiply by $4$, add $12$, divide by $4$, then subtract the starting number.\n\nOne or more options may be correct. Which two claims correctly describe what this tracking shows?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The expression simplifies to $3$, so every starting number gives the final result $3$."
+    },
+    {
+      "id": "B",
+      "text": "$x$ is only a label for letter-number, so it cannot appear in the arithmetic steps."
+    },
+    {
+      "id": "C",
+      "text": "Keeping the same $x$ through every step shows the final result is fixed for every starting number."
+    },
+    {
+      "id": "D",
+      "text": "She must also use a right-triangle length rule to finish the proof."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "(4x+12)/4 - x = x+3 - x = 3, so the result is always 3 when the same x is kept. Treating x as a mere unused label swaps the role of the letter-number. Bringing in a triangle length rule leaves the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

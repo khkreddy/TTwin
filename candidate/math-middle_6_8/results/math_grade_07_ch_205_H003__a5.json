@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Lavanya's data are $3$, $5$, $7$, and $9$. She wants the arithmetic mean as the equal-share value of that list.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add only $3$ and $9$, then divide by $2$, leaving $5$ and $7$ out of the total."
+    },
+    {
+      "id": "B",
+      "text": "The mean is $(3 + 5 + 7 + 9) \\div 4 = 6$, the equal share of the total."
+    },
+    {
+      "id": "C",
+      "text": "If the four values shared the total equally, each share would be $6$."
+    },
+    {
+      "id": "D",
+      "text": "Report the median of the ordered list instead of the total divided by $4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is sum of all values divided by count: (3+5+7+9)÷4 = 6, which is also the equal-share amount. Omitting middle values or switching to the median leaves the mean hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Deepa looks at the diagram. Straight lines $EF$ and $GH$ cross at $N$. The marked angle $\\angle ENG$ is $58^{\\circ}$, and $q$ labels the angle vertically opposite $\\angle ENG$.\n\nWhich two claims are correct?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "$q = 58^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "$q = 122^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "Vertically opposite angles at the same crossing are equal."
+    },
+    {
+      "id": "D",
+      "text": "Adjacent angles on a straight line are equal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[line width=1.05pt] (-0.5,-1.5)--(5.1,1.8);\n  \\draw[line width=1.05pt] (-0.3,2.0)--(4.9,-1.7);\n  \\fill (2.3,0.2) circle (1.6pt);\n  \\node[above right] at (2.35,0.25){$N$};\n  \\draw[line width=0.7pt] (2.3,0.2) ++(30:0.7) arc (30:150:0.7);\n  \\node at (1.65,0.95){$58^{\\circ}$};\n  \\draw[line width=0.7pt] (2.3,0.2) ++(210:0.7) arc (210:330:0.7);\n  \\node at (2.95,-0.5){$q$};\n  \\node[below left] at (0.2,-1.0){$E$};\n  \\node[above right] at (4.7,1.5){$F$};\n  \\node[above left] at (0.3,1.5){$G$};\n  \\node[below right] at (4.5,-1.3){$H$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vertically opposite angles at one crossing are equal, so q = 58°. Taking 122° uses an adjacent straight-line angle and omits the opposite-pair condition. Saying adjacent angles on a straight line are equal substitutes a different relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": "Rewrote source triangle as crossing lines EF and GH at N with marked vertically opposite pair 58° and q."
+  }
+}

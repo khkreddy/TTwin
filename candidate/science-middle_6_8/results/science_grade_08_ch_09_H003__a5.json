@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Harshit has more solute in the same amount of solvent, so his solution is more concentrated."
+    },
+    {
+      "id": "B",
+      "text": "Tara's solution is more dilute than Harshit's solution."
+    },
+    {
+      "id": "C",
+      "text": "Both solutions have the same concentration because both use 200 mL of water."
+    },
+    {
+      "id": "D",
+      "text": "Harshit's solution is more concentrated because his glass looks fuller."
+    }
+  ],
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Harshit dissolves 4 spoons of sugar in 200 mL of water. Tara dissolves 1 spoon of sugar in 200 mL of water. Both stir until all the sugar dissolves.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For the same solvent amount, more dissolved sugar means a more concentrated solution and less means more dilute. Equal water volume alone does not equalise concentration.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

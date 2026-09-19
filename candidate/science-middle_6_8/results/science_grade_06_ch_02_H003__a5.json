@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Om studies plant X in the school garden. The diagram compares plant X with a tree, a shrub, and a climber. Plant X is short and has a soft green stem.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "How should Om classify plant X?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Herb"
+        },
+        {
+          "id": "B",
+          "text": "Tree"
+        },
+        {
+          "id": "C",
+          "text": "Shrub"
+        },
+        {
+          "id": "D",
+          "text": "Climber"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% tree\n\\draw[thick,fill=brown!40] (0.3,0.2) rectangle (0.7,2.0);\n\\draw[thick,fill=green!35] (0.5,2.6) circle (0.9);\n\\node at (0.5,-0.15) {tree};\n% shrub\n\\draw[thick,fill=brown!40] (2.3,0.2) -- (2.3,1.0);\n\\draw[thick,fill=brown!40] (2.7,0.2) -- (2.7,1.0);\n\\draw[thick,fill=brown!40] (3.1,0.2) -- (3.1,1.0);\n\\draw[thick,fill=green!35] (2.7,1.5) circle (0.7);\n\\node at (2.7,-0.15) {shrub};\n% herb (highlighted)\n\\draw[thick,fill=green!50] (4.8,0.2) rectangle (5.1,1.1);\n\\draw[thick,fill=green!40] (4.95,1.5) circle (0.45);\n\\draw[thick,dashed] (4.3,0.0) rectangle (5.6,2.1);\n\\node at (4.95,-0.15) {plant X};\n% climber\n\\draw[thick] (6.8,0.2) -- (7.0,1.8);\n\\draw[thick,fill=gray!25] (7.3,0.2) rectangle (7.6,2.0);\n\\draw[thick,->] (7.05,1.5) -- (7.25,1.5);\n\\node at (7.2,-0.15) {climber};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Plant X is short with a soft green stem, so it fits a herb rather than a woody tree, shrub, or support-needing climber."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Herbs are typically small plants with soft green stems. Plant X matches that pattern, not a tall woody tree, a many-stemmed woody shrub, or a weak-stemmed climber.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source equation into tree/shrub/herb/climber silhouettes; plant X marked as the short soft-stem herb."
+  }
+}

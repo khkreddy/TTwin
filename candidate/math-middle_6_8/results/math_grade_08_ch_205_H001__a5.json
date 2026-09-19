@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kalyani records the masses of five rice bags in kilograms: $4$, $4$, $5$, $6$ and $6$.\n\nWhich claim about the mean mass is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mean $= (4 + 4 + 5 + 6 + 6) / 5$, counting each repeated mass."
+    },
+    {
+      "id": "B",
+      "text": "Use only the distinct masses $4$, $5$ and $6$, so divide their sum by $3$."
+    },
+    {
+      "id": "C",
+      "text": "The mean mass is what produces the five recorded masses."
+    },
+    {
+      "id": "D",
+      "text": "Find the mean by multiplying the five masses instead of dividing their sum by $5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is the sum of all five masses divided by 5, so each repeat counts. Using only distinct masses swaps the mean for a different summary. Saying the mean creates the data reverses the relation. Multiplying instead of dividing confuses the operation. Mean = 25/5 = 5.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

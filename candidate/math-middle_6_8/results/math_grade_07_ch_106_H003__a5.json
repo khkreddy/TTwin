@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ekta has nine odd-numbered cards. She wants to place all nine cards so that their sum is exactly $50$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What can she decide before trying any cases?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The sum of nine odd numbers is odd, so it cannot equal $50$."
+        },
+        {
+          "id": "B",
+          "text": "The sum of nine odd numbers is even, so $50$ is reachable."
+        },
+        {
+          "id": "C",
+          "text": "Parity does not apply until she first chooses which cards make the total."
+        },
+        {
+          "id": "D",
+          "text": "Any nine positive cards can make $50$ if their sizes are small enough."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "An odd count of odd addends makes an odd sum, but $50$ is even, so no arrangement works."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Nine odd addends force an odd sum; 50 is even, so the target is impossible before trying cases. Calling that sum even reverses parity. Saying parity waits for selection omits the forced-parity condition. Size alone is outside the parity hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

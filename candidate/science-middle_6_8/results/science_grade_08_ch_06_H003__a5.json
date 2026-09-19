@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Water pushes only downward on the bottom of the can."
+        },
+        {
+          "id": "B",
+          "text": "Water also pushes on the side walls of the can."
+        },
+        {
+          "id": "C",
+          "text": "Water streams out only because the top of the can is open to air."
+        },
+        {
+          "id": "D",
+          "text": "Pressure acts on the side walls only at the lower hole."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% can\n\\draw[thick] (0,0)--(0,3.2)--(1.8,3.2)--(1.8,0)--cycle;\n\\node at (0.9,3.5) {can};\n% water fill\n\\fill[blue!20] (0.05,0.05) rectangle (1.75,2.7);\n\\draw[blue!50!black,thick] (0.05,2.7)--(1.75,2.7);\n\\node[font=\\footnotesize] at (0.9,2.2) {water};\n% holes and jets\n\\fill (1.8,0.7) circle (0.06);\n\\fill (1.8,1.6) circle (0.06);\n\\draw[->,thick,blue!60!black] (1.86,1.6)--(3.1,1.45);\n\\draw[->,thick,blue!60!black] (1.86,0.7)--(3.4,0.45);\n\\node[font=\\footnotesize,right] at (3.1,1.45) {jet};\n\\node[font=\\footnotesize,right] at (3.4,0.45) {jet};\n\\node[font=\\footnotesize,left] at (-0.05,1.6) {side wall};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Saanvi's tall can filled with water. Small holes are made in the side wall at two heights. Water streams out sideways through the holes.\n\nSaanvi asks what this shows about the pressure of the water.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Sideways jets from the side holes show that the liquid pushes on the side walls, not only on the bottom."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid pressure acts on side walls as well as the bottom; side holes release sideways jets for that reason.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Tall can of water with two side-wall holes and outward jets."
+  }
+}

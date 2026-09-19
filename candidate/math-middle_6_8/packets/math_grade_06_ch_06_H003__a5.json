@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m20_qp_12:q14",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:29:34.677Z",
+  "source": {
+    "item_ref": "session:0580_m20_qp_12:q14",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.45);\\coordinate (C) at (3.55,0);\\draw[line width=0.7pt] (A)--(B)--(C)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=6pt] at (0,1.225) {$8.5\\,\\mathrm{cm}$};\\node[below=5pt] at (1.775,0) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (5.0,1.5) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_06/H003",
+      "unit_id": "math/grade_06/ch_06/H003",
+      "title": "Decide when a triangle's perimeter must be found by adding its three side lengths.",
+      "node_labels": [
+        "Measure, mensuration and trigonometric ratio"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Measure, mensuration and trigonometric ratio",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Side length is the label that belongs on this item, so 'Decide when a triangle's perimeter must be found by adding its three' is answered as side length rather than triangle."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Side length is what produces triangle, so the usual direction of this relation is run backwards — on the item about Decide when a triangle's perimeter must be found by."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is triangle because of the most obvious label, colour, size or printed number in the stem, without using 'Decide when a triangle's perimeter must be found by adding its three' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "triangle is settled by running 'Decide how to convert distance on a rectangular or square track into': One full round on a track equals the track's perimeter; total distance equals full rounds — on the item about Decide when a triangle's perimeter must be found by."
+      }
+    ],
+    "enrichment": "The perimeter of any triangle is the sum of the lengths of its three sides.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_06. The student must decide: Decide when a triangle's perimeter must be found by adding its three side lengths. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_06/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H003"
+  }
+}

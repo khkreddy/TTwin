@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Mohan cuts a paper parallelogram into pieces $T$ and $U$ and rearranges them into a new outline with no gaps and no overlaps. The diagram shows the original parallelogram and the rearranged outline.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the areas is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The rearranged outline has the same area as the original parallelogram."
+        },
+        {
+          "id": "B",
+          "text": "The new outline must have smaller area because its outer path looks different."
+        },
+        {
+          "id": "C",
+          "text": "Equal area is what forces the rearranged outline to be a parallelogram again."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\draw[line width=1.05pt,fill=gray!15] (0,0)--(3.2,0)--(4.0,1.8)--(0.8,1.8)--cycle;\n  \\draw[line width=1.0pt,dashed] (0.8,1.8)--(3.2,0);\n  \\node at (1.5,1.15){$T$};\n  \\node at (2.7,0.55){$U$};\n  \\begin{scope}[shift={(5.2,0.1)}]\n    \\draw[line width=1.05pt,fill=gray!15] (0,0)--(3.2,0)--(3.2,0.9)--(1.6,1.8)--(0,0.9)--cycle;\n    \\draw[line width=1.0pt,dashed] (0,0.9)--(3.2,0.9);\n    \\node at (1.0,0.4){$T$};\n    \\node at (2.4,1.2){$U$};\n  \\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Cutting and rearranging with no gaps and no overlaps keeps all of $T$ and $U$, so the area stays the same even though the outline changes."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rearrangement with no gaps or overlaps preserves equal area. Treating a different outline as smaller omits that pieces are fully kept. Saying equal area forces a parallelogram again reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a parallelogram cut into T and U beside a rearranged outline."
+  }
+}

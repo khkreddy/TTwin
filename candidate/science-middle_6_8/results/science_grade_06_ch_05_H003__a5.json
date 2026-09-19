@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Riya writes 3 km in metres.\n\nWhich conversion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "3 km = 3 m."
+    },
+    {
+      "id": "B",
+      "text": "3 km = 3000 m."
+    },
+    {
+      "id": "C",
+      "text": "3 km = 0.003 m."
+    },
+    {
+      "id": "D",
+      "text": "3 km = 30 m."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1 km = 1000 m, so 3 km = 3000 m. Keeping the same number, dividing instead of multiplying, or using 10 instead of 1000 are incorrect conversions.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

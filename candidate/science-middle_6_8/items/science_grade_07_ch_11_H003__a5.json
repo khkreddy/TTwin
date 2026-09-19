@@ -1,0 +1,74 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "option_plan": {
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H003"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H003:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H003",
+    "stem": "The diagram shows Dhruv shining a torch at three sheets X, Y and Z. Through X almost all the light passes and shapes look clear. Through Y only some light passes and shapes look unclear. Through Z no light passes.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Y is translucent because only some light passes and shapes look unclear.",
+      "B": "Y is transparent because some light passes through it.",
+      "C": "Y is opaque because shapes look unclear.",
+      "D": "X is translucent because almost all the light passes through it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.22);\n\\node at (0,0.55) {torch};\n% X transparent\n\\draw[thick,fill=cyan!8] (1.4,0.2) rectangle (1.7,2.2);\n\\node at (1.55,2.45) {X};\n\\draw[thick,dashed,->] (0.25,1.2) -- (1.35,1.2);\n\\draw[thick,dashed,->] (1.75,1.2) -- (2.55,1.2);\n\\node at (1.55,-0.15) {clear};\n% Y translucent\n\\draw[thick,fill=orange!25] (3.0,0.2) rectangle (3.3,2.2);\n\\node at (3.15,2.45) {Y};\n\\draw[thick,dashed,->] (2.7,1.2) -- (2.95,1.2);\n\\draw[thick,dashed,->] (3.35,1.35) -- (4.1,1.55);\n\\draw[thick,dashed,->] (3.35,1.05) -- (4.1,0.85);\n\\node at (3.15,-0.15) {unclear};\n% Z opaque\n\\draw[thick,fill=gray!55] (4.8,0.2) rectangle (5.1,2.2);\n\\node at (4.95,2.45) {Z};\n\\draw[thick,dashed,->] (4.4,1.2) -- (4.75,1.2);\n\\node at (4.95,-0.15) {blocked};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

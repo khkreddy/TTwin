@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows $\\angle POQ$. Mukul must bisect $\\angle POQ$ with ruler and compass. Equal marks show $OA = OB$ on the arms and $AC = BC$ with ray $OC$ drawn.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states what that construction produces?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Ray $OC$ bisects $\\angle POQ$, because the equal marks build congruent triangles that force the two half-angles equal."
+        },
+        {
+          "id": "B",
+          "text": "Name the vertex $O$ as the bisector, and treat the equal marks as unnecessary."
+        },
+        {
+          "id": "C",
+          "text": "Say that the finished ray $OC$ is what creates the equal marks $OA$, $OB$, $AC$, and $BC$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (O) at (0,0);\n  \\coordinate (P) at (4.8,0);\n  \\coordinate (Q) at (2.9,3.5);\n  \\draw[line width=1.05pt] (O)--(P);\n  \\draw[line width=1.05pt] (O)--(Q);\n  \\node[below left] at (O){$O$};\n  \\node[below] at (P){$P$};\n  \\node[above] at (Q){$Q$};\n  \\coordinate (A) at (2.5,0);\n  \\coordinate (B) at (1.51,1.82);\n  \\fill (A) circle (1.5pt);\n  \\fill (B) circle (1.5pt);\n  \\node[below] at (A){$A$};\n  \\node[above left] at (B){$B$};\n  \\draw[line width=0.7pt] (0.55,0) arc (0:50:0.55);\n  \\coordinate (C) at (3.05,1.4);\n  \\fill (C) circle (1.5pt);\n  \\node[right] at (C){$C$};\n  \\draw[line width=0.9pt,dashed] (O)--(C);\n  \\node[right] at (3.5,0.75){ray $OC$};\n  \\draw[line width=0.8pt] (2.7,0.6)--(2.85,0.75);\n  \\draw[line width=0.8pt] (2.45,1.5)--(2.6,1.65);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "With $OA=OB$ and $AC=BC$, triangles $OAC$ and $OBC$ are congruent by SSS, so $\\angle POC = \\angle QOC$ and ray $OC$ bisects $\\angle POQ$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal arm marks and equal marks from A and B produce congruent triangles, so OC is the angle bisector. Naming O as the bisector or saying the ray creates the marks reverses or mislabels the construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle into angle POQ with equal marks OA=OB, AC=BC and dashed ray OC."
+  }
+}

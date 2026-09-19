@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Amit must evaluate $4 \\times (9 - 6) + 5$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which value is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$17$"
+        },
+        {
+          "id": "B",
+          "text": "$31$"
+        },
+        {
+          "id": "C",
+          "text": "$11$"
+        },
+        {
+          "id": "D",
+          "text": "$41$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The brackets force $9-6$ first, giving $3$; then $4\\times 3+5=17$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Brackets require 9−6 first, then 4×3+5=17. Multiplying 4×9 first then subtracting yields 31. Other wrong totals ignore bracket order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

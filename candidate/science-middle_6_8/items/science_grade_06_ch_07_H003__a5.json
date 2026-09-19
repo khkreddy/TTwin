@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_07/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_07/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_07/H003"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_07:H003:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_06/ch_07",
+    "chapter_label": "Temperature and its measurement",
+    "subtopic_id": "science/grade_06/ch_07/H003",
+    "stem": "Naina must check her younger brother's body temperature from a short distance without touching him. The diagram shows three thermometer types.\n\nWhich thermometer should she use?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Clinical thermometer",
+      "B": "Non-contact infrared thermometer",
+      "C": "Laboratory thermometer",
+      "D": "Laboratory thermometer used as a clinical thermometer"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% clinical\n\\draw[thick] (0.2,0.4) rectangle (0.45,2.2);\n\\draw[thick,fill=gray!30] (0.2,0.2) circle (0.18);\n\\node at (0.9,1.3) {clinical};\n\\node at (0.9,0.9) {thermometer};\n% non-contact\n\\draw[thick,fill=gray!15] (2.6,0.8) rectangle (4.0,1.6);\n\\draw[thick] (4.0,1.2) -- (4.5,1.2);\n\\draw[thick] (4.5,1.0) -- (4.5,1.4);\n\\node at (3.3,0.45) {non-contact};\n\\node at (3.3,0.15) {infrared};\n% laboratory\n\\draw[thick] (6.0,0.3) rectangle (6.25,2.4);\n\\foreach \\y in {0.6,1.0,1.4,1.8,2.2} {\\draw (6.25,\\y) -- (6.4,\\y);}\n\\node at (7.2,1.4) {laboratory};\n\\node at (7.2,1.0) {thermometer};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_07/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

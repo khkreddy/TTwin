@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Oditi marks four distinct points $S$, $T$, $U$ and $V$ on her paper. No three of the points lie on one straight path. The diagram shows the points.\n\nWhich claim correctly counts the distinct lines fixed by those points?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Six lines: each pair among $S$, $T$, $U$ and $V$ determines exactly one line."
+    },
+    {
+      "id": "B",
+      "text": "One line, because any set of points always lies on a single line."
+    },
+    {
+      "id": "C",
+      "text": "Infinitely many lines, because one point alone already fixes infinitely many lines."
+    },
+    {
+      "id": "D",
+      "text": "Sixteen lines, by multiplying four points by four possible directions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\coordinate (S) at (0,1.6);\n  \\coordinate (T) at (2.4,2.0);\n  \\coordinate (U) at (2.0,0.2);\n  \\coordinate (V) at (0.3,0.0);\n  \\foreach \\P/\\L in {S/S, T/T, U/U, V/V} {\n    \\fill (\\P) circle (2.4pt);\n    \\node[above left] at (\\P) {$\\L$};\n  }\n  \\draw[gray!70,dashed,line width=0.6pt] (S)--(T)--(U)--(V)--(S) (S)--(U) (T)--(V);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With four points and no three collinear, each of the C(4,2)=6 pairs fixes one line. Claiming one line omits that the points are not collinear. Counting from one point alone reverses how lines are fixed by pairs. Multiplying points by directions confuses the count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source right triangle as four labelled non-collinear points with dashed candidate lines."
+  }
+}

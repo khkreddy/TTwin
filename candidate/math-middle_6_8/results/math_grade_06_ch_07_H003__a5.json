@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uday places the fraction $\\dfrac{5}{6}$ on a number line marked from $0$ to $1$. The diagram shows that number line.\n\nWhich plan places $\\dfrac{5}{6}$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divide the interval from $0$ to $1$ into $6$ equal lengths and count $5$ of those lengths from $0$."
+    },
+    {
+      "id": "B",
+      "text": "Mark a point near $1$ because the printed $6$ looks large on the page."
+    },
+    {
+      "id": "C",
+      "text": "The number-line placement rule also requires changing $\\dfrac{5}{6}$ into another kind of number first."
+    },
+    {
+      "id": "D",
+      "text": "Place $\\dfrac{5}{6}$ by comparing only how large $5$ looks next to $6$ as a unit fraction of a different whole."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\draw[thick,->] (-0.3,0)--(6.5,0);\n  \\foreach \\x in {0,1,2,3,4,5,6} {\n    \\draw[thick] (\\x,-0.12)--(\\x,0.12);\n  }\n  \\node[below] at (0,-0.2) {$0$};\n  \\node[below] at (6,-0.2) {$1$};\n  \\node[above] at (5,0.2) {?};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To place 5/6, partition [0,1] into 6 equal parts and count 5 from 0. Choosing by how large 6 looks is surface capture. Requiring a conversion first over-extends the hinge. Treating the placement as a unit-fraction comparison of a different whole conflates mechanisms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source right triangle as a 0-to-1 number line partitioned into sixths."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wasim draws the equilateral triangle shown in the figure. He wants to count its lines of symmetry by testing folds.\n\nHow many lines of symmetry does the equilateral triangle have?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Three: each line from a vertex to the midpoint of the opposite side passes the fold test."
+    },
+    {
+      "id": "B",
+      "text": "Infinitely many, because any line through the centre looks balanced at a glance."
+    },
+    {
+      "id": "C",
+      "text": "Three folds are what create the equilateral triangle in the first place."
+    },
+    {
+      "id": "D",
+      "text": "The count needs group-theory language before any fold can be checked."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.2,0);\n  \\coordinate (C) at (1.6,2.771);\n  \\draw[thick,fill=gray!10] (A)--(B)--(C)--cycle;\n  \\draw[dashed,gray!70] (C)--(1.6,0);\n  \\draw[dashed,gray!70] (A)--(2.4,1.386);\n  \\draw[dashed,gray!70] (B)--(0.8,1.386);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An equilateral triangle has exactly three fold lines, each from a vertex to the opposite midpoint. Counting infinitely many omits the fold test. Saying folds create the triangle reverses the relation. Requiring group-theory language over-extends the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as an equilateral triangle with three dashed candidate fold lines."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Manav's night-sky sketch. Pattern P is the Big Dipper, pattern Q is the Little Dipper, and star R is the Pole Star in the Little Dipper. He wants to find North.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Star R marks North because the Pole Star in the Little Dipper appears fixed in the North direction."
+    },
+    {
+      "id": "B",
+      "text": "Pattern P marks North because the Pole Star belongs to the Big Dipper."
+    },
+    {
+      "id": "C",
+      "text": "Star R marks North from every place on Earth, even where the Pole Star cannot be seen."
+    },
+    {
+      "id": "D",
+      "text": "The brightest star in the sketch marks North, whether or not it is star R."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% Big Dipper P\n\\coordinate (P1) at (0.0,1.6);\n\\coordinate (P2) at (0.9,1.85);\n\\coordinate (P3) at (1.7,1.55);\n\\coordinate (P4) at (2.2,0.95);\n\\coordinate (P5) at (3.0,0.55);\n\\coordinate (P6) at (3.85,0.95);\n\\coordinate (P7) at (3.15,1.55);\n\\foreach \\Q in {P1,P2,P3,P4,P5,P6,P7} {\\fill (\\Q) circle (0.06);}\n\\draw[thick] (P1)--(P2)--(P3)--(P4)--(P5)--(P6)--(P7)--(P3);\n\\node at (1.9,0.15) {P Big Dipper};\n% pointer toward Pole Star\n\\draw[dashed,->,thick] (P2)--(4.6,3.1);\n% Little Dipper Q + Pole Star R\n\\coordinate (Q1) at (4.6,3.1);\n\\coordinate (Q2) at (5.2,2.55);\n\\coordinate (Q3) at (5.7,2.15);\n\\coordinate (Q4) at (6.15,1.55);\n\\coordinate (Q5) at (6.85,1.35);\n\\coordinate (Q6) at (7.25,1.95);\n\\coordinate (Q7) at (6.55,2.35);\n\\foreach \\Q in {Q2,Q3,Q4,Q5,Q6,Q7} {\\fill (\\Q) circle (0.055);}\n\\fill (Q1) circle (0.09);\n\\draw[thick] (Q1)--(Q2)--(Q3)--(Q4)--(Q5)--(Q6)--(Q7)--(Q3);\n\\node at (5.9,0.85) {Q Little Dipper};\n\\node at (4.6,3.45) {R Pole Star};\n\\node at (3.5,-0.35) {Manav's night sky};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Pole Star in the Little Dipper marks North. It is not part of the Big Dipper, is not visible from everywhere on Earth, and brightness alone does not identify it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force diagram into labelled Big Dipper, Little Dipper, and Pole Star night-sky sketch."
+  }
+}
