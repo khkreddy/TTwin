@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bela compares two snack packets. One lists more protein and fibre and less sugar.\n\nWhich better fits a health-minded choice from the labels?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The packet with the brighter cartoon, ignoring the table."
+    },
+    {
+      "id": "B",
+      "text": "The packet with more protein and fibre and less sugar, from the nutrition table."
+    },
+    {
+      "id": "C",
+      "text": "Labels cannot be compared."
+    },
+    {
+      "id": "D",
+      "text": "The sweeter packet, because taste is the only nutrient."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compare the nutrition table, not the cartoon. Sugar is not the only nutrient.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

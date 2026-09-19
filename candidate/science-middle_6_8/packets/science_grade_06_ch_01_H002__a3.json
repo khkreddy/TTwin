@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_w20_qp_21:q35",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T00:11:04.510Z",
+  "created_at": "2026-09-19T01:11:08.336Z",
   "source": {
-    "item_ref": "session:0620_w20_qp_21:q35",
-    "item_type": "single_mcq",
-    "stem": "The structures of four organic molecules are shown.\n\nWhich molecules are structural isomers of structure 1?",
-    "options": [
-      {
-        "id": "A",
-        "text": "2 and 4"
-      },
-      {
-        "id": "B",
-        "text": "2 only"
-      },
-      {
-        "id": "C",
-        "text": "3 and 4"
-      },
-      {
-        "id": "D",
-        "text": "3 only"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_01/H002",
+      "unit_id": "science/grade_06/ch_01/H002",
+      "title": "When trying to answer a question, choose the next step by moving from observation to question, from question to possible answer, and from possible answer to a test.",
+      "node_labels": [
+        "What counts as a scientific question or test",
+        "Scientific inquiry and evidence"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -68,27 +56,14 @@
       }
     ],
     "enrichment": "The scientific method is a step-by-step process: observe something interesting or unclear, form a question, guess a possible answer, and test the guess through further checking or investigation. An observation creates a question; the question motivates a possible answer; the possible answer must be tested before it can guide the next conclusion. The learner chooses the next step by following the chapter sequence from observation to question to possible answer to test. Once I have a likely answer, I can call it correct without checking it.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_01/H002",
-      "gate_names": [
-        "scope_error",
-        "scope_error",
-        "condition_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option B remains the trap for a student including statement 2 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping statement 4 which the keyed set still requires. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When trying to answer a question, choose the next step by moving from observation to question, from question to possible answer, and from possible answer to a test. Use an Indian school or home setting and Indian names. Keep the source language register. Inverse-flip: the original answer becomes given; the student finds what the source treated as given. Recalculate the key. Do not copy the original key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
-    "variation_class": "V6",
+    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When trying to answer a question, choose the next step by moving from observation to question, from question to possible answer, and from possible answer to a test. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -105,5 +80,26 @@
     "builder": "assembleModifyPacket",
     "trimmed": [],
     "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_01/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H002"
   }
 }

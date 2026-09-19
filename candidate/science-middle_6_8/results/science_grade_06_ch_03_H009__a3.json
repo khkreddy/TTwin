@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mohan adds iodine to a piece of boiled potato and sees a blue-black colour.\n\nWhat does that show?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The potato has fat, because iodine tests oil."
+    },
+    {
+      "id": "B",
+      "text": "The potato has starch."
+    },
+    {
+      "id": "C",
+      "text": "Blue-black means the potato has protein."
+    },
+    {
+      "id": "D",
+      "text": "The colour is only from the potato's skin, not from a food test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Iodine turning blue-black is the starch test, not fat or protein, and not merely skin colour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

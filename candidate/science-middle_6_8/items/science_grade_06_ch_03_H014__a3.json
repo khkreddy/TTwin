@@ -7,10 +7,10 @@
   "variation_class": "V1",
   "fidelity_mode": "FAITHFUL_TRANSFER",
   "source_ref": "session:biology_7a_rjb_exe1",
-  "target_unit_id": "science/grade_06/ch_01/H002",
+  "target_unit_id": "science/grade_06/ch_03/H014",
   "build_logic": {
     "source_uid": "biology_7a_rjb_exe1",
-    "hinge": "science/grade_06/ch_01/H002",
+    "hinge": "science/grade_06/ch_03/H014",
     "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
@@ -19,36 +19,36 @@
     "mx_seeds_used": [
       "term_substitution",
       "condition_omission",
-      "scope_error",
-      "surface_feature_capture"
+      "relationship_reversal",
+      "scope_error"
     ],
     "option_plan": {
       "B": "term_substitution",
       "C": "condition_omission",
-      "D": "scope_error"
+      "D": "relationship_reversal"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H002"
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H014"
   },
   "mx_option_map": {
-    "A": "term_substitution",
+    "A": "surface_feature_capture",
     "C": "condition_omission",
-    "D": "scope_error"
+    "D": "term_substitution"
   },
   "item": {
-    "uid": "candidate:g68:science:grade_06:ch_01:H002:a3",
+    "uid": "candidate:g68:science:grade_06:ch_03:H014:a3",
     "subject": "science",
     "pack": "middle_6_8",
-    "node": "S1/H-INQUIRY",
-    "chapter_id": "science/grade_06/ch_01",
-    "chapter_label": "The wonderful world of science",
-    "subtopic_id": "science/grade_06/ch_01/H002",
-    "stem": "Ritu wants to know why a puddle shrinks. She has already watched it get smaller.\n\nWhat is the next scientific step?",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_06/ch_03",
+    "chapter_label": "Mindful eating: a path to a healthy body",
+    "subtopic_id": "science/grade_06/ch_03/H014",
+    "stem": "Bela compares two snack packets. One lists more protein and fibre and less sugar.\n\nWhich better fits a health-minded choice from the labels?",
     "item_type": "mcq",
     "options": {
-      "A": "Declare that puddles always shrink, so no test is needed.",
-      "B": "Ask a focused question and plan a check, such as measuring the puddle each hour.",
-      "C": "Copy a classmate's actions without a question.",
-      "D": "Treat the puddle as not science because it is in the courtyard."
+      "A": "The packet with the brighter cartoon, ignoring the table.",
+      "B": "The packet with more protein and fibre and less sugar, from the nutrition table.",
+      "C": "Labels cannot be compared.",
+      "D": "The sweeter packet, because taste is the only nutrient."
     },
     "statements": [],
     "parts": [],
@@ -61,7 +61,7 @@
     "complete_exam": false,
     "serve_eligible": false,
     "hinges": {
-      "primary": "science/grade_06/ch_01/H002",
+      "primary": "science/grade_06/ch_03/H014",
       "supporting": [],
       "binder": {
         "method": "modify_g68_named_gap"

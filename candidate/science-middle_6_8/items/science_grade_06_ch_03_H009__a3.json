@@ -7,10 +7,10 @@
   "variation_class": "V1",
   "fidelity_mode": "FAITHFUL_TRANSFER",
   "source_ref": "session:biology_7a_rjb_exe1",
-  "target_unit_id": "science/grade_06/ch_01/H002",
+  "target_unit_id": "science/grade_06/ch_03/H009",
   "build_logic": {
     "source_uid": "biology_7a_rjb_exe1",
-    "hinge": "science/grade_06/ch_01/H002",
+    "hinge": "science/grade_06/ch_03/H009",
     "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
@@ -19,36 +19,35 @@
     "mx_seeds_used": [
       "term_substitution",
       "condition_omission",
-      "scope_error",
-      "surface_feature_capture"
+      "scope_error"
     ],
     "option_plan": {
       "B": "term_substitution",
       "C": "condition_omission",
       "D": "scope_error"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H002"
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H009"
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "C": "condition_omission",
-    "D": "scope_error"
+    "C": "scope_error",
+    "D": "surface_feature_capture"
   },
   "item": {
-    "uid": "candidate:g68:science:grade_06:ch_01:H002:a3",
+    "uid": "candidate:g68:science:grade_06:ch_03:H009:a3",
     "subject": "science",
     "pack": "middle_6_8",
-    "node": "S1/H-INQUIRY",
-    "chapter_id": "science/grade_06/ch_01",
-    "chapter_label": "The wonderful world of science",
-    "subtopic_id": "science/grade_06/ch_01/H002",
-    "stem": "Ritu wants to know why a puddle shrinks. She has already watched it get smaller.\n\nWhat is the next scientific step?",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_06/ch_03",
+    "chapter_label": "Mindful eating: a path to a healthy body",
+    "subtopic_id": "science/grade_06/ch_03/H009",
+    "stem": "Mohan adds iodine to a piece of boiled potato and sees a blue-black colour.\n\nWhat does that show?",
     "item_type": "mcq",
     "options": {
-      "A": "Declare that puddles always shrink, so no test is needed.",
-      "B": "Ask a focused question and plan a check, such as measuring the puddle each hour.",
-      "C": "Copy a classmate's actions without a question.",
-      "D": "Treat the puddle as not science because it is in the courtyard."
+      "A": "The potato has fat, because iodine tests oil.",
+      "B": "The potato has starch.",
+      "C": "Blue-black means the potato has protein.",
+      "D": "The colour is only from the potato's skin, not from a food test."
     },
     "statements": [],
     "parts": [],
@@ -61,7 +60,7 @@
     "complete_exam": false,
     "serve_eligible": false,
     "hinges": {
-      "primary": "science/grade_06/ch_01/H002",
+      "primary": "science/grade_06/ch_03/H009",
       "supporting": [],
       "binder": {
         "method": "modify_g68_named_gap"

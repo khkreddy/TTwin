@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gita asks whether roughage and water count in the diet if they are not called vitamins.\n\nWhat should she decide?",
+  "options": [
+    {
+      "id": "A",
+      "text": "They are the same as proteins."
+    },
+    {
+      "id": "B",
+      "text": "They are essential diet components even though they are not the vitamin group."
+    },
+    {
+      "id": "C",
+      "text": "Water is needed only in winter."
+    },
+    {
+      "id": "D",
+      "text": "Roughage can be skipped if the plate looks full."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Roughage and water are essential diet components, distinct from proteins and vitamins. Season and a full-looking plate do not drop them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parth is told dal helps muscles grow.\n\nHow should he classify proteins in food?",
+  "options": [
+    {
+      "id": "A",
+      "text": "As energy-giving components, the same as sugar."
+    },
+    {
+      "id": "B",
+      "text": "As components needed for building muscle and repairing the body."
+    },
+    {
+      "id": "C",
+      "text": "As only a colour in food."
+    },
+    {
+      "id": "D",
+      "text": "As not needed if the meal is large."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Proteins are for building and repair, not the same as energy-giving sugar, and amount of meal does not replace them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

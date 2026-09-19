@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Ritu wants to know why a puddle shrinks. She has already watched it get smaller.\n\nWhat is the next scientific step?",
+  "stem": "Veer adds copper sulphate and sodium hydroxide to crushed beans and sees a violet colour.\n\nWhat does that show?",
   "options": [
     {
       "id": "A",
-      "text": "Declare that puddles always shrink, so no test is needed."
+      "text": "The beans have starch."
     },
     {
       "id": "B",
-      "text": "Ask a focused question and plan a check, such as measuring the puddle each hour."
+      "text": "The beans have protein."
     },
     {
       "id": "C",
-      "text": "Copy a classmate's actions without a question."
+      "text": "Violet means only that the beans are purple-skinned."
     },
     {
       "id": "D",
-      "text": "Treat the puddle as not science because it is in the courtyard."
+      "text": "Protein is present only in meat, so the test cannot work on beans."
     }
   ],
   "statements": [],
@@ -32,17 +32,17 @@
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "C": "condition_omission",
+    "C": "surface_feature_capture",
     "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "After observing, the next step is a focused question and a check. Copying without a question and ruling out courtyard events are not that step.",
+    "key_rationale": "The violet biuret-style result here marks protein. It is not starch, not skin colour, and not meat-only.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "term_substitution",
-      "condition_omission",
+      "surface_feature_capture",
       "scope_error"
     ],
     "figure_note": null
