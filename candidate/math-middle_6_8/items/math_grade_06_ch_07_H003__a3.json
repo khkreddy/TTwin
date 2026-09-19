@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_07/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_07/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_07/H003",
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "A missing-unit-interval omission is awkward as a parallel claim once the stem already marks 0 to 1; kept surface_feature_capture and scope_error."
+      },
+      {
+        "from": "mechanism_conflation",
+        "reason": "Unit-fraction denominator-size CWO invents a different hinge and nouns; kept surface_feature_capture and scope_error on partition-and-count."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_07:H003:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_07",
+    "chapter_label": "math/grade_06/ch_07",
+    "subtopic_id": "math/grade_06/ch_07/H003",
+    "stem": "Javed places the fraction 3/4 on a number line marked from 0 to 1.\n\nWhich plan places 3/4 correctly?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Divide the interval from 0 to 1 into 4 equal lengths and count 3 of those lengths from 0.",
+      "B": "Mark a point near 1 because the printed 4 looks large, without making equal lengths.",
+      "C": "Place 3/4 by comparing only how large 3 looks next to 4 on the page.",
+      "D": "The number-line placement rule also requires changing 3/4 into another kind of number first."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_07/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

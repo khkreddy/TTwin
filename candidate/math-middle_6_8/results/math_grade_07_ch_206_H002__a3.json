@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar must construct a $90^\\circ$ angle at point O on a given straight line.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep O on the line, but skip making O the midpoint of a segment on that line."
+    },
+    {
+      "id": "B",
+      "text": "First draw a line through O that looks upright, then mark equal distances from O."
+    },
+    {
+      "id": "C",
+      "text": "Mark points X and Y on the line at equal distances from O so that O is the midpoint of XY, then construct the perpendicular bisector of XY."
+    },
+    {
+      "id": "D",
+      "text": "Treat O as a point outside the line and drop a perpendicular from outside."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To raise a perpendicular at O on a line, first make O the midpoint of a segment XY on the line; the perpendicular bisector of XY is then perpendicular to the line at O.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

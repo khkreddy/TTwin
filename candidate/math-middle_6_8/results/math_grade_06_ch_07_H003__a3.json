@@ -1,0 +1,61 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed places the fraction 3/4 on a number line marked from 0 to 1.\n\nWhich plan places 3/4 correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divide the interval from 0 to 1 into 4 equal lengths and count 3 of those lengths from 0."
+    },
+    {
+      "id": "B",
+      "text": "Mark a point near 1 because the printed 4 looks large, without making equal lengths."
+    },
+    {
+      "id": "C",
+      "text": "Place 3/4 by comparing only how large 3 looks next to 4 on the page."
+    },
+    {
+      "id": "D",
+      "text": "The number-line placement rule also requires changing 3/4 into another kind of number first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To place a/b on [0,1], partition into b equal parts and count a parts from 0. Choosing by how large a printed digit looks is surface capture. Requiring a change into another kind of number first is outside this placement rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "A missing-unit-interval omission is awkward as a parallel claim once the stem already marks 0 to 1; kept surface_feature_capture and scope_error."
+      },
+      {
+        "from": "mechanism_conflation",
+        "reason": "Unit-fraction denominator-size CWO invents a different hinge and nouns; kept surface_feature_capture and scope_error on partition-and-count."
+      }
+    ]
+  }
+}

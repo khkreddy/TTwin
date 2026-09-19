@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit draws two straight lines that meet at a point. One of the angles at the meeting point measures 70°. He needs the adjacent angle that sits on the same straight line with that 70° angle.\n\nWhich measure is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "70°, because adjacent angles on that straight line must be equal."
+    },
+    {
+      "id": "B",
+      "text": "140°, twice 70°."
+    },
+    {
+      "id": "C",
+      "text": "20°, from 90° − 70°."
+    },
+    {
+      "id": "D",
+      "text": "110°, because a linear pair on a straight line adds to 180°, so 180° − 70° = 110°."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "C": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A linear pair of adjacent angles on a straight line sums to 180°, so the neighbour is 110°. Claiming the angles must be equal reverses the supplementary relation. Doubling 70° omits the 180° condition. Using 90° − 70° brings in a right-angle rule outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "term_substitution",
+        "reason": "A bare rename of 'linear pair' is weaker than equal-angle reversal, doubling without 180°, and right-angle scope error; kept those three."
+      }
+    ]
+  }
+}

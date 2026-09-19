@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra builds matchstick squares in a row. Position 1 uses 4 sticks, position 2 uses 7 sticks, and position 3 uses 10 sticks. She wants the position number n whose arrangement uses 40 sticks.\n\nWhich approach is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Describe only the matchstick arrangement in words, without a rule in n."
+    },
+    {
+      "id": "B",
+      "text": "Use the rule 3n + 1 for any pretty drawing, even one not in this sequence."
+    },
+    {
+      "id": "C",
+      "text": "Use the rule 3n + 1 for this sequence and solve 3n + 1 = 40 to find n."
+    },
+    {
+      "id": "D",
+      "text": "Pick n = 40, because 40 is the target number printed in the question."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The sequence grows by 3 sticks each time from a start of 4, so position n uses 3n + 1 sticks. Set 3n + 1 = 40 and solve. A word sketch without the rule in n misses the hinge. Applying the rule off-sequence drops the belonging condition. Reading n off the target 40 is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

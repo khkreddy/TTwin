@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha has 24 beads. She wants 3/8 of them for a bracelet.\n\nHow many beads does she need?",
+  "options": [
+    {
+      "id": "A",
+      "text": "3 beads, reading only the numerator."
+    },
+    {
+      "id": "B",
+      "text": "8 beads, reading only the denominator."
+    },
+    {
+      "id": "C",
+      "text": "9 beads"
+    },
+    {
+      "id": "D",
+      "text": "24 ÷ 3 × 8 beads"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divide 24 into 8 equal parts of 3, then take 3 parts: 3 × 3 = 9. Taking only 3 or only 8, or reversing the fraction operations, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

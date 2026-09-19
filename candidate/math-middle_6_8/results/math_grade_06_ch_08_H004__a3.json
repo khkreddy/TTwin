@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit labels the corners of a rectangle A, B, C, D in order going around the boundary. A valid name may start at any corner and then follow that travel order.\n\nWhich name is valid for that rectangle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rectangle ACDB, listing corners by jumping across instead of travelling the boundary."
+    },
+    {
+      "id": "B",
+      "text": "Only rectangle ABCD is allowed; starting at any other corner makes the name invalid."
+    },
+    {
+      "id": "C",
+      "text": "Rectangle ABCD is valid only after renaming the corners in alphabetical order first."
+    },
+    {
+      "id": "D",
+      "text": "Rectangle BCDA is valid: it lists corners in boundary travel order, starting at B."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "C": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid name lists corners in travel order around the boundary; any start is fine, so BCDA works. Diagonal-style jump ACDB fails travel order. Requiring a start at A omits that any corner may start. Forcing alphabetical renaming is outside this naming hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "relationship_reversal",
+        "reason": "Reversing order-of-travel→labels as a production story is weaker than jump-listing, fixed-start omission, and alphabetical scope error; kept those three."
+      }
+    ]
+  }
+}

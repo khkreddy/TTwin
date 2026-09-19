@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish evaluates the expression 3a + 2b when a = 4 and b = 5.\n\nWhat value does he obtain?",
+  "options": [
+    {
+      "id": "A",
+      "text": "3 + 2, by dropping a and b."
+    },
+    {
+      "id": "B",
+      "text": "3 × 4 × 2 × 5"
+    },
+    {
+      "id": "C",
+      "text": "22"
+    },
+    {
+      "id": "D",
+      "text": "3 + 4 + 2 + 5"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "operation_confusion",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Replace a by 4 and b by 5: 3×4 + 2×5 = 12 + 10 = 22. Dropping the letters, multiplying every factor, or adding every numeral all misuse the operations.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

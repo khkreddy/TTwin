@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish draws several parallelograms, measures their opposite angles, and sees they match each time. He wonders whether opposite angles of every parallelogram are equal.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The measurements alone prove the property for every parallelogram."
+    },
+    {
+      "id": "B",
+      "text": "The property is false, because measuring always reverses the true angles."
+    },
+    {
+      "id": "C",
+      "text": "The measurements suggest a useful pattern, but a general property needs a deduction from known geometric facts."
+    },
+    {
+      "id": "D",
+      "text": "Only a single measured parallelogram is enough to settle every quadrilateral property."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Constructions and measurements can reveal patterns, but a general quadrilateral property is established by geometric reasoning, not by a finite set of measurements alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Padma has two treasure numbers, $12$ and $18$. She may use only one jump size, repeated, and that jump size must land exactly on both treasures.\n\nWhich list gives every successful jump size?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$1$, $2$, $3$, $6$, $9$ — including $9$, which reaches $18$ only."
+    },
+    {
+      "id": "B",
+      "text": "The common multiples of $12$ and $18$, because reaching both is what produces the factor list."
+    },
+    {
+      "id": "C",
+      "text": "$1$, $2$, $3$, $6$"
+    },
+    {
+      "id": "D",
+      "text": "$4$ and $9$, each of which hits only one of the two treasures."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A single jump size reaches both treasures exactly when it is a common factor of 12 and 18. Those factors are 1, 2, 3, and 6.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

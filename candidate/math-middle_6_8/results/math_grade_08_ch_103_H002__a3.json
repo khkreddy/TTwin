@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev compares three ways to count a large pile of beads: the spoken list one, two, three, … ; a list that stops at twenty; and a mark for each bead with no number words.\n\nWhich judgement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the stopping-at-twenty list an unending sequence, because it uses number words."
+    },
+    {
+      "id": "B",
+      "text": "The spoken list one, two, three, … works even if he scrambles the order of the words."
+    },
+    {
+      "id": "C",
+      "text": "The ordered list one, two, three, … keeps going and stays usable for large piles; the finite list stops, and single marks become cumbersome."
+    },
+    {
+      "id": "D",
+      "text": "Choose the darkest bead in the pile as the count."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A useful count needs an unending ordered standard sequence. Stopping at twenty is finite. Scrambling drops order. Single marks continue but grow cumbersome. Bead colour is irrelevant.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

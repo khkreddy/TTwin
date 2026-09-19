@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Komal's pictograph of books borrowed on three days. The key says each circle stands for 10 books.\n\nHow many more books were borrowed on Wednesday than on Tuesday?",
+  "options": [
+    {
+      "id": "A",
+      "text": "20 books, because Wednesday has 2 more circles than Tuesday and each circle is 10 books."
+    },
+    {
+      "id": "B",
+      "text": "2 books, equal to the difference in the number of circles."
+    },
+    {
+      "id": "C",
+      "text": "50 books, equal to Wednesday's total alone."
+    },
+    {
+      "id": "D",
+      "text": "5/3 books, from dividing Wednesday's circle count by Tuesday's."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}\n  \\node[anchor=west] at (0,2.0) {\\textbf{Books borrowed}};\n  \\node[anchor=east] at (1.2,1.2) {Mon};\n  \\foreach \\i in {0,1,2,3} {\\fill (1.6+0.45*\\i,1.2) circle (0.14);}\n  \\node[anchor=east] at (1.2,0.5) {Tue};\n  \\foreach \\i in {0,1,2} {\\fill (1.6+0.45*\\i,0.5) circle (0.14);}\n  \\node[anchor=east] at (1.2,-0.2) {Wed};\n  \\foreach \\i in {0,1,2,3,4} {\\fill (1.6+0.45*\\i,-0.2) circle (0.14);}\n  \\node[anchor=west] at (0,-1.1) {Key: each circle $= 10$ books};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Quantity = symbol count × key. Wednesday has 5 circles (50) and Tuesday has 3 (30), so the difference is 20. Treating the bare circle difference as books substitutes the wrong unit. Reporting only Wednesday's total reverses the comparison task. Dividing circle counts confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Pictograph rows Mon/Tue/Wed with 4, 3, 5 circles; key 1 circle = 10 books."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Frequency-table CWO invents a table not in the stem; kept term_substitution, relationship_reversal, operation_confusion on the key-reading hinge."
+      }
+    ]
+  }
+}

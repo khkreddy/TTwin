@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan builds a Sierpinski Carpet starting from 1 square at step 0. At each next step, every remaining square is replaced by 8 smaller remaining squares, so R_{n+1} = 8 R_n with R_0 = 1.\n\nHow many remaining squares are there at step 2?",
+  "options": [
+    {
+      "id": "A",
+      "text": "2"
+    },
+    {
+      "id": "B",
+      "text": "16"
+    },
+    {
+      "id": "C",
+      "text": "64"
+    },
+    {
+      "id": "D",
+      "text": "10"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "operation_confusion",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "R_n = 8^n. At step 2, R_2 = 8^2 = 64. Step number alone, 8×2, or 8+2 all misuse the recurrence.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

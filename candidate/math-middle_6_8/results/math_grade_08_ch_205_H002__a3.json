@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed's dot plot shows the values 2, 2, 3, 7. A classmate marks 4.5, halfway between the smallest value 2 and the largest value 7, and calls that mark the mean.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "4.5 is the mean because the mean is always halfway between the extremes."
+    },
+    {
+      "id": "B",
+      "text": "Left and right distances need not balance once a mark between 2 and 7 is chosen."
+    },
+    {
+      "id": "C",
+      "text": "The mean is the balance point where total distance left equals total distance right; here that point is 3.5, not 4.5."
+    },
+    {
+      "id": "D",
+      "text": "Use only the endpoints 2 and 7 to locate the mean; the other values can be ignored."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean (2+2+3+7)/4 = 3.5 is the balance point of the data, not the midpoint of the extremes. Treating the extremes' midpoint as the mean reverses that idea. Dropping the balance check omits the defining condition. Using only endpoints is the excluded case.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

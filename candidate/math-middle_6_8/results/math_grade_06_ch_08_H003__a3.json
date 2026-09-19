@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar studies the four-sided figure drawn below. It is tilted on the page. Every side is $3$ cm, and every corner is $90^\\circ$.\n\nWhat is the figure?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A rectangle only, because any four-sided shape with right angles is called a rectangle and not a square."
+    },
+    {
+      "id": "B",
+      "text": "A square, from the equal sides alone, without using the right-angle marks."
+    },
+    {
+      "id": "C",
+      "text": "A square, because all sides are equal and all angles are $90^\\circ$, even though it is rotated."
+    },
+    {
+      "id": "D",
+      "text": "Not a square, because rotating the shape is what changes its side lengths and angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9]\n\\draw[thick, rotate=30] (0,0) rectangle (2.4,2.4);\n\\node at (1.05, -0.55) {all sides $3$ cm};\n\\node at (1.05, 3.05) {each corner $90^\\circ$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sides and four right angles make a square. Rotation does not change lengths or angles, so the tilted drawing is still a square.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rotated square with equal sides and right angles marked."
+  }
+}

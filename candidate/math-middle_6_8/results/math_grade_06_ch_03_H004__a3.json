@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri looks at a number line from 3000 to 4000. The interval is divided into five equal parts with marks at equal spacing.\n\nWhat number does the first mark after 3000 show?",
+  "options": [
+    {
+      "id": "A",
+      "text": "3001, treating each mark as one unit."
+    },
+    {
+      "id": "B",
+      "text": "3500, splitting the interval into two equal halves only."
+    },
+    {
+      "id": "C",
+      "text": "3200"
+    },
+    {
+      "id": "D",
+      "text": "4000, jumping straight to the right endpoint."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 1000-unit interval cut into five equal parts gives steps of 200. The first mark after 3000 is 3200.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

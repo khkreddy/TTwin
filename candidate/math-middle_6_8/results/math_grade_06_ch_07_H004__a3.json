@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish has the improper fraction 17/5 and wants it as a mixed number.\n\nWhich mixed number is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "5 2/17"
+    },
+    {
+      "id": "B",
+      "text": "17 5/1"
+    },
+    {
+      "id": "C",
+      "text": "3 2/5"
+    },
+    {
+      "id": "D",
+      "text": "2 3/5"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "17 ÷ 5 = 3 remainder 2, so 17/5 = 3 2/5. Swapping numerator and denominator, stacking 17 and 5, or using the wrong quotient/remainder all miss the conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

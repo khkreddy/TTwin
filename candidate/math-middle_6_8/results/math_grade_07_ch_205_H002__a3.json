@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed compares two class teams. Team A has 4 players and scored 40 goals in all. Team B has 10 players and scored 70 goals in all. He wants a fair comparison of typical scoring when the teams have different sizes.\n\nWhich basis is appropriate?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use the totals 40 and 70 only, and say Team B is ahead because 70 is larger."
+    },
+    {
+      "id": "B",
+      "text": "Compare goals per player (10 versus 7), because the teams have different sizes."
+    },
+    {
+      "id": "C",
+      "text": "Compare only whichever team has the single larger total printed in the stem."
+    },
+    {
+      "id": "D",
+      "text": "Say Team A is ahead because 4 is smaller than 10, using team size alone as the score."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Different-sized groups need a per-player basis; totals alone mislead. Using total as the only summary substitutes the wrong feature. Picking whichever total looks larger is surface capture. Using smaller team size as if it meant higher scoring reverses the fair comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Statistical-claim CWO invents a classification task not in the stem; kept term_substitution, surface_feature_capture, relationship_reversal."
+      }
+    ]
+  }
+}

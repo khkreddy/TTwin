@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal hears the number one lakh and asks whether that number is big or small. She can compare with familiar sizes such as people in a stadium or days in a lifetime.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "One lakh is always big, because the words \"one lakh\" sound large by themselves."
+    },
+    {
+      "id": "B",
+      "text": "The familiar comparison is produced by one lakh first, so the number chooses the setting."
+    },
+    {
+      "id": "C",
+      "text": "Decide only after naming what is counted and comparing with a familiar size."
+    },
+    {
+      "id": "D",
+      "text": "One lakh is always small, because the same digits can be rearranged to look shorter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Whether one lakh feels big depends on what is counted and a familiar comparison. Treating the printed words as automatically large is surface capture. Saying the number produces the setting reverses the relation. Judging size by rearranging digits substitutes a different test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Button-click place-value CWO invents a calculator task not in the stem; kept surface_feature_capture, relationship_reversal, term_substitution."
+      }
+    ]
+  }
+}

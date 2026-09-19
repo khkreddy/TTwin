@@ -1,0 +1,61 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira fills three cells in a row with numbers. A cell is a supercell when its number is greater than each immediate neighbour. She wants only the middle cell to be a supercell.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The filling 9, 4, 2 works, because only the left cell is a supercell."
+    },
+    {
+      "id": "B",
+      "text": "The filling 4, 9, 2 works, because only the middle cell is greater than each immediate neighbour."
+    },
+    {
+      "id": "C",
+      "text": "Any filling where 9 appears is enough, because 9 is the largest number she wrote."
+    },
+    {
+      "id": "D",
+      "text": "The filling 2, 4, 9 works, because only the right cell is a supercell."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Only the middle value must exceed both immediate neighbours. 4, 9, 2 does that and blocks both ends. 9, 4, 2 or 2, 4, 9 make an end cell the supercell instead. Treating any appearance of 9 as enough substitutes 'largest written number' for the neighbour rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Reverse-and-add CWO invents a process not in the stem; kept relationship_reversal and term_substitution on the neighbour-comparison hinge."
+      },
+      {
+        "from": "operation_confusion",
+        "reason": "Squaring CWO invents an operation not in the stem; kept relationship_reversal and term_substitution."
+      }
+    ]
+  }
+}

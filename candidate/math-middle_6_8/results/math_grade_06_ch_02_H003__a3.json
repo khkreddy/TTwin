@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha marks three distinct points P, Q, and R on her paper that do not lie on one straight path.\n\nHow many distinct lines are determined by these points?",
+  "options": [
+    {
+      "id": "A",
+      "text": "One line, because any set of points always lies on a single line."
+    },
+    {
+      "id": "B",
+      "text": "Infinitely many lines, because one point alone already fixes infinitely many lines."
+    },
+    {
+      "id": "C",
+      "text": "Three lines: PQ, QR, and RP, because each pair of distinct points determines exactly one line."
+    },
+    {
+      "id": "D",
+      "text": "Nine lines, by multiplying three points by three possible directions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Any two distinct points determine exactly one line. The three pairs PQ, QR, and RP give three lines. One point alone does not fix a unique line, and the points are not collinear.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

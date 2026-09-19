@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev draws the ray shown in the figure. It starts at point A and passes through points B and C in that order.\n\nWhich label correctly names the ray?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ray BA, because B and A both lie on the path."
+    },
+    {
+      "id": "B",
+      "text": "Point A is produced by the ray, so any letter order is fine."
+    },
+    {
+      "id": "C",
+      "text": "Ray AB or ray AC, because the starting point A comes first, then a point on the path."
+    },
+    {
+      "id": "D",
+      "text": "Line ABC, treating the figure as a two-way line with no starting point."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95]\n  \\draw[thick,->] (0,0) -- (5.2,0);\n  \\fill (0,0) circle (1.5pt) node[below] {A};\n  \\fill (2,0) circle (1.5pt) node[below] {B};\n  \\fill (3.6,0) circle (1.5pt) node[below] {C};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A ray is named with its starting point first, then any point on its path: AB or AC. BA starts at B and omits the given start. The start is not produced by the ray. Calling it line ABC changes the object.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Ray starting at A through B and C."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "operation_confusion",
+        "reason": "Operation-confusion CWO invents squaring a starting point; not sayable with the stem objects. Kept condition_omission, relationship_reversal, scope_error."
+      }
+    ]
+  }
+}

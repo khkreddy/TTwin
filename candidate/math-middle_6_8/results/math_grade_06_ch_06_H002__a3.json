@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan's rectangular playground has perimeter 30 m. One side is 9 m long.\n\nWhat is the length of the adjacent side?",
+  "options": [
+    {
+      "id": "A",
+      "text": "21 m"
+    },
+    {
+      "id": "B",
+      "text": "12 m"
+    },
+    {
+      "id": "C",
+      "text": "6 m"
+    },
+    {
+      "id": "D",
+      "text": "15 m"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter = 2(l + b). So 2(9 + b) = 30, hence 9 + b = 15 and b = 6 m. 21 m subtracts once from the perimeter; 12 m treats 30 − 9 − 9 wrongly as one side; 15 m is the half-perimeter, not the missing side.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

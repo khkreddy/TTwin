@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qasim multiplies $(x + 3)(x - 2)$ by forming every cross-product.\n\nWhich expansion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x - 2$"
+    },
+    {
+      "id": "B",
+      "text": "$x^{2} + 2x + 3x + 6$"
+    },
+    {
+      "id": "C",
+      "text": "$x^{2} - 2x + 3x - 6$"
+    },
+    {
+      "id": "D",
+      "text": "$x^{2}$, because $x$ is the most obvious letter in the product."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Every pairwise product appears once: x*x, x*(-2), 3*x, and 3*(-2), giving x^2 - 2x + 3x - 6. Signs follow the factors.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

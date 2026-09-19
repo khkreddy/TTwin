@@ -55,7 +55,7 @@ const FORMAT_MAP = {
   mcq_table: "mcq_table",
   structured: "structured",
 };
-const VISUAL_HINGE = /figure|diagram|circuit|food web|ray|graph|apparatus/i;
+const VISUAL_HINGE = /\b(figure|diagram|circuit|food webs?|ray|graph|apparatus)\b/i;
 
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));

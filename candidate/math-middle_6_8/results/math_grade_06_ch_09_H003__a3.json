@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra draws the square shown in the figure. She wants to count its lines of symmetry by testing folds.\n\nHow many lines of symmetry does the square have?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Infinitely many, because any line through the centre looks balanced at a glance."
+    },
+    {
+      "id": "B",
+      "text": "Four folds are what create the square in the first place."
+    },
+    {
+      "id": "C",
+      "text": "Four: two through midpoints of opposite sides and two through opposite corners, each passing the fold test."
+    },
+    {
+      "id": "D",
+      "text": "The count needs group-theory language before any fold can be checked."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9]\n  \\draw[thick] (0,0) rectangle (2.4,2.4);\n  \\node[below left] at (0,0) {P};\n  \\node[below right] at (2.4,0) {Q};\n  \\node[above right] at (2.4,2.4) {R};\n  \\node[above left] at (0,2.4) {S};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A square has four fold lines that give exact overlap: two midlines and two diagonals. Glancing balance without the fold test overcounts. Folds do not create the square. Group theory is outside the chapter.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Unmarked square PQRS; learner counts fold lines."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO mixes rotational symmetry into a line-count hinge; kept condition_omission, relationship_reversal, scope_error on the fold-count idea."
+      }
+    ]
+  }
+}

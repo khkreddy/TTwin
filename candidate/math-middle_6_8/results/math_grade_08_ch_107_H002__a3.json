@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anya records two linked quantities. At first, juice is 2 cups and water is 5 cups. Later, juice is 6 cups and water is 15 cups.\n\nIs the change proportional?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes, because juice rose by 4 cups and that additive rise alone settles the question."
+    },
+    {
+      "id": "B",
+      "text": "Yes for any pair of increases, even when the two quantities grow by unrelated amounts."
+    },
+    {
+      "id": "C",
+      "text": "Yes, because both quantities were multiplied by the same factor 3."
+    },
+    {
+      "id": "D",
+      "text": "Yes, because 15 is the largest number printed among the four amounts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Proportional change needs one common multiplicative factor on corresponding quantities. Here both were ×3. An additive rise on one quantity alone is not the test. Unrelated growth is out of scope. The largest printed number is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO imports Rule-of-Three setup language not needed once the common-factor check is stated; kept condition_omission, scope_error, surface_feature_capture."
+      }
+    ]
+  }
+}

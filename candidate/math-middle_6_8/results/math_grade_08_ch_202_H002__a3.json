@@ -1,0 +1,61 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira starts with a square. She may build a new square on a diagonal of the given square, or join the midpoints of the given square's sides. She wants twice the area, and also half the area.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Double the area by joining the midpoints; halve it by building on the diagonal."
+    },
+    {
+      "id": "B",
+      "text": "Double the area by building a square on the diagonal; halve it by joining the midpoints of the sides."
+    },
+    {
+      "id": "C",
+      "text": "Joining the midpoints doubles the area, and building on the diagonal also doubles the area."
+    },
+    {
+      "id": "D",
+      "text": "Building on the diagonal halves the area, with no separate midpoint construction."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A square on the diagonal doubles the area; the midpoint-joined square halves it. Swapping those constructions reverses the relation. Claiming both constructions double omits the half-area role of the midpoint square.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Inscribed-quadrilateral exclusion invents a figure family not named in the stem; kept relationship_reversal and condition_omission."
+      },
+      {
+        "from": "operation_confusion",
+        "reason": "Squaring the diagonal as arithmetic invents an operation not in the stem; kept relationship_reversal and condition_omission."
+      }
+    ]
+  }
+}
