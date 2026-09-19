@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nina is told that rice and ghee mainly give energy.\n\nHow should she classify carbohydrates and fats?",
+  "options": [
+    {
+      "id": "A",
+      "text": "As body-building foods, the same as proteins."
+    },
+    {
+      "id": "B",
+      "text": "As energy-giving food components."
+    },
+    {
+      "id": "C",
+      "text": "As protective foods only, like vitamins."
+    },
+    {
+      "id": "D",
+      "text": "As not food components, because they are just taste."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Carbohydrates and fats are energy-giving components, not proteins and not 'just taste'.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

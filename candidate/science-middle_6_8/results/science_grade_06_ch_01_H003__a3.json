@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Hassan guessed that a wet cloth dries faster in the sun than in the shade. After one hour the sun cloth is dry and the shade cloth is still damp.\n\nWhat should he decide?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The guess is supported, so testing can stop forever."
+    },
+    {
+      "id": "B",
+      "text": "This result supports the guess for this pair of cloths."
+    },
+    {
+      "id": "C",
+      "text": "He must already have known the answer, or the test does not count."
+    },
+    {
+      "id": "D",
+      "text": "The guess is now true for every cloth in every town."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The result supports the guess in this test. It does not end all future tests, and he did not need the answer first.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

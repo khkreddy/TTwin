@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A child has bleeding gums. The teacher mentions a vitamin shortage.\n\nWhat do vitamins and minerals mainly act as in food?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Energy-giving components, the same as sugar."
+    },
+    {
+      "id": "B",
+      "text": "Protective food components; a shortage can show as a deficiency sign."
+    },
+    {
+      "id": "C",
+      "text": "Only colouring in vegetables."
+    },
+    {
+      "id": "D",
+      "text": "Muscle-building components, the same as proteins, with no protective role."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vitamins and minerals are protective; deficiency evidence points to them, not to energy or muscle as their main class here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

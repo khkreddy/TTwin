@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara cannot finish 'why do stars twinkle?' in one afternoon.\n\nWhat should she do?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Drop the question, because a hard question is not science."
+    },
+    {
+      "id": "B",
+      "text": "Keep it as a science question and plan a smaller next step, such as watching one star on a clear night."
+    },
+    {
+      "id": "C",
+      "text": "Keep it only if a textbook already prints the full answer."
+    },
+    {
+      "id": "D",
+      "text": "Treat it as science only if the school has a telescope."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A hard question can still be science. Keep it and take a smaller observable step. A printed answer or a telescope is not required to begin.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

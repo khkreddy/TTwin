@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sana's tap drips. She puts a bowl under it, notes how fast it fills, and tries tightening the handle.\n\nIs she working like a scientist on a daily-life problem?",
+  "options": [
+    {
+      "id": "A",
+      "text": "No, because kitchen leaks are not science."
+    },
+    {
+      "id": "B",
+      "text": "Yes: she observes, tries a change, and can check whether the drip slows."
+    },
+    {
+      "id": "C",
+      "text": "Yes only if she already memorised the word plumber."
+    },
+    {
+      "id": "D",
+      "text": "No, because she did not wear a lab coat."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Working like a scientist here is observing and testing a change. Place and clothing do not decide it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
