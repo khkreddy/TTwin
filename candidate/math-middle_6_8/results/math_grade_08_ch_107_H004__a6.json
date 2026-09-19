@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Pari has the proportion $6 : 11 :: 18 : x$. The first ratio matches the second under one common factor.\n\nWhat is $x$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x$ is the common factor."
+    },
+    {
+      "id": "B",
+      "text": "$x = 18$."
+    },
+    {
+      "id": "C",
+      "text": "$x = 33$, because the common factor $3$ changes $6$ to $18$ and $11$ to $33$."
+    },
+    {
+      "id": "D",
+      "text": "$x = 6 + 11 + 18$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Common factor 3: 6→18 and 11→33, so x=33. Cross-check: 6×33=198=11×18. A mislabels. B copies 18. D adds printed numbers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

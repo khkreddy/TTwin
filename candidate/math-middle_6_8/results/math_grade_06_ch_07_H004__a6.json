@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$\\dfrac{35}{6}=5\\ \\dfrac{5}{6}$, because $35=6\\times 5+5$."
+    },
+    {
+      "id": "2",
+      "text": "$\\dfrac{35}{6}=6\\ \\dfrac{5}{35}$, swapping the denominator into the whole-number place."
+    },
+    {
+      "id": "3",
+      "text": "The mixed-number form is finished once the digits $35$ and $6$ are rewritten in any order, without dividing $35$ by $6$."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Chirag has the improper fraction $\\dfrac{35}{6}$ and wants it as a mixed number.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "35÷6=5 remainder 5, so 5 5/6. Statement 2 swaps roles of denominator and whole; statement 3 skips the divide-with-remainder step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

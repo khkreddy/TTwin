@@ -1,0 +1,106 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_02/H004",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_02/H004",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal"
+    ],
+    "mx_allowlist": [
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_02/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_02:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_06/ch_02",
+    "chapter_label": "Diversity in the living world",
+    "subtopic_id": "science/grade_06/ch_02/H004",
+    "stem": "Charu presses a spinach leaf and a grass blade between notebook pages. On the spinach print she sees a thick middle line with a net of thinner lines on both sides. On the grass print the lines run side by side from base to tip.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "How should she label the venation on each print?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Spinach print: reticulate venation; grass print: parallel venation."
+          },
+          {
+            "id": "B",
+            "text": "Spinach print: parallel venation; grass print: reticulate venation."
+          },
+          {
+            "id": "C",
+            "text": "Both prints show only parallel venation."
+          },
+          {
+            "id": "D",
+            "text": "Both prints show only reticulate venation."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_02/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

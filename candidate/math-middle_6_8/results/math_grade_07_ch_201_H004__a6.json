@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Rachna studies the diagram of triangles $ABC$ and $STU$. Each angle of $ABC$ equals the matching angle of $STU$, but the sides of $STU$ are longer.\n\nWhich claim correctly decides whether the triangles are congruent?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are not congruent: equal angles give the same shape, but different sizes mean they need not be congruent."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent because they have the same shape."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent from the equal angles alone."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent because the printed angle marks match."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (2.0,0);\n  \\coordinate (C) at (0.65,1.45);\n  \\draw[line width=1.0pt] (A)--(B)--(C)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above] at (C) {$C$};\n  \\draw[line width=0.6pt] (0.28,0) arc (0:66:0.28);\n  \\draw[line width=0.6pt] (1.72,0) arc (180:118:0.28);\n  \\coordinate (S) at (3.8,0);\n  \\coordinate (T) at (7.1,0);\n  \\coordinate (U) at (4.85,2.25);\n  \\draw[line width=1.0pt] (S)--(T)--(U)--cycle;\n  \\node[below left] at (S) {$S$};\n  \\node[below right] at (T) {$T$};\n  \\node[above] at (U) {$U$};\n  \\draw[line width=0.6pt] (4.18,0) arc (0:66:0.38);\n  \\draw[line width=0.6pt] (6.62,0) arc (180:118:0.38);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal corresponding angles make the triangles the same shape but not necessarily the same size, so they need not be congruent. Treating same shape as congruence, relying on angles alone, or grabbing the marks all miss that distinction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source as two similarly angled triangles ABC and STU of different sizes."
+  }
+}

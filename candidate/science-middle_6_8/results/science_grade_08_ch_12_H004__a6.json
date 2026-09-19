@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "A biotic–biotic interaction, because the earthworm and the soil are both treated as living."
+    },
+    {
+      "id": "B",
+      "text": "A biotic–abiotic interaction, because a living earthworm interacts with non-living soil."
+    },
+    {
+      "id": "C",
+      "text": "An abiotic–abiotic interaction, because soil and moisture are both non-living."
+    },
+    {
+      "id": "D",
+      "text": "No interaction, because the earthworm never touches the soil."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "Nidhi watches an earthworm burrow through moist soil. Living parts of a habitat are biotic; non-living parts such as soil and moisture are abiotic.\n\nWhich type of habitat interaction is this?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earthworm is biotic; soil is abiotic; their interaction is biotic–abiotic. Soil is not living; ignoring the earthworm mis-scopes the pair; burrowing is contact with soil.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

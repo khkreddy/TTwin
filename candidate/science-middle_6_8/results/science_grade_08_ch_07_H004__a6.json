@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% dish with solid ghee\n\\draw[thick] (0,0.6)--(0,0)--(3.2,0)--(3.2,0.6);\n\\draw[thick,fill=yellow!50] (0.15,0.05) rectangle (3.05,0.45);\n\\node[font=\\footnotesize] at (1.6,0.25) {solid ghee};\n\\node[font=\\footnotesize] at (1.6,-0.35) {dish};\n% heat source\n\\draw[thick,fill=orange!30] (1.0,-1.1) rectangle (2.2,-0.7);\n\\node[font=\\footnotesize] at (1.6,-1.4) {gentle heat};\n\\draw[->,thick] (1.6,-0.7)--(1.6,-0.15);\n% thermometer\n\\draw[thick] (3.6,0)--(3.6,2.2);\n\\draw[thick,fill=red!40] (3.5,0) rectangle (3.7,0.9);\n\\draw[thick] (3.45,2.2)--(3.75,2.2);\n\\node[font=\\footnotesize,right] at (3.85,1.6) {thermometer};\n\\node[font=\\footnotesize] at (1.6,1.1) {melting point};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "At the melting point, particles vibrate enough to leave fixed positions; that temperature identifies the solid-to-liquid change at atmospheric pressure."
+    },
+    {
+      "id": "B",
+      "text": "The melting point is the temperature at which liquid ghee turns back into solid ghee while being heated."
+    },
+    {
+      "id": "C",
+      "text": "Solid ghee melts at that temperature even if particle vibrations do not increase."
+    },
+    {
+      "id": "D",
+      "text": "Any warm temperature counts as the melting point, not only the fixed temperature where solid becomes liquid."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Harsh heating solid ghee in a dish. A thermometer is placed in the ghee. At one fixed temperature the solid ghee turns into liquid ghee.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating increases particle vibration until particles leave fixed positions; the melting point is that fixed temperature for solid→liquid at atmospheric pressure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source diagram into heated dish of solid ghee with thermometer."
+  }
+}

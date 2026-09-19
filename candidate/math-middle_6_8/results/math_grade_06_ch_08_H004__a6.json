@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "Rectangle $KLMJ$ is valid: it lists corners in boundary travel order, starting at $K$."
+    },
+    {
+      "id": "B",
+      "text": "Rectangle $JLKM$, listing corners by jumping across instead of travelling the boundary."
+    },
+    {
+      "id": "C",
+      "text": "Only rectangle $JKLM$ is allowed; starting at any other corner makes the name invalid."
+    },
+    {
+      "id": "D",
+      "text": "Rectangle $JKLM$ is valid only after renaming the corners in alphabetical order first."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item_type": "single_mcq",
+  "stem": "Falguni labels the corners of a rectangle $J$, $K$, $L$, $M$ in order going around the boundary. A valid name may start at any corner and then follow that travel order.\n\nWhich name is valid for that rectangle?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "KLMJ follows boundary order from K. JLKM jumps a diagonal; insisting on only JKLM omits that any start is allowed; alphabetical renaming is unrelated.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

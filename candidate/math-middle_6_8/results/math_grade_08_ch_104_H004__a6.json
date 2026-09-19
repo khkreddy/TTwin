@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "The diagram shows quadrilateral $PQRS$ with diagonals $PR$ and $QS$ meeting at $O$. Diya measures $PR = QS$, $PO = OR$, and $QO = OS$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$PQRS$ is a rectangle, because its diagonals are equal and bisect each other."
+    },
+    {
+      "id": "B",
+      "text": "$PQRS$ is a rectangle from $PR = QS$ alone."
+    },
+    {
+      "id": "C",
+      "text": "Equal diagonals that bisect each other are enough to classify $PQRS$ as a rectangle."
+    },
+    {
+      "id": "D",
+      "text": "The same measurements also make any two equal crossing sticks a rectangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.8,0);\n  \\coordinate (R) at (4.8,2.8);\n  \\coordinate (S) at (0,2.8);\n  \\coordinate (O) at (2.4,1.4);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.9pt] (P)--(R);\n  \\draw[line width=0.9pt] (Q)--(S);\n  \\fill (O) circle (1.4pt);\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above right] at (R) {$R$};\n  \\node[above left] at (S) {$S$};\n  \\node[above right] at (O) {$O$};\n  \\node[below] at (2.4,-0.55) {$PR=QS$, $PO=OR$, $QO=OS$};\n\\end{tikzpicture}",
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A quadrilateral whose diagonals are equal and bisect each other is a rectangle; A and C state both conditions. B drops bisection. D over-extends the rule beyond a closed quadrilateral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

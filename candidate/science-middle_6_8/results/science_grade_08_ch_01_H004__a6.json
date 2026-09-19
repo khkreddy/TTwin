@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Change only the fertilizer amount; keep the soil type and water volume the same in both trays."
+    },
+    {
+      "id": "B",
+      "text": "Keep the fertilizer amount the same; change the soil type and the water volume together."
+    },
+    {
+      "id": "C",
+      "text": "A fair fertilizer test changes one factor being tested and keeps the other relevant conditions the same."
+    },
+    {
+      "id": "D",
+      "text": "Changing fertilizer amount and water volume together is a fair test if the soil type stays the same."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "Aditya wants to find out whether the amount of fertilizer affects how tall bean seedlings grow.\n\nHe can change fertilizer amount, soil type, and water volume.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fair test of fertilizer changes only fertilizer amount while soil type and water volume stay the same. A and C state that. B tests other factors instead. D changes two factors at once.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

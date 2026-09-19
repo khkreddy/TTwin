@@ -1,0 +1,107 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:08:40.866Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_01/H004",
+      "unit_id": "science/grade_06/ch_01/H004",
+      "title": "When judging a daily-life problem, decide that a person is working like a scientist if they use the scientific method to solve the problem or discover something.",
+      "node_labels": [
+        "What counts as a scientific question or test",
+        "Scientific inquiry and evidence"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Anyone solving a daily-life problem is working like a scientist."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A cook systematically testing why dough rises is not working like a scientist because the investigation happens in a kitchen."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A professional scientist guessing which switch is faulty is working like a scientist because that is their job title."
+      }
+    ],
+    "enrichment": "Scientists follow the scientific method to solve problems or discover new things, and anyone who follows the scientific method is working like a scientist. Following the scientific method in a problem situation makes the activity scientific in character, even when the person is not in a science laboratory. The learner classifies a daily-life person as working like a scientist when the person follows the scientific method to solve a problem or discover something. Only people with the job title scientist do science.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When judging a daily-life problem, decide that a person is working like a scientist if they use the scientific method to solve the problem or discover something. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "one_or_more",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_01/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": null,
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_01/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

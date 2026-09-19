@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "ON: the iron rods are released. OFF: the iron rods are lifted."
+    },
+    {
+      "id": "B",
+      "text": "ON: the iron rods are lifted. OFF: the iron rods are released."
+    },
+    {
+      "id": "C",
+      "text": "ON: the iron rods are lifted. OFF: the crane keeps holding the iron rods."
+    },
+    {
+      "id": "D",
+      "text": "ON: a nearby plastic clip is lifted with the iron rods."
+    }
+  ],
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "Ira uses a lifting electromagnet on a yard crane to move iron rods.\n\nWhen the current in the electromagnet is switched ON, what happens to the iron rods, and what happens when the current is switched OFF?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lifting electromagnet picks up iron while current is ON and releases it when current is OFF. Plastic is not lifted. Holding after OFF confuses electromagnet with permanent magnet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

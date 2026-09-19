@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zara reads a Class 7 health booklet that explains menstruation. She wants a clear, respectful understanding of what it is.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Menstruation is a natural adolescent body process linked with reproductive maturation."
+        },
+        {
+          "id": "B",
+          "text": "Pregnancy starts naturally when girls reach adolescence."
+        },
+        {
+          "id": "C",
+          "text": "Boys and girls both begin menstruating during adolescence."
+        },
+        {
+          "id": "D",
+          "text": "Menstrual bleeding means the body is injured."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Menstruation is a natural change linked with reproductive maturation in adolescent girls, not pregnancy, injury, or a process that begins in boys."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Menstruation is a natural adolescent process linked with reproductive maturation. It is not pregnancy, not an injury, and it does not begin in boys.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

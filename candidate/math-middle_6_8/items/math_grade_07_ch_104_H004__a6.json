@@ -1,0 +1,110 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_104/H004",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_104/H004",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "UNRESOLVED",
+      "B": "UNRESOLVED",
+      "C": null,
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_104/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_104:H004:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M2",
+    "chapter_id": "math/grade_07/ch_104",
+    "chapter_label": "math/grade_07/ch_104",
+    "subtopic_id": "math/grade_07/ch_104/H004",
+    "stem": "Madhav simplifies $7m - 3 + m + 5$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "The simplified value is the phrase like terms."
+          },
+          {
+            "id": "B",
+            "text": "$7m - 3$ are like terms, so the expression becomes $4m + 5$."
+          },
+          {
+            "id": "C",
+            "text": "$7m$ and $m$ are like terms and $-3$ and $5$ are like terms, so the expression becomes $8m + 2$."
+          },
+          {
+            "id": "D",
+            "text": "The simplified form is $7$, because $7$ is printed first."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_104/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

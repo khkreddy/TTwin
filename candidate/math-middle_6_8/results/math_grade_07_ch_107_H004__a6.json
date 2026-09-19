@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Pallavi has two sticks of lengths $7\\,\\mathrm{cm}$ and $10\\,\\mathrm{cm}$. She wants a third stick of length $x\\,\\mathrm{cm}$ so the three lengths can form a triangle.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the third length $x$ is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is the phrase fixed side lengths."
+        },
+        {
+          "id": "B",
+          "text": "$x$ must satisfy $3 < x < 17$, because $|10-7| < x < 10+7$ with the endpoints excluded."
+        },
+        {
+          "id": "C",
+          "text": "$x$ may equal $3$ or $17$ as well as any value between them."
+        },
+        {
+          "id": "D",
+          "text": "She must first construct the triangle with compass arcs, and only then decide which $x$ values are allowed."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The triangle inequality requires $|10-7|<x<10+7$, so $3<x<17$; the endpoints are excluded because equality would leave a flat line, not a triangle."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Strict inequality 3<x<17 follows from |10−7|<x<10+7. Naming fixed sides, including the endpoints, or requiring a compass construction first all leave that range.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

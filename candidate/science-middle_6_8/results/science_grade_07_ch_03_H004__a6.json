@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Kabir connects a small lamp to one cell with copper wires. Wire 1 joins one end of the lamp to the positive terminal. Wire 2 is not joined to the cell, so the other end of the lamp has no path to the negative terminal.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The lamp glows in this arrangement."
+    },
+    {
+      "id": "2",
+      "text": "The lamp does not glow, because there is no complete path through both cell terminals."
+    },
+    {
+      "id": "3",
+      "text": "The lamp would glow if Wire 2 also joined the other lamp end to the negative terminal."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With only the positive terminal joined, the path is incomplete, so the lamp does not glow. Joining the other lamp end to the negative terminal would complete the path and the lamp would glow. Statement 1 is false; 2 and 3 are true.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

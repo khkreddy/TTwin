@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "$12$ stamps, because Tuesday has $2$ more triangles than Wednesday and each triangle is $6$ stamps."
+    },
+    {
+      "id": "B",
+      "text": "$2$ stamps, equal to the difference in the number of triangles."
+    },
+    {
+      "id": "C",
+      "text": "$30$ stamps, equal to Tuesday's total alone."
+    },
+    {
+      "id": "D",
+      "text": "$5/3$ stamps, from dividing Tuesday's triangle count by Wednesday's."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item_type": "single_mcq",
+  "stem": "Sonia records stamps collected on three days in a pictograph. The key says each triangle stands for $6$ stamps. Monday shows $2$ triangles, Tuesday shows $5$ triangles, and Wednesday shows $3$ triangles.\n\nHow many more stamps were collected on Tuesday than on Wednesday?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tuesday 5*6=30, Wednesday 3*6=18, difference 12, or 2 triangles times key 6.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

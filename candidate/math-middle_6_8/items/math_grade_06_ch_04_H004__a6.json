@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_04/H004",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_04/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H004:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H004",
+    "stem": "Sonia records stamps collected on three days in a pictograph. The key says each triangle stands for $6$ stamps. Monday shows $2$ triangles, Tuesday shows $5$ triangles, and Wednesday shows $3$ triangles.\n\nHow many more stamps were collected on Tuesday than on Wednesday?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$12$ stamps, because Tuesday has $2$ more triangles than Wednesday and each triangle is $6$ stamps.",
+      "B": "$2$ stamps, equal to the difference in the number of triangles.",
+      "C": "$30$ stamps, equal to Tuesday's total alone.",
+      "D": "$5/3$ stamps, from dividing Tuesday's triangle count by Wednesday's."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

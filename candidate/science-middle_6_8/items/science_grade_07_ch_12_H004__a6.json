@@ -1,0 +1,85 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_12/H004",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_12/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "mx_allowlist": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "UNRESOLVED",
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_12/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H004",
+    "stem": "Aisha sketches the stars at 7 p.m. in May. In November she looks again at 7 p.m. The night sky at that same clock time has changed. On one May night she also compares the 7 p.m. sky with the sky at 1 a.m. She is deciding whether Earth’s rotation on its axis or Earth’s revolution around the Sun explains the month-to-month change at the same clock time.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The change from May’s 7 p.m. sky to November’s 7 p.m. sky comes mainly from Earth’s revolution around the Sun.",
+      "B": "The change from May’s 7 p.m. sky to November’s 7 p.m. sky comes mainly from Earth’s rotation on its axis.",
+      "C": "Rotation is Earth moving around the Sun; revolution is Earth turning on its own axis.",
+      "D": "The entire difference between May’s 7 p.m. sky and May’s 1 a.m. sky is caused only by Earth’s revolution around the Sun."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

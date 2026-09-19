@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "Rewrite as $64 + (-27)$; the terms are $64$ and $-27$."
+    },
+    {
+      "id": "B",
+      "text": "The plus-sign idea alone is the terms, with no named parts of $64 - 27$."
+    },
+    {
+      "id": "C",
+      "text": "The terms are $27$ and $64$ in that order, reading right to left without the sign change."
+    },
+    {
+      "id": "D",
+      "text": "The printed digits $6$, $4$, $2$, and $7$ are the terms."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Komal studies the expression $64 - 27$.\n\nWhat are its terms?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rewrite 64-27 as 64+(-27); terms are the plus-separated parts 64 and -27. Naming the operation alone, reversing without the sign, or listing digits is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

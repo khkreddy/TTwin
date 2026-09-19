@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Kabir must solve $6x + 8 = 26$ by isolating $x$. The two sides are already equal.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which first move preserves equality and removes the unwanted $+8$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Subtract $8$ from both sides, writing $6x = 18$."
+        },
+        {
+          "id": "B",
+          "text": "Subtract $8$ from the left side only, writing $6x = 26$."
+        },
+        {
+          "id": "C",
+          "text": "The first move is the label \"inverse operations\"."
+        },
+        {
+          "id": "D",
+          "text": "Take $x = 26$, because $26$ is the largest printed number."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "tikz": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The sides stay equal when the same subtraction is done on both; subtracting $8$ from each side removes the unwanted $+8$ and leaves $6x = 18$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same operation on both sides preserves equality. Subtracting 8 from both sides isolates the 6x term: 6x=18. B drops the both-sides condition. C substitutes the topic label. D grabs the largest printed number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

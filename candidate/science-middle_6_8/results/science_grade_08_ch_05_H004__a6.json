@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% Earth and stone (non-contact gravity)\n\\draw[thick,fill=blue!15] (-0.2,0) circle (0.55);\n\\node[font=\\footnotesize] at (-0.2,0) {Earth};\n\\draw[thick,fill=gray!40] (-0.2,2.0) circle (0.22);\n\\node[font=\\footnotesize] at (-0.2,2.45) {stone};\n\\draw[->,thick] (-0.2,1.7)--(-0.2,0.65);\n\\node[font=\\footnotesize,right] at (0.05,1.15) {pull (no touch)};\n% hand rubbing eraser on desk (contact friction/muscular)\n\\draw[thick] (2.2,0)--(5.4,0);\n\\node[font=\\footnotesize] at (3.8,-0.35) {desk};\n\\draw[thick,fill=yellow!35] (3.2,0.05) rectangle (4.0,0.35);\n\\node[font=\\footnotesize] at (3.6,0.55) {eraser};\n\\draw[thick] (4.5,0.15)--(4.9,0.55)--(5.2,0.2)--(4.85,-0.05)--cycle;\n\\node[font=\\footnotesize] at (5.0,0.85) {hand};\n\\draw[->,thick] (4.5,0.25)--(4.05,0.25);\n\\node[font=\\footnotesize] at (3.8,-0.75) {push while touching};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's pull on the stone is a non-contact force because it acts without the Earth touching the stone."
+    },
+    {
+      "id": "B",
+      "text": "Earth's pull on the stone is a contact force because the stone will later land on the ground."
+    },
+    {
+      "id": "C",
+      "text": "The hand's push on the eraser is a contact force because the hand touches the eraser."
+    },
+    {
+      "id": "D",
+      "text": "Both forces are contact forces because both the stone and the eraser can move."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Earth's pull on a stone in the air and Krish's hand pushing an eraser across a desk while touching it.\n\nWhich claims correctly classify these forces? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gravity acts without contact (non-contact). The hand push needs touch (contact). Later landing or mere motion does not reclassify the forces.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source force diagram into Earth–stone pull and hand–eraser push."
+  }
+}

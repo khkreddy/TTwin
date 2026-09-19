@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara sets up a half-leaf bottle experiment on a destarched green leaf. Part X of the leaf is enclosed in a bottle so it cannot get carbon dioxide from air. Part Y stays in open air with carbon dioxide. Both parts get water and sunlight. Oxygen is also present around the leaf. She later tests both parts with iodine.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbon dioxide from air is essential for the leaf to prepare starch, so Part Y should turn blue-black with iodine and Part X should not."
+        },
+        {
+          "id": "B",
+          "text": "Oxygen from air is essential for the leaf to prepare starch."
+        },
+        {
+          "id": "C",
+          "text": "Water and sunlight alone are enough for Part X to prepare starch without carbon dioxide."
+        },
+        {
+          "id": "D",
+          "text": "Making starch produces the carbon dioxide around the leaf."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only the half that can get carbon dioxide from air can make starch; the enclosed half lacks carbon dioxide so it should not turn blue-black with iodine."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The half-leaf bottle experiment shows carbon dioxide is needed for starch formation. Oxygen is not the gas being withheld here; water and sunlight alone are not enough; starch-making does not produce the carbon dioxide supply.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

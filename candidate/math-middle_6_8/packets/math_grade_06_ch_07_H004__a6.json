@@ -1,0 +1,126 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:11:41.375Z",
+  "source": {
+    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+      },
+      {
+        "id": "B",
+        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
+      },
+      {
+        "id": "C",
+        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
+      },
+      {
+        "id": "D",
+        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_07/H004",
+      "unit_id": "math/grade_06/ch_07/H004",
+      "title": "Decide how to convert between a fraction greater than one and a mixed number by coordinating whole units and leftover fractional units.",
+      "node_labels": [
+        "Number: magnitude, representation and arithmetic structure"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Number: magnitude, representation and arithmetic structure",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Mixed number is the label that belongs on this item, so 'Decide how to convert between a fraction greater than one and a mixed' is answered as mixed number rather than improper fraction."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "improper fraction still holds here even though denominator is nonzero is missing from the stem — on the item about Decide how to convert between a fraction greater than."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The improper fraction rule also covers this: Do not assess decimal conversions unless the packet hinge requires them, so it is not an exception — on the item about Decide how to convert between a fraction greater than."
+      }
+    ],
+    "enrichment": "For an improper fraction a/b, divide a by b to get q whole units and remainder r, giving q r/b; for a mixed number w n/d, convert to (w*d+n)/d.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_07. The student must decide: Decide how to convert between a fraction greater than one and a mixed number by coordinating whole units and leftover fractional units. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "three_statement",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_07/H004",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_07/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly gives the signed movement she needs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The needed movement is $-7$, because target $-$ start $= -3-(+4)$."
+        },
+        {
+          "id": "B",
+          "text": "The needed movement is $-3$, equal to the target alone."
+        },
+        {
+          "id": "C",
+          "text": "The needed movement is $+7$, by subtracting start from target in the wrong order as $4-(-3)$."
+        },
+        {
+          "id": "D",
+          "text": "The needed movement is $12$, by computing $4+(-3)^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Hema's game token stands at $+4$ on a number line. She wants to reach $-3$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Needed movement is target minus start: $-3-4=-7$. Adding $-7$ to $+4$ reaches $-3$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Target - start = -3 - 4 = -7. Reporting only the target, reversing the subtraction, or squaring confuses the signed difference.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

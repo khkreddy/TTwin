@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "The successful jump sizes are $1$, $2$, $3$ and $6$."
+    },
+    {
+      "id": "B",
+      "text": "Jump sizes $1$, $2$, $3$, $6$ and $15$ all work — including $15$, which reaches $30$ only."
+    },
+    {
+      "id": "C",
+      "text": "Every common factor of $18$ and $30$ is a successful jump size, so $1$, $2$, $3$ and $6$ work."
+    },
+    {
+      "id": "D",
+      "text": "The successful jump sizes are the common multiples of $18$ and $30$."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "one_or_more",
+  "stem": "Tushar marks two treasure numbers, $18$ and $30$, on a number strip. He may use only one jump size, repeated from $0$, and that jump size must land exactly on both numbers.\n\nOne or more options may be correct. Which two claims correctly name the successful jump sizes?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Common factors of 18 and 30 are 1,2,3,6. Including 15 reaches only 30; listing common multiples confuses factors with multiples.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

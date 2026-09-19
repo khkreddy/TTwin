@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly names the ray?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ray $PQ$ or ray $PR$, because the starting point $P$ comes first, then a point on the path."
+        },
+        {
+          "id": "B",
+          "text": "Ray $QP$, because $Q$ and $P$ both lie on the path."
+        },
+        {
+          "id": "C",
+          "text": "Line $PQR$, treating the path as a two-way line with no starting point."
+        },
+        {
+          "id": "D",
+          "text": "Ray $RP$, reading the letters from the far end back toward $P$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Alok draws a ray that starts at point $P$ and passes through points $Q$ and $R$ in that order.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A ray is named with its endpoint first, then any other labelled point on its path in the direction of extension, so PQ and PR both name the same ray from P through Q and R."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Endpoint P must lead the name; QP and RP reverse that order, and calling it line PQR drops the ray's starting point.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

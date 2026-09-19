@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Madhav simplifies $7m - 3 + m + 5$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The simplified value is the phrase like terms."
+        },
+        {
+          "id": "B",
+          "text": "$7m - 3$ are like terms, so the expression becomes $4m + 5$."
+        },
+        {
+          "id": "C",
+          "text": "$7m$ and $m$ are like terms and $-3$ and $5$ are like terms, so the expression becomes $8m + 2$."
+        },
+        {
+          "id": "D",
+          "text": "The simplified form is $7$, because $7$ is printed first."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Like terms share the same letter part: $7m+m=8m$, and the number terms $-3+5=2$, so the expression simplifies to $8m+2$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Combine 7m with m and −3 with 5 to get 8m+2. Naming like terms alone, joining unlike parts, or grabbing the first numeral all miss that grouping.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

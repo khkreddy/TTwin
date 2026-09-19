@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "one_or_more",
+  "stem": "Lalit measures $2500$ millilitres of juice. He needs the same volume in litres. There are $1000$ millilitres in $1$ litre.\n\nOne or more options may be correct. Which two claims correctly convert the volume?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The converted reading is the word litre."
+    },
+    {
+      "id": "B",
+      "text": "$2500\\,\\mathrm{ml} = 2.5\\,\\mathrm{L}$."
+    },
+    {
+      "id": "C",
+      "text": "Each millilitre is $0.001$ of a litre, so $2500$ millilitres equal $2.5$ litres."
+    },
+    {
+      "id": "D",
+      "text": "$2500\\,\\mathrm{ml} = 2\\,500\\,000\\,\\mathrm{L}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One litre is 1000 millilitres, so each millilitre is 0.001 litre and 2500 ml = 2.5 L. Naming the unit alone or multiplying by 1000 both miss that decimal shift.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

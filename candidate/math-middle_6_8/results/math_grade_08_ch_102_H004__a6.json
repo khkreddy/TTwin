@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Leela simplifies $4^{6}\\times 4^{2}$.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Write $4^{6}\\times 4^{2}=4^{8}$, adding the exponents because the bases are the same."
+    },
+    {
+      "id": "2",
+      "text": "The product rule for same bases turns the exponents $6$ and $2$ into the single exponent $6+2$."
+    },
+    {
+      "id": "3",
+      "text": "Write $4^{6}\\times 2^{2}=4^{8}$, adding the exponents even though the bases differ."
+    }
+  ],
+  "parts": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-base product rule: 4^6×4^2=4^(6+2)=4^8. Statements 1 and 2 are correct; 3 drops the same-base condition. Key A.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The fixed amount of water has reached its dissolving limit for alum at this temperature."
+    },
+    {
+      "id": "B",
+      "text": "More alum would dissolve completely if he only stirred harder, with no other change."
+    },
+    {
+      "id": "C",
+      "text": "Solubility here means the maximum amount of alum that dissolves in that fixed quantity of water at the given temperature."
+    },
+    {
+      "id": "D",
+      "text": "Undissolved alum at the bottom means the water never dissolves any alum at all."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Ojas adds alum powder little by little to a fixed amount of water at room temperature, stirring each time. After several additions, some alum stays undissolved at the bottom no matter how long he stirs.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Undissolved solute after stirring shows the dissolving limit for that fixed solvent amount at that temperature; solubility is that maximum amount. Stirring harder alone does not raise the limit; some alum did dissolve earlier.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

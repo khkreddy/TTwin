@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_11/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_11/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "relationship_reversal",
+      "C": null,
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_11/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_11:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_08/ch_11",
+    "chapter_label": "The night sky: Moon and calendars",
+    "subtopic_id": "science/grade_08/ch_11/H004",
+    "stem": "The diagram shows Bilal's vertical stick on the school field and tip marks of its shadow. He records marks through two school days. He wants to measure one day of nearly 24 hours.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Find the time from the shortest shadow on day 1 to the shortest shadow on day 2.",
+      "B": "Find the time from the longest shadow on day 1 to the longest shadow on day 2.",
+      "C": "The shortest shadow marks when the Sun is highest; successive highest positions average about 24 hours.",
+      "D": "Count the number of shadow marks between morning and evening on a single day to get 24 hours."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick] (-0.5,0)--(6.5,0);\n\\draw[thick] (2.8,0)--(2.8,2.3);\n\\node[font=\\footnotesize] at (2.8,2.6) {vertical stick};\n\\draw[thick] (2.8,0)--(0.3,0);\n\\fill (0.3,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (0.3,-0.35) {long};\n\\draw[thick] (2.8,0)--(3.15,0);\n\\fill (3.15,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (3.5,-0.35) {shortest};\n\\draw[thick] (2.8,0)--(5.5,0);\n\\fill (5.5,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (5.5,-0.35) {long};\n\\node[font=\\footnotesize] at (2.8,-0.85) {shadow tip marks, two school days};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_11/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

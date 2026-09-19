@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_04/H004",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "surface_feature_capture",
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_04/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H004",
+    "stem": "Nidhi floats a cork with a magnetised sewing needle on still water in a plastic bowl, away from other magnets. After the cork settles, she notes which tip of the needle points toward geographic north.\n\nWhat does this help her find?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The north–south direction, and which tip is the North-seeking pole.",
+      "B": "North as whichever tip points that way while the cork is still spinning.",
+      "C": "North as the tip that was painted red before she floated the cork.",
+      "D": "North by keeping the bowl fixed and turning the needle by hand to an N mark."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

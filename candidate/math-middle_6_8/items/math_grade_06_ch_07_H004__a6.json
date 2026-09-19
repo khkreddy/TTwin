@@ -1,0 +1,103 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_07/H004",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_07/H004",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_07/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_07:H004:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_06/ch_07",
+    "chapter_label": "math/grade_06/ch_07",
+    "subtopic_id": "math/grade_06/ch_07/H004",
+    "stem": "Chirag has the improper fraction $\\dfrac{35}{6}$ and wants it as a mixed number.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 only",
+      "B": "1 and 2 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "$\\dfrac{35}{6}=5\\ \\dfrac{5}{6}$, because $35=6\\times 5+5$."
+      },
+      {
+        "id": "2",
+        "text": "$\\dfrac{35}{6}=6\\ \\dfrac{5}{35}$, swapping the denominator into the whole-number place."
+      },
+      {
+        "id": "3",
+        "text": "The mixed-number form is finished once the digits $35$ and $6$ are rewritten in any order, without dividing $35$ by $6$."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_07/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

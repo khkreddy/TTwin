@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Vivaan holding a thick cardboard sheet between a bulb and a white screen. Light from the bulb is blocked by the cardboard before it reaches the screen.\n\nWhich claim about the shadow is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A dark shadow forms on the screen because the cardboard blocks light from the bulb."
+    },
+    {
+      "id": "B",
+      "text": "An object that blocks more light makes a lighter shadow on the screen."
+    },
+    {
+      "id": "C",
+      "text": "The cardboard still casts a distinct shadow on the screen when the bulb is switched off."
+    },
+    {
+      "id": "D",
+      "text": "Only opaque objects can form shadows; translucent and transparent objects cannot form any shadow."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {bulb};\n\\draw[thick,fill=brown!30] (2.0,0.25) rectangle (2.4,2.15);\n\\node at (2.2,2.45) {cardboard};\n\\draw[thick,fill=gray!10] (4.3,0.05) rectangle (4.55,2.35);\n\\node at (4.42,2.65) {screen};\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,1.55);\n\\draw[thick,dashed] (0.28,1.2) -- (2.0,0.85);\n\\draw[thick,fill=gray!55] (4.3,0.65) rectangle (4.55,1.75);\n\\node at (5.4,1.2) {shadow};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A shadow is the dark region on the screen where the cardboard blocks light from the bulb. Blocking more light makes a darker shadow, not a lighter one; with the bulb off there is no distinct shadow; translucent objects can cast faint shadows.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source lens diagram into bulb, cardboard, and screen."
+  }
+}

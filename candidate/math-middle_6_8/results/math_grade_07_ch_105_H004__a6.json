@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "Nandini draws two lines that cross at one point. Each of the four angles at the crossing measures $90^{\\circ}$.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The lines are perpendicular, because four right angles at a crossing mean the lines meet at right angles."
+    },
+    {
+      "id": "2",
+      "text": "The lines are perpendicular even when they stay apart and never meet."
+    },
+    {
+      "id": "3",
+      "text": "The conclusion is only the label right angle, with no claim about the lines."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Four equal 90° angles at a meeting make the lines perpendicular. Dropping the meet condition or stopping at the right-angle label alone both miss that conclusion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

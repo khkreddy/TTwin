@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_06/ch_03/H004",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_06/ch_03/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_03/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_03:H004:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_03",
+    "chapter_label": "math/grade_06/ch_03",
+    "subtopic_id": "math/grade_06/ch_03/H004",
+    "stem": "The diagram shows Imran's number line from $1000$ to $3500$. The interval is divided into five equal parts with marks at equal spacing.\n\nWhich claim correctly reads the third mark after $1000$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The third mark after $1000$ shows $2500$, because each equal part is $500$.",
+      "B": "The third mark after $1000$ shows $1003$, treating each mark as one unit.",
+      "C": "The third mark after $1000$ shows $3500$, reading the right endpoint as that mark.",
+      "D": "Equal spacing on the line is settled by Kaprekar's routine on the endpoints, not by equal numerical steps."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,font=\\sffamily\\small]\n  \\draw[thick,<->] (-0.5,0)--(10.5,0);\n  \\foreach \\x/\\lab in {0/1000,2/1500,4/2000,6/2500,8/3000,10/3500} {\n    \\draw (\\x,0.2)--(\\x,-0.2);\n    \\node[below] at (\\x,-0.25) {$\\lab$};\n  }\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_03/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

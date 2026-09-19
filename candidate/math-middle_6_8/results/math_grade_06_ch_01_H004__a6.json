@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,font=\\sffamily\\small]\n  \\draw[gray!70,densely dashed,line width=0.3pt] (0,0) grid (4,4);\n  \\draw[thick] (0,0) rectangle (4,4);\n  \\draw[thick] (0,4)--(0,3)--(1,3)--(1,4)--cycle;\n  \\draw[thick] (0,3)--(0,2)--(2,2)--(2,3)--(1,3)--(1,4)--(0,4)--(0,3);\n  \\fill[black!12] (1.5,1.5) rectangle (2.5,2.5);\n  \\node at (2,2) {$1$};\n  \\node[right] at (4.3,3.5) {$7$};\n  \\node[right] at (4.3,2.5) {$5$};\n  \\node[right] at (4.3,1.5) {$3$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "The $4$-by-$4$ square partitions into those four nested odd L-borders, so $1+3+5+7=16$."
+    },
+    {
+      "id": "B",
+      "text": "Any collection of odd numbers sums to a square, even when the odds are not the first four consecutive odds from $1$."
+    },
+    {
+      "id": "C",
+      "text": "Each nested L-border has $2k-1$ tiles for $k=1,2,3,4$, and stacking those borders rebuilds the $4$-by-$4$ square."
+    },
+    {
+      "id": "D",
+      "text": "The answer is $16$ because $4$ is the largest number printed beside the figure."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "The figure shows Esha's $4$-by-$4$ square of unit tiles. She paints it in nested L-shaped borders: the outermost border uses $7$ tiles, the next uses $5$, then $3$, and the centre tile is $1$.\n\nOne or more options may be correct. Which two claims correctly explain why the sum of the first $4$ odd numbers equals $4^{2}$?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The 4-by-4 square partitions into four nested odd L-borders of sizes 1,3,5,7, so their sum is 16=4^2. Dropping the consecutive-from-1 condition or reading the printed 4 as the answer is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source polygon into a 4-by-4 unit grid with nested L-borders labelled 7,5,3,1."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Sonia builds a Sierpinski Triangle. She starts with one filled equilateral triangle. At each step she joins the midpoints of every remaining filled triangle and removes the open middle triangle.\n\nAfter step $2$, how many filled triangles remain?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$9$, because each of the $3$ filled triangles from step $1$ is replaced by $3$ smaller filled triangles."
+    },
+    {
+      "id": "B",
+      "text": "$3$, keeping only the count from step $1$ and skipping the second midpoint removal."
+    },
+    {
+      "id": "C",
+      "text": "$4$, because joining midpoints makes four small triangles and the middle one is kept."
+    },
+    {
+      "id": "D",
+      "text": "Count holes with the Sierpinski Carpet square-hole rule instead of midpoint removal on triangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Step 1 leaves 3 filled triangles; step 2 replaces each by 3, giving 9. B freezes at step 1. C keeps the middle. D uses carpet rules.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

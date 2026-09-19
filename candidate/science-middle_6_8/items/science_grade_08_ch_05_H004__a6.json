@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_08/ch_05/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_08/ch_05/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_05/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_05:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_05",
+    "chapter_label": "Force",
+    "subtopic_id": "science/grade_08/ch_05/H004",
+    "stem": "The diagram shows Earth's pull on a stone in the air and Krish's hand pushing an eraser across a desk while touching it.\n\nWhich claims correctly classify these forces? One or more options may be correct.",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Earth's pull on the stone is a non-contact force because it acts without the Earth touching the stone.",
+      "B": "Earth's pull on the stone is a contact force because the stone will later land on the ground.",
+      "C": "The hand's push on the eraser is a contact force because the hand touches the eraser.",
+      "D": "Both forces are contact forces because both the stone and the eraser can move."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n% Earth and stone (non-contact gravity)\n\\draw[thick,fill=blue!15] (-0.2,0) circle (0.55);\n\\node[font=\\footnotesize] at (-0.2,0) {Earth};\n\\draw[thick,fill=gray!40] (-0.2,2.0) circle (0.22);\n\\node[font=\\footnotesize] at (-0.2,2.45) {stone};\n\\draw[->,thick] (-0.2,1.7)--(-0.2,0.65);\n\\node[font=\\footnotesize,right] at (0.05,1.15) {pull (no touch)};\n% hand rubbing eraser on desk (contact friction/muscular)\n\\draw[thick] (2.2,0)--(5.4,0);\n\\node[font=\\footnotesize] at (3.8,-0.35) {desk};\n\\draw[thick,fill=yellow!35] (3.2,0.05) rectangle (4.0,0.35);\n\\node[font=\\footnotesize] at (3.6,0.55) {eraser};\n\\draw[thick] (4.5,0.15)--(4.9,0.55)--(5.2,0.2)--(4.85,-0.05)--cycle;\n\\node[font=\\footnotesize] at (5.0,0.85) {hand};\n\\draw[->,thick] (4.5,0.25)--(4.05,0.25);\n\\node[font=\\footnotesize] at (3.8,-0.75) {push while touching};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_05/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

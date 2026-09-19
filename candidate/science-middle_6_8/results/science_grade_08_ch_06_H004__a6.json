@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly explains why the bottle crumples?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Outside atmospheric pressure is greater than the pressure inside the bottle, so outside air pushes the walls in."
+        },
+        {
+          "id": "B",
+          "text": "Air pressure inside the bottle is greater than outside, so the walls are pushed out and then snap back."
+        },
+        {
+          "id": "C",
+          "text": "The bottle crumples even when the air pressure outside equals the air pressure inside."
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric air around the bottle pulls the walls inward with no pressure difference needed."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Leela pumps most of the air out of a thin plastic bottle and seals it. The bottle crumples inward.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Removing air lowers pressure inside; higher outside atmospheric pressure then pushes the bottle walls inward."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A pressure difference is needed: higher outside atmospheric pressure pushes the walls in when inside pressure is lowered.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

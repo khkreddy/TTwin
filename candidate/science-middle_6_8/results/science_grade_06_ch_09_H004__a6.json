@@ -1,0 +1,54 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "When moving air carries the light chaff farther while the heavier mustard seeds fall closer."
+    },
+    {
+      "id": "B",
+      "text": "When he takes the mixture into a closed room with no moving air."
+    },
+    {
+      "id": "C",
+      "text": "When the heavier mustard seeds travel farther in the breeze and the light chaff falls closer."
+    },
+    {
+      "id": "D",
+      "text": "When a breeze blows so the lighter chaff and heavier seeds separate by how far each travels."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Rohit helps clean mustard seeds mixed with light chaff outdoors while a breeze blows across the courtyard.\n\nWhich claims correctly say when winnowing can separate this mixture? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "D"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Winnowing needs moving air so lighter chaff travels farther and heavier seeds fall closer. No air, or reversing which part travels farther, misses the method.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

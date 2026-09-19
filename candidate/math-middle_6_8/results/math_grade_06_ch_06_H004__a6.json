@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly gives its perimeter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perimeter $= 4 \\times 9 = 36\\,\\mathrm{m}$, because all four sides are equal."
+        },
+        {
+          "id": "B",
+          "text": "Perimeter $= 3 \\times 9 = 27\\,\\mathrm{m}$, treating the courtyard as an equilateral triangle."
+        },
+        {
+          "id": "C",
+          "text": "Perimeter $= 9\\,\\mathrm{m}$, taking the printed side length as the perimeter."
+        },
+        {
+          "id": "D",
+          "text": "Perimeter $= 4 \\times 9 = 36\\,\\mathrm{m}$ even if the four sides were unequal."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Bhavna's square courtyard has each side $9\\,\\mathrm{m}$ long.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A square has four equal sides, so its perimeter is $4\\times 9=36\\,\\mathrm{m}$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Four equal sides of 9 m give perimeter 36 m. Using 3 sides swaps the polygon; using one side alone or dropping equal-side condition is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

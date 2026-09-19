@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The teacher writes one answer on the board: \"six\". Arjun must invent a curious situation and a scientific question that this answer could fit. Ideas mentioned include germinating seeds, magnets pulling pins, and evaporating puddles.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "He imagines six seeds germinating at different rates and asks which conditions make germination faster."
+    },
+    {
+      "id": "B",
+      "text": "He invents a situation with six pins and a magnet and asks how the number of pins attracted can be six."
+    },
+    {
+      "id": "C",
+      "text": "He asks, \"Why do puddles evaporate?\" without checking whether \"six\" answers that question."
+    },
+    {
+      "id": "D",
+      "text": "He says a scientific question is valid only when its answer is already known, so inventing a situation is not allowed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Valid activity responses invent a curious situation that can sensibly lead to the given answer \"six\". Asking an unrelated evaporation question, or requiring the answer to be already known, misses the activity rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

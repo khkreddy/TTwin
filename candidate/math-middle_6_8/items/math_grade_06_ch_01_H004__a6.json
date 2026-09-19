@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_01/H004",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_01/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": null,
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_01/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_01:H004:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_01",
+    "chapter_label": "math/grade_06/ch_01",
+    "subtopic_id": "math/grade_06/ch_01/H004",
+    "stem": "The figure shows Esha's $4$-by-$4$ square of unit tiles. She paints it in nested L-shaped borders: the outermost border uses $7$ tiles, the next uses $5$, then $3$, and the centre tile is $1$.\n\nOne or more options may be correct. Which two claims correctly explain why the sum of the first $4$ odd numbers equals $4^{2}$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The $4$-by-$4$ square partitions into those four nested odd L-borders, so $1+3+5+7=16$.",
+      "B": "Any collection of odd numbers sums to a square, even when the odds are not the first four consecutive odds from $1$.",
+      "C": "Each nested L-border has $2k-1$ tiles for $k=1,2,3,4$, and stacking those borders rebuilds the $4$-by-$4$ square.",
+      "D": "The answer is $16$ because $4$ is the largest number printed beside the figure."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,font=\\sffamily\\small]\n  \\draw[gray!70,densely dashed,line width=0.3pt] (0,0) grid (4,4);\n  \\draw[thick] (0,0) rectangle (4,4);\n  \\draw[thick] (0,4)--(0,3)--(1,3)--(1,4)--cycle;\n  \\draw[thick] (0,3)--(0,2)--(2,2)--(2,3)--(1,3)--(1,4)--(0,4)--(0,3);\n  \\fill[black!12] (1.5,1.5) rectangle (2.5,2.5);\n  \\node at (2,2) {$1$};\n  \\node[right] at (4.3,3.5) {$7$};\n  \\node[right] at (4.3,2.5) {$5$};\n  \\node[right] at (4.3,1.5) {$3$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_01/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

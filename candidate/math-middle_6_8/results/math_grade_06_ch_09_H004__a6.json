@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.8,line cap=round,font=\\sffamily\\small]\n  \\draw[thick] (0,-0.5)--(0,3.5);\n  \\node[above] at (0,3.5) {symmetry line};\n  \\fill (2.5,2) circle (1.6pt) node[above right] {$C$};\n  \\draw[dashed] (2.5,2)--(0,2)--(-2.5,2);\n  \\fill (-2.5,2) circle (1.6pt) node[above left] {$C'$};\n  \\node[below] at (1.25,2) {$5\\,\\mathrm{cm}$};\n  \\node[below] at (-1.25,2) {$5\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly places the reflected point $C'$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$C'$ is $5\\,\\mathrm{cm}$ to the left of the line, at the same height as $C$."
+        },
+        {
+          "id": "B",
+          "text": "$C'$ is the name mirror image for the symmetry line itself."
+        },
+        {
+          "id": "C",
+          "text": "$C'$ may sit anywhere to the left of the line, at any distance."
+        },
+        {
+          "id": "D",
+          "text": "$C'$ must stay on the same side of the line as $C$, at $5\\,\\mathrm{cm}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Gopal completing a mirror image across a fixed vertical symmetry line. Point $C$ is $5\\,\\mathrm{cm}$ to the right of the line, at a marked height.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Reflection across a vertical line keeps height and sends the point the same distance to the opposite side, so C' is 5 cm left at the same height as C."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mirror of a point 5 cm right of a vertical line is 5 cm left at the same height. Renaming the line, dropping equal distance, or staying on the same side is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source into a vertical symmetry line with C 5 cm right and C' 5 cm left."
+  }
+}

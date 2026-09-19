@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aarav swallows a soft piece of chapati. The food enters his food pipe (oesophagus) on its way to the stomach. Nearby is the windpipe. The walls of the food pipe can contract and relax in waves. Body position may be upright or upside down.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about how the food moves is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The walls of the food pipe contract and relax in a wave-like motion that pushes the food toward the stomach."
+        },
+        {
+          "id": "B",
+          "text": "The windpipe contracts and relaxes in waves to push the food into the stomach."
+        },
+        {
+          "id": "C",
+          "text": "Food sliding down the food pipe makes its walls contract and relax in waves."
+        },
+        {
+          "id": "D",
+          "text": "Wave-like propulsion occurs only in the food pipe, never elsewhere in the alimentary canal."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Wave-like contraction and relaxation of the food-pipe walls push food toward the stomach; the windpipe does not do this, and the motion is not caused by food sliding first."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Peristalsis in the oesophagus walls pushes food to the stomach. The windpipe is not the food path, sliding food does not cause the waves, and similar propulsion continues along the alimentary canal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_09/H004",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_09/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": null,
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_09/H004; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_09:H004:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MIXTURE",
+    "chapter_id": "science/grade_06/ch_09",
+    "chapter_label": "Methods of separation",
+    "subtopic_id": "science/grade_06/ch_09/H004",
+    "stem": "Rohit helps clean mustard seeds mixed with light chaff outdoors while a breeze blows across the courtyard.\n\nWhich claims correctly say when winnowing can separate this mixture? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "When moving air carries the light chaff farther while the heavier mustard seeds fall closer.",
+      "B": "When he takes the mixture into a closed room with no moving air.",
+      "C": "When the heavier mustard seeds travel farther in the breeze and the light chaff falls closer.",
+      "D": "When a breeze blows so the lighter chaff and heavier seeds separate by how far each travels."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_09/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AD",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

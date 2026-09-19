@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Omar has a $9$ by $4$ rectangular grid of small squares. He wants to know whether the total number of small squares is even or odd without multiplying $9 \\times 4$.\n\nWhich claim correctly decides that parity?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The total is even, because one side length is even."
+    },
+    {
+      "id": "B",
+      "text": "The answer is the tall count $9$."
+    },
+    {
+      "id": "C",
+      "text": "The total is odd, because $9$ is odd."
+    },
+    {
+      "id": "D",
+      "text": "The same parity rule also settles the perimeter length of the grid."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The product is odd only when both dimensions are odd. Here 4 is even, so the total is even without multiplying. Naming the tall count, treating one odd side as enough, or applying the rule to perimeter all miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

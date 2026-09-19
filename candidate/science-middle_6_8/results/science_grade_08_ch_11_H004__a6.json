@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick] (-0.5,0)--(6.5,0);\n\\draw[thick] (2.8,0)--(2.8,2.3);\n\\node[font=\\footnotesize] at (2.8,2.6) {vertical stick};\n\\draw[thick] (2.8,0)--(0.3,0);\n\\fill (0.3,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (0.3,-0.35) {long};\n\\draw[thick] (2.8,0)--(3.15,0);\n\\fill (3.15,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (3.5,-0.35) {shortest};\n\\draw[thick] (2.8,0)--(5.5,0);\n\\fill (5.5,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (5.5,-0.35) {long};\n\\node[font=\\footnotesize] at (2.8,-0.85) {shadow tip marks, two school days};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Find the time from the shortest shadow on day 1 to the shortest shadow on day 2."
+    },
+    {
+      "id": "B",
+      "text": "Find the time from the longest shadow on day 1 to the longest shadow on day 2."
+    },
+    {
+      "id": "C",
+      "text": "The shortest shadow marks when the Sun is highest; successive highest positions average about 24 hours."
+    },
+    {
+      "id": "D",
+      "text": "Count the number of shadow marks between morning and evening on a single day to get 24 hours."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Bilal's vertical stick on the school field and tip marks of its shadow. He records marks through two school days. He wants to measure one day of nearly 24 hours.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean solar day uses successive Sun highest positions, marked by shortest shadows. Longest shadows or counting marks on one day do not measure that interval.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source lens ray diagram into stick-and-shadow tip marks."
+  }
+}

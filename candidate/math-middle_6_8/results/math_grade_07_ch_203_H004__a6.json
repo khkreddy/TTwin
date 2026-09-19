@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Tejas hears the claim: \"A larger whole number always has more prime factors, counting multiplicity, than a smaller whole number.\" He checks $81 = 3^{4}$ and $64 = 2^{6}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Does one verified counterexample overturn the claim?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is the word counterexample."
+        },
+        {
+          "id": "B",
+          "text": "Yes: $81$ is larger than $64$ but has fewer prime factors counting multiplicity ($4$ against $6$), so the universal claim fails."
+        },
+        {
+          "id": "C",
+          "text": "The claim still holds because some larger numbers do have more prime factors."
+        },
+        {
+          "id": "D",
+          "text": "The claim is true because $81$ is the larger printed number."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A single explicit counterexample overturns a universal claim; $81=3^{4}$ has four prime factors and $64=2^{6}$ has six, so a larger number can have fewer factors."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "81>64 but 3^4 has four prime factors while 2^6 has six, so one counterexample disproves the universal claim. Naming the word alone, keeping the claim because other cases fit, or grabbing the larger print all miss that logic.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

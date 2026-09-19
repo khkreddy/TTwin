@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes, because he observes, tries a change, and checks what happens."
+    },
+    {
+      "id": "B",
+      "text": "Yes, because anyone watering a plant is working like a scientist."
+    },
+    {
+      "id": "C",
+      "text": "No, because a houseplant at home is not a place for science."
+    },
+    {
+      "id": "D",
+      "text": "Yes, because he observes a problem, tests a change, and can judge the result."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ojas's indoor plant leaves droop. He feels the soil, adds one cup of water to that pot only, and checks leaf firmness the next morning.\n\nWhich claims correctly treat him as working like a scientist on a daily-life problem? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "D"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Working like a scientist means using the scientific method: observe, try a change, and check. Watering alone or a home setting does not decide it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
