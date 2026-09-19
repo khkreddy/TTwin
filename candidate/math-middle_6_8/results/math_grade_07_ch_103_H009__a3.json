@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil must compute $3.40-1.26$ by place value.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer tenths only, without subtracting hundredths and tenths place by place with borrowing when needed."
+    },
+    {
+      "id": "B",
+      "text": "Subtract hundredths $0$ from $6$ without borrowing from the tenths, omitting the split of one tenth into ten hundredths."
+    },
+    {
+      "id": "C",
+      "text": "Borrow so hundredths become $10$; then $10-6=4$ hundredths and $3-2=1$ tenth, giving $2.14$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $3.40$ as the difference only because $3.40$ is the largest printed decimal among $3.40$ and $1.26$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Subtract like places with borrowing: $3.40-1.26=2.14$. Naming tenths alone, skipping the borrow, or grabbing the larger printed decimal all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

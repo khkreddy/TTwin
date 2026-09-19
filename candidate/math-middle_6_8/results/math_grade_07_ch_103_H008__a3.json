@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek adds the decimal lengths $2.47$ m and $1.85$ m by lining up place values.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer \"addend\" only, without combining tenths with tenths and hundredths with hundredths."
+    },
+    {
+      "id": "B",
+      "text": "Add the digits in each column without regrouping when a place-value total reaches ten or more."
+    },
+    {
+      "id": "C",
+      "text": "Align place values: hundredths $7+5=12$ write $2$ regroup $1$ tenth; tenths $4+8+1=13$ write $3$ regroup $1$ unit; units $2+1+1=4$, so the sum is $4.32$ m."
+    },
+    {
+      "id": "D",
+      "text": "Use the same place-value lining to multiply $2.47$ by $1.85$, beyond adding like place values."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Decimal addition combines like place values and regroups when a place reaches ten: $2.47+1.85=4.32$. Naming only \"addend\", skipping regrouping, or stretching the method to multiplication all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

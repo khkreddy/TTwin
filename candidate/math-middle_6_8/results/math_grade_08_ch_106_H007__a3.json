@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar wants to expand $(x+5)(x-5)$ by recognising a conjugate pair.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Treat $(x+5)(x+5)$ as the conjugate pair for this expansion, skipping that the connecting signs must be opposite."
+    },
+    {
+      "id": "B",
+      "text": "Say that getting $x^2-25$ is what creates the opposite signs in $(x+5)(x-5)$, instead of using those opposite signs to cancel the cross-terms."
+    },
+    {
+      "id": "C",
+      "text": "The factors are conjugates: same terms $x$ and $5$ with opposite signs, so $(x+5)(x-5)=x^2-25$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same conjugate cancellation when adding $(x+5)+(x-5)$, beyond this product expansion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Conjugate factors share the same two terms with opposite connecting signs, so cross-terms cancel: $(x+5)(x-5)=x^2-25$. Same signs, reversing product and signs, or applying the rule to addition all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir has triangle $ABC$ with base $BC$ and height from $A$ to $BC$. $M$ is the midpoint of $BC$, and he draws $AM$.\n\nWhich claim about areas is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer equal area only, without using the shared height and equal bases $BM$ and $MC$."
+    },
+    {
+      "id": "B",
+      "text": "Note that $BM=MC$, but omit that $\\triangle ABM$ and $\\triangle ACM$ share the same height from $A$ to $BC$."
+    },
+    {
+      "id": "C",
+      "text": "$BM=MC$ and both small triangles have the same height from $A$ to $BC$, so $\\triangle ABM$ and $\\triangle ACM$ have equal area even if they are not congruent."
+    },
+    {
+      "id": "D",
+      "text": "Choose congruent triangles only because the printed midpoint mark $M$ looks like a symmetry badge on $BC$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal bases $BM=MC$ with the same height from $A$ give equal areas for $\\triangle ABM$ and $\\triangle ACM$ without needing congruence. Naming equal area alone, dropping shared height, or grabbing the midpoint mark all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

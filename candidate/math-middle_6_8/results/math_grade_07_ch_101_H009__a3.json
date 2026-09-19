@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal wants to decide whether town A (about $48\\,000$ people) plus town B (about $51\\,000$ people) is near $100\\,000$, before exact addition.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer \"approximation\" only, without using rounded values to judge nearness to $100\\,000$."
+    },
+    {
+      "id": "B",
+      "text": "Say that the exact sum is what creates the rounded comparison, instead of using rounds to judge the sum."
+    },
+    {
+      "id": "C",
+      "text": "Round to about $50\\,000+50\\,000=100\\,000$, so the combined population is near $100\\,000$ before exact addition."
+    },
+    {
+      "id": "D",
+      "text": "Choose \"near $100\\,000$\" only because $100\\,000$ is the round number printed in the question."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rounded bounds locate a large sum before exact work: $48\\,000+51\\,000$ is near $100\\,000$. Naming only \"approximation\", reversing exact and round, or grabbing the printed round number all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parul has a right-angled triangle with legs $a=6$ and $b=8$ and hypotenuse $c$. She wants $c$ from $a^2+b^2=c^2$.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use $c=\\sqrt{6^2+8^2}$ even if the triangle is not right-angled and $c$ is not the hypotenuse, skipping those conditions."
+    },
+    {
+      "id": "B",
+      "text": "Find a missing leg by adding the known squares the same way, as when the unknown is a leg rather than the hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "Rearrange to $c=\\sqrt{a^2+b^2}=\\sqrt{36+64}=\\sqrt{100}=10$, taking the positive square root."
+    },
+    {
+      "id": "D",
+      "text": "Compute $c=6^2+8^2=100$ and stop, leaving the value squared instead of taking the positive square root."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With both legs known in a right triangle, $c=\\sqrt{a^2+b^2}$. Dropping the right-angle/hypotenuse conditions, adding squares to find a leg, or skipping the square root all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uma knows two numbers sum to $50$, and the larger is $8$ more than the smaller. She wants one equation in one unknown.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $x+y=50$ and stop, skipping that one unknown must be rewritten in terms of the other using the \"$8$ more\" relation."
+    },
+    {
+      "id": "B",
+      "text": "Say that solving for both numbers is what creates the \"$8$ more\" relation, instead of using that relation to reduce to one variable first."
+    },
+    {
+      "id": "C",
+      "text": "Let the smaller be $x$; then the larger is $x+8$, so $x+(x+8)=50$."
+    },
+    {
+      "id": "D",
+      "text": "Set up a two-equation elimination system in $x$ and $y$ without first expressing one quantity in terms of the other, beyond this one-variable reduction."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Related unknowns reduce to one variable by expressing one in terms of the other: $x+(x+8)=50$. Leaving both letters free, reversing solve and relation, or jumping to elimination systems all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

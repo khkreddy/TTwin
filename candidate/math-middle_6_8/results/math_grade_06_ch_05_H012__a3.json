@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir first writes $60 = 6 \\times 10$, then $6 = 2 \\times 3$ and $10 = 2 \\times 5$.\n\nWhich claim builds the prime factorisation of $60$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer prime factorisation only, without combining the prime factors of $6$ and $10$."
+    },
+    {
+      "id": "B",
+      "text": "Write $60 = 6 \\times 10$ and stop, without replacing $6$ and $10$ by their prime factorisations."
+    },
+    {
+      "id": "C",
+      "text": "Combine the factorisations: $60 = (2 \\times 3) \\times (2 \\times 5) = 2 \\times 2 \\times 3 \\times 5$."
+    },
+    {
+      "id": "D",
+      "text": "Also treat $60 = 6 + 10$ by combining prime factorisations of $6$ and $10$ the same way, beyond a product of factors."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The prime factorisation of a product is the combined prime factorisations of its factors: $60=2\\times2\\times3\\times5$. Naming the term alone, stopping at $6\\times10$, or applying the same move to a sum all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

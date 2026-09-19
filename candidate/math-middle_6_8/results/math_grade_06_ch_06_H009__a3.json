@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu's rectangular courtyard is $12$ m by $8$ m. A rectangular carpet $5$ m by $3$ m is placed on it.\n\nWhich plan finds the uncovered area correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find only the courtyard area $12\\times8$, without subtracting the carpet area."
+    },
+    {
+      "id": "B",
+      "text": "Say that the uncovered area is what creates the courtyard and carpet rectangles, instead of subtracting carpet area from courtyard area."
+    },
+    {
+      "id": "C",
+      "text": "Uncovered area $=12\\times8-5\\times3=96-15=81$ square metres."
+    },
+    {
+      "id": "D",
+      "text": "Also subtract the carpet area from the courtyard perimeter, as if the same remaining-area step settled a length around the edge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remaining area is whole minus parts removed or covered: $96-15=81$. Omitting the subtraction, reversing result and regions, or applying the step to perimeter all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

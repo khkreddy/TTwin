@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona compares the calendar for year $Y$ with the calendar for year $Z$. She wants to know when year $Y$'s calendar can be reused for year $Z$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Reuse year $Y$'s calendar for year $Z$ after checking that only one special date (such as $1$ January) falls on the same weekday, without checking every date in the year."
+    },
+    {
+      "id": "B",
+      "text": "Also treat a match of weekdays alone as settling whether two different month-name lists are the same calendar, beyond comparing dates and weekdays for years $Y$ and $Z$."
+    },
+    {
+      "id": "C",
+      "text": "Reuse year $Y$'s calendar for year $Z$ only when every date in year $Z$ falls on the same weekday as that date in year $Y$."
+    },
+    {
+      "id": "D",
+      "text": "Say the calendars match only because the printed year numbers $Y$ and $Z$ look alike, without comparing dates and weekdays."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A calendar repeats for another year only when every date keeps the same weekday. Matching one special date, stretching the test to unrelated month-name lists, or grabbing printed year numbers all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

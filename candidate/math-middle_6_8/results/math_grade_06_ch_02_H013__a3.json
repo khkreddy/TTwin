@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Isha draws ray $OC$ from the vertex of $\\angle AOB$ in the figure.\n\nWhen does $OC$ bisect $\\angle AOB$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer \"crease\" only, without checking that the two angles at $O$ are equal."
+    },
+    {
+      "id": "B",
+      "text": "Treat $OC$ as a bisector after checking only that it starts at $O$, skipping that $\\angle AOC$ must equal $\\angle COB$."
+    },
+    {
+      "id": "C",
+      "text": "When $\\angle AOC = \\angle COB$, so ray $OC$ from $O$ splits $\\angle AOB$ into two equal angles."
+    },
+    {
+      "id": "D",
+      "text": "Say that equal angles $\\angle AOC$ and $\\angle COB$ are what create ray $OC$, instead of ray $OC$ from $O$ making those two angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95]\n  \\coordinate (O) at (0,0);\n  \\draw[thick] (O) -- (3.2,0) node[below] {$A$};\n  \\draw[thick] (O) -- (2.26,2.26) node[above left] {$B$};\n  \\draw[thick] (O) -- (3.05,1.26) node[right] {$C$};\n  \\fill (O) circle (1.5pt) node[below left] {$O$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An angle bisector is a ray from the vertex that splits the angle into two equal angles. Naming only \"crease\", dropping the equal-angle check, or reversing angles and ray all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Angle AOB with ray OC from vertex O."
+  }
+}

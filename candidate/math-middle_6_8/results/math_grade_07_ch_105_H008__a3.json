@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar draws transversal $t$ across lines $p$ and $q$. At the crossing with $p$, $\\angle 1$ sits above $p$ and to the right of $t$. At the crossing with $q$, $\\angle 2$ sits above $q$ and to the right of $t$.\n\nWhich claim about $\\angle 1$ and $\\angle 2$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $\\angle 1$ and $\\angle 2$ corresponding even if both were chosen from the same crossing with $p$, skipping that one angle must come from each crossing."
+    },
+    {
+      "id": "B",
+      "text": "Also treat $\\angle 1$ and $\\angle 2$ as same-side interior angles and use that interior rule here, beyond matching positions for corresponding angles."
+    },
+    {
+      "id": "C",
+      "text": "$\\angle 1$ and $\\angle 2$ are corresponding angles: each is above its line and to the right of $t$, so they sit in matching positions at the two crossings."
+    },
+    {
+      "id": "D",
+      "text": "Call them corresponding only because the printed labels $1$ and $2$ are the standout numbers, without using matching positions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Corresponding angles occupy matching positions in the two angle sets made by a transversal. Taking both from one crossing, swapping in same-side interior rules, or grabbing the printed labels all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona has an algebra grid. One row shows three identical blue squares and a sum $27$ in the last cell. The next row shows two identical red circles, one blue square, and a sum $19$. Each shape stands for one unknown value.\n\nWhich plan fills the values correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call each shape an \"unknown\" only, without using the row sums to find the blue-square and red-circle values."
+    },
+    {
+      "id": "B",
+      "text": "Say that filling the empty cells is what creates the row sums $27$ and $19$, instead of using those sums to find the shape values first."
+    },
+    {
+      "id": "C",
+      "text": "From $3$ blue squares summing to $27$, one blue square is $9$. Then two red circles plus $9$ sum to $19$, so one red circle is $5$. Use those values to fill empty cells."
+    },
+    {
+      "id": "D",
+      "text": "Solve by turning the grid into a prime-factor product for $27$ and $19$, and treat that factorisation as this row-sum shape method."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each shape is one unknown; row sums give the values before empty cells are filled: blue square $9$, red circle $5$. Naming only \"unknown\", reversing fills and sums, or swapping in prime factorisation all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya's triangle $ABC$ has $\\angle A=50^{\\circ}$ and $\\angle B=60^{\\circ}$. Side $BC$ is extended beyond $C$ to a point $D$, forming exterior $\\angle ACD$.\n\nWhich claim finds $\\angle ACD$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find $\\angle C=70^{\\circ}$ from the angle sum, but stop without subtracting from $180^{\\circ}$ to get the exterior angle on the straight line."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $\\angle ACD=110^{\\circ}$ is what creates $\\angle A=50^{\\circ}$ and $\\angle B=60^{\\circ}$, instead of using those interiors to find the exterior."
+    },
+    {
+      "id": "C",
+      "text": "First $\\angle C=180^{\\circ}-50^{\\circ}-60^{\\circ}=70^{\\circ}$; then $\\angle ACD=180^{\\circ}-70^{\\circ}=110^{\\circ}$ because $\\angle ACB$ and $\\angle ACD$ form a straight angle."
+    },
+    {
+      "id": "D",
+      "text": "Also use $180^{\\circ}-70^{\\circ}$ as the measure of an interior angle of a quadrilateral with no side extended, beyond this exterior-angle setting."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Angle sum gives $\\angle C=70^{\\circ}$; the exterior on the straight line is $180^{\\circ}-70^{\\circ}=110^{\\circ}$. Stopping after $\\angle C$, reversing exterior and given interiors, or exporting the step to a quadrilateral interior all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

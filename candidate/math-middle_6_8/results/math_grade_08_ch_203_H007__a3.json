@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya knows $x$ and $y$ are inversely proportional. When $x=4$, $y=15$. She needs $y$ when $x=6$.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer inverse proportion only, without keeping the product $x\\times y$ constant."
+    },
+    {
+      "id": "B",
+      "text": "Use $4\\times15=60$, but then find the new $y$ without setting $6\\times y=60$."
+    },
+    {
+      "id": "C",
+      "text": "Keep the product constant: $4\\times15=6\\times y$, so $y=60/6=10$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $y=15$ again only because $15$ is the largest printed number among $4$, $15$, and $6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inverse proportion keeps $x y$ constant: $4\\times15=6 y$ gives $y=10$. Naming the term alone, dropping the second product equation, or grabbing printed $15$ all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

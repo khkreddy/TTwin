@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal works with numbers that leave remainder $2$ when divided by $5$. She wants to reason with that remainder form without full division each time.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $5k+2$ but skip reducing a combined remainder again when the sum of remainders reaches $5$ or more."
+    },
+    {
+      "id": "B",
+      "text": "Say that the form $5k+2$ is what creates remainder $2$ on division by $5$, instead of remainder $2$ justifying that form."
+    },
+    {
+      "id": "C",
+      "text": "Write each such number as $5k+2$ (or $5k-3$), combine remainder parts in sums or products, then reduce again by $5$ as needed."
+    },
+    {
+      "id": "D",
+      "text": "Use the same $5k+2$ form for numbers that leave remainder $2$ when divided by $7$, beyond divisor $5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Numbers with remainder $2$ on division by $5$ are $5k+2$; remainder parts combine then reduce by the divisor. Skipping re-reduction, reversing form and remainder, or changing the divisor all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

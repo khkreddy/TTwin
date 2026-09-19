@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit hears that this year's collection is $150\\%$ of last year's base of ₹$200$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Treat $150\\%$ as more than the base after ignoring which amount was chosen as the $100\\%$ base."
+    },
+    {
+      "id": "B",
+      "text": "Say that collecting ₹$300$ is what creates the $150\\%$ reading, instead of $150\\%$ of the base giving ₹$300$."
+    },
+    {
+      "id": "C",
+      "text": "$150\\%$ means $1.5$ times the chosen base, so ₹$300$, which exceeds the ₹$200$ base."
+    },
+    {
+      "id": "D",
+      "text": "Use \"$150\\%$ exceeds the base\" to decide whether a fraction is greater than $1$ when no percentage base was chosen."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A percentage greater than $100$ means the quantity exceeds the chosen base: $150\\%$ of ₹$200$ is ₹$300$. Dropping the base, reversing amount and percent, or stretching to bare fractions all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

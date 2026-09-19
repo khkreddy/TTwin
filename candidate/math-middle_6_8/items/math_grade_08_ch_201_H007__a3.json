@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_201/H007",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_201/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_201/H007"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_201:H007:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-RATIO",
+    "chapter_id": "math/grade_08/ch_201",
+    "chapter_label": "math/grade_08/ch_201",
+    "subtopic_id": "math/grade_08/ch_201/H007",
+    "stem": "Lalit hears that this year's collection is $150\\%$ of last year's base of ₹$200$.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Treat $150\\%$ as more than the base after ignoring which amount was chosen as the $100\\%$ base.",
+      "B": "Say that collecting ₹$300$ is what creates the $150\\%$ reading, instead of $150\\%$ of the base giving ₹$300$.",
+      "C": "$150\\%$ means $1.5$ times the chosen base, so ₹$300$, which exceeds the ₹$200$ base.",
+      "D": "Use \"$150\\%$ exceeds the base\" to decide whether a fraction is greater than $1$ when no percentage base was chosen."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_201/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

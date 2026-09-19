@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar has the expression $6(n+4)$ and wants to know whether he may expand or factor a multiplication over a sum.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the step \"multiple of a sum\" only, without writing an expanded or factored form."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $6n+24$ is what creates the factor $6$ outside $(n+4)$, instead of expanding from $6(n+4)$."
+    },
+    {
+      "id": "C",
+      "text": "Yes: $6(n+4)=6n+24$, and factoring $6n+24$ returns $6(n+4)$, because a multiple of a sum equals the sum of the multiples."
+    },
+    {
+      "id": "D",
+      "text": "Decide the rewrite by left-to-right order for an unbracketed mix of operations, instead of using the multiply-over-sum rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A multiple of a sum equals the sum of the multiples: $6(n+4)=6n+24$. Naming the label only, reversing expansion and factor, or swapping in unbracketed order-of-operations all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

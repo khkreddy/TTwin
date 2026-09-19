@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit multiplies $8 \\times 0.25$ and wants to predict the size of the product before finishing the calculation.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Say the product is less than $8$ after looking only at $8$, skipping whether the other factor is between $0$ and $1$ or greater than $1$."
+    },
+    {
+      "id": "B",
+      "text": "Use the same greater-than / less-than rule for a product that includes a negative factor, beyond positive factors."
+    },
+    {
+      "id": "C",
+      "text": "Because $0.25$ is between $0$ and $1$, the product is less than $8$ (and greater than $0$)."
+    },
+    {
+      "id": "D",
+      "text": "Choose \"greater than $8$\" only because $8$ is the larger printed factor in $8 \\times 0.25$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For positive factors, multiplying by a number between $0$ and $1$ makes the other factor smaller: $8\\times0.25<8$. Skipping the $0$–$1$ check, stretching to negatives, or grabbing the larger print all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

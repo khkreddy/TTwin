@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin sets a $3$-digit lock code. Each digit may be $0$ through $9$, and $0$ is allowed in the first place. He wants the total number of codes.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count $9$ choices for the first digit by forbidding $0$ there, skipping that $0$ is allowed as a first-digit choice on this lock."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing the total $1000$ is what creates the ten choices in each digit place, instead of multiplying the per-stage choices to get the total."
+    },
+    {
+      "id": "C",
+      "text": "Multiply the choices at each stage: $10\\times10\\times10=1000$ codes."
+    },
+    {
+      "id": "D",
+      "text": "Also count ordered meal combos from a different menu with this same $10\\times10\\times10$ product, beyond this lock-code stage count."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multi-stage counts multiply the choices at each stage, including $0$ when the lock allows it: $10^3=1000$. Forbidding a stated first-digit $0$, reversing total and choices, or stretching the product to an unrelated menu all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

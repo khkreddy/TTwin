@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Walia looks at a calendar grid. She claims that in any $2\\times 2$ block of dates, the diagonal sums are equal. She wants a proof that works for every such block, not only the ones she checked.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Check three sample blocks and stop, skipping a letter-number reference entry with fixed grid offsets."
+    },
+    {
+      "id": "B",
+      "text": "Say that the equal diagonal sums are what create the calendar layout, instead of proving the sums from a chosen reference entry."
+    },
+    {
+      "id": "C",
+      "text": "Let the top-left date be $n$; then the block is $n$, $n+1$, $n+7$, $n+8$. Both diagonals simplify to $2n+8$, so the relation holds for every $n$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same letter-number offsets to place beads on a cyclic design circle, beyond proving a calendar-grid relation."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A letter-number reference with fixed offsets proves the relation for every entry: both diagonals equal $2n+8$. Checking samples only, reversing sums and layout, or stretching to cyclic designs all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

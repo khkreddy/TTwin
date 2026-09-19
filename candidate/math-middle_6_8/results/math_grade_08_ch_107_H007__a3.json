@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil must divide a whole of $60$ in the ratio $2:3$.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer ratio parts only, without finding one equal group's size from $2+3$."
+    },
+    {
+      "id": "B",
+      "text": "Form parts $2\\times60$ and $3\\times60$, omitting the step that one group is $60/(2+3)$."
+    },
+    {
+      "id": "C",
+      "text": "One group is $60/(2+3)=12$, so the parts are $2\\times12=24$ and $3\\times12=36$."
+    },
+    {
+      "id": "D",
+      "text": "Also divide $60$ in the ratio $2:3$ by the same equal-group steps when the two parts must instead multiply to $60$, beyond sharing a whole."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divide $60$ in $2:3$ by one group $60/5=12$, then parts $24$ and $36$. Naming ratio alone, skipping $x/(m+n)$, or applying the share steps to a product constraint all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

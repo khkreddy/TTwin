@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin must report how many chairs to buy for $47$ guests when chairs are sold only in packs of $10$. He also has a separate tally that must record the exact guest count.\n\nWhich claim fits each need?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call both answers \"approximate value\" only, without choosing exact, round-up, round-down, or nearest-place for each need."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing a rounded chair count is what creates the exact guest tally of $47$, instead of keeping the tally exact because that need requires exactness."
+    },
+    {
+      "id": "C",
+      "text": "Buy $50$ chairs (round up in packs of $10$ so every guest has a seat) and keep $47$ exact in the guest tally."
+    },
+    {
+      "id": "D",
+      "text": "Decide only by asking whether $47$ feels \"big\" or \"small\" in everyday talk, without using exact versus round-up/round-down/nearest-place for these two needs."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Packs of $10$ force a round-up to $50$ chairs so every guest is seated, while the guest tally must stay exact at $47$. Naming only \"approximate value\", reversing round and exact, or swapping in a big/small feel test all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya must find $(-6)\\times(+4)$ from signs and magnitudes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer product only, without using the magnitudes $6$ and $4$ and the opposite signs."
+    },
+    {
+      "id": "B",
+      "text": "Multiply the magnitudes to get $24$, but omit the opposite-sign rule and leave the product unsigned."
+    },
+    {
+      "id": "C",
+      "text": "The magnitude is $6\\times4=24$ and the signs differ, so $(-6)\\times(+4)=-24$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $-6$ as the product only because $-6$ is the first printed factor among $-6$ and $+4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnitude $6\\times4=24$ with opposite signs gives $-24$. Naming product alone, dropping the sign rule, or grabbing the printed $-6$ all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

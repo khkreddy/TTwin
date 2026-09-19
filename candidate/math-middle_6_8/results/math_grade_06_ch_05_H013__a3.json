@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin has $14=2\\times7$ and $15=3\\times5$. He wants to decide whether $14$ and $15$ are co-prime from those prime factorisations.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call them co-prime after looking at the products $14$ and $15$ alone, without checking whether any prime appears in both factorisations."
+    },
+    {
+      "id": "B",
+      "text": "Also use the same co-prime test to decide whether two fractions are in lowest terms without comparing prime factors, beyond this two-number prime-factor check."
+    },
+    {
+      "id": "C",
+      "text": "They are co-prime: the primes $2,7$ and $3,5$ share no common prime factor."
+    },
+    {
+      "id": "D",
+      "text": "Call them co-prime only because $14$ and $15$ are consecutive printed integers, without using the prime factorisations."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two numbers are co-prime when their prime factorisations share no prime. Skipping the common-prime check, stretching the test, or grabbing consecutive printed integers all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

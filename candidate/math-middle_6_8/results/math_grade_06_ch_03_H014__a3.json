@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Jatin's addition-only number-box activity allows the middle numbers $2$, $5$, and $5$ to be used as many times as needed. The side target is $12$.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use subtraction such as $5-2$ as well, skipping that this activity allows addition only."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $12$ is what creates the middle numbers $2$ and $5$, instead of combining those middles to make $12$."
+    },
+    {
+      "id": "C",
+      "text": "Add middle numbers as needed, for example $2+5+5=12$, using only addition."
+    },
+    {
+      "id": "D",
+      "text": "Use the same reuse-and-add plan for a target that must be built by multiplication of the box numbers, beyond addition."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the addition version, middle numbers may be reused and added to make the target: $2+5+5=12$. Adding subtraction, reversing target and middles, or switching to multiplication all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

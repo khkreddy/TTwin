@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_02/H013",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_02/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H013"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H013:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H013",
+    "stem": "Isha draws ray $OC$ from the vertex of $\\angle AOB$ in the figure.\n\nWhen does $OC$ bisect $\\angle AOB$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer \"crease\" only, without checking that the two angles at $O$ are equal.",
+      "B": "Treat $OC$ as a bisector after checking only that it starts at $O$, skipping that $\\angle AOC$ must equal $\\angle COB$.",
+      "C": "When $\\angle AOC = \\angle COB$, so ray $OC$ from $O$ splits $\\angle AOB$ into two equal angles.",
+      "D": "Say that equal angles $\\angle AOC$ and $\\angle COB$ are what create ray $OC$, instead of ray $OC$ from $O$ making those two angles."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95]\n  \\coordinate (O) at (0,0);\n  \\draw[thick] (O) -- (3.2,0) node[below] {$A$};\n  \\draw[thick] (O) -- (2.26,2.26) node[above left] {$B$};\n  \\draw[thick] (O) -- (3.05,1.26) node[right] {$C$};\n  \\fill (O) circle (1.5pt) node[below left] {$O$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
