@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_102/H010",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_102/H010",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": null,
+      "C": null,
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_102/H010; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_102:H010:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_07/ch_102",
+    "chapter_label": "math/grade_07/ch_102",
+    "subtopic_id": "math/grade_07/ch_102/H010",
+    "stem": "Hema wants to compute $52 \\times 35$ by rewriting one factor and using the distributive property.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Write $52$ as $50 + 3$, then compute $50 \\times 35 + 3 \\times 35$.",
+      "B": "Write $52$ as $50 + 2$, then compute $50 \\times 35 + 2 \\times 35$.",
+      "C": "Write $35$ as $30 + 5$, then compute $52 \\times 30 + 52 \\times 5$.",
+      "D": "Treat the word product alone as the rewrite, with no decomposition of $52$ or $35$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_102/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

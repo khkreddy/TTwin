@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_11/H011",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_11/H011",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_11/H011; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H011:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H011",
+    "stem": "Leela peeks over a tall bookshelf with a Z-shaped periscope that holds two plane mirrors. The book titles on the other side are not directly visible to her eye.\n\nWhich claims correctly explain how she sees the titles? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Light from the titles reflects from the first plane mirror and then from the second plane mirror to her eye.",
+      "B": "Refraction at both plane mirrors guides the light to her eye.",
+      "C": "Two plane mirrors are needed so the light path can turn twice in the Z-shaped periscope.",
+      "D": "One plane mirror is enough for this Z-shaped periscope to work."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

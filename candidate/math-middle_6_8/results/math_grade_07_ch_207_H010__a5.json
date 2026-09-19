@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Urvashi rewrites $6x+4=2x+16$ in the form $Ax+B=Cx+D$ and then uses $x=\\dfrac{D-B}{A-C}$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$A=6$, $B=4$, $C=2$, $D=16$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the letter $B$ alone, and stop."
+    },
+    {
+      "id": "C",
+      "text": "$x=\\dfrac{16-4}{6-2}=3$."
+    },
+    {
+      "id": "D",
+      "text": "Use $x=\\dfrac{D-B}{A-C}$ even when the equation is not first put in $Ax+B=Cx+D$ form."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Identifying A=6,B=4,C=2,D=16 and evaluating (16-4)/(6-2)=3 are both required. Stopping at the letter B swaps the solution for a label. Applying the formula without the Ax+B=Cx+D layout omits the form condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

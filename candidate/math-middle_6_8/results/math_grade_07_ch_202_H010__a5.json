@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pallavi's game score starts at $0$. She gains $6$ points on each of $4$ turns and loses $3$ points on each of $3$ turns.\n\nWhich expression gives her final score?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write gains and losses as the labels score words, not as signed numbers in a sum."
+    },
+    {
+      "id": "B",
+      "text": "Because the final score is known, it forces the signed turn values $4\\times(+6)$ and $3\\times(-3)$."
+    },
+    {
+      "id": "C",
+      "text": "$4\\times(+6)+3\\times(-3)$."
+    },
+    {
+      "id": "D",
+      "text": "Add the turn counts only: $4+3$, treating counts as if they already carried the point values."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repeated gains and losses are count × signed value, then added: 4×(+6)+3×(−3). Naming score words swaps the expression for a label. Treating the final score as forcing the turn values reverses the build. Adding bare counts conflates count with signed contribution.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

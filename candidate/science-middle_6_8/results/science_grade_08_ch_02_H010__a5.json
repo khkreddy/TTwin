@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sana leaves a bowl of plain cooked rice uncovered on a warm kitchen shelf. She also keeps a jar of lemon pickle and a jar of murabba made with enough salt or sugar.\n\nWhich claims correctly explain the difference? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Microorganisms from the surroundings can settle on the uncovered rice and spoil it."
+    },
+    {
+      "id": "B",
+      "text": "Enough salt or sugar in the pickle and murabba stops microorganisms from infecting them in the same way."
+    },
+    {
+      "id": "C",
+      "text": "Even a tiny pinch of salt or sugar is enough to stop microorganisms from infecting any food."
+    },
+    {
+      "id": "D",
+      "text": "The rice spoils first, and that spoiling then produces the microorganisms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Microorganisms are widespread and can infect exposed food; high salt or sugar concentrations preserve pickle and murabba.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

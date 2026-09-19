@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zubin has parallelogram $PQRS$ with $PQ=11$ cm and $PS=6$ cm.\n\nOne or more options may be correct. Which two claims correctly state the side lengths that can be inferred?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$RS=11$ cm, because opposite sides of a parallelogram are equal."
+    },
+    {
+      "id": "B",
+      "text": "$PQ=PS=11$ cm, because adjacent sides of a parallelogram are equal."
+    },
+    {
+      "id": "C",
+      "text": "$QR=6$ cm, because opposite sides of a parallelogram are equal."
+    },
+    {
+      "id": "D",
+      "text": "All four sides equal $11$ cm, because every parallelogram is a rhombus."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In parallelogram PQRS, PQ opposite RS and PS opposite QR, so RS=11 cm and QR=6 cm. Adjacent sides need not be equal, and a parallelogram need not be a rhombus.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

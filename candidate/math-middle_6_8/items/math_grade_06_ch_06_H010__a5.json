@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_06/H010",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_06/H010",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_06/H010; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H010:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H010",
+    "stem": "Tushar looks at the diagram of an irregular closed shape drawn on $1\\,\\mathrm{cm}^{2}$ squared paper.\n\nWhich claim correctly estimates the area of the shape?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Count the square centimetres the shape covers on the grid, combining full squares with estimated parts of squares.",
+      "B": "Report the words squared paper as the area of the shape.",
+      "C": "The area estimate produces the squared-paper grid, so draw the grid after naming an area.",
+      "D": "Find the perimeter of the shape in centimetres and treat that length as the area."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round,font=\\sffamily\\footnotesize]\n  \\draw[step=1cm,gray!50,very thin] (0,0) grid (6,5);\n  \\draw[thick,fill=gray!20] (1.2,1.0)--(2.8,0.6)--(4.6,1.4)--(5.2,3.2)--(3.4,4.4)--(1.4,3.6)--(0.8,2.2)--cycle;\n  \\node[align=center] at (3.0,-0.7) {$1\\,\\mathrm{cm}^{2}$ squares};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal must draw a line through point $P$ that is parallel to a given line $AB$.\n\nWhich claim correctly describes the construction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep the same angle relationship to $AB$ (for example with a set square) so the new line through $P$ does not meet $AB$."
+    },
+    {
+      "id": "B",
+      "text": "Report the words given point as the parallel line."
+    },
+    {
+      "id": "C",
+      "text": "Point $P$ produces line $AB$, so move $AB$ until it passes through $P$ instead of drawing a new line through $P$."
+    },
+    {
+      "id": "D",
+      "text": "Read arrow marks that mean parallel as the construction steps, without drawing a new line through $P$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A parallel through P keeps equal corresponding angles with AB so the lines never meet. Naming the point label, moving AB onto P, or reading notation marks as the construction miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

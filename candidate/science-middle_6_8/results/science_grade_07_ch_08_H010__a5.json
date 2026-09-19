@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya times a bead sliding along a straight wire. In each equal 1 s interval the bead covers 6 cm, 6 cm, and 6 cm.\n\nWhich claims correctly classify this straight-line motion? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The bead is in uniform linear motion because equal distances are covered in equal time intervals."
+    },
+    {
+      "id": "B",
+      "text": "Equal distances in equal times on a straight path match constant speed."
+    },
+    {
+      "id": "C",
+      "text": "The bead is in non-uniform linear motion because equal distances in equal times mean the speed is changing."
+    },
+    {
+      "id": "D",
+      "text": "The bead would still be in uniform linear motion if the distances in equal times were 6 cm, 4 cm, and 9 cm."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal distances in equal times on a straight path mean uniform linear motion at constant speed. Calling that non-uniform reverses the rule, and unequal distances would not be uniform.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

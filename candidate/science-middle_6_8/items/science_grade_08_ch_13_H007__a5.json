@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_13/H007",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_13/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_13/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_13:H007:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-EARTH",
+    "chapter_id": "science/grade_08/ch_13",
+    "chapter_label": "Why Earth supports life",
+    "subtopic_id": "science/grade_08/ch_13/H007",
+    "stem": "The diagram shows sunlight heating a pond, water vapour rising to form a cloud, and moving air carrying the cloud. Kiara links these Earth factors to living things.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Water in the pond is part of the hydrosphere and is essential for life.",
+      "B": "Sunlight heats Earth so that water vapour can form clouds and later bring rain that refills water sources.",
+      "C": "Moving air and rainfall have no effect on which plants and animals can live in a place.",
+      "D": "Habitats for living beings come first, and that produces sunlight, water movement, and air movement."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick,fill=cyan!25] (0,0) rectangle (3.2,1.0);\n\\node at (1.6,0.5) {pond};\n\\draw[->,thick] (1.6,1.05) -- (1.6,2.2);\n\\node[right] at (1.7,1.6) {water vapour};\n\\draw[thick,fill=gray!25] (0.6,2.3) .. controls (1.2,2.9) and (2.2,2.9) .. (2.8,2.3) -- cycle;\n\\node at (1.7,3.15) {cloud};\n\\draw[->,thick] (2.9,2.5) -- (4.4,2.5);\n\\node at (3.7,2.85) {moving air};\n\\draw[yellow!80!orange,fill=yellow!70] (5.2,3.0) circle (0.35);\n\\node at (5.2,3.55) {sunlight};\n\\draw[->,thick,yellow!70!orange] (5.0,2.7) -- (2.8,1.2);\n\\node at (2.0,-0.45) {Earth factors that sustain life};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_13/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

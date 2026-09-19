@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows a rectangle covered by $1$ cm by $1$ cm unit squares. Alok counts $6$ squares along the length and $2$ along the width.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The area is $12$ square centimetres, because $6\\times 2$ unit squares fill the rectangle."
+    },
+    {
+      "id": "B",
+      "text": "The area is $8$ cm, by adding $6$ and $2$ and dropping square units."
+    },
+    {
+      "id": "C",
+      "text": "The area equals length multiplied by width, reported in square units."
+    },
+    {
+      "id": "D",
+      "text": "The area is $6$ square centimetres, because $6$ is the longer side printed on the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm]\n  \\draw[gray!70,densely dashed,line width=0.35pt] (0,0) grid[step=1] (6,2);\n  \\draw[black,line width=1.1pt] (0,0) rectangle (6,2);\n  \\node[below] at (3,-0.35) {$6$ cm};\n  \\node[left] at (-0.35,1) {$2$ cm};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area counts unit squares: 6×2=12 cm², which is length times width in square units. Adding the sides drops square units; the longer printed side alone is not the area.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source quadrilateral grid as a 6-by-2 unit-square rectangle."
+  }
+}

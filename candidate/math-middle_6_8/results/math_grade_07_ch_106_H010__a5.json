@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit walks a 6-step garden path taking either 1 step or 2 steps at a time. Every valid walking pattern begins with either a 1-step or a 2-step.\n\nWhich claim correctly counts the 6-step patterns?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The number of 6-step patterns equals the number of 5-step patterns plus the number of 4-step patterns."
+    },
+    {
+      "id": "B",
+      "text": "The answer is the word rhythm, because that label belongs on step-counting problems."
+    },
+    {
+      "id": "C",
+      "text": "Count only the patterns that begin with a 1-step, and ignore those that begin with a 2-step."
+    },
+    {
+      "id": "D",
+      "text": "Start from the 6-step total and invent the 5-step and 4-step counts from it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Every 6-step pattern starts with 1 then a 5-step pattern, or with 2 then a 4-step pattern, so the counts add. Naming rhythm swaps the decision for a label. Ignoring 2-start cases drops a required case. Inventing the smaller counts from the 6-total reverses the split.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

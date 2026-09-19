@@ -1,0 +1,107 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_204/H009",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_204/H009",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_204/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H009",
+    "stem": "The diagram shows a net of a cuboid with edges $8$ cm, $5$ cm and $4$ cm. An ant crawls on the surface from corner $A$ to opposite corner $G$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly identifies a shortest surface path?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "On the net that joins faces into a $5$-by-$12$ rectangle, the straight $A$-to-$G$ segment has length $13$ cm, shortest among the three standard unfolds."
+          },
+          {
+            "id": "B",
+            "text": "The shortest surface path is $\\sqrt{8^{2}+5^{2}+4^{2}}=\\sqrt{105}$ cm, the interior space diagonal."
+          },
+          {
+            "id": "C",
+            "text": "Adding $8+5+4=17$ cm gives the shortest surface path."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice that compares unfold lengths.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.4,line cap=round,line join=round,every node/.style={font=\\small}]\n  \\draw[thick] (0,0) rectangle (5,4);\n  \\draw[thick] (5,0) rectangle (13,4);\n  \\draw[thick] (13,0) rectangle (18,4);\n  \\draw[thick] (5,4) rectangle (13,12);\n  \\node at (2.5,2) {$5\\times4$};\n  \\node at (9,2) {$8\\times4$};\n  \\node at (15.5,2) {$5\\times4$};\n  \\node at (9,8) {$8\\times5$};\n  \\fill (5,0) circle (2.5pt) node[below left] {$A$};\n  \\fill (13,12) circle (2.5pt) node[above right] {$G$};\n  \\draw[very thick,dashed] (5,0)--(13,12);\n  \\node at (9,-1.2) {edges $8$, $5$, $4$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

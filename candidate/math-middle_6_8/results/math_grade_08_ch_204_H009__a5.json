@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows a net of a cuboid with edges $8$ cm, $5$ cm and $4$ cm. An ant crawls on the surface from corner $A$ to opposite corner $G$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly identifies a shortest surface path?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "On the net that joins faces into a $5$-by-$12$ rectangle, the straight $A$-to-$G$ segment has length $13$ cm, shortest among the three standard unfolds."
+        },
+        {
+          "id": "B",
+          "text": "The shortest surface path is $\\sqrt{8^{2}+5^{2}+4^{2}}=\\sqrt{105}$ cm, the interior space diagonal."
+        },
+        {
+          "id": "C",
+          "text": "Adding $8+5+4=17$ cm gives the shortest surface path."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that compares unfold lengths.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.4,line cap=round,line join=round,every node/.style={font=\\small}]\n  \\draw[thick] (0,0) rectangle (5,4);\n  \\draw[thick] (5,0) rectangle (13,4);\n  \\draw[thick] (13,0) rectangle (18,4);\n  \\draw[thick] (5,4) rectangle (13,12);\n  \\node at (2.5,2) {$5\\times4$};\n  \\node at (9,2) {$8\\times4$};\n  \\node at (15.5,2) {$5\\times4$};\n  \\node at (9,8) {$8\\times5$};\n  \\fill (5,0) circle (2.5pt) node[below left] {$A$};\n  \\fill (13,12) circle (2.5pt) node[above right] {$G$};\n  \\draw[very thick,dashed] (5,0)--(13,12);\n  \\node at (9,-1.2) {edges $8$, $5$, $4$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The three standard unfolds give $\\sqrt{8^{2}+9^{2}}=\\sqrt{145}$, $\\sqrt{5^{2}+12^{2}}=13$, and $\\sqrt{4^{2}+13^{2}}=\\sqrt{185}$; the least is $13$ cm on the $5$-by-$12$ net. The space diagonal and edge sum are not surface paths."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Unfold lengths √145, 13, √185; shortest is 13 on the 5-by-12 net. Space diagonal and edge sum are not surface paths.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source right triangle as cuboid net 8×5×4 with dashed A-to-G path on the 5-by-12 unfold."
+  }
+}

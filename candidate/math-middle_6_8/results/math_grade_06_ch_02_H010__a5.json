@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha looks at the diagram. Rays $OX$ and $OY$ meet at $O$ and form $\\angle XOY$. A full turn around $O$ is divided into $360$ equal parts.\n\nWhich claim correctly assigns a degree measure to $\\angle XOY$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The measure of $\\angle XOY$ is the number of those equal one-degree parts that fit in the turn from ray $OX$ to ray $OY$."
+    },
+    {
+      "id": "B",
+      "text": "Report the words one-degree unit as the measure of $\\angle XOY$."
+    },
+    {
+      "id": "C",
+      "text": "Count any parts of a full turn between the arms, even when those parts are not equal."
+    },
+    {
+      "id": "D",
+      "text": "The degree number written for $\\angle XOY$ produces the equal parts of the full turn, so she starts from a chosen number and then splits the turn."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (O) at (0,0);\n  \\coordinate (X) at (3.2,0);\n  \\coordinate (Y) at (1.6,2.4);\n  \\draw[line width=0.7pt,->] (O)--(X) node[right] {$X$};\n  \\draw[line width=0.7pt,->] (O)--(Y) node[above] {$Y$};\n  \\node[below left] at (O) {$O$};\n  \\draw[line width=0.55pt] (0.55,0) arc[start angle=0,end angle=56,radius=0.55];\n  \\node at (0.95,0.35) {$\\angle XOY$};\n  \\node[align=center,anchor=west] at (4.0,1.6) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A degree measure counts how many equal one-degree parts of a full turn sit between the arms. Naming the unit label, counting unequal parts, or starting from a written degree number to invent the split all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source right triangle as rays OX and OY meeting at O with an angle arc."
+  }
+}

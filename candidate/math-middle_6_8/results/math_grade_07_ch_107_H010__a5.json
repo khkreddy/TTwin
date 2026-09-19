@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Madhav measures a triangle with side lengths $9$ cm, $9$ cm, and $5$ cm.\n\nWhich two claims correctly classify the triangle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangle is isosceles, because exactly two sides are equal."
+    },
+    {
+      "id": "B",
+      "text": "The triangle is equilateral, because the printed length $9$ cm appears twice."
+    },
+    {
+      "id": "C",
+      "text": "The triangle is not equilateral, because the third side is $5$ cm."
+    },
+    {
+      "id": "D",
+      "text": "Call the triangle side equality, using that phrase as the type name."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Exactly two sides equal means isosceles and rules out equilateral. Treating a repeated printed 9 as equilateral grabs a surface feature. Naming 'side equality' as the type swaps the classification for a label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

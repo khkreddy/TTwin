@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Charu hangs a metal spoon from a string, pulls it a little to one side, and lets go. The spoon moves to and fro about its rest position. Nearby, a marble rolls steadily in one direction across the floor.\n\nWhich claims correctly classify the motions? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The spoon shows oscillatory motion because it moves to and fro about a fixed position."
+    },
+    {
+      "id": "B",
+      "text": "The marble's one-way roll across the floor is not oscillatory motion."
+    },
+    {
+      "id": "C",
+      "text": "The spoon's to-and-fro motion should be called circular motion."
+    },
+    {
+      "id": "D",
+      "text": "The spoon is oscillatory even if it drifts away once and never returns."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Oscillatory motion is to-and-fro about a fixed position, so the spoon qualifies and the one-way marble does not. Circular is the wrong label, and drifting away without returning is not oscillatory.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni compares a bank debit of $-50$, a height of $+12\\,\\mathrm{m}$ above sea level, and a temperature of $-8^{\\circ}\\mathrm{C}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each uses a zero reference, with amounts above or below that zero marked positive or negative."
+    },
+    {
+      "id": "B",
+      "text": "Report the word debit alone as the shared structure."
+    },
+    {
+      "id": "C",
+      "text": "The shared signed-number structure produces the bank debit, so the height and temperature are only decorations."
+    },
+    {
+      "id": "D",
+      "text": "Rewrite each example as subtraction of the inverse, and treat that rewrite as the shared structure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Credits/debits, heights vs sea level, and temperatures vs 0°C share a zero reference with signed direction. Naming debit alone, treating the structure as producing only the debit, or switching to inverse-subtraction rewrites miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

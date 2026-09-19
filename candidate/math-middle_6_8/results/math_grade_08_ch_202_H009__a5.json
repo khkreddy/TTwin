@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Damini has the positive-integer triple $(8, 15, 17)$ and takes $17$ as the largest entry.\n\nWhich claim correctly classifies the triple?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a Baudhāyana triple because $8^{2}+15^{2}=17^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "It is not a Baudhāyana triple, because $8$, $15$, and $17$ are not consecutive integers."
+    },
+    {
+      "id": "C",
+      "text": "It is a Baudhāyana triple because $8+15=23$ is larger than $17$."
+    },
+    {
+      "id": "D",
+      "text": "It is a Baudhāyana triple because the label applies to any triple that lists two legs and a hypotenuse."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "mechanism_conflation",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "8²+15²=64+225=289=17², so (8,15,17) is a Baudhāyana triple. Consecutive integers, an additive comparison, or skipping the square check all miss a²+b²=c².",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "mechanism_conflation",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

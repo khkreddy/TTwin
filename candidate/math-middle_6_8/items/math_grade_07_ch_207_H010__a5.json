@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_207/H010",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_207/H010",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_207/H010; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_207:H010:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_207",
+    "chapter_label": "math/grade_07/ch_207",
+    "subtopic_id": "math/grade_07/ch_207/H010",
+    "stem": "Urvashi rewrites $6x+4=2x+16$ in the form $Ax+B=Cx+D$ and then uses $x=\\dfrac{D-B}{A-C}$.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$A=6$, $B=4$, $C=2$, $D=16$.",
+      "B": "Call the answer the letter $B$ alone, and stop.",
+      "C": "$x=\\dfrac{16-4}{6-2}=3$.",
+      "D": "Use $x=\\dfrac{D-B}{A-C}$ even when the equation is not first put in $Ax+B=Cx+D$ form."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_207/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

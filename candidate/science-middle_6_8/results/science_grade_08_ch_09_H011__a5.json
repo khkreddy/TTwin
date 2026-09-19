@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows air in a sealed syringe before and after heating. After heating, the plunger moves out, volume rises, and particles spread farther apart.\n\nWhich claims correctly predict how temperature and pressure change density? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heating the air decreases its density as particles spread farther apart and volume rises."
+    },
+    {
+      "id": "B",
+      "text": "Raising pressure on the air by pushing the plunger increases density by decreasing volume."
+    },
+    {
+      "id": "C",
+      "text": "Raising pressure changes the density of solids and liquids as much as it changes the density of gases."
+    },
+    {
+      "id": "D",
+      "text": "Density depends only on the shape of the syringe, not on temperature or pressure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small, >=stealth]\n\\draw (0,0) rectangle (1.2,2.4);\n\\draw (0.2,1.6) -- (1.0,1.6);\n\\foreach \\x/\\y in {0.4/0.4,0.8/0.5,0.5/0.9,0.9/1.0,0.35/1.3,0.75/1.35}\n  \\fill (\\x,\\y) circle (1.5pt);\n\\node[below] at (0.6,-0.15) {before heating};\n\\draw (3.2,0) rectangle (1.2+3.2,3.0);\n\\draw (3.4,2.2) -- (4.2,2.2);\n\\foreach \\x/\\y in {3.45/0.35,4.0/0.55,3.6/1.0,4.15/1.2,3.5/1.6,3.95/1.85,3.7/0.75,4.1/1.5}\n  \\fill (\\x,\\y) circle (1.5pt);\n\\node[below] at (3.8,-0.15) {after heating};\n\\draw[->] (1.5,1.2) -- (2.9,1.2) node[midway,above] {heat};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating spreads particles and raises volume, so gas density falls; raising pressure mainly squeezes gases into smaller volume and raises gas density. Pressure does not change solids and liquids the same way, and density is not fixed by syringe shape alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote IGCSE force-arrow figure into before/after heated sealed-syringe particle diagram for density."
+  }
+}

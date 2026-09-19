@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tejas colours a $6$-by-$6$ grid in checkerboard black and white, then removes two opposite corner squares that are the same colour. He wants to cover the remaining region with $2 \\times 1$ tiles that do not overlap and leave no gaps.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the word checkerboard, because that colouring word is printed with the grid."
+    },
+    {
+      "id": "B",
+      "text": "Yes: the remaining region has $34$ squares, an even count, so $2 \\times 1$ tiles can cover it."
+    },
+    {
+      "id": "C",
+      "text": "No: each $2 \\times 1$ tile covers one black and one white square, but the remaining region has unequal black and white counts."
+    },
+    {
+      "id": "D",
+      "text": "The same colouring argument also settles tiling of every even-area shape, including shapes with no grid colouring."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Removing two same-colour corners leaves unequal black and white counts, so 2×1 tiles cannot cover even though 34 is even. Naming the colouring word swaps the decision for a label. Using even area alone omits the colour balance. Extending the argument to uncoloured shapes over-extends the invariant.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

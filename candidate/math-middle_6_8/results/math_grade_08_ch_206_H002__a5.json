@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha finishes a date trick and gets the total $1270$. The constant part to remove is $165$. After that removal, the remaining number codes month and day as $100M + D$.\n\nWhich date is coded?",
+  "options": [
+    {
+      "id": "A",
+      "text": "November $5$"
+    },
+    {
+      "id": "B",
+      "text": "October $5$"
+    },
+    {
+      "id": "C",
+      "text": "November $15$"
+    },
+    {
+      "id": "D",
+      "text": "May $11$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1270−165=1105=100×11+5, so month 11 day 5: November 5. October 5 drops a month, November 15 misreads digits, and May 11 swaps month with day.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

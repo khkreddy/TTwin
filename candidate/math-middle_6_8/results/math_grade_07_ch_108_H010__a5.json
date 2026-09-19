@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nandini writes division for two oil problems.\nProblem 1: Share $\\frac{5}{6}$ litre equally among 5 cups.\nProblem 2: How many $\\frac{1}{12}$ litre servings are in $\\frac{5}{6}$ litre?",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly matches both problems to division expressions?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Problem 1 is $\\frac{5}{6}\\div 5$ and Problem 2 is $\\frac{5}{6}\\div\\frac{1}{12}$."
+        },
+        {
+          "id": "B",
+          "text": "Problem 1 is answered by the phrase total amount, not by a division expression."
+        },
+        {
+          "id": "C",
+          "text": "Problem 1 is $5\\div\\frac{5}{6}$ and Problem 2 is $\\frac{1}{12}\\div\\frac{5}{6}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Equal sharing uses total ÷ number of shares; counting how many fixed servings fit uses total ÷ size of each serving."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sharing 5/6 among 5 cups is (5/6)÷5; counting 1/12 servings in 5/6 is (5/6)÷(1/12). Naming 'total amount' swaps the expression for a label. Reversing each quotient swaps dividend and divisor.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

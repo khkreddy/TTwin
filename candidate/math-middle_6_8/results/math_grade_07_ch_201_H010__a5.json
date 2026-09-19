@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows equilateral triangle $ABC$ with $AB=BC=CA$ and midpoint $D$ of side $BC$. Omar has already shown $\\triangle ABD \\cong \\triangle ACD$.\n\nWhich claim correctly uses that congruence?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Corresponding parts are equal, so $\\angle BAD=\\angle CAD$, and each angle of equilateral $\\triangle ABC$ measures $60^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "Equal angles at $A$ force the congruence of $\\triangle ABD$ and $\\triangle ACD$, so the congruence is not needed."
+    },
+    {
+      "id": "C",
+      "text": "Congruence of the triangles is enough even if the vertex matching is ignored."
+    },
+    {
+      "id": "D",
+      "text": "Only sides can be equal from congruence; the $60^\\circ$ angle facts need a separate rule outside corresponding parts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (B) at (0,0);\n  \\coordinate (C) at (3.6,0);\n  \\coordinate (A) at (1.8,3.117);\n  \\coordinate (D) at (1.8,0);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\draw[line width=0.9pt] (A)--(D);\n  \\node[above] at (A) {A};\n  \\node[below left] at (B) {B};\n  \\node[below right] at (C) {C};\n  \\node[below] at (D) {D};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With ABD ≅ ACD already established, corresponding parts give equal angles at A; equilateral then yields 60° angles. Saying the equal angles create the congruence reverses the given order. Ignoring vertex matching omits the correspondence condition. Restricting congruence to sides alone over-narrows corresponding parts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle into equilateral ABC with median AD to match the congruence hinge."
+  }
+}

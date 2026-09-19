@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Navya lists everyday uses on a chart: oxygen for breathing, nitrogen in fertilisers for plants, and chlorine to purify drinking water. Metal pans and wires sit on the same table.\n\nWhich claims correctly judge the importance of non-metals? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Non-metals such as oxygen, nitrogen, and chlorine are essential in everyday life alongside metals."
+    },
+    {
+      "id": "B",
+      "text": "Nitrogen is used to purify drinking water."
+    },
+    {
+      "id": "C",
+      "text": "Chlorine helps purify drinking water, so non-metals matter even when metals are visible as pans and wires."
+    },
+    {
+      "id": "D",
+      "text": "Only the metal pans and wires matter in everyday life."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Oxygen, nitrogen, and chlorine have essential everyday uses, so non-metals matter even when metal tools are visible. Nitrogen is not the water-purifying non-metal here; chlorine is. Visible metals alone do not make non-metals unimportant.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

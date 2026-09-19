@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_105/H010",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_105/H010",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_105/H010; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H010:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H010",
+    "stem": "Komal must draw a line through point $P$ that is parallel to a given line $AB$.\n\nWhich claim correctly describes the construction?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Keep the same angle relationship to $AB$ (for example with a set square) so the new line through $P$ does not meet $AB$.",
+      "B": "Report the words given point as the parallel line.",
+      "C": "Point $P$ produces line $AB$, so move $AB$ until it passes through $P$ instead of drawing a new line through $P$.",
+      "D": "Read arrow marks that mean parallel as the construction steps, without drawing a new line through $P$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

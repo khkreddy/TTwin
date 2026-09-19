@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bhavna rewrites $\\dfrac{2}{5}$ so that its denominator is $20$, in order to add it to $\\dfrac{7}{20}$.\n\nWhy must the numerator change along with the denominator?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Numerator and denominator are both multiplied by $4$, so $\\dfrac{2}{5}$ becomes $\\dfrac{8}{20}$ and keeps the same value."
+    },
+    {
+      "id": "B",
+      "text": "Only the denominator becomes $20$; the numerator stays $2$."
+    },
+    {
+      "id": "C",
+      "text": "Report the words equivalent fraction as the new numerator."
+    },
+    {
+      "id": "D",
+      "text": "The rewritten form $\\dfrac{8}{20}$ produces the original $\\dfrac{2}{5}$, so she starts from $\\dfrac{8}{20}$ and only then names the factor $4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To keep the value, multiply numerator and denominator by the same factor: 2/5=8/20. Leaving the numerator fixed, naming the label, or starting from the rewritten form reverse or omit that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

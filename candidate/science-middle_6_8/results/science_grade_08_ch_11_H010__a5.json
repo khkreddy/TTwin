@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Myra sees a tiny star-like point of light moving steadily across the night sky. It does not twinkle like the fixed stars, and it is not the Moon.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The moving point may be an artificial satellite — a human-made object that orbits Earth."
+    },
+    {
+      "id": "2",
+      "text": "The Moon is Earth's natural satellite, and it is different from artificial satellites."
+    },
+    {
+      "id": "3",
+      "text": "Any moving speck in the night sky must be the Moon."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Artificial satellites can appear as moving star-like points; the Moon is the natural satellite and is not the same as those human-made objects. Statement 3 is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

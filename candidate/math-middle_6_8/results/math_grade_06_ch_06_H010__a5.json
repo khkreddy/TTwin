@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar looks at the diagram of an irregular closed shape drawn on $1\\,\\mathrm{cm}^{2}$ squared paper.\n\nWhich claim correctly estimates the area of the shape?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count the square centimetres the shape covers on the grid, combining full squares with estimated parts of squares."
+    },
+    {
+      "id": "B",
+      "text": "Report the words squared paper as the area of the shape."
+    },
+    {
+      "id": "C",
+      "text": "The area estimate produces the squared-paper grid, so draw the grid after naming an area."
+    },
+    {
+      "id": "D",
+      "text": "Find the perimeter of the shape in centimetres and treat that length as the area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round,font=\\sffamily\\footnotesize]\n  \\draw[step=1cm,gray!50,very thin] (0,0) grid (6,5);\n  \\draw[thick,fill=gray!20] (1.2,1.0)--(2.8,0.6)--(4.6,1.4)--(5.2,3.2)--(3.4,4.4)--(1.4,3.6)--(0.8,2.2)--cycle;\n  \\node[align=center] at (3.0,-0.7) {$1\\,\\mathrm{cm}^{2}$ squares};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area on squared paper is estimated by counting covered square units, including partial squares. Naming the paper, drawing the grid after inventing an area, or swapping in perimeter all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Added a simple irregular closed shape on a 1 cm² square grid."
+  }
+}

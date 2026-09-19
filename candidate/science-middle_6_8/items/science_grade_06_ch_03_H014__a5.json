@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_03/H014",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_03/H014",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "relationship_reversal",
+      "C": "term_substitution",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_03/H014; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_03:H014:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_06/ch_03",
+    "chapter_label": "Mindful eating: a path to a healthy body",
+    "subtopic_id": "science/grade_06/ch_03/H014",
+    "stem": "Ojas reads two 100 g nutrition labels for after-school snacks.\n\nPotato wafers: 536 kcal, 35.0 g fat, 7.0 g protein, 4.8 g dietary fibre.\nRoasted chana: 355 kcal, 6.26 g fat, 18.64 g protein, 16.8 g dietary fibre.\n\nWhich claim correctly identifies the junk-food pattern?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Potato wafers better fit the junk-food pattern because they are high in calories and fat and low in protein and dietary fibre.",
+      "B": "Roasted chana better fits the junk-food pattern because it lists more protein and dietary fibre.",
+      "C": "Dietary fibre (g) equals total carbohydrate (g) on every junk-food label.",
+      "D": "The two labels cannot be compared because both are given per 100 g."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_03/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

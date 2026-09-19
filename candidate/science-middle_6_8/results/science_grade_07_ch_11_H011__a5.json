@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela peeks over a tall bookshelf with a Z-shaped periscope that holds two plane mirrors. The book titles on the other side are not directly visible to her eye.\n\nWhich claims correctly explain how she sees the titles? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Light from the titles reflects from the first plane mirror and then from the second plane mirror to her eye."
+    },
+    {
+      "id": "B",
+      "text": "Refraction at both plane mirrors guides the light to her eye."
+    },
+    {
+      "id": "C",
+      "text": "Two plane mirrors are needed so the light path can turn twice in the Z-shaped periscope."
+    },
+    {
+      "id": "D",
+      "text": "One plane mirror is enough for this Z-shaped periscope to work."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A simple Z-shaped periscope uses reflection at two plane mirrors so light reaches an eye that cannot see the object directly. Refraction is the wrong process here, and one mirror is not enough for that two-turn path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

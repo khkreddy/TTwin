@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema wants to compute $52 \\times 35$ by rewriting one factor and using the distributive property.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $52$ as $50 + 3$, then compute $50 \\times 35 + 3 \\times 35$."
+    },
+    {
+      "id": "B",
+      "text": "Write $52$ as $50 + 2$, then compute $50 \\times 35 + 2 \\times 35$."
+    },
+    {
+      "id": "C",
+      "text": "Write $35$ as $30 + 5$, then compute $52 \\times 30 + 52 \\times 5$."
+    },
+    {
+      "id": "D",
+      "text": "Treat the word product alone as the rewrite, with no decomposition of $52$ or $35$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "52=50+2 and 35=30+5 are exact decompositions, so both distributive rewrites keep the product. 50+3 is not 52, and naming the product label is not a rewrite.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

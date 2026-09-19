@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bilal needs an enlarged view of a tiny circuit mark and also wants parallel torch rays to meet at one bright point.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which tool matches both needs?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A concave mirror held close for enlarged viewing, and a concave mirror facing parallel rays for light concentration."
+        },
+        {
+          "id": "B",
+          "text": "A plane mirror for both enlarged viewing and light concentration."
+        },
+        {
+          "id": "C",
+          "text": "A convex mirror held close for an enlarged view of the tiny mark."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Why does a concave mirror help with the tiny circuit mark when held close?",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "It can give an enlarged image of a nearby object."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Concave mirrors can enlarge nearby objects and can converge parallel light to a point. Plane and convex mirrors do not match both of those needs.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_207/H002",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_207/H002",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": null,
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_207/H002; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_207:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_08/ch_207",
+    "chapter_label": "math/grade_08/ch_207",
+    "subtopic_id": "math/grade_08/ch_207/H002",
+    "stem": "The diagram shows a rectangle covered by $1$ cm by $1$ cm unit squares. Alok counts $6$ squares along the length and $2$ along the width.\n\nOne or more options may be correct. Which two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The area is $12$ square centimetres, because $6\\times 2$ unit squares fill the rectangle.",
+      "B": "The area is $8$ cm, by adding $6$ and $2$ and dropping square units.",
+      "C": "The area equals length multiplied by width, reported in square units.",
+      "D": "The area is $6$ square centimetres, because $6$ is the longer side printed on the diagram."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm]\n  \\draw[gray!70,densely dashed,line width=0.35pt] (0,0) grid[step=1] (6,2);\n  \\draw[black,line width=1.1pt] (0,0) rectangle (6,2);\n  \\node[below] at (3,-0.35) {$6$ cm};\n  \\node[left] at (-0.35,1) {$2$ cm};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_207/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

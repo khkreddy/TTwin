@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sagar records that two classmates each drink about $1.5$ litres of water on a school day. He wants a claim about water drinking for all children in the school.\n\nWhich claim is warranted?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Two classmates are enough for a schoolwide claim once the litre amounts are written down."
+    },
+    {
+      "id": "B",
+      "text": "Schoolwide water drinking forces the two classmates' amounts, so the school average must be $1.5$ litres."
+    },
+    {
+      "id": "C",
+      "text": "The two classmates give a local note, but not a schoolwide water-drinking claim."
+    },
+    {
+      "id": "D",
+      "text": "Any pair of litre amounts may be used as a school estimate for every measured habit, not only water drinking."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two classmates are too thin a sample for a schoolwide claim. Treating the written amounts as enough omits broader evidence. Saying schoolwide drinking forces the two readings reverses sample and generalisation. Extending the pair to every habit over-extends the data.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

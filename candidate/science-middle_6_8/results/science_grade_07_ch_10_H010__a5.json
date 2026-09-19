@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Pihu keeps a sprouting seed and a green leaf overnight in a dark cupboard. She asks what happens when these living plant parts respire to release energy.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "In living plant parts, glucose reacts with oxygen to release carbon dioxide, water, and energy."
+    },
+    {
+      "id": "2",
+      "text": "Only green parts carry out respiration; non-green parts such as roots do not."
+    },
+    {
+      "id": "3",
+      "text": "Glucose reacts with nitrogen instead of oxygen in every plant part during respiration."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Respiration uses glucose and oxygen in all living plant parts, releasing CO2, water, and energy. Non-green parts also respire, and nitrogen does not replace oxygen in that reaction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

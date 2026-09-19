@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz's scores are $12$, $15$, and $18$, so the mean is $15$. He subtracts $4$ from every score.\n\nWhich claim correctly states what happens to the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The new mean is $11$, because every value falls by $4$ so the mean falls by $4$."
+    },
+    {
+      "id": "B",
+      "text": "The new mean stays $15$, because the gaps between the scores are unchanged."
+    },
+    {
+      "id": "C",
+      "text": "The new mean is $11$ only when exactly one of the three scores is reduced by $4$."
+    },
+    {
+      "id": "D",
+      "text": "The answer is the phrase fixed subtraction, with no new mean computed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Subtracting 4 from every value subtracts 4 from the mean: 15−4=11. Unchanged gaps omit the shared shift; requiring only one score to move is the wrong scope; naming the phrase alone is not the mean.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_205/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_205/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_205/H005; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H005:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M8",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H005",
+    "stem": "Firoz's scores are $12$, $15$, and $18$, so the mean is $15$. He subtracts $4$ from every score.\n\nWhich claim correctly states what happens to the mean?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The new mean is $11$, because every value falls by $4$ so the mean falls by $4$.",
+      "B": "The new mean stays $15$, because the gaps between the scores are unchanged.",
+      "C": "The new mean is $11$ only when exactly one of the three scores is reduced by $4$.",
+      "D": "The answer is the phrase fixed subtraction, with no new mean computed."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

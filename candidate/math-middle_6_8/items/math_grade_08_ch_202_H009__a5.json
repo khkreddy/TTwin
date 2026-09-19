@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_202/H009",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_202/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "surface_feature_capture",
+      "C": "mechanism_conflation",
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_202/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "mechanism_conflation",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H009",
+    "stem": "Damini has the positive-integer triple $(8, 15, 17)$ and takes $17$ as the largest entry.\n\nWhich claim correctly classifies the triple?",
+    "item_type": "mcq",
+    "options": {
+      "A": "It is a Baudhāyana triple because $8^{2}+15^{2}=17^{2}$.",
+      "B": "It is not a Baudhāyana triple, because $8$, $15$, and $17$ are not consecutive integers.",
+      "C": "It is a Baudhāyana triple because $8+15=23$ is larger than $17$.",
+      "D": "It is a Baudhāyana triple because the label applies to any triple that lists two legs and a hypotenuse."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

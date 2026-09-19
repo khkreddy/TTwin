@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zara measures a metal sample of density 2.7 g/cm³. Water at the same temperature has density 1.0 g/cm³.\n\nWhich claims about the relative density of the metal with respect to water are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The relative density equals 2.7 ÷ 1.0 = 2.7."
+    },
+    {
+      "id": "B",
+      "text": "The relative density is a number without units."
+    },
+    {
+      "id": "C",
+      "text": "The relative density is 2.7 g/cm³."
+    },
+    {
+      "id": "D",
+      "text": "Relative density is the same idea as density, so the metal's density already is its relative density."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Relative density = density of substance ÷ density of water at that temperature, so units cancel and the value is 2.7 with no unit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

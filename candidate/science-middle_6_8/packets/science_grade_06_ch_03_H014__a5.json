@@ -1,0 +1,114 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T13:17:40.922Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_03/H014",
+      "unit_id": "science/grade_06/ch_03/H014",
+      "title": "Compare nutrition labels to decide which packaged food better fits the junk-food pattern, using calories, fats, proteins, and dietary fibre.",
+      "node_labels": [
+        "Food, digestion, growth and health",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Dietary fibre (g) = total carbohydrate (g)."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "For the same amount of food, roasted chana has more calories than potato wafers."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Roasted chana fits the junk-food pattern more strongly than potato wafers."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Two nutrition labels both given per 50 g cannot be compared."
+      }
+    ],
+    "enrichment": "Foods with high calories due to high sugar and fat and very low amounts of proteins, minerals, vitamins, and dietary fibres are called junk foods; potato wafers have 536 kcal, 35.0 g fat, 7.0 g protein, and 4.8 g dietary fibre per 100 g, while roasted chana has 355 kcal, 6.26 g fat, 18.64 g protein, and 16.8 g dietary fibre per 100 g. higher energy and fat with lower protein and dietary fibre on the label -> stronger match to the junk-food pattern The learner correctly applies this rule: Foods with high calories due to high sugar and fat and very low amounts of proteins, minerals, vitamins, and dietary fibres are called junk foods; potato wafers have 536 kcal, 35.0 g fat, 7.0 g protein, and 4.8 g dietary fibre per 100 g, while roasted chana has 355 kcal, 6.26 g fat, 18.64 g protein, and 16.8 g dietary fibre per 100 g. The food with the biggest single number on the label is automatically the junk food.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Compare nutrition labels to decide which packaged food better fits the junk-food pattern, using calories, fats, proteins, and dietary fibre. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-clas",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_03/H014",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "relationship_reversal",
+      "C": "term_substitution",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_03/H014; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

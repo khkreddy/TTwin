@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows sunlight heating a pond, water vapour rising to form a cloud, and moving air carrying the cloud. Kiara links these Earth factors to living things.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water in the pond is part of the hydrosphere and is essential for life."
+    },
+    {
+      "id": "B",
+      "text": "Sunlight heats Earth so that water vapour can form clouds and later bring rain that refills water sources."
+    },
+    {
+      "id": "C",
+      "text": "Moving air and rainfall have no effect on which plants and animals can live in a place."
+    },
+    {
+      "id": "D",
+      "text": "Habitats for living beings come first, and that produces sunlight, water movement, and air movement."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick,fill=cyan!25] (0,0) rectangle (3.2,1.0);\n\\node at (1.6,0.5) {pond};\n\\draw[->,thick] (1.6,1.05) -- (1.6,2.2);\n\\node[right] at (1.7,1.6) {water vapour};\n\\draw[thick,fill=gray!25] (0.6,2.3) .. controls (1.2,2.9) and (2.2,2.9) .. (2.8,2.3) -- cycle;\n\\node at (1.7,3.15) {cloud};\n\\draw[->,thick] (2.9,2.5) -- (4.4,2.5);\n\\node at (3.7,2.85) {moving air};\n\\draw[yellow!80!orange,fill=yellow!70] (5.2,3.0) circle (0.35);\n\\node at (5.2,3.55) {sunlight};\n\\draw[->,thick,yellow!70!orange] (5.0,2.7) -- (2.8,1.2);\n\\node at (2.0,-0.45) {Earth factors that sustain life};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water (hydrosphere) is essential; sunlight drives evaporation, clouds, and rain; moving air and rainfall help shape habitats. C denies that link; D reverses cause and effect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote lens-ray figure into pond, vapour, cloud, moving air, and sunlight."
+  }
+}

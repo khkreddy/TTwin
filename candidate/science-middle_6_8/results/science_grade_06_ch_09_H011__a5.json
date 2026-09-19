@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bilal has a mixture of chalk powder, common salt, and water. He needs pure chalk powder and pure salt as separate products.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan correctly separates the mixture?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Filter to remove the chalk powder, then evaporate the filtrate to recover the salt."
+        },
+        {
+          "id": "B",
+          "text": "Use one careful filtration alone to obtain pure chalk powder, pure salt, and pure water all at once."
+        },
+        {
+          "id": "C",
+          "text": "Evaporate all the water first, then filter the dry chalk-and-salt powder to collect pure salt."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Chalk powder is insoluble so filtration removes it; salt stays dissolved and is recovered by evaporating the filtrate. One method alone cannot give both pure products."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A mixture with chalk powder, salt, and water needs a sequence: filter the insoluble chalk, then evaporate to get salt. Filtration alone leaves salt in water; evaporating first leaves a dry chalk–salt mix that filtration cannot purify.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}
