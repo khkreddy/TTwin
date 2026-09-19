@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_09/H012",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_09/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_09/H012",
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Used term_substitution for reversing ice vs water heaviness; kept surface_feature_capture and scope_error as the other wrong frames."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_09:H012:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MIXTURE",
+    "chapter_id": "science/grade_08/ch_09",
+    "chapter_label": "Solutions and density",
+    "subtopic_id": "science/grade_08/ch_09/H012",
+    "stem": "Falguni holds a wooden stick and an iron rod of the same size; the iron rod feels heavier. Density can differ even when size is the same, so an object that feels heavy may still float if its density is low. Later she sees ice floating on liquid water because ice is lighter than liquid water.\n\nWhich claim best explains floating or sinking here?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Density matters more than size alone; ice is lighter than liquid water, so the ice floats.",
+      "B": "The iron rod feels heavier only because it is larger than the wooden stick.",
+      "C": "Ice floats because it is heavier than liquid water.",
+      "D": "Any object that feels heavy must sink in liquid water, even if its density is low."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_09/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

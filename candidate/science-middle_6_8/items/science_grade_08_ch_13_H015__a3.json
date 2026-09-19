@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_13/H015",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_13/H015",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_13/H015"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_13:H015:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-EARTH",
+    "chapter_id": "science/grade_08/ch_13",
+    "chapter_label": "Why Earth supports life",
+    "subtopic_id": "science/grade_08/ch_13/H015",
+    "stem": "Chetan lists human actions that disturb Earth's living and non-living systems: burning fossil fuels that release greenhouse gases, which trap heat and cause global warming; destroying natural habitats with biodiversity loss; and releasing pollutants that cause pollution and harm ecosystems and people.\n\nWhich claim correctly states how these actions create major threats to life?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Burning fossil fuels releases greenhouse gases that trap more heat and cause global warming, while habitat destruction, biodiversity loss, and pollution harm ecosystems and people.",
+      "B": "Greenhouse gases cool the planet, so burning fossil fuels protects life from heat.",
+      "C": "Only pollution matters; habitat destruction and greenhouse gases do not threaten life.",
+      "D": "Habitat destruction helps biodiversity by moving ecosystems and people into safer places."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_13/H015",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni holds a wooden stick and an iron rod of the same size; the iron rod feels heavier. Density can differ even when size is the same, so an object that feels heavy may still float if its density is low. Later she sees ice floating on liquid water because ice is lighter than liquid water.\n\nWhich claim best explains floating or sinking here?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Density matters more than size alone; ice is lighter than liquid water, so the ice floats."
+    },
+    {
+      "id": "B",
+      "text": "The iron rod feels heavier only because it is larger than the wooden stick."
+    },
+    {
+      "id": "C",
+      "text": "Ice floats because it is heavier than liquid water."
+    },
+    {
+      "id": "D",
+      "text": "Any object that feels heavy must sink in liquid water, even if its density is low."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-size objects can feel different because density differs, and ice floats because it is lighter than liquid water. Blaming size alone ignores the same-size cue. Saying ice is heavier swaps the density comparison. Claiming every heavy-feeling object sinks over-widens the rule past density.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "Used term_substitution for reversing ice vs water heaviness; kept surface_feature_capture and scope_error as the other wrong frames."
+      }
+    ]
+  }
+}

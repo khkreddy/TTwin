@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan examines a rock with several different minerals visible under a magnifying glass. Most rocks are mixtures of minerals. He also studies a native mineral that is a pure element, and another mineral made of more than one element, which is a compound rather than an element.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The rock is a mixture of minerals; the multi-element mineral is a compound; the native mineral is a pure element, not a compound."
+    },
+    {
+      "id": "B",
+      "text": "The rock is a compound because several minerals sit together in one solid piece."
+    },
+    {
+      "id": "C",
+      "text": "The native mineral is a compound because it is found in the Earth with other rocks."
+    },
+    {
+      "id": "D",
+      "text": "Every mineral is an element, including the mineral made of more than one element."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Most rocks are mixtures of minerals; multi-element minerals are compounds; native minerals are pure elements. Calling the rock a compound swaps mixture for compound. Treating 'found in Earth' as proof of a compound grabs a surface place cue. Calling every mineral an element drops the multi-element compound case.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

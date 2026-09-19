@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan lists human actions that disturb Earth's living and non-living systems: burning fossil fuels that release greenhouse gases, which trap heat and cause global warming; destroying natural habitats with biodiversity loss; and releasing pollutants that cause pollution and harm ecosystems and people.\n\nWhich claim correctly states how these actions create major threats to life?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Burning fossil fuels releases greenhouse gases that trap more heat and cause global warming, while habitat destruction, biodiversity loss, and pollution harm ecosystems and people."
+    },
+    {
+      "id": "B",
+      "text": "Greenhouse gases cool the planet, so burning fossil fuels protects life from heat."
+    },
+    {
+      "id": "C",
+      "text": "Only pollution matters; habitat destruction and greenhouse gases do not threaten life."
+    },
+    {
+      "id": "D",
+      "text": "Habitat destruction helps biodiversity by moving ecosystems and people into safer places."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Human actions release greenhouse gases that warm Earth and destroy habitats, cut biodiversity, and pollute systems people need. Saying greenhouse gases cool reverses the heat link. Keeping only pollution drops the other threats. Treating habitat loss as helpful stretches past the harm boundary.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

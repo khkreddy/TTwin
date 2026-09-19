@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya heats air in a sealed syringe; the air expands, its volume rises, and its density falls as particles spread farther apart. Density does not depend on shape or size alone, but heating, cooling, and pressure can change it. She then cools another sample of the same air and raises the pressure by pushing the plunger. Pressure mainly changes the density of gases, not of solids and liquids.\n\nWhich prediction matches how temperature and pressure change density?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heating decreases density by spreading particles farther apart; raising pressure on a gas increases density by decreasing volume."
+    },
+    {
+      "id": "B",
+      "text": "Heating increases density because hot air is always heavier for the same volume."
+    },
+    {
+      "id": "C",
+      "text": "Raising pressure changes the density of solids and liquids as much as it changes the density of gases."
+    },
+    {
+      "id": "D",
+      "text": "Density depends only on shape and size, not on temperature or pressure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating spreads particles and lowers density; pressure mainly squeezes gases into smaller volume and raises gas density. Saying heat raises density swaps the temperature effect. Applying pressure equally to solids and liquids over-widens the gas-focused rule. Ignoring temperature and pressure drops the stated conditions.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

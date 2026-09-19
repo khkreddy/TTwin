@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Eshan places a few grains of potassium permanganate in three glasses of water: ice-cold, room-temperature, and hot. He does not stir. Particles of liquids are in constant motion. Purple colour spreads through each glass, fastest in the hot water where particles move faster.\n\nWhich claim best explains this?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water particles are in constant motion and move faster when hotter, so they spread the potassium permanganate particles most quickly in hot water."
+    },
+    {
+      "id": "B",
+      "text": "The colour spreads only because the glasses are stirred, not because water particles move."
+    },
+    {
+      "id": "C",
+      "text": "Hotter water spreads the colour more slowly because its particles move more slowly."
+    },
+    {
+      "id": "D",
+      "text": "Only the potassium permanganate particles move; the water particles stay still in every glass."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid particles move constantly and move faster when hotter, so colour spreads fastest in hot water without stirring. Claiming stirring is required drops the no-stir condition. Saying heat slows particles reverses the temperature link. Freezing water particles in place swaps which particles move.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

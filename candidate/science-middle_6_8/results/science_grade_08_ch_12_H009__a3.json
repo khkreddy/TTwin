@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya finds mushrooms growing on a fallen log. Soft threads also spread through the rotting wood. Her teacher says microorganisms such as fungi and bacteria grow on dead matter and act on waste in nature, breaking it down. This role is for dead matter and waste, not for living wood.\n\nWhich claim best explains what happens to the dead matter?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Fungi and bacteria grow on the dead matter and act on waste in nature, breaking it down."
+    },
+    {
+      "id": "B",
+      "text": "Only the mushrooms act; bacteria play no role with dead matter or waste."
+    },
+    {
+      "id": "C",
+      "text": "The soft threads are waste from the log, not fungi growing on the dead matter."
+    },
+    {
+      "id": "D",
+      "text": "Fungi and bacteria act only on living wood, never on dead matter or waste."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Microorganisms such as fungi and bacteria grow on dead matter and act on waste. Dropping bacteria omits a stated actor. Calling the soft threads mere waste swaps away the fungi role. Limiting action to living wood over-narrows the dead-matter rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

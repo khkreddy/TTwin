@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan compares three classroom samples: water, a liquid made when hydrogen and oxygen are chemically joined into a compound whose properties differ from those separate elements; a dish of iron filings mixed with sulphur powder that a magnet can still pull apart as a mixture; and a strip of pure copper metal, an element that looks like one single solid piece of metal.\n\nWhich claim correctly classifies water?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water is a compound: hydrogen and oxygen are chemically joined, and water's properties differ from those of the separate elements."
+    },
+    {
+      "id": "B",
+      "text": "Water is a mixture: it contains more than one element, just as iron filings mixed with sulphur powder do."
+    },
+    {
+      "id": "C",
+      "text": "Water is an element: it looks like one single liquid, as copper looks like one solid piece of metal."
+    },
+    {
+      "id": "D",
+      "text": "Water is a compound even though hydrogen and oxygen keep their own separate properties inside it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water is a compound because hydrogen and oxygen are chemically joined and water's properties differ from those elements. Calling it a mixture swaps in the wrong chapter term. Judging it an element from a single clear look captures a surface cue. Keeping element properties inside drops the different-properties condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}
