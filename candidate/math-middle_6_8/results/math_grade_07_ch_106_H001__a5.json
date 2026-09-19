@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adeel lines up four children left to right with heights $150\\,\\mathrm{cm}$, $140\\,\\mathrm{cm}$, $145\\,\\mathrm{cm}$, and $142\\,\\mathrm{cm}$. Each child calls out how many taller children stand in front of that child.\n\nWhich two claims correctly describe the height-code?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The height-code is $0$, $1$, $2$, $3$, counting every child standing in front."
+    },
+    {
+      "id": "B",
+      "text": "The height-code is $0$, $1$, $1$, $2$."
+    },
+    {
+      "id": "C",
+      "text": "Each number counts only the taller children standing in front of that child."
+    },
+    {
+      "id": "D",
+      "text": "The height-code is $3$, $2$, $1$, $0$, counting taller children standing behind."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Left to right: 150 says 0; 140 has one taller in front (150); 145 has one taller in front (150); 142 has two taller in front (150 and 145). So the code is 0,1,1,2, and each entry counts taller children in front only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

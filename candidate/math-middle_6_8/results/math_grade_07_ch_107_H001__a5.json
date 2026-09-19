@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra looks at the diagram of a closed shape with three corner points $A$, $B$ and $C$ joined by three straight sides.\n\nWhich claim correctly names the shape and its parts?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The shape is named only by the single corner $A$."
+    },
+    {
+      "id": "B",
+      "text": "The shape is triangle $ABC$, with sides $AB$, $BC$ and $CA$, and angles at $A$, $B$ and $C$."
+    },
+    {
+      "id": "C",
+      "text": "The shape is a triangle even if side $BC$ is left open."
+    },
+    {
+      "id": "D",
+      "text": "The shape is a triangle because the letter $C$ is printed largest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (1.4,2.6);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\node[below left] at (A){$A$};\n  \\node[below right] at (B){$B$};\n  \\node[above] at (C){$C$};\n  \\node[below] at (2.1,-0.35){side $AB$};\n  \\node[left] at (0.55,1.4){side $AC$};\n  \\node[right] at (3.0,1.4){side $BC$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A closed three-vertex figure is triangle ABC with three sides and three angles at the vertices. One vertex alone is not the name; an open side fails the closed-shape condition; letter size is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as labelled triangle ABC with three sides marked."
+  }
+}

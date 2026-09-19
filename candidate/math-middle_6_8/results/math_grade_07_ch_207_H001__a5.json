@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a level balance scale. The left pan holds sealed tin $P$ and a $100\\,\\mathrm{g}$ weight. The right pan holds a $350\\,\\mathrm{g}$ weight.\n\nWhich claim correctly gives the mass of tin $P$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mass of tin $P$ is $450\\,\\mathrm{g}$."
+    },
+    {
+      "id": "B",
+      "text": "The mass of tin $P$ is $350\\,\\mathrm{g}$."
+    },
+    {
+      "id": "C",
+      "text": "The mass of tin $P$ is $250\\,\\mathrm{g}$."
+    },
+    {
+      "id": "D",
+      "text": "The mass of tin $P$ is $100\\,\\mathrm{g}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\small]\n  \\draw[line width=1pt] (-2.6,0.9) -- (2.6,0.9);\n  \\draw[line width=1.1pt] (0,0.9) -- (0,0.15);\n  \\fill (0,0.9) circle (0.08);\n  \\draw[line width=0.9pt] (-2.2,0.9) -- (-2.2,0.35);\n  \\draw[line width=0.9pt] (2.2,0.9) -- (2.2,0.35);\n  \\draw[line width=1pt] (-3.0,0.35) -- (-1.4,0.35);\n  \\draw[line width=1pt] (-3.0,0.35) -- (-3.15,0.05) -- (-1.25,0.05) -- (-1.4,0.35);\n  \\draw[line width=1pt] (1.4,0.35) -- (3.0,0.35);\n  \\draw[line width=1pt] (1.4,0.35) -- (1.25,0.05) -- (3.15,0.05) -- (3.0,0.35);\n  \\draw[line width=0.9pt] (-2.55,0.12) rectangle (-2.05,0.55);\n  \\node at (-2.3,0.32) {\\scriptsize $P$};\n  \\draw[line width=0.9pt] (-1.85,0.12) rectangle (-1.45,0.42);\n  \\node at (-1.65,0.27) {\\scriptsize 100};\n  \\draw[line width=0.9pt] (1.85,0.12) rectangle (2.55,0.55);\n  \\node at (2.2,0.32) {\\scriptsize 350};\n  \\node[below] at (-2.2,-0.2) {left pan};\n  \\node[below] at (2.2,-0.2) {right pan};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Level pans mean P+100=350, so P=250 g. Equivalently remove 100 g from each pan and leave P against 250 g. 450 adds both pan loads, 350 ignores the 100 g, and 100 takes the companion weight as P.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Added a level two-pan balance with tin P and 100 g on the left and 350 g on the right."
+  }
+}

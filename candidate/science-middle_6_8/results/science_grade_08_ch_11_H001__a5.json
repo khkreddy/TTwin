@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm]\n\\draw[line width=0.8pt] (0,0) ellipse (4.0 and 2.15);\n\\draw[->,line width=0.8pt] (2.15,1.82) arc[start angle=63,end angle=39,x radius=4.0,y radius=2.15];\n\\draw[->,line width=0.8pt] (-2.15,-1.82) arc[start angle=243,end angle=219,x radius=4.0,y radius=2.15];\n\\begin{scope}\\clip (0,0) circle (1.0);\n\\shade[inner color=white,outer color=gray!55] (0,0) circle (1.0);\n\\end{scope}\n\\draw[line width=0.8pt] (0,0) circle (1.0);\n\\begin{scope}[shift={(3.85,0)}]\n\\clip (0,0) circle (0.42);\n\\fill[black!75] (0,0) circle (0.42);\n\\fill[white] (0,0) -- (0,0.42) arc[start angle=90,end angle=-90,radius=0.42] -- cycle;\n\\end{scope}\n\\draw[line width=0.8pt] (3.85,0) circle (0.42);\n\\node[font=\\small] at (0,-1.28) {Earth};\n\\node[font=\\small,anchor=west] at (4.35,0.55) {Moon};\n\\node[font=\\footnotesize,anchor=west] at (4.35,-0.55) {bright part};\n\\node[font=\\bfseries\\small] at (0,-2.6) {diagram};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Earth and the Moon. Sonia sketches the Moon on several nights and sees the bright part change shape.\n\nWhich statement correctly says what a Moon phase is?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A phase is a change in the bright part of the Moon seen from Earth; the Moon does not emit its own light."
+    },
+    {
+      "id": "B",
+      "text": "A phase means the Moon itself is swelling and shrinking in size."
+    },
+    {
+      "id": "C",
+      "text": "A phase is the Moon giving off more or less of its own light."
+    },
+    {
+      "id": "D",
+      "text": "A phase is only the night side of Earth, so the bright part we see is the Moon's unlit half."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Moon phases are changes in the bright part seen from Earth. The Moon does not emit its own light, and it does not swell or shrink.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote Earth–Moon orbit figure; labeled bright part on the Moon."
+  }
+}

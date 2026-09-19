@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Imran crushes a stick of chalk into fine powder. He then stirs some of that powder in a glass of water until the bits can no longer be seen.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Crushing and stirring show that the chalk is made of extremely small particles."
+    },
+    {
+      "id": "B",
+      "text": "The chalk has become nothing, because no bits can be seen in the water."
+    },
+    {
+      "id": "C",
+      "text": "The chalk is still present as particles that are too small to see."
+    },
+    {
+      "id": "D",
+      "text": "Crushing and dissolving destroy every particle of the chalk."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Breaking, grinding, or dissolving shows matter is made of extremely small particles that remain, not that the substance becomes nothing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

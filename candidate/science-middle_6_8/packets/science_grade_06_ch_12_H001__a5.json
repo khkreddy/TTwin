@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m23_qp_12:q24",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T10:03:19.753Z",
+  "source": {
+    "item_ref": "session:0625_m23_qp_12:q24",
+    "item_type": "single_mcq",
+    "stem": "The diagram shows a bar magnet at rest on a smooth horizontal surface. A length of soft-iron wire is held parallel to the magnet.\nThe wire is released.\nWhat happens?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The wire moves away from the magnet."
+      },
+      {
+        "id": "B",
+        "text": "The wire moves towards the magnet."
+      },
+      {
+        "id": "C",
+        "text": "The wire’s centre stays in its present position and the wire rotates through 90 ° in a clockwise direction."
+      },
+      {
+        "id": "D",
+        "text": "The wire’s centre stays in its present position and the wire rotates through 90 ° in an anticlockwise direction."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily, line cap=butt, line join=miter]\\draw[line width=0.8pt] (0,0) rectangle (0.42,3.25);\\node[anchor=north] at (0.21,3.18) {N};\\node[anchor=south] at (0.21,0.07) {S};\\draw[line width=0.8pt] (-0.02,1.07) -- (-0.78,0.78);\\node[anchor=east] at (-0.82,0.78) {magnet};\\draw[line width=1pt] (2.55,1.15) -- (2.55,2.10);\\draw[line width=0.7pt] (2.57,1.55) -- (3.26,1.31);\\node[anchor=west] at (3.31,1.31) {soft-iron wire};\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Only the stars forming the familiar figure belong to the constellation."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Solid connecting lines are real lines in the sky; dotted connecting lines are imaginary."
+      }
+    ],
+    "enrichment": "Stars shine with their own light, while groups of stars may only appear to form familiar patterns; constellations are regions of the sky that include such apparent patterns, and the connecting lines are imaginary aids for identification. Imaginary connecting lines help the eye recognize a pattern, and defined sky regions give that pattern a constellation name. The learner correctly applies this rule: Stars shine with their own light, while groups of stars may only appear to form familiar patterns; constellations are regions of the sky that include such apparent patterns, and the connecting lines are imaginary aids for identification. The lines drawn between stars are really in the sky, so a constellation is the outlined picture.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H001",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “The wire moves away from the magnet.” looked possible instead of “The wire moves towards the magnet.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “The wire’s centre stays in its present position a…” for the required “The wire moves towards the magnet.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The wire’s centre stays in its present position a…” for the required “The wire moves towards the magnet.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Decide whether a star drawing is showing real lines in the sky or an identification pattern inside a constellation region. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m23_qp_12:q24",
+    "hinge": "science/grade_06/ch_12/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "scope_error",
+      "C": "surface_feature_capture",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_12/H001"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_205/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_205/H001",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_205/H001"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_205:H001:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M8",
+    "chapter_id": "math/grade_07/ch_205",
+    "chapter_label": "math/grade_07/ch_205",
+    "subtopic_id": "math/grade_07/ch_205/H001",
+    "stem": "Adeel's teacher asks the class: \"How long do students in Class $7$A usually take to travel to school?\"\n\nWhich two claims correctly classify that prompt?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The prompt is statistical: it asks about travel times with expected variation across students.",
+      "B": "It is not statistical because the exact list of times is not known yet.",
+      "C": "A question can be statistical even when the answer is not known yet, if it expects data with variation.",
+      "D": "It is only a fixed fact about one named student, so it is not statistical."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_205/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Esha keeping the metal point fixed at E with the compass open to a fixed length, and moving only the pencil.\n\nWhat path does the pencil draw?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A circle with centre E, and with every pencil point at the same fixed distance from E."
+    },
+    {
+      "id": "B",
+      "text": "A circle whose radius is the point E."
+    },
+    {
+      "id": "C",
+      "text": "A circle with centre at the moving pencil tip, and with E on the rim."
+    },
+    {
+      "id": "D",
+      "text": "A triangle that has one vertex fixed at E."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\coordinate (E) at (0,0);\n  \\fill (E) circle (1.2pt);\n  \\node[below left] at (E) {E};\n  \\draw[thick] (E) -- (2.2,0);\n  \\draw[thick] (2.2,0) arc[start angle=0,end angle=75,radius=2.2];\n  \\node at (1.1,-0.28) {fixed length};\n  \\node[right] at (2.35,0.15) {pencil};\n  \\draw[->] (1.6,1.6) -- (1.95,1.95);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fixed point at E and fixed opening make every pencil position the same distance from E, so the path is a circle centred at E. Calling E the radius swaps terms. Putting the centre at the pencil reverses roles. A triangle confuses the compass motion with a polygon construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote right triangle source into a compass arc at E; stem refers to the diagram."
+  }
+}

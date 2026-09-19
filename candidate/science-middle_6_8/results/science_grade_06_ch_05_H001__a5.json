@@ -1,0 +1,54 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Their feet are different lengths, so the same blackboard gives different counts."
+    },
+    {
+      "id": "B",
+      "text": "A body unit that is not the same for every student can produce different numbers for one length."
+    },
+    {
+      "id": "C",
+      "text": "The blackboard itself changed length between the two measurements."
+    },
+    {
+      "id": "D",
+      "text": "Only Ojas measured correctly because a larger count always means a better measurement."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ojas and Bilal measure the same classroom blackboard along its bottom edge using their own foot-lengths. Ojas gets 9 foot-lengths. Bilal gets 7 foot-lengths.\n\nWhich claims correctly explain why the numbers differ? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Different body units (foot-lengths) give different counts for the same length. The board did not change, and a larger count is not automatically better.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

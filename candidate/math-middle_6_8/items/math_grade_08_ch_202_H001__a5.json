@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_202/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_202/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H001"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H001:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H001",
+    "stem": "The diagram shows square $S$ of side $3\\,\\mathrm{cm}$ and square $T$ of side $6\\,\\mathrm{cm}$.\n\nWhich claim correctly states how the area changes from $S$ to $T$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The area of $T$ is twice the area of $S$ because the side length doubled.",
+      "B": "The area of $T$ is four times the area of $S$ because the side length doubled.",
+      "C": "The area of $T$ equals the area of $S$ because both shapes are squares.",
+      "D": "The area of $T$ is six times the area of $S$, matching the new side length."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (0,0) rectangle (3,3);\n  \\node at (1.5,1.5) {$S$};\n  \\node[below] at (1.5,-0.35) {$3\\,\\mathrm{cm}$};\n  \\draw[line width=1.05pt] (5,0) rectangle (11,6);\n  \\node at (8,3) {$T$};\n  \\node[below] at (8,-0.35) {$6\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

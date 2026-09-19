@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha takes the largest 5-digit number and writes its successor, then names the place-value unit.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The successor is 99,998."
+    },
+    {
+      "id": "B",
+      "text": "The successor is 1,00,000, which is one crore."
+    },
+    {
+      "id": "C",
+      "text": "The successor is 1,00,000, which is one lakh (1 followed by 5 zeroes)."
+    },
+    {
+      "id": "D",
+      "text": "The largest 5-digit number already counts as one lakh because it looks nearly as large."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The largest 5-digit number is 99,999; its successor is 1,00,000, one lakh. 99,998 is the predecessor. Calling it one crore confuses the named unit. Nearness in size does not make 99,999 one lakh.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

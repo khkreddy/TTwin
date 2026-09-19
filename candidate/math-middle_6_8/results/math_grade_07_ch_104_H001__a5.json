@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Chitra starts with $p$ beads. She gives $3$ away and then buys $8$ more.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which expression shows how many beads she has now?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$p - 3 + 8$"
+        },
+        {
+          "id": "B",
+          "text": "beads $- 3 + 8$"
+        },
+        {
+          "id": "C",
+          "text": "$3 + 8$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Letter-number $p$ keeps the starting count; giving $3$ away subtracts $3$ and buying $8$ more adds $8$, so the expression is $p - 3 + 8$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The story needs letter-number p for the start, then subtract 3 and add 8. Writing the word beads, or dropping p and using only 3+8, leaves out the letter-number link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

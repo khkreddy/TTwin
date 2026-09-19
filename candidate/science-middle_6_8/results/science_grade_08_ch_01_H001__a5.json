@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Alok watches ice cubes on a plate. He writes two questions: \"Why does nature keep changing?\" and \"Does ice melt faster on a warm plate or on a cold plate?\"\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "\"Does ice melt faster on a warm plate or on a cold plate?\" is scientific because it is focused and can guide a careful check."
+    },
+    {
+      "id": "B",
+      "text": "\"Why does nature keep changing?\" is already scientific because any curiosity question counts."
+    },
+    {
+      "id": "C",
+      "text": "The ice question can guide observation or a fair test; the nature question is too broad to check."
+    },
+    {
+      "id": "D",
+      "text": "Neither question is scientific, because both were written after watching ice."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A scientific question is focused and can guide observation or a test. The ice question can; the nature question is too broad. Writing after watching ice does not decide scientific status.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

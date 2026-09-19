@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Copper and plastic are the materials that make up this wire."
+    },
+    {
+      "id": "2",
+      "text": "Electricity itself is a material the wire is made from."
+    },
+    {
+      "id": "3",
+      "text": "Only the plastic coating counts as a material; the copper core does not."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Charu looks at an electrical wire: a copper metal core with a plastic coating around it. She wants to name the materials the wire is made from.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Materials are the substances an object is made from. This wire is copper and plastic. Electricity is not a material of the wire, and both parts count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

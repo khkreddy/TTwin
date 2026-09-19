@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pranav needs an ordered pair of numbers whose sum is $18$ and whose difference (first minus second) is $4$.\n\nWhich ordered pair is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(7, 11)$"
+    },
+    {
+      "id": "B",
+      "text": "The second number $7$ alone, with no first number."
+    },
+    {
+      "id": "C",
+      "text": "$(11, 7)$"
+    },
+    {
+      "id": "D",
+      "text": "$(18, 4)$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solve x+y=18 and x−y=4 to get (11,7). Swapping to (7,11) flips the difference sign; naming 7 alone drops the ordered pair; (18,4) only copies the given numbers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

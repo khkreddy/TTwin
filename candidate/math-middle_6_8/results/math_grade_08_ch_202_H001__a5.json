@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows square $S$ of side $3\\,\\mathrm{cm}$ and square $T$ of side $6\\,\\mathrm{cm}$.\n\nWhich claim correctly states how the area changes from $S$ to $T$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The area of $T$ is twice the area of $S$ because the side length doubled."
+    },
+    {
+      "id": "B",
+      "text": "The area of $T$ is four times the area of $S$ because the side length doubled."
+    },
+    {
+      "id": "C",
+      "text": "The area of $T$ equals the area of $S$ because both shapes are squares."
+    },
+    {
+      "id": "D",
+      "text": "The area of $T$ is six times the area of $S$, matching the new side length."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (0,0) rectangle (3,3);\n  \\node at (1.5,1.5) {$S$};\n  \\node[below] at (1.5,-0.35) {$3\\,\\mathrm{cm}$};\n  \\draw[line width=1.05pt] (5,0) rectangle (11,6);\n  \\node at (8,3) {$T$};\n  \\node[below] at (8,-0.35) {$6\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area scales with the square of the side. Doubling the side multiplies area by 4: 9 cm² to 36 cm². Treating area as proportional to side, equal for all squares, or matching the new side length each miss that square factor.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Added squares S (side 3) and T (side 6) side by side."
+  }
+}

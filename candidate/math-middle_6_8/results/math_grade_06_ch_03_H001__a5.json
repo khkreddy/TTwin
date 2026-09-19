@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Raghav's class uses this rule: each child says how many erasers that child brought today. Raghav says \"3\".\n\nWhat does Raghav's \"3\" report?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The count of erasers Raghav brought today."
+    },
+    {
+      "id": "B",
+      "text": "Raghav's age in years."
+    },
+    {
+      "id": "C",
+      "text": "The total erasers brought by the whole class."
+    },
+    {
+      "id": "D",
+      "text": "How many erasers Raghav still needs to bring."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Under the class rule, the spoken number reports that child's eraser count. Age swaps the reported quantity. A class total drops the 'that child' condition. 'Still needs' reverses brought into missing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

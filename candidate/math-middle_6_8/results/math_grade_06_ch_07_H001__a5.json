@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mini shares one roti equally. She compares the unit fractions $1/3$ and $1/9$ from that whole.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$1/9$ is greater than $1/3$ because 9 is greater than 3."
+    },
+    {
+      "id": "B",
+      "text": "$1/3$ is greater than $1/9$ because fewer equal shares make each share larger."
+    },
+    {
+      "id": "C",
+      "text": "$1/3$ and $1/9$ are equal because each numerator is 1."
+    },
+    {
+      "id": "D",
+      "text": "$1/9$ is greater because the denominator is the size of the share."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "From the same whole, fewer equal shares make each unit share larger, so 1/3 > 1/9. Treating a larger denominator as a larger share reverses the relation. Equal numerators alone are a surface cue. Calling the denominator the share size swaps terms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

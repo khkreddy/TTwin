@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H001",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H001",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H001"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H001:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H001",
+    "stem": "Pranav looks at the diagram. Straight lines $\\ell$ and $m$ lie on the same flat page and meet at point $P$. The angles at $P$ are labelled $1$, $2$, $3$ and $4$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly names the lines and the angle structure at $P$?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Lines $\\ell$ and $m$ are intersecting, and their meeting at $P$ forms the four angles labelled $1$ to $4$."
+          },
+          {
+            "id": "B",
+            "text": "Lines $\\ell$ and $m$ can meet at two different points on the page if they are drawn longer."
+          },
+          {
+            "id": "C",
+            "text": "The four angles at $P$ are what force lines $\\ell$ and $m$ to meet."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.6,0.5)--(5.8,3.2) node[right]{$\\ell$};\n  \\draw[line width=1.05pt] (-0.4,3.1)--(5.6,0.3) node[right]{$m$};\n  \\fill (2.55,1.75) circle (1.6pt);\n  \\node[above] at (2.6,1.95){$P$};\n  \\draw[line width=0.65pt] (2.55,1.75) ++(28:0.55) arc (28:118:0.55);\n  \\node at (2.95,2.35){$1$};\n  \\draw[line width=0.65pt] (2.55,1.75) ++(118:0.55) arc (118:208:0.55);\n  \\node at (2.05,2.25){$2$};\n  \\draw[line width=0.65pt] (2.55,1.75) ++(208:0.55) arc (208:298:0.55);\n  \\node at (2.15,1.25){$3$};\n  \\draw[line width=0.65pt] (2.55,1.75) ++(298:0.55) arc (298:388:0.55);\n  \\node at (3.05,1.25){$4$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Lila measures a crayon on a ruler marked only in centimetres. The tip sits between the $9\\,\\mathrm{cm}$ and $10\\,\\mathrm{cm}$ marks.\n\nWhich two claims correctly state how she should report the length more accurately?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report $9\\,\\mathrm{cm}$, because the tip has not reached $10\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "B",
+      "text": "Split the $1\\,\\mathrm{cm}$ gap into equal smaller parts and count how many the tip passes."
+    },
+    {
+      "id": "C",
+      "text": "Those equal smaller parts of the same centimetre interval let her name a length between $9\\,\\mathrm{cm}$ and $10\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "D",
+      "text": "Treat the printed $9$ on the crayon wrapper as the measured length."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Between whole-centimetre marks, equal subunit parts of the same 1 cm interval give a finer length. Stopping at 9 cm alone, or reading a wrapper print, miss that measurement step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

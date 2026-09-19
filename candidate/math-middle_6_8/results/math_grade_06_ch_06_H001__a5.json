@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Raghav's rectangular courtyard as a closed figure. Side lengths are marked in metres.\n\nWhat is the perimeter of the courtyard?",
+  "options": [
+    {
+      "id": "A",
+      "text": "10 m"
+    },
+    {
+      "id": "B",
+      "text": "21 m"
+    },
+    {
+      "id": "C",
+      "text": "20 m"
+    },
+    {
+      "id": "D",
+      "text": "17 m"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (7,3);\n  \\node[below] at (3.5,0) {7 m};\n  \\node[above] at (3.5,3) {7 m};\n  \\node[left] at (0,1.5) {3 m};\n  \\node[right] at (7,1.5) {3 m};\n  \\node[above right] at (0,3) {A};\n  \\node[above left] at (7,3) {B};\n  \\node[below left] at (7,0) {C};\n  \\node[below right] at (0,0) {D};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter adds the boundary once: 7+3+7+3=20 m. 10 m adds length and width once only. 21 m is the area. 17 m uses an incomplete boundary total.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote grid quadrilateral into a labeled 7 m by 3 m rectangle; stem refers to the diagram."
+  }
+}

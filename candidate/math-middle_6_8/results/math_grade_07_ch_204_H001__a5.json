@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "In the decimal $81.506$, each digit has a place value.\n\nWhich two claims correctly read the place-value parts?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The digit $5$ stands for $5$ tenths."
+    },
+    {
+      "id": "B",
+      "text": "The digit $5$ stands for $5$ hundredths."
+    },
+    {
+      "id": "C",
+      "text": "The digit $6$ stands for $6$ thousandths."
+    },
+    {
+      "id": "D",
+      "text": "The digit $5$ stands for $5$ ones."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "81.506 has 8 tens, 1 one, 5 tenths, 0 hundredths, and 6 thousandths. So 5 is tenths and 6 is thousandths. Calling 5 hundredths swaps the place; calling 5 ones drops the decimal extension.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

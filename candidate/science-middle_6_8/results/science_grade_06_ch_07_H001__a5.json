@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Can she trust touch alone to say whether the tap water is hot or cold?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "No, because each hand may judge the same tap water differently after iced juice and warm soup."
+        },
+        {
+          "id": "B",
+          "text": "Yes, because touch always gives the true temperature of tap water."
+        },
+        {
+          "id": "C",
+          "text": "Yes, but only for the hand that was in the warm soup."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Nidhi holds her left hand in a glass of iced juice and her right hand in a bowl of warm soup. Then she puts both hands into the same basin of tap water.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Touch depends on what each hand felt before, so the same tap water can feel different; temperature needs a thermometer check."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After opposite warm and cold exposures, touch can mislead about the same water. A measured temperature is needed for a reliable hot-or-cold judgement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

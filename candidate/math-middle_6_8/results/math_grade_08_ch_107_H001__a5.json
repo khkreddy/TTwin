@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Boman says the ratio of red marbles to blue marbles in his pouch is $2:5$.\n\nWhich two claims correctly keep each term attached to its named colour?",
+  "options": [
+    {
+      "id": "A",
+      "text": "For every $5$ red marbles there are $2$ blue marbles."
+    },
+    {
+      "id": "B",
+      "text": "For every $2$ red marbles there are $5$ blue marbles."
+    },
+    {
+      "id": "C",
+      "text": "Red to blue is the same comparison as $2$ to $5$ in that order."
+    },
+    {
+      "id": "D",
+      "text": "Blue to red is already written as $2:5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In red:blue = 2:5, 2 belongs to red and 5 to blue. Swapping the counts or rewriting blue:red as 2:5 reverses or reassigns the terms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

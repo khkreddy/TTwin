@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ojas removes an unwanted component (the tea leaves) from the drink."
+    },
+    {
+      "id": "B",
+      "text": "Charu separates to collect a useful component (the salt)."
+    },
+    {
+      "id": "C",
+      "text": "Both separations have the same purpose: only to throw everything away."
+    },
+    {
+      "id": "D",
+      "text": "Charu is removing salt as an unwanted waste, not collecting it as useful."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ojas strains used tea leaves out of a cup so the drink is clear. Charu evaporates seawater in a shallow dish to collect salt crystals.\n\nWhat is true about these separations? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Straining tea leaves removes an unwanted part from the drink. Evaporating seawater collects useful salt. The purposes differ.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q26",
+  "target_unit_id": "science/grade_06/ch_04/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q26",
+    "hinge": "science/grade_06/ch_04/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": "relationship_reversal",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H001"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H001:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H001",
+    "stem": "The diagram shows a bar magnet, an iron screw, and an aluminium spoon. Nidhi brings the magnet near each object. The screw is attracted. The spoon is not.\n\nWhich conclusion is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The screw is made of a magnetic material; the spoon is not.",
+      "B": "The spoon is made of a magnetic material; the screw is not.",
+      "C": "Both are magnetic because Nidhi used a bar magnet near them.",
+      "D": "Both are non-magnetic because only one object moved."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=red!35] (0,2.1) rectangle (1.6,2.65);\n\\draw[thick,fill=blue!35] (1.6,2.1) rectangle (3.2,2.65);\n\\node at (0.8,2.375) {N};\n\\node at (2.4,2.375) {S};\n\\node at (1.6,3.05) {bar magnet};\n% iron screw\n\\draw[thick,fill=gray!50] (0.2,0.55) -- (0.2,0.95) -- (1.35,0.95) -- (1.7,0.75) -- (1.35,0.55) -- cycle;\n\\draw[thick,fill=gray!40] (1.7,0.65) -- (1.95,0.75) -- (1.7,0.85) -- cycle;\n\\node at (0.95,0.15) {iron screw};\n% aluminium spoon\n\\draw[thick,fill=gray!15] (2.3,0.45) .. controls (2.5,1.05) and (3.1,1.05) .. (3.3,0.45);\n\\draw[thick] (3.3,0.55) -- (4.1,0.55);\n\\draw[thick,fill=gray!15] (4.1,0.4) rectangle (4.35,0.7);\n\\node at (3.3,0.05) {aluminium spoon};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=gray!20] (0,1.0) rectangle (6.2,1.35);\n\\node at (3.1,1.65) {aluminium strip};\n\\draw[thick,fill=orange!65] (-0.1,0.15) -- (0.4,0.85) -- (0.65,0.15) -- cycle;\n\\node at (0.25,-0.2) {flame};\n\\foreach \\x/\\lab in {1.1/P, 2.6/Q, 4.1/R, 5.5/S} {\n  \\draw[thick,fill=yellow!45] (\\x,1.35) rectangle (\\x+0.28,1.85);\n  \\node at (\\x+0.14,2.15) {\\lab};\n}\n\\node at (3.1,0.45) {wax + pins};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Seema's aluminium strip. A flame heats the left end. Drawing pins P, Q, R and S are stuck with wax along the strip, with P nearest the flame and S farthest.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heat moves by conduction from the hot end toward colder parts, so the pins fall in the order P, then Q, then R, then S."
+    },
+    {
+      "id": "B",
+      "text": "Heat moves by conduction from the cold end toward the flame, so the pins fall in the order S, then R, then Q, then P."
+    },
+    {
+      "id": "C",
+      "text": "Only pin P can fall, because heat never leaves the flame end of a solid strip."
+    },
+    {
+      "id": "D",
+      "text": "All four pins fall at the same instant because aluminium is one solid piece."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a heated solid strip, heat conducts from the hot end to colder parts, so wax nearest the flame softens first and pins fall P→Q→R→S.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Aluminium strip with flame and wax-held pins P–S."
+  }
+}

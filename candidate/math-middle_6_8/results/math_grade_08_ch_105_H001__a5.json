@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Karan forms values with the four fixed numbers $7$, $4$, $2$, and $1$ by writing $7\\pm 4\\pm 2\\pm 1$ and choosing each sign independently.\n\nWhich claim correctly decides whether changing the signs can change the odd/even parity of the value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes: each sign change flips the parity of the value."
+    },
+    {
+      "id": "B",
+      "text": "No: every choice of signs gives a value with the same parity."
+    },
+    {
+      "id": "C",
+      "text": "Only the sign in front of $7$ can change the parity."
+    },
+    {
+      "id": "D",
+      "text": "Yes when the four numbers are consecutive, and no for these four numbers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Changing a sign replaces +t with -t (or the reverse), which changes the total by 2t, an even amount, so parity is fixed for all sign choices. Claiming every flip changes parity omits that even shift. Singling out 7 or restricting to consecutive numbers mis-scopes the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

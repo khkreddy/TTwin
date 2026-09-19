@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adeel's teacher asks the class: \"How long do students in Class $7$A usually take to travel to school?\"\n\nWhich two claims correctly classify that prompt?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The prompt is statistical: it asks about travel times with expected variation across students."
+    },
+    {
+      "id": "B",
+      "text": "It is not statistical because the exact list of times is not known yet."
+    },
+    {
+      "id": "C",
+      "text": "A question can be statistical even when the answer is not known yet, if it expects data with variation."
+    },
+    {
+      "id": "D",
+      "text": "It is only a fixed fact about one named student, so it is not statistical."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The prompt anticipates travel-time data that vary across Class 7A students, so it is statistical. Not knowing the list yet does not remove that; treating it as one named-student fact substitutes the wrong label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

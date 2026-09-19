@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H001",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H001"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H001:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H001",
+    "stem": "The diagram shows Raghav's rectangular courtyard as a closed figure. Side lengths are marked in metres.\n\nWhat is the perimeter of the courtyard?",
+    "item_type": "mcq",
+    "options": {
+      "A": "10 m",
+      "B": "21 m",
+      "C": "20 m",
+      "D": "17 m"
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (7,3);\n  \\node[below] at (3.5,0) {7 m};\n  \\node[above] at (3.5,3) {7 m};\n  \\node[left] at (0,1.5) {3 m};\n  \\node[right] at (7,1.5) {3 m};\n  \\node[above right] at (0,3) {A};\n  \\node[above left] at (7,3) {B};\n  \\node[below left] at (7,0) {C};\n  \\node[below right] at (0,0) {D};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

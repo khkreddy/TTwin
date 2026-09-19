@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Esha wants to answer this question: which snack do the students in Class 6D like most for the evening club?",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly sets up the inquiry?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Collect fresh snack choices from the students in Class 6D."
+        },
+        {
+          "id": "B",
+          "text": "Treat the words Class 6D as the answer, and collect no snack choices."
+        },
+        {
+          "id": "C",
+          "text": "Use last year's Class 5D snack votes, because those votes are already written down."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The question names Class 6D and asks what those students like, so fresh choices must come from that group."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fresh choices from Class 6D match the named group. Treating the class label as the answer swaps term for data. Last year's Class 5D votes omit the required population and freshness.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

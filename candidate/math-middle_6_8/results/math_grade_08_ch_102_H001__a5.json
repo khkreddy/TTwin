@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sia starts a culture with $3$ cells. Every hour the count becomes three times the count from the hour before.\n\nWhich two claims correctly decide how to model the count after $4$ hours?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add $3$ four times to the starting count to get the count after $4$ hours."
+    },
+    {
+      "id": "B",
+      "text": "Multiply the starting count by $3$ once for each of the $4$ hours."
+    },
+    {
+      "id": "C",
+      "text": "The count after $4$ hours is $3\\times 3\\times 3\\times 3\\times 3$."
+    },
+    {
+      "id": "D",
+      "text": "The starting count is the product of four hourly triples."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each hour multiplies by 3, so after 4 hours the model is four multiplications by 3 applied to the start: 3×3^4 = 3×3×3×3×3. Adding 3 repeatedly is the wrong operation. Calling the start the product reverses the roles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

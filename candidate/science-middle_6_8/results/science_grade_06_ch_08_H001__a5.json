@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Frost, liquid water, and breath mist are different states of the same substance, water."
+    },
+    {
+      "id": "B",
+      "text": "Frost, liquid water, and breath mist are three different substances, not water at all."
+    },
+    {
+      "id": "C",
+      "text": "Only the liquid in the bottle is water; frost and breath mist are unrelated solids and gases."
+    },
+    {
+      "id": "D",
+      "text": "Breath mist is a different substance from frost because one looks white and the other looks clear when melted."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Bilal notices frost on the freezer door, liquid water in a steel bottle, and mist from his breath on a cold morning. Which statement is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ice/frost, liquid water, and water vapour/mist are states of water, not different substances. Appearance alone does not make them different substances.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Lila studies the diagram of figures $R$ and $S$. Figure $S$ is the same shape and size as figure $R$, and $S$ is shown after a turn.\n\nWhich two claims correctly decide whether $R$ and $S$ are congruent?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$R$ and $S$ are congruent: same shape and size under exact superimposition, and turning is allowed."
+    },
+    {
+      "id": "B",
+      "text": "$R$ and $S$ are congruent because they are both called figures on the page."
+    },
+    {
+      "id": "C",
+      "text": "Exact fit under superimposition settles congruence, and a turn does not block that fit."
+    },
+    {
+      "id": "D",
+      "text": "Congruence here requires a right angle, hypotenuse, and one matching side before the turn can be used."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  % shape R\n  \\draw[line width=1.05pt] (0,0)--(2.4,0)--(2.4,1.1)--(1.1,1.1)--(1.1,2.4)--(0,2.4)--cycle;\n  \\node[below] at (1.2,-0.3){$R$};\n  % shape S: R rotated 90 deg clockwise, shifted\n  \\begin{scope}[xshift=4.6cm,yshift=0.2cm]\n    \\draw[line width=1.05pt] (0,0)--(0,2.4)--(1.1,2.4)--(1.1,1.3)--(2.4,1.3)--(2.4,0)--cycle;\n    \\node[below] at (1.2,-0.3){$S$};\n  \\end{scope}\n  \\node[align=center] at (3.4,-1.1){same shape and size;\\ $S$ is $R$ after a turn};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Congruent figures are exact copies under superimposition; rotation is allowed. Naming them figures alone substitutes a weak label; requiring RHS conflates a different congruence test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source right triangle as L-shapes R and S with S a rotation of R, same shape and size."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "An identification pattern drawn to recognise the star group, not real solid lines in the sky."
+    },
+    {
+      "id": "B",
+      "text": "Real glowing threads stretched between stars in space."
+    },
+    {
+      "id": "C",
+      "text": "Only the stars on the pencil lines belong to the constellation; nearby unmarked stars in the same sky region do not."
+    },
+    {
+      "id": "D",
+      "text": "The lines are real if drawn solid and imaginary only if drawn dotted."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% seven-star dipper pattern\n\\coordinate (A) at (0,1.2);\n\\coordinate (B) at (1.0,1.35);\n\\coordinate (C) at (2.0,1.2);\n\\coordinate (D) at (2.6,0.55);\n\\coordinate (E) at (3.4,0.2);\n\\coordinate (F) at (4.2,0.55);\n\\coordinate (G) at (3.5,1.15);\n\\foreach \\P in {A,B,C,D,E,F,G} {\\fill (\\P) circle (0.07);}\n\\draw[thick] (A)--(B)--(C)--(D)--(E)--(F)--(G)--(C);\n\\node at (2.1,-0.35) {Charu's star sketch};\n\\node[font=\\footnotesize] at (5.2,1.0) {pencil lines};\n\\draw[->,thick] (4.6,0.85)--(3.7,0.9);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Charu's sketch of a familiar seven-star pattern. She joins the bright stars with pencil lines so classmates can recognise the shape.\n\nWhat do those pencil lines represent?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Constellation drawings use imaginary identification lines. They are not real sky threads, do not limit membership to the drawn figure alone, and stroke style does not change that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source magnet figure into a labelled seven-star recognition sketch with pencil lines."
+  }
+}

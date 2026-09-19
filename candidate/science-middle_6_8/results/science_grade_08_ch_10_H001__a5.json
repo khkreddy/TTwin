@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% left: concave (reflecting surface curves inward toward object)\n\\draw[thick] (-3.2,1.4) .. controls (-2.2,0.2) and (-2.2,-0.2) .. (-3.2,-1.4);\n\\foreach \\y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2} {\\draw[thin] (-3.25,\\y)--++(-0.25,0);}\n\\node[font=\\small] at (-2.6,1.75) {Mirror X};\n\\draw[->,thick] (-0.8,0.6)--(-2.15,0.35);\n\\node[font=\\footnotesize] at (-1.3,0.95) {object side};\n% right: convex (reflecting surface curves outward)\n\\draw[thick] (2.0,1.4) .. controls (3.0,0.2) and (3.0,-0.2) .. (2.0,-1.4);\n\\foreach \\y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2} {\\draw[thin] (3.05,\\y)--++(0.25,0);}\n\\node[font=\\small] at (2.6,1.75) {Mirror Y};\n\\draw[->,thick] (0.5,0.6)--(2.0,0.35);\n\\node[font=\\footnotesize] at (1.2,0.95) {object side};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows two spherical mirrors. Shading marks the non-reflecting back of each mirror. Light comes from the object side shown.\n\nPreeti names each mirror from the way its reflecting surface curves.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mirror X is concave and Mirror Y is convex."
+    },
+    {
+      "id": "B",
+      "text": "Mirror X is a plane mirror and Mirror Y is concave."
+    },
+    {
+      "id": "C",
+      "text": "Both mirrors are convex because both outlines look curved."
+    },
+    {
+      "id": "D",
+      "text": "Mirror X is convex because its shaded back looks hollow."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "From the object side, Mirror X's reflecting surface curves inward (concave) and Mirror Y's curves outward (convex). Outline curve alone or the shaded back do not rename them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote spherical-mirror pair with object-side arrows and shaded backs."
+  }
+}

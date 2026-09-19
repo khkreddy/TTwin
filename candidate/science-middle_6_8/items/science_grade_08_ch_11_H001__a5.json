@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_w24_qp_33:q11",
+  "target_unit_id": "science/grade_08/ch_11/H001",
+  "build_logic": {
+    "source_uid": "0625_w24_qp_33:q11",
+    "hinge": "science/grade_08/ch_11/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_11/H001"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_11:H001:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_08/ch_11",
+    "chapter_label": "The night sky: Moon and calendars",
+    "subtopic_id": "science/grade_08/ch_11/H001",
+    "stem": "The diagram shows Earth and the Moon. Sonia sketches the Moon on several nights and sees the bright part change shape.\n\nWhich statement correctly says what a Moon phase is?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A phase is a change in the bright part of the Moon seen from Earth; the Moon does not emit its own light.",
+      "B": "A phase means the Moon itself is swelling and shrinking in size.",
+      "C": "A phase is the Moon giving off more or less of its own light.",
+      "D": "A phase is only the night side of Earth, so the bright part we see is the Moon's unlit half."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm]\n\\draw[line width=0.8pt] (0,0) ellipse (4.0 and 2.15);\n\\draw[->,line width=0.8pt] (2.15,1.82) arc[start angle=63,end angle=39,x radius=4.0,y radius=2.15];\n\\draw[->,line width=0.8pt] (-2.15,-1.82) arc[start angle=243,end angle=219,x radius=4.0,y radius=2.15];\n\\begin{scope}\\clip (0,0) circle (1.0);\n\\shade[inner color=white,outer color=gray!55] (0,0) circle (1.0);\n\\end{scope}\n\\draw[line width=0.8pt] (0,0) circle (1.0);\n\\begin{scope}[shift={(3.85,0)}]\n\\clip (0,0) circle (0.42);\n\\fill[black!75] (0,0) circle (0.42);\n\\fill[white] (0,0) -- (0,0.42) arc[start angle=90,end angle=-90,radius=0.42] -- cycle;\n\\end{scope}\n\\draw[line width=0.8pt] (3.85,0) circle (0.42);\n\\node[font=\\small] at (0,-1.28) {Earth};\n\\node[font=\\small,anchor=west] at (4.35,0.55) {Moon};\n\\node[font=\\footnotesize,anchor=west] at (4.35,-0.55) {bright part};\n\\node[font=\\bfseries\\small] at (0,-2.6) {diagram};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_11/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

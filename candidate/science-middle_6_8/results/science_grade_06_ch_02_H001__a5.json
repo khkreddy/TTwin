@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "The list mixes plants and animals found on that rooftop, so it shows living variety there."
+    },
+    {
+      "id": "B",
+      "text": "Tulsi, chilli plant, ant, pigeon, and lizard are different living kinds in one place, so the set shows biodiversity."
+    },
+    {
+      "id": "C",
+      "text": "Adding a whale from a distant ocean to Charu's list would still count as rooftop biodiversity."
+    },
+    {
+      "id": "D",
+      "text": "The bricks and tiles on the rooftop add to its biodiversity because they come in many colours."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Charu lists tulsi, chilli plant, ant, pigeon, and lizard from the pots and ledges on her building rooftop.\n\nWhich claims correctly say that this set shows biodiversity of living things in that place? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Biodiversity of a place is the variety of living plants and animals that belong there. Distant ocean animals and nonliving bricks do not count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

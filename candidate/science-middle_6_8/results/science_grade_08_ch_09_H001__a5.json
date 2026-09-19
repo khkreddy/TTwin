@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Sonia stirs salt into a glass of water until no salt grains can be seen. Alok stirs chalk powder into a second glass of water; the chalk settles on the bottom.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Salt-water is a solution because its components are evenly distributed."
+    },
+    {
+      "id": "B",
+      "text": "Chalk-water is a solution because both mixtures were stirred."
+    },
+    {
+      "id": "C",
+      "text": "Chalk-water is not a solution because the chalk is not evenly distributed."
+    },
+    {
+      "id": "D",
+      "text": "Salt-water is not a solution because salt and water began as separate substances."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A solution has components evenly distributed. Salt-water does; chalk that settles does not. Stirring alone or starting as separate substances does not decide.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

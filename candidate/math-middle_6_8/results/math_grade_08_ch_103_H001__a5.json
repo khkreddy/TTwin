@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Boman has a pile of identical beads and an ordered clap sequence: first clap, second clap, third clap, and so on. He wants the clap sequence to represent how many beads are in the pile.\n\nWhich claim correctly states what he must do?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Match each bead to exactly one clap in order, with no bead left unmatched and no clap left unused for a bead."
+    },
+    {
+      "id": "B",
+      "text": "Clap once for the whole pile, then name the size from the sound alone."
+    },
+    {
+      "id": "C",
+      "text": "Match some beads to two claps so the sequence runs longer than the pile."
+    },
+    {
+      "id": "D",
+      "text": "Skip matching the last few beads once the claps sound familiar."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Counting needs a one-to-one match between beads and an ordered standard sequence. One clap for the pile, double-matching, or skipping beads break that mapping.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

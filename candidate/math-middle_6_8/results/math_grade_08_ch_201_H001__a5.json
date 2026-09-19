@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sia reads the school notice \"$18\\%$ of the class voted for the garden club.\"\n\nWhich claim correctly states what $18\\%$ means?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$18\\%$ means $18$ out of every $10$ students in the class."
+    },
+    {
+      "id": "B",
+      "text": "$18\\%$ means $18$ out of every $100$ students in the class."
+    },
+    {
+      "id": "C",
+      "text": "$18\\%$ means $100$ out of every $18$ students in the class."
+    },
+    {
+      "id": "D",
+      "text": "$18\\%$ means $18$ students in total, with no reference to the whole class."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "x% means x/100 of the chosen whole, so 18% is 18 per 100. Per 10 drops the hundredths base; 100 per 18 reverses the fraction; a bare headcount drops the whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

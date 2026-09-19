@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_03/H001",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_03/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "surface_feature_capture",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_03/H001"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_03:H001:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_08/ch_03",
+    "chapter_label": "Health: reaching the unreached",
+    "subtopic_id": "science/grade_08/ch_03/H001",
+    "stem": "Sonia's class decides who can be called healthy. Health means physical, mental, and social well-being, not only the absence of disease.\n\nThey compare three classmates:\n1  Imran has no disease, but he feels anxious, sleeps poorly, and avoids group games.\n2  Preeti is free from illness, eats balanced food, stays calm, and works well with friends.\n3  Alok has strong arms and wins races, but he often feels angry and refuses to talk with classmates.\n\nWho best meets the meaning of health?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Imran, because he has no disease.",
+      "B": "Preeti, because physical, mental, and social well-being are all present.",
+      "C": "Alok, because strong arms and race wins prove health by themselves.",
+      "D": "Anyone with no cough this week, with nothing else checked."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_03/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

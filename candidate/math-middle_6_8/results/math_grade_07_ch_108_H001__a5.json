@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Adeel fills $\\dfrac{3}{8}$ litre of water into each bottle. He fills $4$ bottles at that same rate.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds the total water he uses?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Total water $= \\dfrac{3}{8} + 4$ litres."
+        },
+        {
+          "id": "B",
+          "text": "Total water $= 4 \\times \\dfrac{3}{8}$ litres."
+        },
+        {
+          "id": "C",
+          "text": "Total water $= 4 \\div \\dfrac{3}{8}$ litres."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A constant amount per bottle scales by multiplication: $4$ bottles $\\times \\dfrac{3}{8}$ litre per bottle."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal per-bottle amount times the number of bottles gives the total. Adding or dividing mixes the rate with the count the wrong way.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
