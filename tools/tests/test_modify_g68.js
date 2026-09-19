@@ -240,7 +240,22 @@ const treasure = {
     { id: "D", text: "Jump size 24 is forced, because 24 is the largest printed mark." },
   ],
 };
-if (!g68.gateG15(treasure).ok) throw new Error("treasure-on-24 must pass G15 (no numeric list of 3+ terms)");
+if (!g68.gateG15(treasure).ok) throw new Error("treasure-on-24 must pass G15 (no continue-the-list ask)");
+const electron = {
+  stem: "The electronic structures of atoms P and Q are shown. Atom P has electron arrangement 2,8,2. Which formula is correct?",
+  options: [
+    { id: "A", text: "PQ" },
+    { id: "B", text: "P2Q" },
+    { id: "C", text: "P2Q3" },
+    { id: "D", text: "PQ2" },
+  ],
+};
+if (!g68.gateG15(electron).ok) throw new Error("Cambridge electron-config stem must not fail G15");
+const g14re = g68.gateG14({
+  options: [{ id: "A", text: "Hydrogen produces water when it burns." }, { id: "B", text: "Oxygen is collected." }],
+  answer: { kind: "single_letter", letter: "A" },
+});
+if (!g14re.ok) throw new Error("bare produces must pass G14; regex must be is what (creates|produces)");
 
 const g16fail = g68.gateG16({
   stem: "Continue 1, 3, 5.",

@@ -219,7 +219,7 @@ function instructionFor(unit, variation, figureMode) {
     s += "Supply exactly one complete tikzpicture. The stem must refer to that figure. ";
   }
   s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. ";
-  s += "Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem. If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. ";
+  s += "Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. ";
   s += "If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.";
   return s.slice(0, 1600);
 }
@@ -499,12 +499,16 @@ function gateG14(result) {
 function stemHasNumericList(stem) {
   const s = String(stem || "");
   if (/(\d+\s*,\s*){2,}\d+/.test(s)) return true;
-  if (/\b(whole-number list|number list)\b/i.test(s)) return true;
+  if (/\bwhole-number list\b/i.test(s)) return true;
   return false;
+}
+function stemAsksContinueList(stem) {
+  return /\b(next term|continues the list|continue the (list|sequence)|whole-number list)\b/i.test(String(stem || ""));
 }
 function gateG15(result) {
   const stem = String((result && result.stem) || "");
-  if (!stemHasNumericList(stem)) return { ok: true };
+  // Do not treat electron configs (2,8,2) or Rf tables as sequence items.
+  if (!stemHasNumericList(stem) || !stemAsksContinueList(stem)) return { ok: true };
   const entries = allOptionEntries(result);
   if (entries.length < 2) return { ok: true };
   for (let i = 0; i < entries.length; i++) {
