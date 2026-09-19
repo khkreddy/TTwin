@@ -212,7 +212,7 @@ function instructionFor(unit, variation, figureMode) {
     s += "Supply exactly one complete tikzpicture. The stem must refer to that figure. ";
   }
   s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. ";
-  s += "If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Do not nest A/B/C lists inside part text.";
+  s += "If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.";
   return s.slice(0, 1000);
 }
 function packetHasPedagogy(packet) {
