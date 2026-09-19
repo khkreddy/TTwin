@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal must evaluate the unbracketed expression $9 + 4 \\times 3 - 6$. The expression has no exponents.\n\nWhich order is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply $4 \\times 3$ first to get $12$, then compute $9 + 12 - 6 = 15$."
+    },
+    {
+      "id": "B",
+      "text": "Add and subtract left to right first: $(9 + 4) \\times 3 - 6$."
+    },
+    {
+      "id": "C",
+      "text": "The word multiplication is the value of the expression."
+    },
+    {
+      "id": "D",
+      "text": "The same order also requires evaluating exponents before the terms in this expression."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Without brackets, evaluate the multiplied term first: 9+12-6=15. Adding first omits term-first order. Treating multiplication as the answer swaps the term label for the value. Requiring exponents extends beyond this expression.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

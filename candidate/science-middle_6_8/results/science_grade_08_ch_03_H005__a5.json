@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Navya's cousin has a skin infection that spreads when pathogens on a used towel pass to another person's skin. Her classmate has influenza that spreads when others inhale cough droplets in the air.\n\nWhich claims match prevention to the spread route? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Not sharing the cousin's towel blocks the skin-infection spread."
+    },
+    {
+      "id": "B",
+      "text": "Wearing a mask near the classmate reduces inhaling influenza cough droplets."
+    },
+    {
+      "id": "C",
+      "text": "Sharing the cousin's towel is safe if Navya does not touch the cousin's skin."
+    },
+    {
+      "id": "D",
+      "text": "Handwashing alone stops Navya from catching influenza from the classmate's cough droplets."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Towel-borne skin infection is blocked by not sharing towels; airborne influenza droplets are reduced by a mask. Avoiding skin touch does not make towel sharing safe, and handwashing alone does not block inhaled cough droplets.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

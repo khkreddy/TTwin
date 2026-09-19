@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H005",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H005"
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H005:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H005",
+    "stem": "The diagram shows Kiara holding an opaque comb between a lamp and a white screen. Light from the lamp is blocked by the comb before it reaches the screen.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Moving the comb closer to the screen makes the shadow on the screen smaller.",
+      "B": "Moving the comb closer to the lamp makes the shadow on the screen larger.",
+      "C": "The same shadow remains visible on the screen after the lamp is switched off.",
+      "D": "Moving the comb closer to the lamp makes the shadow on the screen smaller."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {lamp};\n\\draw[thick,fill=brown!40] (2.1,0.4) rectangle (2.4,2.0);\n\\node at (2.25,2.35) {comb};\n\\draw[thick,fill=gray!10] (4.4,0.1) rectangle (4.65,2.4);\n\\node at (4.5,2.7) {screen};\n\\draw[thick,dashed] (0.28,1.2) -- (2.1,1.7);\n\\draw[thick,dashed] (0.28,1.2) -- (2.1,0.7);\n\\draw[thick,fill=gray!55] (4.4,0.65) rectangle (4.65,1.75);\n\\node at (5.45,1.2) {shadow};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

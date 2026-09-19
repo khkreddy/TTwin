@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_06/ch_04/H005",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_06/ch_04/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H005"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H005:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H005",
+    "stem": "Sonia is drawing a pictograph of stickers collected by four friends: $8$, $12$, $16$, and $20$. She wants fewer symbols on the page, but every count must still be shown exactly with whole symbols. She is choosing a pictograph key, not making a frequency table. The figure shows her counts and a blank key box.\n\nWhich key should she use?",
+    "item_type": "mcq",
+    "options": {
+      "A": "One sticker symbol stands for $4$ stickers.",
+      "B": "The pictograph key is the data value $20$.",
+      "C": "The friends' counts $8$, $12$, $16$, and $20$ are produced by the pictograph key after drawing.",
+      "D": "A frequency table of the four counts replaces the need for a pictograph key."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\node[anchor=west] at (0,2.0) {\\textbf{Stickers collected}};\n  \\node[anchor=east] at (2.2,1.2) {Ravi: $8$};\n  \\node[anchor=east] at (2.2,0.5) {Neha: $12$};\n  \\node[anchor=east] at (2.2,-0.2) {Kabir: $16$};\n  \\node[anchor=east] at (2.2,-0.9) {Diya: $20$};\n  \\draw[thick] (2.6,1.4) rectangle (6.6,-1.2);\n  \\node[anchor=west] at (2.75,0.7) {Key box};\n  \\node[anchor=west] at (2.75,0.1) {each symbol $= \\,?$};\n  \\draw (3.2,-0.55) circle (0.18);\n  \\node[right] at (3.5,-0.55) {sticker symbol};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

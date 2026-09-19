@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya lines up three samples on the lab bench: a steel spoon, mango juice poured into a tumbler, and steam rising from a hot idli cooker.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The steel spoon keeps its shape, so it behaves as a solid."
+    },
+    {
+      "id": "2",
+      "text": "The mango juice flows and takes the tumbler's shape while keeping its volume, so it behaves as a liquid."
+    },
+    {
+      "id": "3",
+      "text": "The steam rising from the hot idli cooker keeps a fixed shape like a solid."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A solid keeps its shape (steel spoon). A liquid flows and takes the container's shape (mango juice). Steam is a gas and does not keep a fixed shape, so statement 3 is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

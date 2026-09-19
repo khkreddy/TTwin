@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Charu compares Mercury, Venus, and Earth. Mercury is closer to the Sun than Venus, yet Venus is hotter. Venus has a thick atmosphere rich in carbon dioxide that traps heat strongly.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Distance from the Sun alone does not fully predict a planet's temperature."
+    },
+    {
+      "id": "2",
+      "text": "Venus can be hotter than Mercury because its thick carbon dioxide atmosphere traps heat."
+    },
+    {
+      "id": "3",
+      "text": "Mercury must be the hottest planet because it is closer to the Sun than Venus."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distance from the Sun is only a starting expectation; Venus is hotter than closer Mercury because its thick CO2 atmosphere traps heat. Mercury is not hottest by distance alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

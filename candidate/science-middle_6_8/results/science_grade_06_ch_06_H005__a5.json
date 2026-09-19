@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya presses a lump of wet clay and a glass marble, then gently scratches each. Soft materials change shape or scratch easily; hard materials resist both.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The wet clay is soft because it changes shape easily under her press."
+    },
+    {
+      "id": "B",
+      "text": "The glass marble is hard because it resists being scratched."
+    },
+    {
+      "id": "C",
+      "text": "The wet clay is hard because it only dented after a firm press."
+    },
+    {
+      "id": "D",
+      "text": "The glass marble is soft and the wet clay is hard."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wet clay changes shape easily so it is soft; the glass marble resists scratching so it is hard. Calling clay hard after a firm press omits the easy-change rule; swapping soft and hard reverses the judgement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

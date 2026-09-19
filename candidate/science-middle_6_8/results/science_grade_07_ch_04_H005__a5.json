@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kabir heats milk for chai. He chooses among aluminium, wood, and shiny plastic for a pan to heat the milk and for a handle on a hot aluminium pan.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "An aluminium pan is suitable for heating milk because aluminium conducts heat well."
+        },
+        {
+          "id": "B",
+          "text": "An aluminium handle is safer than a wooden handle on the hot aluminium pan."
+        },
+        {
+          "id": "C",
+          "text": "A wooden handle becomes a good heat conductor when fixed to the aluminium pan."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Metals such as aluminium transfer heat well, so an aluminium pan heats milk usefully, while wood stays a poor conductor and is safer for a handle."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Aluminium conducts heat well, so it suits a heating pan. A metal handle is less safe than wood, and wood does not become a good conductor by attachment.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

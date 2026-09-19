@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Jatin's calculator starts at $0$ and has only a $+10$ button. He wants the display to show exactly $80$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "He needs $8$ presses of the $+10$ button."
+        },
+        {
+          "id": "B",
+          "text": "He needs $10$ presses, using the button value as the press count."
+        },
+        {
+          "id": "C",
+          "text": "He can also reach $80$ by mixing $+10$ with other buttons that the calculator does not have."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only the +10 button is available, so 80 ÷ 10 = 8 presses."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With only +10 from 0, n presses show 10n; 80 needs 8 presses. Using 10 as the press count swaps button value for presses. Inventing other buttons leaves the single-button scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sanya builds a class calendar chart. She matches day, lunar month, and year to sky cycles: the Sun's apparent daily cycle, the Moon's phase cycle of about 29.5 days, and Earth's revolution around the Sun of nearly 365.25 days.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A day is tied to the Sun's apparent daily cycle."
+    },
+    {
+      "id": "B",
+      "text": "A lunar month is tied to the Moon's phase cycle of about 29.5 days."
+    },
+    {
+      "id": "C",
+      "text": "A year is tied only to the Moon's phase cycle of about 29.5 days."
+    },
+    {
+      "id": "D",
+      "text": "People invent calendar units first, and that creates the sky cycles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Day matches the Sun's daily cycle; lunar month matches the Moon's ~29.5-day phase cycle. A year matches Earth's revolution, not the Moon's phases, and sky cycles are not created by inventing calendar units.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

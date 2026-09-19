@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Kiara holding an opaque comb between a lamp and a white screen. Light from the lamp is blocked by the comb before it reaches the screen.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Moving the comb closer to the screen makes the shadow on the screen smaller."
+    },
+    {
+      "id": "B",
+      "text": "Moving the comb closer to the lamp makes the shadow on the screen larger."
+    },
+    {
+      "id": "C",
+      "text": "The same shadow remains visible on the screen after the lamp is switched off."
+    },
+    {
+      "id": "D",
+      "text": "Moving the comb closer to the lamp makes the shadow on the screen smaller."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {lamp};\n\\draw[thick,fill=brown!40] (2.1,0.4) rectangle (2.4,2.0);\n\\node at (2.25,2.35) {comb};\n\\draw[thick,fill=gray!10] (4.4,0.1) rectangle (4.65,2.4);\n\\node at (4.5,2.7) {screen};\n\\draw[thick,dashed] (0.28,1.2) -- (2.1,1.7);\n\\draw[thick,dashed] (0.28,1.2) -- (2.1,0.7);\n\\draw[thick,fill=gray!55] (4.4,0.65) rectangle (4.65,1.75);\n\\node at (5.45,1.2) {shadow};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shadow size depends on object position: closer to the screen shrinks the shadow; closer to the lamp enlarges it. With the lamp off there is no shadow, and the reverse size claim is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote lens-ray figure into lamp, opaque comb, and shadow on a screen."
+  }
+}

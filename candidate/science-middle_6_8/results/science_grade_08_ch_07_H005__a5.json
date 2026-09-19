@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela pours 80 cm³ of milk from a tall glass into a shallow plate. The milk takes the plate's shape, but its volume stays 80 cm³.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Milk particles can move and change positions enough for the milk to take the plate's shape."
+    },
+    {
+      "id": "B",
+      "text": "Milk particles stay close enough under attraction that the volume stays 80 cm³."
+    },
+    {
+      "id": "C",
+      "text": "The milk's volume becomes the plate's volume because liquids have no fixed volume."
+    },
+    {
+      "id": "D",
+      "text": "The milk takes the plate's shape first, and that causes the particles to start attracting each other."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid particles move enough to change shape but stay close under attraction, so volume stays fixed at 80 cm³. Liquids do have fixed volume, and attraction is not caused by taking the container's shape.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

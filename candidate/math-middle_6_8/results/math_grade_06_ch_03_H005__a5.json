@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Imran asks how many $3$-digit counting numbers there are.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "There are $900$ three-digit counting numbers, from $100$ to $999$."
+        },
+        {
+          "id": "B",
+          "text": "There are $999$ three-digit counting numbers, counting every whole number from $1$ to $999$."
+        },
+        {
+          "id": "C",
+          "text": "A $3$-digit number has digit length $3$, so there are exactly $3$ such numbers."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Three-digit counting numbers run from 100 to 999, and 999 − 100 + 1 = 900."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3-digit counting numbers are 100 through 999, so 900 of them. Counting from 1 to 999 omits the 3-digit start. Equating digit length 3 with a count of 3 swaps the length label for the tally.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz compares two syrup mixes. Mix $R$ uses $5$ cups syrup in $15$ cups water. Mix $S$ uses $3$ cups syrup in $6$ cups water. He wants the stronger syrup mix.\n\nWhich claim correctly ranks the mixes?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mix $R$ is stronger because its syrup count $5$ is greater than $3$."
+    },
+    {
+      "id": "B",
+      "text": "A fair strength ranking is what creates the matching water amounts."
+    },
+    {
+      "id": "C",
+      "text": "Rewrite both on equal water: $R$ is $5:15=1:3$ and $S$ is $3:6=1:2$, so $S$ is stronger."
+    },
+    {
+      "id": "D",
+      "text": "Rank the mixes by the average of the four printed cup counts $5$, $15$, $3$ and $6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fair strength needs a common reference: $R=1:3$ and $S=1:2$, so $S$ is stronger. Absolute syrup counts, reversing ranking→units, or averaging cup counts miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

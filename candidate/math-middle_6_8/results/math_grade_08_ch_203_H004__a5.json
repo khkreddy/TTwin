@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Esha must divide ₹$90$ among three friends in the ratio $1 : 2 : 3$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "How should she find the three shares?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is the phrase \"ratio terms\", with no rupee amounts computed."
+        },
+        {
+          "id": "B",
+          "text": "Treat the problem as two people sharing a work job, and add work rates instead of splitting ₹$90$."
+        },
+        {
+          "id": "C",
+          "text": "Add the terms $1+2+3=6$, then give $\\frac{1}{6}\\times 90$, $\\frac{2}{6}\\times 90$, and $\\frac{3}{6}\\times 90$, so ₹$15$, ₹$30$, and ₹$45$."
+        },
+        {
+          "id": "D",
+          "text": "Divide $90$ by each of $1$, $2$, and $3$ separately, getting $90$, $45$, and $30$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Sum of parts is $6$; each share is that fraction of ₹$90$, so ₹$15$, ₹$30$, and ₹$45$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divide by summing ratio terms then taking each term over the sum times ₹$90$. Naming \"ratio terms\" alone, swapping in work-rate addition, or dividing $90$ by each term separately misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

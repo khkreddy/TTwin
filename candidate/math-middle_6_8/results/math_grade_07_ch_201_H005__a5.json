@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides whether the triangles are congruent?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The triangles are congruent from the two equal side lengths alone."
+        },
+        {
+          "id": "B",
+          "text": "The triangles are congruent by SAS: two sides and the included angle match."
+        },
+        {
+          "id": "C",
+          "text": "Two sides and a non-included angle are enough for congruence here."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (3.4,0);\n  \\coordinate (F) at (1.15,2.15);\n  \\draw[line width=0.9pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D) {$D$};\n  \\node[below right] at (E) {$E$};\n  \\node[above] at (F) {$F$};\n  \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n  \\node[left] at (0.5,1.05) {$5\\,\\mathrm{cm}$};\n  \\draw[line width=0.65pt] (0.35,0) arc (0:62:0.35);\n  \\node at (0.72,0.42) {$65^{\\circ}$};\n  \\begin{scope}[xshift=5.4cm]\n    \\coordinate (G) at (0,0);\n    \\coordinate (H) at (3.4,0);\n    \\coordinate (I) at (1.15,2.15);\n    \\draw[line width=0.9pt] (G)--(H)--(I)--cycle;\n    \\node[below left] at (G) {$G$};\n    \\node[below right] at (H) {$H$};\n    \\node[above] at (I) {$I$};\n    \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n    \\node[left] at (0.5,1.05) {$5\\,\\mathrm{cm}$};\n    \\draw[line width=0.65pt] (0.35,0) arc (0:62:0.35);\n    \\node at (0.72,0.42) {$65^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.2,1.0) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows $\\triangle DEF$ and $\\triangle GHI$. In both triangles the sides $7\\,\\mathrm{cm}$ and $5\\,\\mathrm{cm}$ meet at a $65^{\\circ}$ angle.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In each triangle the $65^{\\circ}$ angle lies between the sides $7\\,\\mathrm{cm}$ and $5\\,\\mathrm{cm}$, so SAS applies and the triangles are congruent."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal corresponding sides with the equal angle between them give SAS congruence. Sides alone omit the included-angle condition; SSA is outside the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source right triangle as two SAS triangles DEF and GHI with sides 7 cm and 5 cm meeting at 65°."
+  }
+}

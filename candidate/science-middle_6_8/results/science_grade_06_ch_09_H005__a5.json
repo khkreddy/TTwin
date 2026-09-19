@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohit needs to separate fine besan from larger chickpea bits using a kitchen sieve. He also has a cup of salt water on the side.\n\nWhich choice is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a sieve whose holes are larger than the fine besan but smaller than the chickpea bits, so the besan passes through and the bits remain on the sieve."
+    },
+    {
+      "id": "B",
+      "text": "Use a sieve whose holes are larger than both the fine besan and the chickpea bits."
+    },
+    {
+      "id": "C",
+      "text": "Use a sieve whose holes sit between their sizes so the fine besan remains on the sieve and the bigger chickpea bits pass through."
+    },
+    {
+      "id": "D",
+      "text": "Use the sieve to remove dissolved salt from salt water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sieving separates by size when holes let the smaller particles through and hold the larger ones. Holes larger than both fail; swapping which size passes reverses the process; sieving does not remove dissolved salt.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

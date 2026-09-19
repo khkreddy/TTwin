@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H005",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H005",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H005"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H005:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H005",
+    "stem": "The diagram shows $\\triangle DEF$ and $\\triangle GHI$. In both triangles the sides $7\\,\\mathrm{cm}$ and $5\\,\\mathrm{cm}$ meet at a $65^{\\circ}$ angle.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly decides whether the triangles are congruent?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "The triangles are congruent from the two equal side lengths alone."
+          },
+          {
+            "id": "B",
+            "text": "The triangles are congruent by SAS: two sides and the included angle match."
+          },
+          {
+            "id": "C",
+            "text": "Two sides and a non-included angle are enough for congruence here."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (3.4,0);\n  \\coordinate (F) at (1.15,2.15);\n  \\draw[line width=0.9pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D) {$D$};\n  \\node[below right] at (E) {$E$};\n  \\node[above] at (F) {$F$};\n  \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n  \\node[left] at (0.5,1.05) {$5\\,\\mathrm{cm}$};\n  \\draw[line width=0.65pt] (0.35,0) arc (0:62:0.35);\n  \\node at (0.72,0.42) {$65^{\\circ}$};\n  \\begin{scope}[xshift=5.4cm]\n    \\coordinate (G) at (0,0);\n    \\coordinate (H) at (3.4,0);\n    \\coordinate (I) at (1.15,2.15);\n    \\draw[line width=0.9pt] (G)--(H)--(I)--cycle;\n    \\node[below left] at (G) {$G$};\n    \\node[below right] at (H) {$H$};\n    \\node[above] at (I) {$I$};\n    \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n    \\node[left] at (0.5,1.05) {$5\\,\\mathrm{cm}$};\n    \\draw[line width=0.65pt] (0.35,0) arc (0:62:0.35);\n    \\node at (0.72,0.42) {$65^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.2,1.0) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

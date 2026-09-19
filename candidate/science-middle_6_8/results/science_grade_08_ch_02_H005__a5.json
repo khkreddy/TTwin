@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aditya examines three labelled slides: thin flat cheek cells, a long nerve cell with branches, and spindle-shaped muscle cells from the food pipe. He knows cheek cells form a protective lining, nerve cells carry messages, and muscle cells contract to help move food.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The thin flat shape of cheek cells helps them form a protective lining; the long branched shape of the nerve cell helps it carry messages."
+    },
+    {
+      "id": "B",
+      "text": "The nerve cell is long because carrying messages stretches it."
+    },
+    {
+      "id": "C",
+      "text": "Cheek cells and the nerve cell in Aditya's body have the same shape and the same function."
+    },
+    {
+      "id": "D",
+      "text": "The long nerve cell moves food down the food pipe because both the cell and the food pipe are long."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cell shape and structure suit function: thin flat cheek cells line and protect; long branched nerve cells carry messages. Length is not caused by stretching, shapes are not the same across cell types, and nerve cells do not move food.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

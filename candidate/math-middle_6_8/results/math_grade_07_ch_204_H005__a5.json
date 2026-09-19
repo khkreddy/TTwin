@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The product is greater than both factors."
+    },
+    {
+      "id": "B",
+      "text": "The product is less than both factors."
+    },
+    {
+      "id": "C",
+      "text": "The product equals $0.24$."
+    },
+    {
+      "id": "D",
+      "text": "Being less than both factors is what produces the factors $0.4$ and $0.6$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item_type": "one_or_more",
+  "stem": "Urvashi multiplies $0.4 \\times 0.6$.\n\nOne or more options may be correct. Which two claims are correct?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "0.4×0.6=0.24. Both factors lie between 0 and 1, so the product is smaller than each factor. Calling it greater than both, or reversing size into the factors, both miss that comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

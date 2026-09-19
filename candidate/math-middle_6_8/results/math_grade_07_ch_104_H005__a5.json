@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The expression becomes $10x + 3 - (x + 4)$."
+    },
+    {
+      "id": "B",
+      "text": "The bracket rule also decides which worked example to colour next."
+    },
+    {
+      "id": "C",
+      "text": "The expression becomes $10x + 15 - x - 4$."
+    },
+    {
+      "id": "D",
+      "text": "The simplified value is the printed $5$ alone."
+    }
+  ],
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Madhav simplifies $5(2x + 3) - (x + 4)$.\n\nHow should the brackets be removed before combining like terms?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5 multiplies every term inside the first bracket to give 10x+15, and subtracting (x+4) changes both terms to -x-4. Scaling only the first term, applying the rule outside algebra, or grabbing the printed 5 all miss that full expansion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

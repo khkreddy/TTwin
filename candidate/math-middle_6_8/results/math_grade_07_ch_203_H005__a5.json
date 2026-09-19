@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The HCF is the phrase common primes."
+    },
+    {
+      "id": "B",
+      "text": "The HCF is what produces the shared primes in the factorisations."
+    },
+    {
+      "id": "C",
+      "text": "Keep only the common primes with the smaller count in each: $2^{3}\\times 3^{1}=24$."
+    },
+    {
+      "id": "D",
+      "text": "The HCF is $48$, copying the smaller given number."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Tejas has $48=2^{4}\\times 3$ and $72=2^{3}\\times 3^{2}$. He wants their HCF from these prime factorisations.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "HCF keeps shared primes at the minimum power: 2^3×3=24. Naming 'common primes', reversing HCF into the primes, or copying 48 all miss that product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

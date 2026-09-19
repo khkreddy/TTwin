@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha writes the up-and-down sum $1+2+3+4+5+6+5+4+3+2+1$ with consecutive counting numbers that climb from $1$ to $6$ and then fall back to $1$. The figure shows those counts filling a $6$-by-$6$ square of unit tiles. She is checking why this sum equals $6^{2}$, not a triangular or hexagonal number sum.\n\nWhy does that sum equal $6^{2}$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The consecutive climb and fall from $1$ to $6$ fill the $6$-by-$6$ square of unit tiles, so the sum is $36$."
+    },
+    {
+      "id": "B",
+      "text": "Any climb-and-fall list of numbers fills a $6$-by-$6$ square, even when the numbers are not consecutive counting numbers from $1$."
+    },
+    {
+      "id": "C",
+      "text": "Filling the $6$-by-$6$ square of unit tiles is what produces the consecutive counting numbers from $1$ to $6$."
+    },
+    {
+      "id": "D",
+      "text": "The same filling also makes a triangular or hexagonal number sum equal $36$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.45cm,y=0.45cm,font=\\sffamily\\small]\n  \\draw[gray!70,densely dashed,line width=0.3pt] (0,0) grid (6,6);\n  \\draw[thick] (0,0) rectangle (6,6);\n  \\foreach \\x in {0,...,5} {\n    \\foreach \\y in {0,...,5} {\n      \\fill[black!15] (\\x+0.15,\\y+0.15) rectangle (\\x+0.85,\\y+0.85);\n    }\n  }\n  \\node[above] at (3,6.2) {$6\\times 6$ square};\n  \\node[right] at (6.3,5.5) {$1$};\n  \\node[right] at (6.3,4.5) {$2$};\n  \\node[right] at (6.3,3.5) {$3$};\n  \\node[right] at (6.3,2.5) {$4$};\n  \\node[right] at (6.3,1.5) {$5$};\n  \\node[right] at (6.3,0.5) {$6$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The up-and-down consecutive counts from 1 to 6 pair into a 6-by-6 square, so the sum is 36. Dropping the consecutive-from-1 condition, reversing square-from-counts, or extending the rule to triangular/hexagonal sums are wrong about that fill.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a 6-by-6 unit-tile square for the up-and-down sum."
+  }
+}

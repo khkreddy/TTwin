@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zara sits by a large lake on a hot afternoon. The shore soil is hotter than the lake water.\n\nWhich way does the breeze blow near the shore?",
+  "options": [
+    {
+      "id": "A",
+      "text": "From the lake toward the land."
+    },
+    {
+      "id": "B",
+      "text": "From the land toward the lake."
+    },
+    {
+      "id": "C",
+      "text": "There is no breeze toward the warmer shore."
+    },
+    {
+      "id": "D",
+      "text": "From the lake toward the land only if the soil and the lake water are at the same temperature."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Soil heats faster than water, so air over land rises and cooler air moves from the lake toward the land. The reverse direction, denying a breeze, or requiring equal temperatures are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

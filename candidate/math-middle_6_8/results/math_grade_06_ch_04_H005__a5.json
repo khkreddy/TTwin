@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia is drawing a pictograph of stickers collected by four friends: $8$, $12$, $16$, and $20$. She wants fewer symbols on the page, but every count must still be shown exactly with whole symbols. She is choosing a pictograph key, not making a frequency table. The figure shows her counts and a blank key box.\n\nWhich key should she use?",
+  "options": [
+    {
+      "id": "A",
+      "text": "One sticker symbol stands for $4$ stickers."
+    },
+    {
+      "id": "B",
+      "text": "The pictograph key is the data value $20$."
+    },
+    {
+      "id": "C",
+      "text": "The friends' counts $8$, $12$, $16$, and $20$ are produced by the pictograph key after drawing."
+    },
+    {
+      "id": "D",
+      "text": "A frequency table of the four counts replaces the need for a pictograph key."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small]\n  \\node[anchor=west] at (0,2.0) {\\textbf{Stickers collected}};\n  \\node[anchor=east] at (2.2,1.2) {Ravi: $8$};\n  \\node[anchor=east] at (2.2,0.5) {Neha: $12$};\n  \\node[anchor=east] at (2.2,-0.2) {Kabir: $16$};\n  \\node[anchor=east] at (2.2,-0.9) {Diya: $20$};\n  \\draw[thick] (2.6,1.4) rectangle (6.6,-1.2);\n  \\node[anchor=west] at (2.75,0.7) {Key box};\n  \\node[anchor=west] at (2.75,0.1) {each symbol $= \\,?$};\n  \\draw (3.2,-0.55) circle (0.18);\n  \\node[right] at (3.5,-0.55) {sticker symbol};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "8, 12, 16, and 20 are all multiples of 4, so a key of 4 shows each count with whole symbols and fewer drawings. Treating the largest data value as the key swaps terms. Saying the counts are produced by the key reverses the relation. Replacing the key with a frequency table conflates another display.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source triangle rods as a four-row sticker pictograph draft with a blank key."
+  }
+}

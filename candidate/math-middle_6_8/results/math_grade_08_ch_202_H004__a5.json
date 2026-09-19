@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows a number line with $\\sqrt{2}$ marked. Hemant checks $1.41^{2}=1.9881$ and $1.42^{2}=2.0164$.\n\nOne or more options may be correct. Which two claims follow?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Because $1.9881<2<2.0164$, it follows that $1.41<\\sqrt{2}<1.42$."
+    },
+    {
+      "id": "B",
+      "text": "Report $1.41$ itself as the exact value of $\\sqrt{2}$."
+    },
+    {
+      "id": "C",
+      "text": "The same bracketing also holds if the trial bounds are taken as $-1.41$ and $-1.42$."
+    },
+    {
+      "id": "D",
+      "text": "Closer positive decimals whose squares still bracket $2$ keep $\\sqrt{2}$ between those decimals."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=2.2cm,y=1cm,font=\\sffamily\\small,line cap=round]\n  \\draw[line width=1pt] (0,0) -- (4,0);\n  \\foreach \\x/\\lab in {0/1.40,1/1.41,2/1.42,3/1.43,4/1.44} {\n    \\draw[line width=0.8pt] (\\x,0.12) -- (\\x,-0.12);\n    \\node[below] at (\\x,-0.18) {\\lab};\n  }\n  \\fill[black] (1.55,0) circle (0.05);\n  \\node[above] at (1.55,0.15) {$\\sqrt{2}$};\n  \\node[below] at (2,-0.7) {number line};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "D"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Nonnegative bounds with $p^{2}<2<q^{2}$ give $p<\\sqrt{2}<q$; tighter positive brackets still work. Taking a bound as exact $\\sqrt{2}$, or using negative trials, breaks the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote the IGCSE grid kite as a number line with √2 between 1.41 and 1.42."
+  }
+}

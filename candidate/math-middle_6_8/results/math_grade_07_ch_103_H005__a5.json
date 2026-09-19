@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1.0cm,y=1cm]\n  \\draw[line width=0.9pt,->] (-0.4,0) -- (10.6,0);\n  \\foreach \\x in {0,1,2,3,4,5,6,7,8,9,10} {\n    \\draw[line width=0.7pt] (\\x,0.14) -- (\\x,-0.14);\n  }\n  \\node[below=4pt] at (0,0) {$4.0$};\n  \\node[below=4pt] at (5,0) {$4.5$};\n  \\node[below=4pt] at (10,0) {$5.0$};\n  \\fill[black] (3,0) circle (2.2pt);\n  \\node[above=5pt] at (3,0) {$Q$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "$Q$ is the left endpoint $4.0$, so rename the target as that endpoint."
+    },
+    {
+      "id": "B",
+      "text": "Marking $Q$ at $4.3$ is what creates the equal tenths between $4.0$ and $5.0$."
+    },
+    {
+      "id": "C",
+      "text": "Count $3$ equal tenths from $4.0$ toward $5.0$, and put $Q$ on that mark."
+    },
+    {
+      "id": "D",
+      "text": "Put $Q$ at the printed $5.0$, because $5$ is the standout digit near $4.3$."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a number line from $4.0$ to $5.0$ with equal tenth marks. Lalit must place point $Q$ at $4.3$.\n\nWhich claim correctly places $Q$?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "4.3 lies three tenths past 4.0 on a line marked in equal tenths, so count 3 tenths from 4.0 toward 5.0. Renaming the endpoint, reversing cause and effect, or grabbing the standout printed 5.0 all miss that count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle figure as a number line from 4.0 to 5.0 with equal tenths and point Q at 4.3."
+  }
+}

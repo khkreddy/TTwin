@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_202/H004",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_202/H004",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H004:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-PLACEVALUE",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H004",
+    "stem": "The diagram shows a number line with $\\sqrt{2}$ marked. Hemant checks $1.41^{2}=1.9881$ and $1.42^{2}=2.0164$.\n\nOne or more options may be correct. Which two claims follow?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Because $1.9881<2<2.0164$, it follows that $1.41<\\sqrt{2}<1.42$.",
+      "B": "Report $1.41$ itself as the exact value of $\\sqrt{2}$.",
+      "C": "The same bracketing also holds if the trial bounds are taken as $-1.41$ and $-1.42$.",
+      "D": "Closer positive decimals whose squares still bracket $2$ keep $\\sqrt{2}$ between those decimals."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=2.2cm,y=1cm,font=\\sffamily\\small,line cap=round]\n  \\draw[line width=1pt] (0,0) -- (4,0);\n  \\foreach \\x/\\lab in {0/1.40,1/1.41,2/1.42,3/1.43,4/1.44} {\n    \\draw[line width=0.8pt] (\\x,0.12) -- (\\x,-0.12);\n    \\node[below] at (\\x,-0.18) {\\lab};\n  }\n  \\fill[black] (1.55,0) circle (0.05);\n  \\node[above] at (1.55,0.15) {$\\sqrt{2}$};\n  \\node[below] at (2,-0.7) {number line};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AD",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Damini knows that $18$ is divisible by $6$.\n\nWhich claim follows?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Whether multiples of $18$ are divisible by $6$ cannot be decided from the given."
+    },
+    {
+      "id": "B",
+      "text": "Divisibility by $6$ is what creates the number $18$."
+    },
+    {
+      "id": "C",
+      "text": "Every multiple of $18$ is divisible by $6$, and $18$ is divisible by every factor of $6$."
+    },
+    {
+      "id": "D",
+      "text": "$18$ is divisible by every multiple of $6$, such as $12$ or $24$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "From $6\\mid18$, every multiple of $18$ is divisible by $6$, and $18$ is divisible by every factor of $6$. Dropping the given, reversing cause, or extending to every multiple of $6$ breaks the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

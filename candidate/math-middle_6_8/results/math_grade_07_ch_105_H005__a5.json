@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes lines $p$ and $q$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is the phrase same plane."
+        },
+        {
+          "id": "B",
+          "text": "Lines $p$ and $q$ are parallel because they lie on the same flat page."
+        },
+        {
+          "id": "C",
+          "text": "Lines $p$ and $q$ are not parallel, because they meet when extended."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Nandini draws straight lines $p$ and $q$ on the same flat page. When she extends them, they cross at one point, and the gap between them shrinks as she nears that point.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Parallel lines on the same plane never meet when extended. Here $p$ and $q$ cross at one point, so they are not parallel."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Parallel lines lie on the same plane and never meet when extended. Nandini's lines meet, so they are not parallel. Naming 'same plane' alone or treating same-page as enough both miss the non-meeting test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

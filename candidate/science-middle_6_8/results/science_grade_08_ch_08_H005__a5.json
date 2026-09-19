@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Harsh reads a ghee tin labelled \"pure.\" The ingredients list ghee and a small amount of another substance mixed in.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim matches the scientific meaning of pure?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The contents are not a pure substance because more than one substance is present."
+        },
+        {
+          "id": "B",
+          "text": "The contents are a pure substance because the tin is labelled pure."
+        },
+        {
+          "id": "C",
+          "text": "The contents are a pure substance because the ghee looks the same throughout."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In science a pure substance has no other substance present; another substance mixed in means the contents are a mixture."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A consumer 'pure' label does not make a mixture scientifically pure. More than one substance present means it is not a pure substance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

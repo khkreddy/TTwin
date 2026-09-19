@@ -1,0 +1,66 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly gives the median?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is the phrase sorted data."
+        },
+        {
+          "id": "B",
+          "text": "Sort as $2$, $4$, $6$, $9$; the median is midway between $4$ and $6$, so $5$."
+        },
+        {
+          "id": "C",
+          "text": "Take the middle entry of the unsorted list and report $2$ as the median."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Vikram has the scores $9$, $2$, $6$, and $4$. He wants the median.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "With four scores there are two middle values after sorting, $4$ and $6$; the median is midway between them, which is $5$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sort 2,4,6,9. Even count means the median is midway between the two central values 4 and 6, so 5. Naming 'sorted data' or reading the unsorted middle both miss that step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

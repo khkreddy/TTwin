@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bhavna runs on a square track whose perimeter is $300$ m. She runs $1000$ m from a start mark that is also the finish line.\n\nWhich claim about full rounds and leftover distance is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "She completes $3$ full rounds with $100$ m left over."
+    },
+    {
+      "id": "B",
+      "text": "She completes $1000$ full rounds, reading the run distance as the round count."
+    },
+    {
+      "id": "C",
+      "text": "Full rounds can be counted without using the $300$ m perimeter of the track."
+    },
+    {
+      "id": "D",
+      "text": "She completes $300$ full rounds, matching the perimeter number alone."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1000 ÷ 300 = 3 full rounds with remainder 100 m. Reading 1000 as the round count swaps distance for rounds. Ignoring the perimeter omits the track measure. Grabbing the printed 300 is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

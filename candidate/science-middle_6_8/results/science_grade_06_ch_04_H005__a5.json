@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows the south end of magnet 1 held near the south end of magnet 2.\n\nWhat should Nidhi expect?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The magnets repel each other."
+    },
+    {
+      "id": "B",
+      "text": "The magnets attract each other."
+    },
+    {
+      "id": "C",
+      "text": "The magnets attract and also repel at the same time."
+    },
+    {
+      "id": "D",
+      "text": "Neither magnet moves because both ends are painted blue."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% left bar magnet\n\\draw[thick,fill=red!25] (0,1.0) rectangle (2.2,1.7);\n\\draw[thick,fill=blue!25] (2.2,1.0) rectangle (4.4,1.7);\n\\node at (1.1,1.35) {N};\n\\node at (3.3,1.35) {S};\n\\node at (2.2,0.55) {magnet 1};\n% right bar magnet, S facing left magnet's S\n\\draw[thick,fill=blue!25] (5.2,1.0) rectangle (7.4,1.7);\n\\draw[thick,fill=red!25] (7.4,1.0) rectangle (9.6,1.7);\n\\node at (6.3,1.35) {S};\n\\node at (8.5,1.35) {N};\n\\node at (7.4,0.55) {magnet 2};\n% facing poles mark\n\\draw[<->,thick] (4.5,2.1) -- (5.1,2.1);\n\\node at (4.8,2.45) {near};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like poles repel, so south near south means the magnets push apart. Attraction would reverse the rule; claiming both attract and repel omits the like-pole condition; paint colour does not decide the force.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote IGCSE force arrows into two labelled bar magnets with S ends facing."
+  }
+}

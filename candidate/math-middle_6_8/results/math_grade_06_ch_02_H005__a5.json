@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Alok draws two rays from a common point $P$ on his notebook: ray $PM$ and ray $PN$.\n\nOne or more options may be correct. Which two claims correctly describe the angle they form?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ray $PM$ and ray $PN$ form an angle whose vertex is $P$ and whose arms are $PM$ and $PN$."
+    },
+    {
+      "id": "B",
+      "text": "The vertex of the angle is arm $PM$."
+    },
+    {
+      "id": "C",
+      "text": "The angle may be named $\\angle MPN$, with the vertex letter $P$ written in the middle."
+    },
+    {
+      "id": "D",
+      "text": "Ray $PM$ and another ray that does not start at $P$ still form this angle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two rays from P form an angle with vertex P and arms PM, PN; the three-letter name puts P in the middle. Calling an arm the vertex swaps terms. Dropping the shared starting point omits the angle condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

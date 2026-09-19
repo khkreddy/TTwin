@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anaya grows a bean seedling. She places it so sunlight comes only from the left side.\n\nWhat should she expect?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The shoot bends toward the left and the root grows downward."
+    },
+    {
+      "id": "B",
+      "text": "The root bends toward the left and the shoot grows straight upward."
+    },
+    {
+      "id": "C",
+      "text": "The shoot bends toward the right and the root grows downward."
+    },
+    {
+      "id": "D",
+      "text": "The shoot grows straight upward and the root grows downward, with no bend toward the light."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shoots grow toward sunlight, so with light from the left the shoot bends left; roots grow downward. Giving the bend to the root, bending the shoot away from the light, or denying any bend toward light are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pihu sorts picture cards for a class display. One card shows Halley's Comet passing near the Sun; another shows the bright star Polaris far beyond the planets.\n\nWhich choice correctly places the objects and how they get light?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Halley's Comet belongs to the Solar System and shines by reflecting sunlight; Polaris is outside the Solar System."
+    },
+    {
+      "id": "B",
+      "text": "Halley's Comet belongs to the Solar System and the Sun shines by reflecting light from the comet."
+    },
+    {
+      "id": "C",
+      "text": "Only the Sun and eight planets belong to the Solar System, so Halley's Comet does not."
+    },
+    {
+      "id": "D",
+      "text": "Polaris belongs to the Solar System because it looks bright."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Comets belong to the Solar System and shine by reflected sunlight; the Sun produces the light. Stars such as Polaris lie far outside. Limiting the Solar System to the Sun and planets, or placing Polaris inside because it looks bright, are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

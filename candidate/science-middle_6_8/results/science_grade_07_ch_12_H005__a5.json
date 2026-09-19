@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vivaan's class asks why the Southern Hemisphere has summer in December while the Northern Hemisphere has winter then.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which reason is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Earth's tilted axis stays pointed the same way as Earth revolves, so in December the Southern Hemisphere gets more direct sunlight and longer days."
+        },
+        {
+          "id": "B",
+          "text": "In December the Southern Hemisphere has summer because its tilt brings it closer to the Sun."
+        },
+        {
+          "id": "C",
+          "text": "In December both hemispheres have summer."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The maintained tilt makes one hemisphere lean toward the Sun at a time, so December gives the Southern Hemisphere more direct sunlight and longer days, not a closer orbit."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Seasons come from Earth's maintained axial tilt during revolution, which changes sunlight intensity and day length by hemisphere. Closer-to-Sun tilt and both-hemispheres-summer are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

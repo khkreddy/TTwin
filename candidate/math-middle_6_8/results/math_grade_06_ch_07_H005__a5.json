@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Chirag has the fraction $\\dfrac{2}{5}$ of a chocolate bar. He wants another fraction for the same quantity of that bar.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan gives an equivalent fraction?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiply numerator and denominator by $3$ to get $\\dfrac{6}{15}$."
+        },
+        {
+          "id": "B",
+          "text": "Change only the numerator to $6$ to get $\\dfrac{6}{5}$."
+        },
+        {
+          "id": "C",
+          "text": "Keep the numerator $2$ and replace the bar with a different whole to get another fraction equal to $\\dfrac{2}{5}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Multiplying numerator and denominator by the same nonzero factor keeps the same quantity of the bar, so 2/5 = 6/15."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same nonzero factor on numerator and denominator gives an equivalent fraction for the same bar quantity. Changing only the numerator swaps which parts scale. Changing the whole omits that the same bar quantity must be kept.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Mehak stirs baking soda into a beaker of water at about 20 °C. Some baking soda remains undissolved at the bottom. She heats the mixture to about 50 °C while stirring.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Heating while stirring can make the undissolved baking soda dissolve."
+    },
+    {
+      "id": "2",
+      "text": "At about 50 °C more baking soda can dissolve in the water than at about 20 °C."
+    },
+    {
+      "id": "3",
+      "text": "Heating turns the undissolved baking soda into a new compound that cannot dissolve."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the baking soda and water activity, heating from about 20 °C to 50 °C while stirring dissolves undissolved baking soda and allows more to dissolve. Heating does not turn it into an undissolvable new compound here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
