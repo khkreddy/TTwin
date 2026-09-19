@@ -1,0 +1,116 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:43:35.555Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q6",
+    "item_type": "single_mcq",
+    "stem": "The diagram shows the only three forces acting on an object.\nWhat is the resultant force on the object?",
+    "options": [
+      {
+        "id": "A",
+        "text": "0 N"
+      },
+      {
+        "id": "B",
+        "text": "5.0 N towards the left"
+      },
+      {
+        "id": "C",
+        "text": "5.0 N towards the right"
+      },
+      {
+        "id": "D",
+        "text": "10.0 N towards the right"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,font=\\sffamily]\\draw (0,0) rectangle (2.4,1.3);\\draw[->] (-1.4,1.05) -- (0,1.05) node[pos=0,left] {3.0\\,N};\\draw[->] (-1.4,0.25) -- (0,0.25) node[pos=0,left] {2.0\\,N};\\draw[->] (3.85,0.65) -- (2.4,0.65) node[pos=0,right] {5.0\\,N};\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Venus is the brightest object in the sky."
+      }
+    ],
+    "enrichment": "Stars shine with their own light, but Venus is a planet; Venus is often seen shining brightly at dawn or dusk and is commonly called the Morning Star or Evening Star even though it is not a star. A nickname based on brightness does not make Venus a star; its identity as a planet means its shine is understood with planets and reflected sunlight rather than starlight produced by itself. The learner correctly applies this rule: Stars shine with their own light, but Venus is a planet; Venus is often seen shining brightly at dawn or dusk and is commonly called the Morning Star or Evening Star even though it is not a star. The name Star in Morning Star means Venus produces its own light like other stars.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_12/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “5.0 N towards the left” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “5.0 N towards the right” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “10.0 N towards the right” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Decide whether a bright object called a Morning Star or Evening Star is actually a star or the planet Venus. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured ",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "one_or_more",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_12/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "mx_allowlist": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "condition_omission"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_12/H007; do not copy source.key"
+  }
+}

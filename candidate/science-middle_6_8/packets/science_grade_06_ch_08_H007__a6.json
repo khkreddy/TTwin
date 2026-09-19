@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:43:01.285Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_08/H007",
+      "unit_id": "science/grade_06/ch_08/H007",
+      "title": "Decide which conditions make water evaporate faster or slower.",
+      "node_labels": [
+        "States of matter, particles and water",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "States of matter, particles and water",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "A plate always dries completely before a bottle cap, even if the plate holds much more water."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "With temperature and exposed area equal, water evaporates faster in humid air than in dry air."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "At the same temperature and humidity, the same amount of water evaporates faster in a large narrow-necked bottle than in a small shallow saucer because the bottle is bigger."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "Water at 30°C cannot evaporate; it must reach its boiling point."
+      }
+    ],
+    "enrichment": "Water evaporates faster when more surface is exposed to air, when it is warmer or in sunlight, and when air has less water vapour; it evaporates slower in humid air. Changing exposed area, warmth, sunlight, air movement, or humidity changes the time taken for water to evaporate. The learner correctly applies this rule: Water evaporates faster when more surface is exposed to air, when it is warmer or in sunlight, and when air has less water vapour; it evaporates slower in humid air. Only the amount of water controls evaporation time; exposed area, sunlight, wind, and humidity do not matter.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: A journey through states of water. The student must decide: Decide which conditions make water evaporate faster or slower. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "three_statement",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_08/H007",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "condition_omission",
+        "relationship_reversal",
+        "surface_feature_capture",
+        "mechanism_conflation"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_08/H007; do not copy source.key"
+  }
+}

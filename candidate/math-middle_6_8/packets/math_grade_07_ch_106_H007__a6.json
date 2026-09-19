@@ -1,0 +1,127 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m19_qp_12:q23",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:43:26.142Z",
+  "source": {
+    "item_ref": "session:0580_m19_qp_12:q23",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a quadrilateral on a 1 cm² grid.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Write down the mathematical name of this quadrilateral. [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Work out the area of this quadrilateral. Give the units of your answer. [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.7cm,y=0.7cm]\\draw[gray!75,densely dashed,line width=0.35pt] (0,0) grid[step=1] (10,8);\\draw[black,line width=1.15pt,line join=round] (5,8)--(8,6)--(5,0)--(2,6)--cycle;\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_106/H007",
+      "unit_id": "math/grade_07/ch_106/H007",
+      "title": "Can the learner use row and column sum constraints to fill or reject a 3 by 3 grid using 1-9 without repetition?",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Numbers 1 through 9 is the label that belongs on this item, so 'Can the learner use row and column sum constraints to fill or reject a' is answered as numbers 1 through 9 rather than 3 by 3 grid."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "3 by 3 grid still holds here even though The rule uses the numbers 1 through 9 without repeating any of them is missing from the stem — on the item about Can the learner use row and column sum constraints to."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Numbers 1 through 9 is what produces 3 by 3 grid, so the usual direction of this relation is run backwards — on the item about Can the learner use row and column sum constraints to."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The 3 by 3 grid rule also covers this: diagonal magic-square rules, so it is not an exception — on the item about Can the learner use row and column sum constraints to."
+      }
+    ],
+    "enrichment": "In a 3 by 3 grid filled with 1 through 9 without repetition, each outside number is the sum of its row or column; all row sums together equal 45 and all column sums together equal 45.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_106. The student must decide: Can the learner use row and column sum constraints to fill or reject a 3 by 3 grid using 1-9 without repetition? Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or ",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_07/ch_106/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "term_substitution",
+        "condition_omission",
+        "relationship_reversal",
+        "scope_error",
+        "surface_feature_capture"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_106/H007; do not copy source.key"
+  }
+}
