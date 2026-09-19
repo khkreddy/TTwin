@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Jatin hears the number one lakh and asks whether that number is big or small. He can compare with familiar sizes such as seats in a cinema hall or trees in a nearby park.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Decide whether one lakh is big or small only after naming what is counted and comparing with a familiar size of that kind."
+    },
+    {
+      "id": "2",
+      "text": "One lakh is always big, because the printed word lakh looks large on the page."
+    },
+    {
+      "id": "3",
+      "text": "One lakh cinema seats may feel large next to a small hall, while one lakh trees may feel ordinary next to a huge park."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Big or small depends on the counted thing and a familiar comparison. Statement 2 treats the printed word as enough. Statements 1 and 3 are correct.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

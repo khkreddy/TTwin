@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which value does he obtain?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$27$"
+        },
+        {
+          "id": "B",
+          "text": "$21$"
+        },
+        {
+          "id": "C",
+          "text": "$16$"
+        },
+        {
+          "id": "D",
+          "text": "$33$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Ishaan evaluates the expression $5p + 2q$ when $p = 3$ and $q = 6$.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Replace $p$ by $3$ and $q$ by $6$, then compute $5\\times 3 + 2\\times 6 = 15 + 12 = 27$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Substitution gives 5×3+2×6=27. 21 swaps the multipliers (5×3+2×3 or similar mix). 16 adds 5+3+2+6. 33 multiplies wrongly (5×3+2×9-style).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.0,0);\n  \\coordinate (C) at (1.0,2.1);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\node[below left] at (A){$A$};\n  \\node[below right] at (B){$B$};\n  \\node[above] at (C){$C$};\n  \\draw[line width=0.8pt] (1.4,-0.12)--(1.6,-0.12);\n  \\draw[line width=0.8pt] (2.05,0.95)--(2.2,1.05);\n  \\draw[line width=0.8pt] (2.15,1.0)--(2.3,1.1);\n  \\draw[line width=0.8pt] (0.45,0.95)--(0.6,1.05);\n  \\draw[line width=0.8pt] (0.55,1.0)--(0.7,1.1);\n  \\draw[line width=0.8pt] (0.65,1.05)--(0.8,1.15);\n  \\begin{scope}[shift={(5.2,0)}]\n    \\coordinate (P) at (0,0);\n    \\coordinate (Q) at (3.0,0);\n    \\coordinate (R) at (1.0,2.1);\n    \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n    \\node[below left] at (P){$P$};\n    \\node[below right] at (Q){$Q$};\n    \\node[above] at (R){$R$};\n    \\draw[line width=0.8pt] (1.4,-0.12)--(1.6,-0.12);\n    \\draw[line width=0.8pt] (2.05,0.95)--(2.2,1.05);\n    \\draw[line width=0.8pt] (2.15,1.0)--(2.3,1.1);\n    \\draw[line width=0.8pt] (0.45,0.95)--(0.6,1.05);\n    \\draw[line width=0.8pt] (0.55,1.0)--(0.7,1.1);\n    \\draw[line width=0.8pt] (0.65,1.05)--(0.8,1.15);\n  \\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Kiran studies the diagram of triangles $ABC$ and $PQR$. Matching tick marks show $AB = PQ$, $BC = QR$, and $CA = RP$.\n\nWhich claim correctly decides congruence from those side lengths?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The three matching side lengths are enough: triangles $ABC$ and $PQR$ are congruent by SSS."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent because each figure is labelled with three letters."
+    },
+    {
+      "id": "C",
+      "text": "Congruence here also needs a right angle before the side lengths can be used."
+    },
+    {
+      "id": "D",
+      "text": "The congruence name is decided first, and only afterwards do the matching side lengths matter."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "SSS: three corresponding equal sides guarantee congruence. Three-letter labels alone are term substitution. Demanding a right angle conflates with RHS. Reversing order of naming vs sides is relationship reversal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewritten ABC and PQR with matching side ticks."
+  }
+}

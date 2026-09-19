@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_103/H002",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_103/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "surface_feature_capture",
+      "D": "term_substitution",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_103/H002; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_103:H002:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_08/ch_103",
+    "chapter_label": "math/grade_08/ch_103",
+    "subtopic_id": "math/grade_08/ch_103/H002",
+    "stem": "Bina compares three plans for counting a large sack of identical buttons: the spoken list one, two, three, \\ldots ; a list that stops at forty; and a tick mark for each button with no number words.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The spoken list one, two, three, \\ldots keeps going and stays usable for a large sack.",
+      "B": "The list that stops at forty is enough for any large sack.",
+      "C": "Tick marks with no number words are the most usable plan for a large sack.",
+      "D": "Any of the three plans works equally well because each uses marks or words."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_103/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

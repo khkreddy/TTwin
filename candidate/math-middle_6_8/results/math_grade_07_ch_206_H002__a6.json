@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Farid must construct a $90^\\circ$ angle at point $T$ on a given straight line.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark points $X$ and $Y$ on the line at equal distances from $T$ so that $T$ is the midpoint of $XY$, then construct the perpendicular bisector of $XY$."
+    },
+    {
+      "id": "B",
+      "text": "Keep $T$ on the line, but skip making $T$ the midpoint of a segment on that line."
+    },
+    {
+      "id": "C",
+      "text": "First draw a $60^\\circ$ angle at $T$ by an equilateral triangle, then halve it to get $30^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "Treat $T$ as a point outside the line and drop a perpendicular from outside."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Make T the midpoint of XY on the line, then the perpendicular bisector of XY is the 90° line at T. Skipping the midpoint omits the needed condition. Building 60°/30° conflates another construction. Treating T as outside changes the scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

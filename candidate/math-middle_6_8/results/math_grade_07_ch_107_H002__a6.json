@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Where should he place point $I$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "At a meeting point of an arc from $G$ of radius $7\\,\\mathrm{cm}$ and an arc from $H$ of radius $6\\,\\mathrm{cm}$."
+        },
+        {
+          "id": "B",
+          "text": "Anywhere on the dashed arc drawn from $G$, because that arc is labelled first."
+        },
+        {
+          "id": "C",
+          "text": "On the midpoint of segment $GH$, because $GH$ is the drawn base."
+        },
+        {
+          "id": "D",
+          "text": "At endpoint $H$, because $H$ already sits on the base."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (G) at (0,0);\n  \\coordinate (H) at (4.8,0);\n  \\draw[line width=1.05pt] (G)--(H);\n  \\fill (G) circle (1.5pt); \\fill (H) circle (1.5pt);\n  \\node[below left] at (G){$G$};\n  \\node[below right] at (H){$H$};\n  \\node[below] at (2.4,-0.35){$8\\,\\mathrm{cm}$};\n  \\draw[line width=0.7pt,dashed] (G) ++(0:2.6) arc (0:80:2.6);\n  \\draw[line width=0.7pt,dashed] (H) ++(180:2.2) arc (180:100:2.2);\n  \\node[above left] at (1.3,1.6){arc from $G$};\n  \\node[above right] at (3.6,1.4){arc from $H$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Rohan looks at the diagram. He has drawn base $GH$ of length $8\\,\\mathrm{cm}$. He must build triangle $GHI$ with $GI = 7\\,\\mathrm{cm}$ and $HI = 6\\,\\mathrm{cm}$.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Point $I$ must be $7\\,\\mathrm{cm}$ from $G$ and $6\\,\\mathrm{cm}$ from $H$, so it lies at an intersection of those two arcs."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The third vertex is the intersection of arcs with radii equal to the remaining sides. Using only one arc omits the second radius. The midpoint and endpoint grab base features.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewritten base GH with two construction arcs."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kabir weighs $6$ tenths of a kilogram of flour on a kitchen scale marked in tenths and hundredths.\n\nWhich two claims correctly describe the same mass?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "$6$ tenths of a kilogram is the same as $60$ hundredths of a kilogram."
+    },
+    {
+      "id": "B",
+      "text": "$6$ tenths of a kilogram is the same as $6$ hundredths of a kilogram."
+    },
+    {
+      "id": "C",
+      "text": "Ten hundredths make one tenth, so $6$ tenths equal $60$ hundredths of a kilogram."
+    },
+    {
+      "id": "D",
+      "text": "$6$ tenths of a kilogram is the same as the printed digit $6$ on the scale dial."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ten hundredths make one tenth, so 6 tenths regroup as 60 hundredths without changing the mass. Matching only the digit 6 as hundredths is term substitution. Grabbing the printed 6 is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

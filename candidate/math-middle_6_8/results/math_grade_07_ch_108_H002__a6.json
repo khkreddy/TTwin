@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "How many ribbons does she need?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$18$"
+        },
+        {
+          "id": "B",
+          "text": "$2$"
+        },
+        {
+          "id": "C",
+          "text": "$9$"
+        },
+        {
+          "id": "D",
+          "text": "$22$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Kavya has $45$ ribbons. She wants $\\dfrac{2}{5}$ of them for gift tags.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Split $45$ into $5$ equal parts of $9$ ribbons each, then take $2$ of those parts: $2\\times 9 = 18$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2/5 of 45: 45÷5=9, then 2×9=18. Taking only the numerator 2 is term substitution. Taking one part (9) omits the numerator count. 22 is an off-by mix.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

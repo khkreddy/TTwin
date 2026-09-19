@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Esha studies the whole-number list $8$, $27$, $64$, $125$, $\\ldots$\n\nWhich two claims correctly continue the list?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each term is the cube of $2$, $3$, $4$, $5$, $\\ldots$, so the next term is $216$."
+    },
+    {
+      "id": "B",
+      "text": "Each term is $19$ more than the one before, so the next term is $144$."
+    },
+    {
+      "id": "C",
+      "text": "The cubes of consecutive whole numbers continue, so the next term is $216$."
+    },
+    {
+      "id": "D",
+      "text": "The next term is $126$, because $126$ comes after $125$ when counting by ones."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "8, 27, 64, 125 are 2³, 3³, 4³, 5³, so the next term is 6³ = 216. A fixed add of 19 misreads the growing gaps. Counting on by ones from 125 ignores the cube rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

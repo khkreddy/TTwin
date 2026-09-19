@@ -1,0 +1,87 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_01/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_01/H002",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": null,
+      "C": "condition_omission",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_01/H002; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_01:H002:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S1/H-INQUIRY",
+    "chapter_id": "science/grade_07/ch_01",
+    "chapter_label": "The ever-evolving world of science",
+    "subtopic_id": "science/grade_07/ch_01/H002",
+    "stem": "Arjun reads a short section about magnets. He wants a plan that matches this chapter's view of learning science.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Read the section, then test a magnet with an iron nail and a plastic ruler and record which is attracted while thinking about what he sees.",
+      "B": "Combining reading with a careful magnet test matches learning that extends into observing and doing.",
+      "C": "Skip the book and only play with magnets, with no reading.",
+      "D": "Take the book outdoors and reread the same page, because outdoor reading is better science learning than any magnet test."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_01/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

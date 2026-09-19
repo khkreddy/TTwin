@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What is the correct result?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$0.84$"
+        },
+        {
+          "id": "B",
+          "text": "$84$"
+        },
+        {
+          "id": "C",
+          "text": "$8.4$"
+        },
+        {
+          "id": "D",
+          "text": "$0.084$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Leela divides $8.4$ by $10$ by moving the decimal point.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Dividing by $10$ moves the decimal point one place to the left, so $8.4$ becomes $0.84$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "÷10 moves the point one place left: 0.84. Moving right to 84 reverses direction. Leaving 8.4 unchanged omits the move. Two places left (0.084) treats the divisor as 100.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

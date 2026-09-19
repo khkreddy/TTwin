@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ojas hears a kettle on the stove begin to whistle and sees a cloud of steam rise from the spout. He forms a guess about why the steam appears.\n\nWhich claims describe a correct next scientific step?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ask whether his guess about the steam is already correct."
+    },
+    {
+      "id": "B",
+      "text": "Turn his observation into a clear question about the steam."
+    },
+    {
+      "id": "C",
+      "text": "Plan a simple test to check his possible answer about the steam."
+    },
+    {
+      "id": "D",
+      "text": "Accept his first guess as the final answer, with no further check."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After observing and guessing, the next steps are to form a clear question and to test the possible answer. Asking if the guess is already correct, or accepting it without a check, skips that path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

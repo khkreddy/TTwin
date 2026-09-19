@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Siddharth wants daily habits and surroundings that support a healthy body and a healthy mind. He reviews three weekend claims.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "A balanced meal, outdoor play with friends, and sleep on time support good health."
+    },
+    {
+      "id": "2",
+      "text": "Lying awake watching videos can replace the sleep needed for health."
+    },
+    {
+      "id": "3",
+      "text": "Supportive friendships do not count as health-supporting because they affect feelings, not fitness."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Food, activity, sleep, and supportive relationships with clean safe surroundings support body and mind. Late videos do not replace sleep. Friendships that support feelings still support health.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_08/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_08/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "surface_feature_capture",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_08/H002; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_08:H002:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-STATES",
+    "chapter_id": "science/grade_06/ch_08",
+    "chapter_label": "A journey through states of water",
+    "subtopic_id": "science/grade_06/ch_08/H002",
+    "stem": "Tanya spills the same small amount of water on a plastic lunchbox lid and on a dry blotting-paper sheet. After some time both wet patches look smaller.\n\nWhat best explains the two cases?",
+    "item_type": "mcq",
+    "options": {
+      "A": "On the lunchbox lid the water mainly evaporates; on the blotting paper it can both soak in and evaporate.",
+      "B": "On both surfaces the water disappears by seepage only.",
+      "C": "Neither seepage nor evaporation is involved, because no white mist was seen.",
+      "D": "Seepage changes liquid water into water vapour inside the blotting paper."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_08/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

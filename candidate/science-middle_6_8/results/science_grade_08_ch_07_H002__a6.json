@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Harsh stirs a spoon of jaggery into a cup of warm milk. Soon no jaggery pieces can be seen, yet the milk tastes sweet throughout the cup.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Tiny jaggery particles separate and occupy spaces between the milk particles, so jaggery is present throughout the cup."
+    },
+    {
+      "id": "2",
+      "text": "The jaggery is gone; only its sweetness remains in the milk."
+    },
+    {
+      "id": "3",
+      "text": "The jaggery particles go inside the milk particles, making each milk particle sweet."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dissolved jaggery particles spread into spaces between milk particles and remain present. Sweetness without particles, or particles entering milk particles, are incorrect models.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

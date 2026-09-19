@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (K) at (0,0);\n  \\draw[line width=1.05pt] (-2.8,0)--(2.8,0) node[right]{$r$};\n  \\draw[line width=1.05pt] (0,-2.0)--(0,2.2) node[above]{$s$};\n  \\fill (K) circle (1.5pt);\n  \\node[below left] at (-0.15,-0.12){$K$};\n  \\draw[line width=0.65pt] (0.75,0) arc (0:90:0.75);\n  \\node at (1.15,0.45){$40^\\circ$};\n  \\draw[line width=0.65pt] (-0.85,0) arc (180:90:0.85);\n  \\node at (-1.15,0.55){$x$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Bhavna looks at the diagram. Straight lines $r$ and $s$ meet at $K$. One angle at $K$ is marked $40^\\circ$, and the adjacent angle on the same straight line is marked $x$.\n\nWhich measure of $x$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x = 140^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "$x = 40^\\circ$."
+    },
+    {
+      "id": "C",
+      "text": "$x = 50^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "$x = 180^\\circ$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The 40° angle and x form a linear pair on a straight line, so x=180−40=140. Copying 40° is term substitution. 50° invents a complement-style miss. Taking 180° alone reverses the pair into the whole straight angle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewritten intersecting lines at K with 40° and adjacent x."
+  }
+}

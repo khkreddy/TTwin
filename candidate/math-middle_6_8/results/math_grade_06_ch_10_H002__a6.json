@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Hema places $-8$, $-3$, and $1$ on a number line with $0$ marked.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly orders those integers from least to greatest?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$-8$, $-3$, $1$, by their positions from left to right on the number line."
+        },
+        {
+          "id": "B",
+          "text": "$-3$, $-8$, $1$, because $3$ is a smaller digit than $8$."
+        },
+        {
+          "id": "C",
+          "text": "$1$, $-3$, $-8$, because $1$ is farthest right, so it is least."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Farther left is smaller: −8 is left of −3, and both are left of 1."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On the number line, −8 < −3 < 1. Ordering by digit size or treating farthest right as least ignores position.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

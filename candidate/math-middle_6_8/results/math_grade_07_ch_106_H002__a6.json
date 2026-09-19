@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Deepak adds the scores $8$, $3$, $4$, $11$, and $6$ from five short games. He wants the even-or-odd nature of the total from the number of odd addends.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The odd addends are $3$ and $11$, so there are two odd addends and the total is even."
+    },
+    {
+      "id": "B",
+      "text": "The total is odd because two of the five scores are odd."
+    },
+    {
+      "id": "C",
+      "text": "The total is even because the list contains the even scores $8$, $4$, and $6$, treating even as the parity label for the sum."
+    },
+    {
+      "id": "D",
+      "text": "The total is odd because five scores were added, ignoring which ones are odd."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Odd addends are 3 and 11 (two odds). An even count of odd addends makes an even total. B flips that parity rule. C swaps in the word odd as if it named the total. D omits counting odd addends.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

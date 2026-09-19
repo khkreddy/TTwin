@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira winds insulated copper wire into a coil, joins the ends to a cell, and holds a compass near the coil. The needle deflects. She then slides an iron nail into the coil and finds that steel pins cling more strongly to the tip.\n\nWhich claim about her arrangement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The current-carrying coil acts as a temporary magnet, and the iron nail makes the electromagnet stronger."
+    },
+    {
+      "id": "B",
+      "text": "The steel pins keep clinging after she disconnects the cell."
+    },
+    {
+      "id": "C",
+      "text": "Putting the iron nail inside makes the electromagnet weaker."
+    },
+    {
+      "id": "D",
+      "text": "Without the nail, the powered coil cannot deflect the compass."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A powered coil behaves like a magnet; an iron core strengthens it. Magnetism stops when current stops. The coil alone can still deflect a compass.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

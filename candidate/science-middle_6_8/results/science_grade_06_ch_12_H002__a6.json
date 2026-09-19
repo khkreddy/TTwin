@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pihu plans to spot Mars from her open balcony at 8:15 p.m. Mars is above the horizon for her place and date, but thick fog covers the whole sky and a bright porch lamp stays on.\n\nWhich judgment is best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "She is unlikely to see Mars clearly because fog and the bright lamp block a clear dark view."
+    },
+    {
+      "id": "B",
+      "text": "She will see Mars clearly because it is above the horizon at that clock time alone."
+    },
+    {
+      "id": "C",
+      "text": "Switching the porch lamp brighter will make Mars easier to find through the fog."
+    },
+    {
+      "id": "D",
+      "text": "Mars can be seen tonight from every place on Earth under these same clock conditions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Visibility needs a clear enough dark sky as well as the object being above the horizon. Fog and bright light block the view; more light makes it worse; place on Earth also matters.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

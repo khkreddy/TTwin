@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Damini checks which expression must always be even for integer values of the letters. She compares $8p + 2r$ with $t^{2} + 3$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$8p + 2r$ is always even because $8p + 2r = 2(4p + r)$."
+        },
+        {
+          "id": "B",
+          "text": "$t^{2} + 3$ is always even because the added $3$ forces an even value."
+        },
+        {
+          "id": "C",
+          "text": "Neither expression can ever be even for integer letter-values."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$8p+2r$ factors as $2(4p+r)$, so it is always even for integers $p$ and $r$. For $t^{2}+3$, an odd $t$ gives an even value and an even $t$ gives an odd value, so it is not always even."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "8p+2r=2(4p+r) is always even. t^2+3 matches the parity of t^2 plus odd, so it flips with t and is not always even.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Vivaan looking at a lamp flame through holes in three cardboard sheets X, Y and Z.\n\nIn which case can he see the flame?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The three holes lie on one straight line at the same height."
+    },
+    {
+      "id": "B",
+      "text": "The hole in Y is moved well above the other two holes."
+    },
+    {
+      "id": "C",
+      "text": "Light from the flame bends freely around the sheets, so hole alignment does not matter."
+    },
+    {
+      "id": "D",
+      "text": "He makes the lamp brighter, so he can see through any arrangement of the holes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.22);\n\\node at (0,0.55) {lamp};\n\\foreach \\x/\\lab in {1.5/X, 3.1/Y, 4.7/Z} {\n  \\draw[thick,fill=gray!15] (\\x,0.2) rectangle (\\x+0.22,2.2);\n  \\draw[thick,fill=white] (\\x+0.11,1.2) circle (0.11);\n  \\node at (\\x+0.11,2.45) {\\lab};\n}\n\\draw[thick,dashed] (0.22,1.2) -- (5.2,1.2);\n\\node at (3.0,-0.25) {straight path};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light travels in a straight line, so the flame is seen only when the holes are straight and aligned. Raising the middle hole, bending light, or brightening the lamp does not remove that need.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source ray diagram as three cardboard sheets X, Y, Z with aligned holes."
+  }
+}

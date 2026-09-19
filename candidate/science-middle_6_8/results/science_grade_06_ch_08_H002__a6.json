@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya spills the same small amount of water on a plastic lunchbox lid and on a dry blotting-paper sheet. After some time both wet patches look smaller.\n\nWhat best explains the two cases?",
+  "options": [
+    {
+      "id": "A",
+      "text": "On the lunchbox lid the water mainly evaporates; on the blotting paper it can both soak in and evaporate."
+    },
+    {
+      "id": "B",
+      "text": "On both surfaces the water disappears by seepage only."
+    },
+    {
+      "id": "C",
+      "text": "Neither seepage nor evaporation is involved, because no white mist was seen."
+    },
+    {
+      "id": "D",
+      "text": "Seepage changes liquid water into water vapour inside the blotting paper."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A non-porous plastic lid mainly loses water by evaporation. Porous blotting paper allows both soaking in and evaporation. Seepage alone, absence of mist, and treating seepage as turning liquid into vapour are incorrect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

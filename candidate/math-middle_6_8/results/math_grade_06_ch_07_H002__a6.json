@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Chirag and Leela each start with the same whole roti. Chirag cuts his into $5$ equal pieces. Leela cuts hers into $5$ pieces of different sizes. Each takes one piece and calls it one-fifth of the roti.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Only Chirag's piece is a valid one-fifth, because the whole was split into equal-size parts."
+    },
+    {
+      "id": "2",
+      "text": "Both pieces are one-fifth, because each person took one of five pieces."
+    },
+    {
+      "id": "3",
+      "text": "Equal size of the parts, not the count of pieces alone, decides a fractional unit of one-fifth."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fractional unit 1/5 needs five equal parts. Chirag's equal cut is valid; Leela's unequal cut is not. Statement 2 is false. Correct pair is 1 and 3.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

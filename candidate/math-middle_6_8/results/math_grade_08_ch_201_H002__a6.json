@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Esha scores $13$ marks out of $20$ on a quiz. She wants this result as a percentage.\n\nOne or more options may be correct. Which two claims correctly convert the fraction to a percentage?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ratio $13:20$ is already the percentage $13\\%$."
+    },
+    {
+      "id": "B",
+      "text": "$\\frac{13}{20} = \\frac{65}{100} = 65\\%$."
+    },
+    {
+      "id": "C",
+      "text": "$\\frac{13}{20} \\times 100 = 65$, so the percentage is $65\\%$."
+    },
+    {
+      "id": "D",
+      "text": "$\\frac{13}{20} = 20\\%$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scale 13/20 by 5 to get 65/100, or multiply by 100, to obtain 65%. Treating the raw ratio or the denominator as the percentage skips that conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

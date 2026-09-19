@@ -1,0 +1,105 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_07/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_07/H002",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "surface_feature_capture",
+      "C": "term_substitution",
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_07/H002; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_07:H002:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-STATES",
+    "chapter_id": "science/grade_08/ch_07",
+    "chapter_label": "Particulate nature of matter",
+    "subtopic_id": "science/grade_08/ch_07/H002",
+    "stem": "Harsh stirs a spoon of jaggery into a cup of warm milk. Soon no jaggery pieces can be seen, yet the milk tastes sweet throughout the cup.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 only",
+      "B": "1 and 2 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "Tiny jaggery particles separate and occupy spaces between the milk particles, so jaggery is present throughout the cup."
+      },
+      {
+        "id": "2",
+        "text": "The jaggery is gone; only its sweetness remains in the milk."
+      },
+      {
+        "id": "3",
+        "text": "The jaggery particles go inside the milk particles, making each milk particle sweet."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_07/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Imran writes this number grid. Immediate neighbours are only left, right, top, and bottom. A supercell is greater than every immediate neighbour.\n\n$3\\quad 5\\quad 4$\n$2\\quad 9\\quad 1$\n$6\\quad 7\\quad 0$\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The cell $9$ is a supercell, because it is greater than $5$, $2$, $1$, and $7$."
+    },
+    {
+      "id": "2",
+      "text": "The cell $7$ is a supercell, because it is larger than $6$ and $0$."
+    },
+    {
+      "id": "3",
+      "text": "The cell $5$ is not a supercell, because its neighbour $9$ is greater than $5$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "9 beats 5, 2, 1, and 7, so it is a supercell. 5 loses to 9 below it. 7 loses to 9 above it, so statement 2 is false. Correct pair is 1 and 3 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

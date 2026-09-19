@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Yamini arranges fence posts in a growing strip. Position $1$ uses $3$ posts, position $2$ uses $5$ posts, and position $3$ uses $7$ posts. She wants the position number $n$ whose arrangement uses $25$ posts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which equation correctly finds that position number?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Solve $2n + 1 = 25$ for the position number."
+        },
+        {
+          "id": "B",
+          "text": "Solve $3n = 25$ for the position number."
+        },
+        {
+          "id": "C",
+          "text": "Solve $n + 2 = 25$ for the position number."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The counts $3$, $5$, $7$ increase by $2$ each time and fit the rule $2n+1$. Setting $2n+1=25$ gives the position with $25$ posts."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Posts follow 2n+1. Set 2n+1=25 to get n=12. Using 3n multiplies the first count; n+2 drops the full position rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

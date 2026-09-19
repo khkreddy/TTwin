@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aisha shines a lamp on a globe to model the Sun and Earth. One half of the globe is lit while the other half is dark.\n\nWhich claim correctly explains day and night on Earth?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's rotation moves each place into and out of the side facing the Sun."
+    },
+    {
+      "id": "B",
+      "text": "It is daytime everywhere on Earth at the same time."
+    },
+    {
+      "id": "C",
+      "text": "Day and night are caused by Earth orbiting the Sun once each year."
+    },
+    {
+      "id": "D",
+      "text": "Earth's rotation keeps every place facing the Sun at all times."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "condition_omission"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The lit side facing the Sun has day; rotation carries places into and out of that side. Day is not everywhere at once, and yearly orbit is not the cause of day and night.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

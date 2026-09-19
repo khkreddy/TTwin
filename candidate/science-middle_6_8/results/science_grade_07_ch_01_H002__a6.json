@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Arjun reads a short section about magnets. He wants a plan that matches this chapter's view of learning science.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Read the section, then test a magnet with an iron nail and a plastic ruler and record which is attracted while thinking about what he sees."
+    },
+    {
+      "id": "B",
+      "text": "Combining reading with a careful magnet test matches learning that extends into observing and doing."
+    },
+    {
+      "id": "C",
+      "text": "Skip the book and only play with magnets, with no reading."
+    },
+    {
+      "id": "D",
+      "text": "Take the book outdoors and reread the same page, because outdoor reading is better science learning than any magnet test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The chapter treats science learning as extending beyond reading into observing and testing. Skipping the book omits reading; outdoor rereading alone captures location, not doing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

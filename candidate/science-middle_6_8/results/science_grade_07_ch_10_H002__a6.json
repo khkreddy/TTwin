@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara softens a sunlit leaf in boiling water, removes the green colour with alcohol, then adds iodine. The decolourised leaf turns blue-black. Her worksheet also names glucose and other nutrients.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What does the blue-black colour show?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Starch stored as food in the leaf."
+        },
+        {
+          "id": "B",
+          "text": "Glucose stored as food in the leaf."
+        },
+        {
+          "id": "C",
+          "text": "No starch is present in the leaf."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Why is the green colour removed before the iodine test?",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Decolourising the leaf makes the blue-black iodine colour change easier to observe."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Iodine turning blue-black shows starch stored as food, not glucose and not absence of starch. Removing green colour makes the colour change clearer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

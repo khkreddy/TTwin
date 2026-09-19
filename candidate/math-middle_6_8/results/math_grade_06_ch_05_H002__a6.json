@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Tushar lists multiples of $5$ as $5$, $10$, $15$, $20$, $25$, $30$, $35$, $40$, $\\ldots$ and multiples of $8$ as $8$, $16$, $24$, $32$, $40$, $\\ldots$",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the smallest common multiple of $5$ and $8$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$40$ is the smallest number that appears in both multiple lists."
+        },
+        {
+          "id": "B",
+          "text": "$5$, because $5$ is the first printed number in the first list."
+        },
+        {
+          "id": "C",
+          "text": "$80$, because $80$ is a later shared multiple of $5$ and $8$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Among the shared multiples 40, 80, …, the smallest is 40, the first number in both lists."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The first shared multiple of 5 and 8 is 40. Taking 5 captures a surface print. Taking 80 names a later common multiple, not the smallest.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

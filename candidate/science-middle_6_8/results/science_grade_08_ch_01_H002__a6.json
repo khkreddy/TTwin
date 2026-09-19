@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aditya plans a fair test on how puris puff before anyone lights the stove. He writes a list of things he might change: dough thickness, disc diameter, flour type (atta or maida), and oil temperature on the dial. He also notes how high each puri rises once it is fried.\n\nA factor is something that can be changed and may change the result.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about possible factors is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Dough thickness, disc diameter, flour type, and oil temperature are possible factors."
+        },
+        {
+          "id": "B",
+          "text": "How high a puri rises after frying is a possible factor he sets before cooking."
+        },
+        {
+          "id": "C",
+          "text": "Smoke noticed above the oil is a factor even when he does not choose to change it."
+        },
+        {
+          "id": "D",
+          "text": "Flour type is not a possible factor because it is not a number."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A factor is something he can deliberately change that may change puffing; rise height is a result, not a factor he sets beforehand."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Thickness, size, flour type, and oil temperature can be varied and may change puffing. Rise height is the observed result. Smoke he does not vary is not treated as a planned factor here. Flour type need not be numerical to count as a factor.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
