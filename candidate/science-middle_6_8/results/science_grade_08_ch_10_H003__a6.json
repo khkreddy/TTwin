@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Charu's scooter has a convex side-view mirror. Shopkeepers also use convex mirrors for surveillance, and some roads use them at sharp bends.\n\nCharu asks why a convex mirror is chosen for these uses.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A convex mirror forms erect, smaller images and shows a larger view area than a plane mirror."
+        },
+        {
+          "id": "B",
+          "text": "A convex mirror forms inverted, magnified images like a microscope."
+        },
+        {
+          "id": "C",
+          "text": "A convex mirror is chosen only because its frame is curved, not because of the image it forms."
+        },
+        {
+          "id": "D",
+          "text": "A convex side-view mirror shows less of the traffic behind than a plane mirror would."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Erect, diminished images with a wide field of view help show more of the surroundings behind or around the observer."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Convex mirrors give erect, smaller images and a larger view area, which suits side-view, bend, and surveillance uses.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

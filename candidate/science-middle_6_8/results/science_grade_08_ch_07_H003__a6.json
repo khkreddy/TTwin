@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Harsh compares a rubber eraser with a drop of mustard oil. The eraser keeps a definite shape and a definite volume.\n\nWhich claims correctly explain the eraser? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The eraser's particles are tightly packed."
+    },
+    {
+      "id": "B",
+      "text": "The attractions between the eraser's particles are very strong."
+    },
+    {
+      "id": "C",
+      "text": "Tight packing alone fixes the eraser's shape and volume; strong attractions are unnecessary."
+    },
+    {
+      "id": "D",
+      "text": "The eraser's fixed shape and volume force its particles close together and make their attractions strong."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solids keep definite shape and volume because particles are tightly packed with very strong attractions. C drops the attraction condition; D reverses cause and effect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly names where she finishes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$-3$, because start plus movement equals $5 + (-8)$."
+        },
+        {
+          "id": "B",
+          "text": "$-8$, reporting only the movement."
+        },
+        {
+          "id": "C",
+          "text": "$+13$, by adding $5$ and $8$ as same-direction jumps."
+        },
+        {
+          "id": "D",
+          "text": "$69$, by computing $5 + 8^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Hema stands at $+5$ on a number line and then moves $-8$.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Target = start + movement = $5 + (-8) = -3$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5+(-8)=-3. Reporting only the movement, adding absolute sizes as same-direction jumps, or squaring the movement are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

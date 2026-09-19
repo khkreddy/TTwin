@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bilal notes the Moon's place in the sky from his terrace at 9:00 p.m. on Wednesday. He checks again at 9:00 p.m. on Thursday.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon may appear in a different place in the sky at the same clock time on Thursday."
+    },
+    {
+      "id": "B",
+      "text": "The Moon does not always rise exactly when the Sun sets."
+    },
+    {
+      "id": "C",
+      "text": "The Moon returns to exactly the same sky position at the same clock time every night."
+    },
+    {
+      "id": "D",
+      "text": "Moonrise time never shifts from one day to the next."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Because the Moon moves ahead in its orbit, its sky place and rise time shift from day to day; it does not always rise at sunset.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

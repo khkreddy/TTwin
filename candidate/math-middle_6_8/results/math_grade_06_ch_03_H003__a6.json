@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The filling $9$, $5$, $3$ works, because only the left cell is greater than its immediate neighbour."
+    },
+    {
+      "id": "2",
+      "text": "Any filling where $9$ appears is enough, because $9$ is the intended supercell label."
+    },
+    {
+      "id": "3",
+      "text": "The supercell rule is produced by first labelling the left cell as intended, without comparing $9$ with $5$."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "three_statement",
+  "stem": "Imran fills three cells in a row with numbers. A cell is a supercell when its number is greater than each immediate neighbour. He wants only the left cell to be a supercell.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For 9,5,3: left 9>5 so left is a supercell; middle 5 is not greater than both neighbours; right 3 is not greater than 5. Only statement 1 is correct. Statement 2 swaps the label for the comparison rule. Statement 3 runs the relation backwards.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

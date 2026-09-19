@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "First evaluate $7 - 3$ inside the brackets to get $4$, then compute $6 \\times 4 + 4 = 28$."
+    },
+    {
+      "id": "B",
+      "text": "Call the word grouping the answer, without evaluating any part of the expression."
+    },
+    {
+      "id": "C",
+      "text": "Ignore the brackets and evaluate as if the expression were unbracketed from left to right."
+    },
+    {
+      "id": "D",
+      "text": "Multiply $6 \\times 7$ first, then subtract $3$, giving $43$ after adding $4$."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "item_type": "single_mcq",
+  "stem": "Komal must evaluate $6 \\times (7 - 3) + 4$.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Brackets force 7-3=4 first; then 6×4+4=28. Naming 'grouping' alone, ignoring brackets, or multiplying 6×7 first are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

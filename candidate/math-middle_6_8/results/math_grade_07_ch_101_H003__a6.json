@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Compare with the desk: the corridor is about $9$ desk-lengths, or $16\\,\\mathrm{m}$ longer than the desk."
+    },
+    {
+      "id": "2",
+      "text": "Read only the printed $18$ and skip naming any familiar object for comparison."
+    },
+    {
+      "id": "3",
+      "text": "The comparison also settles how to spell eighteen in Indian place-value naming."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "three_statement",
+  "stem": "Jatin's school corridor is $18\\,\\mathrm{m}$ long. A classroom desk in the same corridor is about $2\\,\\mathrm{m}$ long. He wants to make sense of the $18\\,\\mathrm{m}$ length.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "18÷2=9 and 18-2=16, so statement 1 is a sound familiar-object comparison. Statement 2 drops the familiar reference. Statement 3 stretches into place-value naming outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

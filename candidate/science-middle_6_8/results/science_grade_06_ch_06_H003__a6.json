@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kavya needs a lunch-box lid that will not leak watery dal. She compares a tight plastic lid with an open woven cloth cover.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which material better fits the purpose of this lid?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Tight plastic lid that keeps watery dal from leaking."
+        },
+        {
+          "id": "B",
+          "text": "Open woven cloth, because it feels soft in the hand."
+        },
+        {
+          "id": "C",
+          "text": "Either plastic or cloth, because any cover fits any lunch box."
+        },
+        {
+          "id": "D",
+          "text": "Open woven cloth, because a lid must let air through freely."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The lid must stop watery dal from leaking, so a tight plastic lid matches that purpose better than an open woven cloth."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A material is chosen when its properties fit the object's purpose. A lunch-box lid that must not leak needs a tight seal; soft feel or free airflow alone do not meet that purpose.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

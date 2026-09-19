@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Kabir checks a desk lamp that uses an incandescent bulb. The thin wire inside the glass bulb is broken. He also keeps an LED night lamp on the same shelf.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The desk lamp cannot glow, because the broken filament stops the current."
+    },
+    {
+      "id": "2",
+      "text": "The glass bulb, not the filament, produces the light, so an unbroken bulb is enough."
+    },
+    {
+      "id": "3",
+      "text": "The LED night lamp cannot glow, because it has no filament."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A broken filament means the incandescent desk lamp cannot glow. The glass does not produce the light, and an LED can glow without a filament.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

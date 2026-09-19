@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Abhay has the prime factorisation $3 \\times 3 \\times 3 \\times 5 \\times 5$ and wants it in exponential form.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Write $3^{3} \\times 5^{2}$, grouping three factors of $3$ and two factors of $5$."
+    },
+    {
+      "id": "2",
+      "text": "Each repeated prime becomes a base, and the count of repeats becomes its exponent."
+    },
+    {
+      "id": "3",
+      "text": "Write $3 \\times 5$ only, dropping the repeated factors instead of grouping them as exponents."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Grouping repeats gives 3³×5²; bases and exponents record that grouping. Writing only 3×5 drops the counts, so statements 1 and 2 are correct and 3 is not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

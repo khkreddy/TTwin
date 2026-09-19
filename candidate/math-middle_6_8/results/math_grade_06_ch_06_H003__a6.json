@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly gives that perimeter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perimeter $= 8 + 10 + 13 = 31\\,\\mathrm{m}$."
+        },
+        {
+          "id": "B",
+          "text": "Perimeter $= 13\\,\\mathrm{m}$, taking the longest side length as the perimeter."
+        },
+        {
+          "id": "C",
+          "text": "Perimeter $= 3\\,\\mathrm{m}$, because a triangle is named by having three sides."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Bhavna's triangular craft board has side lengths $8\\,\\mathrm{m}$, $10\\,\\mathrm{m}$, and $13\\,\\mathrm{m}$. She wants the distance around the board once, along its boundary.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The perimeter of a triangle is the sum of its three side lengths, so $8+10+13=31\\,\\mathrm{m}$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Add the three sides: 8+10+13=31 m. Taking only the longest side or the count of sides confuses perimeter with a single length or with the number of sides.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

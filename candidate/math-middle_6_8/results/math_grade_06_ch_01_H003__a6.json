@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "The next picture is four pairs of dots, so $8$ dots in all, continuing one more pair each time."
+    },
+    {
+      "id": "B",
+      "text": "Any larger cloud of dots works, without keeping the pair construction from picture to picture."
+    },
+    {
+      "id": "C",
+      "text": "Each picture uses $n$ pairs for the $n$th even count, so the next picture has $4$ pairs and $8$ dots."
+    },
+    {
+      "id": "D",
+      "text": "The next picture needs the full chapter shape-sequence table before it can be drawn."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Esha draws three pictures in order using pairs of dots: one pair ($2$ dots), two pairs ($4$ dots), then three pairs ($6$ dots).\n\nOne or more options may be correct. Which two claims correctly describe how to draw the next picture?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The pictures encode even counts as n pairs: 1 pair (2), 2 pairs (4), 3 pairs (6), so the next is 4 pairs (8). Dropping the pair construction or demanding the chapter table is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

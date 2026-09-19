@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Wafa must bisect $\\angle RST$ with ruler and compass.\n\nWhich construction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark $A$ and $B$ on the arms with $SA = SB$, then choose $C$ so that $AC = BC$, and draw ray $SC$."
+    },
+    {
+      "id": "B",
+      "text": "Name the vertex $S$ as the bisector, and treat equal arm marks as unnecessary."
+    },
+    {
+      "id": "C",
+      "text": "Draw any ray from $S$ through the printed middle of $\\angle RST$ with no equal marks."
+    },
+    {
+      "id": "D",
+      "text": "Mark equal lengths on one arm only, then declare that single arm to be the bisector."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal marks SA=SB on the arms and AC=BC build congruent triangles so ray SC bisects ∠RST. B labels the vertex as the bisector. C follows a printed middle with no equal marks. D marks only one arm.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Vihaan's candle burning in air. It reacts and produces a flame with heat and light. He also considers a sealed oxygen-free mixture that still releases heat, and a classmate who says nitrogen is the gas needed for burning.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The candle burning in air is combustion because it reacts with oxygen and produces heat and light."
+        },
+        {
+          "id": "B",
+          "text": "Nitrogen is the gas required for the candle to burn."
+        },
+        {
+          "id": "C",
+          "text": "The sealed oxygen-free mixture that releases heat is also combustion."
+        },
+        {
+          "id": "D",
+          "text": "A reaction with oxygen that releases heat is not combustion if no large flame is seen."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick] (0,0) ellipse (0.55 and 0.18);\n\\draw[thick] (-0.55,0) -- (-0.45,1.6);\n\\draw[thick] (0.55,0) -- (0.45,1.6);\n\\draw[thick] (-0.45,1.6) .. controls (-0.2,1.85) and (0.2,1.85) .. (0.45,1.6);\n\\fill[orange!80] (-0.12,1.65) -- (0,2.35) -- (0.12,1.65) -- cycle;\n\\node at (0,-0.45) {candle};\n\\node at (1.6,2.1) {heat + light};\n\\draw[->,thick] (0.35,2.0) -- (1.15,2.0);\n\\node at (0,-1.0) {burns in air};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Combustion needs reaction with oxygen and production of heat or light; the candle shows both, unlike nitrogen or an oxygen-free heat release."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Candle burning in air meets the combustion checklist. Nitrogen, oxygen-free heat release, and requiring a visible flame miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source diagram into a candle flame with heat and light labels."
+  }
+}

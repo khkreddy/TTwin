@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_105/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_105/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": null,
+      "C": "term_substitution",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_105/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H003:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H003",
+    "stem": "Nandini looks at the diagram. Straight lines $JK$ and $LM$ cross at $P$. The marked angle $\\angle JPL$ is $81^{\\circ}$, and $r$ labels the angle vertically opposite $\\angle JPL$.\n\nWhich claim correctly gives the measure of $r$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$r = 99^{\\circ}$, treating an adjacent angle on a straight line as if it were the vertically opposite angle.",
+      "B": "$r = 81^{\\circ}$, because vertically opposite angles at the same intersection are equal.",
+      "C": "$r = 81^{\\circ}$, because the angles may be called opposite angles that must sum to $180^{\\circ}$.",
+      "D": "$r = 81^{\\circ}$, only because $81$ is already printed near the crossing."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.5,-1.5)--(5.0,1.8);\n  \\draw[line width=1.05pt] (-0.3,2.0)--(4.8,-1.7);\n  \\fill (2.1,0.2) circle (1.6pt);\n  \\node[above right] at (2.15,0.25){$P$};\n  \\draw[line width=0.7pt] (2.1,0.2) ++(32:0.7) arc (32:152:0.7);\n  \\node at (1.4,1.0){$81^{\\circ}$};\n  \\draw[line width=0.7pt] (2.1,0.2) ++(212:0.7) arc (212:332:0.7);\n  \\node at (2.8,-0.5){$r$};\n  \\node[below left] at (0.0,-1.0){$J$};\n  \\node[above right] at (4.6,1.5){$K$};\n  \\node[above left] at (0.1,1.6){$L$};\n  \\node[below right] at (4.5,-1.3){$M$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "Vikram's data are $2$, $6$, $8$, and $12$. He wants the arithmetic mean as the equal-share value of that list.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The mean is $(2 + 6 + 8 + 12) \\div 4 = 7$, the equal share of the total."
+    },
+    {
+      "id": "2",
+      "text": "If the four values shared the total equally, each share would be $7$."
+    },
+    {
+      "id": "3",
+      "text": "The mean is found by multiplying $2$, $6$, $8$, and $12$ instead of dividing their sum by $4$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sum 28 divided by 4 is 7, and that is the equal-share reading, so statements 1 and 2 are correct. Statement 3 multiplies instead of dividing. Options that keep 3 are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

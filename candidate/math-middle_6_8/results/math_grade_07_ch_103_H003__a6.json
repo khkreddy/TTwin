@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "one_or_more",
+  "stem": "Lalit reads the capacity $7.604\\,\\mathrm{L}$ on a kitchen measuring jug marked with a decimal point.\n\nOne or more options may be correct. Which two claims correctly name the place of each digit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$7$ is ones, $6$ is tenths, $0$ is hundredths, and $4$ is thousandths."
+    },
+    {
+      "id": "B",
+      "text": "Call $7.604$ a whole-number reading only, and stop naming fractional places."
+    },
+    {
+      "id": "C",
+      "text": "The decimal point separates whole-number places from fractional places, so the digits after it are tenths, hundredths, then thousandths in order."
+    },
+    {
+      "id": "D",
+      "text": "The answer is the printed mark at $7$, because that numeral is the largest digit on the jug."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In 7.604, 7 is in the ones place; after the decimal point, 6 is tenths, 0 hundredths, and 4 thousandths. A and C state that place-value reading. B collapses the decimal to a whole-number label. D grabs the most obvious printed numeral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

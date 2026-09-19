@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Esha's jacket costs $\\mathrm{₹}1200$. A discount is given at $10\\%$ of the jacket cost.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What must she decide before calculating the discount amount?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "That the whole is $\\mathrm{₹}1200$, so the discount is $(10/100) \\times 1200$."
+        },
+        {
+          "id": "B",
+          "text": "Only the multiplier $10/100$, without naming any whole in rupees."
+        },
+        {
+          "id": "C",
+          "text": "Start from a guessed discount amount and reverse to invent both the jacket cost and the percent."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A percentage amount needs a named whole; here the whole is ₹1200, so the discount is $(10/100)\\times1200$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The discount is 10% of the jacket cost ₹1200, so the whole must be named before multiplying. Using only the multiplier, or reversing from a guessed amount, miss that base choice.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

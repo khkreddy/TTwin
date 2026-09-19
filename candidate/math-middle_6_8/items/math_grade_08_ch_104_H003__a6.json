@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_104/H003",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_104/H003",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_104/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H003:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H003",
+    "stem": "The diagram shows quadrilateral $WXYZ$. Chetan measures $\\angle W = \\angle X = \\angle Y = \\angle Z = 90^\\circ$.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Yes: a quadrilateral with all angles $90^\\circ$ is a rectangle; opposite-side equalities then follow.",
+      "B": "He should call the figure a right angle, not a rectangle.",
+      "C": "Opposite sides of $WXYZ$ are equal as a consequence, so he need not check them separately to classify it as a rectangle.",
+      "D": "Yes, even if $W$, $X$, $Y$, $Z$ were only three rays and not a closed quadrilateral."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (W) at (0,0);\n  \\coordinate (X) at (5.6,0);\n  \\coordinate (Y) at (5.6,3.5);\n  \\coordinate (Z) at (0,3.5);\n  \\draw[line width=1.05pt] (W)--(X)--(Y)--(Z)--cycle;\n  \\draw (W)--++(0.35,0)--++(0,0.35);\n  \\draw (X)--++(-0.35,0)--++(0,0.35);\n  \\draw (Y)--++(-0.35,0)--++(0,-0.35);\n  \\draw (Z)--++(0.35,0)--++(0,-0.35);\n  \\node[below left] at (W) {$W$};\n  \\node[below right] at (X) {$X$};\n  \\node[above right] at (Y) {$Y$};\n  \\node[above left] at (Z) {$Z$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

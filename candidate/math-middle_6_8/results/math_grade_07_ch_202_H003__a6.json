@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Sagar starts at $0$ on a number line. He moves $9$ steps to the right, then $4$ steps to the left. The movements are already written as $+9$ and $-4$.\n\nWhat is his final position?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$+5$"
+    },
+    {
+      "id": "B",
+      "text": "$+13$"
+    },
+    {
+      "id": "C",
+      "text": "$-4$"
+    },
+    {
+      "id": "D",
+      "text": "$-5$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Final position is the sum of the signed moves: +9 + (−4) = +5. B adds the absolute sizes. C reports only the second move. D reverses the sign of the correct sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya hangs a wet shirt on a clothesline on a windy afternoon. Later the shirt is dry.\n\nWhat has the liquid water become?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water vapour"
+    },
+    {
+      "id": "B",
+      "text": "Ordinary air"
+    },
+    {
+      "id": "C",
+      "text": "Liquid water again, because evaporation reverses itself at once"
+    },
+    {
+      "id": "D",
+      "text": "Water vapour only if the shirt had been boiling"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation converts liquid water into water vapour. The dry shirt shows that conversion; the water has not become ordinary air, has not instantly reversed back to liquid, and does not require boiling.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

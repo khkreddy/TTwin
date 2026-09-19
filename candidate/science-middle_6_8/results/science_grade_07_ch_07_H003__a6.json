@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Reyansh warming the air in a closed glass tank from below with a small heater. He wonders whether the same particle movement applies inside a solid iron bar heated from below.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heated air expands, becomes lighter, and rises; cooler air moves down to replace it."
+    },
+    {
+      "id": "B",
+      "text": "The lighter heated air sinks, and the cooler air rises to replace it."
+    },
+    {
+      "id": "C",
+      "text": "In a solid iron bar heated from below, hot metal particles rise through the bar and cooler ones move down."
+    },
+    {
+      "id": "D",
+      "text": "Convection in the tank begins only when the air starts to glow."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick] (0,0) -- (0,3.0) -- (2.6,3.0) -- (2.6,0);\n\\draw[thick] (-0.15,0) -- (2.75,0);\n\\fill[orange!70] (0.8,-0.5) -- (1.3,0) -- (1.8,-0.5) -- cycle;\n\\node at (1.3,-0.85) {heat};\n\\draw[->,thick] (1.3,0.4) -- (1.3,2.3);\n\\node at (1.75,1.4) {rises};\n\\draw[->,thick] (0.4,2.5) -- (0.4,0.55);\n\\draw[->,thick] (2.2,2.5) -- (2.2,0.55);\n\\node at (1.3,3.35) {cooler air};\n\\node at (1.3,-1.2) {room air};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating air from below makes it expand, lighten, and rise while cooler air sinks. Reversing rise/sink, applying fluid flow to a solid bar, or waiting for glowing air misses convection.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source into a glass tank of air heated from below with convection arrows."
+  }
+}

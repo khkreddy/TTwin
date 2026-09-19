@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Omar has eight odd-numbered cards. He wants to place all eight cards so that their sum is exactly $55$.\n\nWhat can he decide before trying any cases?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the task a possible selection, and stop checking parity."
+    },
+    {
+      "id": "B",
+      "text": "Parity does not apply until he first chooses which cards make the total."
+    },
+    {
+      "id": "C",
+      "text": "The sum of eight odd numbers is even, so it cannot equal $55$."
+    },
+    {
+      "id": "D",
+      "text": "Any eight positive cards can make $55$ if their sizes are small enough."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An even count of odd addends yields an even sum, so eight odd cards cannot total the odd number 55. A renames the task. B postpones the parity test. D treats size estimates as enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

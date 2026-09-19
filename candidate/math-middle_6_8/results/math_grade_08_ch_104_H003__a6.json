@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows quadrilateral $WXYZ$. Chetan measures $\\angle W = \\angle X = \\angle Y = \\angle Z = 90^\\circ$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes: a quadrilateral with all angles $90^\\circ$ is a rectangle; opposite-side equalities then follow."
+    },
+    {
+      "id": "B",
+      "text": "He should call the figure a right angle, not a rectangle."
+    },
+    {
+      "id": "C",
+      "text": "Opposite sides of $WXYZ$ are equal as a consequence, so he need not check them separately to classify it as a rectangle."
+    },
+    {
+      "id": "D",
+      "text": "Yes, even if $W$, $X$, $Y$, $Z$ were only three rays and not a closed quadrilateral."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (W) at (0,0);\n  \\coordinate (X) at (5.6,0);\n  \\coordinate (Y) at (5.6,3.5);\n  \\coordinate (Z) at (0,3.5);\n  \\draw[line width=1.05pt] (W)--(X)--(Y)--(Z)--cycle;\n  \\draw (W)--++(0.35,0)--++(0,0.35);\n  \\draw (X)--++(-0.35,0)--++(0,0.35);\n  \\draw (Y)--++(-0.35,0)--++(0,-0.35);\n  \\draw (Z)--++(0.35,0)--++(0,-0.35);\n  \\node[below left] at (W) {$W$};\n  \\node[below right] at (X) {$X$};\n  \\node[above right] at (Y) {$Y$};\n  \\node[above left] at (Z) {$Z$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A quadrilateral with four right angles is a rectangle; opposite-side equalities follow, so they need not be checked separately for the classification. Renaming it a right angle, or dropping the closed-quadrilateral condition, miss the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

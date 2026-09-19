@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Urvashi cuts $8$ identical ribbon pieces. Each piece has length $0.35\\,\\mathrm{m}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which calculation finds the total length of ribbon?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Write the total as the word rate, and stop."
+        },
+        {
+          "id": "B",
+          "text": "$0.35 \\div 8$"
+        },
+        {
+          "id": "C",
+          "text": "$8 \\times 0.35$"
+        },
+        {
+          "id": "D",
+          "text": "$8 + 0.35$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Eight equal lengths of 0.35 m are found by multiplying 8 × 0.35."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal groups of a decimal length use multiplication: 8×0.35. A substitutes a label. B reverses to division. D adds once instead of repeating the group.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

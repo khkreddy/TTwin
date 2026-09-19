@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zubin asks whether $81$ is a square number and how to write it with square notation.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$81 = 9 \\times 9 = 9^{2}$, so $81$ is a perfect square."
+        },
+        {
+          "id": "B",
+          "text": "$81$ is only a \"perfect square\" label, not a square number."
+        },
+        {
+          "id": "C",
+          "text": "Write $81$ as $9$ by renaming the square root as if it were already the square."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$81$ equals $9\\times9$, so it is a square number and is written $9^{2}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "81=9×9=9², so 81 is a perfect square. Calling it only a label, or renaming the root as the square, miss the n×n definition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

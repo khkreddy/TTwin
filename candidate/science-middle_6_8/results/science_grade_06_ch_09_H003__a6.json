@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rohit's aunt brings harvested bajra stalks. The grains are still stuck to the stalks.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What should they do first before they try to separate the grains from the husk?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Thresh the stalks by beating them to detach the grains."
+        },
+        {
+          "id": "B",
+          "text": "Call beating the stalks winnowing, then blow air over the loose grains."
+        },
+        {
+          "id": "C",
+          "text": "Treat the grains as already loose, so skip beating and go straight to husk separation."
+        },
+        {
+          "id": "D",
+          "text": "Blow air over the harvested stalks to detach the grains from them."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Threshing beats the stalks so the stuck grains come free before husk separation."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When grains are still stuck to stalks, threshing is needed first. Beating stalks is threshing, not winnowing; the grains are not already loose; blowing air alone does not detach stuck grains.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

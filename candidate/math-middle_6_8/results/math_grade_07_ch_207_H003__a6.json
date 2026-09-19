@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yamini is given the equation $4p - 7 = 9$. A classmate proposes $p = 4$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Accept $p = 4$, because $4$ is a whole number written near the equation."
+    },
+    {
+      "id": "B",
+      "text": "Substituting gives LHS $4 \\times 4 - 7 = 9$, equal to the RHS."
+    },
+    {
+      "id": "C",
+      "text": "Accept $p = 4$ as a solution of the equation."
+    },
+    {
+      "id": "D",
+      "text": "Express a second unknown in terms of $p$ before any substitution test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Substitution gives 4×4−7=9, equal to the RHS, so p=4 is a solution and should be accepted. Treating nearness of 4 as proof, or introducing a second unknown, miss the substitution test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

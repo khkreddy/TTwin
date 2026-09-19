@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara tests two destarched leaves for starch with iodine after removing green colour. Leaf P had green and pale non-green patches and stayed in sunlight. Leaf Q was all green and stayed in a dark cupboard.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Where should the blue-black starch result appear?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Only in the green patches of Leaf P."
+        },
+        {
+          "id": "B",
+          "text": "In both the green and non-green patches of Leaf P."
+        },
+        {
+          "id": "C",
+          "text": "In Leaf Q as well as in the green patches of Leaf P."
+        },
+        {
+          "id": "D",
+          "text": "Only in the non-green patches of Leaf P."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Starch forms where green tissue received sunlight, so only the green patches of Leaf P should turn blue-black."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Starch appears in green sunlit tissue only. Including non-green patches, the dark leaf, or only non-green patches misses chlorophyll and light requirements.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Leela blows air into a rubber balloon. The balloon swells and becomes firm on every side she touches.\n\nShe asks what this shows about the pressure of the air inside.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The air pushes only downward on the bottom of the balloon."
+        },
+        {
+          "id": "B",
+          "text": "The air also pushes outward on the side walls of the balloon."
+        },
+        {
+          "id": "C",
+          "text": "The balloon swells only because rubber is stretchy, not because air pushes on the walls."
+        },
+        {
+          "id": "D",
+          "text": "Air pressure acts on the walls only where Leela's fingers touch."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Air inside pushes outward on the balloon walls in all directions, so the balloon firms up on the sides as well as at the bottom."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Gases exert pressure on the walls of their containers in all directions, not only downward or only at touch points.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

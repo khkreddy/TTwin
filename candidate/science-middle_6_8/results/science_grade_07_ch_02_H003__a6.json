@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Sana learns that tamarind pulp contains tartaric acid and that such foods taste sour. Later she finds an unlabelled bottle of cloudy liquid under the sink.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Tamarind's sour taste fits an edible acid such as tartaric acid, but she must not taste the unlabelled liquid to identify it."
+        },
+        {
+          "id": "B",
+          "text": "The characteristic acid in tamarind is acetic acid."
+        },
+        {
+          "id": "C",
+          "text": "She should taste the unlabelled liquid; if it is sour, it is acidic."
+        },
+        {
+          "id": "D",
+          "text": "The unlabelled cloudy liquid is safe to taste because sour foods contain acids."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Named edible acids explain sour foods such as tamarind, but unknown substances must not be tasted."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tartaric acid fits sour tamarind among edible examples, but taste is unsafe for an unlabelled liquid. Wrong acid name, tasting the unknown, and safety-from-sourness reverse the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

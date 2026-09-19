@@ -1,0 +1,112 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_08/ch_05/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_08/ch_05/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_05/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_05:H003:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_05",
+    "chapter_label": "Force",
+    "subtopic_id": "science/grade_08/ch_05/H003",
+    "stem": "The diagram shows Krish's clay brick resting on the floor. The brick does not slide or tip. Two forces on the brick are labelled: the downward pull of Earth and the upward push of the floor.\n\nKrish asks what this shows about forces on an object at rest.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim about the forces on the brick is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Balanced forces act on the brick, including the push between the floor and the brick, so it stays at rest."
+          },
+          {
+            "id": "B",
+            "text": "No force acts on the brick because it is not moving."
+          },
+          {
+            "id": "C",
+            "text": "An object at rest always has an unbalanced force acting on it."
+          },
+          {
+            "id": "D",
+            "text": "Stopping the brick automatically makes every force on it vanish."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,font=\\sffamily\\small,line cap=round,line join=round]\n% floor\n\\draw[thick] (-0.4,0)--(4.2,0);\n\\node[font=\\footnotesize] at (3.6,-0.35) {floor};\n% brick\n\\draw[thick,fill=brown!25] (1.0,0)--(1.0,1.2)--(3.0,1.2)--(3.0,0)--cycle;\n\\node at (2.0,0.6) {brick};\n% weight down\n\\draw[->,thick] (2.0,0.55)--(2.0,-1.1);\n\\node[font=\\footnotesize,align=center] at (2.0,-1.45) {Earth\\\\pull};\n% normal up\n\\draw[->,thick] (2.0,1.2)--(2.0,2.4);\n\\node[font=\\footnotesize,align=center] at (2.0,2.75) {floor\\\\push};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_05/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

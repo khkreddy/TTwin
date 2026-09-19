@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Qasim multiplies the fractions $\\dfrac{3}{8}$ and $\\dfrac{5}{7}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What product should he obtain?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$\\dfrac{15}{56}$"
+        },
+        {
+          "id": "B",
+          "text": "$\\dfrac{3}{7}$"
+        },
+        {
+          "id": "C",
+          "text": "$\\dfrac{8}{5}$"
+        },
+        {
+          "id": "D",
+          "text": "$\\dfrac{8}{15}$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Multiply numerators and denominators: (3×5)/(8×7)=15/56."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3/8 × 5/7 = 15/56. B mixes one numerator with the other denominator. C inverts the first fraction. D adds numerators and denominators as in fraction addition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_09/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_09/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_09/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_09:H003:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_09",
+    "chapter_label": "math/grade_06/ch_09",
+    "subtopic_id": "math/grade_06/ch_09/H003",
+    "stem": "The diagram shows Gopal's rectangular card. Opposite sides are equal and all angles are $90^\\circ$, but adjacent sides are unequal. He wants to count its lines of symmetry by testing folds.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "marks": 1,
+        "text": "Which claim correctly counts those lines?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Two: the fold through the midpoints of each pair of opposite sides, and each passes the fold test."
+          },
+          {
+            "id": "B",
+            "text": "Infinitely many, because any line through the centre looks balanced at a glance."
+          },
+          {
+            "id": "C",
+            "text": "The count needs group-theory language before any fold can be checked."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "marks": 1,
+        "text": "Give one reason for your choice."
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick,fill=gray!10] (0,0) rectangle (4.0,2.2);\n  \\draw[dashed,gray!70] (2.0,0)--(2.0,2.2);\n  \\draw[dashed,gray!70] (0,1.1)--(4.0,1.1);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_09/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

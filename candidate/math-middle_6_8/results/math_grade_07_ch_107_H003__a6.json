@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Pallavi looks at the diagram of three rods of lengths $6\\,\\mathrm{cm}$, $7\\,\\mathrm{cm}$ and $15\\,\\mathrm{cm}$. She asks whether they can be the side lengths of a triangle.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The answer is $15\\,\\mathrm{cm}$, because that is the longest length."
+        },
+        {
+          "id": "B",
+          "text": "Yes, because each length is a positive whole number."
+        },
+        {
+          "id": "C",
+          "text": "No, because $6 + 7 = 13$ is not greater than $15$."
+        },
+        {
+          "id": "D",
+          "text": "First construct the triangle with compass and ruler; only then decide whether the sides exist."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.1pt] (0,0)--(3.0,0);\n  \\node[below] at (1.5,-0.1){$6\\,\\mathrm{cm}$};\n  \\draw[line width=1.1pt] (0,1.0)--(3.5,1.0);\n  \\node[below] at (1.75,0.9){$7\\,\\mathrm{cm}$};\n  \\draw[line width=1.1pt] (0,2.0)--(5.2,2.0);\n  \\node[below] at (2.6,1.9){$15\\,\\mathrm{cm}$};\n  \\node[above left] at (0,2.0){rod};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Three lengths form a triangle only when the sum of the two smaller lengths is strictly greater than the longest; here 6+7=13 is not greater than 15."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "6+7=13 is not greater than 15, so the lengths fail the triangle inequality. A names only the longest stick. B treats positivity as enough. D postpones the decision to a construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Three separate rods labelled 6 cm, 7 cm, and 15 cm."
+  }
+}

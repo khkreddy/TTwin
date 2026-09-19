@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jump sizes $1$, $2$, $3$, $4$, $5$, $6$, $10$, $12$, $15$, $20$, $30$ and $60$ all land exactly on $60$."
+        },
+        {
+          "id": "B",
+          "text": "The answer is $60$, because that is the treasure number itself."
+        },
+        {
+          "id": "C",
+          "text": "Jump size $7$ works, because repeated jumps of $7$ stay on whole numbers."
+        },
+        {
+          "id": "D",
+          "text": "Jump size $60$ is forced, because $60$ is the largest printed mark on the strip."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Tushar places a treasure on the number $60$ on a number strip. He may jump by a fixed whole-number size from $0$ and wants every landing to hit $60$ exactly.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A jump size lands on 60 exactly when it divides 60 with no remainder, so the factors 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60 all work."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Jump sizes that land on 60 are the positive divisors of 60. Naming the treasure itself, allowing any whole-number jump, or forcing the largest mark are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

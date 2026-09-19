@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Vivaan shining a torch at three sheets M, N and O. Through M almost all the light passes and shapes look clear. Through N only some light passes and shapes look unclear. Through O no light passes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "N is translucent because only some light passes and shapes look unclear."
+    },
+    {
+      "id": "B",
+      "text": "N is transparent because some light passes through it."
+    },
+    {
+      "id": "C",
+      "text": "N is opaque because shapes look unclear."
+    },
+    {
+      "id": "D",
+      "text": "M is translucent because almost all the light passes through it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\fill[yellow!60] (-0.3,1.0) circle (0.25);\n\\node at (-0.3,0.55) {torch};\n\\draw[->,thick] (0.0,1.0) -- (1.0,1.0);\n% sheet M clear\n\\draw[thick,fill=cyan!10] (1.2,0.2) rectangle (1.45,1.8);\n\\node at (1.325,-0.15) {M};\n\\draw[->,thick] (1.55,1.0) -- (2.4,1.0);\n\\node at (2.0,1.35) {clear};\n% sheet N frosted\n\\draw[->,thick] (0.0,0.0) -- (1.0,0.0);\n\\draw[thick,fill=gray!25] (1.2,-0.8) rectangle (1.45,0.8);\n\\node at (1.325,-1.15) {N};\n\\draw[->,thick,dashed] (1.55,0.0) -- (2.2,0.0);\n\\node at (2.1,0.35) {partial};\n% sheet O card\n\\draw[->,thick] (0.0,-1.6) -- (1.0,-1.6);\n\\draw[thick,fill=black!70] (1.2,-2.4) rectangle (1.45,-0.8);\n\\node at (1.325,-2.75) {O};\n\\node at (2.0,-1.6) {blocked};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partial light with unclear shapes means translucent. Calling that transparent or opaque, or calling full clear passage translucent, misclassifies the sheets.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Rewrote source into three sheets M/N/O with clear, partial, and blocked light paths."
+  }
+}

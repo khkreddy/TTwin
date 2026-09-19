@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina learns Gumulgal number names: urapon means $1$ and ukasar means $2$. Longer names are built as sums of these group words, so ukasar-urapon means $3$ and ukasar-ukasar means $4$.\n\nWhich reading of ukasar-ukasar-ukasar is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The name means ukasar, because ukasar is the last word printed."
+    },
+    {
+      "id": "B",
+      "text": "The name is just a new unrelated label, ignoring the known meanings of $1$ and $2$."
+    },
+    {
+      "id": "C",
+      "text": "The name means $6$, because it is $2 + 2 + 2$."
+    },
+    {
+      "id": "D",
+      "text": "Read the total $6$ first, then invent the three ukasar words without summing the groups."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "ukasar-ukasar-ukasar is the sum 2+2+2=6. Taking only the last word, treating the string as an unrelated label, or inventing the words from a guessed total miss the group-sum reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly counts the distinct lines fixed by those points?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ten lines: each pair among the five points determines exactly one line."
+        },
+        {
+          "id": "B",
+          "text": "One line, because any set of points always lies on a single line."
+        },
+        {
+          "id": "C",
+          "text": "Twenty-five lines, by multiplying five points by five possible directions."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Alok marks five distinct points $A$, $B$, $C$, $D$ and $E$ on his paper. No three of the points lie on one straight path.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Any two distinct points determine exactly one line. With five points and no three on one path, the pairs are AB, AC, AD, AE, BC, BD, BE, CD, CE and DE — ten lines in all."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Five points, no three collinear, give C(5,2)=10 lines. One shared line omits the two-point rule. Multiplying 5 by 5 confuses the count with an unrelated product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

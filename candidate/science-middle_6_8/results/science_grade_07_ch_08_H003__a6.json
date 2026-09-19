@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Myra hangs a clay bob from a string to make a simple pendulum. She pulls the bob aside and lets it swing freely. O is the mean position; P and Q are the extreme positions.\n\nWhich motion of the bob is one complete oscillation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "From O to P, then through O to Q, then back to O."
+    },
+    {
+      "id": "B",
+      "text": "O to P, then back to O."
+    },
+    {
+      "id": "C",
+      "text": "O to P only."
+    },
+    {
+      "id": "D",
+      "text": "An oscillation cannot be completed if counting starts at P."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One oscillation is mean to one extreme, through mean to the other extreme, and back to mean. Half trips and forbidding a start at an extreme miss that path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

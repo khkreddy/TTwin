@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Eklavya starts with the product $7 \\times 10$. The factors are then changed to $9 \\times 12$.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The product increases by $38$, because $(7+2)(10+2)=7\\times10 + 7\\times2 + 10\\times2 + 2\\times2$."
+    },
+    {
+      "id": "2",
+      "text": "The change from the original product is $7\\times2 + 10\\times2 + 2\\times2$."
+    },
+    {
+      "id": "3",
+      "text": "Report only the adjustments $+2$ and $+2$, and call those adjustments the change in the product."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expanding (7+2)(10+2) separates ab from the change 7·2+10·2+2·2=38. Reporting only the adjustments +2 and +2 as the product change is wrong, so 1 and 2 hold and 3 does not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Krish's clay brick resting on the floor. The brick does not slide or tip. Two forces on the brick are labelled: the downward pull of Earth and the upward push of the floor.\n\nKrish asks what this shows about forces on an object at rest.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the forces on the brick is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Balanced forces act on the brick, including the push between the floor and the brick, so it stays at rest."
+        },
+        {
+          "id": "B",
+          "text": "No force acts on the brick because it is not moving."
+        },
+        {
+          "id": "C",
+          "text": "An object at rest always has an unbalanced force acting on it."
+        },
+        {
+          "id": "D",
+          "text": "Stopping the brick automatically makes every force on it vanish."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[>=stealth,font=\\sffamily\\small,line cap=round,line join=round]\n% floor\n\\draw[thick] (-0.4,0)--(4.2,0);\n\\node[font=\\footnotesize] at (3.6,-0.35) {floor};\n% brick\n\\draw[thick,fill=brown!25] (1.0,0)--(1.0,1.2)--(3.0,1.2)--(3.0,0)--cycle;\n\\node at (2.0,0.6) {brick};\n% weight down\n\\draw[->,thick] (2.0,0.55)--(2.0,-1.1);\n\\node[font=\\footnotesize,align=center] at (2.0,-1.45) {Earth\\\\pull};\n% normal up\n\\draw[->,thick] (2.0,1.2)--(2.0,2.4);\n\\node[font=\\footnotesize,align=center] at (2.0,2.75) {floor\\\\push};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Rest does not mean zero force; balanced forces can keep the brick still."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An object at rest can have forces that cancel. The floor pushes up on the brick; that balanced set keeps it still. Not moving does not mean no force, and rest does not require an unbalanced force or vanishing forces.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Brick on floor with upward floor push and downward Earth pull."
+  }
+}

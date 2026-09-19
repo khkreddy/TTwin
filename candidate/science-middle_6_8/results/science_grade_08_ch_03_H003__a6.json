@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Siddharth's class uses this rule: a person is unwell when symptoms or signs show that the body or mind is not working normally.\n\nWhich claims apply that rule correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A student with a high fever and sore throat for three days is unwell."
+    },
+    {
+      "id": "B",
+      "text": "A student who feels briefly warm after a short PE drill and then cools down is unwell."
+    },
+    {
+      "id": "C",
+      "text": "A student who cannot sleep or think clearly for many days may be unwell even if the body seems fine."
+    },
+    {
+      "id": "D",
+      "text": "Feeling briefly warm after ordinary exercise means a disease has already begun in an organ."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lasting fever/sore throat and lasting mind symptoms show the body or mind is not working normally. Brief warmth after ordinary exercise does not; D reverses cause and effect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

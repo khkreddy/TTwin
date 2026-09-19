@@ -1,0 +1,110 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_05/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_05/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_05/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_05:H003:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-CHANGE",
+    "chapter_id": "science/grade_07/ch_05",
+    "chapter_label": "Physical and chemical changes",
+    "subtopic_id": "science/grade_07/ch_05/H003",
+    "stem": "The diagram shows Vihaan's candle burning in air. It reacts and produces a flame with heat and light. He also considers a sealed oxygen-free mixture that still releases heat, and a classmate who says nitrogen is the gas needed for burning.\n\nAnswer both parts.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "The candle burning in air is combustion because it reacts with oxygen and produces heat and light."
+          },
+          {
+            "id": "B",
+            "text": "Nitrogen is the gas required for the candle to burn."
+          },
+          {
+            "id": "C",
+            "text": "The sealed oxygen-free mixture that releases heat is also combustion."
+          },
+          {
+            "id": "D",
+            "text": "A reaction with oxygen that releases heat is not combustion if no large flame is seen."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\draw[thick] (0,0) ellipse (0.55 and 0.18);\n\\draw[thick] (-0.55,0) -- (-0.45,1.6);\n\\draw[thick] (0.55,0) -- (0.45,1.6);\n\\draw[thick] (-0.45,1.6) .. controls (-0.2,1.85) and (0.2,1.85) .. (0.45,1.6);\n\\fill[orange!80] (-0.12,1.65) -- (0,2.35) -- (0.12,1.65) -- cycle;\n\\node at (0,-0.45) {candle};\n\\node at (1.6,2.1) {heat + light};\n\\draw[->,thick] (0.35,2.0) -- (1.15,2.0);\n\\node at (0,-1.0) {burns in air};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_05/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

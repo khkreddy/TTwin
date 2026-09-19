@@ -1,0 +1,110 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_01/H003",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_01/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_01/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_01:H003:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S1/H-INQUIRY",
+    "chapter_id": "science/grade_06/ch_01",
+    "chapter_label": "The wonderful world of science",
+    "subtopic_id": "science/grade_06/ch_01/H003",
+    "stem": "Ojas guesses that ice cubes melt faster on a metal plate than on a wooden board. After ten minutes the metal plate holds a puddle of water and the wooden board still has solid ice.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "What should Ojas decide from this result?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "The result supports his guess for this pair of surfaces."
+          },
+          {
+            "id": "B",
+            "text": "The result conflicts with his guess, so he must try a different reason."
+          },
+          {
+            "id": "C",
+            "text": "Any tested guess is supported, whether or not the ice matches the prediction."
+          },
+          {
+            "id": "D",
+            "text": "The puddle on the metal plate proves that finished ice is the only possible explanation."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_01/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

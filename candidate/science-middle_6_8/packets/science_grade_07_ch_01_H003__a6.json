@@ -1,0 +1,99 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:00:48.116Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_01/H003",
+      "unit_id": "science/grade_07/ch_01/H003",
+      "title": "Decide whether the different fields and chapters of science should be treated as isolated subjects or as connected ways of studying the same world.",
+      "node_labels": [
+        "What counts as a scientific question or test",
+        "Scientific inquiry and evidence"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "What counts as a scientific question or test",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Light, shadows, Earth, the Moon and the Sun are connected, but materials and body changes are isolated topics."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Topics in different chapters are isolated subjects."
+      }
+    ],
+    "enrichment": "The chapter says science includes fields such as physics, chemistry, biology, and earth sciences, but these fields are connected even when they appear in different chapters. Seeing the fields as connected helps learners relate material properties, body changes, light, shadows, eclipses, and day-night patterns as parts of a larger scientific journey. The learner compares science fields as connected parts of one scientific journey, using examples such as materials, body changes, light, shadows, eclipses, and day-night patterns. Each chapter belongs to a separate subject box, so physics, chemistry, biology, and earth science should be learned without connecting them.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The ever-evolving world of science. The student must decide: Decide whether the different fields and chapters of science should be treated as isolated subjects or as connected ways of studying the same world. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-cla",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_01/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_01/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

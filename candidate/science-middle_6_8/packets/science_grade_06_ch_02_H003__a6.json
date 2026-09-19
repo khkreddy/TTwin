@@ -1,0 +1,83 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:01:06.164Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_02/H003",
+      "unit_id": "science/grade_06/ch_02/H003",
+      "title": "Classify a plant as a tree, shrub, herb, climber, or creeper from its height, stem, branching, and support needs.",
+      "node_labels": [
+        "What is living; diversity, life cycles and plant processes",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "What is living; diversity, life cycles and plant processes",
+      "paper_hint": ""
+    },
+    "mx": [],
+    "enrichment": "Trees are really tall plants with hard, thick, brown, woody stems and branches that usually start higher up; shrubs are not as tall as trees and have many hard brown woody stems branching close to the ground; herbs are typically small with soft green stems; climbers have weak stems that need support; creepers creep along the ground. height_stem_branching_support_features -> plant_group The learner correctly applies this rule: Trees are really tall plants with hard, thick, brown, woody stems and branches that usually start higher up; shrubs are not as tall as trees and have many hard brown woody stems branching close to the ground; herbs are typically small with soft green stems; climbers have weak stems that need support; creepers creep along the ground. Any plant with a hard brown stem is a tree; small green plants are herbs, and all weak-stem plants belong to one weak-stem group.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Diversity in the living world. The student must decide: Classify a plant as a tree, shrub, herb, climber, or creeper from its height, stem, branching, and support needs. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then rea",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_02/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "mx_allowlist": [],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_02/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aarav bites a piece of idli. Teeth crush it into smaller pieces, saliva moistens it and can begin starch digestion, and the tongue mixes the food with saliva and pushes the softened food for swallowing into the food pipe.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Teeth, saliva, and the tongue together prepare the idli for swallowing."
+        },
+        {
+          "id": "B",
+          "text": "The tongue chews the idli into smaller pieces, and the teeth mix it with saliva."
+        },
+        {
+          "id": "C",
+          "text": "Chewing alone prepares the idli for swallowing; saliva and the tongue are not needed."
+        },
+        {
+          "id": "D",
+          "text": "Teeth chemically digest starch by crushing the idli into smaller pieces."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Crushing, moistening with saliva, and tongue mixing/pushing all prepare softened food for swallowing before the food pipe."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Teeth, saliva, and tongue act together before swallowing. Swapping roles, chewing alone, or calling crushing chemical starch digestion miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

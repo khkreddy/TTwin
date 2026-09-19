@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "parts": [],
+  "statements": [],
+  "options": [
+    {
+      "id": "A",
+      "text": "The individual records, because the frequency table keeps category totals but not which student chose which subject."
+    },
+    {
+      "id": "B",
+      "text": "The frequency table alone, because the table is already the list of individual student choices."
+    },
+    {
+      "id": "C",
+      "text": "Only the frequency table, even though she must match each student to one subject."
+    },
+    {
+      "id": "D",
+      "text": "A decorated chart title, because neat artwork is required for person-subject matching."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Sonia has a frequency table that shows how many students chose each subject for the club period. She now wants to pair each student with the subject that student chose.\n\nWhat does she need?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A frequency table keeps how many chose each subject but drops which student chose which subject, so pairing needs the individual records.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

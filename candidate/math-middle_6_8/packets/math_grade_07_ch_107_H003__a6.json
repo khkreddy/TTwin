@@ -1,0 +1,117 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m20_qp_12:q14",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:00:55.208Z",
+  "source": {
+    "item_ref": "session:0580_m20_qp_12:q14",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.45);\\coordinate (C) at (3.55,0);\\draw[line width=0.7pt] (A)--(B)--(C)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=6pt] at (0,1.225) {$8.5\\,\\mathrm{cm}$};\\node[below=5pt] at (1.775,0) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (5.0,1.5) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_107/H003",
+      "unit_id": "math/grade_07/ch_107/H003",
+      "title": "Decide whether three given lengths can be the side lengths of a triangle.",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Longest length is the label that belongs on this item, so 'Decide whether three given lengths can be the side lengths of a' is answered as longest length rather than side length."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "side length still holds here even though The comparisons are strict: equality of the two smaller lengths' sum with the longest is missing from the stem — on the item about Decide whether three given lengths can be the side."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The side length rule also covers this: constructing the triangle after it exists, so it is not an exception — on the item about Decide whether three given lengths can be the side."
+      }
+    ],
+    "enrichment": "Three lengths form a triangle exactly when each length is smaller than the sum of the other two; after ordering the lengths, this is equivalent to checking that the sum of the two smaller lengths is greater than the longest length.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_107. The student must decide: Decide whether three given lengths can be the side lengths of a triangle. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class opti",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "UNRESOLVED",
+      "B": "UNRESOLVED",
+      "C": null,
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_107/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

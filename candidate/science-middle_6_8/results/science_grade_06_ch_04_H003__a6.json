@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nidhi hammers a bar magnet into several small pieces. She hopes one piece will be only a south pole.\n\nWhat should she expect?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Every piece still has both a north pole and a south pole."
+    },
+    {
+      "id": "B",
+      "text": "A very tiny piece broken off the magnet is nonmagnetic and has no poles."
+    },
+    {
+      "id": "C",
+      "text": "The piece taken from the end she called north has only a north pole."
+    },
+    {
+      "id": "D",
+      "text": "One of the pieces will be only a south pole with no north pole."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic poles always exist in pairs. Breaking a magnet still yields pieces that each have both a north and a south pole, so an isolated single pole cannot be obtained.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

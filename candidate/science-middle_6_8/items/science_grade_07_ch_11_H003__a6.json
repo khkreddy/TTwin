@@ -1,0 +1,78 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H003",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [],
+    "mx_allowlist": [],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_11/H003; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H003:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H003",
+    "stem": "The diagram shows Vivaan shining a torch at three sheets M, N and O. Through M almost all the light passes and shapes look clear. Through N only some light passes and shapes look unclear. Through O no light passes.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "N is translucent because only some light passes and shapes look unclear.",
+      "B": "N is transparent because some light passes through it.",
+      "C": "N is opaque because shapes look unclear.",
+      "D": "M is translucent because almost all the light passes through it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n\\fill[yellow!60] (-0.3,1.0) circle (0.25);\n\\node at (-0.3,0.55) {torch};\n\\draw[->,thick] (0.0,1.0) -- (1.0,1.0);\n% sheet M clear\n\\draw[thick,fill=cyan!10] (1.2,0.2) rectangle (1.45,1.8);\n\\node at (1.325,-0.15) {M};\n\\draw[->,thick] (1.55,1.0) -- (2.4,1.0);\n\\node at (2.0,1.35) {clear};\n% sheet N frosted\n\\draw[->,thick] (0.0,0.0) -- (1.0,0.0);\n\\draw[thick,fill=gray!25] (1.2,-0.8) rectangle (1.45,0.8);\n\\node at (1.325,-1.15) {N};\n\\draw[->,thick,dashed] (1.55,0.0) -- (2.2,0.0);\n\\node at (2.1,0.35) {partial};\n% sheet O card\n\\draw[->,thick] (0.0,-1.6) -- (1.0,-1.6);\n\\draw[thick,fill=black!70] (1.2,-2.4) rectangle (1.45,-0.8);\n\\node at (1.325,-2.75) {O};\n\\node at (2.0,-1.6) {blocked};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

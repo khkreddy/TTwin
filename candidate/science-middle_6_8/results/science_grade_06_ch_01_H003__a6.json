@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ojas guesses that ice cubes melt faster on a metal plate than on a wooden board. After ten minutes the metal plate holds a puddle of water and the wooden board still has solid ice.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What should Ojas decide from this result?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The result supports his guess for this pair of surfaces."
+        },
+        {
+          "id": "B",
+          "text": "The result conflicts with his guess, so he must try a different reason."
+        },
+        {
+          "id": "C",
+          "text": "Any tested guess is supported, whether or not the ice matches the prediction."
+        },
+        {
+          "id": "D",
+          "text": "The puddle on the metal plate proves that finished ice is the only possible explanation."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The metal plate melted the ice while the wooden board still held solid ice, so the result matches his guess."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A matching result supports the guess for that test. Remaining ice on wood does not overturn the match, and one result does not prove every possible explanation or support every tested guess.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Rachna looks at the diagram. The marking shows $\\triangle GHI \\cong \\triangle JKL$.\n\nWhich claim correctly names the side that corresponds to side $GH$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Side $GH$ corresponds to side $JK$."
+    },
+    {
+      "id": "B",
+      "text": "Side $GH$ corresponds to side $KL$."
+    },
+    {
+      "id": "C",
+      "text": "Side $GH$ corresponds to side $GI$."
+    },
+    {
+      "id": "D",
+      "text": "Side $GH$ corresponds to side $JL$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (G) at (0,0);\n  \\coordinate (H) at (2.4,0);\n  \\coordinate (I) at (0.7,1.8);\n  \\draw[line width=1.05pt] (G)--(H)--(I)--cycle;\n  \\node[below left] at (G){$G$};\n  \\node[below right] at (H){$H$};\n  \\node[above] at (I){$I$};\n  \\coordinate (J) at (4.0,0);\n  \\coordinate (K) at (6.4,0);\n  \\coordinate (L) at (4.7,1.8);\n  \\draw[line width=1.05pt] (J)--(K)--(L)--cycle;\n  \\node[below left] at (J){$J$};\n  \\node[below right] at (K){$K$};\n  \\node[above] at (L){$L$};\n  \\node at (3.2,2.2){$\\triangle GHI \\cong \\triangle JKL$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In △GHI ≅ △JKL, G↔J and H↔K, so side GH corresponds to side JK. B shifts to the next side. C stays inside the first triangle. D joins the first and third vertices of the image.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Two congruent triangles GHI and JKL with congruence statement."
+  }
+}

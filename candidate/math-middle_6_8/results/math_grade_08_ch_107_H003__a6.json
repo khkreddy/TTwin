@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz compares the ratios $5 : 8$ and $10 : 16$.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "They are proportional even if he matches $5$ with $16$ and $8$ with $10$ without checking products."
+    },
+    {
+      "id": "B",
+      "text": "He must convert both ratios into percentages before he can compare them."
+    },
+    {
+      "id": "C",
+      "text": "Yes, they are proportional: both reduce to $5 : 8$, and $5 \\times 16 = 8 \\times 10$."
+    },
+    {
+      "id": "D",
+      "text": "Convert $5 : 8$ into centimetres using a length-conversion table, then compare."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Both ratios reduce to 5:8, and cross-products 5×16=8×10 match, so they are proportional. Skipping position matching, forcing percentages, or converting to centimetres miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick,fill=gray!10] (0,0) rectangle (4.0,2.2);\n  \\draw[dashed,gray!70] (2.0,0)--(2.0,2.2);\n  \\draw[dashed,gray!70] (0,1.1)--(4.0,1.1);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly counts those lines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two: the fold through the midpoints of each pair of opposite sides, and each passes the fold test."
+        },
+        {
+          "id": "B",
+          "text": "Infinitely many, because any line through the centre looks balanced at a glance."
+        },
+        {
+          "id": "C",
+          "text": "The count needs group-theory language before any fold can be checked."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "statements": [],
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Gopal's rectangular card. Opposite sides are equal and all angles are $90^\\circ$, but adjacent sides are unequal. He wants to count its lines of symmetry by testing folds.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A non-square rectangle has exactly two lines of symmetry: the two mid-lines joining midpoints of opposite sides; diagonal folds do not match unequal adjacent sides."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A non-square rectangle has exactly two reflection lines (mid-lines of opposite sides). Infinite lines omit the fold test. Group-theory language is out of scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rectangle with two dashed mid-line fold candidates."
+  }
+}
