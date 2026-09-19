@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_07/H009",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_07/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_07/H009"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_07:H009:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_07",
+    "chapter_label": "math/grade_06/ch_07",
+    "subtopic_id": "math/grade_06/ch_07/H009",
+    "stem": "Javed must compute $\\dfrac{5}{6} - \\dfrac{1}{4}$.\n\nWhich plan subtracts the fractions correctly?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer same denominator, without finding the value of the difference.",
+      "B": "Subtract as $\\dfrac{5-1}{6-4} = \\dfrac{4}{2}$, skipping common-denominator alignment.",
+      "C": "Rewrite as $\\dfrac{10}{12} - \\dfrac{3}{12} = \\dfrac{7}{12}$.",
+      "D": "Say that the difference $\\dfrac{7}{12}$ is what creates the common denominator $12$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_07/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

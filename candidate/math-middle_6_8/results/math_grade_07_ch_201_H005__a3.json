@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira compares $\\triangle ABC$ and $\\triangle DEF$. She knows $AB = DE$, $AC = DF$, and $\\angle A = \\angle D$ with $\\angle A$ between sides $AB$ and $AC$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Claim the triangles are congruent from $AB = DE$ and $AC = DF$ alone, skipping that the equal angle must be the included angle."
+    },
+    {
+      "id": "B",
+      "text": "Say that congruence is what creates the two equal sides and the equal included angle."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent by SAS: two sides and the included angle match."
+    },
+    {
+      "id": "D",
+      "text": "Claim congruence from two sides and a non-included angle (SSA) as if that were enough."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "SAS needs two corresponding sides and the included angle. Dropping the included-angle demand, reversing congruence and the data, or treating SSA as enough, all leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

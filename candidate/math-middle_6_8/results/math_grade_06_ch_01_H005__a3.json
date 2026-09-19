@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anya writes the up-and-down sum $1+2+\\cdots+n+\\cdots+2+1$ with consecutive counting numbers that climb from $1$ to $n$ and then fall back to $1$.\n\nWhy does that sum equal $n^{2}$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sum equals $n^{2}$ for any climb-and-fall of whole numbers, even if the steps are not the consecutive counting numbers from $1$ to $n$ and back."
+    },
+    {
+      "id": "B",
+      "text": "Say that $n^{2}$ is what produces the up-and-down counting sum, instead of arranging the sum to fill an $n$-by-$n$ square."
+    },
+    {
+      "id": "C",
+      "text": "The climb from $1$ to $n$ and the fall back to $1$ can be paired to fill an $n$-by-$n$ square of unit tiles, so the sum is $n^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "The same story also forces triangular and hexagonal number identities, so those must equal $n^{2}$ too."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The consecutive up-and-down counting sum fills an n-by-n square, so it equals n². Skipping the consecutive-from-1 condition, reversing cause, or dragging in triangular/hexagonal identities miss this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha measures an angle of $120^\\circ$.\n\nWhich claim about its type is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call it acute even though $120^\\circ$ is not less than $90^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "First study the decorative history of angle names before classifying $120^\\circ$."
+    },
+    {
+      "id": "C",
+      "text": "It is obtuse, because $90^\\circ < 120^\\circ < 180^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "It is \"$120$\", because that numeral is printed largest, without using the size classes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Angle type is fixed by size: obtuse means greater than $90^\\circ$ and less than $180^\\circ$. Dropping the less-than-$90^\\circ$ bound, switching to decorative history, or grabbing the printed numeral all miss that size test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

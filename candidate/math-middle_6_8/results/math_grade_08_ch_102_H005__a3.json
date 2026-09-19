@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal simplifies $(2^{3})^{4}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer inner exponent, without multiplying the exponents."
+    },
+    {
+      "id": "B",
+      "text": "Say that $2^{12}$ is what creates the written form $(2^{3})^{4}$."
+    },
+    {
+      "id": "C",
+      "text": "Write $(2^{3})^{4} = 2^{3 \\times 4} = 2^{12}$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $2^{4}$ only because $4$ is the largest single printed exponent."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A power of a power multiplies exponents: $(2^3)^4 = 2^{12}$. Naming the inner exponent alone, reversing result and expression, or picking the standout printed $4$, miss the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

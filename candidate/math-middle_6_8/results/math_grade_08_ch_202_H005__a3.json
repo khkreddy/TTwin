@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira asks whether $\\sqrt{2}$ can be written as a terminating decimal or as a fraction of counting numbers.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer terminating decimal, without deciding what $\\sqrt{2}$ can equal."
+    },
+    {
+      "id": "B",
+      "text": "Write $\\sqrt{2} = \\dfrac{m}{n}$ without requiring $m$ and $n$ to be counting numbers with $n$ nonzero."
+    },
+    {
+      "id": "C",
+      "text": "$\\sqrt{2}$ is neither a terminating decimal nor equal to $\\dfrac{m}{n}$ for counting numbers $m$ and $n$."
+    },
+    {
+      "id": "D",
+      "text": "Decide from the printed digit $2$ alone, without testing decimal or fraction form."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$\\sqrt{2}$ has a non-terminating decimal and cannot equal a ratio of counting numbers. Naming terminating decimal alone, dropping the counting-number conditions, or deciding from the printed $2$, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

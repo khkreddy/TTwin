@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_05/H009",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_05/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_05/H009"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_05:H009:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_06/ch_05",
+    "chapter_label": "math/grade_06/ch_05",
+    "subtopic_id": "math/grade_06/ch_05/H009",
+    "stem": "Padma writes $56=14\\times 4$ and $63=21\\times 3$. She asks whether that single pair of factorisations proves $56$ and $63$ have no common factor greater than $1$.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Conclude they are co-prime from those two products alone, without checking whether another common factor was missed.",
+      "B": "Say that calling them co-prime is what creates the incomplete factor listing, instead of testing all possible common factors.",
+      "C": "No: one chosen factorisation of each number can miss a common factor; the search must account for every possible common factor.",
+      "D": "Require a full prime-factorisation write-up of every integer as the only allowed method for this decision."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_05/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

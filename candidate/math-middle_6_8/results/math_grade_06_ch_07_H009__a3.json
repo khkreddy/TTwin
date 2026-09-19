@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed must compute $\\dfrac{5}{6} - \\dfrac{1}{4}$.\n\nWhich plan subtracts the fractions correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer same denominator, without finding the value of the difference."
+    },
+    {
+      "id": "B",
+      "text": "Subtract as $\\dfrac{5-1}{6-4} = \\dfrac{4}{2}$, skipping common-denominator alignment."
+    },
+    {
+      "id": "C",
+      "text": "Rewrite as $\\dfrac{10}{12} - \\dfrac{3}{12} = \\dfrac{7}{12}$."
+    },
+    {
+      "id": "D",
+      "text": "Say that the difference $\\dfrac{7}{12}$ is what creates the common denominator $12$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Subtract after a common denominator: $5/6=10/12$ and $1/4=3/12$, so the difference is $7/12$. Naming same denominator alone, subtracting numerators and denominators separately, or reversing difference and alignment, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

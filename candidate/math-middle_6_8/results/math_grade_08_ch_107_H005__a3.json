@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anya compares two juice mixes: Mix P uses $3$ cups concentrate in $12$ cups water; Mix Q uses $2$ cups concentrate in $6$ cups water. She wants the stronger concentrate mix.\n\nWhich comparison is fair?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Compare the absolute concentrate amounts $3$ and $2$ alone, without matching water on a common reference."
+    },
+    {
+      "id": "B",
+      "text": "Say that a fair comparison is what creates the matching units, instead of placing both mixes on a common concentrate or water amount first."
+    },
+    {
+      "id": "C",
+      "text": "Rewrite both as concentrate per the same water amount (or an equal ratio): P is $3:12=1:4$ and Q is $2:6=1:3$, so Q is stronger."
+    },
+    {
+      "id": "D",
+      "text": "Replace the ratio comparison with an unrelated average of the four printed cups, outside this hinge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fair mixture comparison needs matching units and a common reference amount (or equivalent ratios). Here 1:4 vs 1:3 shows Q is stronger. Comparing absolute cups alone, reversing cause, or switching to an unrelated average miss that rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

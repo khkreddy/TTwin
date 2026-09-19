@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Padma writes $56=14\\times 4$ and $63=21\\times 3$. She asks whether that single pair of factorisations proves $56$ and $63$ have no common factor greater than $1$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Conclude they are co-prime from those two products alone, without checking whether another common factor was missed."
+    },
+    {
+      "id": "B",
+      "text": "Say that calling them co-prime is what creates the incomplete factor listing, instead of testing all possible common factors."
+    },
+    {
+      "id": "C",
+      "text": "No: one chosen factorisation of each number can miss a common factor; the search must account for every possible common factor."
+    },
+    {
+      "id": "D",
+      "text": "Require a full prime-factorisation write-up of every integer as the only allowed method for this decision."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One factor pair can miss a shared factor; proving no common factor other than $1$ needs a search that covers all possibilities. Treating one pair as enough, reversing conclusion and listing, or demanding a later full prime-factorisation procedure all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

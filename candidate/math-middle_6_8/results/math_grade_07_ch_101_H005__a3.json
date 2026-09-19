@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal's calculator starts at $0$ and has only a $+100$ button. She wants the display to show exactly $700$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer presses, without finding how many $+100$ taps make $700$."
+    },
+    {
+      "id": "B",
+      "text": "Mix $+10$ and $+100$ taps, even though only the $+100$ button is available."
+    },
+    {
+      "id": "C",
+      "text": "Press $+100$ seven times, because $700 \\div 100 = 7$."
+    },
+    {
+      "id": "D",
+      "text": "Invent a multi-button breakdown such as five $+100$ taps and twenty $+10$ taps."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With only a $+100$ button, the number of presses is the target divided by $100$, so $700$ needs seven presses. Naming presses alone, using unavailable buttons, or inventing multi-button decompositions leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

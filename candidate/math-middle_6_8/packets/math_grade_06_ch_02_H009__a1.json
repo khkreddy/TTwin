@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:01:33.861Z",
+  "source": {
+    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+      },
+      {
+        "id": "B",
+        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
+      },
+      {
+        "id": "C",
+        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
+      },
+      {
+        "id": "D",
+        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_02/H009",
+      "unit_id": "math/grade_06/ch_02/H009",
+      "title": "Decide whether an angle is acute, obtuse, right, straight, or reflex from its size.",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "acute angle still holds here even though An angle exactly equal to 90 degrees is right, not acute or obtuse is missing from the stem — on the item about Decide whether an angle is acute, obtuse, right."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The acute angle rule also covers this: {'excluded_case': 'Do not assess historical background, decorative illustrations, or unrelated chapter-opening, so it is not an exception — on the item about Decide whether an angle is acute, obtuse, right."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is acute angle because of the most obvious label, colour, size or printed number in the stem, without using 'Decide whether an angle is acute, obtuse, right, straight, or reflex' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "acute angle is settled by running 'Decide unknown angle measures by treating adjacent angles as parts of': When adjacent angles exactly partition a known whole angle, their measures add to the — on the item about Decide whether an angle is acute, obtuse, right."
+      }
+    ],
+    "enrichment": "Acute angles are greater than 0 degrees and less than 90 degrees, right angles are 90 degrees, obtuse angles are greater than 90 degrees and less than 180 degrees, straight angles are 180 degrees, and reflex angles are greater than 180 degrees and less than 360 degrees.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_02. The student must decide: Decide whether an angle is acute, obtuse, right, straight, or reflex from its size. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_02/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H009"
+  }
+}

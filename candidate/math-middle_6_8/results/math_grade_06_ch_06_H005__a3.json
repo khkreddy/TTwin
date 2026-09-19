@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan runs on a rectangular track whose perimeter is $400$ m. He runs $950$ m from a start mark.\n\nWhich claim about full rounds and leftover distance is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"one round\" the leftover distance, without using the perimeter."
+    },
+    {
+      "id": "B",
+      "text": "Convert using $400$ m even if the actual track perimeter were a different length."
+    },
+    {
+      "id": "C",
+      "text": "Full rounds $= 2$ and leftover $= 150$ m along the track, because $950 = 2 \\times 400 + 150$."
+    },
+    {
+      "id": "D",
+      "text": "Report $950$ alone, because that numeral is printed largest."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One full round equals the track perimeter. Total distance is full rounds times that perimeter plus leftover along the track: $950 = 2\\times400+150$. Relabelling leftover as a round, dropping the actual-perimeter condition, or grabbing $950$ all miss that division.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

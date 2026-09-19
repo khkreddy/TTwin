@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal sees a poster: School A has $20$ students drawn as a huge icon, and School B has $40$ students drawn as an icon only a little larger than A's, not about twice as tall.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Trust the poster because it looks appealing, skipping that icon sizes must match the counts."
+    },
+    {
+      "id": "B",
+      "text": "Say that visual appeal is what creates the true counts $20$ and $40$."
+    },
+    {
+      "id": "C",
+      "text": "Do not trust it as accurate: the icon sizes do not preserve the $20:40$ relationship."
+    },
+    {
+      "id": "D",
+      "text": "Reject the poster only because it uses colour decoration that does not change how the data read."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A display is accurate only when sizes and scale preserve the numerical relationships. Appeal without scale fidelity, reversing appeal and counts, or blaming harmless decoration, miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

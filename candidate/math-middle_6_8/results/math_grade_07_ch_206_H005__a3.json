@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar has line $m$ and wants a line through point $P$ parallel to $m$ by copying a corresponding angle from a transversal.\n\nWhich plan works?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copy an angle at $P$ with no transversal that intersects line $m$, and claim the new line is parallel to $m$."
+    },
+    {
+      "id": "B",
+      "text": "Say that the finished parallel line is what creates the transversal through $m$, instead of choosing the transversal first."
+    },
+    {
+      "id": "C",
+      "text": "Draw a transversal through $P$ that cuts $m$, copy the corresponding angle at $P$, and draw the new line along that copied angle; it is parallel to $m$."
+    },
+    {
+      "id": "D",
+      "text": "Use only a set-square to slide a parallel, and treat that tool method as this corresponding-angle copy hinge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A transversal must cut the given line; copying the corresponding angle at $P$ makes the new line parallel to $m$. Skipping the intersecting transversal, reversing parallel and transversal, or swapping in a set-square slide all leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

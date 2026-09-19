@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_107/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_107/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_107/H005"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_107:H005:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_107",
+    "chapter_label": "math/grade_08/ch_107",
+    "subtopic_id": "math/grade_08/ch_107/H005",
+    "stem": "Anya compares two juice mixes: Mix P uses $3$ cups concentrate in $12$ cups water; Mix Q uses $2$ cups concentrate in $6$ cups water. She wants the stronger concentrate mix.\n\nWhich comparison is fair?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Compare the absolute concentrate amounts $3$ and $2$ alone, without matching water on a common reference.",
+      "B": "Say that a fair comparison is what creates the matching units, instead of placing both mixes on a common concentrate or water amount first.",
+      "C": "Rewrite both as concentrate per the same water amount (or an equal ratio): P is $3:12=1:4$ and Q is $2:6=1:3$, so Q is stronger.",
+      "D": "Replace the ratio comparison with an unrelated average of the four printed cups, outside this hinge."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_107/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

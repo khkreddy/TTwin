@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Indira starts with the $2$-digit number $23$. She reverses the digits and adds, then repeats reverse-and-add until she should stop.\n\nWhich claim applies the process correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Form $23 + 32 = 55$, notice $55$ reads the same both ways, and keep reverse-and-adding anyway."
+    },
+    {
+      "id": "B",
+      "text": "Say that reaching a palindrome is what creates the starting number $23$."
+    },
+    {
+      "id": "C",
+      "text": "Form $23 + 32 = 55$; $55$ is a palindrome, so stop at $55$."
+    },
+    {
+      "id": "D",
+      "text": "Repeat the chapter word palindrome alone, without reverse-and-adding $23$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reverse-and-add stops at the first palindrome: $23+32=55$, so the process ends at $55$. Continuing after a palindrome omits the stop rule. Reversing cause and start, or naming the term alone, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

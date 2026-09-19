@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:04:18.028Z",
+  "source": {
+    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+      },
+      {
+        "id": "B",
+        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
+      },
+      {
+        "id": "C",
+        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
+      },
+      {
+        "id": "D",
+        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_103/H005",
+      "unit_id": "math/grade_07/ch_103/H005",
+      "title": "Locate a decimal or fractional quantity on a ruler or number line by using the size of each equal division.",
+      "node_labels": [
+        "Visualization & models"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Visualization & models",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Endpoint is the label that belongs on this item, so 'Locate a decimal or fractional quantity on a ruler or number line by' is answered as endpoint rather than number line."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Endpoint is what produces number line, so the usual direction of this relation is run backwards — on the item about Locate a decimal or fractional quantity on a ruler or."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is number line because of the most obvious label, colour, size or printed number in the stem, without using 'Locate a decimal or fractional quantity on a ruler or number line by' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "number line is settled by running 'Compare or order decimals by place value, not by the number of digits': Compare decimal numbers from the highest place value downward; when the first unequal — on the item about Locate a decimal or fractional quantity on a ruler or."
+      }
+    ],
+    "enrichment": "To place a decimal on a number line, first choose the interval containing it, then divide that interval into equal parts matching the next place value and count the needed parts from the left endpoint.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_103. The student must decide: Locate a decimal or fractional quantity on a ruler or number line by using the size of each equal division. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_103/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_103/H005"
+  }
+}

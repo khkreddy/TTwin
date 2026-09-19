@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Javed's scores are $6$, $8$, and $10$, so the mean is $8$. He adds $5$ to every score.\n\nWhat happens to the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the change fixed subtraction, even though every score was increased by $5$."
+    },
+    {
+      "id": "B",
+      "text": "Add $5$ only to the largest score $10$, and still claim the mean rises by $5$."
+    },
+    {
+      "id": "C",
+      "text": "The new mean is $8 + 5 = 13$, because every value rose by $5$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same $+5$ mean rule when only one of the three scores is changed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When the same fixed amount is added to every value, the mean shifts by that amount. Misnaming the shift as subtraction, applying the addend to only some values, or using the rule for a partial shift, leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra has triangle $PQR$ with $PQ=8$ cm. From $R$ she draws a perpendicular to the line through $PQ$, meeting it at $H$, and measures $RH=5$ cm.\n\nWhich pair correctly gives the area of $\\triangle PQR$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Answer \"base\", naming that word instead of using a base–height product."
+    },
+    {
+      "id": "B",
+      "text": "Use $PQ=8$ cm with a slanted side from $R$ that is not perpendicular to the line through $PQ$."
+    },
+    {
+      "id": "C",
+      "text": "Take base $PQ=8$ cm and perpendicular height $RH=5$ cm, so area $=\\frac{1}{2}\\times 8\\times 5=20$ cm$^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "Treat the question as finding a triangle's perimeter from the three side lengths, outside this area hinge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area is ½×base×perpendicular height. Here base PQ=8 and height RH=5 give 20 cm². Naming base alone, using a non-perpendicular slant, or switching to perimeter miss that formula.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri needs the additive inverse of $-7$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"opposite integer\" the finished answer, without naming the number that cancels $-7$."
+    },
+    {
+      "id": "B",
+      "text": "Say $+7$ even if the two numbers did not have equal distance from zero."
+    },
+    {
+      "id": "C",
+      "text": "$+7$, because $(-7)+(+7)=0$ (same distance from zero, opposite sign)."
+    },
+    {
+      "id": "D",
+      "text": "Report $7$ alone, because that digit is printed in $-7$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The additive inverse has opposite sign and the same distance from zero, so the pair sums to zero: $(-7)+(+7)=0$. Relabelling without the cancel, dropping equal distance, or grabbing the printed digit all miss that inverse.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

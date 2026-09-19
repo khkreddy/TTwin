@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit knows that $12$ is divisible by $3$.\n\nWhich claim follows?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Skip the given that $12$ is divisible by $3$, and treat whether multiples of $12$ are divisible by $3$ as unknown."
+    },
+    {
+      "id": "B",
+      "text": "Say that divisibility by $3$ is what creates the number $12$ itself."
+    },
+    {
+      "id": "C",
+      "text": "Every multiple of $12$ is divisible by $3$, and $12$ is divisible by every factor of $3$."
+    },
+    {
+      "id": "D",
+      "text": "Infer that $12$ is divisible by every multiple of $3$, such as $6$ or $9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "If $A$ is divisible by $k$, then every multiple of $A$ is divisible by $k$, and $A$ is divisible by every factor of $k$. Dropping the starting condition, reversing cause, or extending to every multiple of $k$, miss that transfer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

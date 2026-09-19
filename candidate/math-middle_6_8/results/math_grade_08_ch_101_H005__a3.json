@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri looks at the consecutive squares $7^2 = 49$ and $8^2 = 64$.\n\nWhich claim about the gap is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"gap\" the label $64$, without subtracting the consecutive squares."
+    },
+    {
+      "id": "B",
+      "text": "Say the gap is what produces the squares $49$ and $64$."
+    },
+    {
+      "id": "C",
+      "text": "The gap is $15$, and there are $14$ whole numbers strictly between $49$ and $64$, because consecutive squares differ by consecutive odd numbers and the count between is one less than the gap."
+    },
+    {
+      "id": "D",
+      "text": "Report $8$ alone, because that digit is printed in $8^2$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Consecutive squares differ by consecutive odd numbers: $64-49=15$, and whole numbers strictly between them number $14=15-1$. Relabelling without subtracting, reversing gap into the squares, or grabbing the printed $8$ all miss that gap rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit must construct rectangle $ABCD$ given side $DC = 5$ cm and diagonal $DB = 7$ cm.\n\nWhich plan locates vertex $B$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Erect a perpendicular at $C$ without first drawing side $DC$ at its given length $5$ cm."
+    },
+    {
+      "id": "B",
+      "text": "Locate $B$ by trial-and-error with a ruler only, without using a perpendicular and an arc."
+    },
+    {
+      "id": "C",
+      "text": "Draw $DC$; erect a perpendicular to $DC$ at $C$; from $D$ draw an arc of radius $7$ cm; $B$ is their intersection."
+    },
+    {
+      "id": "D",
+      "text": "Place $B$ using only the printed length $5$ cm, ignoring the diagonal length $7$ cm."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vertex $B$ lies on the perpendicular to $DC$ at $C$ and on the circle centred at $D$ with radius equal to the diagonal. Skipping the given side, using ruler trial alone, or using only the printed $5$ cm, miss that locus.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

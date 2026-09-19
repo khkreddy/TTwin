@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anya must construct a triangle given sides $AB=6$ cm, $AC=5$ cm, and the included angle at $A$ equal to $50^\\circ$.\n\nWhich construction plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Answer \"base side\", naming that phrase instead of placing the $50^\\circ$ angle between the two given sides."
+    },
+    {
+      "id": "B",
+      "text": "Say that drawing the finished triangle is what creates the given sides and included angle, instead of building from those data."
+    },
+    {
+      "id": "C",
+      "text": "Draw $AB=6$ cm as a base, make a $50^\\circ$ angle at $A$, mark $AC=5$ cm along the new arm, and join $C$ to $B$."
+    },
+    {
+      "id": "D",
+      "text": "Copy the printed measure $50$ and treat that single number as the finished triangle, without using the two side lengths."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "SAS construction: draw one given side as base, construct the included angle at the correct endpoint, mark the second given side on the new arm, and join. Naming a phrase, reversing cause, or grabbing 50 alone miss that plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

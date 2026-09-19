@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_107/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_107/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H005"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H005:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H005",
+    "stem": "Anya must construct a triangle given sides $AB=6$ cm, $AC=5$ cm, and the included angle at $A$ equal to $50^\\circ$.\n\nWhich construction plan is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Answer \"base side\", naming that phrase instead of placing the $50^\\circ$ angle between the two given sides.",
+      "B": "Say that drawing the finished triangle is what creates the given sides and included angle, instead of building from those data.",
+      "C": "Draw $AB=6$ cm as a base, make a $50^\\circ$ angle at $A$, mark $AC=5$ cm along the new arm, and join $C$ to $B$.",
+      "D": "Copy the printed measure $50$ and treat that single number as the finished triangle, without using the two side lengths."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
