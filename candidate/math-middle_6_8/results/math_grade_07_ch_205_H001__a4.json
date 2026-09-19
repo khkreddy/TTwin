@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Chitra's teacher asks the class: \"What heights do students in Class $7$B have?\"",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly classifies that prompt?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The prompt is statistical: it asks about data with expected variation across students."
+        },
+        {
+          "id": "B",
+          "text": "It is not statistical because the exact list of heights is not known yet."
+        },
+        {
+          "id": "C",
+          "text": "It is only a fixed fact about one named student, so it is not statistical."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The question expects height data that vary across Class $7$B students, so it is statistical rather than a single fixed fact."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A statistical prompt anticipates data with variation. Not knowing the list yet does not remove that; treating it as one named-student fact substitutes the wrong label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

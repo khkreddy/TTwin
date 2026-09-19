@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick] (0,0) rectangle (1.5,0.7);\n\\node at (0.75,0.35) {cell};\n\\node[font=\\bfseries] at (-0.25,0.35) {$-$};\n\\node[font=\\bfseries] at (1.75,0.35) {$+$};\n\\draw[thick] (1.5,0.35) -- (3.0,0.35) -- (3.0,1.2);\n\\draw[thick] (2.75,1.2) rectangle (3.25,1.7);\n\\node at (3.0,1.95) {lamp};\n\\draw[thick] (3.0,1.7) -- (3.0,2.3) -- (-0.6,2.3);\n\\draw[thick,dashed] (-0.6,2.3) -- (-0.6,0.9);\n\\draw[thick] (-0.6,0.55) -- (-0.6,0.35) -- (0,0.35);\n\\node at (-1.15,1.4) {G};\n\\draw[<->,thick] (-0.85,0.85) -- (-0.85,1.95);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Tejas's arrangement of one cell and a small lamp. One copper wire joins the lamp to the positive terminal. There is a gap at G, so no wire joins the lamp to the negative terminal.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp does not glow, because the gap at G leaves the path incomplete."
+    },
+    {
+      "id": "B",
+      "text": "The lamp glows, because one wire already joins the lamp to the positive terminal."
+    },
+    {
+      "id": "C",
+      "text": "The lamp glows only if the gap at G is beside the positive terminal, even when no wire completes the path."
+    },
+    {
+      "id": "D",
+      "text": "The lamp glows whenever it sits near the cell, even with the gap at G."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lamp glows only when wires complete a path from one cell terminal through the lamp to the other. The gap at G leaves that path incomplete, so the lamp does not glow.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Cell and lamp with an open gap G in the return wire."
+  }
+}

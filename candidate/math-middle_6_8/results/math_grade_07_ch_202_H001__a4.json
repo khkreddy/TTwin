@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Adeel needs an ordered pair of numbers whose sum is $15$ and whose difference (first minus second) is $3$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which ordered pair satisfies both conditions?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$(6, 9)$"
+        },
+        {
+          "id": "B",
+          "text": "$(9, 6)$"
+        },
+        {
+          "id": "C",
+          "text": "$(15, 3)$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$9+6=15$ and $9-6=3$, so the ordered pair $(9, 6)$ meets both the sum and the signed difference."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solve x+y=15 and x−y=3 to get (9,6). Swapping to (6,9) flips the difference sign; (15,3) only copies the given numbers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

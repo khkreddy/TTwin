@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_12:q21",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:15.406Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_12:q21",
+    "item_type": "single_mcq",
+    "stem": "A water wave in a shallow tank passes through a gap in a barrier.\nWhat happens to the speed and what happens to the wavelength of the wave as it passes through the gap?",
+    "options": [
+      {
+        "id": "A",
+        "text": "decreases decreases"
+      },
+      {
+        "id": "B",
+        "text": "decreases remains constant"
+      },
+      {
+        "id": "C",
+        "text": "remains constant decreases"
+      },
+      {
+        "id": "D",
+        "text": "remains constant remains constant"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily,>=stealth,line cap=butt]\\draw[line width=0.8pt] (0,-1.8)--(0,1.8); \\draw[line width=0.5pt] (0.65,-1.8)--(0.65,1.8); \\draw[line width=0.5pt] (1.30,-1.8)--(1.30,1.8); \\draw[->,line width=0.8pt] (0,0.25)--(1.22,0.25); \\node[align=center,anchor=east] at (-0.22,0.25) {water\\\\wave}; \\filldraw[fill=gray!25,line width=0.8pt] (1.78,0.65) rectangle (2.15,1.8); \\filldraw[fill=gray!25,line width=0.8pt] (1.78,-1.8) rectangle (2.15,-0.15); \\draw[line width=0.5pt] (1.78,-1.8)--(1.78,1.8); \\draw[line width=0.5pt] (2.15,-1.8)--(2.15,1.8); \\draw[line width=0.6pt] (1.98,1.35)--(2.85,1.68); \\node[anchor=west] at (2.90,1.72) {barrier}; \\draw[line width=0.6pt] (2.02,0.22)--(2.92,-0.50); \\node[anchor=west] at (2.97,-0.54) {gap};\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "D"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Describing motion",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Cannot measure from the 2 cm mark; it must start at 1 cm."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "2 − 7 = −5 cm"
+      }
+    ],
+    "enrichment": "A scale with a broken end or unclear zero can still be used by placing one end of the object at another clear full mark and using the separation between the readings at the two ends. nonzero starting mark plus endpoint reading -> length found from the difference between readings The learner correctly applies this rule: A scale with a broken end or unclear zero can still be used by placing one end of the object at another clear full mark and using the separation between the readings at the two ends. The far endpoint reading on a scale is always the object length.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_05/H006",
+      "gate_names": [
+        "term_substitution",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “decreases decreases” for the required “remains constant remains constant”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “decreases remains constant” looked possible instead of “remains constant remains constant”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “remains constant decreases” looked possible instead of “remains constant remains constant”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Find a length when the scale's end is broken or the zero mark is not clear. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "remove",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m16_qp_12:q21",
+    "hinge": "science/grade_06/ch_05/H006",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "scope_error",
+      "B": "operation_confusion",
+      "C": "UNRESOLVED",
+      "D": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H006"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Pranav has two ropes of lengths $36\\,\\mathrm{m}$ and $48\\,\\mathrm{m}$. He wants to cut both into pieces of the same whole-number length, using the largest possible piece length with no rope left over.\n\nWhich two claims correctly state what he should find and why?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find a common multiple of $36$ and $48$."
+    },
+    {
+      "id": "B",
+      "text": "Find the highest common factor of $36$ and $48$."
+    },
+    {
+      "id": "C",
+      "text": "The largest equal piece length that divides both $36$ and $48$ with no remainder is that highest common factor."
+    },
+    {
+      "id": "D",
+      "text": "Any common factor of $36$ and $48$ is enough, even when a larger one also fits."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Largest equal piece with no remainder is the HCF of 36 and 48. A common multiple answers a different question; any common factor may be too small.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

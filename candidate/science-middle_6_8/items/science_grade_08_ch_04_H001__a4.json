@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H001"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H001",
+    "stem": "The diagram shows a straight copper wire in a closed loop with a cell and a switch. A compass sits beside the wire.\n\nNidhi closes the switch so that electric current flows through the wire.\n\nWhich prediction about the compass needle is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The needle should deflect while current flows in the closed loop.",
+      "B": "The needle should deflect even if the switch stays open, because the cell is present.",
+      "C": "The needle should not deflect when current flows, because a copper wire is never magnetic.",
+      "D": "Opening the switch makes the needle deflect more strongly than closing it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick,fill=white] (0,0) rectangle (1.2,0.55);\n\\node at (0.6,0.275) {cell};\n\\node[font=\\bfseries] at (-0.2,0.275) {$-$};\n\\node[font=\\bfseries] at (1.4,0.275) {$+$};\n% wires and switch\n\\draw[thick] (1.2,0.275) -- (2.6,0.275);\n\\draw[thick] (2.6,0.275) -- (2.6,1.6) -- (4.8,1.6);\n\\draw[thick] (4.8,1.6) -- (4.8,0.275) -- (3.4,0.275);\n% switch gap\n\\draw[thick] (3.4,0.275) -- (3.15,0.55);\n\\node at (3.0,0.85) {switch};\n\\draw[thick] (2.6,0.275) -- (0,0.275);\n% label wire\n\\node at (3.7,1.9) {copper wire};\n% compass beside top wire\n\\draw[thick] (3.7,1.6) ++(0,0.55) circle (0.45);\n\\draw[->,thick] (3.55,2.0) -- (3.95,2.3);\n\\node at (3.7,2.85) {compass};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick,fill=white] (0,0) rectangle (1.2,0.55);\n\\node at (0.6,0.275) {cell};\n\\node[font=\\bfseries] at (-0.2,0.275) {$-$};\n\\node[font=\\bfseries] at (1.4,0.275) {$+$};\n% wires and switch\n\\draw[thick] (1.2,0.275) -- (2.6,0.275);\n\\draw[thick] (2.6,0.275) -- (2.6,1.6) -- (4.8,1.6);\n\\draw[thick] (4.8,1.6) -- (4.8,0.275) -- (3.4,0.275);\n% switch gap\n\\draw[thick] (3.4,0.275) -- (3.15,0.55);\n\\node at (3.0,0.85) {switch};\n\\draw[thick] (2.6,0.275) -- (0,0.275);\n% label wire\n\\node at (3.7,1.9) {copper wire};\n% compass beside top wire\n\\draw[thick] (3.7,1.6) ++(0,0.55) circle (0.45);\n\\draw[->,thick] (3.55,2.0) -- (3.95,2.3);\n\\node at (3.7,2.85) {compass};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a straight copper wire in a closed loop with a cell and a switch. A compass sits beside the wire.\n\nNidhi closes the switch so that electric current flows through the wire.\n\nWhich prediction about the compass needle is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needle should deflect while current flows in the closed loop."
+    },
+    {
+      "id": "B",
+      "text": "The needle should deflect even if the switch stays open, because the cell is present."
+    },
+    {
+      "id": "C",
+      "text": "The needle should not deflect when current flows, because a copper wire is never magnetic."
+    },
+    {
+      "id": "D",
+      "text": "Opening the switch makes the needle deflect more strongly than closing it."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A current in a closed loop produces a magnetic effect that can deflect a nearby compass needle. An open switch stops the current, so the needle should not deflect then.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source cylinders/circuit into a cell–switch–wire loop with a compass beside the wire."
+  }
+}

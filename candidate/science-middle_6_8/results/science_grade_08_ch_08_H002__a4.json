@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Hitesh prepares mixtures. In a uniform mixture the components are spread so evenly that they cannot be seen separately.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Honey stirred completely into warm water until nothing separate can be seen is a uniform mixture."
+    },
+    {
+      "id": "B",
+      "text": "Poha mixed with peanuts and green chilli pieces is a non-uniform mixture."
+    },
+    {
+      "id": "C",
+      "text": "Mustard oil poured onto a bowl of water is a uniform mixture."
+    },
+    {
+      "id": "D",
+      "text": "Chalk powder stirred into a bucket of water is a uniform mixture."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Honey fully mixed into water is uniform. Poha with separate pieces is non-uniform. Oil on water and chalk in water still show separate parts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

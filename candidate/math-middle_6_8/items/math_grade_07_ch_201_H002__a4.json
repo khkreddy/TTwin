@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H002",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H002"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "mechanism_conflation",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H002",
+    "stem": "Pranav studies the diagram of triangles $PQR$ and $XYZ$. Matching tick marks show $PQ=XY$, $QR=YZ$, and $RP=ZX$.\n\nWhich claim correctly decides congruence from those side lengths?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The triangles are congruent: three corresponding equal side lengths are enough.",
+      "B": "Equal side lengths appear only after congruence is already known, so sides cannot settle it.",
+      "C": "An included matching angle between two of those sides is also required before congruence can be decided.",
+      "D": "Same shape alone is enough even when the three side lengths do not match."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  % triangle PQR\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (1.1,2.4);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P){$P$};\n  \\node[below right] at (Q){$Q$};\n  \\node[above] at (R){$R$};\n  % side marks: PQ 1 tick, QR 2 ticks, RP 3 ticks\n  \\draw[line width=0.85pt] (1.55,-0.12)--(1.55,0.12);\n  \\draw[line width=0.85pt] (2.05,1.05)--(2.25,1.2);\n  \\draw[line width=0.85pt] (1.95,1.2)--(2.15,1.35);\n  \\draw[line width=0.85pt] (0.45,1.05)--(0.65,1.2);\n  \\draw[line width=0.85pt] (0.35,1.2)--(0.55,1.35);\n  \\draw[line width=0.85pt] (0.55,1.35)--(0.75,1.5);\n  % triangle XYZ\n  \\coordinate (X) at (5.2,0);\n  \\coordinate (Y) at (8.4,0);\n  \\coordinate (Z) at (6.3,2.4);\n  \\draw[line width=1.05pt] (X)--(Y)--(Z)--cycle;\n  \\node[below left] at (X){$X$};\n  \\node[below right] at (Y){$Y$};\n  \\node[above] at (Z){$Z$};\n  \\draw[line width=0.85pt] (6.75,-0.12)--(6.75,0.12);\n  \\draw[line width=0.85pt] (7.25,1.05)--(7.45,1.2);\n  \\draw[line width=0.85pt] (7.15,1.2)--(7.35,1.35);\n  \\draw[line width=0.85pt] (5.65,1.05)--(5.85,1.2);\n  \\draw[line width=0.85pt] (5.55,1.2)--(5.75,1.35);\n  \\draw[line width=0.85pt] (5.75,1.35)--(5.95,1.5);\n  \\node[align=center] at (4.2,-0.85){$PQ=XY$,\\ $QR=YZ$,\\ $RP=ZX$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

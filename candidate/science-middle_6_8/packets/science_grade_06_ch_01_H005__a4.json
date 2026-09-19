@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_s19_qp_23:q40",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T07:39:52.266Z",
+  "created_at": "2026-09-19T08:18:49.128Z",
   "source": {
-    "item_ref": "session:0620_s19_qp_23:q40",
-    "item_type": "options_are_figure",
-    "stem": "A section of a polymer is shown.\n\nDisplayed polymer section: –O–CH₂–CH₂–O–C(=O)–CH₂–CH₂–C(=O)–O–CH₂–CH₂–O–C(=O)–CH₂–CH₂–C(=O)–\n\nHow many different types of monomer units formed this section of polymer?",
-    "options": [
-      {
-        "id": "A",
-        "text": "1"
-      },
-      {
-        "id": "B",
-        "text": "2"
-      },
-      {
-        "id": "C",
-        "text": "3"
-      },
-      {
-        "id": "D",
-        "text": "4"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
-    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line width=0.45pt]\n\\foreach \\x/\\a in {0/O,2/C,4/C,6/O,8/C,10/C,12/C,14/O,16/C,18/C,20/O,22/C,24/C,26/C,28/O}{\\node (n\\x) at (\\x,0) {$\\mathrm{\\a}$};}\n\\foreach \\a/\\b in {0/2,2/4,4/6,6/8,8/10,10/12,12/14,14/16,16/18,18/20,20/22,22/24,24/26,26/28}{\\draw (n\\a)--(n\\b);}\n\\foreach \\x in {2,4,10,12,16,18,24,26}{\\node (u\\x) at (\\x,1.35) {$\\mathrm{H}$};\\node (d\\x) at (\\x,-1.35) {$\\mathrm{H}$};\\draw (n\\x)--(u\\x);\\draw (n\\x)--(d\\x);}\n\\foreach \\x in {8,14,22,28}{\\node (o\\x) at (\\x,1.45) {$\\mathrm{O}$};\\draw ([xshift=-1.2pt]n\\x.north)--([xshift=-1.2pt]o\\x.south);\\draw ([xshift=1.2pt]n\\x.north)--([xshift=1.2pt]o\\x.south);}\n\\draw (-1.1,0)--(n0);\\draw (n28)--(29.1,0);\n\\end{tikzpicture}",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "tikz": "",
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_01/H005",
+      "unit_id": "science/grade_06/ch_01/H005",
+      "title": "When a science question is hard to answer alone or immediately, keep investigating and work with others instead of treating the question as finished.",
+      "node_labels": [
+        "What counts as a scientific question or test",
+        "Scientific inquiry and evidence"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -63,32 +51,19 @@
       }
     ],
     "enrichment": "Science is an ongoing journey of inquiry: new discoveries can lead to new questions, not all answers are found at once, and people often work together to discover things. Unanswered questions and new discoveries extend inquiry; collaboration can help continue the search for answers. The learner keeps inquiry open when an answer is not immediate, uses collaboration, and recognizes that discoveries can lead to new questions. A science question is useful only if I can answer it by myself right away.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_01/H005",
-      "gate_names": [
-        "scope_error",
-        "scope_error",
-        "scope_error"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student including statement 1 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student including statement 3 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student including statement 4 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When a science question is hard to answer alone or immediately, keep investigating and work with others instead of treating the question as finished. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: The wonderful world of science. The student must decide: When a science question is hard to answer alone or immediately, keep investigating and work with others instead of treating the question as finished. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "structured_parts",
     "format": {
       "n_options": 4
     },
     "figure": {
-      "mode": "remove",
+      "mode": "preserve",
       "tikz_required": false
     }
   },
@@ -102,11 +77,11 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_s19_qp_23:q40",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_01/H005",
-    "item_type_target": "preserve",
+    "item_type_target": "structured_parts",
     "figure_decision": {
-      "mode": "remove",
+      "mode": "preserve",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [
@@ -114,12 +89,7 @@
       "scope_error",
       "surface_feature_capture"
     ],
-    "option_plan": {
-      "A": "condition_omission",
-      "C": "scope_error",
-      "D": "surface_feature_capture",
-      "B": null
-    },
+    "option_plan": {},
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H005"
   }
 }

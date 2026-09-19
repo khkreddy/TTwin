@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {lamp};\n\\draw[thick,dashed,->] (0.35,1.35) -- (1.85,1.85);\n\\draw[thick,dashed,->] (0.35,1.2) -- (1.85,1.2);\n\\draw[thick,dashed,->] (0.35,1.05) -- (1.85,0.55);\n\\draw[thick,fill=brown!60] (2.0,0.3) rectangle (2.35,2.1);\n\\node at (2.175,2.4) {board};\n\\draw[thick,fill=gray!55] (4.0,0.55) rectangle (4.15,1.85);\n\\node at (4.075,2.25) {shadow};\n\\draw[thick] (4.4,0.2) -- (4.4,2.2);\n\\node at (4.9,1.2) {screen};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Tejas placing a thick wooden board between a lamp and a white screen. Light from the lamp is blocked by the board before it reaches the screen.\n\nWhich claim about the shadow is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A dark shadow forms on the screen because the wooden board blocks light from the lamp."
+    },
+    {
+      "id": "B",
+      "text": "A dark shadow forms on the lamp side of the wooden board, not on the screen."
+    },
+    {
+      "id": "C",
+      "text": "No shadow forms on the screen while the lamp is on, because the wooden board is thick."
+    },
+    {
+      "id": "D",
+      "text": "A dark shadow stays on the screen after the lamp is switched off."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A shadow forms on the screen where the opaque board blocks light from the lamp. The shadow is on the screen, needs the lamp on, and is not prevented by thickness alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": "Lamp, opaque wooden board, and dark shadow on a screen."
+  }
+}

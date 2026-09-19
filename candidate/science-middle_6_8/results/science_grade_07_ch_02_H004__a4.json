@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kalyani tests a colourless kitchen liquid. It feels slippery between her fingers. Red litmus paper turns blue in the liquid. A classmate says any bitter-tasting liquid must be a base.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The liquid is likely basic, because slippery feel and red litmus turning blue are evidence for a base."
+    },
+    {
+      "id": "B",
+      "text": "A bitter taste alone does not prove that a liquid is a base."
+    },
+    {
+      "id": "C",
+      "text": "The liquid is acidic, because red litmus turning blue means an acid."
+    },
+    {
+      "id": "D",
+      "text": "Every bitter-tasting kitchen liquid must be a base, so no other test is needed."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Slippery feel with red litmus turning blue supports a base. Bitter taste alone is not enough and is not a safe shortcut to call a liquid a base.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

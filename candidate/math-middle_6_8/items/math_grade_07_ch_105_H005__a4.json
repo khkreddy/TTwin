@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H005",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H005"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H005:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H005",
+    "stem": "Lila looks at the diagram. Straight lines $\\ell$ and $m$ lie on the same flat page. Transversal $t$ meets them, and the marked corresponding angles are both $62^{\\circ}$.\n\nWhich claim correctly decides whether $\\ell$ and $m$ are parallel?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer the word transversal, and stop there.",
+      "B": "Call $\\ell$ and $m$ parallel even if they need not stay on the same flat page.",
+      "C": "$\\ell$ and $m$ are parallel: they lie on the same flat page and the equal corresponding angles from transversal $t$ show they do not meet when extended.",
+      "D": "Call $\\ell$ and $m$ parallel only because $62^{\\circ}$ is the largest printed number in the diagram."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.4,2.4)--(6.2,2.4) node[right]{$\\ell$};\n  \\draw[line width=1.05pt] (-0.4,0.4)--(6.2,0.4) node[right]{$m$};\n  \\draw[line width=1.0pt] (1.0,-0.5)--(4.6,3.3);\n  \\node[above left] at (4.55,3.2){$t$};\n  \\draw[line width=0.7pt] (2.35,2.4) arc (180:120:0.55);\n  \\node[left] at (1.85,2.7){$62^{\\circ}$};\n  \\draw[line width=0.7pt] (3.05,0.4) arc (180:120:0.55);\n  \\node[left] at (2.55,0.7){$62^{\\circ}$};\n  \\node[below left] at (1.7,2.35){$A$};\n  \\node[below right] at (3.5,2.35){$B$};\n  \\node[above left] at (2.4,0.35){$C$};\n  \\node[above right] at (4.2,0.35){$D$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

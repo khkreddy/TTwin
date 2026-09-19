@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick] (0,0) rectangle (1.2,0.7);\n\\node at (0.6,0.35) {cell};\n\\node[font=\\bfseries] at (-0.2,0.35) {$-$};\n\\node[font=\\bfseries] at (1.4,0.35) {$+$};\n% wires to coil\n\\draw[thick] (1.2,0.35) -- (2.0,0.35) -- (2.0,1.6);\n\\draw[thick] (0,0.35) -- (-0.5,0.35) -- (-0.5,1.6) -- (2.0,1.6);\n% iron nail\n\\draw[thick,fill=gray!35] (2.2,1.35) rectangle (5.0,1.85);\n\\node at (3.6,2.15) {iron nail};\n% coil turns\n\\foreach \\x in {2.4,2.7,3.0,3.3,3.6,3.9,4.2} {\n  \\draw[thick] (\\x,1.25) arc (240:-60:0.22 and 0.42);\n}\n\\node at (3.6,0.85) {coil};\n% paper clips\n\\draw[thick] (5.05,1.45) -- (5.45,1.25) -- (5.45,1.65) -- cycle;\n\\draw[thick] (5.05,1.70) -- (5.40,1.55) -- (5.40,1.90) -- cycle;\n\\node at (5.9,1.55) {clips};\n\\end{tikzpicture}",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Hitesh's coil of insulated copper wire wound on an iron nail and joined to a cell. Steel paper clips cling to the nail tip.\n\nWhich claim about this arrangement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The nail stays strongly magnetic and keeps holding the clips after the current is switched off."
+    },
+    {
+      "id": "B",
+      "text": "The iron nail core makes the electromagnet weaker than the coil alone."
+    },
+    {
+      "id": "C",
+      "text": "The current-carrying coil acts as a temporary magnet, and the iron nail core makes it stronger."
+    },
+    {
+      "id": "D",
+      "text": "Without any current, the coil alone still acts as a strong permanent magnet."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A current-carrying coil acts as a temporary magnet. An iron core makes that electromagnet stronger; magnetism fades when the current stops.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Coil on iron nail joined to a cell; clips at the tip."
+  }
+}

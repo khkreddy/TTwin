@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lila looks at the diagram. Line $m$ is given, point $P$ is off $m$, and transversal $t$ cuts $m$ at $E$. The marked angle $\\alpha$ at $E$ is copied at $P$ so that new line $n$ through $P$ makes the corresponding angle $\\alpha$ with $t$.\n\nWhich claim correctly states what that construction produces?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copy an angle at $P$ with no transversal that cuts line $m$, and claim the new line is parallel to $m$."
+    },
+    {
+      "id": "B",
+      "text": "Say that the finished parallel line is what creates transversal $t$ through $m$."
+    },
+    {
+      "id": "C",
+      "text": "Line $n$ through $P$ is parallel to $m$, because the corresponding angle $\\alpha$ was copied from transversal $t$."
+    },
+    {
+      "id": "D",
+      "text": "Slide a set-square along $m$ and treat that tool method as this corresponding-angle copy."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.3,0.6)--(6.4,0.6) node[right]{$m$};\n  \\fill (2.8,2.8) circle (1.5pt);\n  \\node[above] at (2.8,2.9){$P$};\n  \\draw[line width=1.0pt] (0.4,-0.5)--(5.0,3.6);\n  \\node[above right] at (4.9,3.5){$t$};\n  % angle at m / transversal\n  \\draw[line width=0.7pt] (1.7,0.6) arc (0:50:0.55);\n  \\node[right] at (2.25,0.85){$\\alpha$};\n  % copied corresponding angle at P\n  \\draw[line width=0.7pt] (2.8,2.8) arc (230:280:0.55);\n  \\node[below right] at (3.15,2.45){$\\alpha$};\n  % new line through P\n  \\draw[line width=1.05pt,dashed] (0.2,2.8)--(5.6,2.8) node[right]{$n$};\n  \\node[below left] at (1.5,0.55){$E$};\n  \\node[below right] at (3.8,0.55){$F$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Copying the corresponding angle from a transversal that cuts m makes n through P parallel to m. Skipping the cutting transversal, reversing parallel and transversal, or swapping in a set-square slide leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source triangle rods as line m, point P, transversal t, copied corresponding angle alpha, and dashed parallel n."
+  }
+}

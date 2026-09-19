@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The Sun appears large and bright mainly because it is much closer to Earth than other stars."
+    },
+    {
+      "id": "2",
+      "text": "Other stars look like tiny points mainly because they are much farther from Earth than the Sun."
+    },
+    {
+      "id": "3",
+      "text": "Other stars are missing from the daytime sky because they stop being stars during the day."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "three_statement",
+  "stem": "Sonia notices that the Sun looks large and bright by day, while other stars look like tiny points from her terrace at night and are not seen in the daytime sky.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Sun looks large and bright because it is much nearer; other stars look like points because they are much farther. They are still stars by day, but sunlight makes the sky too bright to see them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

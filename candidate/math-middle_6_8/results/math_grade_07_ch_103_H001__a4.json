@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Chitra measures a ribbon on a ruler marked only in centimetres. The cut end sits between the $11\\,\\mathrm{cm}$ and $12\\,\\mathrm{cm}$ marks.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states how she should report the length more accurately?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Report $11\\,\\mathrm{cm}$, because the cut end has not reached $12\\,\\mathrm{cm}$."
+        },
+        {
+          "id": "B",
+          "text": "Split the $1\\,\\mathrm{cm}$ gap into equal smaller parts and count how many the cut end passes."
+        },
+        {
+          "id": "C",
+          "text": "Treat the printed $11$ on the ribbon spool as the measured length."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The tip falls between whole-centimetre marks, so the $1\\,\\mathrm{cm}$ unit interval must be split into equal smaller parts and those parts counted."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Between whole marks, equal subunit parts of the same centimetre interval give a finer length. Whole-unit only, or a printed spool number, miss that measurement step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

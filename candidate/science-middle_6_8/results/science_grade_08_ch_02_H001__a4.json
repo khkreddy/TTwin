@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Charu looks at a clear drop of pond water. With her unaided eyes she sees nothing moving in it. Her teacher says the tiniest living organisms may still be present.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Those organisms may be too small for the unaided eye."
+    },
+    {
+      "id": "B",
+      "text": "She should use a microscope or a magnifying glass to observe them."
+    },
+    {
+      "id": "C",
+      "text": "Her unaided eyes are enough, because clear pond water has nothing tiny to observe."
+    },
+    {
+      "id": "D",
+      "text": "A flat windowpane will magnify them, because any clear glass makes small things look larger."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tiny organisms can be too small for the unaided eye, so a microscope or magnifying glass is needed. Clear water and clear glass alone do not remove that need.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

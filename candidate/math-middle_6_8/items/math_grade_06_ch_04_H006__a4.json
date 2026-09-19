@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m16_qp_12:q24",
+  "target_unit_id": "math/grade_06/ch_04/H006",
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_06/ch_04/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H006"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H006",
+    "stem": "The graph shows Esha's snack stall sales on Sports Day. The vertical scale uses equal intervals.\n\nWhich snack sold the most?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Juice, because its bar is tallest on the equal-interval scale.",
+      "B": "Samosa, because the snack name alone settles the sales value.",
+      "C": "Fruit, as if equal intervals on the vertical scale are not required.",
+      "D": "Juice, because darker shading settles the sales value."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.75,font=\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Snack};\n  \\draw[->] (0,0) -- (0,7.2) node[above] {Sales};\n  \\foreach \\y in {1,2,3,4,5,6,7} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!45] (0.7,0) rectangle (1.5,7);\n  \\node at (1.1,-0.35) {Juice};\n  \\fill[gray!45] (2.2,0) rectangle (3.0,4);\n  \\node at (2.6,-0.35) {Samosa};\n  \\fill[gray!45] (3.7,0) rectangle (4.5,2);\n  \\node at (4.1,-0.35) {Fruit};\n  \\node[anchor=west] at (0,7.55) {Sports Day sales};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

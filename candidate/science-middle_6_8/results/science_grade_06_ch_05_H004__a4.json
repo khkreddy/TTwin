@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Millimetres, with a scale that can show small lengths, for the cover thickness."
+    },
+    {
+      "id": "B",
+      "text": "Metres, with a metre scale or measuring tape, for the corridor."
+    },
+    {
+      "id": "C",
+      "text": "Kilometres for the cover thickness, because a larger unit is always better."
+    },
+    {
+      "id": "D",
+      "text": "Guessing the corridor length from the paint colour and ignoring scale marks."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Alok must measure the thickness of a notebook cover and the length of the school corridor.\n\nWhich claims choose an appropriate length unit and measuring scale for the size being measured? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Match the unit and scale to the size: millimetres for a thin cover, metres for a corridor. Larger units are not always better, and colour is not a length measurement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adeel draws a closed shape with three corner points $L$, $M$ and $N$ joined by three straight sides.\n\nWhich two claims correctly name the shape and identify its parts?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The shape is named only by the single corner $L$."
+    },
+    {
+      "id": "B",
+      "text": "The shape is triangle $LMN$, named by its three vertices $L$, $M$ and $N$."
+    },
+    {
+      "id": "C",
+      "text": "The three sides are $LM$, $MN$ and $NL$, and the three angles sit at $L$, $M$ and $N$."
+    },
+    {
+      "id": "D",
+      "text": "The shape is a triangle because the letter $N$ is printed largest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A triangle is named by three vertices and has three sides and three angles at those vertices. One vertex alone is not the name; letter size is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

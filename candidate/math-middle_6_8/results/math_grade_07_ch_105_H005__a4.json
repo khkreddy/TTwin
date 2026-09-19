@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lila looks at the diagram. Straight lines $\\ell$ and $m$ lie on the same flat page. Transversal $t$ meets them, and the marked corresponding angles are both $62^{\\circ}$.\n\nWhich claim correctly decides whether $\\ell$ and $m$ are parallel?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the word transversal, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Call $\\ell$ and $m$ parallel even if they need not stay on the same flat page."
+    },
+    {
+      "id": "C",
+      "text": "$\\ell$ and $m$ are parallel: they lie on the same flat page and the equal corresponding angles from transversal $t$ show they do not meet when extended."
+    },
+    {
+      "id": "D",
+      "text": "Call $\\ell$ and $m$ parallel only because $62^{\\circ}$ is the largest printed number in the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.4,2.4)--(6.2,2.4) node[right]{$\\ell$};\n  \\draw[line width=1.05pt] (-0.4,0.4)--(6.2,0.4) node[right]{$m$};\n  \\draw[line width=1.0pt] (1.0,-0.5)--(4.6,3.3);\n  \\node[above left] at (4.55,3.2){$t$};\n  \\draw[line width=0.7pt] (2.35,2.4) arc (180:120:0.55);\n  \\node[left] at (1.85,2.7){$62^{\\circ}$};\n  \\draw[line width=0.7pt] (3.05,0.4) arc (180:120:0.55);\n  \\node[left] at (2.55,0.7){$62^{\\circ}$};\n  \\node[below left] at (1.7,2.35){$A$};\n  \\node[below right] at (3.5,2.35){$B$};\n  \\node[above left] at (2.4,0.35){$C$};\n  \\node[above right] at (4.2,0.35){$D$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Parallel lines coplanar and never meet; equal corresponding angles with transversal t confirm that. Naming transversal alone, dropping same-plane, or grabbing the printed 62 all miss the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as coplanar lines l and m cut by transversal t with equal corresponding angles 62°."
+  }
+}

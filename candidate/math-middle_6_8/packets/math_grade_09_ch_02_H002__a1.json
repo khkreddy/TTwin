@@ -1,0 +1,126 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:jeebench:srcjson:math:jee_adv_2022_paper_1:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:35.462Z",
+  "source": {
+    "item_ref": "session:jeebench:srcjson:math:jee_adv_2022_paper_1:q17",
+    "item_type": "single_mcq",
+    "stem": "Let $p, q, r$ be nonzero real numbers that are, respectively, the $10^{\\text {th }}, 100^{\\text {th }}$ and $1000^{\\text {th }}$ terms of a harmonic progression. Consider the system of linear equations\n\n\\[\n\\begin{gathered}\n\nx+y+z=1 \\\\\n\n10 x+100 y+1000 z=0 \\\\\n\nq r x+p r y+p q z=0\n\n\\end{gathered}\n\\]\n\nList-I\n(I) If $\\frac{q}{r}=10$, then the system of linear equations has\n(II) If $\\frac{p}{r} \\neq 100$, then the system of linear equations has\n(III) If $\\frac{p}{q} \\neq 10$, then the system of linear equations has\n(IV) If $\\frac{p}{q}=10$, then the system of linear equations has\n\nList-II\n(P) $x=0, \\quad y=\\frac{10}{9}, z=-\\frac{1}{9}$ as a solution\n(Q) $x=\\frac{10}{9}, y=-\\frac{1}{9}, z=0$ as a solution\n(III) If $\\frac{p}{q} \\neq 10$, then the system of linear\n(R) infinitely many solutions\n(IV) If $\\frac{p}{q}=10$, then the system of linear\n(S) no solution\n(T) at least one solution\n\nThe correct option is:\n\n(A) (I) $\\rightarrow$ (T); (II) $\\rightarrow$ (R); (III) $\\rightarrow$ (S); (IV) $\\rightarrow$ (T)\n\n(B) (I) $\\rightarrow$ (Q); (II) $\\rightarrow$ (S); (III) $\\rightarrow$ (S); (IV) $\\rightarrow$ (R)\n\n(C) (I) $\\rightarrow$ (Q); (II) $\\rightarrow$ (R); (III) $\\rightarrow$ (P); (IV) $\\rightarrow$ (R)\n\n(D) (I) $\\rightarrow$ (T); (II) $\\rightarrow$ (S); (III) $\\rightarrow$ (P); (IV) $\\rightarrow$ (T)",
+    "options": [
+      {
+        "id": "A",
+        "text": "(I) $\\rightarrow$ (T); (II) $\\rightarrow$ (R); (III) $\\rightarrow$ (S); (IV) $\\rightarrow$ (T)"
+      },
+      {
+        "id": "B",
+        "text": "(I) $\\rightarrow$ (Q); (II) $\\rightarrow$ (S); (III) $\\rightarrow$ (S); (IV) $\\rightarrow$ (R)"
+      },
+      {
+        "id": "C",
+        "text": "(I) $\\rightarrow$ (Q); (II) $\\rightarrow$ (R); (III) $\\rightarrow$ (P); (IV) $\\rightarrow$ (R)"
+      },
+      {
+        "id": "D",
+        "text": "(I) $\\rightarrow$ (T); (II) $\\rightarrow$ (S); (III) $\\rightarrow$ (P); (IV) $\\rightarrow$ (T)"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_09/ch_02/H002",
+      "unit_id": "math/grade_09/ch_02/H002",
+      "title": "Decide how to get the value of a polynomial or the input that produced a value by substituting into the expression or equating it to the given output.",
+      "node_labels": [
+        "Equations and inequalities as solution sets",
+        "Algebraic structure: expressions, identities, polynomials and discrete form"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Equations and inequalities as solution sets",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Output is the label that belongs on this item, so 'Decide how to get the value of a polynomial or the input that produced' is answered as output rather than input."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "input still holds here even though Every occurrence of the variable must be replaced by the same input value is missing from the stem — on the item about Decide how to get the value of a polynomial or the."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Output is what produces input, so the usual direction of this relation is run backwards — on the item about Decide how to get the value of a polynomial or the."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The input rule also covers this: Advanced function notation, so it is not an exception — on the item about Decide how to get the value of a polynomial or the."
+      }
+    ],
+    "enrichment": "A polynomial can be treated as an input-output process: substitute the input for the variable to compute the output, or set the expression equal to a known output to form and solve a linear equation.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_02. The student must decide: Decide how to get the value of a polynomial or the input that produced a value by substituting into the expression or equating it to the given output. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "jeebench:srcjson:math:jee_adv_2022_paper_1:q17",
+    "hinge": "math/grade_09/ch_02/H002",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_02/H002"
+  }
+}

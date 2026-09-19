@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "When moving air carries the lighter husk farther while heavier grains fall closer."
+    },
+    {
+      "id": "B",
+      "text": "When the air is still, if he shakes the mixture hard enough."
+    },
+    {
+      "id": "C",
+      "text": "When the heavier wheat grains travel farther in the wind than the light husk."
+    },
+    {
+      "id": "D",
+      "text": "When the two parts only look different in colour but have the same weight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Alok helps clean freshly threshed wheat outdoors. He wants to separate light husk from heavier wheat grains.\n\nWhen can winnowing work?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Winnowing needs moving air so lighter husk is carried farther while heavier grains fall closer. Still air, reversed travel, or colour alone without a weight difference will not do it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

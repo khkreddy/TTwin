@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Raghav fills a 2-by-2 prime product grid. Top-right is 2 and bottom-left is 3. Top-left and bottom-right are blanks. The top row multiplies to 10. The bottom row multiplies to 21. The left column multiplies to 15. The right column multiplies to 14. Each blank must be a prime.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The blanks may be 4 and 7."
+    },
+    {
+      "id": "B",
+      "text": "The blanks are 5 and 7."
+    },
+    {
+      "id": "C",
+      "text": "Each blank must be a prime so every row and column product matches its margin."
+    },
+    {
+      "id": "D",
+      "text": "The blanks are 10 and 21, the row margin numbers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Top-left must be 5 (5×2=10) and bottom-right 7 (3×7=21); both primes, and columns 15 and 14 match. Using 4 drops the prime condition. Placing margin numbers in the blanks swaps margin labels for cell primes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Pot 1: moist, aerated soil kept in the dark."
+    },
+    {
+      "id": "B",
+      "text": "Pot 2: moist, aerated soil kept in sunlight."
+    },
+    {
+      "id": "C",
+      "text": "Pot 3: dry soil kept in sunlight."
+    },
+    {
+      "id": "D",
+      "text": "Pot 4: waterlogged soil in sunlight with almost no air."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Preeti sets up pots of bean seeds. Pot 1 has moist, aerated soil in the dark. Pot 2 has moist, aerated soil in sunlight. Pot 3 has dry soil in sunlight. Pot 4 has waterlogged soil in sunlight with almost no air spaces.\n\nIn which pots should the bean seeds germinate? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bean seeds need water and air to germinate; light is not required. Dry soil and waterlogged soil lacking air should not allow germination.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

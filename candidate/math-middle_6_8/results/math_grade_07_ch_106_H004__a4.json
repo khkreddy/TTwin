@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Adeel looks at the diagram of a rectangular grid that is $7$ squares tall and $6$ squares wide. He wants the even-or-odd parity of the total number of small squares.\n\nWhich claim correctly decides that parity?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The total is even, because one side length is even."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the label $7$, taking only the tall count."
+    },
+    {
+      "id": "C",
+      "text": "Treat the parity as unknown until $7\\times 6$ is fully multiplied out."
+    },
+    {
+      "id": "D",
+      "text": "Say the even-or-odd decision is what creates the $7$-by-$6$ grid sizes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.42cm,y=0.42cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,line width=0.55pt,gray!70] (0,0) grid (6,7);\n  \\draw[line width=1.0pt] (0,0) rectangle (6,7);\n  \\node[below] at (3,-0.55){$6$ squares across};\n  \\node[left] at (-0.7,3.5){$7$ squares up};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A rectangular grid has an odd total only when both side lengths are odd. Here 6 is even, so the total is even. Naming 7 alone, insisting on the product first, or reversing parity as cause of the sizes miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a 7-by-6 rectangular grid of unit squares with side counts labelled."
+  }
+}

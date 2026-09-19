@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zubin writes the successor of $99,99,999$ and names the place-value unit.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The successor is $1,00,00,000$, which is one crore (1 followed by 7 zeroes)."
+        },
+        {
+          "id": "B",
+          "text": "The successor is $99,99,998$."
+        },
+        {
+          "id": "C",
+          "text": "The successor is $1,00,00,000$, which is one lakh."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses successors and the named unit.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The next counting number after 99,99,999 is 1,00,00,000, and that place-value unit is one crore."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Successor means the next counting number: 99,99,999+1=1,00,00,000=one crore. 99,99,998 reverses successor. Calling that value one lakh conflates named units.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

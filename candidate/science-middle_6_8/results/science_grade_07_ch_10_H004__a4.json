@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Part Q should show starch, because it received carbon dioxide from air with water and sunlight."
+    },
+    {
+      "id": "2",
+      "text": "Part P should not show starch, because it could not get carbon dioxide from air."
+    },
+    {
+      "id": "3",
+      "text": "Part P should show starch, because water and sunlight alone are enough without carbon dioxide."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Kalyani sets up a half-leaf bottle experiment on a destarched green leaf. Part P of the leaf is enclosed so it cannot get carbon dioxide from air. Part Q stays in open air with carbon dioxide. Both parts get water and sunlight. She later tests both parts for starch with iodine.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Carbon dioxide from air is essential for starch preparation. The open half (Q) can form starch; the enclosed half (P) without carbon dioxide should not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

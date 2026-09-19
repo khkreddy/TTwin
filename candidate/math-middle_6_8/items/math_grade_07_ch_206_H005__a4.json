@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_206/H005",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_206/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H005"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_206:H005:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_206",
+    "chapter_label": "math/grade_07/ch_206",
+    "subtopic_id": "math/grade_07/ch_206/H005",
+    "stem": "Lila looks at the diagram. Line $m$ is given, point $P$ is off $m$, and transversal $t$ cuts $m$ at $E$. The marked angle $\\alpha$ at $E$ is copied at $P$ so that new line $n$ through $P$ makes the corresponding angle $\\alpha$ with $t$.\n\nWhich claim correctly states what that construction produces?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Copy an angle at $P$ with no transversal that cuts line $m$, and claim the new line is parallel to $m$.",
+      "B": "Say that the finished parallel line is what creates transversal $t$ through $m$.",
+      "C": "Line $n$ through $P$ is parallel to $m$, because the corresponding angle $\\alpha$ was copied from transversal $t$.",
+      "D": "Slide a set-square along $m$ and treat that tool method as this corresponding-angle copy."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.3,0.6)--(6.4,0.6) node[right]{$m$};\n  \\fill (2.8,2.8) circle (1.5pt);\n  \\node[above] at (2.8,2.9){$P$};\n  \\draw[line width=1.0pt] (0.4,-0.5)--(5.0,3.6);\n  \\node[above right] at (4.9,3.5){$t$};\n  % angle at m / transversal\n  \\draw[line width=0.7pt] (1.7,0.6) arc (0:50:0.55);\n  \\node[right] at (2.25,0.85){$\\alpha$};\n  % copied corresponding angle at P\n  \\draw[line width=0.7pt] (2.8,2.8) arc (230:280:0.55);\n  \\node[below right] at (3.15,2.45){$\\alpha$};\n  % new line through P\n  \\draw[line width=1.05pt,dashed] (0.2,2.8)--(5.6,2.8) node[right]{$n$};\n  \\node[below left] at (1.5,0.55){$E$};\n  \\node[below right] at (3.8,0.55){$F$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_206/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

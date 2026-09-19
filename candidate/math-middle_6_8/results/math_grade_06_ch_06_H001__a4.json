@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Mini's rectangular garden as a closed figure. Side lengths are marked in metres.\n\nWhat is the perimeter of the garden?",
+  "options": [
+    {
+      "id": "A",
+      "text": "13 m"
+    },
+    {
+      "id": "B",
+      "text": "36 m"
+    },
+    {
+      "id": "C",
+      "text": "26 m"
+    },
+    {
+      "id": "D",
+      "text": "18 m"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (9,4);\n  \\node[below] at (4.5,0) {9 m};\n  \\node[above] at (4.5,4) {9 m};\n  \\node[left] at (0,2) {4 m};\n  \\node[right] at (9,2) {4 m};\n  \\node[above right] at (0,4) {A};\n  \\node[above left] at (9,4) {B};\n  \\node[below left] at (9,0) {C};\n  \\node[below right] at (0,0) {D};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter adds the boundary once: 9+4+9+4=26 m. 13 m adds length and width once only. 36 m is the area. 18 m uses an incomplete boundary total.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote grid quadrilateral into a labeled rectangle; stem refers to the diagram."
+  }
+}

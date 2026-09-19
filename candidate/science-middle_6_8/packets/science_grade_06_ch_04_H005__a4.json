@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q2",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:15.076Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q2",
+    "item_type": "single_mcq",
+    "stem": "The graph represents the motion of a train travelling between two stations.\n0 100 200 300 400 500 600 700 800 900 Which statement about the train is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Its acceleration takes a longer time than its deceleration."
+      },
+      {
+        "id": "B",
+        "text": "It travels at constant speed for less than half of its journey time."
+      },
+      {
+        "id": "C",
+        "text": "It travels 2000 m in the first 100 s."
+      },
+      {
+        "id": "D",
+        "text": "It travels 10⁰⁰0 m at constant speed."
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Magnets and magnetic materials",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "N–N: attract; S–S: attract; N–S: attract."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "N–N: attract; S–S: attract; N–S: repel."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The compass needle stays pointing north instead of turning toward the South pole to its east."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Red N–red N: repel; red N–blue S: attract; red N–blue N: attract."
+      }
+    ],
+    "enrichment": "Unlike poles of two magnets attract each other, while like poles repel each other. A compass needle is also a magnet, so its North pole moves away from another North pole and moves towards a South pole. the pairing of pole names determines attraction or repulsion The learner predicts attraction for unlike poles and repulsion for like poles, including compass-needle cases. Any magnet pole should pull any other magnet pole because magnets are for attracting.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_04/H005",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Its acceleration takes a longer time than its dec…” for the required “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It travels 2000 m in the first 100 s.” for the required “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “It travels 10⁰⁰0 m at constant speed.” looked possible instead of “It travels at constant speed for less than half o…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Exploring magnets. The student must decide: Predict whether two nearby magnetic poles will attract or repel. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q2",
+    "hinge": "science/grade_06/ch_04/H005",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H005"
+  }
+}

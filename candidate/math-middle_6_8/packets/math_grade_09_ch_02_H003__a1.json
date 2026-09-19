@@ -1,0 +1,125 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:0ecq",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:35.519Z",
+  "source": {
+    "item_ref": "session:mathnet:0ecq",
+    "item_type": "single_mcq",
+    "stem": "Lili figured out that the average of digits of the year 2015 equals 2, since $\\frac{2+0+1+5}{4} = 2$. How many times in the 21st century after the year 2015 will a year have the same average of digits as the year 2015?\n(A) 1\n(B) 2\n(C) 5\n(D) 6\n(E) 9",
+    "options": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6\n(E) 9"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_09/ch_02/H003",
+      "unit_id": "math/grade_09/ch_02/H003",
+      "title": "Decide whether a growing numerical or visual pattern is linear and determine its nth-term expression from its constant change.",
+      "node_labels": [
+        "Algebraic structure: expressions, identities, polynomials and discrete form"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Algebraic structure: expressions, identities, polynomials and discrete form",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "linear pattern still holds here even though The difference must remain constant across equal stage steps is missing from the stem — on the item about Decide whether a growing numerical or visual pattern is."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Stage number is what produces linear pattern, so the usual direction of this relation is run backwards — on the item about Decide whether a growing numerical or visual pattern is."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The linear pattern rule also covers this: Formal sequence notation beyond nth-term expressions, so it is not an exception — on the item about Decide whether a growing numerical or visual pattern is."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "Linear pattern is computed by squaring stage number and leaving linear pattern linear, so the written value is 62 — on the item about Decide whether a growing numerical or visual pattern is."
+      }
+    ],
+    "enrichment": "A linear pattern has a constant difference between consecutive terms; the stage number n can be used to write a degree-1 expression such as 2n - 1 for the number of objects at Stage n.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_02. The student must decide: Decide whether a growing numerical or visual pattern is linear and determine its nth-term expression from its constant change. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:0ecq",
+    "hinge": "math/grade_09/ch_02/H003",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_02/H003"
+  }
+}

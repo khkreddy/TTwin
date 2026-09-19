@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Both look lustrous; shine alone does not prove that a material is a metal."
+    },
+    {
+      "id": "B",
+      "text": "Only the spoon can look shiny, because only metals are lustrous."
+    },
+    {
+      "id": "C",
+      "text": "The bangle must be a metal because it shines."
+    },
+    {
+      "id": "D",
+      "text": "A material is lustrous only if light passes through it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Preeti holds a shiny steel spoon and a shiny plastic bangle up to the light.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lustrous means shiny in appearance. Shine can appear on non-metals too, so lustre alone is not enough evidence that a material is a metal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

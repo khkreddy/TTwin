@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "North–south direction; the marked end is the North pole of the magnet."
+    },
+    {
+      "id": "B",
+      "text": "East–west direction; the marked end is the South pole of the magnet."
+    },
+    {
+      "id": "C",
+      "text": "North–south direction while the magnet is still swinging."
+    },
+    {
+      "id": "D",
+      "text": "A direction that any ordinary iron bar would show the same way when hung."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% support\n\\draw[thick] (-0.3,3.4) -- (2.3,3.4);\n% thread\n\\draw[thick] (1.0,3.4) -- (1.0,2.55);\n% suspended bar magnet settled N-S\n\\draw[thick,fill=red!30] (0.0,2.05) rectangle (1.0,2.55);\n\\draw[thick,fill=blue!30] (1.0,2.05) rectangle (2.0,2.55);\n\\node at (0.5,2.30) {N};\n\\node at (1.5,2.30) {S};\n\\node at (1.0,1.70) {bar magnet};\n% geographic directions\n\\node at (0.5,1.15) {geographic north};\n\\node at (1.5,1.15) {geographic south};\n\\draw[thick,->] (0.5,1.35) -- (0.5,1.95);\n\\draw[thick,->] (1.5,1.35) -- (1.5,1.95);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a bar magnet hanging from a thread so it can turn freely, away from other magnets. After it settles, Sonia marks the end that points toward geographic north.\n\nWhat has she found?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A freely suspended magnet settles along north–south. The end pointing toward geographic north is the North pole. Read it after it settles; an ordinary iron bar does not reliably show the same resting direction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source cylinders into a freely suspended bar magnet settled along geographic north–south."
+  }
+}

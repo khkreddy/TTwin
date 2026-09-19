@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Pranav studies a number grid where each entry increases by $1$ across a row and by $10$ down a column. He claims that in any $2\\times 2$ block the two diagonal sums are equal, for every such block.\n\nWhich two claims correctly prove that the relation always holds?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Check four sample blocks and stop once those samples match."
+    },
+    {
+      "id": "B",
+      "text": "Let the top-left entry be $n$. The block is $n$, $n+1$, $n+10$, $n+11$; both diagonals equal $2n+11$."
+    },
+    {
+      "id": "C",
+      "text": "The same letter-number offsets show the other diagonal is also $n+(n+11)=2n+11$, so the sums match for every $n$."
+    },
+    {
+      "id": "D",
+      "text": "Equal diagonal sums are what create the $1$-across and $10$-down grid steps."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Letter-number offsets prove the claim for every entry: both diagonals equal 2n+11. Sample checks alone omit the general proof; saying equal sums create the grid reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

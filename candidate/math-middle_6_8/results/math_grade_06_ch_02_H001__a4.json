@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Raghav makes a chalk mark on the board and labels it R.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The chalk disk itself is the geometric object, so its size on the board is the point."
+    },
+    {
+      "id": "B",
+      "text": "The mark stands for a point: a precise location with no length, breadth, or thickness."
+    },
+    {
+      "id": "C",
+      "text": "The point is identified by the letter R."
+    },
+    {
+      "id": "D",
+      "text": "Any decorative smudge is a point, even when it does not name a location."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A drawn mark represents a dimensionless location named by a letter. Treating the chalk disk's size as the point omits that. Counting every unnamed smudge over-extends the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

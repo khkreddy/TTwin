@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Wasim swallows a soft bite of food. The food enters his food pipe (oesophagus) on its way to the stomach. Nearby is the windpipe. The walls of the food pipe can contract and relax in waves.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The walls of the food pipe contract and relax in waves that push the food toward the stomach."
+    },
+    {
+      "id": "B",
+      "text": "This wave motion in the food-pipe walls can move food even if Wasim is not upright."
+    },
+    {
+      "id": "C",
+      "text": "The windpipe contracts and relaxes in waves to push the food into the stomach."
+    },
+    {
+      "id": "D",
+      "text": "Food sliding down the food pipe is what makes its walls contract and relax in waves."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Peristalsis — wave-like contraction and relaxation of the food-pipe walls — pushes food toward the stomach and can work even when the body is not upright.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

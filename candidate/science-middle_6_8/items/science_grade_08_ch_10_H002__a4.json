@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_10/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_10/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H002"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H002:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H002",
+    "stem": "Qadir stands at the same small distance in front of three mirrors. The diagram summarises the image of his face in each mirror.\n\nWhich identification is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "P is plane, Q is concave, R is convex.",
+      "B": "P is convex, Q is plane, R is concave.",
+      "C": "All three must be plane mirrors because every image is erect.",
+      "D": "Q is convex: a larger image always means a wider view."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick] (-4.2,-1.6) rectangle (-1.4,1.6);\n\\draw[thick] (-1.0,-1.6) rectangle (1.8,1.6);\n\\draw[thick] (2.2,-1.6) rectangle (5.0,1.6);\n\\node at (-2.8,1.85) {Mirror P};\n\\node at (0.4,1.85) {Mirror Q};\n\\node at (3.6,1.85) {Mirror R};\n% P same-size erect\n\\draw[thick] (-3.5,0.2)--(-3.5,-0.9); \\fill (-3.5,0.35) circle (0.12);\n\\node[font=\\footnotesize] at (-2.8,-1.35) {same size, erect};\n% Q enlarged erect\n\\draw[thick] (-0.1,0.4)--(-0.1,-1.0); \\fill (-0.1,0.55) circle (0.16);\n\\node[font=\\footnotesize] at (0.4,-1.35) {larger, erect};\n% R diminished erect\n\\draw[thick] (3.3,0.05)--(3.3,-0.55); \\fill (3.3,0.15) circle (0.08);\n\\node[font=\\footnotesize] at (3.6,-1.35) {smaller, erect};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

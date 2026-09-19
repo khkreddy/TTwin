@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H002"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H002:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H002",
+    "stem": "The diagram shows Hitesh's coil of insulated copper wire wound on an iron nail and joined to a cell. Steel paper clips cling to the nail tip.\n\nWhich claim about this arrangement is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The nail stays strongly magnetic and keeps holding the clips after the current is switched off.",
+      "B": "The iron nail core makes the electromagnet weaker than the coil alone.",
+      "C": "The current-carrying coil acts as a temporary magnet, and the iron nail core makes it stronger.",
+      "D": "Without any current, the coil alone still acts as a strong permanent magnet."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick] (0,0) rectangle (1.2,0.7);\n\\node at (0.6,0.35) {cell};\n\\node[font=\\bfseries] at (-0.2,0.35) {$-$};\n\\node[font=\\bfseries] at (1.4,0.35) {$+$};\n% wires to coil\n\\draw[thick] (1.2,0.35) -- (2.0,0.35) -- (2.0,1.6);\n\\draw[thick] (0,0.35) -- (-0.5,0.35) -- (-0.5,1.6) -- (2.0,1.6);\n% iron nail\n\\draw[thick,fill=gray!35] (2.2,1.35) rectangle (5.0,1.85);\n\\node at (3.6,2.15) {iron nail};\n% coil turns\n\\foreach \\x in {2.4,2.7,3.0,3.3,3.6,3.9,4.2} {\n  \\draw[thick] (\\x,1.25) arc (240:-60:0.22 and 0.42);\n}\n\\node at (3.6,0.85) {coil};\n% paper clips\n\\draw[thick] (5.05,1.45) -- (5.45,1.25) -- (5.45,1.65) -- cycle;\n\\draw[thick] (5.05,1.70) -- (5.40,1.55) -- (5.40,1.90) -- cycle;\n\\node at (5.9,1.55) {clips};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Qadir's school has two overhead tanks. Tank P is tall and narrow; its water surface is 4.0 m above a ground-floor tap. Tank Q is short and wide; it holds more water in total, but its water surface is only 2.5 m above an identical ground-floor tap.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Pressure at the tap from tank P is greater because the height of water above that tap is greater."
+    },
+    {
+      "id": "B",
+      "text": "Liquid pressure at each tap depends on the height of liquid above the tap, not on the total amount of water in the tank."
+    },
+    {
+      "id": "C",
+      "text": "Pressure at the tap from tank Q is greater because tank Q holds more water in total."
+    },
+    {
+      "id": "D",
+      "text": "Both taps have equal pressure because both tanks hold water."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid pressure at a bottom tap depends on the height of liquid above the point. Tank P's greater height gives greater pressure; total volume does not decide it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

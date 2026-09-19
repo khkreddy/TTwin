@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "As energy-giving food components."
+    },
+    {
+      "id": "B",
+      "text": "As body-building food components."
+    },
+    {
+      "id": "C",
+      "text": "As protective food components."
+    },
+    {
+      "id": "D",
+      "text": "As components that only add taste, not food value."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Imran is told that rice and ghee mainly give energy. Foods are grouped as energy-giving, body-building, or protective.\n\nHow should he classify carbohydrates and fats?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Carbohydrates and fats are energy-giving food components, not body-building or protective ones, and they are not only for taste.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

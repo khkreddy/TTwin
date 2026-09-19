@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lila uses $\\dfrac{2}{5}$ litre of paint for each wall. She paints $3$ walls at that same rate.\n\nWhich claim correctly finds the total paint she uses?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Total paint $= \\dfrac{2}{5} + 3$ litres."
+    },
+    {
+      "id": "B",
+      "text": "Total paint $= 3 \\div \\dfrac{2}{5}$ litres."
+    },
+    {
+      "id": "C",
+      "text": "Total paint $= 3 \\times \\dfrac{2}{5}$ litres."
+    },
+    {
+      "id": "D",
+      "text": "Total paint $= 3 - \\dfrac{2}{5}$ litres."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A constant amount per wall scales by multiplication: 3 walls × (2/5) litre per wall. Adding, dividing, or subtracting mix the rate with the count the wrong way.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

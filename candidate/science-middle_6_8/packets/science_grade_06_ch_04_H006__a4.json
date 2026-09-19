@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:15.137Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q3",
+    "item_type": "single_mcq",
+    "stem": "A car travels 6.0 km along a main road in 6.0 minutes. It then travels 2.0 km along a minor road in 6.0 minutes.\nWhich calculation of average speed for the whole journey is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "8.0 ÷ 12.0 = 0.67 km / minute"
+      },
+      {
+        "id": "B",
+        "text": "12.0 ÷ 8.0 = 1.5 km / minute"
+      },
+      {
+        "id": "C",
+        "text": "8.0 + 12.0 = 20 km / minute"
+      },
+      {
+        "id": "D",
+        "text": "8.0 × 12.0 = 96 km / minute"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Magnets and magnetic materials",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "North and South poles repel."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Both ends of a magnetised iron bar are attracted by a North pole."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The N-labelled bar is a magnet."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "A bar attracted by a known magnet is a magnet."
+      }
+    ],
+    "enrichment": "A plain iron bar is attracted by both the North and South poles of a magnet. Repulsion can identify a magnet, because repulsion occurs between like poles of magnets but not between a magnet and a plain iron bar. observed repulsion distinguishes magnet-magnet interaction from magnet-iron attraction The learner uses repulsion, not attraction alone, to distinguish a magnet from a plain iron bar. If a bar is attracted by a magnet, it must already be a magnet.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_04/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “12.0 ÷ 8.0 = 1.5 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “8.0 + 12.0 = 20 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “8.0 × 12.0 = 96 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Exploring magnets. The student must decide: Decide when repulsion is needed to identify a magnet rather than a plain iron bar. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q3",
+    "hinge": "science/grade_06/ch_04/H006",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H006"
+  }
+}

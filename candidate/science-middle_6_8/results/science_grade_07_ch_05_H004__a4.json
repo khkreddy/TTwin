@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about starting and continuing burning is best?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Burning needs fuel, oxygen, and enough heat to reach ignition temperature; under the glass the oxygen runs low, and wet paper needs more heating to reach ignition."
+        },
+        {
+          "id": "B",
+          "text": "Once lit, the candle needs only wax as fuel; oxygen and heat above ignition temperature are not needed for continued burning."
+        },
+        {
+          "id": "C",
+          "text": "Wet paper fails to catch fire because paper is never a fuel, wet or dry."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Wasim lights a candle. It burns steadily. He then covers the candle with a glass. After some time the flame goes out. He also finds that a wet paper strip does not catch fire from the same match as quickly as a dry paper strip.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Combustion continues only while fuel, oxygen, and heat above ignition temperature are all present; covering cuts oxygen, and wet paper is harder to heat to ignition."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Combustion needs fuel, oxygen, and enough heat to reach ignition temperature. Covering the candle limits oxygen; wet paper needs more heat to reach ignition than dry paper.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

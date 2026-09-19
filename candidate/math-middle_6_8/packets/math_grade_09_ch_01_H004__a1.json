@@ -1,0 +1,134 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m17_qp_42:q3",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:35.291Z",
+  "source": {
+    "item_ref": "session:0580_m17_qp_42:q3",
+    "item_type": "structured_parts",
+    "stem": "The table shows some values for y = 15 . x - 1 .\nx –2 –1 0 1 2 3 4 5 y – 0.56 – 0.33 2.38 4.06 6.59",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Complete the table. [3]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Draw the graph of y = 15 . x - 1 for - 2 G x G 5 . y 7 6 5 4 3 2 1 x –2 –1 0 1 2 3 4 5 –1 [4] 5",
+        "marks": 0
+      },
+      {
+        "id": "c",
+        "text": "Use your graph to solve the equation 1.5 x - 1 = 3.5 . x = [2]",
+        "marks": 0
+      },
+      {
+        "id": "d",
+        "text": "By drawing a suitable straight line, solve the equation 15 . x - x - 2 = 0 . x = or x = [3]",
+        "marks": 0
+      },
+      {
+        "id": "e",
+        "text": "(i) On the grid, plot the point A at (5, 5). [1]",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "Draw the tangent to the graph of y = 15 . x - 1 that passes through the point A . [1]",
+        "marks": 0
+      },
+      {
+        "id": "iii",
+        "text": "Work out the gradient of this tangent. [2] 0580/42/F/M/17 [Turn over 6",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1.1cm,y=0.95cm,>=stealth,font=\\small] \\draw[thin] (-2.3,8.7) rectangle (5.5,9.7); \\draw[thin] (-2.3,9.2)--(5.5,9.2); \\foreach \\xx in {-1.75,-0.84375,0.0625,0.96875,1.875,2.78125,3.6875,4.59375} {\\draw[thin] (\\xx,8.7)--(\\xx,9.7);} \\node at (-2.025,9.45) {$x$}; \\node at (-2.025,8.95) {$y$}; \\node at (-1.296875,9.45) {$-2$}; \\node at (-0.390625,9.45) {$-1$}; \\node at (0.515625,9.45) {$0$}; \\node at (1.421875,9.45) {$1$}; \\node at (2.328125,9.45) {$2$}; \\node at (3.234375,9.45) {$3$}; \\node at (4.140625,9.45) {$4$}; \\node at (5.046875,9.45) {$5$}; \\node at (-1.296875,8.95) {$-0.56$}; \\node at (-0.390625,8.95) {$-0.33$}; \\node at (3.234375,8.95) {$2.38$}; \\node at (4.140625,8.95) {$4.06$}; \\node at (5.046875,8.95) {$6.59$}; \\draw[step=0.1,gray!70,dotted,line width=0.18pt] (-2,-1) grid (5,7); \\draw[step=1,black!75,dotted,line width=0.35pt] (-2,-1) grid (5,7); \\draw[->,line width=0.75pt] (-2.12,0)--(5.34,0) node[right] {$x$}; \\draw[->,line width=0.75pt] (0,-1.08)--(0,7.30) node[above] {$y$}; \\foreach \\xx in {-2,-1,0,1,2,3,4,5} {\\draw (\\xx,-0.055)--(\\xx,0.055);} \\foreach \\yy in {-1,0,1,2,3,4,5,6,7} {\\draw (-0.05,\\yy)--(0.05,\\yy);} \\node[below] at (-2,0) {$-2$}; \\node[below] at (-1,0) {$-1$}; \\node[below left] at (0,0) {$0$}; \\node[below] at (1,0) {$1$}; \\node[below] at (2,0) {$2$}; \\node[below] at (3,0) {$3$}; \\node[below] at (4,0) {$4$}; \\node[below] at (5,0) {$5$}; \\node[left] at (0,-1) {$-1$}; \\node[left] at (0,1) {$1$}; \\node[left] at (0,2) {$2$}; \\node[left] at (0,3) {$3$}; \\node[left] at (0,4) {$4$}; \\node[left] at (0,5) {$5$}; \\node[left] at (0,6) {$6$}; \\node[left] at (0,7) {$7$}; \\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_09/ch_01/H004",
+      "unit_id": "math/grade_09/ch_01/H004",
+      "title": "Decide when a width, height, or missing rectangle corner can be found by holding one coordinate fixed and comparing the other.",
+      "node_labels": [
+        "Analytic geometry, vectors and spatial representation"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Analytic geometry, vectors and spatial representation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "X-coordinate is the label that belongs on this item, so 'Decide when a width, height, or missing rectangle corner can be found' is answered as x-coordinate rather than axis-parallel segment."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "axis-parallel segment still holds here even though Direct subtraction of one coordinate gives a length only when the segment is parallel to is missing from the stem — on the item about Decide when a width, height, or missing rectangle."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The axis-parallel segment rule also covers this: {'exclusion': 'Diagonal distance is excluded from the one-coordinate subtraction rule.', 'basis': 'The packet, so it is not an exception — on the item about Decide when a width, height, or missing rectangle."
+      }
+    ],
+    "enrichment": "For an axis-parallel segment, equal y-coordinates make its horizontal length the magnitude of the difference between x-coordinates, and equal x-coordinates make its vertical length the magnitude of the difference between y-coordinates; an axis-aligned rectangle's fourth vertex combines the remaining x-value with the remaining y-value.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_01. The student must decide: Decide when a width, height, or missing rectangle corner can be found by holding one coordinate fixed and comparing the other. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "remove",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m17_qp_42:q3",
+    "hinge": "math/grade_09/ch_01/H004",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_01/H004"
+  }
+}

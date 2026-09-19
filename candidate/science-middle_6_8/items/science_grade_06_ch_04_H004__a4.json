@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_06/ch_04/H004",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H004"
+  },
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H004:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H004",
+    "stem": "The diagram shows a bar magnet hanging from a thread so it can turn freely, away from other magnets. After it settles, Sonia marks the end that points toward geographic north.\n\nWhat has she found?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "North–south direction; the marked end is the North pole of the magnet.",
+      "B": "East–west direction; the marked end is the South pole of the magnet.",
+      "C": "North–south direction while the magnet is still swinging.",
+      "D": "A direction that any ordinary iron bar would show the same way when hung."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% support\n\\draw[thick] (-0.3,3.4) -- (2.3,3.4);\n% thread\n\\draw[thick] (1.0,3.4) -- (1.0,2.55);\n% suspended bar magnet settled N-S\n\\draw[thick,fill=red!30] (0.0,2.05) rectangle (1.0,2.55);\n\\draw[thick,fill=blue!30] (1.0,2.05) rectangle (2.0,2.55);\n\\node at (0.5,2.30) {N};\n\\node at (1.5,2.30) {S};\n\\node at (1.0,1.70) {bar magnet};\n% geographic directions\n\\node at (0.5,1.15) {geographic north};\n\\node at (1.5,1.15) {geographic south};\n\\draw[thick,->] (0.5,1.35) -- (0.5,1.95);\n\\draw[thick,->] (1.5,1.35) -- (1.5,1.95);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

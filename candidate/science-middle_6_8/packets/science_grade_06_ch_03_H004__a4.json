@@ -1,39 +1,19 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:biology_8b_rjb_exe6",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T07:51:36.029Z",
+  "created_at": "2026-09-19T08:18:52.743Z",
   "source": {
-    "item_ref": "session:biology_8b_rjb_exe6",
-    "item_type": "single_mcq",
-    "stem": "Which of the following options regarding Darwin’s theory of natural selection is incorrect ( )\nA. All living things generally have strong reproductive capabilities\nB. If living things want to survive, they must fight for survival in order to obtain food and space.\nC. Variations produced by organisms must be conducive to adapting to the environment\nD. Organisms that do not adapt to the environment will be eliminated",
-    "options": [
-      {
-        "id": "A",
-        "text": "All living things generally have strong reproductive capabilities"
-      },
-      {
-        "id": "B",
-        "text": "If living things want to survive, they have to fight for food and space."
-      },
-      {
-        "id": "C",
-        "text": "Variations produced by organisms must be conducive to adapting to the environment"
-      },
-      {
-        "id": "D",
-        "text": "Creatures that do not adapt to the environment will be eliminated"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "key": null
   },
   "intelligence": {
     "join_status": "BOUND",
@@ -75,10 +55,10 @@
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Classify carbohydrates and fats as energy-giving food components rather than as protective or growth-focused components. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Classify carbohydrates and fats as energy-giving food components rather than as protective or growth-focused components. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -97,9 +77,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "biology_8b_rjb_exe6",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_03/H004",
-    "item_type_target": "preserve",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -110,10 +90,9 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "term_substitution",
-      "B": "scope_error",
-      "D": "surface_feature_capture",
-      "C": null
+      "B": "term_substitution",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H004"
   }

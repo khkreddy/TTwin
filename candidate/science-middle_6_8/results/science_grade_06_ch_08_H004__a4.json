@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water vapour from the surrounding air cools on the glass and turns into liquid water."
+    },
+    {
+      "id": "B",
+      "text": "The outside droplets are liquid water condensed from moisture already in the air."
+    },
+    {
+      "id": "C",
+      "text": "Water vapour from the air forms the outside droplets by evaporation."
+    },
+    {
+      "id": "D",
+      "text": "The outside droplets create the water vapour in the surrounding air."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item_type": "one_or_more",
+  "stem": "Sonia takes a steel glass of chilled water out of the fridge. Small water droplets soon form on the outside of the glass.\n\nWhich claims correctly say where those outside droplets come from? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Outside droplets come from water vapour in the surrounding air that condenses on the cold outer surface. Evaporation is the wrong process name, and the droplets do not create the air’s vapour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

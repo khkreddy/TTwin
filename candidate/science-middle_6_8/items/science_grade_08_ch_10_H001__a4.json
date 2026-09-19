@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_08/ch_10/H001",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_08/ch_10/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H001"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H001:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H001",
+    "stem": "The diagram shows two spherical mirrors. Shading marks the non-reflecting back of each mirror. Light comes from the object side shown.\n\nBilal names each mirror from the way its reflecting surface curves.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Mirror X is concave and Mirror Y is convex.",
+      "B": "Mirror X is a plane mirror and Mirror Y is concave.",
+      "C": "Both mirrors are convex because both outlines look curved.",
+      "D": "Mirror X is convex because its shaded back looks hollow."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% left: concave (reflecting surface curves inward toward object)\n\\draw[thick] (-3.2,1.4) .. controls (-2.2,0.2) and (-2.2,-0.2) .. (-3.2,-1.4);\n\\foreach \\y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2} {\\draw[thin] (-3.25,\\y)--++(-0.25,0);}\n\\node[font=\\small] at (-2.6,1.75) {Mirror X};\n\\draw[->,thick] (-0.8,0.6)--(-2.15,0.35);\n\\node[font=\\footnotesize] at (-1.3,0.95) {object side};\n% right: convex (reflecting surface curves outward)\n\\draw[thick] (2.0,1.4) .. controls (3.0,0.2) and (3.0,-0.2) .. (2.0,-1.4);\n\\foreach \\y in {-1.2,-0.8,-0.4,0,0.4,0.8,1.2} {\\draw[thin] (3.05,\\y)--++(0.25,0);}\n\\node[font=\\small] at (2.6,1.75) {Mirror Y};\n\\draw[->,thick] (0.5,0.6)--(2.0,0.35);\n\\node[font=\\footnotesize] at (1.2,0.95) {object side};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "When the air is moving and pushes on the firki blades."
+    },
+    {
+      "id": "B",
+      "text": "When the air around the firki is completely still."
+    },
+    {
+      "id": "C",
+      "text": "When the firki must spin first, and that spinning creates the breeze."
+    },
+    {
+      "id": "D",
+      "text": "When a soft breeze is present, it is not wind, so it cannot turn the firki."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "On a breezy morning, Imran hangs a paper firki from a stick near an open window. The firki begins to spin.\n\nWhen is air acting as wind that can move the firki?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wind is moving air. Moving air can push the firki blades and make them turn. Still air cannot, spinning does not create the breeze first, and a soft breeze is still wind.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The graph shows Esha's snack stall sales on Sports Day. The vertical scale uses equal intervals.\n\nWhich snack sold the most?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Juice, because its bar is tallest on the equal-interval scale."
+    },
+    {
+      "id": "B",
+      "text": "Samosa, because the snack name alone settles the sales value."
+    },
+    {
+      "id": "C",
+      "text": "Fruit, as if equal intervals on the vertical scale are not required."
+    },
+    {
+      "id": "D",
+      "text": "Juice, because darker shading settles the sales value."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,font=\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Snack};\n  \\draw[->] (0,0) -- (0,7.2) node[above] {Sales};\n  \\foreach \\y in {1,2,3,4,5,6,7} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!45] (0.7,0) rectangle (1.5,7);\n  \\node at (1.1,-0.35) {Juice};\n  \\fill[gray!45] (2.2,0) rectangle (3.0,4);\n  \\node at (2.6,-0.35) {Samosa};\n  \\fill[gray!45] (3.7,0) rectangle (4.5,2);\n  \\node at (4.1,-0.35) {Fruit};\n  \\node[anchor=west] at (0,7.55) {Sports Day sales};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bar height on the equal-interval vertical scale encodes sales; Juice is tallest at 7. A snack name alone or shading does not encode the value, and dropping equal intervals breaks the reading rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote pie chart source into a three-bar sales graph; stem refers to the graph."
+  }
+}

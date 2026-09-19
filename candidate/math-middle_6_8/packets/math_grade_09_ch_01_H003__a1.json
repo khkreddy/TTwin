@@ -1,0 +1,121 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:mathnet:0ana",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:14:35.235Z",
+  "source": {
+    "item_ref": "session:mathnet:0ana",
+    "item_type": "single_mcq",
+    "stem": "Problem:\n\nConsider the system\n$$\nx y = 10^{a}, \\quad y z = 10^{b}, \\quad x z = 10^{c}\n$$\n\nWhat is $\\log x + \\log y + \\log z$?\n(a) $\\frac{a b c}{2}$\n(b) $\\frac{a+b+c}{2}$\n(c) $a+b+c$\n(d) $a b c$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\frac{a b c}{2}$"
+      },
+      {
+        "id": "B",
+        "text": "$\\frac{a+b+c}{2}$"
+      },
+      {
+        "id": "C",
+        "text": "$a+b+c$"
+      },
+      {
+        "id": "D",
+        "text": "$a b c$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_09/ch_01/H003",
+      "unit_id": "math/grade_09/ch_01/H003",
+      "title": "Decide how a real or drawn layout is converted into coordinate locations using the chosen origin, axes, and scale.",
+      "node_labels": [
+        "Analytic geometry, vectors and spatial representation"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Analytic geometry, vectors and spatial representation",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Scale is the label that belongs on this item, so 'Decide how a real or drawn layout is converted into coordinate' is answered as scale rather than floor plan."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Scale is what produces floor plan, so the usual direction of this relation is run backwards — on the item about Decide how a real or drawn layout is converted into."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is floor plan because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how a real or drawn layout is converted into coordinate' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "floor plan is settled by running 'Decide how the entries, zeros, and signs in an ordered pair determine': In (x, y), x gives the signed horizontal position from the y-axis and y gives the signed — on the item about Decide how a real or drawn layout is converted into."
+      }
+    ],
+    "enrichment": "When a layout is placed on a coordinate grid with a fixed origin, axes, and scale, each relevant point of an object is represented by its measured x- and y-displacements in that grid.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_01. The student must decide: Decide how a real or drawn layout is converted into coordinate locations using the chosen origin, axes, and scale. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "mathnet:0ana",
+    "hinge": "math/grade_09/ch_01/H003",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_01/H003"
+  }
+}
