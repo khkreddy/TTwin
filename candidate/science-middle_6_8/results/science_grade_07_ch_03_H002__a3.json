@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nalini has two identical cells for a torch.\n\nWhich arrangement makes a working battery?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The positive terminal of one cell touching the positive terminal of the other cell."
+    },
+    {
+      "id": "B",
+      "text": "The positive terminal of one cell touching the negative terminal of the other cell."
+    },
+    {
+      "id": "C",
+      "text": "The two cells in the holder with their terminals not touching."
+    },
+    {
+      "id": "D",
+      "text": "Any arrangement of the two cells, because two cells always make a battery."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A working battery joins cells positive-to-negative so they form one electrical source.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

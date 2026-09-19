@@ -1,0 +1,105 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T03:23:26.499Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_04/H006",
+      "unit_id": "science/grade_07/ch_04/H006",
+      "title": "When a circuit tester is used, decide from bulb glow whether a material conducts electricity and how that affects electrical safety.",
+      "node_labels": [
+        "Materials and their properties",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Aluminium does not conduct electricity: the bulb stayed off even though a tester wire was disconnected."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Bulb glowing: poor conductor. Bulb not glowing: good conductor."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The rubber covering on the tester wires is a good conductor because the bulb glows."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Dull copper is a poor conductor because it is not shiny."
+      }
+    ],
+    "enrichment": "Materials that allow electricity to flow through them easily are good conductors and make the bulb glow; materials that do not allow electricity to pass through them are poor conductors and prevent the bulb from glowing. Aluminium, iron, and copper conduct in the tester, while sulfur, coal, wood, stone, rubber eraser, and nylon rope do not. Bulb glow in the tester indicates electrical conduction, and absence of glow indicates poor electrical conduction. The learner correctly applies this rule: Materials that allow electricity to flow through them easily are good conductors and make the bulb glow; materials that do not allow electricity to pass through them are poor conductors and prevent the bulb from glowing. Aluminium, iron, and copper conduct in the tester, while sulfur, coal, wood, stone, rubber eraser, and nylon rope do not. The tester bulb result mainly tells whether the bulb works, not what the material does to electricity.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When a circuit tester is used, decide from bulb glow whether a material conducts electricity and how that affects electrical safety. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "add",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_04/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H006"
+  }
+}

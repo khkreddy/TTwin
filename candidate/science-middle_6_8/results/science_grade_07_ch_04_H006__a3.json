@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha uses a circuit tester with a bulb to check aluminium and copper. Which claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Aluminium makes the bulb glow, so aluminium is a good conductor."
+    },
+    {
+      "id": "B",
+      "text": "Aluminium leaves the bulb off when a tester wire is disconnected, so aluminium does not conduct."
+    },
+    {
+      "id": "C",
+      "text": "A glowing bulb means the material is a poor conductor."
+    },
+    {
+      "id": "D",
+      "text": "Dull copper is a poor conductor."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Glow in a complete tester circuit means the material conducts. A disconnected wire blocks glow without proving the material fails. Glow does not mean poor conduction. Shininess does not decide conductivity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

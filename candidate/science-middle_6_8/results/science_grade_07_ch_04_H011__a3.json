@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naveen's teacher asks whether metals are the only substances important in everyday life, or whether non-metals such as oxygen, nitrogen, and chlorine also matter for breathing, fertilisers, and drinking water. Which reply is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Non-metals are also essential: oxygen for breathing, nitrogen in fertilisers, and chlorine to purify drinking water."
+    },
+    {
+      "id": "B",
+      "text": "Nitrogen is used to purify drinking water."
+    },
+    {
+      "id": "C",
+      "text": "Every non-metal is essential in everyday life."
+    },
+    {
+      "id": "D",
+      "text": "Only metals are important in everyday life."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Non-metals matter too: oxygen for breathing, nitrogen in fertilisers, chlorine for water. Swapping nitrogen for chlorine is a wrong use map. Not every non-metal is essential. Metals-only ignores non-metals.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

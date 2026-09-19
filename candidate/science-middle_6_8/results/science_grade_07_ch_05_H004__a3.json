@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek lights a diya filled with ghee. It burns steadily. He then places a glass tumbler upside down over the diya, and after some time the flame goes out.\n\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "At first ghee as fuel, oxygen from the air, and heat above the ghee's ignition temperature were all present; under the tumbler the oxygen ran out, so burning stopped."
+    },
+    {
+      "id": "B",
+      "text": "The ghee caught fire as soon as it melted in air."
+    },
+    {
+      "id": "C",
+      "text": "Once lit, the diya needs only ghee as fuel to keep burning; heat above ignition temperature is not needed for continued burning."
+    },
+    {
+      "id": "D",
+      "text": "The covered diya keeps burning until the ghee runs out; oxygen is needed only to light it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Combustion needs fuel, oxygen, and heat to ignition temperature. Melting is not ignition; continued burning still needs that heat condition; oxygen is needed throughout, not only at lighting. Under the tumbler, oxygen runs out.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "paper-at-room-temperature CWO invents paper not in stem; reframed as omitting heat-to-ignition for continued diya burning"
+      }
+    ]
+  }
+}

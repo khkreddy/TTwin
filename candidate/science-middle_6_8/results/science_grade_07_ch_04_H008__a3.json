@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pooja burns sulfur powder in air. The product is sulfur dioxide. She dissolves it in water and tests the solution with litmus. Which claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The solution is acidic and turns blue litmus red."
+    },
+    {
+      "id": "B",
+      "text": "The solution is basic and turns red litmus blue."
+    },
+    {
+      "id": "C",
+      "text": "Sulfur dioxide turns blue litmus red without water."
+    },
+    {
+      "id": "D",
+      "text": "Unburned sulfur powder is acidic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "term_substitution",
+        "reason": "Sulfuric vs sulfurous naming is a second idea; hinge is acidic vs basic from the litmus test."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sulfur burns to an oxide that forms an acidic solution and turns blue litmus red. Calling it basic reverses the test. Dry gas on dry litmus omits water. Unburned sulfur is not the acidic product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

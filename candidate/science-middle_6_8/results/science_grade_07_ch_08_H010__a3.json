@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Rekha walks along a straight path. Her friend records how far she goes in successive time intervals.\n\nWhich case is uniform linear motion?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Equal distances in equal time intervals."
+    },
+    {
+      "id": "B",
+      "text": "Equal distances in unequal time intervals."
+    },
+    {
+      "id": "C",
+      "text": "Unequal distances in equal time intervals."
+    },
+    {
+      "id": "D",
+      "text": "Any motion along a straight path."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Uniform linear motion means equal distances in equal time intervals along a straight line. Equal distances with unequal times drop the equal-time condition; unequal distances in equal times is non-uniform; a straight path alone is not enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

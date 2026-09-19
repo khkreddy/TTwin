@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Padma chooses a cotton shirt for a hot sunny afternoon. She wants to gain the least heat from the Sun.\n\nWhich shirt should she choose?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A black shirt, because dark colours reflect most of the heat that falls on them."
+    },
+    {
+      "id": "B",
+      "text": "A white shirt, because light colours reflect most of the heat that falls on them."
+    },
+    {
+      "id": "C",
+      "text": "A black shirt, even when no sunlight falls on either shirt."
+    },
+    {
+      "id": "D",
+      "text": "A white shirt, because light colours absorb most of the heat that falls on them."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light colours reflect most of the Sun's heat, so a white shirt gains less heat in summer sunlight.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

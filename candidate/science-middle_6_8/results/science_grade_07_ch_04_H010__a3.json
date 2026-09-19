@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha sorts four things: an iron nail, a plastic scale, a glass bangle, and sulfur powder. Which claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The iron nail is a metal and the sulfur powder is a non-metal."
+    },
+    {
+      "id": "B",
+      "text": "The plastic scale is a non-metal."
+    },
+    {
+      "id": "C",
+      "text": "The sulfur powder is neither a metal nor a non-metal."
+    },
+    {
+      "id": "D",
+      "text": "The shiny glass bangle is a metal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "UNRESOLVED",
+    "D": "surface_feature_capture"
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "CWO needs laboratory-made elements; those nouns are not in the stem."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Iron is a metal element and sulfur is a non-metal element. Plastic is an everyday material, not a non-metal. Sulfur is a non-metal. Shininess does not make glass a metal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

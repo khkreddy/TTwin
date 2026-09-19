@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Gauri melts some wax, then lets it cool until it is solid again. She also chops a carrot into pieces.\n\nWhich judgment about these changes is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Melting the wax is reversible, because the wax can be brought back in its starting solid form."
+    },
+    {
+      "id": "B",
+      "text": "Chopping the carrot is reversible, because the carrot material is still there."
+    },
+    {
+      "id": "C",
+      "text": "Melting the wax is not reversible, because melted wax looks different from solid wax."
+    },
+    {
+      "id": "D",
+      "text": "Both changes are reversible, because both happen in the kitchen."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A change is reversible when the starting form can be recovered, so melted wax that solidifies again is reversible. Keeping the material after chopping is not recovery of starting form; calling melting irreversible reverses the recovery test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

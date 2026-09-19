@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_05/H003",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_05/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_05/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_05:H003:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-CHANGE",
+    "chapter_id": "science/grade_07/ch_05",
+    "chapter_label": "Physical and chemical changes",
+    "subtopic_id": "science/grade_07/ch_05/H003",
+    "stem": "Harish checks whether a change is combustion: the substance must react with oxygen and produce heat or light. He compares camphor burning in air with a flame, a reaction with nitrogen, an oxygen-free heat-releasing reaction, and a flameless reaction with oxygen that releases heat. Which claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Camphor burning in air with a flame is combustion.",
+      "B": "Nitrogen is the gas required for combustion.",
+      "C": "An oxygen-free reaction that releases heat is combustion.",
+      "D": "A flameless reaction with oxygen that releases heat is not combustion."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_05/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

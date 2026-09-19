@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Tushar covers 600 m in 300 s on one trip. On a second trip he covers the same 600 m in 150 s.\n\nWhat happens to his average speed on the second trip compared with the first?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It doubles to 4 m/s."
+    },
+    {
+      "id": "B",
+      "text": "It halves to 1 m/s."
+    },
+    {
+      "id": "C",
+      "text": "It cannot be found, because he may not have moved at one steady speed."
+    },
+    {
+      "id": "D",
+      "text": "It stays 2 m/s, because the distance is the same."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Average speed is total distance over total time. Same distance in half the time doubles average speed to 4 m/s. Halving speed reverses the time link; requiring uniform motion narrows scope; keeping 2 m/s ignores the changed time.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

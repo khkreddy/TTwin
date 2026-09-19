@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Padma chooses a material for the handle of a pan on the stove. The handle should stay cooler while cooking.\n\nWhich material should she choose?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copper, because a cooking pan should conduct heat easily in every part."
+    },
+    {
+      "id": "B",
+      "text": "Wood, because it is a poor conductor of heat."
+    },
+    {
+      "id": "C",
+      "text": "Aluminium, because good conductors keep a handle cooler."
+    },
+    {
+      "id": "D",
+      "text": "Steel, because it transfers heat quickly to the hand."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "relationship_reversal",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A handle should reduce heat flow, so a poor conductor such as wood is chosen.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

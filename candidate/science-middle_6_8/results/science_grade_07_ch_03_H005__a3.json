@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chirag connects an LED to a cell. The LED has a longer leg and a shorter leg.\n\nWhich connection makes the LED glow?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Longer leg to the negative terminal; shorter leg to the positive terminal."
+    },
+    {
+      "id": "B",
+      "text": "Longer leg to the positive terminal; shorter leg to the negative terminal."
+    },
+    {
+      "id": "C",
+      "text": "Both legs joined to the positive terminal."
+    },
+    {
+      "id": "D",
+      "text": "Either way round, because an LED glows in both directions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "UNRESOLVED",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An LED glows when its longer leg joins the positive terminal and its shorter leg joins the negative terminal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

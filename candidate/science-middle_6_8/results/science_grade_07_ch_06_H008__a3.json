@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek wants a balanced social life during adolescence.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Polite, respectful interaction with others and responsible behaviour on social media are both part of a balanced social life."
+    },
+    {
+      "id": "B",
+      "text": "Sharing a classmate's accurate personal information without permission is responsible online behaviour."
+    },
+    {
+      "id": "C",
+      "text": "A friendly online group guarantees that its members' posts are responsible."
+    },
+    {
+      "id": "D",
+      "text": "A false rumour written politely with friendly emojis is respectful online behaviour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balanced social life includes respectful interaction and responsible social media use. Accuracy without consent omits permission; a friendly group does not guarantee responsible posts; polite tone does not make a false rumour respectful.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

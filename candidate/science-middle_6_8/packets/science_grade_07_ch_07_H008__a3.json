@@ -1,0 +1,105 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T03:21:52.119Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_07/H008",
+      "unit_id": "science/grade_07/ch_07/H008",
+      "title": "Sequence the water cycle as Sun-driven evaporation and transpiration, rising and cooling of water vapour, condensation into clouds, precipitation, seepage or return flow, and return to water bodies.",
+      "node_labels": [
+        "Temperature and heat transfer",
+        "Energy, heat, electricity and light"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Cooling water vapour forms clouds by evaporation."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Water vapour condenses into clouds simply by rising, even without cooling."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Condensation into clouds causes the rising water vapour to cool."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Snow and hail are not part of the water cycle."
+      }
+    ],
+    "enrichment": "The Sun heats water in oceans, rivers, and lakes so it evaporates as water vapour; plants release water vapour through transpiration; rising vapour cools and condenses to form clouds, and clouds bring precipitation. Solar heating produces water vapour, cooling aloft changes vapour into clouds, precipitation brings water down, and water returns through soil, rocks, plants, and water bodies in a continuous cycle. The learner correctly applies this rule: The Sun heats water in oceans, rivers, and lakes so it evaporates as water vapour; plants release water vapour through transpiration; rising vapour cools and condenses to form clouds, and clouds bring precipitation. Rain appears from clouds without evaporation from water bodies or transpiration from plants.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Sequence the water cycle as Sun-driven evaporation and transpiration, rising and cooling of water vapour, condensation into clouds, precipitation, seepage or return flow, and return to water bodies. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_07/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_07/H008"
+  }
+}

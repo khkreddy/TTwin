@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Ishaan's leftover cooked rice smells sour after three days and cannot be eaten. At home, his family also sets curd from milk on purpose.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The souring of the leftover rice is undesirable, because the rice was meant to be eaten later."
+    },
+    {
+      "id": "B",
+      "text": "Souring of milk is always undesirable, so setting curd from milk is also undesirable."
+    },
+    {
+      "id": "C",
+      "text": "The souring of the leftover rice is desirable, because every change in food is useful."
+    },
+    {
+      "id": "D",
+      "text": "Setting curd and spoiling rice cannot be judged, because both involve souring."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Desirable or undesirable depends on situation and purpose: spoiled leftover rice is unwanted, while setting curd is useful. Treating all souring as bad drops the situation; calling spoilage desirable reverses the judgment.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

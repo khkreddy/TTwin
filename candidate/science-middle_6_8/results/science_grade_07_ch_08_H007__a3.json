@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Ishaan runs 150 m in 30 s. Rekha runs 100 m in 10 s.\n\nWho is faster?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rekha, because 100 ÷ 10 = 10 m/s while 150 ÷ 30 = 5 m/s."
+    },
+    {
+      "id": "B",
+      "text": "Ishaan, because he covers more distance."
+    },
+    {
+      "id": "C",
+      "text": "Ishaan, because 5 m/s is greater than 10 m/s."
+    },
+    {
+      "id": "D",
+      "text": "They cannot be compared, because the times differ."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Speed is distance per unit time, so Rekha at 10 m/s is faster than Ishaan at 5 m/s. Comparing distance alone, reversing which speed is larger, or refusing any comparison when times differ are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

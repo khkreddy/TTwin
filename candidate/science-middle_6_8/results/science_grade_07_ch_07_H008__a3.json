@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Rekha lists stages of the water cycle, starting from the Sun heating water in lakes and rivers.\n\nWhich sequence is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Evaporation and transpiration → rising and cooling of water vapour → condensation into clouds → precipitation → seepage and return to water bodies"
+    },
+    {
+      "id": "B",
+      "text": "Evaporation and transpiration → rising of water vapour → evaporation into clouds → precipitation → seepage and return to water bodies"
+    },
+    {
+      "id": "C",
+      "text": "Evaporation and transpiration → rising of water vapour with no cooling → condensation into clouds → precipitation → seepage and return to water bodies"
+    },
+    {
+      "id": "D",
+      "text": "Evaporation and transpiration → condensation into clouds → rising and cooling of water vapour → precipitation → seepage and return to water bodies"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Solar heating drives evaporation and transpiration; vapour rises and cools, then condenses into clouds, then precipitation and return flow. Calling cloud formation evaporation swaps terms; dropping cooling omits a needed condition; putting condensation before rising and cooling reverses the order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

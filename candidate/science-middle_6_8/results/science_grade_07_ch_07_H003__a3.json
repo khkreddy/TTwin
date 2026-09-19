@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chirag heats a pot of water from below.\n\nWhat happens to the heated water?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It expands, becomes lighter, and rises; cooler water moves down to take its place."
+    },
+    {
+      "id": "B",
+      "text": "It becomes heavier and sinks; cooler water rises."
+    },
+    {
+      "id": "C",
+      "text": "It stays at the bottom, and the rest of the water heats with no movement."
+    },
+    {
+      "id": "D",
+      "text": "It rises only after the water starts boiling and bubbles appear."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heated water expands, becomes lighter, and rises; cooler water moves down to replace it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

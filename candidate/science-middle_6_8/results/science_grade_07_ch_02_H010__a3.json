@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha tests a colourless solution with three indicators.\n\nBlue litmus paper — turns red\nRed litmus paper — stays red\nTurmeric solution — stays yellow\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The solution is acidic."
+    },
+    {
+      "id": "B",
+      "text": "The solution is basic."
+    },
+    {
+      "id": "C",
+      "text": "The solution cannot be classified."
+    },
+    {
+      "id": "D",
+      "text": "The solution is neutral."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "UNRESOLVED",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "condition_omission",
+        "reason": "CWO needs a conflicting indicator row; this table is consistent for acid."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Blue litmus turns red while red litmus and turmeric stay unchanged: the solution is acidic. Calling it basic reverses the litmus reading. Demanding every possible indicator is a scope error. Calling it neutral from two unchanged rows ignores the blue-litmus change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

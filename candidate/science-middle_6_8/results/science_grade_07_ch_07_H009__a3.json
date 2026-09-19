@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Tushar compares clay, pale sand, dark sand, and gravel. The pale sand and the dark sand have the same spaces between their particles. He wants water to seep through as fast as possible.\n\nWhich choice lets water seep through fastest?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Gravel, because the spaces between its particles are wide and well connected."
+    },
+    {
+      "id": "B",
+      "text": "Gravel, because its spaces are wide, even if those spaces are isolated from each other."
+    },
+    {
+      "id": "C",
+      "text": "Clay, because its particles are the finest."
+    },
+    {
+      "id": "D",
+      "text": "Dark sand, because it looks darker than the pale sand."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Seepage is fastest through wide, open, connected spaces, so gravel wins. Wide but isolated spaces drop connectivity; ranking clay first reverses the order; choosing dark sand uses colour as a surface cue.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

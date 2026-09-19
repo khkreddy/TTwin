@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_05/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_05/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_05/H002",
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "CWO needs plain water as a separate tested liquid; stem stays on lime water."
+      },
+      {
+        "from": "surface_feature_capture",
+        "reason": "Bubbles-only surface CWO replaced by equation reversal using stem nouns."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_05:H002:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-CHANGE",
+    "chapter_id": "science/grade_07/ch_05",
+    "chapter_label": "Physical and chemical changes",
+    "subtopic_id": "science/grade_07/ch_05/H002",
+    "stem": "Pooja blows exhaled air into lime water. Lime water is calcium hydroxide in water. It turns milky, and she asks whether insoluble calcium carbonate has formed from carbon dioxide.\n\nWhich claim correctly explains the milkiness as evidence for carbon dioxide and a chemical change?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Carbon dioxide reacted with calcium hydroxide to form insoluble calcium carbonate.",
+      "B": "The new white solid is calcium hydroxide.",
+      "C": "Dissolved calcium carbonate made the lime water milky.",
+      "D": "Calcium carbonate and water make calcium hydroxide and carbon dioxide."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_05/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

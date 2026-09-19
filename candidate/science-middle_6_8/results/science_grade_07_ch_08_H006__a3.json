@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Gauri is converting times between seconds, minutes, and hours for her lab notebook.\n\nWhich conversion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "120 s = 2 min"
+    },
+    {
+      "id": "B",
+      "text": "The SI unit of time is the minute, so 120 s should be written as 120 min."
+    },
+    {
+      "id": "C",
+      "text": "2 h = 1/30 min"
+    },
+    {
+      "id": "D",
+      "text": "1 h = 120 s"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "60 s = 1 min, so 120 s = 2 min. The SI unit is the second, not the minute; 2 h = 120 min, not 1/30 min; 1 h = 3600 s, not 120 s.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

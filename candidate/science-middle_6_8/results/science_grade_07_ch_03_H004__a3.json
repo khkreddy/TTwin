@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Padma connects a small lamp to one cell with copper wires.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp glows with only one wire from one cell terminal to the lamp."
+    },
+    {
+      "id": "B",
+      "text": "The lamp glows when wires join the lamp from one cell terminal to the other cell terminal."
+    },
+    {
+      "id": "C",
+      "text": "The lamp glows only if its bottom contact is on the positive terminal, even when both cell terminals are joined."
+    },
+    {
+      "id": "D",
+      "text": "The lamp glows when it is held near the cell with no wires."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The lamp needs a complete path through both cell terminals. Filament-lamp contact polarity is not required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naveen compares copper, steel, and shiny coal for drawing into thin wires for a lamp cord. Which claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Copper can be drawn into wires because it is ductile."
+    },
+    {
+      "id": "B",
+      "text": "Copper can be drawn into wires because it is malleable."
+    },
+    {
+      "id": "C",
+      "text": "Steel cannot be drawn into wires because it contains carbon."
+    },
+    {
+      "id": "D",
+      "text": "Shiny coal can be drawn into wires."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wire-drawing needs ductility. Copper is ductile. Malleability is for sheets, not wires. Steel can still be drawn into wires. Coal is not ductile even when shiny.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

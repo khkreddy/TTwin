@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rina watches a candle on the table: some wax melts, and the wax vapour burns to form new substances.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "This process includes both physical changes (melting) and a chemical change (burning vapour to new substances)."
+    },
+    {
+      "id": "B",
+      "text": "Melting wax and letting it solidify alone involves both physical and chemical changes."
+    },
+    {
+      "id": "C",
+      "text": "Melting wax produces the heat that keeps the candle burning."
+    },
+    {
+      "id": "D",
+      "text": "Evaporation of wax forms new substances."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Candle burning includes physical melting and chemical combustion of vapour. Melting–solidifying alone has no new substance; melting is caused by heat, not the heat source; evaporation is not combustion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Gauri's village gets rain that seeps into the ground each year. Yet the water level in the village well has fallen over several years.\n\nWhich statement best explains why the groundwater can decrease even though water seeps into the ground?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water is pumped out faster than seepage can replace it, so the groundwater level falls."
+    },
+    {
+      "id": "B",
+      "text": "Groundwater decreases whenever any water is pumped out, even if seepage replaces all of it."
+    },
+    {
+      "id": "C",
+      "text": "More seepage into the soil lowers the amount of groundwater available."
+    },
+    {
+      "id": "D",
+      "text": "Water in wet soil is not groundwater, so seepage can never affect the well."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Groundwater falls when withdrawal exceeds replenishment. Treating any extraction as a fall drops the excess-over-seepage condition; saying more seepage lowers stores reverses the link; excluding soil water from groundwater narrows the scope wrongly.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

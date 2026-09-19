@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Ishaan compares a sundial, a candle clock, an hourglass, and a water clock.\n\nWhich statement correctly matches a device to the observable change it uses to show the passage of time?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A sundial uses the changing position of a shadow cast by sunlight."
+    },
+    {
+      "id": "B",
+      "text": "A sundial uses a shadow that keeps showing time at night without sunlight."
+    },
+    {
+      "id": "C",
+      "text": "A candle clock uses its flame getting dimmer."
+    },
+    {
+      "id": "D",
+      "text": "An hourglass uses water flowing from its upper bulb to its lower bulb."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A sundial indicates time by the changing position of a Sun-cast shadow. Night use drops the sunlight condition; flame dimness is a surface cue for a candle clock; water flow belongs to a water clock, not an hourglass.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

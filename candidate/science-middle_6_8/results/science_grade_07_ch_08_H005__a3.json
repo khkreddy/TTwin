@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Tushar makes two simple pendulums of the same length at the same place. Pendulum P has a light bob. Pendulum Q has a heavier bob. He sets both swinging with small oscillations.\n\nWhich statement about their time periods is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P and Q have the same time period, because time period depends on length, not on the mass of the bob."
+    },
+    {
+      "id": "B",
+      "text": "Q has a longer time period, because time period depends on the mass of the bob, not on length."
+    },
+    {
+      "id": "C",
+      "text": "P and Q have the same time period at every place, because length alone fixes the time period everywhere."
+    },
+    {
+      "id": "D",
+      "text": "Any object of this length that moves back and forth has this time period at this place."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "At a given place, time period depends on length, not bob mass, so equal lengths give equal periods. Swapping mass for length, dropping the same-place condition, or widening the claim to every back-and-forth object are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
