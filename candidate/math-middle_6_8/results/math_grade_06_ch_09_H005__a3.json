@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Soham folds the square sheet in the figure once down the middle, punches one hole through both layers, then unfolds the sheet.\n\nWhich claim correctly predicts the unfolded design?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The fold line itself is the punched design."
+    },
+    {
+      "id": "B",
+      "text": "One hole appears anywhere on the paper, even where the layers did not meet."
+    },
+    {
+      "id": "C",
+      "text": "Two holes appear as mirror images across the fold line, because the fold forced matching positions to coincide."
+    },
+    {
+      "id": "D",
+      "text": "The punched holes are what create the fold line."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9]\n  \\draw[thick] (0,0) rectangle (3.2,3.2);\n  \\draw[thick,dashed] (1.6,0) -- (1.6,3.2);\n  \\node[below] at (1.6,-0.15) {fold};\n  \\fill (0.9,2.1) circle (2.5pt);\n  \\node[right] at (3.35,1.6) {punch through both layers};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A single punch through both layers of a fold yields a mirror pair across the fold line. Naming the fold line swaps the design. Ignoring coincidence drops the symmetry condition. Punches do not create the fold.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Square sheet with dashed midline fold and one punch mark on the left half."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Scope-error CWO demands group-theory language not sayable with fold-and-punch objects; kept term_substitution, condition_omission, relationship_reversal."
+      }
+    ]
+  }
+}

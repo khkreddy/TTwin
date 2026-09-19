@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Hassan studies the equilateral triangle in the figure below, with centre O marked.\n\nDoes the triangle have rotational symmetry?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call O the name rotational symmetry, without testing any turn of the triangle."
+    },
+    {
+      "id": "B",
+      "text": "Say the centre O is what the matching turn creates, instead of using O to test a turn."
+    },
+    {
+      "id": "C",
+      "text": "Yes, because a turn of $120^\\circ$ about O makes the triangle coincide with itself, and $120^\\circ$ is less than a full turn."
+    },
+    {
+      "id": "D",
+      "text": "Count three equal sides and report the order of rotational symmetry from that count alone, without naming a turn angle less than $360^\\circ$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=1.1]\n\\coordinate (A) at (0,0);\n\\coordinate (B) at (3,0);\n\\coordinate (C) at (1.5,2.598);\n\\draw[thick] (A) -- (B) -- (C) -- cycle;\n\\fill (1.5,0.866) circle (1.2pt);\n\\node at (1.5,0.55) {O};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A figure has rotational symmetry when a turn about a fixed centre by an angle less than 360° maps it onto itself. For an equilateral triangle that angle is 120° about O.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Equilateral triangle with centre O marked."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra's school building is 20 m tall. A classroom door in the same building is about 2 m tall. She wants to make sense of the 20 m height.\n\nWhich comparison is appropriate?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Read only the printed 20 and skip naming any familiar object for comparison."
+    },
+    {
+      "id": "B",
+      "text": "Decide from place-value naming of the digits in 20 alone, without a familiar height."
+    },
+    {
+      "id": "C",
+      "text": "Compare with the door: the building is about 10 door-heights, or 18 m taller than the door."
+    },
+    {
+      "id": "D",
+      "text": "Choose 20 because it is the largest printed number in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A large measurement is understood by a difference or a multiple relative to a familiar object in the same unit. Skipping the familiar reference omits the comparison. Place-value naming alone is a different hinge. Picking the largest printed numeral is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Quick-factor multiplication CWO invents a speed-arithmetic hinge not in the stem; kept condition_omission, scope_error, surface_feature_capture on familiar-reference comparison."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena draws two rays from a common point O on her slate: ray OA and ray OB.\n\nWhich statement correctly describes the angle they form?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The vertex of the angle is arm OA."
+    },
+    {
+      "id": "B",
+      "text": "OA and OB form this angle even if they start at two different points."
+    },
+    {
+      "id": "C",
+      "text": "The rays share starting point O (the vertex); the arms are OA and OB; the angle may be named ∠AOB."
+    },
+    {
+      "id": "D",
+      "text": "The angle is named ∠O because O is the first letter printed on the slate."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An angle is two rays with a common starting point. That point is the vertex; the rays are the arms; a three-letter name places the vertex in the middle (∠AOB).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

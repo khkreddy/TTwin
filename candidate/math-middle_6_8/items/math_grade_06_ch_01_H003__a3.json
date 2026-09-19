@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_01/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_01/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H003",
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO imports a bare generative-rule hinge already covered elsewhere; kept condition_omission, relationship_reversal, scope_error on the pictorial encoding."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_01:H003:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_06/ch_01",
+    "chapter_label": "math/grade_06/ch_01",
+    "subtopic_id": "math/grade_06/ch_01/H003",
+    "stem": "Rina studies the three pictures in the figure. Each picture is a square grid of dots: a 1-by-1 square, then a 2-by-2 square, then a 3-by-3 square.\n\nWhich claim correctly describes how to draw the next picture?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Any larger cluster of dots works, without keeping the square-grid construction from picture to picture.",
+      "B": "Drawing the next square grid is what creates the square numbers in the first place.",
+      "C": "The next picture is a 4-by-4 square of 16 dots, because each picture is an n-by-n square for n = 1, 2, 3, …",
+      "D": "The next picture needs the full chapter shape-sequence table before it can be drawn."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55]\n  \\foreach \\x in {0} \\foreach \\y in {0} \\fill (\\x,\\y) circle (2.2pt);\n  \\node[below] at (0,-0.55) {1};\n  \\begin{scope}[xshift=2.2cm]\n    \\foreach \\x in {0,1} \\foreach \\y in {0,1} \\fill (\\x,\\y) circle (2.2pt);\n    \\node[below] at (0.5,-0.55) {2};\n  \\end{scope}\n  \\begin{scope}[xshift=5.0cm]\n    \\foreach \\x in {0,1,2} \\foreach \\y in {0,1,2} \\fill (\\x,\\y) circle (2.2pt);\n    \\node[below] at (1,-0.55) {3};\n  \\end{scope}\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_01/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

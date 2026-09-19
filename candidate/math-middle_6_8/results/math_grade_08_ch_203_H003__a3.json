@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rina shares prize money in the ratio 2 : 3 : 5. The first share is ₹20.\n\nWhich statement correctly gives all three shares?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is \"corresponding terms\", without finding the rupee amounts."
+    },
+    {
+      "id": "B",
+      "text": "The shares ₹20, ₹30, ₹50 are what create the ratio 2 : 3 : 5, so she works backwards without a common factor."
+    },
+    {
+      "id": "C",
+      "text": "Multiply every term by 10: the shares are ₹20, ₹30 and ₹50."
+    },
+    {
+      "id": "D",
+      "text": "Give ₹5 to someone, because 5 is the largest number printed in the ratio."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Every term scales by the same factor: 20/2 = 10, so the shares are 20, 30, 50. Naming \"corresponding terms\" swaps the amounts. Reversing without the factor muddles direction. The printed 5 is not a share.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Mechanism-conflation CWO imports inverse-proportion constant-product language; multi-term direct scaling uses one common factor, so kept term_substitution, relationship_reversal, surface_feature_capture."
+      }
+    ]
+  }
+}

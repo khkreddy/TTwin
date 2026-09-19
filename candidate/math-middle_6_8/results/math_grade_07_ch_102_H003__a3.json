@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri must evaluate $3 \\times (8 - 5) + 2$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the word grouping the answer, without evaluating any part of the expression."
+    },
+    {
+      "id": "B",
+      "text": "Ignore the brackets and evaluate as if the expression were unbracketed term by term from left to right only."
+    },
+    {
+      "id": "C",
+      "text": "First evaluate $8 - 5$ inside the brackets to get $3$, then compute $3 \\times 3 + 2 = 11$."
+    },
+    {
+      "id": "D",
+      "text": "Multiply $3 \\times 8$ first, then subtract $5$, giving $19$ after adding $2$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "mechanism_conflation",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Brackets fix grouping: the inside of the brackets is evaluated before the operations outside them.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

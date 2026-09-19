@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Chitra's bar graph of games played on three days. The vertical scale uses equal intervals.\n\nWhich day has the greatest number of games?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Monday, reading bar width instead of bar height on the numerical scale."
+    },
+    {
+      "id": "B",
+      "text": "Tuesday, because its bar is tallest on the equal-interval scale."
+    },
+    {
+      "id": "C",
+      "text": "Wednesday, comparing bars as if the vertical scale need not use equal intervals."
+    },
+    {
+      "id": "D",
+      "text": "Monday, because that bar is shaded darker and decoration settles the value."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75]\n  \\draw[->] (0,0) -- (5.2,0) node[right] {Day};\n  \\draw[->] (0,0) -- (0,7.2) node[above] {Games};\n  \\foreach \\y in {1,2,3,4,5,6,7} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!40] (0.7,0) rectangle (1.5,4);\n  \\node at (1.1,-0.35) {Mon};\n  \\fill[gray!40] (2.2,0) rectangle (3.0,6);\n  \\node at (2.6,-0.35) {Tue};\n  \\fill[gray!40] (3.7,0) rectangle (4.5,3);\n  \\node at (4.1,-0.35) {Wed};\n  \\node[anchor=west] at (0,7.5) {Games played};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On a bar graph with equal-interval numerical scale, category value is read from bar height. Tuesday's bar is tallest (6). Reading width substitutes the wrong encoding. Dropping equal intervals omits a reading condition. Using decorative shading is outside data encoding.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Bar graph Mon=4, Tue=6, Wed=3 on equal vertical scale."
+  }
+}

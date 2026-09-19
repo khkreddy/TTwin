@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farid must bisect $\\angle XOY$ with ruler and compass.\n\nWhich construction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the vertex O as the bisector, and draw no equal marks on the arms."
+    },
+    {
+      "id": "B",
+      "text": "First draw a ray from O and say that ray is what creates equal marks OA, OB, AC, and BC."
+    },
+    {
+      "id": "C",
+      "text": "Mark A on OX and B on OY with $OA = OB$, then mark C with $AC = BC$, and draw ray OC."
+    },
+    {
+      "id": "D",
+      "text": "Trace only the printed angle symbol at O, and treat that printed mark as the bisector."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal marks on the arms and a third point equally far from those marks make congruent triangles, so OC bisects angle XOY.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

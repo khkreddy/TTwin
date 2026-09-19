@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara reads the length 3.142 m on a measuring strip marked with a decimal point.\n\nWhich statement correctly names the place of each digit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The digit 3 is a tenth, because it sits next to the decimal point."
+    },
+    {
+      "id": "B",
+      "text": "The length is 3142 m, because those digits are the largest printed string on the strip."
+    },
+    {
+      "id": "C",
+      "text": "3 is ones; 1 is tenths; 4 is hundredths; 2 is thousandths, with the decimal point separating whole-number places from fractional places."
+    },
+    {
+      "id": "D",
+      "text": "Add the digits 3 + 1 + 4 + 2 by combining like place values to read the number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The decimal point separates ones from tenths; places to the right are tenths, hundredths, thousandths. Calling 3 a tenth swaps the whole-number place. Ignoring the point grabs the digit string. Adding digits uses a different place-value job.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

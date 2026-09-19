@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wasim's triangular flower bed has side lengths 5 m, 7 m, and 9 m.\n\nWhat is its perimeter?",
+  "options": [
+    {
+      "id": "A",
+      "text": "7 m, taking the middle side length as the perimeter."
+    },
+    {
+      "id": "B",
+      "text": "Each side equals 21 m, because the perimeter produces each side."
+    },
+    {
+      "id": "C",
+      "text": "21 m, by adding the three side lengths."
+    },
+    {
+      "id": "D",
+      "text": "3 m, because a triangle is named by having three sides."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Perimeter of a triangle is the sum of its three sides: 5 + 7 + 9 = 21 m. A single side, reversing sum into each side, or counting the number of sides all miss that sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

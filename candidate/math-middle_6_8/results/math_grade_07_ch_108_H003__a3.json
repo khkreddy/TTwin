@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena multiplies the fractions 2/3 and 3/4.\n\nWhat product should she obtain?",
+  "options": [
+    {
+      "id": "A",
+      "text": "3/4, keeping only the second fraction."
+    },
+    {
+      "id": "B",
+      "text": "8/9, by dividing with reciprocals as if the task were fraction division."
+    },
+    {
+      "id": "C",
+      "text": "1/2, by taking two of the three equal parts of 3/4 (or (2×3)/(3×4))."
+    },
+    {
+      "id": "D",
+      "text": "2/3, because that fraction is printed first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For a/b × c/d, partition c/d into b equal parts and take a of them: 3/4 into 3 parts gives 1/4 each; two parts give 2/4 = 1/2. Keeping one factor, using the division rule, or grabbing the first print all miss the product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

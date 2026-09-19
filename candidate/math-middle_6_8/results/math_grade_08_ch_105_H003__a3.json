@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Deepak looks at two even numbers and asks when their sum is a multiple of 4.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any sum of two even numbers may be labeled a multiple of 4."
+    },
+    {
+      "id": "B",
+      "text": "Every sum of two even numbers is a multiple of 4, with no further check."
+    },
+    {
+      "id": "C",
+      "text": "The sum is a multiple of 4 when the two even numbers leave the same remainder on division by 4."
+    },
+    {
+      "id": "D",
+      "text": "The same remainder rule also applies unchanged when one addend is odd."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each even number is 0 or 2 more than a multiple of 4. Their sum is a multiple of 4 precisely when those remainders match. Labeling any even sum as a multiple of 4 substitutes the name for the test. Claiming every even sum works omits the remainder condition. Extending the rule to an odd addend without reworking cases is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "surface_feature_capture",
+        "reason": "Printed-numeral capture is weaker than label-substitution, missing-remainder omission, and odd-addend scope error; kept those three."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat has the fraction 2/3 of a chapati. He wants another fraction for the same quantity of that chapati.\n\nWhich plan gives an equivalent fraction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Change only the numerator to 4 and keep the denominator 3."
+    },
+    {
+      "id": "B",
+      "text": "Multiply numerator and denominator by the same nonzero number, for example write 4/6."
+    },
+    {
+      "id": "C",
+      "text": "Write 4/6 even when the new pair is no longer about the same chapati."
+    },
+    {
+      "id": "D",
+      "text": "First convert 2/3 into a decimal; equivalence requires that conversion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An equivalent fraction comes from multiplying or dividing both numerator and denominator by the same nonzero factor, keeping the same quantity of the whole. Changing only the numerator substitutes a one-part edit for that paired change. Dropping the same-whole condition omits what equivalence preserves. Requiring a decimal conversion is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

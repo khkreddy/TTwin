@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat's list has mean 10. He inserts one new value, 14, into the list.\n\nWhat happens to the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report 14 as the new mean, using only the inserted value."
+    },
+    {
+      "id": "B",
+      "text": "Decide that the mean changes without comparing 14 with the current mean 10."
+    },
+    {
+      "id": "C",
+      "text": "The mean increases because 14 is the largest-looking number printed in the stem."
+    },
+    {
+      "id": "D",
+      "text": "The mean increases, because 14 is greater than the current mean 10."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "C": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inserting a value greater than the current mean pulls the mean up. Replacing the mean by the inserted value alone substitutes the wrong quantity. Skipping the comparison with the current mean omits the deciding condition. Choosing because 14 looks largest is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

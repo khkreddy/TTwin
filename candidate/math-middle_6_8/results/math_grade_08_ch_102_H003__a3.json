@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra has the prime factorisation 2 × 2 × 2 × 3 × 3 and wants it in exponential form.\n\nWhich writing is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write 2 × 3 only, dropping the repeated factors instead of grouping them as exponents."
+    },
+    {
+      "id": "B",
+      "text": "Write 2³ × 3², grouping three factors of 2 and two factors of 3."
+    },
+    {
+      "id": "C",
+      "text": "Start from 2³ × 3² to invent the product, as if the exponential form produced the primes."
+    },
+    {
+      "id": "D",
+      "text": "Divide the prime factors instead of multiplying them when writing the factorisation."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repeated identical primes are grouped with exponents: 2³ × 3². Writing a bare 2 × 3 substitutes an incomplete product for the grouped form. Treating the exponential writing as what produces the primes reverses the direction. Dividing the primes confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Real-world quantity-modeling CWO invents a different hinge; kept term_substitution, relationship_reversal, operation_confusion on grouping primes."
+      }
+    ]
+  }
+}

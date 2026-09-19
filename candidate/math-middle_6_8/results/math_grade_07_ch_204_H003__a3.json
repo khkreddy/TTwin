@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wasim buys 4 spice packets. Each packet has mass 0.25 kg.\n\nWhich calculation finds the total mass?",
+  "options": [
+    {
+      "id": "A",
+      "text": "4 + 0.25"
+    },
+    {
+      "id": "B",
+      "text": "0.25 ÷ 4"
+    },
+    {
+      "id": "C",
+      "text": "4 × 0.25"
+    },
+    {
+      "id": "D",
+      "text": "Move the decimal in 0.25 two places left, as when dividing by 100."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal groups of a decimal amount use multiplication: 4 × 0.25 = 1 kg. Adding the rate, reversing into division, or shifting decimals as in ÷100 all choose the wrong operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ekta starts at $0$ on a number line. She moves $5$ steps to the right, then $8$ steps to the left. The movements are already written as $+5$ and $-8$.\n\nWhat is her final position?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the sizes $5$ and $8$ only, without using the signs that encode direction."
+    },
+    {
+      "id": "B",
+      "text": "Treat $-8$ as what produces $+5$, and reverse the order of the two movements as a rule."
+    },
+    {
+      "id": "C",
+      "text": "$-3$, because the final position is $(+5) + (-8)$."
+    },
+    {
+      "id": "D",
+      "text": "First invent signs from a finished unsigned total, instead of adding the signed movements she already has."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When signed movements are known, the final position from 0 is their sum: 5 + (-8) = -3.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

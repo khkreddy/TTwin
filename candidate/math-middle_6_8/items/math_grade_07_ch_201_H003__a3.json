@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_201/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_201/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H003",
+    "mx_swap": [
+      {
+        "from": "surface_feature_capture",
+        "reason": "Printed-letter capture is weaker here than equal-looking-side substitution, missing-overlap omission, and non-corresponding-angle scope error; kept those three."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "C": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H003:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H003",
+    "stem": "Asha writes △ABC ≅ △DEF. She needs the side that corresponds to side AB.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Any side that looks the same length as AB corresponds, whatever the vertex order.",
+      "B": "Correspondence still holds even when the vertex order does not make equal sides overlap.",
+      "C": "A non-corresponding angle that looks equal to angle A settles which side matches AB.",
+      "D": "Side DE corresponds to AB, because A matches D and B matches E in the congruence statement."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "D",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

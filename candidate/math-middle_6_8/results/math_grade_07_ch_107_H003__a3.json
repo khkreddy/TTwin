@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uday has three sticks of lengths 3 cm, 5 cm and 9 cm. He wants to know whether they can be the side lengths of a triangle.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is 9 cm, because that is the longest length."
+    },
+    {
+      "id": "B",
+      "text": "Yes, because each length is a positive whole number."
+    },
+    {
+      "id": "C",
+      "text": "No, because 3 + 5 = 8 is not greater than 9."
+    },
+    {
+      "id": "D",
+      "text": "First construct the triangle with compass and ruler; only then decide whether the sides exist."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three lengths form a triangle only when the sum of the two smaller exceeds the longest. Here 3+5 is not greater than 9. Naming the longest swaps the test. Positivity alone omits the sum check. Construction comes after the inequality decision.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat's data are 4, 6, 8, and 10. He wants the arithmetic mean as the equal-share value of that list.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add only 4 and 10, then divide by 2, skipping 6 and 8 in the total."
+    },
+    {
+      "id": "B",
+      "text": "The mean produces the data total, so the total of the four values must be 7."
+    },
+    {
+      "id": "C",
+      "text": "The mean is (4 + 6 + 8 + 10) ÷ 4 = 7, the equal share of the total."
+    },
+    {
+      "id": "D",
+      "text": "Report the median of the ordered list instead of the total divided by 4."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is the sum of every value divided by how many values there are: 28 ÷ 4 = 7. Leaving values out of the sum omits that condition. Saying the mean produces a total of 7 reverses the relation. Switching to the median is a different summary.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "operation_confusion",
+        "reason": "Multiplying the four values invents a product not asked for; kept condition_omission, relationship_reversal, scope_error on sum-then-divide."
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Asha writes △ABC ≅ △DEF. She needs the side that corresponds to side AB.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any side that looks the same length as AB corresponds, whatever the vertex order."
+    },
+    {
+      "id": "B",
+      "text": "Correspondence still holds even when the vertex order does not make equal sides overlap."
+    },
+    {
+      "id": "C",
+      "text": "A non-corresponding angle that looks equal to angle A settles which side matches AB."
+    },
+    {
+      "id": "D",
+      "text": "Side DE corresponds to AB, because A matches D and B matches E in the congruence statement."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "C": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In △ABC ≅ △DEF, vertices match in written order, so AB corresponds to DE. Treating any equal-looking length as corresponding substitutes a weaker label for vertex order. Dropping the overlap requirement omits the defining condition. Using a non-corresponding equal-looking angle is outside this correspondence hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "surface_feature_capture",
+        "reason": "Printed-letter capture is weaker here than equal-looking-side substitution, missing-overlap omission, and non-corresponding-angle scope error; kept those three."
+      }
+    ]
+  }
+}

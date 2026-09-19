@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara compares the two angles in the figure. Angle P has short arms and a wide turn. Angle Q has long arms and a narrow turn.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle Q is larger, because its arms are drawn longer."
+    },
+    {
+      "id": "B",
+      "text": "The drawn arm lengths are what produce the amount of turn."
+    },
+    {
+      "id": "C",
+      "text": "Angle P is larger, because it has the greater amount of turn about the vertex."
+    },
+    {
+      "id": "D",
+      "text": "Compare decorative arrowheads on the rays before measuring the turn."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95]\n  \\draw[thick] (0,0) -- (1.4,0);\n  \\draw[thick] (0,0) -- (0.55,1.25);\n  \\node at (0.55,0.35) {$P$};\n  \\begin{scope}[xshift=3.6cm]\n    \\draw[thick] (0,0) -- (2.6,0);\n    \\draw[thick] (0,0) -- (2.45,0.55);\n    \\node at (1.1,0.35) {$Q$};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Angle size is the amount of turn about the vertex, not arm length. Longer arms omit that condition. Arm length does not produce turn. Decorative marks are outside the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Angle P with short arms and wide opening; angle Q with long arms and narrow opening."
+  }
+}

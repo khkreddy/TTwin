@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_09/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_09/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_09/H005",
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "Scope-error CWO demands group-theory language not sayable with fold-and-punch objects; kept term_substitution, condition_omission, relationship_reversal."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_09:H005:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_09",
+    "chapter_label": "math/grade_06/ch_09",
+    "subtopic_id": "math/grade_06/ch_09/H005",
+    "stem": "Soham folds the square sheet in the figure once down the middle, punches one hole through both layers, then unfolds the sheet.\n\nWhich claim correctly predicts the unfolded design?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The fold line itself is the punched design.",
+      "B": "One hole appears anywhere on the paper, even where the layers did not meet.",
+      "C": "Two holes appear as mirror images across the fold line, because the fold forced matching positions to coincide.",
+      "D": "The punched holes are what create the fold line."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9]\n  \\draw[thick] (0,0) rectangle (3.2,3.2);\n  \\draw[thick,dashed] (1.6,0) -- (1.6,3.2);\n  \\node[below] at (1.6,-0.15) {fold};\n  \\fill (0.9,2.1) circle (2.5pt);\n  \\node[right] at (3.35,1.6) {punch through both layers};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_09/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
