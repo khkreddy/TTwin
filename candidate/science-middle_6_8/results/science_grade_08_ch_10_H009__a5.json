@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Siddharth holds three transparent pieces close to a printed letter on a page: a convex lens, a concave lens, and a flat glass strip.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about how the letter appears is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Through the flat glass strip the letter looks the same size and shape."
+        },
+        {
+          "id": "B",
+          "text": "Through the flat glass strip the letter always looks erect and much larger."
+        },
+        {
+          "id": "C",
+          "text": "A concave lens held close always makes the letter look erect and enlarged."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A flat transparent glass piece does not change the apparent size and shape the way a lens does; a nearby convex lens can enlarge, while a concave lens does not make the letter look erect and enlarged."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Flat glass leaves size and shape unchanged. Enlarged erect views belong to a nearby convex lens, not to flat glass or to a concave lens used that way.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

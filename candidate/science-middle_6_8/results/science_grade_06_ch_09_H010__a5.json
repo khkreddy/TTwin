@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Bilal has iron filings mixed with rice flour and wants a quick clean-up without picking each bit by hand. He also has aluminium foil scraps mixed with sand.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides when magnetic separation is suitable?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A magnet can separate the iron filings from the rice flour."
+        },
+        {
+          "id": "B",
+          "text": "A magnet can separate the aluminium foil scraps from the sand."
+        },
+        {
+          "id": "C",
+          "text": "Magnetic separation cannot remove the iron filings because they are too small to pick up individually."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Iron is magnetic, so a magnet pulls iron filings out of rice flour; aluminium is not magnetic, so a magnet will not separate foil from sand, and small size alone does not block magnetic separation."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic separation works when one substance is magnetic (iron filings) and the other is not. Aluminium is not magnetic. Tiny iron pieces can still be lifted by a magnet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

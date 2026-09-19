@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya walks through a reserve with dense herbs, shrubs and trees. Birds, insects and deer live there and find food and shelter.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Forests are large areas with dense growth of various plants and are natural homes for many wild animals, including birds and insects."
+    },
+    {
+      "id": "2",
+      "text": "Forests provide food and shelter to the animals that live there."
+    },
+    {
+      "id": "3",
+      "text": "This reserve is a forest home for many life forms only because the plants look green."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A forest is more than a group of trees: dense varied plants form a home that provides food and shelter for many animals, including birds and insects. Looking green alone does not make the reserve a forest home.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

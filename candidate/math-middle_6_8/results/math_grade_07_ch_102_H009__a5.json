@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Jatin must rewrite $5\\times(8+3)$ as a sum of products that keeps the same value.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Write $5\\times 8+5\\times 3$, multiplying each part of the sum by $5$."
+        },
+        {
+          "id": "B",
+          "text": "Call the answer a multiple of a sum, and stop there."
+        },
+        {
+          "id": "C",
+          "text": "Write $5\\times 8+3$, so only $8$ is multiplied by $5$."
+        },
+        {
+          "id": "D",
+          "text": "Treat $5\\times 8+5\\times 3$ as the starting factored form and $5\\times(8+3)$ as the expansion."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The distributive property expands 5×(8+3) as 5×8+5×3, multiplying each part of the sum."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5×(8+3) expands to 5×8+5×3. Naming only “multiple of a sum” substitutes a label. Leaving 3 unmultiplied confuses the operation. Swapping which form is the expansion reverses expand/factor.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

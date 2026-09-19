@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tejas must compute $7.2 \\div 0.9$ by making the divisor a counting number.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply both $7.2$ and $0.9$ by $10$, giving the equivalent division $72 \\div 9 = 8$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the dividend $7.2$, and stop there."
+    },
+    {
+      "id": "C",
+      "text": "Treat the counting-number divisor $9$ as choosing the original decimal divisor $0.9$, instead of scaling both numbers together."
+    },
+    {
+      "id": "D",
+      "text": "Divide both $7.2$ and $0.9$ by $10$, giving $0.72 \\div 0.09$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scale dividend and divisor by the same power of $10$ so the divisor becomes $9$: $72\\div 9=8$. Naming only the dividend, reversing the scaled divisor and the original, or dividing instead of multiplying both by $10$ all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

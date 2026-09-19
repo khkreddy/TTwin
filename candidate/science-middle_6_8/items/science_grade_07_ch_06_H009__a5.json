@@ -1,0 +1,88 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_06/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_06/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "scope_error",
+      "C": "surface_feature_capture",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_06/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_06:H009:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_07/ch_06",
+    "chapter_label": "Adolescence",
+    "subtopic_id": "science/grade_07/ch_06/H009",
+    "stem": "At a family wedding, an older cousin offers Arjun a sip of alcohol and says one sip is harmless because alcohol is not an illegal drug.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Arjun should refuse the alcohol from the first offer because alcohol is harmful and addictive.",
+      "B": "Arjun may accept the sip because alcohol is not an illegal drug.",
+      "C": "Arjun may try one sip if he has no breathing difficulty.",
+      "D": "Arjun should refuse only tobacco, gutka, cigarettes, and beedi, not alcohol."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_06/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Imran records the heights of three books as $14$ cm, $22$ cm, and $11$ cm. The diagram shows the display he is planning for books A, B, and C.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about orientation fits the kind of measurement?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Use upward columns so taller books read as taller bars, matching how height is compared."
+        },
+        {
+          "id": "B",
+          "text": "Call the finished picture a vertical-column label only, without matching display direction to height."
+        },
+        {
+          "id": "C",
+          "text": "Read the book heights as following from the column heights he draws."
+        },
+        {
+          "id": "D",
+          "text": "Choose the plan only because $22$ is the largest printed height."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.65,font=\\small]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Book};\n  \\draw[->] (0,0) -- (0,6.4) node[above] {Height (cm)};\n  \\foreach \\y/\\lab in {1/5,2/10,3/15,4/20,5/25} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\lab};}\n  \\fill[gray!35] (0.5,0) rectangle (1.4,2.8);\n  \\node at (0.95,-0.35) {A};\n  \\fill[gray!35] (2.0,0) rectangle (2.9,4.4);\n  \\node at (2.45,-0.35) {B};\n  \\fill[gray!35] (3.5,0) rectangle (4.4,2.2);\n  \\node at (3.95,-0.35) {C};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Heights compare naturally as upward extents, so vertical columns fit the measurement; the display does not set the measured heights."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heights suit upward columns. Naming only a column label substitutes a term. Reading measured heights as following from the drawn columns reverses display and data. Grabbing the largest print is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Added vertical columns for three book heights 14, 22, 11 cm."
+  }
+}

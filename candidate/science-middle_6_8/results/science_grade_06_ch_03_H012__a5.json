@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ojas crushes a handful of soya beans for a food test. Copper sulphate and caustic soda give a violet colour. A lasting oily patch appears on paper held to the light.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The soya beans contain both proteins and fats."
+    },
+    {
+      "id": "B",
+      "text": "The soya beans contain fats only."
+    },
+    {
+      "id": "C",
+      "text": "All foods contain both proteins and fats."
+    },
+    {
+      "id": "D",
+      "text": "The violet colour alone shows that fats are present."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A violet protein test and a lasting oily patch together show that one food item can contain more than one nutrient: proteins and fats. Fats only ignores the violet result. Not every food has both. The violet colour shows protein, not fat.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

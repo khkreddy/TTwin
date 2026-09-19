@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zubin evaluates $9^{0}$ and $(-4)^{0}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$9^{0} = 0$, because the exponent is zero."
+    },
+    {
+      "id": "B",
+      "text": "$9^{0} = 1$ and $(-4)^{0} = 1$, for these nonzero bases."
+    },
+    {
+      "id": "C",
+      "text": "$9^{0} = 1$ only when the base is positive; $(-4)^{0}$ is undefined."
+    },
+    {
+      "id": "D",
+      "text": "Any base to the power $0$ equals $1$, including $0^{0}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For any nonzero base x, x^0=1, so both 9^0 and (-4)^0 equal 1. Treating the zero exponent as forcing the value 0 reverses the rule. Restricting to positive bases or including 0^0 both miss the nonzero-base condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

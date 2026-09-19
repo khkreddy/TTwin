@@ -1,0 +1,116 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T13:07:21.563Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_08/ch_11/H009",
+      "unit_id": "science/grade_08/ch_11/H009",
+      "title": "Classify the Indian National Calendar as an official solar calendar used along with the Gregorian calendar.",
+      "node_labels": [
+        "Sun, Moon, stars and time",
+        "Earth, sky, time and resources"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Indian National Calendar is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The calendar is used by the Government of India for multiple official purposes along with the Gregorian calendar."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "a 365-day solar calendar is used alongside the Gregorian calendar -> the year st happens first, and that produces Official calendar design follows the solar year."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The calendar is used by the Government of India for multiple official purposes along with the Gregorian calendar is not true."
+      }
+    ],
+    "enrichment": "The Indian National Calendar is a solar calendar with 365 days in a year, used by the Government of India along with the Gregorian calendar, and its year begins on 22 March, the day after the spring equinox. Official calendar design follows the solar year -> a 365-day solar calendar is used alongside the Gregorian calendar -> the year starts just after the spring equinox. The learner correctly applies this rule: The Indian National Calendar is a solar calendar with 365 days in a year, used by the Government of India along with the Gregorian calendar, and its year begins on 22 March, the day after the spring equinox. India only uses the Gregorian calendar for official dates, so the Indian National Calendar is not a solar official calendar.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: The night sky: Moon and calendars. The student must decide: Classify the Indian National Calendar as an official solar calendar used along with the Gregorian calendar. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reaso",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "three_statement",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_11/H009",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": null,
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_11/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

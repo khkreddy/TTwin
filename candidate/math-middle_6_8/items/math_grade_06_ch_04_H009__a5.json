@@ -1,0 +1,112 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_04/H009",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_04/H009",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_04/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H009",
+    "stem": "Imran records the heights of three books as $14$ cm, $22$ cm, and $11$ cm. The diagram shows the display he is planning for books A, B, and C.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim about orientation fits the kind of measurement?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Use upward columns so taller books read as taller bars, matching how height is compared."
+          },
+          {
+            "id": "B",
+            "text": "Call the finished picture a vertical-column label only, without matching display direction to height."
+          },
+          {
+            "id": "C",
+            "text": "Read the book heights as following from the column heights he draws."
+          },
+          {
+            "id": "D",
+            "text": "Choose the plan only because $22$ is the largest printed height."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.65,font=\\small]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Book};\n  \\draw[->] (0,0) -- (0,6.4) node[above] {Height (cm)};\n  \\foreach \\y/\\lab in {1/5,2/10,3/15,4/20,5/25} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\lab};}\n  \\fill[gray!35] (0.5,0) rectangle (1.4,2.8);\n  \\node at (0.95,-0.35) {A};\n  \\fill[gray!35] (2.0,0) rectangle (2.9,4.4);\n  \\node at (2.45,-0.35) {B};\n  \\fill[gray!35] (3.5,0) rectangle (4.4,2.2);\n  \\node at (3.95,-0.35) {C};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina looks at the diagram of parallelogram $ABCD$. Angle $A$ is marked $65^{\\circ}$.\n\nWhich claim correctly determines the adjacent and opposite angles?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Adjacent angle $B$ is $115^{\\circ}$ (co-interior with $A$ on parallel sides), and opposite angle $C$ equals angle $A$, so $C=65^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "Call $ABCD$ a parallelogram even when the co-interior pair on parallel sides is not used to find angle $B$."
+    },
+    {
+      "id": "C",
+      "text": "Equal adjacent angles produce parallelogram $ABCD$, so angle $B$ must also be $65^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Apply equality of opposite angles also to a kite that is not a parallelogram, using only the printed $65^{\\circ}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (5.3,2.1);\n  \\coordinate (D) at (1.1,2.1);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\node[below left] at (A){$A$};\n  \\node[below right] at (B){$B$};\n  \\node[above right] at (C){$C$};\n  \\node[above left] at (D){$D$};\n  \\draw[line width=0.7pt] (0.55,0) arc (0:58:0.55);\n  \\node[above right] at (0.7,0.32){$65^{\\circ}$};\n  \\node[below] at (2.1,-0.55){parallelogram $ABCD$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a parallelogram, adjacent angles on parallel sides are supplementary (65+115) and opposite angles are equal (C=65). Skipping the co-interior step, forcing adjacent angles equal, or stretching equality to a non-parallelogram miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as parallelogram ABCD with angle A marked 65°."
+  }
+}

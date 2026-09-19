@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Krish copies the feeding diagram shown below from a Class 8 field booklet.\n\nIs the diagram a food chain or a food web, and why?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A food web, because more than one feeding path links the organisms."
+    },
+    {
+      "id": "B",
+      "text": "A food chain, because any diagram with arrows between living things is called a food chain."
+    },
+    {
+      "id": "C",
+      "text": "A food chain, because rice is drawn at the bottom so there can be only one sequence."
+    },
+    {
+      "id": "D",
+      "text": "Neither, because the labels are organism names rather than the word producer or consumer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily,>=stealth]\\node (rice) at (0,-2.0) {rice plant};\\node (hopper) at (-1.8,-1.2) {grasshopper};\\node (frog) at (-2.2,-0.2) {frog};\\node (snake) at (-1.2,0.9) {snake};\\node (hawk) at (0.2,1.7) {hawk};\\node (mouse) at (1.5,-0.4) {mouse};\\draw[->,thick] (rice) -- (hopper);\\draw[->,thick] (hopper) -- (frog);\\draw[->,thick] (frog) -- (snake);\\draw[->,thick] (snake) -- (hawk);\\draw[->,thick] (rice) -- (mouse);\\draw[->,thick] (mouse) -- (hawk);\\draw[->,thick] (mouse) -- (snake);\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interlinked paths (rice to grasshopper to frog to snake to hawk, and rice to mouse linked to hawk and snake) form a food web, not a single linear food chain. Arrow presence alone, bottom placement of rice, or missing producer/consumer words do not decide the label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": "Feeding diagram with interlinked paths among rice plant, grasshopper, frog, snake, mouse, and hawk."
+  }
+}

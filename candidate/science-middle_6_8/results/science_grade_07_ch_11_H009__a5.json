@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zara's school van has AMBULANCE lettering painted in reverse on the front so drivers ahead can read it in their rear-view mirrors. She faces a plane mirror, raises her right hand, and wears a badge with an upward-pointing arrow.\n\nWhich claims correctly apply lateral inversion? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "In the plane mirror, her raised right hand appears as a raised left hand."
+    },
+    {
+      "id": "B",
+      "text": "The reversed AMBULANCE lettering reads as AMBULANCE in a rear-view mirror."
+    },
+    {
+      "id": "C",
+      "text": "The upward-pointing arrow on her badge points downward in the plane mirror."
+    },
+    {
+      "id": "D",
+      "text": "Ordinary forward AMBULANCE lettering reads normally as AMBULANCE in the rear-view mirror."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lateral inversion swaps left and right, so a raised right hand looks like a raised left hand, and reversed AMBULANCE lettering reads correctly in a mirror. Up-down is not swapped that way, and ordinary forward lettering does not read normally in the rear-view mirror.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Alok starts with the $2$-digit number $29$. He reverses the digits and adds, then repeats reverse-and-add until he should stop.\n\nWhich claim applies the process correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Form $29+92=121$; $121$ is a palindrome, so stop at $121$."
+    },
+    {
+      "id": "B",
+      "text": "Form $29+92=121$ and keep reverse-and-adding past $121$."
+    },
+    {
+      "id": "C",
+      "text": "Treat $121$ as the starting number and reverse-and-add to recover $29$."
+    },
+    {
+      "id": "D",
+      "text": "Find $121$ by dividing $29$ by $2$ instead of adding the reverse."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "29+92=121 is already a palindrome, so the process stops. Continuing past 121 omits the stop rule. Starting from 121 to recover 29 reverses the process direction. Dividing instead of reverse-and-add confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

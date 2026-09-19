@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Imran checks a flat card cut-out of six equal squares joined edge-to-edge in a straight row of four with one square attached above the second square and one square attached below the third square.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides whether this arrangement is a valid mathematical net for a cube?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a valid cube net: the six squares can fold without overlap into the six faces of a cube, and joining flaps are not counted as faces."
+        },
+        {
+          "id": "B",
+          "text": "Accept it as a net just because it has six squares, even if those squares would overlap when folded."
+        },
+        {
+          "id": "C",
+          "text": "Count a cardboard joining flap as a seventh face of the mathematical net."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A mathematical net must fold into the solid without face overlap; flaps used only for joining are not faces of the net. This hexomino folds to a cube."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The described hexomino is a known valid cube net. Counting six faces alone without foldability, or counting a joining flap as a face, both miss the net hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

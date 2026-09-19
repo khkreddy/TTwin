@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Urvashi reads the graph of goals scored on four days. The vertical axis is labelled goals with marks $0,2,4,6,8,10$, and the bars show Mon $4$, Tue $8$, Wed $2$, Thu $6$.\n\nWhich two claims correctly interpret the graph?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "First note the axes, scale, and bar heights, then conclude that Tue has the most goals among the four days."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the units on the vertical axis, and stop before reading the bars."
+    },
+    {
+      "id": "C",
+      "text": "Tue shows $8$ goals and Wed shows $2$ goals, both tied to the marked scale."
+    },
+    {
+      "id": "D",
+      "text": "Conclude that more goals were scored on Tue because the team trained harder that day."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1.15cm,y=0.35cm,font=\\sffamily\\small]\n  \\draw[line width=0.8pt] (0,0)--(0,12)--(5.2,12)--(5.2,0)--cycle;\n  \\foreach \\y in {0,2,4,6,8,10} {\\draw[gray!55,line width=0.35pt] (0,\\y)--(5.2,\\y); \\node[left] at (0,\\y){\\y};}\n  \\node[rotate=90,above] at (-0.85,6){goals};\n  \\fill[gray!35] (0.55,0) rectangle (1.35,4);\n  \\fill[gray!35] (1.75,0) rectangle (2.55,8);\n  \\fill[gray!35] (2.95,0) rectangle (3.75,2);\n  \\fill[gray!35] (4.15,0) rectangle (4.95,6);\n  \\node[below] at (0.95,-0.35){Mon};\n  \\node[below] at (2.15,-0.35){Tue};\n  \\node[below] at (3.35,-0.35){Wed};\n  \\node[below] at (4.55,-0.35){Thu};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interpretation first reads axes, scale, and bar heights, then states only what those observations support: Tue is highest at $8$, Wed is $2$. Stopping at the axis label, or adding an unsupported causal claim, leaves that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle rods as a four-day bar graph of goals with scale 0..10."
+  }
+}

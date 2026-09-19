@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema wants to decide whether shelf A (about $2\\,400$ books) plus shelf B (about $2\\,300$ books) is near $5\\,000$, before exact addition.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer a sum and stop without estimating."
+    },
+    {
+      "id": "B",
+      "text": "Approximate $2\\,400+2\\,300$ as about $4\\,700$ and judge that as near $5\\,000$."
+    },
+    {
+      "id": "C",
+      "text": "Use rounded values to decide nearness before exact addition."
+    },
+    {
+      "id": "D",
+      "text": "Decide each shelf holds about $5\\,000$ books because their combined total is near $5\\,000$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2,400+2,300≈4,700, which is near 5,000; rounded values settle nearness before exact work. Naming only “sum” substitutes a label. Taking each shelf as 5,000 because the total is near 5,000 reverses part and whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

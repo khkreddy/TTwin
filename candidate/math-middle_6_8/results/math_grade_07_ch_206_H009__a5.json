@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vikram wants to cover a $4$ by $5$ grid of unit squares with $2$ by $1$ tiles. Tiles must not overlap and must not leave gaps.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides whether the grid can be tiled?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes. The grid has $20$ unit squares, and each column of height $4$ can be filled with two vertical $2$ by $1$ tiles."
+        },
+        {
+          "id": "B",
+          "text": "No. Any grid with a side of length $5$ cannot be tiled, even when the total number of squares is even."
+        },
+        {
+          "id": "C",
+          "text": "Yes, because every rectangle of unit squares can be tiled, with no check of area parity or a row-or-column plan."
+        },
+        {
+          "id": "D",
+          "text": "Call the tiling decision the label unit squares on the grid, and stop there."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The grid has $20$ squares (even). Height $4$ is even, so each of the five columns can be filled with two vertical $2\\times 1$ tiles."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Even area plus an even side gives an explicit column tiling. Rejecting because one side is $5$, claiming every rectangle tiles, or naming only \"unit squares\" all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Navya has a metal bar with clear length, width, and height. Kabir has an irregular clay lump. A measuring cylinder with water is on the bench. Each needs the volume of their object.\n\nWhich claims correctly match object to volume method? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Navya can find the bar's volume as length times width times height."
+    },
+    {
+      "id": "B",
+      "text": "Kabir should use length times width times height on the clay lump because volume always needs three edge lengths."
+    },
+    {
+      "id": "C",
+      "text": "Kabir can find the clay lump's volume from the rise in water level in the measuring cylinder."
+    },
+    {
+      "id": "D",
+      "text": "Navya must ignore the bar's edges and use only water displacement, because every solid needs the cylinder."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A regular bar with measurable edges uses l×w×h. An irregular clay lump needs water displacement. Forcing three edges on an irregular solid, or forcing displacement on a measurable cuboid, misapplies the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

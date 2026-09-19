@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya churns a bowl of fresh curd with a hand churner. Fatty lumps gather, and a thin liquid remains.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The fatty lumps obtained by churning the curd are butter."
+    },
+    {
+      "id": "B",
+      "text": "The fatty lumps obtained by churning the curd are buttermilk."
+    },
+    {
+      "id": "C",
+      "text": "Churning is a suitable method to obtain butter from curd."
+    },
+    {
+      "id": "D",
+      "text": "The thin liquid left after churning is butter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Churning separates butter as fatty lumps from curd; the remaining liquid is buttermilk, not butter. Swapping the names of the lumps and the liquid is the common mix-up.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

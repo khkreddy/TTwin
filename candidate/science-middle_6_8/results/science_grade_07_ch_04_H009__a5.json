@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Pihu compares safe lab storage. Sodium reacts vigorously with air and water. Phosphorus catches fire when exposed to air. Sulfur placed in water shows no special reaction for ordinary storage.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Sodium is stored in kerosene to keep it away from air and water."
+    },
+    {
+      "id": "2",
+      "text": "Phosphorus is stored under water because it catches fire when exposed to air."
+    },
+    {
+      "id": "3",
+      "text": "Sulfur must be stored under water because it catches fire when exposed to air."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sodium is kept in kerosene away from air and water. Phosphorus is kept under water because it catches fire in air. Sulfur does not need that water storage for the same air-fire reason.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

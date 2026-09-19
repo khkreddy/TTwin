@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal must compute $5.30-2.47$ by place value.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Align places and subtract: borrow so $5.30-2.47=2.83$."
+    },
+    {
+      "id": "B",
+      "text": "Call the leftover the subtrahend $2.47$."
+    },
+    {
+      "id": "C",
+      "text": "Subtract tenths from tenths and hundredths from hundredths without borrowing when a place is short."
+    },
+    {
+      "id": "D",
+      "text": "Choose $5.30$ because $5.30$ is the larger printed decimal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place-aligned subtraction with borrowing yields 2.83. Naming the subtrahend as the leftover swaps terms. Skipping borrow when a place is short omits the needed condition. Grabbing the larger print is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

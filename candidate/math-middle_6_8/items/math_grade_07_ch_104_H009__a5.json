@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_07/ch_104/H009",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_07/ch_104/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_104/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_104:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_104",
+    "chapter_label": "math/grade_07/ch_104",
+    "subtopic_id": "math/grade_07/ch_104/H009",
+    "stem": "Lalit looks at the diagram of a library shelf-number grid. Each entry increases by $1$ across a row and by $8$ down a column. He claims that in any $2\\times 2$ block the two diagonal sums are equal, for every such block.\n\nWhich plan correctly proves that the relation always holds?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Let the top-left entry be $n$. The block is $n$, $n+1$, $n+8$, $n+9$; both diagonals equal $2n+9$, so the relation holds for every $n$.",
+      "B": "Check three sample blocks and stop, skipping a letter-number reference entry with the fixed $+1$ and $+8$ offsets.",
+      "C": "Treat the equal diagonal sums as deciding which number must sit in the top-left cell, instead of proving the sums from a chosen reference entry.",
+      "D": "Use the same letter-number offsets to place beads on a cyclic design circle, beyond proving a shelf-grid relation."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.85cm,y=0.85cm,font=\\sffamily\\small]\n  \\draw[gray!70,line width=0.4pt] (0,0) grid[step=1] (4,3);\n  \\foreach \\x/\\v in {0/11,1/12,2/13,3/14} {\\node at (\\x+0.5,2.5){\\v};}\n  \\foreach \\x/\\v in {0/19,1/20,2/21,3/22} {\\node at (\\x+0.5,1.5){\\v};}\n  \\foreach \\x/\\v in {0/27,1/28,2/29,3/30} {\\node at (\\x+0.5,0.5){\\v};}\n  \\draw[line width=1.2pt] (1,1) rectangle (3,3);\n  \\node[above] at (2,3.05){block};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_104/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

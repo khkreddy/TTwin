@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Yamini's square courtyard tile. Its area is $1296\\,\\mathrm{cm}^{2}$. She writes the prime factorisation $1296 = 2^{4} \\times 3^{4}$ and asks whether $1296$ is a perfect square and, if it is, what its square root is.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$1296$ is a perfect square because the primes split into two identical groups $2^{2} \\times 3^{2}$ and $2^{2} \\times 3^{2}$, so $\\sqrt{1296} = 36$."
+    },
+    {
+      "id": "B",
+      "text": "Report the words factor pair as the square root of $1296$."
+    },
+    {
+      "id": "C",
+      "text": "The square root $36$ produces the prime factorisation $2^{4} \\times 3^{4}$, so she starts from $36$ instead of pairing the primes."
+    },
+    {
+      "id": "D",
+      "text": "Read $1296$ as a perfect cube and take its cube root instead of pairing the prime factors."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick] (0,0) rectangle (3.4,3.4);\n  \\node at (1.7,1.7) {area $1296\\,\\mathrm{cm}^{2}$};\n  \\node[below] at (1.7,0) {side $?$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "All exponents in 2^4×3^4 are even, so the primes pair into two groups each equal to 2^2×3^2=36, and √1296=36. Naming factor pair, starting from the root instead of pairing, or switching to cube roots all miss the perfect-square hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source grid quadrilateral as a labelled square courtyard tile with area 1296 cm²."
+  }
+}

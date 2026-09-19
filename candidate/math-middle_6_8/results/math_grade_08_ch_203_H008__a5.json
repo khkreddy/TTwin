@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Alok fills $\\dfrac{1}{5}$ of a tank in one hour. Kavya fills $\\dfrac{1}{10}$ of the same tank in one hour. They work together on that tank.\n\nWhich claim correctly combines their work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Together they fill $\\dfrac{1}{5}+\\dfrac{1}{10}=\\dfrac{3}{10}$ of the tank each hour, so one full tank takes $\\dfrac{10}{3}$ hours."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the phrase individual rate alone, and stop."
+    },
+    {
+      "id": "C",
+      "text": "The time for one full tank produces their separate hourly rates, so Alok starts from $\\dfrac{10}{3}$ hours instead of adding rates."
+    },
+    {
+      "id": "D",
+      "text": "Combine the rates by the inverse-proportion constant $xy=k$ used for speed–time pairs, instead of adding the hourly shares of the tank."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Add hourly shares 1/5+1/10=3/10, then time for one tank is 10/3 hours. Naming individual rate alone, reversing time into rates, or swapping in inverse-proportion all miss combining shared work by adding rates.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

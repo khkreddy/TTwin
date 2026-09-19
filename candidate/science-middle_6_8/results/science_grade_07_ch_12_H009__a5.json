@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Reyansh's model of a lunar eclipse: the Sun, Earth, and the full Moon in a straight line, with Earth between the Sun and the Moon.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes what is happening?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Earth blocks sunlight from reaching the Moon, so Earth's shadow falls on the Moon."
+        },
+        {
+          "id": "B",
+          "text": "The Moon blocks sunlight from reaching Earth, so the Moon's shadow falls on Earth."
+        },
+        {
+          "id": "C",
+          "text": "Earth and the Moon cast no shadows; the Moon darkens because it turns away from the Sun."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-4.4,0) circle (0.55);\n\\node at (-4.4,-0.95) {Sun};\n\\draw[thick,fill=blue!15] (0,0) circle (0.7);\n\\node at (0,0) {Earth};\n\\fill[gray!50] (3.2,0) circle (0.32);\n\\node at (3.2,-0.75) {Moon};\n\\draw[thick,dashed] (-4.4,0) -- (0,0) -- (3.2,0);\n\\fill[gray!40,opacity=0.55] (2.55,0.55) -- (3.85,0.55) -- (3.85,-0.55) -- (2.55,-0.55) -- cycle;\n\\node at (3.2,1.05) {Earth's shadow};\n\\draw[->,thick] (2.2,0.85) -- (2.7,0.45);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "With Earth between the Sun and the full Moon, Earth stops sunlight and its shadow falls on the Moon."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In this alignment Earth sits between the Sun and the full Moon, so sunlight is stopped and the Moon lies in Earth's shadow. Swapping Moon and Earth describes a solar eclipse instead, and the Moon does not darken by merely turning away.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source lens figure as a Sun–Earth–Moon lunar eclipse line."
+  }
+}

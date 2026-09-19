@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar's rectangular garden is $15$ m by $9$ m. A rectangular path $6$ m by $2$ m lies inside it.\n\nWhich plan finds the uncovered area correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Uncovered area $=15\\times 9-6\\times 2=135-12=123$ square metres."
+    },
+    {
+      "id": "B",
+      "text": "Find only the garden area $15\\times 9$, and stop there."
+    },
+    {
+      "id": "C",
+      "text": "Uncovered area $=6\\times 2-15\\times 9$."
+    },
+    {
+      "id": "D",
+      "text": "Uncovered area $=15\\times 9\\div (6\\times 2)$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remaining area is whole minus the inner path: 135−12=123. Omitting the subtraction drops the inside-path condition. Subtracting whole from path reverses the relation. Dividing confuses the operation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

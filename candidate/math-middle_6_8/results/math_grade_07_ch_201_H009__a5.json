@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Qasim studies triangles $DEF$ and $ABC$. Each is right-angled at $E$ and $B$. Hypotenuse $DF = AC$, and leg $EF = BC$.\n\nWhich two claims correctly decide congruence?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent by RHS: right angle, equal hypotenuses, and one equal corresponding leg."
+    },
+    {
+      "id": "B",
+      "text": "Call the triangles congruent even when either triangle need not be right-angled."
+    },
+    {
+      "id": "C",
+      "text": "Right angle, hypotenuse, and one corresponding leg are enough for these right-angled triangles."
+    },
+    {
+      "id": "D",
+      "text": "Require two equal angles and the included side (ASA) before congruence can be decided here."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "RHS applies: both triangles are right-angled, hypotenuses match, and one corresponding leg matches. Dropping the right-angle condition, or demanding ASA instead, leaves that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishaan sketches a frog's life after a pond visit. He notes eggs in a jelly-like mass, a tadpole stage, a stage that has legs while a tail remains, a froglet, and an adult frog.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the sequence and body changes is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Eggs in jelly, then tadpole, then legs while a tail remains, then froglet, then adult; the tail shortens as the froglet becomes an adult."
+        },
+        {
+          "id": "B",
+          "text": "Eggs in jelly, then tadpole, then legs while a tail remains, then froglet, then adult; the tail grows longer as the froglet becomes an adult."
+        },
+        {
+          "id": "C",
+          "text": "Eggs in jelly, then froglet, then tadpole, then adult; froglets live only in water."
+        },
+        {
+          "id": "D",
+          "text": "Eggs in jelly, then adult frog, then tadpole; the tail shortens as the froglet becomes an adult."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A frog develops from eggs through tadpole and a tailed stage with legs to a froglet and then an adult; the tail shortens rather than lengthens as the froglet becomes an adult."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The correct order is eggs, tadpole, legs with a remaining tail, froglet, adult. The tail shortens toward the adult stage. Growing a longer tail reverses that change. Skipping or reordering stages, or saying froglets live only in water, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

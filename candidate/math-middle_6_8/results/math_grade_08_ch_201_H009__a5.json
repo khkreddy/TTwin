@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz reads: \"This year's rent is $150\\%$ of last year's rent of $\\mathrm{Rs}\\,4000$.\"\n\nWhich claim correctly interprets that statement?",
+  "options": [
+    {
+      "id": "A",
+      "text": "This year's rent is last year's rent plus $50\\%$ of last year's rent, so it equals $\\mathrm{Rs}\\,6000$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the phrase final amount alone, and stop."
+    },
+    {
+      "id": "C",
+      "text": "Treat $150\\%$ of last year's rent as a $150\\%$ increase, giving a final rent of $\\mathrm{Rs}\\,10000$."
+    },
+    {
+      "id": "D",
+      "text": "Use $\\mathrm{Rs}\\,150$ as the new rent, because $150$ is the standout printed number in the percent."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "150% of 4000 means the final amount is 1.5×4000=6000, which is a 50% increase, not a 150% increase. Naming final amount alone or grabbing the printed 150 both miss that reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

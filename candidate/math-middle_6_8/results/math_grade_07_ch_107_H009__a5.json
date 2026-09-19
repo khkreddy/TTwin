@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omar looks at the diagram of triangle $DEF$. Segment $EH$ meets side $DF$ at $H$, and the right-angle mark at $H$ is shown. Point $M$ is the midpoint of $DF$.\n\nWhich claim correctly names $EH$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$EH$ is an altitude from $E$ to base $DF$, because it is perpendicular to $DF$."
+    },
+    {
+      "id": "B",
+      "text": "Call $EH$ an altitude even when $EH$ need not be perpendicular to $DF$."
+    },
+    {
+      "id": "C",
+      "text": "Say the same segment also settles the area formula for every triangle, with no further check."
+    },
+    {
+      "id": "D",
+      "text": "Name $EH$ an altitude because $M$ is labelled on $DF$, using the midpoint mark alone."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (F) at (4.2,0);\n  \\coordinate (E) at (1.4,2.6);\n  \\coordinate (H) at (1.4,0);\n  \\coordinate (M) at (2.1,0);\n  \\draw[line width=1.05pt] (D)--(E)--(F)--cycle;\n  \\draw[line width=0.95pt] (E)--(H);\n  \\draw[line width=0.55pt] (H)--++(0.28,0)--++(0,0.28)--++(-0.28,0);\n  \\fill (H) circle (1.4pt);\n  \\fill (M) circle (1.4pt);\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (F){$F$};\n  \\node[above] at (E){$E$};\n  \\node[below] at (H){$H$};\n  \\node[below] at (M){$M$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An altitude from $E$ to $DF$ is the perpendicular segment from $E$ to that side, so $EH$ with the right-angle mark is the altitude. Dropping perpendicularity, stretching into a general area rule, or using only the midpoint label all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as triangle DEF with altitude EH to DF (right angle at H) and midpoint M on DF."
+  }
+}

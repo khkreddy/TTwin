@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Mehak watches three motions at a school fair.\n\n1 A ceiling-fan blade tip sweeps round and round on a circular path.\n2 A child slides straight down a long slide.\n3 A toy train rolls once around a circular track.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The fan blade tip is in circular motion because its path is circular."
+    },
+    {
+      "id": "2",
+      "text": "The child on the straight slide is also in circular motion."
+    },
+    {
+      "id": "3",
+      "text": "The toy train on the circular track is in circular motion."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Circular motion means the path is circular. The fan tip and the train on the circular track qualify; the straight slide does not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

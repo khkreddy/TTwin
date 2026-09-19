@@ -1,0 +1,92 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_107/H009",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_107/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H009",
+    "stem": "Omar looks at the diagram of triangle $DEF$. Segment $EH$ meets side $DF$ at $H$, and the right-angle mark at $H$ is shown. Point $M$ is the midpoint of $DF$.\n\nWhich claim correctly names $EH$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$EH$ is an altitude from $E$ to base $DF$, because it is perpendicular to $DF$.",
+      "B": "Call $EH$ an altitude even when $EH$ need not be perpendicular to $DF$.",
+      "C": "Say the same segment also settles the area formula for every triangle, with no further check.",
+      "D": "Name $EH$ an altitude because $M$ is labelled on $DF$, using the midpoint mark alone."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (F) at (4.2,0);\n  \\coordinate (E) at (1.4,2.6);\n  \\coordinate (H) at (1.4,0);\n  \\coordinate (M) at (2.1,0);\n  \\draw[line width=1.05pt] (D)--(E)--(F)--cycle;\n  \\draw[line width=0.95pt] (E)--(H);\n  \\draw[line width=0.55pt] (H)--++(0.28,0)--++(0,0.28)--++(-0.28,0);\n  \\fill (H) circle (1.4pt);\n  \\fill (M) circle (1.4pt);\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (F){$F$};\n  \\node[above] at (E){$E$};\n  \\node[below] at (H){$H$};\n  \\node[below] at (M){$M$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

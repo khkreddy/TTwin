@@ -1,0 +1,93 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_08/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_08/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_08/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_08:H009:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-STATES",
+    "chapter_id": "science/grade_06/ch_08",
+    "chapter_label": "A journey through states of water",
+    "subtopic_id": "science/grade_06/ch_08/H009",
+    "stem": "Farhan sees water vapour rise on a warm afternoon. High in the air it cools and forms white clouds. Later rain falls; his book also names hail and snow.\n\nWhich statement best describes how water vapour becomes clouds and then rain, hail, or snow?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Water vapour rises, cools, and condenses into tiny droplets that form clouds; many droplets together can fall as rain, hail, or snow.",
+      "B": "Clouds are made of water vapour, not liquid water droplets.",
+      "C": "Every cloud produces rain as soon as its tiny droplets form.",
+      "D": "A cloud starts raining when it turns dark."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_08/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

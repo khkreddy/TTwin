@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aditya heats dry sugar crystals in the boiling tube shown in the diagram. Water droplets collect on the cooler upper wall, and a black solid remains at the bottom.\n\nWhat does this show about sugar?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sugar is a compound: heating decomposes it into carbon and water, so it contains more than one element."
+    },
+    {
+      "id": "B",
+      "text": "Sugar is an element, because it began as one white solid in the tube."
+    },
+    {
+      "id": "C",
+      "text": "The water droplets came from moist room air, not from the dry sugar."
+    },
+    {
+      "id": "D",
+      "text": "Sugar was already a ready mixture of charcoal and water packed inside the crystals."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily,>=stealth]\\draw[thick] (0,0) -- (0,3.2) arc (180:0:0.55) -- (1.1,0) -- cycle;\\fill[black!70] (0.15,0.1) rectangle (0.95,0.55);\\node at (0.55,0.32) {\\scriptsize sugar};\\draw[thick] (0.15,2.5) -- (0.95,2.5);\\foreach \\x in {0.25,0.45,0.65,0.85} {\\fill[blue!40] (\\x,2.55) circle (1.2pt);}\\node[right] at (1.2,2.55) {\\scriptsize water droplets};\\draw[orange!80!black,thick] (-0.15,-0.55) -- (0.25,-0.15) -- (0.55,-0.55) -- (0.85,-0.15) -- (1.25,-0.55);\\node[below] at (0.55,-0.7) {\\scriptsize flame};\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating dry sugar yields water and a black carbon residue, so sugar contains more than one element and is a compound. A single white look does not make it an element. Droplets come from the heated dry sugar, not from room air. Sugar is not a ready charcoal–water mixture before heating.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": "Boiling tube with dry sugar, flame, upper water droplets, and black residue."
+  }
+}

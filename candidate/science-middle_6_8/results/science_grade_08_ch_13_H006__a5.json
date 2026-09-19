@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Leela reads that Earth behaves like a giant magnet. For homework she must explain why Earth's magnetic field matters for sustaining life, not only for compass directions.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The magnetic field helps push many harmful cosmic-ray and solar-wind particles away from Earth."
+    },
+    {
+      "id": "B",
+      "text": "The magnetic field matters for life only as a compass aid for travellers."
+    },
+    {
+      "id": "C",
+      "text": "By deflecting many harmful space particles, the field helps keep the atmosphere and living things safer."
+    },
+    {
+      "id": "D",
+      "text": "The atmosphere and life first become safe, and only then does Earth gain a magnetic field."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's magnetic field deflects many harmful cosmic-ray and solar-wind particles and thereby helps protect atmosphere and life. Treating it as only a compass aid misses that protective role, and protection does not come before the field exists.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

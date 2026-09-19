@@ -1,0 +1,105 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_12/H009",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_12/H009",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_12/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H009:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H009",
+    "stem": "The diagram shows Reyansh's model of a lunar eclipse: the Sun, Earth, and the full Moon in a straight line, with Earth between the Sun and the Moon.\n\nAnswer both parts.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly describes what is happening?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Earth blocks sunlight from reaching the Moon, so Earth's shadow falls on the Moon."
+          },
+          {
+            "id": "B",
+            "text": "The Moon blocks sunlight from reaching Earth, so the Moon's shadow falls on Earth."
+          },
+          {
+            "id": "C",
+            "text": "Earth and the Moon cast no shadows; the Moon darkens because it turns away from the Sun."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-4.4,0) circle (0.55);\n\\node at (-4.4,-0.95) {Sun};\n\\draw[thick,fill=blue!15] (0,0) circle (0.7);\n\\node at (0,0) {Earth};\n\\fill[gray!50] (3.2,0) circle (0.32);\n\\node at (3.2,-0.75) {Moon};\n\\draw[thick,dashed] (-4.4,0) -- (0,0) -- (3.2,0);\n\\fill[gray!40,opacity=0.55] (2.55,0.55) -- (3.85,0.55) -- (3.85,-0.55) -- (2.55,-0.55) -- cycle;\n\\node at (3.2,1.05) {Earth's shadow};\n\\draw[->,thick] (2.2,0.85) -- (2.7,0.45);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

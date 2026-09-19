@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kiara hangs a bag of flour from a spring balance. The reading shows Earth's pull on the bag. On the bench she also presses a book downward with her hand.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The weight of the bag is Earth's pull on it."
+    },
+    {
+      "id": "B",
+      "text": "Weight is measured in newtons."
+    },
+    {
+      "id": "C",
+      "text": "The unit of weight is the kilogram."
+    },
+    {
+      "id": "D",
+      "text": "The downward push of her hand on the book is the book's weight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Weight is Earth's pull on an object and is measured in newtons. Kilogram is a mass unit, and a hand push on a book is not the book's weight.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

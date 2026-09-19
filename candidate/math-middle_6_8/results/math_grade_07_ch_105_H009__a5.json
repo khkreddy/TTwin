@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Madhav draws transversal $w$ across lines $u$ and $v$. A pair of corresponding angles each measures $55^\\circ$.\n\nWhich two claims are correct?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Equal corresponding angles mean $u \\parallel v$ on the page."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the words parallel lines only, without using the equal $55^\\circ$ corresponding angles as the test."
+    },
+    {
+      "id": "C",
+      "text": "If $u \\parallel v$, then corresponding angles are equal, so the matching angle at the other line is also $55^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "The equal $55^\\circ$ marks decide that transversal $w$ must be drawn before any parallel test can be stated."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal corresponding angles imply $u \\parallel v$, and if the lines are parallel then corresponding angles stay equal at $55^\\circ$. Naming only \"parallel lines\", or treating the equal marks as choosing the transversal first, leaves that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

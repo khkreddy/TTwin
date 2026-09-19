@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_12/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_12/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "surface_feature_capture",
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_12/H008; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_12:H008:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_12",
+    "chapter_label": "Ecosystems and habitats",
+    "subtopic_id": "science/grade_08/ch_12/H008",
+    "stem": "Krish copies the feeding diagram shown below from a Class 8 field booklet.\n\nIs the diagram a food chain or a food web, and why?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A food web, because more than one feeding path links the organisms.",
+      "B": "A food chain, because any diagram with arrows between living things is called a food chain.",
+      "C": "A food chain, because rice is drawn at the bottom so there can be only one sequence.",
+      "D": "Neither, because the labels are organism names rather than the word producer or consumer."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily,>=stealth]\\node (rice) at (0,-2.0) {rice plant};\\node (hopper) at (-1.8,-1.2) {grasshopper};\\node (frog) at (-2.2,-0.2) {frog};\\node (snake) at (-1.2,0.9) {snake};\\node (hawk) at (0.2,1.7) {hawk};\\node (mouse) at (1.5,-0.4) {mouse};\\draw[->,thick] (rice) -- (hopper);\\draw[->,thick] (hopper) -- (frog);\\draw[->,thick] (frog) -- (snake);\\draw[->,thick] (snake) -- (hawk);\\draw[->,thick] (rice) -- (mouse);\\draw[->,thick] (mouse) -- (hawk);\\draw[->,thick] (mouse) -- (snake);\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_12/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

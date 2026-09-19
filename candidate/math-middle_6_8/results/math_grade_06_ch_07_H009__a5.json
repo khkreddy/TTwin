@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bhavna must compute $\\dfrac{5}{8}-\\dfrac{1}{6}$.\n\nWhich two claims subtract the fractions correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer \"same denominator\" and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Rewrite as $\\dfrac{15}{24}-\\dfrac{4}{24}=\\dfrac{11}{24}$."
+    },
+    {
+      "id": "C",
+      "text": "Align to a common denominator, then subtract the numerator counts."
+    },
+    {
+      "id": "D",
+      "text": "First subtract the numerators $5-1$, and only then look for a common denominator."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5/8−1/6 needs a common denominator: 15/24−4/24=11/24. Naming only “same denominator” substitutes a label. Subtracting numerators before aligning reverses the needed order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

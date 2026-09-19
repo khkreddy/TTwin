@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_101/H009",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_101/H009",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": null,
+      "C": null,
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_101/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_101:H009:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_101",
+    "chapter_label": "math/grade_07/ch_101",
+    "subtopic_id": "math/grade_07/ch_101/H009",
+    "stem": "Hema wants to decide whether shelf A (about $2\\,400$ books) plus shelf B (about $2\\,300$ books) is near $5\\,000$, before exact addition.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer a sum and stop without estimating.",
+      "B": "Approximate $2\\,400+2\\,300$ as about $4\\,700$ and judge that as near $5\\,000$.",
+      "C": "Use rounded values to decide nearness before exact addition.",
+      "D": "Decide each shelf holds about $5\\,000$ books because their combined total is near $5\\,000$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_101/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

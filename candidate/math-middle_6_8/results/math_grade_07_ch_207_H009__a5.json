@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wafa solves $5(x+2)=25$. A classmate writes the next line as $5x+2=25$.\n\nWhich claim correctly classifies that step?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The step is mistaken: distributing $5$ must give $5x+10=25$, so leaving $+2$ unchanged does not preserve equality."
+    },
+    {
+      "id": "B",
+      "text": "Accept the step because the final answer might still be $x=3$, without checking this transformation."
+    },
+    {
+      "id": "C",
+      "text": "Treat the finished value of $x$ as choosing whether $5x+2=25$ was a valid line, instead of inspecting the distribution step."
+    },
+    {
+      "id": "D",
+      "text": "Judge the step by whether the handwriting looks neat, without checking signs or brackets."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid step must preserve equality: $5(x+2)=5x+10$. Leaving $+2$ undistributed fails that check. Skipping the step check, reversing final $x$ and the transformation, or judging layout all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya helps with three problems: an ant bite that stings from formic acid, garden soil that tests basic, and factory wastewater that tests strongly acidic before discharge.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A mild base such as baking soda paste can help reduce the acidity of the ant bite."
+    },
+    {
+      "id": "B",
+      "text": "Acid-releasing organic matter can help reduce the basic garden soil."
+    },
+    {
+      "id": "C",
+      "text": "Baking soda should be added to the basic garden soil to fix it."
+    },
+    {
+      "id": "D",
+      "text": "The factory wastewater needs no treatment before discharge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A base opposes an acidic ant bite. Acid-releasing organic matter opposes basic soil. Adding a base to already basic soil reverses the remedy. Strongly acidic factory wastewater still needs treatment before discharge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

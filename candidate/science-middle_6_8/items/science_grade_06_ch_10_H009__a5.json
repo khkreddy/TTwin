@@ -1,0 +1,108 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_10/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_10/H009",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_10/H009; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_10:H009:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_06/ch_10",
+    "chapter_label": "Living creatures: exploring their characteristics",
+    "subtopic_id": "science/grade_06/ch_10/H009",
+    "stem": "Ishaan sketches a frog's life after a pond visit. He notes eggs in a jelly-like mass, a tadpole stage, a stage that has legs while a tail remains, a froglet, and an adult frog.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim about the sequence and body changes is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Eggs in jelly, then tadpole, then legs while a tail remains, then froglet, then adult; the tail shortens as the froglet becomes an adult."
+          },
+          {
+            "id": "B",
+            "text": "Eggs in jelly, then tadpole, then legs while a tail remains, then froglet, then adult; the tail grows longer as the froglet becomes an adult."
+          },
+          {
+            "id": "C",
+            "text": "Eggs in jelly, then froglet, then tadpole, then adult; froglets live only in water."
+          },
+          {
+            "id": "D",
+            "text": "Eggs in jelly, then adult frog, then tadpole; the tail shortens as the froglet becomes an adult."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_10/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

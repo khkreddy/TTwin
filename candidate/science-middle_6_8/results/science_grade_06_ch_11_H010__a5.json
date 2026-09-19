@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Nidhi hears that a large hillside forest near her grandparents' home was cleared for new houses. She thinks about soil quality and living conditions for plants and animals there.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Cutting the forest on a large scale can harm soil quality because plant roots no longer hold the soil."
+    },
+    {
+      "id": "2",
+      "text": "Removing the forest plants and their roots reduces soil washing away because roots loosen the soil."
+    },
+    {
+      "id": "3",
+      "text": "Clearing the forest removes food and shelter for many animals that lived there."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Roots hold soil and prevent washing away; large-scale cutting harms soil and removes food and shelter. Statement 2 reverses that idea, so combinations that include 2 are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

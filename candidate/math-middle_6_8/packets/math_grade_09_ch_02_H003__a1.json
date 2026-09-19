@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:mathnet:0ecq",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:59:53.052Z",
+  "created_at": "2026-09-19T13:03:23.102Z",
   "source": {
     "item_ref": "session:mathnet:0ecq",
     "item_type": "single_mcq",
@@ -79,7 +79,7 @@
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_02. The student must decide: Decide whether a growing numerical or visual pattern is linear and determine its nth-term expression from its constant change. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_09/ch_02. The student must decide: Decide whether a growing numerical or visual pattern is linear and determine its nth-term expression from its constant change. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reas",
     "variation_class": "V3",
     "fidelity_mode": "FAITHFUL_TRANSFER",
     "target_item_type": "preserve",
@@ -114,12 +114,21 @@
       "scope_error",
       "operation_confusion"
     ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
     "option_plan": {
-      "A": "condition_omission",
-      "B": "relationship_reversal",
-      "D": "scope_error",
-      "C": null
+      "mx_allowlist": [
+        "condition_omission",
+        "relationship_reversal",
+        "scope_error",
+        "operation_confusion"
+      ],
+      "bind": "wrong_letters_after_result"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_09/ch_02/H003"
+    "format_rationale": "retarget hinge to math/grade_09/ch_02/H003; do not copy source.key"
   }
 }

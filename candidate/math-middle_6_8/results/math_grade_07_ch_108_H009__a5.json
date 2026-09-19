@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pallavi works out $\\dfrac{5}{6} \\div \\dfrac{3}{4}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply $\\dfrac{5}{6}$ by the reciprocal $\\dfrac{4}{3}$, so $\\dfrac{5}{6} \\div \\dfrac{3}{4} = \\dfrac{5}{6} \\times \\dfrac{4}{3} = \\dfrac{10}{9}$."
+    },
+    {
+      "id": "B",
+      "text": "Keep $\\dfrac{5}{6}$ and multiply by $\\dfrac{3}{4}$ directly, with no reciprocal of the divisor."
+    },
+    {
+      "id": "C",
+      "text": "Treat the reciprocal $\\dfrac{4}{3}$ as choosing the original divisor $\\dfrac{3}{4}$, instead of multiplying the dividend by that reciprocal."
+    },
+    {
+      "id": "D",
+      "text": "Swap the fractions and write $\\dfrac{3}{4} \\div \\dfrac{5}{6}$, as if division order did not matter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To divide by $\\dfrac{3}{4}$, multiply by its reciprocal $\\dfrac{4}{3}$: $\\dfrac{5}{6}\\times\\dfrac{4}{3}=\\dfrac{10}{9}$. Skipping the reciprocal, reversing reciprocal and divisor, or swapping division order all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

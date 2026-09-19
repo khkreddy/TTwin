@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sana builds three garden drainage columns: gravel with wide connected spaces, sand with narrower connected spaces, and clay with tiny poorly connected spaces. She also has pale sand and dark sand with identical pore spaces.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water seeps fastest through the gravel column."
+    },
+    {
+      "id": "B",
+      "text": "Water seeps slower through sand than through gravel, and slowest through clay."
+    },
+    {
+      "id": "C",
+      "text": "Water seeps fastest through clay and slowest through gravel."
+    },
+    {
+      "id": "D",
+      "text": "The dark sand lets water seep faster than the pale sand, even though their pore spaces are the same."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wider, open, connected spaces let water seep faster, so gravel is fastest, sand slower, and clay slowest. Colour alone does not change seepage when pore spaces match.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

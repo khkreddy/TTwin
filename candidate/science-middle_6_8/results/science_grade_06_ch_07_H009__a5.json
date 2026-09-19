@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Nidhi records the daily maximum and minimum outdoor air temperatures for one week in January and again for one week in April.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Maximum and minimum air temperatures usually vary from day to day."
+    },
+    {
+      "id": "2",
+      "text": "Maximum and minimum air temperatures generally rise as summer approaches."
+    },
+    {
+      "id": "3",
+      "text": "From one day to the next, maximum temperatures must rise and minimum temperatures must fall."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Daily maximum and minimum air temperatures usually vary, and they generally rise as summer approaches. They need not move in opposite directions every day.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

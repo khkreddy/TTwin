@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Eklavya converts $25^{\\circ}\\mathrm{C}$ to Fahrenheit. He also converts a length of $4\\,\\mathrm{m}$ to centimetres.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim matches each kind of measurement to the correct conversion relation?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Temperature uses $F=\\frac{9}{5}C+32$, so $25^{\\circ}\\mathrm{C}=77^{\\circ}\\mathrm{F}$; length uses $1\\,\\mathrm{m}=100\\,\\mathrm{cm}$, so $4\\,\\mathrm{m}=400\\,\\mathrm{cm}$."
+        },
+        {
+          "id": "B",
+          "text": "Call the answer the phrase target unit alone, and stop."
+        },
+        {
+          "id": "C",
+          "text": "Convert $25^{\\circ}\\mathrm{C}$ by multiplying by $100$, because $100$ is the standout factor printed near the length conversion."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Celsius–Fahrenheit needs the offset formula F=(9/5)C+32, while metre–centimetre uses the length equivalence 1 m=100 cm. Mixing those relations fails the hinge."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "F=(9/5)*25+32=77 and 4 m=400 cm. Naming target unit alone or borrowing the length factor 100 for temperature both miss matching the conversion to the kind of measurement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}
