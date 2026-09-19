@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chitra compares the decimals $0.58$ and $0.6$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer first unequal digit, without deciding which decimal is larger."
+    },
+    {
+      "id": "B",
+      "text": "Say $0.58 > 0.6$ because $0.58$ has more digits written after the decimal point."
+    },
+    {
+      "id": "C",
+      "text": "Align place values as $0.58$ and $0.60$; in the tenths place $6 > 5$, so $0.6 > 0.58$."
+    },
+    {
+      "id": "D",
+      "text": "Round both to the nearest whole number and compare those integers instead."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compare from the highest place downward: $0.6=0.60$, so tenths $6>5$ and $0.6>0.58$. Naming first unequal digit alone, treating more written digits as larger, or switching to whole-number rounding all miss place-value order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat's triangle has area $24$. One base is $8$ with corresponding height $6$. Another base is $6$; he wants that base's corresponding height $h$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer area expression, without setting two valid base-height expressions equal."
+    },
+    {
+      "id": "B",
+      "text": "Write a second product that uses base $6$ with a length that is not the perpendicular height for that base."
+    },
+    {
+      "id": "C",
+      "text": "Set $\\dfrac{1}{2}\\times 8\\times 6 = \\dfrac{1}{2}\\times 6\\times h$, so $h = 8$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $h = 8$ only because the printed $8$ stands out in the stem, without equating the two area expressions."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One area allows two corresponding base-height pairs: $\\frac12\\cdot8\\cdot6=\\frac12\\cdot6\\cdot h$ gives $h=8$. Naming area expression alone, dropping corresponding height, or grabbing the printed $8$ miss that equality.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

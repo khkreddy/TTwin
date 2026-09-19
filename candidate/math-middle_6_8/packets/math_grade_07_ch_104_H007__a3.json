@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T07:13:11.381Z",
+  "source": {
+    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+      },
+      {
+        "id": "B",
+        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
+      },
+      {
+        "id": "C",
+        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
+      },
+      {
+        "id": "D",
+        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_104/H007",
+      "unit_id": "math/grade_07/ch_104/H007",
+      "title": "How can a growing pattern or number machine be turned into a formula that works for any input or step?",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "growing pattern still holds here even though For Step y in a growing pattern, the number of increases after Step 1 is y - 1 is missing from the stem — on the item about How can a growing pattern or number machine be turned."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "General formula is what produces observed inputs or steps, so the usual direction of this relation is run backwards — on the item about How can a growing pattern or number machine be turned."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The growing pattern rule also covers this: cyclic remainder patterns, so it is not an exception — on the item about How can a growing pattern or number machine be turned."
+      }
+    ],
+    "enrichment": "A formula for a pattern comes from the rule that produces every output: repeated growth can be written using the starting amount and the number of increases, and a number machine formula must apply the same operations to each input pair.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_104. The student must decide: How can a growing pattern or number machine be turned into a formula that works for any input or step? Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_104/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_104/H007"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri compares the algebraic expressions $2(n+3)$ and $2n+6$.\n\nWhen may she treat them as equal?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call them \"same value\" as a label only, without checking values of $n$ or rewriting one expression into the other."
+    },
+    {
+      "id": "B",
+      "text": "Treat them as equal after checking only $n=1$, skipping that equality must hold for every value of $n$ (or by a valid rewrite)."
+    },
+    {
+      "id": "C",
+      "text": "They are equal: distribute to get $2(n+3)=2n+6$, so both give the same value for every $n$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same equality test to decide whether two unrelated geometric figures are congruent."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two expressions are equal when a valid rewrite makes them identical or they match for every letter-number value: $2(n+3)=2n+6$. Relabeling as \"same value\", checking only one $n$, or stretching the test to geometry congruence all leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

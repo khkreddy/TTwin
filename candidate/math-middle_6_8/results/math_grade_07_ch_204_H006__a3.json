@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ekta asks whether $\\dfrac{3}{4}$ can be written as a terminating decimal by finding an equivalent fraction with denominator $10$, $100$, $1000$, and so on.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $0.3$ from the numerator $3$ alone, without making an equivalent fraction whose denominator is $10$, $100$, or $1000$."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $0.75$ is what creates the equivalent fraction with denominator $100$, instead of building that equivalent first."
+    },
+    {
+      "id": "C",
+      "text": "Yes: multiply numerator and denominator by $25$ to get $\\dfrac{75}{100}=0.75$, a terminating decimal."
+    },
+    {
+      "id": "D",
+      "text": "Apply the same denominator-$10/100/1000$ rewrite to convert a ratio of map lengths, beyond this fraction-to-decimal hinge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A terminating decimal comes from an equivalent fraction with denominator $10$, $100$, $1000$, …: $\\frac{3}{4}=\\frac{75}{100}=0.75$. Skipping the equivalent-denominator step, reversing decimal and equivalent, or stretching the rule to map lengths all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

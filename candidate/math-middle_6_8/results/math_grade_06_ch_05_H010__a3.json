@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ekta writes $60 = 6 \\times 10$ and wants the prime factorisation of $60$ by breaking composite factors until only primes remain.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the finished answer \"prime factor\" only, without writing the full product of primes for $60$."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $2 \\times 2 \\times 3 \\times 5$ is what creates the breaking of $6$ and $10$, instead of breaking those composites first."
+    },
+    {
+      "id": "C",
+      "text": "Replace $6$ by $2 \\times 3$ and $10$ by $2 \\times 5$, so $60 = 2 \\times 2 \\times 3 \\times 5$ with only primes left."
+    },
+    {
+      "id": "D",
+      "text": "Fill a different prime product-grid puzzle for every row and column, and treat that puzzle as this factor-breaking of $60$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Prime factorisation keeps replacing each composite factor until only primes remain: $60=2\\times2\\times3\\times5$. Naming only \"prime factor\", reversing product and breaking, or swapping in a product-grid puzzle all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

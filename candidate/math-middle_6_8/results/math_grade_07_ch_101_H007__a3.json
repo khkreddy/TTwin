@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri's calculator starts at $0$ and has only $+1$, $+10$, $+100$, and $+1000$ buttons. She wants the display to show exactly $304$ with the fewest clicks.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Press $+100$ three times and stop, skipping the ones-place clicks still needed for $304$."
+    },
+    {
+      "id": "B",
+      "text": "Also allow a multiply button or other operations, beyond using only the powers-of-ten buttons from $0$."
+    },
+    {
+      "id": "C",
+      "text": "Use place value: three $+100$ clicks and four $+1$ clicks, so $3+4=7$ clicks total (the digit sum)."
+    },
+    {
+      "id": "D",
+      "text": "Press $+1$ exactly $304$ times only because $304$ is the printed target on the display."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fewest clicks equal the digit sum in the place-value breakdown: $304$ needs $3+4=7$ clicks. Stopping after hundreds, inventing other operations, or tapping $+1$ thrice-hundred-four times all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

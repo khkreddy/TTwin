@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_105/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_105/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H006"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H006:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H006",
+    "stem": "Uday studies the figure. Lines $p$ and $q$ each carry a single arrow mark. Lines $r$ and $s$ meet with a small square at the meeting point.\n\nWhich reading of the marks is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the marks labels only, without saying what parallel or perpendicular relation they show.",
+      "B": "Treat the small square as marking any acute angle, skipping that it marks a right angle.",
+      "C": "The matching single arrow marks show $p \\parallel q$, and the small square shows that $r$ is perpendicular to $s$.",
+      "D": "Say that drawing the arrow marks is what creates lines $p$ and $q$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85]\n  \\draw[thick] (0,2.2) -- (4.2,2.2) node[right] {$p$};\n  \\draw[thick] (0,1.2) -- (4.2,1.2) node[right] {$q$};\n  \\draw[->,thick] (1.8,2.2) -- (2.2,2.2);\n  \\draw[->,thick] (1.8,1.2) -- (2.2,1.2);\n  \\draw[thick] (0.5,-0.2) -- (3.5,-0.2) node[right] {$r$};\n  \\draw[thick] (2,-1.5) -- (2,1.0) node[above] {$s$};\n  \\draw (2,-0.2) rectangle (2.25,0.05);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

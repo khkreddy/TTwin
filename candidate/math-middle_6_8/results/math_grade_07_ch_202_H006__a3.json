@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena models $(-3)\\times(+4)$ with a token bag that starts empty. Positive tokens are $+1$ and negative tokens are $-1$.\n\nWhich interpretation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer multiplicand only, without saying whether the multiplier places or removes tokens."
+    },
+    {
+      "id": "B",
+      "text": "Remove four groups of three positive tokens even though the multiplier is negative and the multiplicand is $+4$, skipping the signed roles."
+    },
+    {
+      "id": "C",
+      "text": "The negative multiplier removes the multiplicand's tokens repeatedly: remove $3$ groups of four $+1$ tokens (using zero pairs as needed), matching $(-3)\\times(+4)$."
+    },
+    {
+      "id": "D",
+      "text": "Also treat the same bag moves as settling how to add $(-3)+(+4)$ on a number line, beyond this multiplication model."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A negative multiplier removes the multiplicand's tokens repeatedly from an empty bag: here remove three groups of four $+1$ tokens. Naming only multiplicand, dropping the signed place/remove roles, or stretching the model into addition all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

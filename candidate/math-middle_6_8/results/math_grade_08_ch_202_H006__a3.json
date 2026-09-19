@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena has a triangle with a right angle at $C$, and side lengths $a=BC$, $b=AC$, and $c=AB$.\n\nWhich claim applies $a^{2}+b^{2}=c^{2}$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $a^{2}+b^{2}=c^{2}$ for the side lengths even when angle $C$ is not a right angle."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $a^{2}+b^{2}=c^{2}$ is what creates the right angle at $C$, instead of using the right angle to name the hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "Because $\\angle C=90^{\\circ}$, the hypotenuse is $AB=c$ opposite $C$, so $a^{2}+b^{2}=c^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "Also apply $a^{2}+b^{2}=c^{2}$ unchanged to every acute triangle with sides $a$, $b$, and $c$, beyond right-angled triangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pythagoras needs a right angle: the hypotenuse is opposite that angle, so $a^{2}+b^{2}=c^{2}$ with $c=AB$. Dropping the right-angle condition, reversing equation and right angle, or stretching to acute triangles all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

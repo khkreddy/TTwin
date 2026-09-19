@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Soham's scores are $8$, $9$, $10$, and $40$. He wants a typical value for the main cluster.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the mean as typical for the cluster, skipping that $40$ pulls the mean away from $8$, $9$, and $10$."
+    },
+    {
+      "id": "B",
+      "text": "Say that choosing the median is what creates the outlier $40$."
+    },
+    {
+      "id": "C",
+      "text": "Prefer the median, because $40$ pulls the mean upward away from the cluster $8$, $9$, $10$, while the median stays with that cluster."
+    },
+    {
+      "id": "D",
+      "text": "Use the same median-over-mean story for a list with no outlier, as if every data set needed it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An extreme high value lifts the mean off the main cluster, while the median can stay with $8$, $9$, and $10$. Ignoring that pull, reversing median and outlier, or applying the story with no outlier all miss when the median is the better typical value.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

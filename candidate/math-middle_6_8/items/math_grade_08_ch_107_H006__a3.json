@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_107/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_107/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "relationship_reversal",
+      "D": "mechanism_conflation",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_107/H006"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_107:H006:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-RATIO",
+    "chapter_id": "math/grade_08/ch_107",
+    "chapter_label": "math/grade_08/ch_107",
+    "subtopic_id": "math/grade_08/ch_107/H006",
+    "stem": "Deepak knows a job takes $6$ workers $8$ days. He wants how many days $12$ workers need for the same job.\n\nWhich claim is correct before any Rule-of-Three calculation?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer Rule of Three, without deciding whether the situation is directly proportional.",
+      "B": "Say that applying the Rule of Three is what creates a direct-proportion relationship.",
+      "C": "Do not treat it as direct proportion: more workers means fewer days for the same job, so the direct Rule of Three does not apply.",
+      "D": "Divide the workforce in the ratio $6:12$ as if sharing a whole in a ratio were the same decision."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_107/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

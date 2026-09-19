@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Deepak knows a job takes $6$ workers $8$ days. He wants how many days $12$ workers need for the same job.\n\nWhich claim is correct before any Rule-of-Three calculation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer Rule of Three, without deciding whether the situation is directly proportional."
+    },
+    {
+      "id": "B",
+      "text": "Say that applying the Rule of Three is what creates a direct-proportion relationship."
+    },
+    {
+      "id": "C",
+      "text": "Do not treat it as direct proportion: more workers means fewer days for the same job, so the direct Rule of Three does not apply."
+    },
+    {
+      "id": "D",
+      "text": "Divide the workforce in the ratio $6:12$ as if sharing a whole in a ratio were the same decision."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Direct Rule of Three needs quantities that scale the same way; workers and days for a fixed job move oppositely. Naming Rule of Three alone, reversing rule and proportion, or swapping in ratio-division all miss that classify step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat must locate a point that is $5$ cm from point $B$ and $5$ cm from point $C$.\n\nWhich plan finds that point correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer point $B$, without locating an intersection of equal-radius arcs."
+    },
+    {
+      "id": "B",
+      "text": "Say that the intersection point is what creates the given points $B$ and $C$."
+    },
+    {
+      "id": "C",
+      "text": "Draw an arc of radius $5$ cm centred at $B$ and an arc of radius $5$ cm centred at $C$; a required point is their intersection."
+    },
+    {
+      "id": "D",
+      "text": "Choose a point only because the printed length $5$ cm stands out, without drawing the equal-radius arcs."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A point $5$ cm from both $B$ and $C$ lies at an intersection of the two radius-$5$ arcs. Naming point $B$ alone, reversing intersection and given points, or grabbing the printed $5$ cm all miss that locus.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

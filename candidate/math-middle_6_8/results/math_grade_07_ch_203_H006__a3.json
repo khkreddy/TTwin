@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Asha hears two bells: one every $4$ minutes and one every $6$ minutes. They ring together at $9{:}00$. She wants the next time they ring together.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name any common multiple such as $24$ minutes, skipping that the earliest common ring is the LCM."
+    },
+    {
+      "id": "B",
+      "text": "Replace the common-multiple question with a full prime-factor write-up used only to name an HCF."
+    },
+    {
+      "id": "C",
+      "text": "The first common ring is after $\\operatorname{lcm}(4,6)=12$ minutes, so at $9{:}12$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $4$ minutes only because the printed number $4$ stands out in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The earliest common call-out is the LCM of the step sizes: $\\operatorname{lcm}(4,6)=12$. Taking a later common multiple, switching to an HCF-only method, or grabbing the printed $4$ all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

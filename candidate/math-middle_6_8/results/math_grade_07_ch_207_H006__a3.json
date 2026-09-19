@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bharat's number machine multiplies an unknown start by $3$ and then adds $5$, and the display shows $20$.\n\nWhich claim models the situation correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $3x+5$ without equating the expression to the stated total $20$."
+    },
+    {
+      "id": "B",
+      "text": "Write operations multiply-by-$3$ and add-$5$ with no total to equal, as if an equation were still fixed."
+    },
+    {
+      "id": "C",
+      "text": "Let the unknown be $x$; then $3x+5=20$."
+    },
+    {
+      "id": "D",
+      "text": "Pick an equation only because the printed $20$ stands out, without translating the operations on $x$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Assign a letter to the unknown, apply the stated operations, and equate to the total: $3x+5=20$. Dropping the equality, modeling with no total, or grabbing the printed $20$ miss that translation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

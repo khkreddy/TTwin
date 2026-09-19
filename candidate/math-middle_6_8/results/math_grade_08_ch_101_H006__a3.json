@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara tests whether $36$ is a perfect square by subtracting consecutive odd numbers starting from $1$: $36-1=35$, $35-3=32$, $32-5=27$, and so on.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the process odd numbers only, without checking whether the subtractions reach $0$."
+    },
+    {
+      "id": "B",
+      "text": "Stop after any single subtraction, skipping the need to continue through consecutive odds until $0$ or a pass below $0$."
+    },
+    {
+      "id": "C",
+      "text": "Keep subtracting $1$, $3$, $5$, $\\ldots$ in order; reaching exactly $0$ after six steps shows $36=6^{2}$."
+    },
+    {
+      "id": "D",
+      "text": "Decide from the printed digit $6$ in $36$ alone, without the odd-number test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Subtracting consecutive odds from $1$ reaches $0$ exactly when the start is a perfect square; for $36$ that happens after six steps. Naming odds alone, stopping early, or grabbing a printed digit all miss that recognition test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

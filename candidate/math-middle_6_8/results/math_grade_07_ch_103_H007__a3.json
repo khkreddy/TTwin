@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zaid must choose which of $2.4$, $2.8$, and $3.1$ is closest to the target $2.75$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer distance only, without comparing each option to $2.75$."
+    },
+    {
+      "id": "B",
+      "text": "Say that naming $2.8$ as closest is what creates the target $2.75$, instead of measuring distances from $2.75$."
+    },
+    {
+      "id": "C",
+      "text": "Compare distances: $|2.4-2.75|=0.35$, $|2.8-2.75|=0.05$, $|3.1-2.75|=0.35$, so $2.8$ is closest."
+    },
+    {
+      "id": "D",
+      "text": "Choose $3.1$ only because $3.1$ is the largest printed option among $2.4$, $2.8$, and $3.1$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Closest means smallest distance on the number line: $2.8$ is $0.05$ from $2.75$. Naming only distance, reversing choice and target, or grabbing the largest printed option all miss that comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

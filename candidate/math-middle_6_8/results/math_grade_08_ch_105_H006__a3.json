@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uday wants to prove that $180$ is divisible by $12$. He knows $12=2^{2}\\times 3$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Check divisibility by $2$ alone and stop, skipping that $12$ also needs the factor $3$ and enough factors of $2$."
+    },
+    {
+      "id": "B",
+      "text": "Say that proving divisibility by $12$ is what creates the prime factors of $12$."
+    },
+    {
+      "id": "C",
+      "text": "Use tests that together supply $2^{2}$ and $3$ — for example divisible by $4$ and by $3$ — because those combine to prove divisible by $12$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same combined-test idea to prove divisibility by a prime such as $7$, where a single prime test already settles it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Divisibility by a composite needs factor tests whose primes together cover the target; $4$ and $3$ cover $2^{2}\\times 3=12$. Checking only $2$, reversing proof and factors, or forcing a combined test onto a prime all miss that requirement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

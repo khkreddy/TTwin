@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Asha starts Kaprekar's $4$-digit routine with $6174$ (not all digits equal). She forms the largest and smallest arrangements of its digits and subtracts.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Form $7641 - 1467 = 6174$, then keep rearranging and subtracting as if the constant had not been reached."
+    },
+    {
+      "id": "B",
+      "text": "Say that reaching $6174$ is what creates the digit arrangements of the starting number."
+    },
+    {
+      "id": "C",
+      "text": "Form $7641 - 1467 = 6174$; the result is again $6174$, so the routine has reached Kaprekar's constant."
+    },
+    {
+      "id": "D",
+      "text": "Repeat only the chapter word constant, without forming largest and smallest arrangements from the digits of $6174$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For $6174$, largest minus smallest is $7641-1467=6174$, so the routine has reached the constant. Continuing after that omits the recognition rule; reversing constant and start, or naming the term alone, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

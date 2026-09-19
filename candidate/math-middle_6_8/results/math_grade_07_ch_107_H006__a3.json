@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Deepak is given included side $BC = 5$ cm with $\\angle B = 40^{\\circ}$ and $\\angle C = 60^{\\circ}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer base, without deciding whether the angle arms can meet to form a triangle."
+    },
+    {
+      "id": "B",
+      "text": "Say that the meeting of the arms is what creates the given angles $40^{\\circ}$ and $60^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "Draw $BC = 5$ cm; mark $40^{\\circ}$ at $B$ and $60^{\\circ}$ at $C$; the arms meet at $A$, and a triangle exists because $40^{\\circ}+60^{\\circ}<180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Decide only from the printed length $5$ cm, without using the two given angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Draw the included side, mark the two angles at its ends, and check $40+60<180$ so the arms meet. Naming base alone, reversing meeting and given angles, or using only the printed $5$ cm miss that construction test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

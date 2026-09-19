@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rina builds a row of squares with matchsticks. Shape $1$ uses $4$ sticks, shape $2$ uses $7$ sticks, and shape $3$ uses $10$ sticks.\n\nWhich countable feature produces the related number sequence $4$, $7$, $10$, $\\ldots$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count sticks on shape $1$ only, then reuse that same count for every later shape."
+    },
+    {
+      "id": "B",
+      "text": "Count every interior angle in any polygon from the chapter, as if that also made this sequence."
+    },
+    {
+      "id": "C",
+      "text": "Count the matchsticks in each whole shape; repeating that same count gives $4$, $7$, $10$, $\\ldots$."
+    },
+    {
+      "id": "D",
+      "text": "Pick the printed numeral $10$ alone because it is the largest number shown."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The number sequence comes from counting the same structural feature in every shape — here, the matchsticks in each whole figure. Reusing only the first count, stretching the count to unrelated polygons, or grabbing the largest printed numeral all miss that link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

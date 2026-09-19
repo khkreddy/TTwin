@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Hassan multiplies $\\dfrac{4}{9} \\times \\dfrac{3}{8}$ and wants to cancel common factors before multiplying.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cancel the two numerators $4$ and $3$ with each other, skipping that cancellation pairs a numerator with a denominator."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing the cancelled product is what creates the common factors in $\\frac{4}{9}$ and $\\frac{3}{8}$, instead of cancelling factors that are already there."
+    },
+    {
+      "id": "C",
+      "text": "Cancel $4$ with $8$ and $3$ with $9$ first: $\\dfrac{1}{3} \\times \\dfrac{1}{2} = \\dfrac{1}{6}$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same cancellation steps when adding $\\frac{4}{9}$ and $\\frac{3}{8}$, beyond this fraction-product hinge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Before multiplying fractions, cancel a numerator with a denominator that shares a factor: $\\frac{4}{9}\\times\\frac{3}{8}=\\frac{1}{6}$. Cancelling two numerators, reversing product and factors, or applying cancellation to addition all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

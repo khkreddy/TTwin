@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Asha drives a fixed distance. She asks how travel time changes when her speed doubles.\n\nWhich claim is correct before finding the new time?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer inverse proportion, without deciding how speed and time are related for the fixed distance."
+    },
+    {
+      "id": "B",
+      "text": "Treat it as direct proportion even though speed and time do not increase together on a fixed distance."
+    },
+    {
+      "id": "C",
+      "text": "Treat it as inverse proportion: for fixed distance, speed $\\times$ time stays constant, so doubling speed halves the time."
+    },
+    {
+      "id": "D",
+      "text": "Say that the inverse relationship is what creates the fixed distance."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For fixed distance, speed and time are inverse ($xy=k$), so doubling speed halves time. Naming inverse alone, forcing direct proportion, or reversing relation and fixed distance miss that classify step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

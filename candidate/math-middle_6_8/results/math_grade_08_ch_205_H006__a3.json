@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Soham's data are $4$, $6$, and $8$, so the mean is $6$. He multiplies every value by $3$.\n\nWhat happens to the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply the mean by $3$ even if only one of the three values were multiplied by $3$."
+    },
+    {
+      "id": "B",
+      "text": "Say that the new mean is what creates the factor $3$ on each value."
+    },
+    {
+      "id": "C",
+      "text": "The new mean is $6\\times 3=18$, because every value was multiplied by $3$."
+    },
+    {
+      "id": "D",
+      "text": "Use the same $\\times 3$ mean rule when every value is instead increased by $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "If every value is multiplied by a fixed number, the mean is multiplied by that same number: $6\\times 3=18$. Applying the rule when only one value changes, reversing mean and factor, or swapping multiply for add all leave that scaling.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veena must measure $\\angle PQR$ with a protractor.\n\nWhich plan measures the angle correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place the protractor on ray $PQ$ and read a scale mark, without putting the center on vertex $Q$."
+    },
+    {
+      "id": "B",
+      "text": "Say that reading a degree number is what creates $\\angle PQR$, instead of aligning the protractor to the arms."
+    },
+    {
+      "id": "C",
+      "text": "Place the center on $Q$, align one arm with the zero-degree line, and read the scale reached by the other arm."
+    },
+    {
+      "id": "D",
+      "text": "After reading $\\angle PQR$, treat that same reading as also fixing every other unmarked angle at $Q$, beyond measuring these two arms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To measure an angle, the protractor center sits on the vertex, one arm aligns with zero, and the other arm is read on the same scale. Skipping the center-on-vertex step, reversing reading and the angle, or stretching one reading to every angle at $Q$ all miss that plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

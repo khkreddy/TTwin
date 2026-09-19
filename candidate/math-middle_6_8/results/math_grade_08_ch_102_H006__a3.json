@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yamini must simplify $3^{4}\\times 2^{4}$.\n\nWhich rewrite is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer same exponent only, without combining the bases."
+    },
+    {
+      "id": "B",
+      "text": "Write $3^{4}\\times 2^{4}=6^{8}$, adding the exponents as if the bases were already the same."
+    },
+    {
+      "id": "C",
+      "text": "Write $3^{4}\\times 2^{4}=(3\\times 2)^{4}=6^{4}$, because the exponents match."
+    },
+    {
+      "id": "D",
+      "text": "Also rewrite $3^{4}+2^{4}$ as $(3+2)^{4}$ by the same base-combining step, beyond products and quotients of matching powers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching exponents multiply (or divide) through the bases: $3^{4}\\times 2^{4}=(3\\times 2)^{4}=6^{4}$. Naming only same exponent, dropping that condition by adding exponents, or stretching the rule to sums all miss that identity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

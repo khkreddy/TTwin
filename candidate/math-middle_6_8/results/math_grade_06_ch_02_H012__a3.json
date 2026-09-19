@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara must construct a $65^\\circ$ angle with ruler and protractor.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the finished drawing protractor angle only, without placing the protractor and marking $65^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "Place the protractor center on the vertex but skip aligning the base arm with the zero mark before reading $65^\\circ$."
+    },
+    {
+      "id": "C",
+      "text": "Choose a vertex and one base arm, seat the protractor center on the vertex, align the base arm with $0^\\circ$, mark $65^\\circ$ on the correct scale, and draw the second arm through that mark."
+    },
+    {
+      "id": "D",
+      "text": "Mark $65$ only because that number is printed in the stem, without using the protractor steps."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Constructing the angle needs vertex, base arm aligned to zero, a mark at $65^\\circ$ on the correct scale, and the second arm through that mark. Naming the tool alone, skipping zero alignment, or grabbing the printed $65$ all miss that construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

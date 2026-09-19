@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yamini has rewritten an expression as the sum of terms $5 + (-3) + 8$.\n\nWhich claim about rearranging is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Swap and group the terms freely even while a subtraction sign still sits between unsigned parts, without first writing signed terms."
+    },
+    {
+      "id": "B",
+      "text": "Also claim that regrouping $(5+(-3))+8$ changes products such as $5\\times(-3)\\times 8$ the same way, as if products followed this sum rule."
+    },
+    {
+      "id": "C",
+      "text": "Once the expression is a sum of terms, any order or grouping of $5$, $-3$, and $8$ keeps the same value, such as $5+8+(-3)$ or $(5+8)+(-3)$."
+    },
+    {
+      "id": "D",
+      "text": "Decide only because $8$ is the largest printed number among $5$, $-3$, and $8$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After subtraction is written as signed terms, those terms may be swapped or grouped without changing the sum. Skipping the signed-term step, stretching the rule to products, or grabbing the largest printed number all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

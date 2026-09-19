@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farid must compute $248 + 175$ on a sparse number line that shows only $0$, $248$, and a few jump marks — not every integer.\n\nWhich plan fits that line?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the method \"large integers\" only, without using jumps from $248$ on the sparse marks."
+    },
+    {
+      "id": "B",
+      "text": "Say that the finished sum $423$ is what creates the sparse jump marks, instead of using those marks to find the sum."
+    },
+    {
+      "id": "C",
+      "text": "From $248$, jump $+100$, then $+70$, then $+5$ (or other jumps that total $+175$) using only the needed marks, landing on $423$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $248$ as the sum only because $248$ is the largest printed mark among $0$, $248$, and the jump labels."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A sparse number line needs only relevant marks and jumps: $248+175=423$. Naming only \"large integers\", reversing sum and marks, or grabbing the largest printed mark all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

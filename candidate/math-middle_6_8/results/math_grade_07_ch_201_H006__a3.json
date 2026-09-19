@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rina compares two triangles that share two pairs of equal corresponding sides and one pair of equal corresponding angles that is not between those sides.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Conclude the triangles must be congruent from those matches alone, skipping that the equal angle is not the included angle."
+    },
+    {
+      "id": "B",
+      "text": "Treat that side-side-angle match as a congruence test for every polygon, not only as a failed triangle test."
+    },
+    {
+      "id": "C",
+      "text": "Those matches do not always guarantee congruence; the same data can fit two non-congruent triangles."
+    },
+    {
+      "id": "D",
+      "text": "Claim congruence only because the word equal is repeated often in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two sides and a non-included equal angle do not force a unique triangle, so congruence is not guaranteed. Treating the matches as enough, stretching the failed test to every polygon, or grabbing a repeated surface word all miss that limit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

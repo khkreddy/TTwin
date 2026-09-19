@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_01/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_01/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H006"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_01:H006:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_06/ch_01",
+    "chapter_label": "math/grade_06/ch_01",
+    "subtopic_id": "math/grade_06/ch_01/H006",
+    "stem": "Rina builds a row of squares with matchsticks. Shape $1$ uses $4$ sticks, shape $2$ uses $7$ sticks, and shape $3$ uses $10$ sticks.\n\nWhich countable feature produces the related number sequence $4$, $7$, $10$, $\\ldots$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Count sticks on shape $1$ only, then reuse that same count for every later shape.",
+      "B": "Count every interior angle in any polygon from the chapter, as if that also made this sequence.",
+      "C": "Count the matchsticks in each whole shape; repeating that same count gives $4$, $7$, $10$, $\\ldots$.",
+      "D": "Pick the printed numeral $10$ alone because it is the largest number shown."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_01/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
