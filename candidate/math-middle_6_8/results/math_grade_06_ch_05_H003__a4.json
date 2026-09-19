@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Reyansh places a treasure on the number $36$ on a number strip. He may jump by a fixed whole-number size from $0$ and wants every landing to hit $36$ exactly.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is $36$, because that is the treasure number itself."
+    },
+    {
+      "id": "B",
+      "text": "Jump size $9$ lands exactly on $36$, because $9$ divides $36$."
+    },
+    {
+      "id": "C",
+      "text": "Jump sizes $1$, $2$, $3$, $4$, $6$, $9$, $12$, $18$, and $36$ all land exactly on $36$."
+    },
+    {
+      "id": "D",
+      "text": "Jump size $36$ is forced, because $36$ is the largest printed mark on the strip."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A jump size works exactly when it is a divisor of 36. Nine divides 36, and the full divisor list is the set in C. Naming the treasure itself or forcing the largest mark alone misses the divisor test.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

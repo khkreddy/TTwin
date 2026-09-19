@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_07/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_07/H008",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_07/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_07:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_07/ch_07",
+    "chapter_label": "Heat transfer",
+    "subtopic_id": "science/grade_07/ch_07/H008",
+    "stem": "Waqar lists stages of the water cycle, starting from the Sun heating water in lakes and from plants releasing water vapour.\n\nWhich two claims correctly sequence the cycle?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Sun-driven evaporation and transpiration, then rising and cooling of water vapour, then condensation into clouds, then precipitation, then return toward water bodies.",
+      "B": "Cooling water vapour forms clouds by evaporation.",
+      "C": "After clouds form, precipitation may fall as rain, snow, or hail before water returns toward water bodies.",
+      "D": "Condensation into clouds causes the rising water vapour to cool."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_07/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

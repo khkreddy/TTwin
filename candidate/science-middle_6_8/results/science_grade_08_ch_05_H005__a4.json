@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly explains the difference?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Friction on the rough cloth is greater because of more surface irregularities, so it opposes the motion more."
+        },
+        {
+          "id": "B",
+          "text": "Friction on the rough cloth pulls the eraser forward and makes it travel farther."
+        },
+        {
+          "id": "C",
+          "text": "Friction acts only on the desk, never on cloth, so the cloth result needs another cause."
+        },
+        {
+          "id": "D",
+          "text": "Friction is greater on the cloth only when the eraser is not touching the cloth."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Avni slides the same eraser across a smooth desk and then across a rough cloth. On the cloth the eraser travels a shorter distance before it stops.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Rougher contact means more irregularities, so friction opposing the slide is greater and the eraser stops sooner."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Friction between surfaces in contact opposes motion and is greater on rougher surfaces. Claiming friction speeds the eraser, never acts on cloth, or acts without contact all miss that one hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

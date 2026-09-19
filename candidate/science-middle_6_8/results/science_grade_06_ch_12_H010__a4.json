@@ -1,0 +1,45 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Gauri's class compares the Moon, the planet Mars, and a human-made weather satellite that orbits Earth.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The Moon is Earth's natural satellite."
+    },
+    {
+      "id": "2",
+      "text": "The Moon is a planet like Mars."
+    },
+    {
+      "id": "3",
+      "text": "The weather satellite is artificial, not a natural satellite like the Moon."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "T"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Moon is Earth's natural satellite, not a planet. Human-made orbiting craft are artificial satellites.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

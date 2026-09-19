@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Trisha has three mixtures to clean: iron nails mixed with sawdust, aluminium foil scraps mixed with plastic beads, and iron nails mixed with iron filings.\n\nWhich claim correctly decides when magnetic separation can be used instead of handpicking?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a magnet for the iron nails in sawdust, because the nails are attracted and the sawdust is not."
+    },
+    {
+      "id": "B",
+      "text": "Use a magnet for the aluminium foil in plastic beads, because aluminium is a metal."
+    },
+    {
+      "id": "C",
+      "text": "Use a magnet for the iron nails mixed with iron filings, because iron is present in the mixture."
+    },
+    {
+      "id": "D",
+      "text": "Use a magnet for every mixture that looks shiny, because shine shows magnetic pieces."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic separation needs one magnetic component and a non-magnetic remainder. Aluminium is metal but not magnetic. Two iron components both stick. Shine is not the attraction test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

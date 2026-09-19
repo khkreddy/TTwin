@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V5",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_05/H003",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_05/H003",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_05/H003"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_05:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_05",
+    "chapter_label": "math/grade_06/ch_05",
+    "subtopic_id": "math/grade_06/ch_05/H003",
+    "stem": "Reyansh places a treasure on the number $36$ on a number strip. He may jump by a fixed whole-number size from $0$ and wants every landing to hit $36$ exactly.\n\nWhich two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The answer is $36$, because that is the treasure number itself.",
+      "B": "Jump size $9$ lands exactly on $36$, because $9$ divides $36$.",
+      "C": "Jump sizes $1$, $2$, $3$, $4$, $6$, $9$, $12$, $18$, and $36$ all land exactly on $36$.",
+      "D": "Jump size $36$ is forced, because $36$ is the largest printed mark on the strip."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_05/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

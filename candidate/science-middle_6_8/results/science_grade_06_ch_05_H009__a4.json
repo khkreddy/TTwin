@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Sohail sits in a moving train. To Sohail, his water bottle on the seat looks still. To Nupur standing on the platform, the same bottle moves past with the train.\n\nWhich claims about motion and rest are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Relative to Sohail, the bottle is at rest."
+    },
+    {
+      "id": "B",
+      "text": "Relative to Nupur on the platform, the bottle is in motion."
+    },
+    {
+      "id": "C",
+      "text": "The bottle cannot be both at rest and in motion; reference points do not matter."
+    },
+    {
+      "id": "D",
+      "text": "Rest and motion are the same for Sohail and for Nupur."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Motion or rest depends on the chosen reference point: still relative to Sohail in the train, moving relative to Nupur on the platform. Dropping the reference, or saying rest and motion are the same for both observers, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_206/H003",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_206/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H003"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_206:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_206",
+    "chapter_label": "math/grade_07/ch_206",
+    "subtopic_id": "math/grade_07/ch_206/H003",
+    "stem": "Ishita looks at the diagram. She must bisect $\\angle XOY$ with ruler and compass. Equal marks show $OA=OB$ on the arms and $AC=BC$ with ray $OC$ drawn.\n\nWhich claim correctly states what that construction produces?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Name the vertex $O$ as the bisector, and treat equal marks on the arms as unnecessary.",
+      "B": "Say that the finished bisector ray is what creates the equal marks $OA$, $OB$, $AC$, and $BC$.",
+      "C": "Ray $OC$ bisects $\\angle XOY$, because the equal marks build congruent triangles that force the two half-angles equal.",
+      "D": "Trace only the printed angle arc at $O$, and treat that printed mark as the bisector."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (O) at (0,0);\n  \\coordinate (X) at (4.6,0);\n  \\coordinate (Y) at (3.2,3.4);\n  \\draw[line width=1.05pt] (O)--(X);\n  \\draw[line width=1.05pt] (O)--(Y);\n  \\node[below left] at (O){$O$};\n  \\node[below] at (X){$X$};\n  \\node[above] at (Y){$Y$};\n  % equal marks A on OX, B on OY\n  \\coordinate (A) at (2.4,0);\n  \\coordinate (B) at (1.68,1.78);\n  \\fill (A) circle (1.5pt);\n  \\fill (B) circle (1.5pt);\n  \\node[below] at (A){$A$};\n  \\node[above left] at (B){$B$};\n  % equal arc ticks suggesting OA=OB\n  \\draw[line width=0.7pt] (0.55,0) arc (0:48:0.55);\n  % point C with AC=BC\n  \\coordinate (C) at (3.1,1.35);\n  \\fill (C) circle (1.5pt);\n  \\node[right] at (C){$C$};\n  \\draw[line width=0.9pt,dashed] (O)--(C);\n  \\node[right] at (3.55,0.85){ray $OC$};\n  % small equal marks on AC, BC (tick pairs)\n  \\draw[line width=0.8pt] (2.7,0.55)--(2.85,0.7);\n  \\draw[line width=0.8pt] (2.55,1.45)--(2.7,1.6);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_206/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

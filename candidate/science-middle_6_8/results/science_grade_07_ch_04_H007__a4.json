@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kian leaves one iron nail in a dry sealed jar of air. He leaves a second iron nail half in water open to air. He also has a third iron nail coated with brown paint.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The nail half in open water can rust because air and water both reach the iron."
+    },
+    {
+      "id": "B",
+      "text": "The brown paint on the third nail can help prevent rust by blocking air and water from the iron."
+    },
+    {
+      "id": "C",
+      "text": "The nail in the dry sealed jar of air will rust because air alone is enough."
+    },
+    {
+      "id": "D",
+      "text": "The brown paint on the third nail is itself rust."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rusting of iron needs both air and water. The open wet nail can rust; a dry air-only jar does not supply water. Paint blocks contact and is not rust.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

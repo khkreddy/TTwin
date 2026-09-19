@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Reyansh is completing a mirror image across a fixed vertical symmetry line. Point $A$ is $3\\,\\mathrm{cm}$ to the left of the line, at a marked height.\n\nWhich two claims correctly place the reflected point $A'$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$A'$ is the name mirror image for the symmetry line itself."
+    },
+    {
+      "id": "B",
+      "text": "$A'$ is $3\\,\\mathrm{cm}$ to the right of the line, at the same height as $A$."
+    },
+    {
+      "id": "C",
+      "text": "$A'$ and $A$ are the same distance from the symmetry line, on opposite sides."
+    },
+    {
+      "id": "D",
+      "text": "First place $A'$, and that placement is what creates the symmetry line."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reflection keeps equal distance from the line on the opposite side at the same height. B and C state that. Naming the line as A' or saying A' creates the line reverses or swaps the roles.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

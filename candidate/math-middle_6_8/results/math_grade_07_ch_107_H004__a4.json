@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Tanya has two sticks of lengths $6\\,\\mathrm{cm}$ and $11\\,\\mathrm{cm}$. She wants a third stick of length $x\\,\\mathrm{cm}$ so the three lengths can form a triangle.\n\nWhich two claims correctly describe the allowed values of $x$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the phrase fixed side lengths, naming that phrase instead of giving a range for $x$."
+    },
+    {
+      "id": "B",
+      "text": "$x$ must satisfy $5 < x < 17$, because $|11-6| < x < 11+6$ with the endpoints excluded."
+    },
+    {
+      "id": "C",
+      "text": "Any length strictly between the difference and the sum of $6$ and $11$ can be the third side."
+    },
+    {
+      "id": "D",
+      "text": "She must first construct the triangle with compass arcs, and only then decide which $x$ values are allowed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Triangle inequality needs |11-6|<x<11+6, so 5<x<17. Naming fixed sides alone, or requiring a compass construction before the range, leave the inequality hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

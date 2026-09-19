@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_01/H005",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_01/H005",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_01/H005"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_01:H005:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S1/H-INQUIRY",
+    "chapter_id": "science/grade_08/ch_01",
+    "chapter_label": "Exploring the inquisitive mind",
+    "subtopic_id": "science/grade_08/ch_01/H005",
+    "stem": "Lavanya watches a puri puff up in hot oil and later notices the Moon's shape change over several nights. She wonders what to do next.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim best says what careful observations can do?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Careful observations can supply evidence that opens further questions and exploration, not only one final answer."
+          },
+          {
+            "id": "B",
+            "text": "Observations count as evidence only when they agree with an explanation she already has."
+          },
+          {
+            "id": "C",
+            "text": "Watching a puri puff in a kitchen cannot start scientific exploration; only laboratory observations can."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_01/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

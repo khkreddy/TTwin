@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Stomata on leaf surfaces are openings that help exchange carbon dioxide and oxygen."
+    },
+    {
+      "id": "2",
+      "text": "Guard cells are the openings that let the gases pass through the leaf surface."
+    },
+    {
+      "id": "3",
+      "text": "Xylem tubes on the leaf surface are the structures that exchange carbon dioxide and oxygen."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Parvez examines leaf surfaces while studying how leaves exchange carbon dioxide and oxygen during photosynthesis. He considers stomata, guard cells, and xylem tubes.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Stomata are the surface openings for CO2 and O2 exchange. Guard cells surround stomata but are not the openings. Xylem transports water, not surface gas exchange.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

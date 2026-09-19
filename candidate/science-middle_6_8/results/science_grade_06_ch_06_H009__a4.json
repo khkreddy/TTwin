@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Nupur has two identical jars. She pours oil into jar M up to a higher mark than into jar N. Volume means the space the oil occupies, not only each jar's full capacity.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Jar M holds a larger volume of oil because the oil occupies more space."
+    },
+    {
+      "id": "B",
+      "text": "Both jars hold equal volumes of oil because they have the same capacity."
+    },
+    {
+      "id": "C",
+      "text": "Jar N holds more oil because more empty space remains above its lower oil mark."
+    },
+    {
+      "id": "D",
+      "text": "The volumes are equal whenever the jars have the same shape."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Volume is the space occupied by the oil. A higher mark means more volume in M. Matching capacity or shape does not force equal filled volumes, and empty space above the lower mark does not mean N holds more oil.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H003",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H003"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H003",
+    "stem": "Ishita looks at the diagram. Straight lines $AB$ and $CD$ cross at $O$. The marked angle $\\angle AOC$ is $72^{\\circ}$, and $p$ labels the angle vertically opposite $\\angle AOC$.\n\nWhich claim correctly gives the measure of $p$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$p = 108^{\\circ}$, treating an adjacent angle on a straight line as if it were the vertically opposite angle.",
+      "B": "$p = 72^{\\circ}$, because vertically opposite angles at the same intersection are equal.",
+      "C": "$p = 72^{\\circ}$, because the angles may be called opposite angles that must sum to $180^{\\circ}$.",
+      "D": "$p = 72^{\\circ}$, only because $72$ is already printed near the crossing."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.6,-1.4)--(5.2,2.0);\n  \\draw[line width=1.05pt] (-0.4,2.2)--(5.0,-1.6);\n  \\fill (2.2,0.3) circle (1.6pt);\n  \\node[above right] at (2.25,0.35){$O$};\n  \\draw[line width=0.7pt] (2.2,0.3) ++(28:0.7) arc (28:148:0.7);\n  \\node at (1.55,1.05){$72^{\\circ}$};\n  \\draw[line width=0.7pt] (2.2,0.3) ++(208:0.7) arc (208:328:0.7);\n  \\node at (2.85,-0.45){$p$};\n  \\node[below left] at (0.1,-0.9){$A$};\n  \\node[above right] at (4.7,1.6){$B$};\n  \\node[above left] at (0.2,1.7){$C$};\n  \\node[below right] at (4.6,-1.2){$D$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

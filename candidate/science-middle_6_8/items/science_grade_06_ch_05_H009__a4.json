@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_05/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_05/H009",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H009"
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_05:H009:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_06/ch_05",
+    "chapter_label": "Measurement of length and motion",
+    "subtopic_id": "science/grade_06/ch_05/H009",
+    "stem": "Sohail sits in a moving train. To Sohail, his water bottle on the seat looks still. To Nupur standing on the platform, the same bottle moves past with the train.\n\nWhich claims about motion and rest are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "Relative to Sohail, the bottle is at rest.",
+      "B": "Relative to Nupur on the platform, the bottle is in motion.",
+      "C": "The bottle cannot be both at rest and in motion; reference points do not matter.",
+      "D": "Rest and motion are the same for Sohail and for Nupur."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_05/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

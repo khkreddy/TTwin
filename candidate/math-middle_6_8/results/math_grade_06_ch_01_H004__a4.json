@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Reyansh builds an $n$-by-$n$ square of unit tiles. He peels it into $n$ nested L-shaped layers: the outermost L uses $2n-1$ tiles, then $2n-3$, and so on down to $1$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly explains why the sum of the first $n$ odd numbers equals $n^{2}$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The $n$-by-$n$ square partitions into those $n$ nested odd L-layers, so $1+3+\\cdots+(2n-1)=n^{2}$."
+        },
+        {
+          "id": "B",
+          "text": "Any collection of odd numbers sums to a square, even when the odds are not the first $n$ consecutive odds from $1$."
+        },
+        {
+          "id": "C",
+          "text": "The same L-layer story also forces the up-and-down sum of ordinary counting numbers to equal $n^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "An $n$-by-$n$ square splits into $n$ nested L-layers whose sizes are the first $n$ odd numbers, so their total is $n^{2}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The square's area equals the sum of those odd L-layers. Skipping the consecutive-from-1 condition, or extending the story to the counting-number sum, misses that hinge.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

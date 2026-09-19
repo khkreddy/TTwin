@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_04/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_04/H008",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H008"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_04:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_04",
+    "chapter_label": "The world of metals and non-metals",
+    "subtopic_id": "science/grade_07/ch_04/H008",
+    "stem": "Trisha burns a strip of magnesium in air and dissolves the white product in water; the solution turns red litmus blue. She also burns sulfur in air and dissolves that product in water; the solution turns blue litmus red.\n\nWhich two claims correctly decide whether each product is basic or acidic?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The magnesium product in water is basic, because red litmus turns blue.",
+      "B": "The magnesium product in water is acidic, because burning in air always makes an acid.",
+      "C": "The sulfur product in water is acidic, because blue litmus turns red.",
+      "D": "Both products are basic, because any substance that burns in air forms a base."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_04/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

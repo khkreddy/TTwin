@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,font=\\sffamily\\small]\n% flat sheet hint\n\\draw[thin,dashed,gray] (-3.2,-0.35) rectangle (3.2,3.4);\n\\node[font=\\footnotesize,gray] at (2.4,-0.55) {flat sheet};\n% mirror\n\\draw[thick] (-2.8,0)--(2.8,0);\n\\foreach \\x in {-2.4,-1.8,-1.2,-0.6,0,0.6,1.2,1.8,2.4} {\n  \\draw[thin] (\\x,0)--++(-0.14,-0.22);\n}\n\\node[font=\\footnotesize] at (2.2,-0.2) {mirror};\n% normal\n\\draw[dashed,thick] (0,0)--(0,3.0);\n\\node[font=\\footnotesize] at (0.55,2.85) {normal};\n% incident\n\\draw[->,thick] (-2.5,2.4)--(0,0);\n\\node[font=\\footnotesize] at (-2.6,2.65) {incident};\n% reflected\n\\draw[->,thick] (0,0)--(2.5,2.4);\n\\node[font=\\footnotesize] at (2.6,2.65) {reflected};\n\\fill (0,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (0.25,-0.35) {O};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Shreya's plane-mirror activity. An incident ray meets the mirror at point O. The dashed line is the normal. The reflected ray leaves O. A flat sheet lies under these rays.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The incident ray, the normal, and the reflected ray all lie in the same plane."
+    },
+    {
+      "id": "B",
+      "text": "The normal is only another name for the incident ray, so only two lines matter."
+    },
+    {
+      "id": "C",
+      "text": "The three lines need not share a plane; only the hatch marks on the mirror matter."
+    },
+    {
+      "id": "D",
+      "text": "The same-plane rule applies only to curved mirrors, not to a plane mirror."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The incident ray, normal, and reflected ray lie in one plane. Treating the normal as the incident ray, judging from hatch marks alone, or limiting the rule to curved mirrors all miss that same-plane hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": "Plane mirror with normal, incident and reflected rays at O on a flat sheet."
+  }
+}

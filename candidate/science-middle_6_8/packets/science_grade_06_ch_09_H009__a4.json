@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m16_qp_22:q28",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:32:54.811Z",
+  "created_at": "2026-09-19T08:49:18.657Z",
   "source": {
-    "item_ref": "session:0620_m16_qp_22:q28",
-    "item_type": "single_mcq",
-    "stem": "One method of preventing the rusting of iron is to keep oxygen away from the surface of the metal.\n\nWhich way of rust prevention does not use this method?",
-    "options": [
-      {
-        "id": "A",
-        "text": "coating the iron with grease"
-      },
-      {
-        "id": "B",
-        "text": "connecting the iron to a more reactive metal"
-      },
-      {
-        "id": "C",
-        "text": "covering the iron with plastic"
-      },
-      {
-        "id": "D",
-        "text": "painting the iron"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_09/H009",
+      "unit_id": "science/grade_06/ch_09/H009",
+      "title": "Decide when churning is the suitable method for obtaining butter or cream from milk products.",
+      "node_labels": [
+        "Mixtures, solutions, pure substances and separation",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -53,27 +41,14 @@
       }
     ],
     "enrichment": "Churning is used to obtain butter from curd and is the method associated with separating cream from milk. Agitating the milk product causes the butter or cream component to separate from the remaining liquid portion. The learner correctly applies this rule: Churning is used to obtain butter from curd and is the method associated with separating cream from milk. Churning means any mixing of a liquid, so it can separate any liquid mixture.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_09/H009",
-      "gate_names": [
-        "term_substitution",
-        "term_substitution",
-        "condition_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student swapping the sibling term “coating the iron with grease” for the required “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student swapping the sibling term “covering the iron with plastic” for the required “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “painting the iron” looked possible instead of “connecting the iron to a more reactive metal”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when churning is the suitable method for obtaining butter or cream from milk products. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when churning is the suitable method for obtaining butter or cream from milk products. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -92,9 +67,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m16_qp_22:q28",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_09/H009",
-    "item_type_target": "preserve",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -103,10 +78,9 @@
       "term_substitution"
     ],
     "option_plan": {
-      "A": "term_substitution",
+      "B": "term_substitution",
       "C": "UNRESOLVED",
-      "D": "UNRESOLVED",
-      "B": null
+      "D": "UNRESOLVED"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_09/H009"
   }

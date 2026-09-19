@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya multiplies $2.5 \\times 0.3$.\n\nWhich method is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $75$ the finished product, and place no decimal point."
+    },
+    {
+      "id": "B",
+      "text": "Multiply $25 \\times 3 = 75$, then place the decimal using only one decimal place, even though $2.5$ and $0.3$ contribute two places in total."
+    },
+    {
+      "id": "C",
+      "text": "Multiply $25 \\times 3 = 75$, then place the decimal point so the product has $2$ decimal places: $0.75$."
+    },
+    {
+      "id": "D",
+      "text": "Say the decimal places in the product are what create the factors $2.5$ and $0.3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "25×3=75 with two decimal places from the factors gives 0.75. Leaving 75 as the product, counting only one place, or reversing that places create the factors miss the place-count rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

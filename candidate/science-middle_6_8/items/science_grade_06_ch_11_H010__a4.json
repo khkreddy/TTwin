@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_11/H010",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_11/H010",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_11/H010"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_11:H010:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-EARTH",
+    "chapter_id": "science/grade_06/ch_11",
+    "chapter_label": "Nature's treasures",
+    "subtopic_id": "science/grade_06/ch_11/H010",
+    "stem": "Inesh hears that a large forest area near his grandparents' farm was cut down. He thinks about soil quality and living conditions for plants and animals in that forest.\n\nWhich claim correctly predicts the likely effect?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Soil may wash away more easily, and living conditions for forest plants and animals become harder.",
+      "B": "Cutting the trees improves soil quality by opening the ground to more sunlight.",
+      "C": "Only the look of the forest changes; soil quality and living conditions stay the same.",
+      "D": "Soil quality improves at once because cut trunks always become rich soil everywhere."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_11/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Trisha walks 400 m to the school gate in 50 s without stopping. On another trip she walks toward the gate but stands still for 10 s at a shop, then continues.\n\nWhich claim correctly calculates speed with its unit?",
+  "options": [
+    {
+      "id": "A",
+      "text": "On the first trip her speed is $8\\,\\mathrm{m/s}$, because $400\\div 50 = 8$."
+    },
+    {
+      "id": "B",
+      "text": "During the 10 s stop her speed is still $8\\,\\mathrm{m/s}$, the same as the first trip."
+    },
+    {
+      "id": "C",
+      "text": "On the first trip her speed is $0.125\\,\\mathrm{m/s}$, because $50\\div 400 = 0.125$."
+    },
+    {
+      "id": "D",
+      "text": "On the first trip her speed is $20000\\,\\mathrm{m/s}$, because $400\\times 50 = 20000$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Speed is distance divided by time for the interval used: 400 m in 50 s gives 8 m/s. That whole-journey value does not apply to a stopped interval.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

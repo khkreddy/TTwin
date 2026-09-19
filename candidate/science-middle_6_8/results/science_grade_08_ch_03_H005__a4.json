@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Dipti learns that a disease spreads when pathogens in an infected person's cough are inhaled by others.\n\nWhich prevention step best matches that spread?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep distance from coughs and use a mask so inhaled droplets are less likely to reach others."
+    },
+    {
+      "id": "B",
+      "text": "Avoiding touching the infected person is enough, because only direct touching spreads this disease."
+    },
+    {
+      "id": "C",
+      "text": "Handwashing alone is enough even when the pathogens travel in inhaled cough droplets."
+    },
+    {
+      "id": "D",
+      "text": "If the cough droplets look clear, no prevention is needed because clear droplets have no pathogens."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Prevention must match the route. Inhaled cough droplets are blocked by distance and masks. Treating this as touch-only, as fixed by handwashing alone, or as judged by how clear droplets look misses the pathogen route.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

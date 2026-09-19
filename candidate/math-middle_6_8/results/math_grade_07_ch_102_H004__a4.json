@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sana studies the expression $57-19$.\n\nWhich two claims correctly identify its terms?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the plus-sign idea the terms, with no named parts of $57-19$."
+    },
+    {
+      "id": "B",
+      "text": "Rewrite as $57+(-19)$; the terms are $57$ and $-19$."
+    },
+    {
+      "id": "C",
+      "text": "The terms are the addends after rewriting the subtraction as addition of the opposite."
+    },
+    {
+      "id": "D",
+      "text": "Report only the printed digits $5$, $7$, $1$, and $9$ as the terms, ignoring how $57-19$ is grouped."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Terms are parts separated by plus after rewriting subtraction as adding the opposite: 57 and -19. Digits alone or an empty plus-sign idea are not the terms.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

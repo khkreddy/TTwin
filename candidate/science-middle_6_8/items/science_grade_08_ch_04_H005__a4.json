@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "relationship_reversal",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H005"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H005:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H005",
+    "stem": "The diagram shows Farid's circuit: a cell, a switch, and a nichrome wire. He closes the switch so current flows for a short time.\n\nWhich claim correctly explains why the nichrome wire becomes warm?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Current through the wire meets resistance, so heat is produced and the wire feels warm.",
+      "B": "The wire becomes warm first, and that warmth then makes the current start to flow.",
+      "C": "Only nichrome becomes warm with current; a copper wire in the same circuit would never warm.",
+      "D": "The wire becomes warm because the current's magnetic field heats the metal."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick,fill=white] (0,1.6) rectangle (1.2,2.2);\n\\node at (0.6,1.9) {cell};\n\\node[font=\\bfseries] at (-0.2,1.9) {$-$};\n\\node[font=\\bfseries] at (1.4,1.9) {$+$};\n% wires and switch\n\\draw[thick] (1.2,1.9)--(2.0,1.9);\n\\fill (2.0,1.9) circle (1.3pt);\n\\draw[thick] (2.0,1.9)--(2.45,2.25);\n\\fill (2.7,1.9) circle (1.3pt);\n\\node[font=\\footnotesize] at (2.35,2.5) {switch};\n\\draw[thick] (2.7,1.9)--(4.2,1.9)--(4.2,0.7)--(0.0,0.7)--(0.0,1.9)--(0.0,1.9);\n% nichrome wire segment (thicker, labelled)\n\\draw[line width=2.2pt,color=black!70] (1.2,0.7)--(3.0,0.7);\n\\node[font=\\footnotesize] at (2.1,0.35) {nichrome wire};\n% warmth marks\n\\draw[thin] (1.6,0.95) .. controls (1.7,1.15) .. (1.55,1.3);\n\\draw[thin] (2.1,0.95) .. controls (2.2,1.2) .. (2.05,1.35);\n\\draw[thin] (2.6,0.95) .. controls (2.7,1.15) .. (2.55,1.3);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

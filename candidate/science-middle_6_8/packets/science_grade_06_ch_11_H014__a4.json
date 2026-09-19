@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_s19_qp_23:q27",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:42:25.716Z",
+  "source": {
+    "item_ref": "session:0620_s19_qp_23:q27",
+    "item_type": "single_mcq",
+    "stem": "Aluminium is used to make containers for storing food.\n\nWhich property makes it suitable for this use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "conducts heat"
+      },
+      {
+        "id": "B",
+        "text": "low density"
+      },
+      {
+        "id": "C",
+        "text": "resists corrosion"
+      },
+      {
+        "id": "D",
+        "text": "shiny surface"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Earth systems, resources and habitability",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Petroleum is renewable."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Forests are non-renewable."
+      }
+    ],
+    "enrichment": "Some natural resources get replenished through natural processes over a reasonable period of time. Fossil fuels take millions of years to form, are limited, get exhausted once used, and are not replenished within a reasonable period of time. If a resource is replenished naturally within a reasonable time, it is renewable; if it is limited, exhausted by use, and not replenished in a reasonable time, it is non-renewable. The learner correctly applies this rule: Some natural resources get replenished through natural processes over a reasonable period of time. Fossil fuels take millions of years to form, are limited, get exhausted once used, and are not replenished within a reasonable period of time. Renewable means useful every day, and non-renewable means not useful.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_11/H014",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “conducts heat” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “low density” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “shiny surface” for the required “resists corrosion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Classify a resource as renewable or non-renewable by using replenishment time and whether it gets exhausted after use. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_s19_qp_23:q27",
+    "hinge": "science/grade_06/ch_11/H014",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "surface_feature_capture",
+      "D": "UNRESOLVED",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_11/H014"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Waqar lists stages of the water cycle, starting from the Sun heating water in lakes and from plants releasing water vapour.\n\nWhich two claims correctly sequence the cycle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sun-driven evaporation and transpiration, then rising and cooling of water vapour, then condensation into clouds, then precipitation, then return toward water bodies."
+    },
+    {
+      "id": "B",
+      "text": "Cooling water vapour forms clouds by evaporation."
+    },
+    {
+      "id": "C",
+      "text": "After clouds form, precipitation may fall as rain, snow, or hail before water returns toward water bodies."
+    },
+    {
+      "id": "D",
+      "text": "Condensation into clouds causes the rising water vapour to cool."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The cycle runs evaporation/transpiration → rise and cool → condensation → precipitation (rain, snow, or hail) → return. Cloud formation is condensation, not evaporation, and cooling causes condensation rather than the reverse.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

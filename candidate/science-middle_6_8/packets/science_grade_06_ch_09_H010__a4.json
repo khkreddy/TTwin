@@ -1,45 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m16_qp_22:q36",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:32:54.845Z",
+  "created_at": "2026-09-19T08:48:19.244Z",
   "source": {
-    "item_ref": "session:0620_m16_qp_22:q36",
-    "item_type": "option_table",
-    "stem": "Which compounds are alkanes?\n\n| compound | W | X | Y | Z | | formula | C₄H₁₀ | C₅H₁₀ | C₆H₁₂ | C₆H₁₄ |",
-    "options": [
-      {
-        "id": "A",
-        "text": "W and X"
-      },
-      {
-        "id": "B",
-        "text": "W and Z"
-      },
-      {
-        "id": "C",
-        "text": "X and Y"
-      },
-      {
-        "id": "D",
-        "text": "Y and Z"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
-    "tables": [
-      "{\"headers\":[\"compound\",\"W\",\"X\",\"Y\",\"Z\"],\"rows\":[[\"formula\",\"C₄H₁₀\",\"C₅H₁₀\",\"C₆H₁₂\",\"C₆H₁₄\"]],\"row_labels\":[\"formula\"],\"caption\":\"\"}"
-    ],
+    "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_09/H010",
+      "unit_id": "science/grade_06/ch_09/H010",
+      "title": "Decide when magnetic separation can be used instead of handpicking.",
+      "node_labels": [
+        "Mixtures, solutions, pure substances and separation",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -70,27 +56,14 @@
       }
     ],
     "enrichment": "Magnetic separation separates magnetic and non-magnetic substances by using a magnet; iron is a common magnetic substance. A magnet attracts the magnetic component, so that component can be removed from the non-magnetic part of the mixture. The learner correctly applies this rule: Magnetic separation separates magnetic and non-magnetic substances by using a magnet; iron is a common magnetic substance. A magnet is just a faster way to pick any visible solid from a mixture.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_09/H010",
-      "gate_names": [
-        "condition_omission",
-        "condition_omission",
-        "condition_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “W and X” looked possible instead of “W and Z”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “X and Y” looked possible instead of “W and Z”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “Y and Z” looked possible instead of “W and Z”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when magnetic separation can be used instead of handpicking. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when magnetic separation can be used instead of handpicking. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -109,9 +82,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m16_qp_22:q36",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_09/H010",
-    "item_type_target": "preserve",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -123,10 +96,9 @@
       "mechanism_conflation"
     ],
     "option_plan": {
-      "A": "term_substitution",
+      "B": "term_substitution",
       "C": "condition_omission",
-      "D": "surface_feature_capture",
-      "B": null
+      "D": "surface_feature_capture"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_09/H010"
   }

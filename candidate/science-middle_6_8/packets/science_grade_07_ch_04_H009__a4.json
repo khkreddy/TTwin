@@ -1,0 +1,133 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0620_m15_qp_12:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:43:24.051Z",
+  "source": {
+    "item_ref": "session:0620_m15_qp_12:q6",
+    "item_type": "option_table",
+    "stem": "Covalent bonds are formed when electrons are ……1…… .\n\nMost covalent compounds have ……2…… electrical conductivity.\n\nWhich words correctly complete gaps 1 and 2?",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 shared; 2 high"
+      },
+      {
+        "id": "B",
+        "text": "1 shared; 2 low"
+      },
+      {
+        "id": "C",
+        "text": "1 transferred; 2 high"
+      },
+      {
+        "id": "D",
+        "text": "1 transferred; 2 low"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"\",\"1\",\"2\"],\"rows\":[[\"A\",\"shared\",\"high\"],[\"B\",\"shared\",\"low\"],[\"C\",\"transferred\",\"high\"],[\"D\",\"transferred\",\"low\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Materials and their properties",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Sulfur must be stored under water because it catches fire when exposed to air."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Sodium can be stored under water to keep air away."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Storing sodium in kerosene makes it react vigorously with air and water."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Sulfur cannot burn in air because it does not react with water."
+      }
+    ],
+    "enrichment": "Sodium is a metal stored in kerosene because it reacts vigorously with oxygen and water and produces much heat. Phosphorus is stored in water because it catches fire when exposed to atmospheric air, while sulfur placed in water shows no reaction. The way a substance reacts with oxygen, air, or water determines the storage condition that prevents dangerous reaction. The learner correctly applies this rule: Sodium is a metal stored in kerosene because it reacts vigorously with oxygen and water and produces much heat. Phosphorus is stored in water because it catches fire when exposed to atmospheric air, while sulfur placed in water shows no reaction. All reactive substances need the same storage liquid; the liquid just keeps them covered.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_04/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “2 high” looked possible instead of “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “2 high” for the required “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “1 transferred” looked possible instead of “1 shared”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When a substance is exposed to air or water, decide whether it must be stored away from one of them because of its reactivity. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0620_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_04/H009",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H009"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Farid reads a honey jar labelled \"pure.\" The ingredients list honey and a small amount of another substance mixed in.\n\nWhich claims match the scientific meaning of a pure substance? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "This jar's contents are not a pure substance in science because more than one substance is present."
+    },
+    {
+      "id": "B",
+      "text": "A consumer label that says pure does not by itself make the contents a pure substance in science."
+    },
+    {
+      "id": "C",
+      "text": "The contents are a pure substance because the label says pure."
+    },
+    {
+      "id": "D",
+      "text": "The contents are a pure substance because the honey looks clear and golden."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In science a pure substance is a single substance; a product labelled pure may still be a mixture. Treating the label or the look alone as proof of purity misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

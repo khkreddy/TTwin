@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ishita looks at the diagram. Straight lines $AB$ and $CD$ cross at $O$. The marked angle $\\angle AOC$ is $72^{\\circ}$, and $p$ labels the angle vertically opposite $\\angle AOC$.\n\nWhich claim correctly gives the measure of $p$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$p = 108^{\\circ}$, treating an adjacent angle on a straight line as if it were the vertically opposite angle."
+    },
+    {
+      "id": "B",
+      "text": "$p = 72^{\\circ}$, because vertically opposite angles at the same intersection are equal."
+    },
+    {
+      "id": "C",
+      "text": "$p = 72^{\\circ}$, because the angles may be called opposite angles that must sum to $180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "$p = 72^{\\circ}$, only because $72$ is already printed near the crossing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.6,-1.4)--(5.2,2.0);\n  \\draw[line width=1.05pt] (-0.4,2.2)--(5.0,-1.6);\n  \\fill (2.2,0.3) circle (1.6pt);\n  \\node[above right] at (2.25,0.35){$O$};\n  \\draw[line width=0.7pt] (2.2,0.3) ++(28:0.7) arc (28:148:0.7);\n  \\node at (1.55,1.05){$72^{\\circ}$};\n  \\draw[line width=0.7pt] (2.2,0.3) ++(208:0.7) arc (208:328:0.7);\n  \\node at (2.85,-0.45){$p$};\n  \\node[below left] at (0.1,-0.9){$A$};\n  \\node[above right] at (4.7,1.6){$B$};\n  \\node[above left] at (0.2,1.7){$C$};\n  \\node[below right] at (4.6,-1.2){$D$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vertically opposite angles at one crossing are equal, so p equals the marked 72°. Using an adjacent straight-line angle, renaming as opposite-that-sum-to-180, or grabbing the printed 72 alone all miss that equality test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as crossing lines AB and CD at O with marked vertically opposite pair 72° and p."
+  }
+}

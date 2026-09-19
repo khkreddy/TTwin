@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Shreya studies a frog that lives in a pond and on the muddy bank, using both water and land. Habitats may be called terrestrial, aquatic, or amphibian. Oil spills later damage the pond.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The frog's habitat is amphibian because it uses both land and water."
+    },
+    {
+      "id": "B",
+      "text": "Damage to the pond can threaten the frog because living things depend on their habitat."
+    },
+    {
+      "id": "C",
+      "text": "The frog's habitat is only aquatic, because it must stay in water all day."
+    },
+    {
+      "id": "D",
+      "text": "An ocean is not a habitat for any living thing."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A frog that uses land and water has an amphibian habitat, and habitat damage threatens living things that depend on it. Forcing only aquatic, or denying that an ocean is a habitat, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

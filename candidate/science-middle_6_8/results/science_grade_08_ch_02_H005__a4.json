@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Parvez compares a long nerve cell that carries messages with muscle cells in the food pipe that help move food.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The nerve cell's elongated shape helps it carry messages over a distance."
+    },
+    {
+      "id": "B",
+      "text": "Muscle cells are shaped and structured so that their contraction helps move food in the food pipe."
+    },
+    {
+      "id": "C",
+      "text": "Carrying messages stretches nerve cells into their long shape."
+    },
+    {
+      "id": "D",
+      "text": "Nerve cells contract to push messages along their length."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cell shape and structure support function: elongated nerve cells carry messages; muscle cells contract to move food. Message-carrying does not create the long shape, and nerve cells do not push messages by contracting.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

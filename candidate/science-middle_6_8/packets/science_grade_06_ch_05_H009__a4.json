@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0625_m15_qp_12:q3",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:22:34.507Z",
+  "created_at": "2026-09-19T08:49:12.485Z",
   "source": {
-    "item_ref": "session:0625_m15_qp_12:q3",
-    "item_type": "single_mcq",
-    "stem": "A car travels 6.0 km along a main road in 6.0 minutes. It then travels 2.0 km along a minor road in 6.0 minutes.\nWhich calculation of average speed for the whole journey is correct?",
-    "options": [
-      {
-        "id": "A",
-        "text": "8.0 ÷ 12.0 = 0.67 km / minute"
-      },
-      {
-        "id": "B",
-        "text": "12.0 ÷ 8.0 = 1.5 km / minute"
-      },
-      {
-        "id": "C",
-        "text": "8.0 + 12.0 = 20 km / minute"
-      },
-      {
-        "id": "D",
-        "text": "8.0 × 12.0 = 96 km / minute"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "A"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_05/H009",
+      "unit_id": "science/grade_06/ch_05/H009",
+      "title": "Decide whether an object is in motion or at rest for a chosen reference point.",
+      "node_labels": [
+        "Describing motion",
+        "Force, motion, magnets and pressure"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -58,27 +46,14 @@
       }
     ],
     "enrichment": "An object is in motion if its position changes with respect to the reference point with time. If its position does not change with respect to the reference point with time, it is at rest. position change with time relative to reference point -> motion; no position change with time relative to reference point -> rest The learner correctly applies this rule: An object is in motion if its position changes with respect to the reference point with time. If its position does not change with respect to the reference point with time, it is at rest. Motion is absolute: if the bus is moving, everything in it is simply moving for every reference point.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_05/H009",
-      "gate_names": [
-        "intermediate_omission",
-        "intermediate_omission",
-        "intermediate_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “12.0 ÷ 8.0 = 1.5 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “8.0 + 12.0 = 20 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “8.0 × 12.0 = 96 km” looked possible instead of “8.0 ÷ 12.0 = 0.67 km”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Decide whether an object is in motion or at rest for a chosen reference point. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Measurement of length and motion. The student must decide: Decide whether an object is in motion or at rest for a chosen reference point. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -97,9 +72,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0625_m15_qp_12:q3",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_05/H009",
-    "item_type_target": "preserve",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -111,8 +86,7 @@
     "option_plan": {
       "B": "condition_omission",
       "C": "relationship_reversal",
-      "D": "UNRESOLVED",
-      "A": null
+      "D": "UNRESOLVED"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H009"
   }

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Mihir meets the compact writings $4n$ and $7(x+2)$ in his algebra notebook.\n\nWhich two claims correctly state how he should read them before any calculation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4n$ names an omitted multiplication sign rather than four times $n$."
+    },
+    {
+      "id": "B",
+      "text": "$4n$ means $4 \\times n$, and $7(x+2)$ means $7$ times the whole of $(x+2)$."
+    },
+    {
+      "id": "C",
+      "text": "The juxtaposition and the brackets both stand for multiplication of the written factors."
+    },
+    {
+      "id": "D",
+      "text": "The value is whichever numeral appears first in the writing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compact forms hide a times sign: $4n$ is $4\\times n$ and $7(x+2)$ multiplies the whole bracket. Calling the answer the omitted-sign label, or grabbing the first numeral, miss that reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

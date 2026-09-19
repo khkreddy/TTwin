@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick,fill=white] (0,1.6) rectangle (1.2,2.2);\n\\node at (0.6,1.9) {cell};\n\\node[font=\\bfseries] at (-0.2,1.9) {$-$};\n\\node[font=\\bfseries] at (1.4,1.9) {$+$};\n% wires and switch\n\\draw[thick] (1.2,1.9)--(2.0,1.9);\n\\fill (2.0,1.9) circle (1.3pt);\n\\draw[thick] (2.0,1.9)--(2.45,2.25);\n\\fill (2.7,1.9) circle (1.3pt);\n\\node[font=\\footnotesize] at (2.35,2.5) {switch};\n\\draw[thick] (2.7,1.9)--(4.2,1.9)--(4.2,0.7)--(0.0,0.7)--(0.0,1.9)--(0.0,1.9);\n% nichrome wire segment (thicker, labelled)\n\\draw[line width=2.2pt,color=black!70] (1.2,0.7)--(3.0,0.7);\n\\node[font=\\footnotesize] at (2.1,0.35) {nichrome wire};\n% warmth marks\n\\draw[thin] (1.6,0.95) .. controls (1.7,1.15) .. (1.55,1.3);\n\\draw[thin] (2.1,0.95) .. controls (2.2,1.2) .. (2.05,1.35);\n\\draw[thin] (2.6,0.95) .. controls (2.7,1.15) .. (2.55,1.3);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Farid's circuit: a cell, a switch, and a nichrome wire. He closes the switch so current flows for a short time.\n\nWhich claim correctly explains why the nichrome wire becomes warm?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Current through the wire meets resistance, so heat is produced and the wire feels warm."
+    },
+    {
+      "id": "B",
+      "text": "The wire becomes warm first, and that warmth then makes the current start to flow."
+    },
+    {
+      "id": "C",
+      "text": "Only nichrome becomes warm with current; a copper wire in the same circuit would never warm."
+    },
+    {
+      "id": "D",
+      "text": "The wire becomes warm because the current's magnetic field heats the metal."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Current in a conductor meets resistance and produces heat, so the nichrome wire warms. Warmth causing current reverses the cause. Restricting heating to nichrome alone, or blaming the magnetic field for the heat, miss the resistance-heating hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": "Closed circuit with cell, switch, and labelled nichrome wire."
+  }
+}

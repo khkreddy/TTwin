@@ -1,0 +1,86 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_12/H009",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_12/H009",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "relationship_reversal",
+      "C": "scope_error",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_12/H009"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_12:H009:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_06/ch_12",
+    "chapter_label": "Beyond Earth",
+    "subtopic_id": "science/grade_06/ch_12/H009",
+    "stem": "Kriti labels three motions: Earth spinning once a day, Earth going around the Sun once a year, and the Moon going around Earth.",
+    "item_type": "three_statement",
+    "options": {},
+    "statements": [
+      {
+        "id": "1",
+        "text": "Earth's daily spin is rotation; Earth's yearly path around the Sun is revolution; the Moon going around Earth is satellite motion."
+      },
+      {
+        "id": "2",
+        "text": "Earth's daily spin is revolution; Earth's yearly path around the Sun is rotation."
+      },
+      {
+        "id": "3",
+        "text": "The Moon going around Earth is not satellite motion because only artificial craft can be satellites."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_12/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

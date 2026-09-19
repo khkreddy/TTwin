@@ -1,45 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m15_qp_12:q6",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:32:54.707Z",
+  "created_at": "2026-09-19T08:48:18.298Z",
   "source": {
-    "item_ref": "session:0620_m15_qp_12:q6",
-    "item_type": "option_table",
-    "stem": "Covalent bonds are formed when electrons are ……1…… .\n\nMost covalent compounds have ……2…… electrical conductivity.\n\nWhich words correctly complete gaps 1 and 2?",
-    "options": [
-      {
-        "id": "A",
-        "text": "1 shared; 2 high"
-      },
-      {
-        "id": "B",
-        "text": "1 shared; 2 low"
-      },
-      {
-        "id": "C",
-        "text": "1 transferred; 2 high"
-      },
-      {
-        "id": "D",
-        "text": "1 transferred; 2 low"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
-    "tables": [
-      "{\"headers\":[\"\",\"1\",\"2\"],\"rows\":[[\"A\",\"shared\",\"high\"],[\"B\",\"shared\",\"low\"],[\"C\",\"transferred\",\"high\"],[\"D\",\"transferred\",\"low\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
-    ],
+    "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_08/H010",
+      "unit_id": "science/grade_06/ch_08/H010",
+      "title": "Decide how water moves between Earth's surface, the atmosphere, and back again in the water cycle.",
+      "node_labels": [
+        "States of matter, particles and water",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -70,27 +56,14 @@
       }
     ],
     "enrichment": "In the water cycle, water from oceans and Earth's surface evaporates into the atmosphere as vapour, returns as rain, hail, or snow, and ultimately flows back to the oceans. Evaporation moves water from the surface to the atmosphere, condensation and precipitation return it to Earth, and flow carries it back toward larger water bodies. The learner correctly applies this rule: In the water cycle, water from oceans and Earth's surface evaporates into the atmosphere as vapour, returns as rain, hail, or snow, and ultimately flows back to the oceans. The water cycle is just rain falling into rivers; the return to atmosphere and back to oceans is not connected.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_08/H010",
-      "gate_names": [
-        "intermediate_omission",
-        "intermediate_omission",
-        "intermediate_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “2 high” looked possible instead of “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student swapping the sibling term “2 high” for the required “2 low”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “1 transferred” looked possible instead of “1 shared”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: A journey through states of water. The student must decide: Decide how water moves between Earth's surface, the atmosphere, and back again in the water cycle. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: A journey through states of water. The student must decide: Decide how water moves between Earth's surface, the atmosphere, and back again in the water cycle. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -109,9 +82,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m15_qp_12:q6",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_08/H010",
-    "item_type_target": "preserve",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -123,10 +96,9 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "term_substitution",
+      "B": "term_substitution",
       "C": "relationship_reversal",
-      "D": "scope_error",
-      "B": null
+      "D": "scope_error"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_08/H010"
   }

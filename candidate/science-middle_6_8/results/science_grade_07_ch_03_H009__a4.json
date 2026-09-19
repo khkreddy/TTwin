@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% wall plate\n\\draw[thick,fill=gray!12] (0,0) rectangle (2.2,2.6);\n\\node at (1.1,2.85) {wall switch};\n% switch rocker\n\\draw[thick,fill=white] (0.55,1.1) rectangle (1.65,1.9);\n\\draw[thick] (0.55,1.5) -- (1.65,1.5);\n\\node at (1.1,0.75) {switch};\n% wet hand approaching\n\\draw[thick,fill=pink!25] (3.0,0.6) .. controls (3.4,1.6) and (3.6,2.0) .. (4.2,2.1)\n  .. controls (4.6,1.7) and (4.5,1.0) .. (4.1,0.55) -- cycle;\n\\node at (4.0,0.25) {hand};\n% water droplets\n\\fill[cyan!60] (3.35,1.55) circle (0.07);\n\\fill[cyan!60] (3.65,1.85) circle (0.06);\n\\fill[cyan!60] (3.95,1.45) circle (0.07);\n\\node at (4.55,1.7) {water};\n% arrow toward switch\n\\draw[thick,->] (2.95,1.5) -- (1.85,1.5);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Nupur at a wall switch after washing; water droplets are still on her hand near the switch.\n\nWhich claim about safety is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "She may touch the switch with wet hands."
+    },
+    {
+      "id": "B",
+      "text": "She must not touch any switch later, even with dry hands during normal use."
+    },
+    {
+      "id": "C",
+      "text": "She should dry her hands before touching the switch."
+    },
+    {
+      "id": "D",
+      "text": "She may touch the switch with wet hands if the switch looks cool and shows no heating."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Do not touch switches or plugs with wet hands; dry first. Wet contact is unsafe even if the switch looks cool. Normal dry-hand use of an intact switch is not banned forever.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source resistance-cylinder circuit into a wall switch with a wet hand approaching."
+  }
+}

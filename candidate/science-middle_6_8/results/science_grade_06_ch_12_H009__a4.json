@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Earth's daily spin is rotation; Earth's yearly path around the Sun is revolution; the Moon going around Earth is satellite motion."
+    },
+    {
+      "id": "2",
+      "text": "Earth's daily spin is revolution; Earth's yearly path around the Sun is rotation."
+    },
+    {
+      "id": "3",
+      "text": "The Moon going around Earth is not satellite motion because only artificial craft can be satellites."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Kriti labels three motions: Earth spinning once a day, Earth going around the Sun once a year, and the Moon going around Earth.",
+  "options": [],
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rotation is the daily spin, revolution is the yearly path around the Sun, and the Moon's path around Earth is satellite motion. Swapping rotation and revolution is wrong; natural moons are satellites too.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

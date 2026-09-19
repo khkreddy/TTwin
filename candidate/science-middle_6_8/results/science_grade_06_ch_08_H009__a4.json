@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kriti watches water vapour rise, cool high in the air, and form white clouds. Later she sees rain; her book also names hail and snow as forms that can fall.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cooling water vapour condenses into tiny liquid droplets that make up clouds."
+    },
+    {
+      "id": "B",
+      "text": "From clouds, water can fall as rain, and in colder conditions as hail or snow."
+    },
+    {
+      "id": "C",
+      "text": "Clouds are only thick patches of water vapour that never become liquid droplets."
+    },
+    {
+      "id": "D",
+      "text": "A cloud rains only because it looks dark from the ground."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water vapour cools and condenses into tiny droplets that form clouds; precipitation can be rain, hail, or snow. Clouds are not uncondensed vapour alone, and darkness from the ground is not what causes rain.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

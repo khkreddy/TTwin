@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Dipti chooses clothes for hot summer days and for cold winter days. She compares light-coloured and dark-coloured cloth in sunlight and notes that some shirts are thin and lightweight.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "In summer, light-coloured clothes are better because they reflect more of the heat that falls on them."
+    },
+    {
+      "id": "B",
+      "text": "In winter, dark-coloured clothes are better because they absorb more of the heat that falls on them."
+    },
+    {
+      "id": "C",
+      "text": "In summer, dark-coloured clothes are better because they reflect more heat."
+    },
+    {
+      "id": "D",
+      "text": "A thin lightweight dark-coloured shirt reflects more heat than a light-coloured shirt because it is lightweight."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light colours mostly reflect incident heat; dark colours mostly absorb it. So light clothes suit summer and dark clothes suit winter. Reversing that mapping, or treating weight as the heat rule, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

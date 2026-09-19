@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Lokesh pours 200 cm³ of water from a tall bottle into a wide tray. The water spreads to take the tray's shape, but its volume stays 200 cm³.\n\nWhich claim explains this?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water particles can move and change places while staying close, so the liquid changes shape but keeps a fixed volume."
+    },
+    {
+      "id": "B",
+      "text": "Water particles are locked in fixed places, so the liquid cannot change shape at all."
+    },
+    {
+      "id": "C",
+      "text": "Water particles fly far apart and fill every corner, so the volume grows to match the tray."
+    },
+    {
+      "id": "D",
+      "text": "The tray alone sets both the shape and a new, smaller volume for the same water."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a liquid, particles move while remaining close, so shape follows the container but volume stays fixed. Fixed-lattice behaviour, gas-like filling that grows volume, or letting the container reset volume all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

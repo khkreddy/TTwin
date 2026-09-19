@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Lavanya traces food after most nutrients have been digested and absorbed in the small intestine.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Undigested food then moves from the small intestine into the large intestine."
+    },
+    {
+      "id": "B",
+      "text": "Nutrients already absorbed into the blood do not need to travel onward into the large intestine."
+    },
+    {
+      "id": "C",
+      "text": "Undigested food moves from the large intestine into the small intestine."
+    },
+    {
+      "id": "D",
+      "text": "Undigested food passes through the small intestine wall into blood vessels."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After digestion and absorption in the small intestine, undigested residue moves to the large intestine. Absorbed nutrients are already in the blood. Reversing the path or sending residue into blood confuses absorption with onward residue movement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

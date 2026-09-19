@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Avni stirs baking soda into water at about 20 °C. Some baking soda remains undissolved. She heats the mixture to about 50 °C while stirring.\n\nWhich prediction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The undissolved baking soda dissolves, and more baking soda can dissolve at the higher temperature."
+    },
+    {
+      "id": "B",
+      "text": "The undissolved baking soda stays undissolved, and heating does not change how much can dissolve."
+    },
+    {
+      "id": "C",
+      "text": "Heating makes less baking soda dissolve than at 20 °C."
+    },
+    {
+      "id": "D",
+      "text": "Heating only clouds the water; the amount that can dissolve is unchanged."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the baking-soda activity, heating toward about 50 °C while stirring dissolves leftover solute and raises how much can dissolve. Saying heating does nothing, lowers solubility, or only clouds the water misses that prediction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

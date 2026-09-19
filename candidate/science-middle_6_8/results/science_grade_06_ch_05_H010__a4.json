@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Inesh watches three motions at school: a toy car rolling along a straight chalk line, a classmate on a swing moving to and fro, and a ball dropped so it falls straight down to the floor.\n\nWhich two claims correctly decide when a motion is linear?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The toy car's motion is linear, because its path is a straight line."
+    },
+    {
+      "id": "B",
+      "text": "The swing's motion is linear, because the classmate is moving."
+    },
+    {
+      "id": "C",
+      "text": "The falling ball's motion is linear, because its path is a straight line."
+    },
+    {
+      "id": "D",
+      "text": "The falling ball's motion is not linear, because the path is vertical rather than across the floor."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Linear motion means the path is a straight line, including vertical drops. Motion alone is not enough, and vertical straight paths still count as linear.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Nupur orders the stages of a frog after a pond visit and notes how the body changes.\n\nWhich statements are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sequence is eggs → tadpole → froglet → adult frog."
+    },
+    {
+      "id": "B",
+      "text": "As a froglet becomes an adult, its tail shortens."
+    },
+    {
+      "id": "C",
+      "text": "The sequence is eggs → froglet → tadpole → adult frog."
+    },
+    {
+      "id": "D",
+      "text": "Adult frogs begin life already with four legs and no tadpole stage."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Frog order is eggs, tadpole, froglet, then adult; the tail shortens as the froglet becomes an adult. Swapping tadpole and froglet reverses the sequence. Adults do not skip the tadpole stage.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

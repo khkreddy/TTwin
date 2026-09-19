@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Sana's rectangle with corners labelled $P$, $Q$, $R$, $S$ in order going around the boundary. A valid name may start at any corner and then follow that travel order.\n\nWhich name is valid for that rectangle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rectangle $QRSP$ is valid: it lists corners in boundary travel order, starting at $Q$."
+    },
+    {
+      "id": "B",
+      "text": "Rectangle $PRSQ$, listing corners by jumping across instead of travelling the boundary."
+    },
+    {
+      "id": "C",
+      "text": "Only rectangle $PQRS$ is allowed; starting at any other corner makes the name invalid."
+    },
+    {
+      "id": "D",
+      "text": "Rectangle $PQRS$ is valid only after renaming the corners in alphabetical order first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (5,0);\n  \\coordinate (R) at (5,3);\n  \\coordinate (S) at (0,3);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above right] at (R) {$R$};\n  \\node[above left] at (S) {$S$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Travel order around the boundary may start at any corner. QRSP continues P→Q→R→S around the edge from Q.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "rewritten figure matches stem"
+  }
+}

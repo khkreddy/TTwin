@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Aarna's ray. It starts at point $A$ and passes through points $B$ and $C$ in that order.\n\nWhich two claims correctly name the ray?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ray $BA$ is a correct name, because $B$ and $A$ both lie on the path."
+    },
+    {
+      "id": "B",
+      "text": "Ray $AB$ is a correct name, because the starting point $A$ comes first, then a point on the path."
+    },
+    {
+      "id": "C",
+      "text": "Ray $AC$ is a correct name, because the starting point $A$ comes first, then another point on the path."
+    },
+    {
+      "id": "D",
+      "text": "Line $ABC$ is a correct name, treating the figure as a two-way line with no starting point."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.1]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (2.2,0);\n  \\coordinate (C) at (4.0,0);\n  \\draw[thick,->] (A)--(5.2,0);\n  \\fill (A) circle (1.6pt);\n  \\fill (B) circle (1.6pt);\n  \\fill (C) circle (1.6pt);\n  \\node[below=3pt] at (A) {$A$};\n  \\node[below=3pt] at (B) {$B$};\n  \\node[below=3pt] at (C) {$C$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A ray is named with its endpoint first, then any point on its path: AB and AC both work. BA reverses the endpoint order. Calling it line ABC drops the one-way start.",
+    "variation_applied": "V5",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "added ray diagram matches stem"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishita models integers with tokens. She has $3$ positive tokens and must subtract $5$ positive tokens.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which move lets her complete the subtraction?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Rename her $3$ positive tokens as negative tokens, and remove nothing."
+        },
+        {
+          "id": "B",
+          "text": "Add two zero pairs (each one positive and one negative token), then remove $5$ positive tokens; $2$ negative tokens remain."
+        },
+        {
+          "id": "C",
+          "text": "Try to remove $5$ positive tokens at once even though only $3$ positive tokens are present, and add no zero pairs."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "She needs two more positive tokens to remove five, so she adds two zero pairs first, then removes five positives and is left with two negatives."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When positives to remove outnumber those present, add zero pairs first, then remove. Renaming positives as negatives, or removing without zero pairs, miss that step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

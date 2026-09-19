@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "A day is tied to the Sun's apparent daily cycle across the sky."
+    },
+    {
+      "id": "2",
+      "text": "A lunar month is tied to the Moon's cycle of phases."
+    },
+    {
+      "id": "3",
+      "text": "A year is tied only to the Moon's phases, not to Earth's journey around the Sun."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Lokesh matches common time units to sky cycles that people have long used to keep calendars.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Day follows the Sun's daily cycle; a lunar month follows the Moon's phases; a year follows Earth's journey around the Sun. Statement 3 wrongly ties the year only to lunar phases, so 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

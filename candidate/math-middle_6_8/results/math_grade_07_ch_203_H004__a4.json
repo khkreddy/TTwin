@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Mihir hears the claim: \"A larger whole number always has more prime factors, counting multiplicity, than a smaller whole number.\" He checks $25 = 5^{2}$ and $16 = 2^{4}$.\n\nWhich two claims correctly decide what his check shows?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the word counterexample, with no statement of what the example does to the claim."
+    },
+    {
+      "id": "B",
+      "text": "Yes: $25$ is larger than $16$ yet has two prime factors against four, so the universal claim is false."
+    },
+    {
+      "id": "C",
+      "text": "One verified failing pair is enough to overturn a claim that was meant to hold for every whole number."
+    },
+    {
+      "id": "D",
+      "text": "Finding a counterexample is what creates the original general claim."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "25>16 but 5^2 has fewer prime factors (multiplicity) than 2^4, so one counterexample kills the universal claim. Naming counterexample alone, or saying the counterexample creates the claim, reverse or empty the logic.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

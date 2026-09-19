@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about these records is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum and minimum air temperatures usually vary from day to day and across seasons."
+        },
+        {
+          "id": "B",
+          "text": "Once a maximum is recorded, that same maximum must hold for every later day that season."
+        },
+        {
+          "id": "C",
+          "text": "Minimum air temperature is fixed for the whole year and never changes with the season."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Ayaan records the day's maximum and minimum air temperatures for several days in summer and again in winter. The values are not the same every day.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Air temperature records change with weather from day to day and differ between summer and winter, so maxima and minima are not fixed once for a season or year."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Maximum and minimum air temperatures usually vary day to day and across seasons. They are not locked to one value for a season or for the whole year.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

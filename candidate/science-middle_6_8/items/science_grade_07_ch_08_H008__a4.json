@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_08/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_08/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "scope_error",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_08/H008"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_08:H008:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_07/ch_08",
+    "chapter_label": "Measurement of time",
+    "subtopic_id": "science/grade_07/ch_08/H008",
+    "stem": "Trisha walks 400 m to the school gate in 50 s without stopping. On another trip she walks toward the gate but stands still for 10 s at a shop, then continues.\n\nWhich claim correctly calculates speed with its unit?",
+    "item_type": "mcq",
+    "options": {
+      "A": "On the first trip her speed is $8\\,\\mathrm{m/s}$, because $400\\div 50 = 8$.",
+      "B": "During the 10 s stop her speed is still $8\\,\\mathrm{m/s}$, the same as the first trip.",
+      "C": "On the first trip her speed is $0.125\\,\\mathrm{m/s}$, because $50\\div 400 = 0.125$.",
+      "D": "On the first trip her speed is $20000\\,\\mathrm{m/s}$, because $400\\times 50 = 20000$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_08/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H004",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H004"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H004:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H004",
+    "stem": "Gaurav studies the diagram of triangles $PQR$ and $XYZ$. Each angle of $PQR$ equals the matching angle of $XYZ$, but the sides of $XYZ$ are longer.\n\nWhich claim correctly decides whether the triangles are congruent?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Yes: they are the same shape, and same shape means congruent.",
+      "B": "Yes: the matching equal angles alone settle congruence.",
+      "C": "No: equal angles give the same shape, but different sizes mean the triangles need not be congruent.",
+      "D": "Yes, because the printed degree marks are the standout cue in the diagram."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  % smaller triangle PQR\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (2.4,0);\n  \\coordinate (R) at (0.9,1.7);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P){$P$};\n  \\node[below right] at (Q){$Q$};\n  \\node[above] at (R){$R$};\n  \\draw[line width=0.65pt] (0.35,0) arc (0:62:0.35);\n  \\node[right] at (0.45,0.22){$58^{\\circ}$};\n  \\draw[line width=0.65pt] (2.05,0) arc (180:118:0.35);\n  \\node[left] at (1.95,0.22){$70^{\\circ}$};\n  \\node[above] at (0.95,0.55){$52^{\\circ}$};\n  % larger similar triangle XYZ (scaled ~1.7)\n  \\coordinate (X) at (4.2,0);\n  \\coordinate (Y) at (8.3,0);\n  \\coordinate (Z) at (5.75,2.9);\n  \\draw[line width=1.05pt] (X)--(Y)--(Z)--cycle;\n  \\node[below left] at (X){$X$};\n  \\node[below right] at (Y){$Y$};\n  \\node[above] at (Z){$Z$};\n  \\draw[line width=0.65pt] (4.55,0) arc (0:62:0.35);\n  \\node[right] at (4.65,0.22){$58^{\\circ}$};\n  \\draw[line width=0.65pt] (7.95,0) arc (180:118:0.35);\n  \\node[left] at (7.85,0.22){$70^{\\circ}$};\n  \\node[above] at (5.8,0.9){$52^{\\circ}$};\n  \\node[align=center] at (4.1,-0.95){matching angles equal;\\\\sides of $XYZ$ longer};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
