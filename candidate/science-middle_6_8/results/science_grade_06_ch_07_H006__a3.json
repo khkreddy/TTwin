@@ -1,25 +1,24 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Arnav writes these notes after a science class in Surat:\n\n1. Body temperature about 37.0 °C\n2. The same temperature written as 98.6 °F\n\nWhich statement is correct?",
+  "stem": "Arnav writes 37.0 °C and 98.6 °F for body temperature.\n\nWhich statement is correct?",
   "options": [
     {
       "id": "A",
-      "text": "37.0 °C and 98.6 °F name the same temperature on two different scales"
+      "text": "37.0 °C and 98.6 °F name the same temperature on two scales."
     },
     {
       "id": "B",
-      "text": "The symbol °C means degree Fahrenheit"
+      "text": "°C means degree Fahrenheit."
     },
     {
       "id": "C",
-      "text": "98.6 °F is hotter than 37.0 °C because 98.6 is a larger number"
+      "text": "98.6 °F is hotter than 37.0 °C because 98.6 is a larger number."
     },
     {
       "id": "D",
-      "text": "Kelvin temperatures are written with the symbol °K"
+      "text": "Only the Celsius reading is a real temperature."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "A",
-    "letters": null
+    "letter": "A"
   },
   "mx_option_map": {
     "B": "term_substitution",
@@ -39,7 +37,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "37.0 °C equals 98.6 °F; scale and symbol must stay matched. °C is not Fahrenheit, you cannot compare bare numbers across scales, and kelvin is K not °K.",
+    "key_rationale": "The two readings name one temperature on two scales. A larger number is not a hotter scale.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [

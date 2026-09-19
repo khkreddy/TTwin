@@ -1,17 +1,16 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Disha's family in Ahmedabad dries red chillies on the terrace and also has a small solar panel on the roof.\n\nWhich statement about these uses of the Sun is correct?",
+  "stem": "Disha's family dries red chillies on the terrace and also has a small solar panel on the roof.\n\nWhich statement about these uses of the Sun is correct?",
   "options": [
     {
       "id": "A",
-      "text": "A solar cooker on the terrace cooks equally well in bright sunlight and in complete darkness."
+      "text": "Drying chillies and the panel work equally well in bright sunlight and in complete darkness."
     },
     {
       "id": "B",
-      "text": "With everything else unchanged, the solar panel produces more electricity when less sunlight reaches it."
+      "text": "With everything else unchanged, the panel produces more electricity when less sunlight reaches it."
     },
     {
       "id": "C",
@@ -19,7 +18,7 @@
     },
     {
       "id": "D",
-      "text": "Solar cookers work by producing electricity for a stove."
+      "text": "The panel dries the chillies by producing electricity for heat."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "C",
-    "letters": null
+    "letter": "C"
   },
   "mx_option_map": {
     "A": "condition_omission",
@@ -39,7 +37,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Direct Sun heat dries food; solar panels need sunlight to make electricity. A drops the sunlight condition; B reverses sunlight–output link; D confuses solar cooking with electricity generation.",
+    "key_rationale": "Both uses need the Sun; without sunlight they weaken or stop.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [

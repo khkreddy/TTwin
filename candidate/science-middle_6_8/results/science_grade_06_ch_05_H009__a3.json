@@ -14,7 +14,7 @@
     },
     {
       "id": "C",
-      "text": "It is moving only if the driver says so."
+      "text": "It is in motion only when someone names it as moving."
     },
     {
       "id": "D",
@@ -32,12 +32,12 @@
   },
   "mx_option_map": {
     "A": "condition_omission",
-    "C": "UNRESOLVED",
+    "C": "condition_omission",
     "D": "relationship_reversal"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Motion or rest is judged against a chosen reference. Different references can disagree honestly.",
+    "key_rationale": "Motion depends on the reference: at rest for Aditi, in motion for Kabir.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -45,5 +45,10 @@
       "relationship_reversal"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "C": "condition_omission"
+    }
   }
 }

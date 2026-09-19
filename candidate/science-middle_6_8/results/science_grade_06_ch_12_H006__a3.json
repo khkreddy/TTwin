@@ -1,9 +1,8 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Girish lines up eight planet models for a school fair in Surat in order of increasing distance from the Sun and then splits them into inner and outer groups.\n\nWhich arrangement is correct?",
+  "stem": "Girish lines up eight planet models in order of increasing distance from the Sun and then splits them into inner and outer groups.\n\nWhich arrangement is correct?",
   "options": [
     {
       "id": "A",
@@ -15,7 +14,7 @@
     },
     {
       "id": "C",
-      "text": "Inner rocky planets Mercury–Mars, then outer gas giants Jupiter–Neptune, and the Moon is not a planet."
+      "text": "Inner rocky planets Mercury–Mars, then outer gas giants Jupiter–Neptune; the Moon is not a planet."
     },
     {
       "id": "D",
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "C",
-    "letters": null
+    "letter": "C"
   },
   "mx_option_map": {
     "A": "condition_omission",
@@ -39,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Eight planets in order Mercury to Neptune; first four are inner/rocky and last four are outer/gaseous. The Moon is a satellite, not a planet.",
+    "key_rationale": "Inner rocky Mercury–Mars, outer gas giants Jupiter–Neptune; the Moon is not a planet.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "condition_omission",
+      "scope_error",
       "relationship_reversal",
-      "scope_error"
+      "condition_omission"
     ],
     "figure_note": null
   }

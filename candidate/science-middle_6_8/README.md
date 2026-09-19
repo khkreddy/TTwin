@@ -23,3 +23,7 @@ Harness edits after freeze `ttwin.g68_harness_freeze.v1`. Moonshot Test-maker, l
 - **C9** Browse AI tray starts at big-idea **any**, not S1, so figure items are not hidden by the default inquiry filter.
 
 Grok authors via `node tools/modify_g68.js ingest --unit … --source … --result result.json`. No Moonshot stem writes on this path.
+
+## Grok tray style (2026-09-19 rectification)
+
+Learner options must not leak mix-up recipes. One hinge per item. Four options in one grammatical frame. No extra objects or city padding. `mx_option_map` is teacher-side and advisory. Do not edit Kimi a1/a2 files.

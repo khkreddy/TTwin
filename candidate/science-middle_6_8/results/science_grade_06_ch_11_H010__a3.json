@@ -1,9 +1,8 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Bhavna hears that a large patch of forest near her grandparents' village in Odisha was cleared for a road.\n\nWhat is the most likely effect on soil and living conditions there?",
+  "stem": "Bhavna hears that a large patch of forest near her grandparents' village was cleared for a road.\n\nWhat is the most likely effect on soil and living conditions there?",
   "options": [
     {
       "id": "A",
@@ -11,15 +10,15 @@
     },
     {
       "id": "B",
-      "text": "Plant roots no longer hold soil as before, leaf litter and decay decrease, soil washes away more easily, and animals lose food and shelter."
+      "text": "Roots hold soil less well, leaf litter and decay decrease, soil washes away more easily, and animals lose food and shelter."
     },
     {
       "id": "C",
-      "text": "Removing plants and roots reduces soil washing away because roots loosen the soil."
+      "text": "Removing plants and roots reduces soil washing away."
     },
     {
       "id": "D",
-      "text": "Clearing away brown fallen leaves improves forest soil because dead leaves are harmful."
+      "text": "Clearing away brown fallen leaves improves forest soil."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
-    "letters": null
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "term_substitution",
@@ -39,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Roots hold soil; litter and decay enrich it; clearing a large forest weakens those supports and removes animal habitat. A swaps trunks for roots as the holders; C reverses the root–erosion link; D treats dead leaves as harmful rather than soil-forming.",
+    "key_rationale": "Clearing weakens root hold and litter, so soil erodes and habitats shrink.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
+      "surface_feature_capture",
       "relationship_reversal",
-      "surface_feature_capture"
+      "term_substitution"
     ],
     "figure_note": null
   }

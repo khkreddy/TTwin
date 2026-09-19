@@ -1,9 +1,8 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "Bhavna's apartment block in Jaipur wants one practical plan that truly conserves freshwater.\n\nWhich plan does that?",
+  "stem": "Bhavna's apartment block wants one practical plan that truly conserves freshwater.\n\nWhich plan does that?",
   "options": [
     {
       "id": "A",
@@ -11,7 +10,7 @@
     },
     {
       "id": "B",
-      "text": "Channel roof rainwater straight into the storm drain so it leaves the building quickly."
+      "text": "Channel roof rainwater straight into the storm drain so it leaves quickly."
     },
     {
       "id": "C",
@@ -19,7 +18,7 @@
     },
     {
       "id": "D",
-      "text": "Throw plastic bags into the stream if the water still looks clear, because clear water is not polluted."
+      "text": "Throw plastic bags into the stream if the water still looks clear."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "C",
-    "letters": null
+    "letter": "C"
   },
   "mx_option_map": {
     "A": "term_substitution",
@@ -39,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Conservation covers reducing wastage, preventing pollution of freshwater, and storing rainwater for later use. A misnames wastewater reuse as rainwater harvesting; B intercepts rain but does not store it; D judges pollution only by appearance.",
+    "key_rationale": "Conservation means less waste, less pollution, and storing rainwater for use.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
+      "surface_feature_capture",
       "condition_omission",
-      "surface_feature_capture"
+      "term_substitution"
     ],
     "figure_note": null
   }

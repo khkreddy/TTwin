@@ -1,7 +1,6 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
   "stem": "Deepak touches a hot steel tumbler and quickly pulls his hand away. Nearby, a touch-me-not folds its leaves when he brushes it.\n\nWhich statement is correct?",
   "options": [
@@ -15,7 +14,7 @@
     },
     {
       "id": "C",
-      "text": "A classroom curtain swinging in a breeze is a response to a stimulus, just like Deepak's hand."
+      "text": "Pulling the hand away is a stimulus, and the hot tumbler is the response."
     },
     {
       "id": "D",
@@ -29,23 +28,22 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
-    "letters": null
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "C": "condition_omission",
-    "D": "surface_feature_capture"
+    "C": "relationship_reversal",
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A stimulus is the change or contact (heat, touch); the living being's following action is the response. Pulling away is the response, not the stimulus; non-living curtain motion is not a biological response; leaf folding is a plant response.",
+    "key_rationale": "Heat and touch are stimuli; hand withdrawal and leaf folding are responses.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "term_substitution",
-      "condition_omission",
-      "surface_feature_capture"
+      "relationship_reversal",
+      "scope_error"
     ],
     "figure_note": null
   }

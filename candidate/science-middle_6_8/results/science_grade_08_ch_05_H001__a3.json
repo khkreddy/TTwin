@@ -2,30 +2,60 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "option_table",
-  "stem": "Vikram lists four playground events. Which row correctly names a force as a push or pull between two objects?",
+  "stem": "Which event names a force as a push or pull between two objects?",
   "options": [
     {
       "id": "A",
-      "text": "Row 1"
+      "text": "Vikram kicks a football — a push between his foot and the ball"
     },
     {
       "id": "B",
-      "text": "Row 2"
+      "text": "A ball sits still on grass — the ball applies a force to itself"
     },
     {
       "id": "C",
-      "text": "Row 3"
+      "text": "Noor pulls a wagon — the pull acts only on the wagon"
     },
     {
       "id": "D",
-      "text": "Row 4"
+      "text": "A leaf falls — no objects are interacting"
     }
   ],
   "statements": [],
   "parts": [],
   "equations": [],
   "tables": [
-    "{\"headers\":[\"event\",\"claimed force\"],\"rows\":[[\"Vikram kicks a football\",\"a push between Vikram's foot and the ball\"],[\"a ball sits still on grass\",\"the ball applies a force to itself to stay put\"],[\"Noor pulls a wagon\",\"the SI unit of that pull is the pascal\"],[\"a leaf falls\",\"no objects are interacting\"]],\"row_labels\":[\"1\",\"2\",\"3\",\"4\"],\"caption\":\"\",\"is_option_table\":true}"
+    {
+      "headers": [
+        "event",
+        "claimed force"
+      ],
+      "rows": [
+        [
+          "Vikram kicks a football",
+          "a push between his foot and the ball"
+        ],
+        [
+          "A ball sits still on grass",
+          "the ball applies a force to itself"
+        ],
+        [
+          "Noor pulls a wagon",
+          "the pull acts only on the wagon"
+        ],
+        [
+          "A leaf falls",
+          "no objects are interacting"
+        ]
+      ],
+      "row_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_option_table": true
+    }
   ],
   "tikz": null,
   "answer": {
@@ -39,7 +69,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A force is a push or pull between interacting objects. Kicking the football is that. A ball does not push itself. The SI unit of force is the newton, not the pascal.",
+    "key_rationale": "A force is a push or pull between two objects. The kick is that. A ball does not push itself. A pull is between Noor and the wagon. A falling leaf still interacts with Earth.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [

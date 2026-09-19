@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Aisha wants to measure the thickness of a coin.\n\nWhich choice fits the size of what she is measuring?",
+  "stem": "Aisha wants to measure the thickness of a coin.\n\nWhich choice fits the size she is measuring?",
   "options": [
     {
       "id": "A",
-      "text": "Kilometres, because bigger units are always more accurate."
+      "text": "Kilometres, because a larger unit is always more accurate."
     },
     {
       "id": "B",
@@ -14,11 +14,11 @@
     },
     {
       "id": "C",
-      "text": "Ignoring the zero mark and guessing from the colour of the coin."
+      "text": "Guessing from the colour of the coin and ignoring the scale marks."
     },
     {
       "id": "D",
-      "text": "Using a map scale meant for cities."
+      "text": "Using a map scale meant for long distances."
     }
   ],
   "statements": [],
@@ -31,20 +31,25 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "scope_error",
+    "A": "relationship_reversal",
     "C": "surface_feature_capture",
     "D": "condition_omission"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A coin's thickness needs a small unit and a suitable scale. Kilometres and city maps are the wrong size. Colour is not length.",
+    "key_rationale": "Coin thickness needs a small unit such as millimetres on a fine scale.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "scope_error",
+      "relationship_reversal",
       "surface_feature_capture",
       "condition_omission"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "A": "relationship_reversal"
+    }
   }
 }

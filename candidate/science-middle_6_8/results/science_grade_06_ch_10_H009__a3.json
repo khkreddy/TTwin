@@ -1,7 +1,6 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
   "stem": "Vivek lists stages of a frog's life after a pond visit.\n\nWhich statement is correct?",
   "options": [
@@ -29,17 +28,16 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
-    "letters": null
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "relationship_reversal",
     "C": "scope_error",
-    "D": "UNRESOLVED"
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Frogs develop from eggs through tadpole and froglet to adult; the tail shortens rather than grows longer, and froglets are not restricted to water-only life.",
+    "key_rationale": "Eggs, tadpole, froglet, adult; the tail shortens as the froglet becomes an adult.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -47,5 +45,10 @@
       "scope_error"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "D": "scope_error"
+    }
   }
 }

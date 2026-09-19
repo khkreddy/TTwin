@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Yusuf groups a metal spoon, a steel plate, and a copper coin.\n\nWhat common property is he using if he calls them 'metals'?",
+  "stem": "Yusuf groups a metal spoon, a steel plate, and a copper coin as metals. He also talks about grouping by colour.\n\nWhat common property is he using for the metals group?",
   "options": [
     {
       "id": "A",
-      "text": "They are all kitchen tools."
+      "text": "Each metals group must hold only one object."
     },
     {
       "id": "B",
-      "text": "They share material properties of metals, such as being metallic solids."
+      "text": "They share material properties of metals."
     },
     {
       "id": "C",
-      "text": "They must all be the same colour."
+      "text": "Any two metals alone would still make the group, even if the third object were left out."
     },
     {
       "id": "D",
-      "text": "Grouping cannot use a property; it only uses names."
+      "text": "Grouping by colour is the only correct grouping for these objects."
     }
   ],
   "statements": [],
@@ -31,19 +31,19 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "scope_error",
+    "A": "term_substitution",
     "C": "condition_omission",
-    "D": "term_substitution"
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A group needs a stated common property. 'Kitchen' and colour are not the metal property here.",
+    "key_rationale": "Classification uses a common property. Here the shared property is being metals.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "scope_error",
+      "term_substitution",
       "condition_omission",
-      "term_substitution"
+      "scope_error"
     ],
     "figure_note": null
   }

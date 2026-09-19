@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Jhanvi tries to hold her breath during a PE warm-up in her school courtyard. After a short time she has to breathe again.\n\nWhich statement best explains why holding the breath soon becomes difficult?",
+  "stem": "Jhanvi tries to hold her breath during a PE warm-up. After a short time she has to breathe again.\n\nWhich statement best explains why holding the breath soon becomes difficult?",
   "options": [
     {
       "id": "A",
-      "text": "The air she breathes in supplies oxygen that her body needs for its functions, so she cannot go long without a fresh supply."
+      "text": "The air she breathes in supplies oxygen her body needs, so she cannot go long without a fresh supply."
     },
     {
       "id": "B",
@@ -28,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "A",
-    "letters": null
+    "letter": "A"
   },
   "mx_option_map": {
     "B": "term_substitution",
@@ -38,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Breath-holding becomes hard because the body needs ongoing oxygen from breathed air. Substituting nitrogen, treating functions as stopping instantly, or claiming oxygen removes need for food and water are incorrect.",
+    "key_rationale": "Breathing supplies oxygen the body needs. Holding the breath cuts that supply.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
+      "relationship_reversal",
       "condition_omission",
-      "relationship_reversal"
+      "term_substitution"
     ],
     "figure_note": null
   }

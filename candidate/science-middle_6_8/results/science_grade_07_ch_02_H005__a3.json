@@ -6,11 +6,11 @@
   "options": [
     {
       "id": "A",
-      "text": "Turmeric paper shows the baking soda solution is basic, but the unchanged papers for vinegar and sugar solution do not tell her which of those two is acidic and which is neutral."
+      "text": "Turmeric paper shows the baking soda solution is basic; the unchanged papers do not tell which of vinegar and sugar solution is acidic and which is neutral."
     },
     {
       "id": "B",
-      "text": "Vinegar is neutral because it does not change turmeric paper's colour."
+      "text": "Vinegar is neutral: it does not change turmeric paper's colour."
     },
     {
       "id": "C",
@@ -28,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "A",
-    "letters": null
+    "letter": "A"
   },
   "mx_option_map": {
     "B": "condition_omission",
@@ -38,12 +37,12 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Turmeric detects bases by a colour change; no change leaves acid vs neutral ambiguous. Calling vinegar neutral from no change omits that limit; saying any colour change could be acid/base/neutral mis-scopes the indicator; inventing a red turmeric response for vinegar conflates mechanisms.",
+    "key_rationale": "Turmeric changes with bases. No change does not separate acid from neutral.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "condition_omission",
       "scope_error",
+      "condition_omission",
       "mechanism_conflation"
     ],
     "figure_note": null

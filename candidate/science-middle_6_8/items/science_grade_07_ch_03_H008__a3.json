@@ -11,9 +11,9 @@
   "build_logic": {
     "source_uid": "0625_m18_qp_22:q33",
     "hinge": "science/grade_07/ch_03/H008",
-    "item_type_target": "preserve",
+    "item_type_target": "single_mcq",
     "figure_decision": {
-      "mode": "rewrite",
+      "mode": "preserve",
       "reason": "hinge_names_visual"
     },
     "mx_seeds_used": [
@@ -26,12 +26,15 @@
       "D": "UNRESOLVED",
       "A": null
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H008"
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_03/H008",
+    "mx_swap": {
+      "D": "condition_omission"
+    }
   },
   "mx_option_map": {
     "A": "condition_omission",
     "C": "relationship_reversal",
-    "D": "UNRESOLVED"
+    "D": "condition_omission"
   },
   "item": {
     "uid": "candidate:g68:science:grade_07:ch_03:H008:a3",

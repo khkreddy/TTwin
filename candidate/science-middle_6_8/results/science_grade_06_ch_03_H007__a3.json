@@ -1,25 +1,24 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
   "stem": "Rina notices that cooked spinach is softer and less bright green than raw spinach.\n\nWhat is the best conclusion about cooking and nutrients?",
   "options": [
     {
       "id": "A",
-      "text": "Cooking heat destroys the minerals in the spinach, so it has no minerals left."
+      "text": "Cooking destroys every mineral in the spinach."
     },
     {
       "id": "B",
-      "text": "Cooking can change colour and texture and may reduce some nutrients such as vitamin C."
+      "text": "Cooking can change colour and texture and may reduce some nutrients."
     },
     {
       "id": "C",
-      "text": "Cooked spinach contains no nutrients at all."
+      "text": "Cooked spinach has no nutrients left."
     },
     {
       "id": "D",
-      "text": "The duller colour proves that all of the vitamin C has been lost."
+      "text": "The duller colour proves every nutrient is gone."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
-    "letters": null
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "term_substitution",
@@ -39,7 +37,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Cooking can soften vegetables and dull colour, and some nutrients such as vitamin C may be reduced; minerals are not simply destroyed, nutrients are not all gone, and colour alone does not prove vitamin C loss.",
+    "key_rationale": "Cooking can change colour and texture and may reduce some nutrients; it does not wipe out all of them.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [

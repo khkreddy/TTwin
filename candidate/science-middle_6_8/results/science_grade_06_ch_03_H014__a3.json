@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Bela compares two snack packets. One lists more protein and fibre and less sugar.\n\nWhich better fits a health-minded choice from the labels?",
+  "stem": "Bela compares two snack packets. One lists more protein and fibre and less sugar. The labels also show total carbohydrate.\n\nWhich better fits a health-minded choice from the labels?",
   "options": [
     {
       "id": "A",
-      "text": "The packet with the brighter cartoon, ignoring the table."
+      "text": "The packet whose fibre equals its total carbohydrate on the label."
     },
     {
       "id": "B",
-      "text": "The packet with more protein and fibre and less sugar, from the nutrition table."
+      "text": "The packet with more protein and fibre and less sugar."
     },
     {
       "id": "C",
-      "text": "Labels cannot be compared."
+      "text": "The sweeter packet, because taste is the only nutrient."
     },
     {
       "id": "D",
-      "text": "The sweeter packet, because taste is the only nutrient."
+      "text": "Neither packet; labels given for the same amount cannot be compared."
     }
   ],
   "statements": [],
@@ -31,19 +31,19 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "surface_feature_capture",
-    "C": "condition_omission",
-    "D": "term_substitution"
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Compare the nutrition table, not the cartoon. Sugar is not the only nutrient.",
+    "key_rationale": "Compare protein, fibre, and sugar on the labels. More protein and fibre with less sugar fits better.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "surface_feature_capture",
-      "condition_omission",
-      "term_substitution"
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
     ],
     "figure_note": null
   }

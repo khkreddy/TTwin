@@ -2,7 +2,7 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Ira holds a new steel plate up to the light.\n\nHow should she judge if the material is lustrous?",
+  "stem": "Ira holds a new steel plate up to the light. She asks whether shine, weight, the brand name, or letting light through is the right test for a lustrous material.\n\nHow should she judge if the material is lustrous?",
   "options": [
     {
       "id": "A",
@@ -10,15 +10,15 @@
     },
     {
       "id": "B",
-      "text": "By whether it is heavy."
+      "text": "By whether the plate feels heavy in her hand."
     },
     {
       "id": "C",
-      "text": "By the printed brand name."
+      "text": "By the printed brand name on the plate."
     },
     {
       "id": "D",
-      "text": "Lustrous means it must be transparent."
+      "text": "By whether light passes through the plate."
     }
   ],
   "statements": [],
@@ -37,10 +37,11 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Lustrous means the material can look shiny. Dirt may hide shine. Mass and a brand name are not lustre; transparent is a different property.",
+    "key_rationale": "Lustrous means shiny. Dirt can hide shine; weight, brand name, and transparency are not the test.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
+      "condition_omission",
       "surface_feature_capture",
       "scope_error"
     ],

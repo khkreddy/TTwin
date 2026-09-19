@@ -1,9 +1,8 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "The diagram shows a ray of light reflected from a plane mirror in Shreya’s optics activity. Angles at the point of incidence are labelled P, Q, R and S.\n\nWhich pair are the angle of incidence and the angle of reflection?",
+  "stem": "The diagram shows a ray of light reflected from a plane mirror in Shreya's optics activity. Angles at the point of incidence are labelled P, Q, R and S.\n\nWhich pair are the angle of incidence and the angle of reflection?",
   "options": [
     {
       "id": "A",
@@ -29,8 +28,7 @@
   "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,scale=1.15]\n\\coordinate (O) at (0,0);\n\\draw (-2.5,0)--(2.5,0);\n\\foreach \\x in {-2.4,-2.1,...,2.4}{\\draw[thin] (\\x,0)--++(-0.15,-0.15);}\n\\draw[dashed,thin] (O)--(0,2.0);\n\\draw[->,thick] (-1.8,1.7)--(O);\n\\draw[->,thick] (O)--(1.8,1.7);\n\\draw (0.7,0) arc[start angle=0,end angle=43,radius=0.7];\n\\draw (43:0.7) arc[start angle=43,end angle=90,radius=0.7];\n\\draw (90:0.7) arc[start angle=90,end angle=137,radius=0.7];\n\\draw (137:0.7) arc[start angle=137,end angle=180,radius=0.7];\n\\node at (-0.55,0.22) {P};\n\\node at (-0.28,0.58) {Q};\n\\node at (0.28,0.58) {R};\n\\node at (0.55,0.22) {S};\n\\node[font=\\footnotesize] at (0,2.2) {normal};\n\\node[font=\\footnotesize] at (0,-0.35) {mirror};\n\\end{tikzpicture}",
   "answer": {
     "kind": "single_letter",
-    "letter": "A",
-    "letters": null
+    "letter": "A"
   },
   "mx_option_map": {
     "B": "condition_omission",
@@ -39,7 +37,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Incidence and reflection are measured from the normal, so Q (incident–normal) and R (reflected–normal). P and S are from the mirror surface; mixing surface angles with normal angles is incorrect.",
+    "key_rationale": "Incidence and reflection are the angles between each ray and the normal: Q and R.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -47,6 +45,6 @@
       "term_substitution",
       "surface_feature_capture"
     ],
-    "figure_note": "Plane mirror with normal; P,S from surface; Q,R from normal."
+    "figure_note": "Preserved reflection diagram."
   }
 }

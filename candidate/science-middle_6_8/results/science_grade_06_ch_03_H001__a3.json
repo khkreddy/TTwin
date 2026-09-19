@@ -1,24 +1,24 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "item_type": "one_or_more",
-  "stem": "Leela packs lunch. Which choices support healthy eating as wholesome food, in a sensible amount, eaten at a suitable time? One or more options may be correct.",
+  "item_type": "single_mcq",
+  "stem": "Leela packs lunch.\n\nWhich choice supports healthy eating: wholesome food, a sensible amount, and a suitable time?",
   "options": [
     {
       "id": "A",
-      "text": "The smallest possible nibble of dal, because the smallest portion is always the healthiest."
+      "text": "The smallest nibble of dal, treating the smallest portion as always healthiest."
     },
     {
       "id": "B",
-      "text": "A bowl of dal and rice at midday, in an amount she can finish without feeling stuffed."
+      "text": "Dal and rice at midday, in an amount she can finish."
     },
     {
       "id": "C",
-      "text": "Fruit after games, because it is wholesome and the timing fits her hunger."
+      "text": "Only a sweet chosen for bright colour, with no care for amount or time."
     },
     {
       "id": "D",
-      "text": "A brightly iced cupcake, chosen only because the icing is colourful."
+      "text": "Skipping food until late night, then eating a very large amount at once."
     }
   ],
   "statements": [],
@@ -27,24 +27,23 @@
   "tables": [],
   "tikz": null,
   "answer": {
-    "kind": "letter_set",
-    "letters": [
-      "B",
-      "C"
-    ]
+    "kind": "single_letter",
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "D": "surface_feature_capture"
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Healthy eating here is wholesome food, a sensible amount, at a suitable time. Dal-rice at lunch and fruit after games fit. Tiny-as-always and colour-only do not.",
+    "key_rationale": "Healthy eating needs wholesome food, moderate amount, and suitable time. Midday dal and rice meets that.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
-      "surface_feature_capture"
+      "surface_feature_capture",
+      "condition_omission",
+      "term_substitution"
     ],
     "figure_note": null
   }

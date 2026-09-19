@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Amit's class is deciding which of the following count as matter. Matter must occupy space and have mass.\n\nWhich choice is correct?",
+  "stem": "Amit's class decides what counts as matter. Matter must occupy space and have mass.\n\nWhich choice is correct?",
   "options": [
     {
       "id": "A",
-      "text": "Air in a sealed balloon is matter because it takes up space and has mass."
+      "text": "Air in a sealed balloon is matter: it takes up space and has mass."
     },
     {
       "id": "B",
-      "text": "Something is matter if it is hard and has volume, even if it has no mass."
+      "text": "Something is matter if it is hard and has volume, even with no mass."
     },
     {
       "id": "C",
-      "text": "A beam of torch light across the classroom is matter because it fills the space it travels through."
+      "text": "A beam of torch light is matter: it fills the space it travels through."
     },
     {
       "id": "D",
-      "text": "Air is not matter because we usually cannot see it."
+      "text": "Air is not matter: we usually cannot see it."
     }
   ],
   "statements": [],
@@ -28,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "A",
-    "letters": null
+    "letter": "A"
   },
   "mx_option_map": {
     "B": "term_substitution",
@@ -38,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Matter needs both space and mass. Hardness cannot replace mass; light without mass is not matter; invisibility does not rule air out.",
+    "key_rationale": "Matter needs space and mass. Air in a balloon has both.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
+      "surface_feature_capture",
       "condition_omission",
-      "surface_feature_capture"
+      "term_substitution"
     ],
     "figure_note": null
   }

@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Farid writes 2 m as centimetres.\n\nWhich conversion is correct?",
+  "stem": "Farid writes 2 m in centimetres.\n\nWhich conversion is correct?",
   "options": [
     {
       "id": "A",
-      "text": "2 m = 2 cm, because the number stays the same."
+      "text": "2 m = 2 cm."
     },
     {
       "id": "B",
@@ -14,11 +14,11 @@
     },
     {
       "id": "C",
-      "text": "2 m = 0.02 cm, by reversing the 100s."
+      "text": "2 m = 0.02 cm."
     },
     {
       "id": "D",
-      "text": "Metres cannot be written as centimetres."
+      "text": "2 m = 20 cm."
     }
   ],
   "statements": [],
@@ -33,17 +33,17 @@
   "mx_option_map": {
     "A": "term_substitution",
     "C": "relationship_reversal",
-    "D": "scope_error"
+    "D": "condition_omission"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "1 m = 100 cm, so 2 m = 200 cm. Keeping the number 2 or reversing to 0.02 is wrong.",
+    "key_rationale": "1 m = 100 cm, so 2 m = 200 cm.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "term_substitution",
       "relationship_reversal",
-      "scope_error"
+      "condition_omission"
     ],
     "figure_note": null
   }

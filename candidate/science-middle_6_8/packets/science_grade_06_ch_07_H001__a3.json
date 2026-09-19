@@ -1,60 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m18_qp_12:q1",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T00:27:12.745Z",
+  "created_at": "2026-09-19T02:53:27.418Z",
   "source": {
-    "item_ref": "session:0620_m18_qp_12:q1",
-    "item_type": "three_statement",
-    "stem": "Four physical changes are listed.\n\nIn which changes do the particles move further apart?",
-    "options": [
-      {
-        "id": "A",
-        "text": "1 and 2"
-      },
-      {
-        "id": "B",
-        "text": "1 and 3"
-      },
-      {
-        "id": "C",
-        "text": "2 and 4"
-      },
-      {
-        "id": "D",
-        "text": "3 and 4"
-      }
-    ],
-    "statements": [
-      {
-        "id": "1",
-        "text": "condensation"
-      },
-      {
-        "id": "2",
-        "text": "evaporation"
-      },
-      {
-        "id": "3",
-        "text": "freezing"
-      },
-      {
-        "id": "4",
-        "text": "sublimation"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_07/H001",
+      "unit_id": "science/grade_06/ch_07/H001",
+      "title": "Decide whether a hot-or-cold judgement can rely on touch or must be checked by measuring temperature.",
+      "node_labels": [
+        "Temperature and heat transfer",
+        "Energy, heat, electricity and light"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -80,21 +51,8 @@
       }
     ],
     "enrichment": "Sense of touch cannot always decide correctly whether a body is hot or cold; temperature is the reliable measure of hotness or coldness. Different prior contact can change what the same water feels like, while a temperature measurement gives the dependable comparison. The learner correctly applies this rule: Sense of touch cannot always decide correctly whether a body is hot or cold; temperature is the reliable measure of hotness or coldness. If water or a forehead feels hot to a hand, it is hot and no thermometer is needed.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_07/H001",
-      "gate_names": [
-        "intermediate_omission",
-        "intermediate_omission",
-        "intermediate_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student including statement 1 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option B remains the trap for a student including statement 1 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student including statement 3 which the keyed set rejects. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
     "instruction": "Write one new grades 6 Science question. Chapter: Temperature and its measurement. The student must decide: Decide whether a hot-or-cold judgement can rely on touch or must be checked by measuring temperature. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.",
@@ -119,7 +77,7 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m18_qp_12:q1",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_07/H001",
     "item_type_target": "single_mcq",
     "figure_decision": {
@@ -132,10 +90,9 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "condition_omission",
-      "B": "scope_error",
-      "D": "surface_feature_capture",
-      "C": null
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_07/H001"
   }

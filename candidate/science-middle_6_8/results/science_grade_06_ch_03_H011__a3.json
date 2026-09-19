@@ -14,11 +14,11 @@
     },
     {
       "id": "C",
-      "text": "Violet means only that the beans are purple-skinned."
+      "text": "The violet colour shows only the crushed beans, not a test result."
     },
     {
       "id": "D",
-      "text": "Protein is present only in meat, so the test cannot work on beans."
+      "text": "The beans cannot show protein in this test."
     }
   ],
   "statements": [],
@@ -32,19 +32,24 @@
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "C": "surface_feature_capture",
+    "C": "condition_omission",
     "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "The violet biuret-style result here marks protein. It is not starch, not skin colour, and not meat-only.",
+    "key_rationale": "Violet with copper sulphate and sodium hydroxide indicates protein in the beans.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "term_substitution",
-      "surface_feature_capture",
+      "condition_omission",
       "scope_error"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "C": "condition_omission"
+    }
   }
 }

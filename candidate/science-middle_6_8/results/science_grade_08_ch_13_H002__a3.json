@@ -1,9 +1,8 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
-  "stem": "During a Solar System lesson in Surat, Gauri says a planet's temperature can be known from its distance from the Sun alone. Which statement best tests her idea?",
+  "stem": "Gauri says a planet's temperature can be known from its distance from the Sun alone.\n\nWhich statement best tests her idea?",
   "options": [
     {
       "id": "A",
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
-    "letters": null
+    "letter": "B"
   },
   "mx_option_map": {
     "A": "scope_error",
@@ -39,13 +37,13 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Distance from the Sun is a starting expectation, not the only rule; Venus shows that a thick CO2-rich atmosphere can trap heat strongly. A overgeneralises distance; C denies distance entirely; D drops atmospheric heat trapping.",
+    "key_rationale": "Distance matters, but atmosphere can trap heat and change the ranking.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "scope_error",
-      "relationship_reversal",
-      "condition_omission"
+      "condition_omission",
+      "relationship_reversal"
     ],
     "figure_note": null
   }

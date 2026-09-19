@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "A marble rolls along a metre scale without turning aside.\n\nHow should that motion be classified?",
+  "stem": "A marble rolls along a metre scale without turning aside. Motions may be called linear, oscillatory, or circular.\n\nHow should that motion be classified?",
   "options": [
     {
       "id": "A",
-      "text": "Oscillatory, because all school motions are to-and-fro."
+      "text": "Oscillatory, because every school motion is to-and-fro."
     },
     {
       "id": "B",
-      "text": "Linear: the path is a straight line."
+      "text": "Linear, because the path is a straight line."
     },
     {
       "id": "C",
-      "text": "Not motion, because it is slow."
+      "text": "Not motion, because the marble is slow."
     },
     {
       "id": "D",
-      "text": "Circular, because the marble is round."
+      "text": "Circular, because the marble itself is round."
     }
   ],
   "statements": [],
@@ -33,18 +33,22 @@
   "mx_option_map": {
     "A": "scope_error",
     "C": "condition_omission",
-    "D": "surface_feature_capture"
+    "D": "UNRESOLVED"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A straight path is linear motion. Round shape and slowness do not change that class.",
+    "key_rationale": "A straight path is linear motion. Speed and the marble's round shape do not change that.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "scope_error",
-      "condition_omission",
-      "surface_feature_capture"
+      "condition_omission"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "D": "surface_feature_capture_not_in_packet"
+    }
   }
 }

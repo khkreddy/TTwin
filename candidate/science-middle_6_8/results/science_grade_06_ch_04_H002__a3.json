@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Jaya dips a bar magnet into a tray of pins.\n\nWhere does it pick up pins most strongly?",
+  "stem": "Jaya dips a bar magnet into a tray of pins. One end is painted.\n\nWhere does it pick up pins most strongly?",
   "options": [
     {
       "id": "A",
-      "text": "Along the middle of the bar, because that is the largest painted area."
+      "text": "Everywhere equally along the bar."
     },
     {
       "id": "B",
@@ -14,11 +14,11 @@
     },
     {
       "id": "C",
-      "text": "Only after the magnet has been heated, which reverses the rule."
+      "text": "Most strongly in the middle and least at the ends."
     },
     {
       "id": "D",
-      "text": "Everywhere equally, so ends do not matter."
+      "text": "Only at the painted end."
     }
   ],
   "statements": [],
@@ -31,19 +31,19 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "surface_feature_capture",
+    "A": "condition_omission",
     "C": "relationship_reversal",
-    "D": "condition_omission"
+    "D": "surface_feature_capture"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A magnet attracts most strongly near its poles, not at the painted middle and not only after heating.",
+    "key_rationale": "A bar magnet attracts most strongly near its two poles.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "surface_feature_capture",
+      "condition_omission",
       "relationship_reversal",
-      "condition_omission"
+      "surface_feature_capture"
     ],
     "figure_note": null
   }

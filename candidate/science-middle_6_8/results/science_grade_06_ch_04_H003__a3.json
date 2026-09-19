@@ -10,15 +10,15 @@
     },
     {
       "id": "B",
-      "text": "One piece is a lone north pole with no south."
+      "text": "One piece is a lone north pole with no south end."
     },
     {
       "id": "C",
-      "text": "The red-painted half is always the only pole that exists."
+      "text": "The painted end is the only pole that exists after the snap."
     },
     {
       "id": "D",
-      "text": "Poles can be stored separately in two boxes."
+      "text": "The two poles can be kept apart as separate pieces."
     }
   ],
   "statements": [],
@@ -33,11 +33,11 @@
   "mx_option_map": {
     "B": "scope_error",
     "C": "surface_feature_capture",
-    "D": "UNRESOLVED"
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A single pole cannot be separated. Each piece is still a magnet with two poles. Paint colour is not the test.",
+    "key_rationale": "Breaking a bar magnet still leaves each piece with a north and a south end.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -45,5 +45,10 @@
       "surface_feature_capture"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "D": "scope_error"
+    }
   }
 }

@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Isha compares her grandmother steaming greens with a neighbour frying them for a long time.\n\nHow should she think about traditional and modern cooking here?",
+  "stem": "Isha compares steaming greens with frying the same greens for a long time.\n\nHow should she think about nutrients and these cooking practices?",
   "options": [
     {
       "id": "A",
-      "text": "Only modern cooking can keep nutrients, so steaming is useless."
+      "text": "Only frying keeps nutrients, so steaming cannot help."
     },
     {
       "id": "B",
@@ -14,11 +14,11 @@
     },
     {
       "id": "C",
-      "text": "Cooking method cannot change vegetables."
+      "text": "Cooking cannot change the greens at all."
     },
     {
       "id": "D",
-      "text": "The healthier method is whichever pan is shinier."
+      "text": "The shinier pan is always the healthier practice."
     }
   ],
   "statements": [],
@@ -32,12 +32,12 @@
   },
   "mx_option_map": {
     "A": "scope_error",
-    "C": "UNRESOLVED",
+    "C": "scope_error",
     "D": "surface_feature_capture"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Cooking can change vegetables and nutrients. Gentle steaming versus long frying is a practice comparison, not a shine test.",
+    "key_rationale": "Steaming and frying are both cooking practices; long high heat can cut nutrients more than gentle steaming.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -45,5 +45,10 @@
       "surface_feature_capture"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "C": "scope_error"
+    }
   }
 }

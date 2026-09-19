@@ -11,7 +11,7 @@
   "build_logic": {
     "source_uid": "0620_m18_qp_12:q1",
     "hinge": "science/grade_06/ch_03/H001",
-    "item_type_target": "one_or_more",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -31,7 +31,8 @@
   },
   "mx_option_map": {
     "A": "term_substitution",
-    "D": "surface_feature_capture"
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
   },
   "item": {
     "uid": "candidate:g68:science:grade_06:ch_03:H001:a3",
@@ -41,13 +42,13 @@
     "chapter_id": "science/grade_06/ch_03",
     "chapter_label": "Mindful eating: a path to a healthy body",
     "subtopic_id": "science/grade_06/ch_03/H001",
-    "stem": "Leela packs lunch. Which choices support healthy eating as wholesome food, in a sensible amount, eaten at a suitable time? One or more options may be correct.",
+    "stem": "Leela packs lunch.\n\nWhich choice supports healthy eating: wholesome food, a sensible amount, and a suitable time?",
     "item_type": "mcq",
     "options": {
-      "A": "The smallest possible nibble of dal, because the smallest portion is always the healthiest.",
-      "B": "A bowl of dal and rice at midday, in an amount she can finish without feeling stuffed.",
-      "C": "Fruit after games, because it is wholesome and the timing fits her hunger.",
-      "D": "A brightly iced cupcake, chosen only because the icing is colourful."
+      "A": "The smallest nibble of dal, treating the smallest portion as always healthiest.",
+      "B": "Dal and rice at midday, in an amount she can finish.",
+      "C": "Only a sweet chosen for bright colour, with no care for amount or time.",
+      "D": "Skipping food until late night, then eating a very large amount at once."
     },
     "statements": [],
     "parts": [],
@@ -69,12 +70,12 @@
     "assessment": {
       "key_source": "none",
       "key_status": "available",
-      "mcq_key": "BC",
+      "mcq_key": "B",
       "proposed_key_status": "UNVERIFIED",
       "examiner_comment": {
         "present": false
       },
-      "one_or_more": true,
+      "one_or_more": false,
       "learn_by_solve": {
         "solve": "Decide whether a mixture is homogeneous or heterogeneous from uniformity, visible particles, and settling.",
         "wrong": {

@@ -37,7 +37,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "When zero is not used, length is the difference of the two marks. Seeing 8 is not the length.",
+    "key_rationale": "Length is the difference of the two marks: 8 cm − 1 cm = 7 cm.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
@@ -45,5 +45,10 @@
       "operation_confusion"
     ],
     "figure_note": null
+  },
+  "build_logic": {
+    "mx_swap": {
+      "D": "dropped_no_third_packet_mx"
+    }
   }
 }

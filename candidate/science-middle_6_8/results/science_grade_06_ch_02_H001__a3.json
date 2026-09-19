@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Aamir lists rose, mango tree, cow, crow, and fish from the school garden and pond.\n\nDoes this set represent biodiversity of living things around the school?",
+  "stem": "Aamir lists rose, mango tree, cow, crow, and fish from the school garden and pond.\n\nDoes this set show biodiversity of living things in that place?",
   "options": [
     {
       "id": "A",
-      "text": "No, because biodiversity means only wild animals in a forest."
+      "text": "No: biodiversity includes only wild animals, not garden plants."
     },
     {
       "id": "B",
-      "text": "Yes: several kinds of plants and animals are present in this place."
+      "text": "Yes: several kinds of plants and animals are present there."
     },
     {
       "id": "C",
-      "text": "Yes only if every name starts with a different letter."
+      "text": "No: biodiversity counts only rocks in a garden."
     },
     {
       "id": "D",
-      "text": "No, because a garden is not a habitat."
+      "text": "Yes only if each living thing is painted a different colour."
     }
   ],
   "statements": [],
@@ -31,19 +31,19 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "scope_error",
-    "C": "surface_feature_capture",
-    "D": "condition_omission"
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Biodiversity here is variety of living things in a place. A school garden and pond count. Letter of the name does not.",
+    "key_rationale": "Biodiversity is the variety of plants and animals in a place. The list shows that.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
+      "condition_omission",
       "scope_error",
-      "surface_feature_capture",
-      "condition_omission"
+      "surface_feature_capture"
     ],
     "figure_note": null
   }

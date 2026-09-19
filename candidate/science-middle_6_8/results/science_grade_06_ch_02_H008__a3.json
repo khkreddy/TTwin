@@ -2,23 +2,23 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Neel notices cactus in a dry yard and ferns near a wet wall.\n\nWhy do the plants differ in the two places?",
+  "stem": "Neel sees cactus in a dry yard and ferns near a wet wall.\n\nWhy do the plants differ in the two places?",
   "options": [
     {
       "id": "A",
-      "text": "They differ only because someone painted the walls different colours."
+      "text": "Different places always have different plants, for any reason."
     },
     {
       "id": "B",
-      "text": "Different conditions (water, heat, soil) support different plants."
+      "text": "Different conditions of water, heat, and soil support different plants."
     },
     {
       "id": "C",
-      "text": "Every region must have the same plants."
+      "text": "Dry yards are dry because cactus and ferns made them dry."
     },
     {
       "id": "D",
-      "text": "Plants cannot differ; only animals can."
+      "text": "No plant can live in both a dry yard and a wet place."
     }
   ],
   "statements": [],
@@ -31,17 +31,17 @@
     "letter": "B"
   },
   "mx_option_map": {
-    "A": "surface_feature_capture",
+    "A": "condition_omission",
     "C": "relationship_reversal",
     "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Living things in a region match the conditions there. Colour of paint is not the cause. Regions need not match.",
+    "key_rationale": "Conditions differ between places, so the plants that can live there differ.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "surface_feature_capture",
+      "condition_omission",
       "relationship_reversal",
       "scope_error"
     ],

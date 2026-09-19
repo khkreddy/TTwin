@@ -1,25 +1,24 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
   "item_type": "single_mcq",
   "stem": "Bhavna sorts classroom cards into renewable and non-renewable resources.\n\nWhich classification is correct?",
   "options": [
     {
       "id": "A",
-      "text": "Petroleum is renewable because it can form again someday from buried remains."
+      "text": "Petroleum is renewable: it can form again someday from buried remains."
     },
     {
       "id": "B",
-      "text": "Forests are non-renewable because a cleared patch looks empty right away."
+      "text": "Forests are non-renewable: a cleared patch looks empty right away."
     },
     {
       "id": "C",
-      "text": "Air, water and forests are renewable when nature can replenish them in a reasonable time; coal, petroleum and natural gas are non-renewable because they take millions of years and get exhausted with use."
+      "text": "Air, water, and forests are renewable when nature can replenish them in a reasonable time; coal, petroleum, and natural gas are non-renewable."
     },
     {
       "id": "D",
-      "text": "Petroleum is renewable and forests are non-renewable for the reasons in A and B."
+      "text": "Petroleum is renewable and forests are non-renewable."
     }
   ],
   "statements": [],
@@ -29,8 +28,7 @@
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "C",
-    "letters": null
+    "letter": "C"
   },
   "mx_option_map": {
     "A": "condition_omission",
@@ -39,12 +37,12 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Renewable means replenished in a reasonable time; fossil fuels fail that test. A drops the time condition; B judges by immediate appearance; D combines both errors.",
+    "key_rationale": "Renewable means replenished in a reasonable time. Fossil fuels take millions of years.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "condition_omission",
-      "surface_feature_capture"
+      "surface_feature_capture",
+      "condition_omission"
     ],
     "figure_note": null
   }

@@ -2,11 +2,11 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Imran sends several torch rays that are parallel to one another onto the same plane mirror shown below.\n\nWhat happens to those rays after reflection?",
+  "stem": "Imran sends several torch rays that are parallel to one another onto the plane mirror shown below.\n\nWhat happens to those rays after reflection?",
   "options": [
     {
       "id": "A",
-      "text": "They must meet at a point behind the mirror, because that is what every mirror does."
+      "text": "They meet at a point behind the mirror."
     },
     {
       "id": "B",
@@ -14,7 +14,7 @@
     },
     {
       "id": "C",
-      "text": "They spread apart as if the sheet were a convex surface, even though the sheet is flat."
+      "text": "They spread apart as if the sheet were a convex surface."
     },
     {
       "id": "D",
@@ -37,14 +37,14 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "A plane mirror keeps a bundle of parallel rays parallel. Meeting at a point is a concave-mirror story, not this flat sheet.",
+    "key_rationale": "Parallel rays stay parallel after reflection from a plane mirror.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
-      "term_substitution",
+      "surface_feature_capture",
       "scope_error",
-      "surface_feature_capture"
+      "term_substitution"
     ],
-    "figure_note": "Same plane-mirror tikzpicture as 0625_m19_qp_12:q22, used as the flat sheet."
+    "figure_note": null
   }
 }

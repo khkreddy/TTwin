@@ -3,13 +3,13 @@
   "lifecycle": "CANDIDATE",
   "serve_eligible": false,
   "owner_ratified": false,
-  "join_status": "UNBOUND",
+  "join_status": "BOUND",
   "variation_class": "V1",
   "fidelity_mode": "FAITHFUL_TRANSFER",
-  "source_ref": "session:0620_m18_qp_12:q1",
+  "source_ref": "session:biology_7a_rjb_exe1",
   "target_unit_id": "science/grade_06/ch_07/H001",
   "build_logic": {
-    "source_uid": "0620_m18_qp_12:q1",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_07/H001",
     "item_type_target": "single_mcq",
     "figure_decision": {
@@ -22,17 +22,16 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "condition_omission",
-      "B": "scope_error",
-      "D": "surface_feature_capture",
-      "C": null
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_07/H001"
   },
   "mx_option_map": {
     "A": "condition_omission",
-    "C": "scope_error",
-    "D": "surface_feature_capture"
+    "C": "surface_feature_capture",
+    "D": "scope_error"
   },
   "item": {
     "uid": "candidate:g68:science:grade_06:ch_07:H001:a3",
@@ -42,13 +41,13 @@
     "chapter_id": "science/grade_06/ch_07",
     "chapter_label": "Temperature and its measurement",
     "subtopic_id": "science/grade_06/ch_07/H001",
-    "stem": "Nisha puts one hand in warm water and the other in cool water, then both into the same basin of tap water.\n\nCan she trust touch to say whether the tap water is hot or cold?",
+    "stem": "Nisha puts one hand in warm water and the other in cool water. Then she puts both hands into the same basin of tap water.\n\nCan she trust touch to say whether the tap water is hot or cold?",
     "item_type": "mcq",
     "options": {
-      "A": "Yes: the same tap water will feel warm to one hand and cool to the other, and that is the true temperature.",
-      "B": "No: after the two hands go into the same basin, touch disagrees, so temperature must be measured.",
-      "C": "Thermometers that sat in the warm and cool bowls will still disagree after they settle in the tap water, so measurement is useless.",
-      "D": "The reddish bowl is hotter than the bluish bowl even if both thermometers read the same."
+      "A": "Yes. Touch still tells the true temperature of the tap water.",
+      "B": "No. The two hands disagree, so she should measure.",
+      "C": "Yes. The hand that was in warm water feels the true temperature.",
+      "D": "No. The tap water has two temperatures at once."
     },
     "statements": [],
     "parts": [],
@@ -76,71 +75,7 @@
         "present": false
       },
       "one_or_more": false,
-      "learn_by_solve": {
-        "solve": "Decide whether a mixture is homogeneous or heterogeneous from uniformity, visible particles, and settling.",
-        "wrong": {
-          "A": {
-            "mx_type": "intermediate_omission",
-            "pathway": "intermediate_omission",
-            "followup": {
-              "format": "fill_blank",
-              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
-              "terms": [
-                "oxidised",
-                "reduced",
-                "unchanged"
-              ],
-              "key": {
-                "1": "oxidised",
-                "2": "reduced",
-                "3": "unchanged"
-              },
-              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
-            }
-          },
-          "B": {
-            "mx_type": "intermediate_omission",
-            "pathway": "intermediate_omission",
-            "followup": {
-              "format": "fill_blank",
-              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
-              "terms": [
-                "oxidised",
-                "reduced",
-                "unchanged"
-              ],
-              "key": {
-                "1": "oxidised",
-                "2": "reduced",
-                "3": "unchanged"
-              },
-              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
-            }
-          },
-          "D": {
-            "mx_type": "intermediate_omission",
-            "pathway": "intermediate_omission",
-            "followup": {
-              "format": "fill_blank",
-              "stem": "Assign oxidation numbers first. The species is [[1]] if OS increases, [[2]] if OS decreases, or [[3]] if OS stays the same.",
-              "terms": [
-                "oxidised",
-                "reduced",
-                "unchanged"
-              ],
-              "key": {
-                "1": "oxidised",
-                "2": "reduced",
-                "3": "unchanged"
-              },
-              "why": "A mixture with uniform composition throughout is homogeneous; a mixture that is not uniform, has visible particles, or settles with time is heterogeneous. This is the hinge move, not a reprint of the clicked option."
-            }
-          }
-        },
-        "key": "C",
-        "hinge_id": "science/grade_09/ch_05/H001",
-        "hinge_label": "Decide whether a mixture is homogeneous or heterogeneous from uniformity, visible particles, and settling."
-      },
+      "learn_by_solve": null,
       "mark_scheme": null
     }
   }
