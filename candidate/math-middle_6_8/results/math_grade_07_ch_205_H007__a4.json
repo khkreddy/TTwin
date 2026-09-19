@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher records weekly scores $3,5,3,8,5$ for weeks $1$ through $5$ in that order. The diagram shows the dot plot of those scores on a number line.\n\nWhich claim about the dot plot is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The number line alone is the distribution, so the dots are optional decoration."
+    },
+    {
+      "id": "B",
+      "text": "The plot shows values and frequencies (two $3$s, two $5$s, one $8$), but it does not keep which week each score came from."
+    },
+    {
+      "id": "C",
+      "text": "The dots create the number line marks $3$, $5$, and $8$."
+    },
+    {
+      "id": "D",
+      "text": "The plot also reconstructs the exact onion-table week labels that were never drawn as dots."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.85cm,y=0.55cm,font=\\small]\n  \\draw[line width=0.9pt,->] (2,0)--(9.5,0) node[right]{score};\n  \\foreach \\x in {3,4,5,6,7,8} \\draw (\\x,0.12)--(\\x,-0.12) node[below]{\\x};\n  \\foreach \\y in {1,2} \\fill (3,\\y) circle (2.3pt);\n  \\foreach \\y in {1,2} \\fill (5,\\y) circle (2.3pt);\n  \\fill (8,1) circle (2.3pt);\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A dot plot shows values and how often they occur; original week order can be lost. Calling the bare number line the distribution, saying dots create the line, or demanding week labels not in the dots leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Added dot plot on a number line for scores 3,3,5,5,8."
+  }
+}

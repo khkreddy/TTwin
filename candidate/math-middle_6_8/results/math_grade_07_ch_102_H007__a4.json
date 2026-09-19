@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sameer must remove the brackets in $9-(4-6)$.\n\nWhich two claims are both correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The expression becomes $9-4-6$ with both inner signs unchanged."
+    },
+    {
+      "id": "B",
+      "text": "Subtracting $(4-6)$ flips each inner sign, so the rewrite is $9-4+6$."
+    },
+    {
+      "id": "C",
+      "text": "After removing brackets, $9-4+6$ equals $11$."
+    },
+    {
+      "id": "D",
+      "text": "Removing brackets always deletes the inner minus and leaves only $9-4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Minus before a bracket flips inner signs: 9-4+6=11. Leaving signs unchanged or dropping the second term fails the rewrite rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

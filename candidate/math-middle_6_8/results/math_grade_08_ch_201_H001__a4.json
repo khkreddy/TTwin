@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sana reads the statement \"25% of the bag of rice.\" The whole is the bag of rice.\n\nWhich two claims correctly read 25%?",
+  "options": [
+    {
+      "id": "A",
+      "text": "25% means 25 kg more than the whole bag of rice."
+    },
+    {
+      "id": "B",
+      "text": "25% means $\\frac{25}{100}$ of the bag of rice."
+    },
+    {
+      "id": "C",
+      "text": "25% means 25 equal parts out of 100 equal parts of the bag of rice."
+    },
+    {
+      "id": "D",
+      "text": "25% means $\\frac{100}{25}$ of the bag of rice."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A percentage is a fraction with denominator 100, so 25% is 25/100 of the whole, or 25 out of 100 equal parts. Adding 25 kg over-scopes. Writing 100/25 reverses the fraction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

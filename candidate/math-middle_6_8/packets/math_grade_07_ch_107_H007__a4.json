@@ -1,0 +1,114 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m24_qp_42:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:17:03.425Z",
+  "source": {
+    "item_ref": "session:0580_m24_qp_42:q6",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows triangle ABC with AB = 17.2 cm.\nAngle ABC = 54° and angle ACB = 68°.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate AC. AC = cm [3]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "M lies on BC and MC = 12.8 cm. Calculate AM. AM = cm [3]",
+        "marks": 0
+      },
+      {
+        "id": "c",
+        "text": "Calculate the shortest distance from A to BC. cm [3] 8 - 4",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=1.0, line cap=round, line join=round, font=\\small]\\coordinate (B) at (0,0);\\coordinate (C) at (5.4,0);\\coordinate (M) at (1.25,0);\\coordinate (A) at (3.35,4.75);\\draw (B)--(A)--(C)--(B);\\draw (A)--(M);\\node[below left] at (B) {$B$};\\node[below] at (M) {$M$};\\node[below right] at (C) {$C$};\\node[above] at (A) {$A$};\\node[rotate=53, above] at (1.05,1.55) {$17.2\\,\\mathrm{cm}$};\\draw (0.55,0) arc[start angle=0,end angle=54,radius=0.55];\\node at (0.72,0.30) {$54^\\circ$};\\draw (4.85,0) arc[start angle=180,end angle=112,radius=0.55];\\node at (4.68,0.32) {$68^\\circ$};\\draw[->] (1.55,-0.45)--(5.35,-0.45);\\node[below] at (3.45,-0.45) {$12.8\\,\\mathrm{cm}$};\\node[align=left] at (5.65,3.65) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_107/H007",
+      "unit_id": "math/grade_07/ch_107/H007",
+      "title": "Calculate a missing angle of a triangle from the other two angles.",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Parallel line is the label that belongs on this item, so 'Calculate a missing angle of a triangle from the other two angles' is answered as parallel line rather than interior angle."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "interior angle still holds here even though The two known angles must be interior angles of the same triangle is missing from the stem — on the item about Calculate a missing angle of a triangle from the other."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The interior angle rule also covers this: exterior angle supplement calculations, so it is not an exception — on the item about Calculate a missing angle of a triangle from the other."
+      }
+    ],
+    "enrichment": "The three angles in any triangle add to 180°, so a missing angle equals 180° minus the sum of the two known angles.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_107. The student must decide: Calculate a missing angle of a triangle from the other two angles. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m24_qp_42:q6",
+    "hinge": "math/grade_07/ch_107/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H007"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m25_qp_32:q7",
+  "target_unit_id": "math/grade_07/ch_105/H007",
+  "build_logic": {
+    "source_uid": "0580_m25_qp_32:q7",
+    "hinge": "math/grade_07/ch_105/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H007"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H007:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H007",
+    "stem": "Meher looks at the diagram. Line $t$ crosses lines $p$ and $q$ at two different points, forming eight angles at those crossings.\n\nWhich claim correctly names the transversal and organises those angles?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Lines $p$ and $q$ are the transversal, and $t$ is only a third unrelated line.",
+      "B": "Line $t$ is a transversal even if it meets only one of $p$ or $q$.",
+      "C": "Line $t$ is the transversal because it meets both $p$ and $q$; the eight angles sit in vertically opposite equal pairs at each crossing.",
+      "D": "The eight angles are what create transversal $t$ across $p$ and $q$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.2,2.2)--(5.8,2.2) node[right]{$p$};\n  \\draw[line width=1.05pt] (-0.2,0.3)--(5.8,0.3) node[right]{$q$};\n  \\draw[line width=1.0pt] (1.2,-0.6)--(4.0,3.1);\n  \\node[above left] at (3.95,3.0){$t$};\n  \\fill (2.35,2.2) circle (1.4pt);\n  \\fill (3.0,0.3) circle (1.4pt);\n  \\node[above right] at (2.4,2.35){$1$};\n  \\node[above left] at (2.2,2.35){$2$};\n  \\node[below right] at (2.45,2.0){$4$};\n  \\node[below left] at (2.15,2.0){$3$};\n  \\node[above right] at (3.1,0.45){$5$};\n  \\node[above left] at (2.85,0.45){$6$};\n  \\node[below right] at (3.15,0.1){$8$};\n  \\node[below left] at (2.8,0.1){$7$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

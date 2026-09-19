@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_04/H007",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_04/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H007"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H007:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H007",
+    "stem": "Sameer records snack votes as Samosa $6$, Idli $4$, and Poha $2$. The diagram shows the bar graph he drew for that table.\n\nWhich claim correctly describes a valid construction of that bar graph?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The vertical scale alone is the finished bar graph for the three snacks.",
+      "B": "The three bars may have different widths as long as their heights are $6$, $4$, and $2$.",
+      "C": "Categories sit on one axis, one uniform number scale sits on the other, and equal-width bars reach heights $6$, $4$, and $2$ on that scale.",
+      "D": "The printed number $6$ from the table is itself the bar graph."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.8]\n  \\draw[->] (0,0) -- (5.2,0) node[right] {Snack};\n  \\draw[->] (0,0) -- (0,7.2) node[above] {Votes};\n  \\foreach \\y in {1,2,3,4,5,6,7} {\\draw (0,\\y) -- (0.12,\\y) node[left] {\\y};}\n  \\fill[gray!35] (0.5,0) rectangle (1.4,6);\n  \\node at (0.95,-0.4) {Samosa};\n  \\fill[gray!35] (2.0,0) rectangle (2.9,4);\n  \\node at (2.45,-0.4) {Idli};\n  \\fill[gray!35] (3.5,0) rectangle (4.4,2);\n  \\node at (3.95,-0.4) {Poha};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

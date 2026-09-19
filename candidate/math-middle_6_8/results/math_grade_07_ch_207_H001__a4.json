@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nila has a weighing scale that is balanced, as in the diagram. The left pan holds one sealed packet and a $15\\,\\mathrm{g}$ weight. The right pan holds a $40\\,\\mathrm{g}$ weight.\n\nHow can she find the mass of the packet?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Remove the $15\\,\\mathrm{g}$ weight from the left pan only, then read the unbalanced pans as the packet mass."
+    },
+    {
+      "id": "B",
+      "text": "The remaining comparison after removing equal weights from both pans is what first created the balanced pans."
+    },
+    {
+      "id": "C",
+      "text": "Remove $15\\,\\mathrm{g}$ from both pans (take the $15\\,\\mathrm{g}$ weight off the left and replace the right $40\\,\\mathrm{g}$ with $25\\,\\mathrm{g}$), leaving the packet balanced against $25\\,\\mathrm{g}$."
+    },
+    {
+      "id": "D",
+      "text": "Compare the pans while the scale is still tipped, using an unbalanced reading as the packet mass."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.0pt] (0,1.6)--(6.4,1.6);\n  \\draw[line width=1.0pt] (3.2,1.6)--(3.2,0.2);\n  \\draw[line width=0.9pt] (3.2,0.2)--(2.4,-0.1)--(4.0,-0.1)--cycle;\n  \\draw[line width=0.9pt] (0.2,1.6)--(0.2,1.1)--(1.8,1.1)--(1.8,1.6);\n  \\draw[line width=0.9pt] (4.6,1.6)--(4.6,1.1)--(6.2,1.1)--(6.2,1.6);\n  \\node at (1.0,1.35){packet};\n  \\node at (1.0,0.75){$15\\,\\mathrm{g}$};\n  \\node at (5.4,1.35){$40\\,\\mathrm{g}$};\n  \\node[below] at (3.2,-0.25){balanced};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balance is an equality: removing 15 g from both sides leaves the packet equal to 25 g. Removing from one side only, reversing cause and effect, or using an unbalanced scale leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Added balanced pan scale with packet+15 g on left and 40 g on right."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Algebra cancel-unknowns CWO imports equation-solving language; kept condition_omission, relationship_reversal, scope_error with pan weights."
+      }
+    ]
+  }
+}

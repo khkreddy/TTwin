@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Veer has one $5$ cm by $3$ cm rectangle. He cuts it into two pieces along a mid-line parallel to the $3$ cm side and then rejoins the pieces along a different edge.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about perimeter is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The perimeter must stay $16$ cm, because the same pieces are used."
+        },
+        {
+          "id": "B",
+          "text": "The new outline can have a different perimeter even though the pieces are the same."
+        },
+        {
+          "id": "C",
+          "text": "The perimeter always becomes half of $16$ cm after any cut."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that compares the outer edges before and after rejoining.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Edges that were outer can become joined and disappear from the outline, or new outer edges can appear, so perimeter can change with the same pieces."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same pieces do not lock perimeter; joining hides edges and can change the outline length. Halving always is false.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_03/H016",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_03/H016",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H016"
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_03:H016:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-BODY",
+    "chapter_id": "science/grade_06/ch_03",
+    "chapter_label": "Mindful eating: a path to a healthy body",
+    "subtopic_id": "science/grade_06/ch_03/H016",
+    "stem": "Arnav compares tomatoes grown on a nearby farm with the same kind of tomatoes brought from far away.\n\nWhich claims about food miles are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "The nearby tomatoes travel a shorter distance from farm to plate, so they have fewer food miles.",
+      "B": "Fewer food miles can mean less fuel on the journey, which can lower transport cost and pollution.",
+      "C": "Tomatoes grown nearby always have fewer food miles, even if they travel through a distant warehouse first.",
+      "D": "Putting the same tomatoes on sale reduces their food miles even when the delivery route stays unchanged."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_03/H016",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

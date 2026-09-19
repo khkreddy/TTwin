@@ -1,0 +1,88 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s13_qp_11:q17",
+  "target_unit_id": "math/grade_07/ch_206/H007",
+  "build_logic": {
+    "source_uid": "0580_s13_qp_11:q17",
+    "hinge": "math/grade_07/ch_206/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H007",
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "45° construction scope not needed for 60-30-15 hinge; kept term_substitution and relationship_reversal on wrong letters."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_206:H007:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_206",
+    "chapter_label": "math/grade_07/ch_206",
+    "subtopic_id": "math/grade_07/ch_206/H007",
+    "stem": "Rohan must construct an exact $15^{\\circ}$ angle at point $A$ on ray $AX$ in the diagram, using equal-radius arcs and angle bisection.\n\nWhich two claims correctly describe the plan?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Name ray $AX$ as the finished $15^{\\circ}$ angle, and stop before drawing any arcs.",
+      "B": "Build a $60^{\\circ}$ angle at $A$ with equal-radius arcs that form an equilateral triangle.",
+      "C": "Bisect that $60^{\\circ}$ angle to $30^{\\circ}$, then bisect again to obtain $15^{\\circ}$.",
+      "D": "The repeated bisections are what create the equal-radius arcs of the equilateral step."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (X) at (5.2,0);\n  \\draw[line width=1.05pt,->] (A)--(X) node[right]{$X$};\n  \\fill (A) circle (1.5pt);\n  \\node[below left] at (A){$A$};\n  \\draw[line width=0.75pt,dashed] (A)--(2.8,3.2);\n  \\node[above] at (2.8,3.2){$?$};\n  \\draw[line width=0.65pt] (1.1,0) arc[start angle=0,end angle=60,radius=1.1];\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_206/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

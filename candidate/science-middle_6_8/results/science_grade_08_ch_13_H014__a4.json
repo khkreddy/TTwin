@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Tara compares where a fertilised egg develops in a bird with where it develops in most mammals.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "In birds, the fertilised egg is laid and the zygote develops into an embryo during hatching."
+    },
+    {
+      "id": "B",
+      "text": "In most mammals, the zygote develops into an embryo inside the female body until birth."
+    },
+    {
+      "id": "C",
+      "text": "In birds, the embryo develops only inside the female body and is never laid as an egg."
+    },
+    {
+      "id": "D",
+      "text": "In most mammals, the mother's body never supplies food or oxygen before birth."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Birds lay the fertilised egg for development during hatching; most mammal embryos develop inside the female body with support until birth. Reversing the bird pattern or dropping maternal support in mammals misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

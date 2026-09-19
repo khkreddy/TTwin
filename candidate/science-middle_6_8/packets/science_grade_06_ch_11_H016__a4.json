@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_s21_qp_12:q29",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:42:25.790Z",
+  "created_at": "2026-09-19T09:14:54.081Z",
   "source": {
-    "item_ref": "session:0620_s21_qp_12:q29",
-    "item_type": "single_mcq",
-    "stem": "Which property of aluminium makes it useful for food containers?",
-    "options": [
-      {
-        "id": "A",
-        "text": "It conducts heat."
-      },
-      {
-        "id": "B",
-        "text": "It has low density."
-      },
-      {
-        "id": "C",
-        "text": "It is strong."
-      },
-      {
-        "id": "D",
-        "text": "It resists corrosion."
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "D"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_11/H016",
+      "unit_id": "science/grade_06/ch_11/H016",
+      "title": "Trace a daily activity to the natural resources it uses directly or indirectly and choose a way to reduce unnecessary use or pollution.",
+      "node_labels": [
+        "Earth systems, resources and habitability",
+        "Earth, sky, time and resources"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -63,27 +51,14 @@
       }
     ],
     "enrichment": "Everyday life uses many natural resources directly or indirectly, including air, water, soil, and food from plants and animals. Responsible use means identifying the resource in an activity and reducing unnecessary use or pollution. When an activity is linked to the resource it uses, a learner can choose a practical reduction action that lowers waste, overuse, or pollution from that activity. The learner correctly applies this rule: Everyday life uses many natural resources directly or indirectly, including air, water, soil, and food from plants and animals. Responsible use means identifying the resource in an activity and reducing unnecessary use or pollution. Daily activities use only the item in hand and do not connect to natural resources or pollution.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_11/H016",
-      "gate_names": [
-        "term_substitution",
-        "term_substitution",
-        "term_substitution"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student swapping the sibling term “It conducts heat.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option B remains the trap for a student swapping the sibling term “It has low density.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student swapping the sibling term “It is strong.” for the required “It resists corrosion.”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Trace a daily activity to the natural resources it uses directly or indirectly and choose a way to reduce unnecessary use or pollution. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Nature's treasures. The student must decide: Trace a daily activity to the natural resources it uses directly or indirectly and choose a way to reduce unnecessary use or pollution. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "structured_parts",
     "format": {
       "n_options": 4
     },
@@ -102,9 +77,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_s21_qp_12:q29",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_11/H016",
-    "item_type_target": "preserve",
+    "item_type_target": "structured_parts",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -114,12 +89,7 @@
       "scope_error",
       "surface_feature_capture"
     ],
-    "option_plan": {
-      "A": "condition_omission",
-      "B": "scope_error",
-      "C": "surface_feature_capture",
-      "D": null
-    },
+    "option_plan": {},
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_11/H016"
   }
 }

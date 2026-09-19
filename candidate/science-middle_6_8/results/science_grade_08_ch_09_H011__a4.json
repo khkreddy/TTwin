@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Ritu heats air in a sealed syringe; the air expands, its volume rises, and its density falls as particles spread farther apart. She then cools another sample of the same air and raises the pressure by pushing the plunger.\n\nWhich claim correctly predicts how temperature and pressure change density?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heating decreases the density of the air by spreading particles farther apart; raising pressure on the gas increases density by decreasing volume."
+    },
+    {
+      "id": "B",
+      "text": "Heating increases density because hot air is always heavier for the same volume."
+    },
+    {
+      "id": "C",
+      "text": "Raising pressure changes the density of solids and liquids as much as it changes the density of gases."
+    },
+    {
+      "id": "D",
+      "text": "Density depends only on shape and size, not on temperature or pressure."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heating a gas lowers density as volume rises; raising pressure raises density as volume falls. Reversing the heating effect, treating solids and liquids like gases under pressure, or ignoring T and P all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

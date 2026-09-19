@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a closed shape drawn on Sana's slate, with vertices labelled A, B, C and D.\n\nWhich claim about the figure is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The figure is a quadrilateral: it has four straight sides."
+    },
+    {
+      "id": "B",
+      "text": "The figure is a triangle: it has three straight sides."
+    },
+    {
+      "id": "C",
+      "text": "The figure is a circle: its side is a single curve."
+    },
+    {
+      "id": "D",
+      "text": "The figure is a five-sided polygon: it has five straight sides."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.2,0.2);\n  \\coordinate (C) at (2.6,2.1);\n  \\coordinate (D) at (-0.3,1.7);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\fill (A) circle (1.2pt); \\fill (B) circle (1.2pt); \\fill (C) circle (1.2pt); \\fill (D) circle (1.2pt);\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "ABCD has four straight sides, so it is a quadrilateral. Calling it a triangle swaps the side count. Calling it a circle treats a straight-sided figure as curved. Calling it five-sided miscounts the sides.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote right-triangle source into quadrilateral ABCD; stem refers to the diagram."
+  }
+}

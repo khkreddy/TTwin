@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya must choose which of $1.6$, $2.1$, and $2.4$ is closest to the target $1.95$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$2.4$ is closest because it is the largest of the three numbers."
+    },
+    {
+      "id": "B",
+      "text": "$1.6$ is closest because it is the smallest of the three numbers."
+    },
+    {
+      "id": "C",
+      "text": "$2.1$ is closest because its distance from $1.95$ is $0.15$, smaller than $0.35$ and $0.45$."
+    },
+    {
+      "id": "D",
+      "text": "$2.4$ is closest because its digits look most like $1.95$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distances: |1.6-1.95|=0.35, |2.1-1.95|=0.15, |2.4-1.95|=0.45, so 2.1 is closest. Largest, smallest, or digit look-alikes are not distance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

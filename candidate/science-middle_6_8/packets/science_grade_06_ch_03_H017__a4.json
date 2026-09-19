@@ -1,45 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0610_m15_qp_12:q17",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:03:45.118Z",
+  "created_at": "2026-09-19T09:14:53.111Z",
   "source": {
-    "item_ref": "session:0610_m15_qp_12:q17",
-    "item_type": "single_mcq",
-    "stem": "Which structures in plants and in humans normally carry amino acids?",
-    "options": [
-      {
-        "id": "A",
-        "text": "arteries ✓; phloem ✓; ureters ✗"
-      },
-      {
-        "id": "B",
-        "text": "arteries ✓; phloem ✗; ureters ✓"
-      },
-      {
-        "id": "C",
-        "text": "arteries ✗; phloem ✓; ureters ✗"
-      },
-      {
-        "id": "D",
-        "text": "arteries ✗; phloem ✗; ureters ✓"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
-    "tables": [
-      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
-    ],
+    "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "A"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_03/H017",
+      "unit_id": "science/grade_06/ch_03/H017",
+      "title": "Connect avoiding food waste with the time and effort put in by farmers and community members to bring food from farm to plate.",
+      "node_labels": [
+        "Food, digestion, growth and health",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -60,27 +46,14 @@
       }
     ],
     "enrichment": "Many people leave food unconsumed on their plates, but food should be respected because farmers and other community members put time and effort into getting food from the farm to the plate. recognising farm-to-plate effort -> taking only needed food and reducing waste The learner correctly applies this rule: Many people leave food unconsumed on their plates, but food should be respected because farmers and other community members put time and effort into getting food from the farm to the plate. Food left on a plate is only a personal matter and has no connection to farmers or community effort.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_03/H017",
-      "gate_names": [
-        "condition_omission",
-        "condition_omission",
-        "condition_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Connect avoiding food waste with the time and effort put in by farmers and community members to bring food from farm to plate. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Connect avoiding food waste with the time and effort put in by farmers and community members to bring food from farm to plate. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "single_mcq",
     "format": {
       "n_options": 4
     },
@@ -99,9 +72,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0610_m15_qp_12:q17",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_03/H017",
-    "item_type_target": "preserve",
+    "item_type_target": "single_mcq",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -113,8 +86,7 @@
     "option_plan": {
       "B": "scope_error",
       "C": "surface_feature_capture",
-      "D": "UNRESOLVED",
-      "A": null
+      "D": "UNRESOLVED"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H017"
   }

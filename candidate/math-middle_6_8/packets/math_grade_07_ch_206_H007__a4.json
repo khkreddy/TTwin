@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_s13_qp_11:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:17:06.666Z",
+  "source": {
+    "item_ref": "session:0580_s13_qp_11:q17",
+    "item_type": "structured_parts",
+    "stem": "In this question use a straight edge and compasses only.\nLeave in all your construction arcs.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Construct the bisector of angle ABC. A B C [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Construct the perpendicular bisector of the line DE. E D [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  % Angle ABC\n  \\coordinate (B) at (0,4.2);\n  \\coordinate (A) at (2.45,5.85);\n  \\coordinate (C) at (4.35,2.95);\n  \\draw[line width=0.7pt] (B)--(A);\n  \\draw[line width=0.7pt] (B)--(C);\n  \\node[above right=1pt] at (A) {$A$};\n  \\node[left=3pt] at (B) {$B$};\n  \\node[right=3pt] at (C) {$C$};\n  % Line segment DE\n  \\coordinate (D) at (1.65,-2.75);\n  \\coordinate (E) at (2.70,0.35);\n  \\draw[line width=0.7pt] (D)--(E);\n  \\node[below left=1pt] at (D) {$D$};\n  \\node[above right=1pt] at (E) {$E$};\n\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_206/H007",
+      "unit_id": "math/grade_07/ch_206/H007",
+      "title": "Decide how to construct exact 60 degree, 30 degree, and 15 degree angles using equilateral triangles and angle bisection.",
+      "node_labels": [
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Euclidean geometry, congruence, similarity and proof",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Ray AX is the label that belongs on this item, so 'Decide how to construct exact 60 degree, 30 degree, and 15 degree' is answered as ray AX rather than point A."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "point A still holds here even though The first arc is centered at the point where the 60 degree angle is required is missing from the stem — on the item about Decide how to construct exact 60 degree, 30 degree, and."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Repeated angle bisection halves the angle is what produces same-radius arcs create equal sides of an equilateral triangle, so the usual direction of this relation is run backwards — on the item about Decide how to construct exact 60 degree, 30 degree, and."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The point A rule also covers this: constructing 45 degrees, so it is not an exception — on the item about Decide how to construct exact 60 degree, 30 degree, and."
+      }
+    ],
+    "enrichment": "A 60 degree angle is obtained by constructing an equilateral triangle from equal-radius arcs; bisecting a constructed angle gives half of it, so 60 degrees can be bisected to 30 degrees and then to 15 degrees.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_206. The student must decide: Decide how to construct exact 60 degree, 30 degree, and 15 degree angles using equilateral triangles and angle bisection. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "one_or_more",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_s13_qp_11:q17",
+    "hinge": "math/grade_07/ch_206/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H007"
+  }
+}

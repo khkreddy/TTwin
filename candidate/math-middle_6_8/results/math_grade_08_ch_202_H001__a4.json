@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows square P of side 2 cm and square Q of side 4 cm. The side length is multiplied by 2 from P to Q.\n\nWhich statement about the area is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The area of Q is 4 times the area of P, because area scales with the square of the side factor."
+    },
+    {
+      "id": "B",
+      "text": "The area of Q is 2 times the area of P, matching the side factor."
+    },
+    {
+      "id": "C",
+      "text": "The perimeter becomes 4 times as large, and that same factor rule applies to area."
+    },
+    {
+      "id": "D",
+      "text": "The area stays the same because both figures are still squares."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (1.5,1.5);\n  \\node[below] at (0.75,-0.05) {side $2\\,\\mathrm{cm}$};\n  \\node[above] at (0.75,1.5) {square P};\n  \\draw[thick] (3.2,0) rectangle (6.2,3.0);\n  \\node[below] at (4.7,-0.05) {side $4\\,\\mathrm{cm}$};\n  \\node[above] at (4.7,3.0) {square Q};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Side factor 2 gives area factor 2² = 4, so Q has 4 times P's area (4 cm² to 16 cm²). Matching area to the side factor omits the squaring. Applying a perimeter story to area over-scopes. Saying area is unchanged grabs that both are squares.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote right-triangle source into two squares with sides 2 cm and 4 cm; stem refers to the diagram."
+  }
+}

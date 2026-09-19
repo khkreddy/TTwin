@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya studies a branching-tree drawing in which each small branch looks like a smaller copy of the whole tree. She also looks at a plain oval with no smaller copies inside it.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The plain oval is a fractal, because any closed curve counts as a fractal."
+    },
+    {
+      "id": "B",
+      "text": "The branching tree is a fractal, because the same structure repeats at smaller scales."
+    },
+    {
+      "id": "C",
+      "text": "The plain oval is not a fractal, because it has no self-similar smaller copies."
+    },
+    {
+      "id": "D",
+      "text": "Only computer drawings can be fractals, so the branching tree is not one."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fractal needs self-similar structure at smaller scales. The branching tree has it; the plain oval does not. Counting every closed curve omits that test. Restricting fractals to computer drawings over-narrows the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

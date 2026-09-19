@@ -1,0 +1,58 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher studies the diagram of $\\triangle PQR$ and $\\triangle XYZ$. Marked arcs show $\\angle P=\\angle X$ and $\\angle Q=\\angle Y$, and the included sides $PQ$ and $XY$ have matching ticks.\n\nWhich claim correctly decides congruence from that information?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent from the two angle pairs alone, even if the equal sides are not between those angles."
+    },
+    {
+      "id": "B",
+      "text": "Congruence of the triangles is what creates the equal angles and the included equal sides."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent by ASA: two angles and the included side match."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent from any two angles with any third side, including a non-included side."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.4,0);\n  \\coordinate (R) at (1.1,2.5);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P){$P$};\n  \\node[below right] at (Q){$Q$};\n  \\node[above] at (R){$R$};\n  \\draw[line width=0.85pt] (1.7,-0.12)--(1.7,0.12);\n  \\draw[line width=0.7pt] (0.45,0) arc[start angle=0,end angle=66,radius=0.45];\n  \\draw[line width=0.7pt] (2.95,0) arc[start angle=180,end angle=114,radius=0.45];\n  \\begin{scope}[xshift=5.2cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.4,0);\n    \\coordinate (Z) at (1.1,2.5);\n    \\draw[line width=1.05pt] (X)--(Y)--(Z)--cycle;\n    \\node[below left] at (X){$X$};\n    \\node[below right] at (Y){$Y$};\n    \\node[above] at (Z){$Z$};\n    \\draw[line width=0.85pt] (1.7,-0.12)--(1.7,0.12);\n    \\draw[line width=0.7pt] (0.45,0) arc[start angle=0,end angle=66,radius=0.45];\n    \\draw[line width=0.7pt] (2.95,0) arc[start angle=180,end angle=114,radius=0.45];\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "ASA needs two angles and the side included between them. Dropping the included-side condition, reversing cause and effect, or allowing a non-included side stretch the criterion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as triangles PQR and XYZ with equal included sides PQ=XY and matching angle arcs at P/X and Q/Y."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "operation_confusion",
+        "reason": "Squaring-side CWO not sayable with ASA stem objects; kept condition_omission, relationship_reversal, scope_error."
+      }
+    ]
+  }
+}

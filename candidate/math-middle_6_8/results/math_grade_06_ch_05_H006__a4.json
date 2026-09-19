@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Diya runs the Sieve of Eratosthenes on the whole numbers from $1$ to $15$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct after the sieve is finished?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$9$ stays unmarked as prime, because it is odd."
+        },
+        {
+          "id": "B",
+          "text": "$1$ is marked as a prime because it starts the list."
+        },
+        {
+          "id": "C",
+          "text": "$11$ stays unmarked as prime, while $9$ and $15$ are struck as composites."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses how the sieve strikes multiples.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Multiples of 2, 3, and 5 strike 9 and 15; 11 has no smaller prime factor, so it remains unmarked as prime."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sieve strikes composites via multiples of primes; 9=3x3 and 15=3x5 go; 11 remains. Oddness does not keep 9 prime; 1 is not prime.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

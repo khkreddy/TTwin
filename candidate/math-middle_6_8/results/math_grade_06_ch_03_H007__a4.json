@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anvi lists every whole number from $20$ to $29$. She wants how many times the digit $2$ is written in that list.\n\nWhich two claims are both correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The digit $2$ appears $10$ times, once for each number in the list."
+    },
+    {
+      "id": "B",
+      "text": "In the tens place, $2$ appears in every number from $20$ to $29$, so that is $10$ writings."
+    },
+    {
+      "id": "C",
+      "text": "In the ones place, $2$ appears once more in $22$, so the total is $11$ writings of the digit $2$."
+    },
+    {
+      "id": "D",
+      "text": "Counting only the ones digits from $20$ to $29$ already gives the full answer $10$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tens digit 2 appears 10 times; ones digit 2 appears once in 22; total 11. A treats each number as one digit-2. D counts only ones digits and stops at 10.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nila has $20=2^{2}\\times 5$ and $30=2\\times 3\\times 5$. She wants their LCM from these prime factorisations.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find any common multiple of $20$ and $30$, and treat that common multiple as the LCM."
+    },
+    {
+      "id": "B",
+      "text": "Take each prime with the greatest power needed: $2^{2}\\times 3\\times 5=60$."
+    },
+    {
+      "id": "C",
+      "text": "Use only the primes that appear in both factorisations, so take $2\\times 5=10$."
+    },
+    {
+      "id": "D",
+      "text": "The LCM is $30$, because $30$ is the larger printed factorisation on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "LCM takes the highest power of each prime across the factorisations: 2²×3×5=60. Naming any common multiple, dropping primes that appear in only one factorisation, or grabbing the larger printed number miss the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

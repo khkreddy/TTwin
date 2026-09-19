@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Sia has a sealed packet of flour on Earth. She imagines taking the same sealed packet to the Moon.\n\nWhich claims correctly distinguish mass from weight? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The packet's mass stays the same on the Moon because the amount of matter does not change."
+    },
+    {
+      "id": "B",
+      "text": "The packet's weight is less on the Moon because the Moon's gravitational pull is weaker."
+    },
+    {
+      "id": "C",
+      "text": "The packet's mass is less on the Moon because gravity is weaker there."
+    },
+    {
+      "id": "D",
+      "text": "Weight stays the same on every planet while mass changes with gravity."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mass is amount of matter and stays the same on the Moon; weight depends on gravitational pull and is less there. Saying mass falls with gravity, or that weight is fixed while mass changes, swaps the two ideas.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

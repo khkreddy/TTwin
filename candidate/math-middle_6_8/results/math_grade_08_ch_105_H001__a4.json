@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yash keeps the four numbers 2, 3, 4 and 5 fixed. He only changes the + and − signs between them, writing expressions of the form 2 ± 3 ± 4 ± 5.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Changing one sign can flip the parity of the value."
+    },
+    {
+      "id": "B",
+      "text": "Every such value has the same parity."
+    },
+    {
+      "id": "C",
+      "text": "Changing the + and − signs cannot change the parity of the value."
+    },
+    {
+      "id": "D",
+      "text": "The common parity depends on a sign written before the first number 2."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Flipping a sign changes the total by twice an integer, so parity is preserved. Every 2±3±4±5 value shares one parity. Claiming a flip of parity reverses that. Putting the decision on a sign before 2 over-scopes the idea.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best explains floating or sinking here?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Density matters more than size or apparent heaviness alone; ice floats because it is less dense than liquid water."
+        },
+        {
+          "id": "B",
+          "text": "The iron rod feels heavier only because it is larger than the wooden stick."
+        },
+        {
+          "id": "C",
+          "text": "Ice floats because it is denser than liquid water."
+        },
+        {
+          "id": "D",
+          "text": "Any object that feels heavy must sink in liquid water, even if its density is low."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Dev holds a wooden stick and an iron rod of the same size; the iron rod feels heavier. Later he sees a piece of ice floating on liquid water.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Floating or sinking depends on density compared with the liquid, not on size or how heavy the object feels alone."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Density, not size or apparent heaviness alone, decides floating or sinking; ice is less dense than liquid water. Claiming size alone, reversing ice density, or saying heaviness forces sinking all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly traces the resources used and a way to reduce unnecessary use or pollution?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The bath uses water directly and coal-based electricity indirectly; a shorter shower uses less of both and can cut pollution."
+        },
+        {
+          "id": "B",
+          "text": "Stop washing altogether because all washing wastes water."
+        },
+        {
+          "id": "C",
+          "text": "A bath uses only water; electricity and coal are not linked to this activity, even indirectly."
+        },
+        {
+          "id": "D",
+          "text": "Clear hot water cannot involve air pollution, so no pollution-reduction action is needed."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Yusuf runs a bath with tap water heated by electricity from a power plant that burns coal.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The bath uses water and, through electricity, coal; using less hot water reduces both resource use and related pollution."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trace direct water use and indirect coal-electricity use, then reduce unnecessary use. Stopping all washing, denying indirect coal use, or judging by clear water alone miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

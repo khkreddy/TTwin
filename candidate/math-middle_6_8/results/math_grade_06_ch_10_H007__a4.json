@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Veer must compute $320 + 150$ on a sparse number line that shows only $0$, $320$, and room for a few jump marks.\n\nWhich two claims correctly describe how to use that line?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark every whole number from $0$ to $470$ before adding."
+    },
+    {
+      "id": "B",
+      "text": "Start at $320$ and make a jump of $+100$ to $420$, then a jump of $+50$ to $470$."
+    },
+    {
+      "id": "C",
+      "text": "The sparse marks are enough: only the start, the jumps, and the landing points need to be shown."
+    },
+    {
+      "id": "D",
+      "text": "The answer is the label $320$ already printed on the line."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sparse line uses start plus place-value jumps to 470; full tick marks are not required. Taking the printed 320 as the sum captures a surface label.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

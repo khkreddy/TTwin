@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishan uses long division for $9 \\div 4$. After the ones place he has remainder $1$ and wants to continue into decimals.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states how to extend the division?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Stop at remainder $1$, and report the remainder as the final answer label."
+        },
+        {
+          "id": "B",
+          "text": "Regroup the leftover $1$ one as $10$ tenths, continue dividing, and place the decimal point in the quotient when tenths begin."
+        },
+        {
+          "id": "C",
+          "text": "Treat any leftover as a new whole-number division problem outside place-value regrouping."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The leftover one becomes $10$ tenths, so the quotient continues past the ones place with a decimal point when tenths start."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Extending long division regroups remainders into smaller place values. Stopping at the remainder label, or leaving place-value regrouping, miss that step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

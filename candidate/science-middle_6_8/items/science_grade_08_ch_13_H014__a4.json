@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_13/H014",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_13/H014",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_13/H014"
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_13:H014:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-EARTH",
+    "chapter_id": "science/grade_08/ch_13",
+    "chapter_label": "Why Earth supports life",
+    "subtopic_id": "science/grade_08/ch_13/H014",
+    "stem": "Tara compares where a fertilised egg develops in a bird with where it develops in most mammals.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "In birds, the fertilised egg is laid and the zygote develops into an embryo during hatching.",
+      "B": "In most mammals, the zygote develops into an embryo inside the female body until birth.",
+      "C": "In birds, the embryo develops only inside the female body and is never laid as an egg.",
+      "D": "In most mammals, the mother's body never supplies food or oxygen before birth."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_13/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

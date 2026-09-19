@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Yusuf makes two similar dough balls. He mixes yeast into one and leaves yeast out of the other. He waits for some time.\n\nWhich claims correctly explain what happens? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "After some time the yeast dough rises because yeast produces gas that puffs the dough."
+    },
+    {
+      "id": "B",
+      "text": "The dough without yeast does not rise in the same way because it lacks that gas-producing yeast."
+    },
+    {
+      "id": "C",
+      "text": "The yeast dough rises immediately after mixing."
+    },
+    {
+      "id": "D",
+      "text": "The dough must expand first to give the yeast room to grow."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Yeast needs time to make gas that raises dough; without yeast the similar dough does not rise the same way. Immediate rise drops the time condition, and saying expansion must come before yeast reverses the cause.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

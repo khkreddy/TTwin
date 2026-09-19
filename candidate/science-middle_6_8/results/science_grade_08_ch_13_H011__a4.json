@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Neil grows a money-plant cutting and watches a potato sprout from an eye.\n\nWhich claims correctly identify a new organism made without seeds from two parents? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A money-plant cutting that grows into a new plant is vegetative propagation from one plant part."
+    },
+    {
+      "id": "B",
+      "text": "A potato sprouting from an eye produces a new plant from a stem part, not from two parents' seeds."
+    },
+    {
+      "id": "C",
+      "text": "A money-plant cutting needs pollen from a second parent before it can grow."
+    },
+    {
+      "id": "D",
+      "text": "Bacteria dividing into two identical individuals still require seeds from two parents."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Vegetative propagation from a cutting or potato eye, and asexual division, produce new individuals without seeds from two parents. Requiring pollen for a cutting, or treating bacterial division as seed-based, misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

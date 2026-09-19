@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan must construct an exact $15^{\\circ}$ angle at point $A$ on ray $AX$ in the diagram, using equal-radius arcs and angle bisection.\n\nWhich two claims correctly describe the plan?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name ray $AX$ as the finished $15^{\\circ}$ angle, and stop before drawing any arcs."
+    },
+    {
+      "id": "B",
+      "text": "Build a $60^{\\circ}$ angle at $A$ with equal-radius arcs that form an equilateral triangle."
+    },
+    {
+      "id": "C",
+      "text": "Bisect that $60^{\\circ}$ angle to $30^{\\circ}$, then bisect again to obtain $15^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "The repeated bisections are what create the equal-radius arcs of the equilateral step."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (X) at (5.2,0);\n  \\draw[line width=1.05pt,->] (A)--(X) node[right]{$X$};\n  \\fill (A) circle (1.5pt);\n  \\node[below left] at (A){$A$};\n  \\draw[line width=0.75pt,dashed] (A)--(2.8,3.2);\n  \\node[above] at (2.8,3.2){$?$};\n  \\draw[line width=0.65pt] (1.1,0) arc[start angle=0,end angle=60,radius=1.1];\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal-radius arcs make 60°; two bisections give 30° then 15°. Naming ray AX as the angle, or reversing bisection and arc construction, miss the plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source angle rays as ray AX at A with a dashed target ray for the 15° construction."
+  },
+  "build_logic": {
+    "mx_swap": [
+      {
+        "from": "scope_error",
+        "reason": "45° construction scope not needed for 60-30-15 hinge; kept term_substitution and relationship_reversal on wrong letters."
+      }
+    ]
+  }
+}

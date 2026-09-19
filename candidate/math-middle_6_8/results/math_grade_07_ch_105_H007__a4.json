@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher looks at the diagram. Line $t$ crosses lines $p$ and $q$ at two different points, forming eight angles at those crossings.\n\nWhich claim correctly names the transversal and organises those angles?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lines $p$ and $q$ are the transversal, and $t$ is only a third unrelated line."
+    },
+    {
+      "id": "B",
+      "text": "Line $t$ is a transversal even if it meets only one of $p$ or $q$."
+    },
+    {
+      "id": "C",
+      "text": "Line $t$ is the transversal because it meets both $p$ and $q$; the eight angles sit in vertically opposite equal pairs at each crossing."
+    },
+    {
+      "id": "D",
+      "text": "The eight angles are what create transversal $t$ across $p$ and $q$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.2,2.2)--(5.8,2.2) node[right]{$p$};\n  \\draw[line width=1.05pt] (-0.2,0.3)--(5.8,0.3) node[right]{$q$};\n  \\draw[line width=1.0pt] (1.2,-0.6)--(4.0,3.1);\n  \\node[above left] at (3.95,3.0){$t$};\n  \\fill (2.35,2.2) circle (1.4pt);\n  \\fill (3.0,0.3) circle (1.4pt);\n  \\node[above right] at (2.4,2.35){$1$};\n  \\node[above left] at (2.2,2.35){$2$};\n  \\node[below right] at (2.45,2.0){$4$};\n  \\node[below left] at (2.15,2.0){$3$};\n  \\node[above right] at (3.1,0.45){$5$};\n  \\node[above left] at (2.85,0.45){$6$};\n  \\node[below right] at (3.15,0.1){$8$};\n  \\node[below left] at (2.8,0.1){$7$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A transversal must cut both of the other lines; $t$ does that and organises eight angles with vertically opposite equal pairs. Naming $p$ and $q$ as the transversal, dropping the both-lines condition, or reversing angles and transversal leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source parallel-line diagram as lines p and q cut by transversal t with eight numbered angles."
+  }
+}

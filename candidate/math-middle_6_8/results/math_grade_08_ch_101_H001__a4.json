@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yash's school has lockers numbered 1 to 16. Every locker starts closed. Student 1 toggles every locker. Student 2 toggles every 2nd locker. Student 3 toggles every 3rd, and so on, up to student 16.\n\nWhich two claims are correct after every student has finished?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lockers that stay open are the prime-numbered lockers."
+    },
+    {
+      "id": "B",
+      "text": "Lockers 1, 4, 9, and 16 stay open."
+    },
+    {
+      "id": "C",
+      "text": "A locker stays open when it is toggled an odd number of times."
+    },
+    {
+      "id": "D",
+      "text": "Every even-numbered locker stays open."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A locker ends open after an odd number of toggles. That happens exactly for square numbers, so lockers 1, 4, 9, and 16 stay open. Primes and even numbers are the wrong sets.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

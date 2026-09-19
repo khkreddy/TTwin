@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,scale=0.95]\n% left panel: concave mirror close to object for enlarged viewing\n\\draw[thick] (0,1.3) .. controls (0.95,0.35) and (0.95,-0.35) .. (0,-1.3);\n\\foreach \\y in {-1.1,-0.7,-0.3,0.1,0.5,0.9} {\\draw[thin] (-0.02,\\y)--++(-0.22,0);}\n\\node[font=\\small] at (0.15,1.65) {concave};\n\\draw[thick,fill=gray!25] (1.25,-0.22) rectangle (1.55,0.22);\n\\node[font=\\footnotesize] at (1.4,-0.5) {object};\n\\draw[dashed,thick] (0.5,-0.5) rectangle (0.95,0.5);\n\\node[font=\\footnotesize] at (0.72,0.72) {enlarged};\n\\node[font=\\footnotesize\\bfseries] at (0.7,-1.7) {enlarged viewing};\n% right panel: concave mirror concentrates parallel rays\n\\begin{scope}[shift={(4.2,0)}]\n\\draw[thick] (0,1.3) .. controls (0.95,0.35) and (0.95,-0.35) .. (0,-1.3);\n\\foreach \\y in {-1.1,-0.7,-0.3,0.1,0.5,0.9} {\\draw[thin] (-0.02,\\y)--++(-0.22,0);}\n\\draw[->,thick] (2.4,0.7)--(0.55,0.35);\n\\draw[->,thick] (2.4,0)--(0.35,0);\n\\draw[->,thick] (2.4,-0.7)--(0.55,-0.35);\n\\fill (0.95,0) circle (1.5pt);\n\\node[font=\\footnotesize] at (1.15,-0.35) {focus};\n\\node[font=\\footnotesize\\bfseries] at (1.2,-1.7) {light concentration};\n\\end{scope}\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a concave mirror used in two ways: held close to a small object for enlarged viewing, and facing parallel light rays that meet at a point for light concentration.\n\nWhich claim correctly matches concave tools to those needs?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A concave mirror can give an enlarged image of a nearby object and can also concentrate parallel light rays toward a focus."
+    },
+    {
+      "id": "B",
+      "text": "Only a plane mirror can enlarge a nearby object; a concave mirror never enlarges."
+    },
+    {
+      "id": "C",
+      "text": "A convex mirror concentrates parallel rays to a focus and enlarges nearby objects."
+    },
+    {
+      "id": "D",
+      "text": "A concave mirror enlarges only when the object is far from the mirror, never when it is close."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A concave mirror (or lens) can enlarge a close object for viewing and can concentrate parallel light at a focus. Swapping in plane or convex roles, or requiring the object to be far for enlargement, miss those concave uses.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": "Two panels: concave mirror with nearby object and enlarged image; concave mirror focusing parallel rays to a point."
+  }
+}

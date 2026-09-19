@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0610_m15_qp_12:q18",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:02:48.109Z",
+  "created_at": "2026-09-19T09:14:55.970Z",
   "source": {
-    "item_ref": "session:0610_m15_qp_12:q18",
-    "item_type": "single_mcq",
-    "stem": "Why is the circulatory system of mammals described as a double circulation?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Blood flows firstly through arteries and then through veins."
-      },
-      {
-        "id": "B",
-        "text": "Blood flows through the heart twice on one complete circuit of the body."
-      },
-      {
-        "id": "C",
-        "text": "In the heart, blood flows firstly through atria and then through ventricles."
-      },
-      {
-        "id": "D",
-        "text": "The atria and the ventricles contract alternately."
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_10/H013",
+      "unit_id": "science/grade_07/ch_10/H013",
+      "title": "Design a fair test for whether warm or cold conditions change the speed of water transport in a plant.",
+      "node_labels": [
+        "What is living; diversity, life cycles and plant processes",
+        "Living systems: organisms, health and ecosystems"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -68,27 +56,14 @@
       }
     ],
     "enrichment": "To test the speed of water transport, place comparable cut plant twigs in coloured water under warm and cold conditions, vary only temperature, and compare how quickly red colour appears in the stem, leaves, or flowers. Temperature condition -> possible change in the rate at which coloured water moves through the plant -> earlier or later red colour in plant parts. The learner correctly applies this rule: To test the speed of water transport, place comparable cut plant twigs in coloured water under warm and cold conditions, vary only temperature, and compare how quickly red colour appears in the stem, leaves, or flowers. Whichever twig gets red ink first proves the answer, even if the warm and cold setups use different materials.",
-    "lbs_recipe": {
-      "unit": "science/grade_07/ch_10/H013",
-      "gate_names": [
-        "term_substitution",
-        "condition_omission",
-        "term_substitution"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Blood flows firstly through arteries and then thr…” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “In the heart, blood flows firstly through atria a…” looked possible instead of “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student swapping the sibling term “The atria and the ventricles contract alternately.” for the required “Blood flows through the heart twice on one comple…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 7 Science question. Chapter: Respiration and transport in plants. The student must decide: Design a fair test for whether warm or cold conditions change the speed of water transport in a plant. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 7 Science question. Chapter: Respiration and transport in plants. The student must decide: Design a fair test for whether warm or cold conditions change the speed of water transport in a plant. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "three_statement",
     "format": {
       "n_options": 4
     },
@@ -107,9 +82,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0610_m15_qp_12:q18",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_07/ch_10/H013",
-    "item_type_target": "preserve",
+    "item_type_target": "three_statement",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -121,10 +96,9 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "condition_omission",
+      "B": "condition_omission",
       "C": "relationship_reversal",
-      "D": "scope_error",
-      "B": null
+      "D": "scope_error"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_10/H013"
   }

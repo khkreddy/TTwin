@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan must find $(-5)\\times(+3)$ from the signs and magnitudes of the two factors.\n\nWhich two claims correctly determine the product?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $+3$ the multiplier label alone, and stop before combining signs with magnitudes."
+    },
+    {
+      "id": "B",
+      "text": "The magnitude is $5\\times 3=15$."
+    },
+    {
+      "id": "C",
+      "text": "Different signs give a negative product, so $(-5)\\times(+3)=-15$."
+    },
+    {
+      "id": "D",
+      "text": "The answer is $-15$ because the printed $-5$ is the largest-looking mark on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnitude 15 with opposite signs yields −15. Stopping at a multiplier label, or grabbing the printed −5 as the answer, miss the two-factor sign-and-magnitude rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Arnav compares tomatoes grown on a nearby farm with the same kind of tomatoes brought from far away.\n\nWhich claims about food miles are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The nearby tomatoes travel a shorter distance from farm to plate, so they have fewer food miles."
+    },
+    {
+      "id": "B",
+      "text": "Fewer food miles can mean less fuel on the journey, which can lower transport cost and pollution."
+    },
+    {
+      "id": "C",
+      "text": "Tomatoes grown nearby always have fewer food miles, even if they travel through a distant warehouse first."
+    },
+    {
+      "id": "D",
+      "text": "Putting the same tomatoes on sale reduces their food miles even when the delivery route stays unchanged."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Local food has fewer food miles when the route from farm to plate is shorter; that can cut transport fuel, cost, and pollution. A distant warehouse still adds miles, and a sale does not shorten the route.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

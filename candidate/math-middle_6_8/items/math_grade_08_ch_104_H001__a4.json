@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_104/H001",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_104/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_104/H001"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_104:H001:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_104",
+    "chapter_label": "math/grade_08/ch_104",
+    "subtopic_id": "math/grade_08/ch_104/H001",
+    "stem": "The diagram shows a closed shape drawn on Sana's slate, with vertices labelled A, B, C and D.\n\nWhich claim about the figure is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The figure is a quadrilateral: it has four straight sides.",
+      "B": "The figure is a triangle: it has three straight sides.",
+      "C": "The figure is a circle: its side is a single curve.",
+      "D": "The figure is a five-sided polygon: it has five straight sides."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.2,0.2);\n  \\coordinate (C) at (2.6,2.1);\n  \\coordinate (D) at (-0.3,1.7);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\fill (A) circle (1.2pt); \\fill (B) circle (1.2pt); \\fill (C) circle (1.2pt); \\fill (D) circle (1.2pt);\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_104/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

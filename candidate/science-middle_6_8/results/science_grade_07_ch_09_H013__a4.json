@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Mitali studies a tadpole living in pond water and an adult frog that lives partly on land.\n\nWhich statements correctly treat their breathing as adaptations to habitat and life stage? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The tadpole uses gills to take in oxygen from the water."
+    },
+    {
+      "id": "B",
+      "text": "The adult frog uses lungs and moist skin suited to life partly on land."
+    },
+    {
+      "id": "C",
+      "text": "Adult frogs breathe through lungs and gills."
+    },
+    {
+      "id": "D",
+      "text": "All animals living in water breathe through gills."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Tadpoles use gills in water; adult frogs use lungs and skin as land-and-water adaptations. Naming gills for adult frogs or saying every water animal uses gills misses that life-stage and habitat match.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

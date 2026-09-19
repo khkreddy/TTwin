@@ -1,0 +1,90 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_207/H001",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_207/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_207/H001",
+    "mx_swap": [
+      {
+        "from": "mechanism_conflation",
+        "reason": "Algebra cancel-unknowns CWO imports equation-solving language; kept condition_omission, relationship_reversal, scope_error with pan weights."
+      }
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_207:H001:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_207",
+    "chapter_label": "math/grade_07/ch_207",
+    "subtopic_id": "math/grade_07/ch_207/H001",
+    "stem": "Nila has a weighing scale that is balanced, as in the diagram. The left pan holds one sealed packet and a $15\\,\\mathrm{g}$ weight. The right pan holds a $40\\,\\mathrm{g}$ weight.\n\nHow can she find the mass of the packet?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Remove the $15\\,\\mathrm{g}$ weight from the left pan only, then read the unbalanced pans as the packet mass.",
+      "B": "The remaining comparison after removing equal weights from both pans is what first created the balanced pans.",
+      "C": "Remove $15\\,\\mathrm{g}$ from both pans (take the $15\\,\\mathrm{g}$ weight off the left and replace the right $40\\,\\mathrm{g}$ with $25\\,\\mathrm{g}$), leaving the packet balanced against $25\\,\\mathrm{g}$.",
+      "D": "Compare the pans while the scale is still tipped, using an unbalanced reading as the packet mass."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.0pt] (0,1.6)--(6.4,1.6);\n  \\draw[line width=1.0pt] (3.2,1.6)--(3.2,0.2);\n  \\draw[line width=0.9pt] (3.2,0.2)--(2.4,-0.1)--(4.0,-0.1)--cycle;\n  \\draw[line width=0.9pt] (0.2,1.6)--(0.2,1.1)--(1.8,1.1)--(1.8,1.6);\n  \\draw[line width=0.9pt] (4.6,1.6)--(4.6,1.1)--(6.2,1.1)--(6.2,1.6);\n  \\node at (1.0,1.35){packet};\n  \\node at (1.0,0.75){$15\\,\\mathrm{g}$};\n  \\node at (5.4,1.35){$40\\,\\mathrm{g}$};\n  \\node[below] at (3.2,-0.25){balanced};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_207/H001",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

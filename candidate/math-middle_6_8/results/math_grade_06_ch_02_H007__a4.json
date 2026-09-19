@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Veer traces two angles on tracing paper. The diagram shows angle $P$ and angle $Q$ sharing vertex $O$.\n\nWhich claim correctly decides which angle is larger?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $P$ and angle $Q$ are equal, because both rays start at $O$."
+    },
+    {
+      "id": "B",
+      "text": "Angle $Q$ is larger than angle $P$, because overlaying with matching vertices shows $Q$ sticks out past $P$."
+    },
+    {
+      "id": "C",
+      "text": "Angle $P$ is larger than angle $Q$, because overlaying with matching vertices shows $P$ sticks out past $Q$."
+    },
+    {
+      "id": "D",
+      "text": "The sizes cannot be compared, because the angles use different letter names."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=1.15]\n  \\coordinate (O) at (0,0);\n  \\draw[thick] (O) -- (2.6,0);\n  \\draw[thick] (O) -- (2.12,1.48);\n  \\draw[thick] (O) -- (0.89,2.45);\n  \\node[below left] at (O) {$O$};\n  \\node at (1.7,0.35) {$Q$};\n  \\node at (1.35,1.35) {$P$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Overlay matching vertices: the wider opening is P, so P is larger than Q. Sharing O alone does not make them equal. Reversing the overlay result, or refusing comparison because of letter names, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Two rays from O forming nested angles P (wider) and Q (narrower)."
+  }
+}

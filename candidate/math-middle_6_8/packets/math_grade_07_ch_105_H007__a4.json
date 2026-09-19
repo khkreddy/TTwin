@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m25_qp_32:q7",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:17:02.512Z",
+  "source": {
+    "item_ref": "session:0580_m25_qp_32:q7",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a straight line crossing a pair of parallel lines.\nComplete these statements.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Angle A and angle are corresponding angles. [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Angle A and angle e are angles. [1]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small] \\draw[line width=0.8pt] (-3,-0.05)--(3,1.15); \\draw[line width=0.8pt] (-3,-1.22)--(3,-0.02); \\draw[line width=0.8pt] (-0.65,-1.72)--(0.48,1.72); \\draw[line width=0.45pt] (0.10,0.57) circle[radius=0.43]; \\draw[line width=0.45pt] (-0.34,-0.69) circle[radius=0.43]; \\draw[line width=0.65pt] (1.10,0.69)--(1.28,0.81)--(1.06,0.83); \\draw[line width=0.65pt] (1.10,-0.48)--(1.28,-0.36)--(1.06,-0.34); \\node at (-0.13,0.80) {$b$}; \\node at (0.34,0.78) {$c$}; \\node at (-0.18,0.39) {$A$}; \\node at (0.31,0.37) {$d$}; \\node at (-0.57,-0.47) {$h$}; \\node at (-0.10,-0.48) {$e$}; \\node at (-0.59,-0.88) {$g$}; \\node at (-0.13,-0.89) {$f$}; \\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_105/H007",
+      "unit_id": "math/grade_07/ch_105/H007",
+      "title": "Identify a transversal and organize the angles it forms with two lines.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Two lines is the label that belongs on this item, so 'Identify a transversal and organize the angles it forms with two' is answered as two lines rather than transversal."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "transversal still holds here even though The transversal must intersect both of the other lines is missing from the stem — on the item about Identify a transversal and organize the angles it forms."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Two lines is what produces transversal, so the usual direction of this relation is run backwards — on the item about Identify a transversal and organize the angles it forms."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The transversal rule also covers this: {'exclusion': 'Do not score a response as mastered when it only repeats a chapter term without the deciding, so it is not an exception — on the item about Identify a transversal and organize the angles it forms."
+      }
+    ],
+    "enrichment": "A transversal is a line that intersects two different lines; when it crosses a pair of lines, eight angles are formed, with vertically opposite equal pairs at each crossing.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_105. The student must decide: Identify a transversal and organize the angles it forms with two lines. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m25_qp_32:q7",
+    "hinge": "math/grade_07/ch_105/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H007"
+  }
+}
