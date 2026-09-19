@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "His work is science because he asks a question, observes, and checks a difference to understand drying."
+    },
+    {
+      "id": "B",
+      "text": "His work is science because curiosity about everyday drying leads him to explore and compare what happens."
+    },
+    {
+      "id": "C",
+      "text": "His work is science only if he already memorised the textbook answer before hanging the cloths."
+    },
+    {
+      "id": "D",
+      "text": "Copying the hanging steps from a lab sheet without any question of his own still counts as science here."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Dev hangs two identical wet cotton cloths, one in sunlight and one in shade. He asks which dries faster, checks both after twenty minutes, and notes which feels drier.\n\nWhich claims correctly treat his work as science? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Science is asking, observing, exploring, and checking to understand — not memorising first, and not copying steps with no question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.5,0.2)--(5.7,3.0) node[right]{$p$};\n  \\draw[line width=1.05pt] (-0.3,2.9)--(5.5,0.1) node[right]{$q$};\n  \\fill (2.45,1.55) circle (1.6pt);\n  \\node[above] at (2.5,1.75){$R$};\n  \\draw[line width=0.65pt] (2.45,1.55) ++(30:0.55) arc (30:125:0.55);\n  \\node at (2.9,2.15){$1$};\n  \\draw[line width=0.65pt] (2.45,1.55) ++(125:0.55) arc (125:210:0.55);\n  \\node at (1.95,2.05){$2$};\n  \\draw[line width=0.65pt] (2.45,1.55) ++(210:0.55) arc (210:300:0.55);\n  \\node at (2.05,1.05){$3$};\n  \\draw[line width=0.65pt] (2.45,1.55) ++(300:0.55) arc (300:390:0.55);\n  \\node at (2.95,1.05){$4$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Nandini looks at the diagram. Straight lines $p$ and $q$ lie on the same flat page and meet at point $R$.\n\nWhich claim correctly names the lines and the angle structure at $R$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lines $p$ and $q$ are intersecting, and their meeting at $R$ forms four angles."
+    },
+    {
+      "id": "B",
+      "text": "Lines $p$ and $q$ can meet at two different points on the page if they are drawn longer."
+    },
+    {
+      "id": "C",
+      "text": "Call $p$ and $q$ parallel, because they lie on the same flat page."
+    },
+    {
+      "id": "D",
+      "text": "The four angles at $R$ force lines $p$ and $q$ to be parallel."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On one flat page, two straight lines that meet at a single point are intersecting, and that meeting forms four angles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": "rewrite: intersecting lines p and q at R with four angle marks"
+  }
+}

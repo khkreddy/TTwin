@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz mixes oil and vinegar in the ratio $4:3$.\n\nWhat does this ratio mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "For every $4$ parts of oil there are $3$ parts of vinegar."
+    },
+    {
+      "id": "B",
+      "text": "For every $4$ parts of vinegar there are $3$ parts of oil."
+    },
+    {
+      "id": "C",
+      "text": "Oil and vinegar are present in equal parts."
+    },
+    {
+      "id": "D",
+      "text": "The mixture is $7$ parts of oil with no vinegar term."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In 4:3 for oil to vinegar, 4 attaches to oil and 3 to vinegar. Swapping the named quantities reverses the ratio; equal parts and collapsing to oil alone drop the ordered pairing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

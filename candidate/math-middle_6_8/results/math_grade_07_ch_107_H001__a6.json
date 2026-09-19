@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the shape and its parts?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The shape is named only by the single corner $D$."
+        },
+        {
+          "id": "B",
+          "text": "The shape is triangle $DEF$, with sides $DE$, $EF$ and $FD$, and angles at $D$, $E$ and $F$."
+        },
+        {
+          "id": "C",
+          "text": "The shape is a triangle even if side $EF$ is left open."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (4.0,0);\n  \\coordinate (F) at (1.6,2.5);\n  \\draw[line width=1.05pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (E){$E$};\n  \\node[above] at (F){$F$};\n  \\node[below] at (2.0,-0.35){side $DE$};\n  \\node[left] at (0.65,1.35){side $DF$};\n  \\node[right] at (3.0,1.35){side $EF$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Pallavi looks at the diagram of a closed shape with three corner points $D$, $E$ and $F$ joined by three straight sides.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Three vertices joined pairwise by three sides form a triangle, named by those vertices, with an angle at each vertex."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Closed three-vertex shape DEF is a triangle with sides DE, EF, FD and angles at D, E, F.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "rewrite: triangle DEF with side labels"
+  }
+}

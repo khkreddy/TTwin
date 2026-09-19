@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zubin lines up $25$ closed school lockers numbered $1$ to $25$. Student $k$ toggles every $k$-th locker, for $k=1,2,\\ldots,25$, starting from all closed.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the lockers that remain open?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Lockers $1$, $4$, $9$, $16$, and $25$ remain open."
+        },
+        {
+          "id": "B",
+          "text": "Every even-numbered locker remains open."
+        },
+        {
+          "id": "C",
+          "text": "Only the prime-numbered lockers remain open."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A locker ends open exactly when it is toggled an odd number of times, which happens only for square numbers; the squares from 1 to 25 are 1, 4, 9, 16, and 25."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Toggle count equals the number of factors. Only perfect squares have an odd number of factors, so lockers 1,4,9,16,25 stay open.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

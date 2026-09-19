@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "He should not trust touch alone to say whether the desk top is hot or cold."
+    },
+    {
+      "id": "2",
+      "text": "After the cool plate and warm lamp, each hand may judge the same desk top differently."
+    },
+    {
+      "id": "3",
+      "text": "Touch always gives the true temperature of the desk top, so no thermometer is needed."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Ishaan holds his left hand on a cool steel plate from the fridge and his right hand near a warm desk lamp. Then he places both hands on the same wooden desk top.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After opposite cool and warm exposures, touch can mislead about the same surface. A measured temperature is the reliable check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

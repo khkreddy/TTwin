@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Abhay starts with a paper strip of length $2\\,\\mathrm{cm}$. Each step triples the current length. He wants the length after $3$ steps.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Each step multiplies the current length by $3$, so after $3$ steps the length is modeled by repeated multiplication."
+    },
+    {
+      "id": "2",
+      "text": "The length after $3$ steps is $2\\times 3\\times 3\\times 3$."
+    },
+    {
+      "id": "3",
+      "text": "The length after $3$ steps is $2+3+3+3$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A fixed multiplier each step means repeated multiplication: start 2, times 3 three times. Statement 3 uses repeated addition instead, so only 1 and 2 are correct.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

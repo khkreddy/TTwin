@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Chetan sorts four closed shapes drawn for class: a rectangle; a circle; a triangle; and a six-sided polygon with straight sides.\n\nOne or more options may be correct. Which two claims correctly decide which shape is a quadrilateral?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The rectangle is a quadrilateral because it has four straight sides."
+    },
+    {
+      "id": "B",
+      "text": "The circle is a quadrilateral because it is a closed shape."
+    },
+    {
+      "id": "C",
+      "text": "A quadrilateral must have exactly four straight sides, so the rectangle qualifies and the circle does not."
+    },
+    {
+      "id": "D",
+      "text": "The six-sided polygon is a quadrilateral because its sides are straight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A quadrilateral is a four-sided straight-sided closed shape. Only the rectangle meets that. Being closed or having straight sides with the wrong side count is not enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

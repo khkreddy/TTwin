@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bina has a pile of identical buttons and an ordered drumbeat sequence: first beat, second beat, third beat, and so on. She wants the beat sequence to represent how many buttons are in the pile.\n\nWhich claim correctly states what she must do?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Match each button to exactly one beat in order, with no button left unmatched and no beat left unused for an unmatched button."
+    },
+    {
+      "id": "B",
+      "text": "Beat once for the whole pile, then name the size from that single sound alone."
+    },
+    {
+      "id": "C",
+      "text": "Match some buttons to two beats so the sequence runs longer than the pile."
+    },
+    {
+      "id": "D",
+      "text": "Skip matching the last few buttons once the beats sound familiar."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Counting needs a one-to-one match between buttons and the ordered beat sequence. A single beat, double-matching, or skipping breaks that mapping.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

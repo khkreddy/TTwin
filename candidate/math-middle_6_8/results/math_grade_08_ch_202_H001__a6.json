@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Alok has a square of side $4\\,\\mathrm{cm}$. He makes a new square whose side is $12\\,\\mathrm{cm}$, so the side length is multiplied by $3$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states how the area changes from the first square to the new square?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The area of the new square is three times the area of the first square because the side length was multiplied by $3$."
+        },
+        {
+          "id": "B",
+          "text": "The area of the new square is nine times the area of the first square because the side length was multiplied by $3$."
+        },
+        {
+          "id": "C",
+          "text": "The areas are equal because both shapes are squares."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Area of a square is side squared. Multiplying the side by 3 multiplies the area by 3²=9; first area 16 cm² becomes 144 cm²."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For side s, area is s². Scaling side by k scales area by k². Here k=3 so area factor is 9.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yamini has a weighing scale that is balanced. The left pan holds one sealed packet and a $25\\,\\mathrm{g}$ weight. The right pan holds an $80\\,\\mathrm{g}$ weight.\n\nOne or more options may be correct. Which two claims correctly find the mass of the packet?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mass of the packet is $55\\,\\mathrm{g}$, because $80-25=55$."
+    },
+    {
+      "id": "B",
+      "text": "The mass of the packet is $105\\,\\mathrm{g}$, because $80+25=105$."
+    },
+    {
+      "id": "C",
+      "text": "Removing the same $25\\,\\mathrm{g}$ from both pans leaves the packet alone balancing $55\\,\\mathrm{g}$."
+    },
+    {
+      "id": "D",
+      "text": "The same removal step still finds the packet mass when the scale is not balanced."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balance means packet+25=80, so packet=55. Removing 25 g from both pans preserves balance and isolates the packet against 55 g. Adding the pan weights reverses the equality. The removal step needs a balanced scale.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

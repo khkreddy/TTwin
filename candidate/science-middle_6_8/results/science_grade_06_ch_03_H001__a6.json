@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "A small bowl of mixed fruit at recess supports healthy eating."
+    },
+    {
+      "id": "2",
+      "text": "An entire large bag of chips at recess is healthy because fruit is wholesome and chips suit any time."
+    },
+    {
+      "id": "3",
+      "text": "One brightly coloured candy piece is healthiest because the smallest portion is always best."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Bilal chooses a mid-morning recess snack. He wants a choice that supports healthy eating: wholesome food, a moderate amount, and a suitable time.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Healthy eating needs wholesome food, moderate quantity, and a suitable time. A huge chip bag and a colour/smallest-portion rule miss that checklist.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

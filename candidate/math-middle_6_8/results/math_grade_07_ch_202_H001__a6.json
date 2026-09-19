@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Sagar needs an ordered pair of numbers whose sum is $14$ and whose difference (first minus second) is $6$.\n\nWhich ordered pair is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(4, 10)$"
+    },
+    {
+      "id": "B",
+      "text": "The second number $4$ alone, with no first number."
+    },
+    {
+      "id": "C",
+      "text": "$(10, 4)$"
+    },
+    {
+      "id": "D",
+      "text": "$(14, 6)$"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "10+4=14 and 10-4=6, so the ordered pair (10,4) meets both conditions. The swap (4,10) flips the difference sign; (14,6) only reprints the given sum and difference.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

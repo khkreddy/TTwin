@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Omar lines up four children left to right with heights $132\\,\\mathrm{cm}$, $148\\,\\mathrm{cm}$, $140\\,\\mathrm{cm}$, and $155\\,\\mathrm{cm}$. Each child calls out how many taller children stand in front of that child.\n\nWhich height-code sequence is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The height-code is $0$, $1$, $2$, $3$, counting every child standing in front."
+    },
+    {
+      "id": "B",
+      "text": "The height-code is $0$, $0$, $1$, $0$."
+    },
+    {
+      "id": "C",
+      "text": "The height-code is $3$, $2$, $1$, $0$, counting taller children standing behind."
+    },
+    {
+      "id": "D",
+      "text": "The height-code is $0$, $1$, $0$, $2$, adding the heights in centimetres step by step."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Counts of taller children in front: first 0; second sees 132 (shorter) so 0; third sees 148 taller so 1; fourth sees all shorter so 0. Sequence 0,0,1,0.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

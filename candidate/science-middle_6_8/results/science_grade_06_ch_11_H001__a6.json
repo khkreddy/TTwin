@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sunlight is a natural resource because nature provides it and it helps meet needs."
+    },
+    {
+      "id": "B",
+      "text": "Clay from the ground is a natural resource because nature provides it and it helps meet needs."
+    },
+    {
+      "id": "C",
+      "text": "The steel lunch box is a natural resource because it is useful for carrying food."
+    },
+    {
+      "id": "D",
+      "text": "Clay is not a natural resource because it will later be shaped into pots."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Dev sorts three things: sunlight that warms the courtyard, a steel lunch box made in a factory, and clay dug from the ground for making pots.\n\nWhich claims use the correct test for a natural resource? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A natural resource is provided by nature and helps meet needs. Sunlight and clay qualify; a factory lunch box does not, and later shaping into pots does not disqualify clay.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

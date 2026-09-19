@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ice candy, liquid water, and tea steam are different states of the same substance, water."
+    },
+    {
+      "id": "B",
+      "text": "Ice candy, liquid water, and tea steam are three different substances, not water at all."
+    },
+    {
+      "id": "C",
+      "text": "Only the liquid in the steel cup is water; ice candy and tea steam are unrelated solids and gases."
+    },
+    {
+      "id": "D",
+      "text": "Tea steam is a different substance from ice candy because one looks white and the other looks clear when melted."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Tanya notices an ice candy melting on a plate, liquid water in a steel cup, and steam rising from a cup of hot tea.\n\nWhich statement is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ice, liquid water, and water vapour/steam are states of water, not different substances. Appearance alone does not make them different substances.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

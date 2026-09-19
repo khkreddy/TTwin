@@ -1,0 +1,121 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_22:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T14:40:27.190Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_22:q4",
+    "item_type": "structured_parts",
+    "stem": "Fig. 4.1 is a ray diagram representing two rays passing through a converging lens.",
+    "options": [
+      {
+        "id": "A",
+        "text": "B Z"
+      },
+      {
+        "id": "C",
+        "text": "Fig. 4.1"
+      }
+    ],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "State which of the labelled points is a principal focus of the lens. [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "State which of the distances BX, XY, YZ or XZ is the focal length of the lens. [1]",
+        "marks": 0
+      },
+      {
+        "id": "c",
+        "text": "On Fig. 4.1, draw another ray from point A to locate the image of point A. Label this image I .\n[3]",
+        "marks": 0
+      },
+      {
+        "id": "d",
+        "text": "On the ray diagram in Fig. 4.1, the refraction is shown occurring at the centre line of the lens.\nState where the refraction actually occurs.\n[1]\n[Total: 6]\n6",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]\\draw[line width=1pt] (0,0) .. controls (-0.22,0.85) and (-0.22,2.35) .. (0,3.2) .. controls (0.22,2.35) and (0.22,0.85) .. (0,0); \\draw[line width=0.6pt] (0,0) -- (0,3.2); \\node at (0.16,1.48) {X}; \\coordinate (A) at (-3.15,2.68); \\coordinate (B) at (-3.15,1.60); \\coordinate (C) at (-3.15,0.52); \\coordinate (Y) at (1.82,1.60); \\coordinate (Z) at (4.72,1.60); \\fill (A) circle (1.4pt); \\fill (B) circle (1.4pt); \\fill (Z) circle (1.4pt); \\node[left] at (A) {A}; \\node[left] at (B) {B}; \\node[left] at (C) {C}; \\node[below] at (Y) {Y}; \\node[right] at (Z) {Z}; \\draw[line width=0.6pt] (B) -- (Z); \\draw[->,line width=0.7pt] (A) -- (-0.05,2.68); \\draw[line width=0.7pt] (0,2.68) -- (Y); \\draw[->,line width=0.7pt] (0.70,2.26) -- (0.98,2.06); \\draw[line width=0.7pt] (Y) -- (4.72,3.48); \\draw[->,line width=0.7pt] (C) -- (-0.05,0.52); \\draw[line width=0.7pt] (0,0.52) -- (Y); \\draw[->,line width=0.7pt] (0.55,0.83) -- (0.86,1.04); \\draw[line width=0.7pt] (Y) -- (4.72,-0.70); \\node[font=\\bfseries] at (0.85,-0.78) {Fig. 4.1};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The Moon is luminous."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A glowing electric lamp is non-luminous."
+      }
+    ],
+    "enrichment": "An object that emits its own light is luminous; an object that does not emit its own light is non-luminous, even when it is visible by reflected light. Emitting its own light makes an object a source of light; not emitting its own light and only reflecting light makes it non-luminous. The learner correctly applies this rule: An object that emits its own light is luminous; an object that does not emit its own light is non-luminous, even when it is visible by reflected light. If an object looks bright in the sky or helps us see, it must be luminous.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Decide whether an object is luminous or non-luminous from whether it emits its own light. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 2
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H001",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "condition_omission",
+        "scope_error"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_11/H001; do not copy source.key"
+  }
+}

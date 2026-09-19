@@ -1,0 +1,127 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m20_qp_12:q14",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T14:42:40.866Z",
+  "source": {
+    "item_ref": "session:0580_m20_qp_12:q14",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.45);\\coordinate (C) at (3.55,0);\\draw[line width=0.7pt] (A)--(B)--(C)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=6pt] at (0,1.225) {$8.5\\,\\mathrm{cm}$};\\node[below=5pt] at (1.775,0) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (5.0,1.5) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_09/H001",
+      "unit_id": "math/grade_06/ch_09/H001",
+      "title": "Decide whether repeated parts form mathematical symmetry by identifying a fold or rotation transformation that maps the figure onto itself.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Definite pattern is the label that belongs on this item, so 'Decide whether repeated parts form mathematical symmetry by' is answered as definite pattern rather than symmetry."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "symmetry still holds here even though a specific fold or rotation relation must be identified is missing from the stem — on the item about Decide whether repeated parts form mathematical."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Definite pattern is what produces symmetry, so the usual direction of this relation is run backwards — on the item about Decide whether repeated parts form mathematical."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The symmetry rule also covers this: Do not require group-theory language, so it is not an exception — on the item about Decide whether repeated parts form mathematical."
+      }
+    ],
+    "enrichment": "A figure is symmetric when repeated parts occur in a definite pattern that matches under a fold or rotation, not merely because the figure is attractive or has repeated motifs.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_09. The student must decide: Decide whether repeated parts form mathematical symmetry by identifying a fold or rotation transformation that maps the figure onto itself. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number mus",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_09/H001",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "term_substitution",
+        "condition_omission",
+        "relationship_reversal",
+        "scope_error",
+        "surface_feature_capture"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_09/H001; do not copy source.key"
+  }
+}

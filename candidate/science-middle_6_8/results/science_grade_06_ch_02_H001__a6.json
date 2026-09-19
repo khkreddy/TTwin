@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Does this set show biodiversity of living things in that field patch?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because it lists different plants and animals found in that patch."
+        },
+        {
+          "id": "B",
+          "text": "No, because earthworms and squirrels cannot count toward biodiversity."
+        },
+        {
+          "id": "C",
+          "text": "Yes only if she also adds whales from a distant ocean to the same list."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Charu lists peepal sapling, marigold, earthworm, myna, and squirrel from one patch of the school field.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Biodiversity of a place is the variety of living plants and animals that belong there; her list shows several living kinds from that field patch."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Variety of living plants and animals in a region is biodiversity. Distant ocean animals are outside that place; living kinds in the patch do count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which expression shows how many stickers he has now?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$k + 4 - 7$"
+        },
+        {
+          "id": "B",
+          "text": "stickers $+ 4 - 7$"
+        },
+        {
+          "id": "C",
+          "text": "$4 - 7$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Madhav starts with $k$ stickers. He buys $4$ more and then gives $7$ away.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Letter-number $k$ keeps the starting count; buying $4$ more adds $4$ and giving $7$ away subtracts $7$, so the expression is $k + 4 - 7$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same letter k for the start; add for buying and subtract for giving away yields k+4-7.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
