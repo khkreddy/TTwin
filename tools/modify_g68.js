@@ -30,6 +30,25 @@ const SHEAF_FALLBACK = {
   S5: ["P2"],
   S6: ["B3", "Q8"],
 };
+const LIVE_ITEM_TYPES = ["mcq", "mcq_diagram", "mcq_table", "three_statement", "structured", "open_response"];
+const FORMAT_MAP = {
+  single_mcq: "mcq",
+  one_or_more: "mcq",
+  three_statement: "three_statement",
+  structured_parts: "structured",
+  open_response: "open_response",
+  option_table: "mcq_table",
+  options_are_figure: "mcq_diagram",
+  statement_reason: "structured",
+  two_part: "structured",
+  assertion_reason: "structured",
+  select_all: "mcq",
+  mcq: "mcq",
+  mcq_diagram: "mcq_diagram",
+  mcq_table: "mcq_table",
+  structured: "structured",
+};
+const VISUAL_HINGE = /figure|diagram|circuit|food web|ray|graph|apparatus/i;
 
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
@@ -167,7 +186,8 @@ function pickSource(unit, science, used) {
     else if (p.nopt >= 2 && p.key) sc += 20;
     if (p.type === "open_response" && p.nopt < 2) sc -= 35;
     if (p.seeds) sc += 5;
-    if (p.tikz) sc -= 4;
+    const hinge = String((unit && unit.decision_hinge) || "");
+    if (p.tikz && VISUAL_HINGE.test(hinge)) sc += 6;
     if (sc > bestScore) {
       best = it;
       bestScore = sc;
@@ -205,7 +225,77 @@ function packetHasPedagogy(packet) {
   return false;
 }
 function hingeWantsFigure(unit) {
-  return /figure|diagram|circuit|graph|apparatus/i.test(String((unit && unit.decision_hinge) || ""));
+  return VISUAL_HINGE.test(String((unit && unit.decision_hinge) || ""));
+}
+function sanitizeTikz(raw) {
+  let s = Array.isArray(raw) ? raw.join("\n") : String(raw || "");
+  if (!s.trim()) return { ok: false, tikz: "", packages: [] };
+  s = s.replace(/\\begin\{circuitikz\}/g, "\\begin{tikzpicture}");
+  s = s.replace(/\\end\{circuitikz\}/g, "\\end{tikzpicture}");
+  if (!/\\begin\{tikzpicture\}/.test(s) || !/\\end\{tikzpicture\}/.test(s)) {
+    return { ok: false, tikz: "", packages: [] };
+  }
+  const needsCirc = /to\s*\[(battery|lamp|short|nos|switch|american|european)/i.test(s);
+  return { ok: true, tikz: s, packages: needsCirc ? ["circuitikz"] : [] };
+}
+function liveItemType(resultType) {
+  return FORMAT_MAP[resultType] || null;
+}
+function mxIds(packet) {
+  return ((packet && packet.intelligence && packet.intelligence.mx) || [])
+    .map((m) => m && (m.mx_type || m.name))
+    .filter(Boolean);
+}
+function compileMxPlan(unit, keyLetter) {
+  const mx = (unit && unit.mx) || [];
+  const types = [];
+  mx.forEach((m) => {
+    const id = m.type || m.mx_type;
+    if (id && types.indexOf(id) < 0) types.push(id);
+  });
+  const letters = ["A", "B", "C", "D"].filter((L) => L !== (keyLetter || "A"));
+  const plan = {};
+  letters.forEach((L, i) => {
+    plan[L] = types[i] || "UNRESOLVED";
+  });
+  if (keyLetter) plan[keyLetter] = null;
+  return plan;
+}
+function compileBuildLogic(packet, unit, source, spec, figureMode) {
+  const mx = mxIds(packet);
+  return {
+    source_uid: source && source.uid,
+    hinge: unit && unit.unit_id,
+    item_type_target: (spec && spec.target_item_type) || "preserve",
+    figure_decision: { mode: figureMode, reason: hingeWantsFigure(unit) ? "hinge_names_visual" : "no_visual_referent" },
+    mx_seeds_used: mx.slice(0, 4),
+    option_plan: compileMxPlan(unit, packet && packet.source && packet.source.key && packet.source.key.letter),
+    format_rationale: "preserve source skeleton; retarget hinge to " + ((unit && unit.unit_id) || ""),
+  };
+}
+function gateG9(result, packet) {
+  const live = liveItemType(result && result.item_type);
+  if (live !== "mcq" && live !== "mcq_diagram" && live !== "mcq_table") return { ok: true };
+  const map = (result && result.mx_option_map) || (result && result.teacher && result.teacher.mx_option_map) || {};
+  const ids = optionIdsFromResult(result);
+  const ans = result.answer || {};
+  const keySet = {};
+  if (ans.kind === "letter_set") (ans.letters || []).forEach((L) => { keySet[L] = true; });
+  else if (ans.letter) keySet[ans.letter] = true;
+  const allowed = mxIds(packet);
+  const bound = [];
+  ids.forEach((L) => {
+    if (keySet[L]) return;
+    const v = map[L];
+    if (!v || v === "UNRESOLVED") return;
+    if (allowed.indexOf(v) < 0) return;
+    if (bound.indexOf(v) < 0) bound.push(v);
+  });
+  if (bound.length < 2) return { ok: false, gate: "G9" };
+  return { ok: true };
+}
+function optionIdsFromResult(out) {
+  return (out.options || []).map((o) => o && o.id).filter(Boolean);
 }
 function compileUnit(K, unit, source, science, spec) {
   spec = spec || {};

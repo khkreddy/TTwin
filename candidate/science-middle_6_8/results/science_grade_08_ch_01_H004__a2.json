@@ -2,30 +2,32 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "single_best_answer",
-  "stem": "Meera wants to find out whether the temperature of the oil affects how much a pakora puffs up when it is fried.\n\nShe plans two trials. In Trial 1 she uses oil at 150°C. In Trial 2 she uses oil at 180°C.\n\nFor the test to be fair, what should she do about the size of the pakoras and the time they are fried?",
+  "item_type": "option_table",
+  "stem": "Meena wants to find out whether the temperature of water affects how quickly sugar dissolves.\n\nShe plans two trials in her kitchen at home.\n\nWhich row shows a fair test?",
   "options": [
     {
       "id": "A",
-      "text": "Use pakoras of the same size and fry them for the same time."
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C; Trial 2: 40 g sugar, 100 cm³ water at 60 °C"
     },
     {
       "id": "B",
-      "text": "Use a bigger pakora in the hotter oil so it puffs up more easily."
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C; Trial 2: 60 g sugar, 100 cm³ water at 60 °C"
     },
     {
       "id": "C",
-      "text": "Fry the pakora in the hotter oil for a longer time to get a clearer result."
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 60 °C; Trial 2: 40 g sugar, 150 cm³ water at 60 °C"
     },
     {
       "id": "D",
-      "text": "Change both the pakora size and the frying time so the two trials are clearly different."
+      "text": "Trial 1: 40 g sugar, 100 cm³ water at 30 °C, stirred; Trial 2: 40 g sugar, 100 cm³ water at 60 °C, not stirred"
     }
   ],
   "statements": [],
   "parts": [],
   "equations": [],
-  "tables": [],
+  "tables": [
+    "{\"headers\":[\"Trial 1\",\"Trial 2\"],\"rows\":[[\"40 g sugar, 100 cm³ water at 30 °C\",\"40 g sugar, 100 cm³ water at 60 °C\"],[\"40 g sugar, 100 cm³ water at 30 °C\",\"60 g sugar, 100 cm³ water at 60 °C\"],[\"40 g sugar, 100 cm³ water at 60 °C\",\"40 g sugar, 150 cm³ water at 60 °C\"],[\"40 g sugar, 100 cm³ water at 30 °C, stirred\",\"40 g sugar, 100 cm³ water at 60 °C, not stirred\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+  ],
   "tikz": null,
   "answer": {
     "kind": "single_letter",
@@ -34,12 +36,10 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "In a fair test only the factor being tested (oil temperature) changes; pakora size and frying time must be kept identical, so A is correct. B, C and D each change an extra condition alongside temperature.",
+    "key_rationale": "A fair test of water temperature changes only the temperature while keeping the mass of sugar, the volume of water, and the stirring the same; only row A does this. Rows B, C and D each change a second condition (sugar mass, water volume, or stirring) or fail to test temperature at all.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
-    "mx_links": [
-      "condition_omission"
-    ],
+    "mx_links": [],
     "figure_note": null
   }
 }

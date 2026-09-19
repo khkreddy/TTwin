@@ -2,24 +2,24 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "refusal_reason": null,
-  "item_type": "options_are_figure",
-  "stem": "Meena uses a spring balance in her school laboratory to weigh a small bag of rice. On the scale, the difference between two adjacent bigger marks is 2 N, and there are 5 small divisions between them. What is the smallest weight value that she can read on this spring balance?",
+  "item_type": "single_mcq",
+  "stem": "Meena uses a spring balance in her school laboratory to weigh a bag of rice. On the scale, the marks for 2 N and 3 N have 5 small divisions between them.\n\nWhat is the smallest weight value that Meena can read on this spring balance?",
   "options": [
     {
       "id": "A",
-      "text": "0.2 N"
+      "text": "0.1 N"
     },
     {
       "id": "B",
-      "text": "0.4 N"
+      "text": "0.2 N"
     },
     {
       "id": "C",
-      "text": "2.5 N"
+      "text": "0.5 N"
     },
     {
       "id": "D",
-      "text": "10 N"
+      "text": "1.0 N"
     }
   ],
   "statements": [],
@@ -34,7 +34,7 @@
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Least count = difference between bigger marks / number of small divisions = 2 N / 5 = 0.4 N. Option A uses 1 N / 5 (wrong difference), C divides 5 by 2, and D multiplies instead of dividing.",
+    "key_rationale": "The difference between the two numbered marks is 3 N − 2 N = 1 N. Dividing by the 5 small divisions gives 1 N ÷ 5 = 0.2 N, so the least count is 0.2 N (option B). Option A is the trap for students who assume 10 divisions; C and D come from incorrect division counts.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [],
