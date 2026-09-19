@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$5$ presses of $+100$ and $3$ presses of $+10$ make exactly $530$."
+    },
+    {
+      "id": "2",
+      "text": "$4$ presses of $+100$, $12$ presses of $+10$, and $10$ presses of $+1$ also make $530$, because regrouping powers of ten still totals $530$."
+    },
+    {
+      "id": "3",
+      "text": "The place-value buttons exist only after $530$ already appears on the display."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "mechanism_conflation",
+    "C": "relationship_reversal",
+    "D": "relationship_reversal"
+  },
+  "item_type": "three_statement",
+  "stem": "Jatin's calculator starts at $0$ and has buttons $+1$, $+10$, $+100$, and $+1000$. He wants the display to show exactly $530$.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "5×100+3×10=530, and regroupings such as 4×100+12×10+10×1 also total 530. Many click mixes of powers of ten can make the same number. The buttons are available before the target appears; reaching 530 does not create them. Correct pair is 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

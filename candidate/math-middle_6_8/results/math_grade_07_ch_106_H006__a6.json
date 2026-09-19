@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Omar wants an expression for the $n$th even number by position, with $n=1,2,3,\\ldots$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the label even, with no expression linked to position $n$."
+    },
+    {
+      "id": "B",
+      "text": "The $n$th even number is $2n$."
+    },
+    {
+      "id": "C",
+      "text": "The counting number $n$ is read off only after the even values $2n$ are written first."
+    },
+    {
+      "id": "D",
+      "text": "The expression $2n+2$ lists every even number by position, starting from the first even number $2$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Position n maps to the even number 2n (2, 4, 6, …). A bare label, reversing position and value, or using 2n+2 (which skips 2) all miss that listing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "one_or_more",
+  "stem": "Lalit compares the decimals $0.09$ and $0.1$.\n\nOne or more options may be correct. Which two claims correctly compare them by place value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the phrase first unequal digit, and stop with no places compared."
+    },
+    {
+      "id": "B",
+      "text": "Align place values as $0.09$ and $0.10$; in the tenths place $1 > 0$, so $0.1 > 0.09$."
+    },
+    {
+      "id": "C",
+      "text": "$0.1$ is greater than $0.09$, because one tenth is greater than zero tenths and nine hundredths."
+    },
+    {
+      "id": "D",
+      "text": "$0.09 > 0.1$ because $0.09$ has more digits written after the decimal point."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Align as 0.09 and 0.10. Tenths digits 0 vs 1 decide that 0.1 is greater. Digit-count after the decimal and a bare label both miss place-value comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

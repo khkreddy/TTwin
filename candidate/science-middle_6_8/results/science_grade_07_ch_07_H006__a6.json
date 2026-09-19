@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Vihaan standing near a hot charcoal angithi. He does not touch it. The air between him and the angithi is still. He feels warmth on his hands and face.\n\nVihaan asks how the heat mainly reaches him.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Heat reaches him mainly by radiation from the hot charcoal."
+        },
+        {
+          "id": "B",
+          "text": "Heat reaches him mainly by conduction through the still air."
+        },
+        {
+          "id": "C",
+          "text": "Heat reaches him mainly by convection, as moving air carries it."
+        },
+        {
+          "id": "D",
+          "text": "Heat reaches him only if he touches the charcoal with his hand."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,>=stealth]\n% angithi bowl\n\\draw[thick,fill=gray!25] (0,0) -- (0.3,1.1) -- (2.1,1.1) -- (2.4,0) -- cycle;\n\\draw[thick,fill=black!70] (0.55,1.1) rectangle (0.95,1.45);\n\\draw[thick,fill=black!70] (1.1,1.1) rectangle (1.5,1.55);\n\\draw[thick,fill=black!70] (1.65,1.1) rectangle (2.05,1.4);\n\\node at (1.2,-0.35) {angithi};\n% radiation waves\n\\draw[->,thick] (2.5,1.2) -- (4.0,1.6);\n\\draw[->,thick] (2.5,0.9) -- (4.0,0.9);\n\\draw[->,thick] (2.5,0.6) -- (4.0,0.3);\n\\node[font=\\footnotesize] at (3.3,1.95) {heat};\n% person\n\\draw[thick] (5.1,0) -- (5.1,1.3);\n\\draw[thick] (5.1,1.3) circle (0.28);\n\\draw[thick] (5.1,1.0) -- (4.7,0.55);\n\\draw[thick] (5.1,1.0) -- (5.5,0.55);\n\\draw[thick] (5.1,0) -- (4.8,-0.55);\n\\draw[thick] (5.1,0) -- (5.4,-0.55);\n\\node at (5.1,-0.95) {Vihaan};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "He feels warmth without touching and without moving air, so the heat arrives by radiation."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Warmth across still air with no contact is radiation. Conduction through still air is poor; convection needs moving fluid; touch is not required for radiation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Hot charcoal angithi with radiation arrows toward Vihaan."
+  }
+}

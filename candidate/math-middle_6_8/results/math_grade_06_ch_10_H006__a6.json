@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes that rewrite?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Write $8-(-6)=8+(+6)$, because subtracting $-6$ is adding the additive inverse of $-6$."
+        },
+        {
+          "id": "B",
+          "text": "Call the answer additive inverse only, without rewriting the subtraction as an addition."
+        },
+        {
+          "id": "C",
+          "text": "Rewrite by squaring the inverse and leaving the minus sign in place."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Hema must rewrite $8-(-6)$ as addition of an inverse.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The additive inverse of $-6$ is $+6$, so subtracting $-6$ is the same as adding $+6$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "a-b becomes a + inverse of b. Here b=-6, so the inverse is +6 and 8-(-6)=8+(+6). Naming 'additive inverse' alone or squaring is not the rewrite.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

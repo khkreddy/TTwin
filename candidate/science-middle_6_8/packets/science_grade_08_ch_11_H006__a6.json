@@ -1,0 +1,116 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:biology_7a_rjb_exe1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:28:34.218Z",
+  "source": {
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_08/ch_11/H006",
+      "unit_id": "science/grade_08/ch_11/H006",
+      "title": "Explain why a purely lunar calendar does not keep the same months aligned with the same seasons year after year.",
+      "node_labels": [
+        "Sun, Moon, stars and time",
+        "Earth, sky, time and resources"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Sun, Moon, stars and time",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "lunar calendar is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: A lunar calendar uses the day as the basic unit and lunar months based on Moon phases."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "the lunar year ends earlier than the seasonal cycle -> the same lunar months no  happens first, and that produces 12 Moon phase cycles total fewer days than the seasonal year."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when A lunar calendar uses the day as the basic unit and lunar months based on Moon phases is not true."
+      }
+    ],
+    "enrichment": "Twelve lunar months make a lunar year of 354 days, while the seasons repeat in about 365 days, so lunar months shift relative to the seasons in successive years. 12 Moon phase cycles total fewer days than the seasonal year -> the lunar year ends earlier than the seasonal cycle -> the same lunar months no longer match the same seasons. The learner correctly applies this rule: Twelve lunar months make a lunar year of 354 days, while the seasons repeat in about 365 days, so lunar months shift relative to the seasons in successive years. Twelve months always make one year that matches the seasons, no matter how the months are defined.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: The night sky: Moon and calendars. The student must decide: Explain why a purely lunar calendar does not keep the same months aligned with the same seasons year after year. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then ",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_11/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "relationship_reversal",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_11/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

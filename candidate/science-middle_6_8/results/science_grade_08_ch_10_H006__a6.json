@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n% Mirror X plane\n\\node[font=\\bfseries] at (1.0,4.05) {Mirror X};\n\\node[font=\\footnotesize] at (1.0,3.7) {plane};\n\\draw[thick] (0,0.35)--(0,3.35);\n\\foreach \\y in {0.65,1.15,1.65,2.15,2.65,3.15} {\\draw[thin] (0,\\y)--(-0.18,\\y-0.12);}\n\\draw[->,thick] (2.15,2.75)--(0.12,2.75);\n\\draw[->,thick] (2.15,1.95)--(0.12,1.95);\n\\draw[->,thick] (2.15,1.15)--(0.12,1.15);\n\\draw[->,thick] (0.12,2.75)--(-1.35,2.75);\n\\draw[->,thick] (0.12,1.95)--(-1.35,1.95);\n\\draw[->,thick] (0.12,1.15)--(-1.35,1.15);\n% Mirror Y concave\n\\node[font=\\bfseries] at (5.0,4.05) {Mirror Y};\n\\node[font=\\footnotesize] at (5.0,3.7) {concave};\n\\draw[thick] (5.55,0.45) .. controls (4.35,1.85) .. (5.55,3.25);\n\\draw[->,thick] (7.35,2.75)--(5.35,2.75);\n\\draw[->,thick] (7.35,1.85)--(5.2,1.85);\n\\draw[->,thick] (7.35,0.95)--(5.35,0.95);\n\\draw[->,thick] (5.35,2.75)--(4.55,2.15);\n\\draw[->,thick] (5.2,1.85)--(4.55,1.85);\n\\draw[->,thick] (5.35,0.95)--(4.55,1.55);\n% Mirror Z convex\n\\node[font=\\bfseries] at (9.2,4.05) {Mirror Z};\n\\node[font=\\footnotesize] at (9.2,3.7) {convex};\n\\draw[thick] (8.55,0.45) .. controls (9.75,1.85) .. (8.55,3.25);\n\\draw[->,thick] (11.2,2.75)--(9.0,2.75);\n\\draw[->,thick] (11.2,1.85)--(8.85,1.85);\n\\draw[->,thick] (11.2,0.95)--(9.0,0.95);\n\\draw[->,thick] (9.0,2.75)--(9.85,3.25);\n\\draw[->,thick] (8.85,1.85)--(9.85,1.85);\n\\draw[->,thick] (9.0,0.95)--(9.85,0.45);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "After Mirror X the rays stay parallel; Mirror Y can bring them together; Mirror Z spreads them apart."
+    },
+    {
+      "id": "B",
+      "text": "After every mirror the rays must meet at one point, including Mirror X."
+    },
+    {
+      "id": "C",
+      "text": "After Mirror X the rays must behave exactly like rays through a converging lens."
+    },
+    {
+      "id": "D",
+      "text": "Only the silver paint colour of each mirror decides the ray paths, not the mirror shape."
+    }
+  ],
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows three parallel torch rays Harsh sends toward Mirror X (plane), Mirror Y (concave), and Mirror Z (convex).\n\nWhich claim correctly predicts the rays after reflection?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A plane mirror keeps parallel rays parallel; a concave mirror can converge them; a convex mirror diverges them. Claiming all mirrors focus, treating the plane like a lens, or judging from paint colour miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source lens figure into labelled plane/concave/convex mirrors with parallel incident rays."
+  }
+}

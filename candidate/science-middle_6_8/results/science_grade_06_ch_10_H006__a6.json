@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohit labels stakes in the school garden for a bean plant: seed, germination, young plant with leaves, flowers, then pods with seeds. Later some pods dry and he saves seeds for next term.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The order seed → germination → leaves → flowers → pods with seeds is correct."
+    },
+    {
+      "id": "B",
+      "text": "Seeds inside a pod can grow into a new bean plant."
+    },
+    {
+      "id": "C",
+      "text": "New bean seeds form inside the leaves."
+    },
+    {
+      "id": "D",
+      "text": "The order seed → germination → leaves → pods → flowers is correct."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bean stages run seed to germination, leaves, flowers, then pods with seeds that can start a new plant. Seeds do not form in leaves; pods do not come before flowers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

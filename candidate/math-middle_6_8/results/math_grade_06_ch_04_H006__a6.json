@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Chess, because its bar height is greatest on the equal-interval scale."
+    },
+    {
+      "id": "B",
+      "text": "Drama, because the activity name alone settles the count."
+    },
+    {
+      "id": "C",
+      "text": "Gardening, as if equal intervals on the vertical scale are not required."
+    },
+    {
+      "id": "D",
+      "text": "Chess, because darker shading settles the count."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Neha records equal-interval bar heights for three club activities: drama reaches $6$ on the scale, chess reaches $9$, and gardening reaches $4$.\n\nWhich activity has the greatest number?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On an equal-interval scale the greatest bar height is chess at 9, so chess has the greatest number. Names and shading do not encode the value, and equal intervals are required to compare heights.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

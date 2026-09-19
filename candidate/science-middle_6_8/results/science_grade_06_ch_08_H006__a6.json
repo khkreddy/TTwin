@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ishaan’s cold steel bottle left in warm, moist air. Tiny liquid water droplets form on the outside of the bottle.\n\nWhich description of the change is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water vapour cooled and condensed: gas changed into liquid water on the bottle."
+    },
+    {
+      "id": "B",
+      "text": "Ice changed from solid to liquid by evaporation."
+    },
+    {
+      "id": "C",
+      "text": "The droplets would form even if the bottle were hotter than the air, only because air is moist."
+    },
+    {
+      "id": "D",
+      "text": "Heating the moist air makes water freeze into ice on the bottle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n% warm moist air\n\\node at (0.8,1.6) {warm moist air};\n\\draw[thick,->] (0.2,1.2) -- (1.4,0.7);\n\\draw[thick,->] (0.6,1.2) -- (1.6,0.7);\n% cold bottle\n\\draw[thick,fill=cyan!15] (1.8,0.0) rectangle (3.4,1.8);\n\\node at (2.6,0.9) {cold};\n\\node at (2.6,0.45) {bottle};\n% droplets\n\\foreach \\x/\\y in {1.95/1.4,2.2/1.55,2.55/1.35,2.9/1.5,3.15/1.25} {\n  \\draw[thick,fill=blue!35] (\\x,\\y) circle (0.08);\n}\n\\node at (2.6,2.15) {water droplets};\n\\node at (5.2,0.9) {gas $\\rightarrow$ liquid};\n\\node at (5.2,0.45) {condensation};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Condensation is gas to liquid on cooling. Evaporation is liquid to gas; cooling of the surface matters; heating does not freeze water onto the bottle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source force diagram into cold bottle with moist-air arrows and condensation droplets."
+  }
+}

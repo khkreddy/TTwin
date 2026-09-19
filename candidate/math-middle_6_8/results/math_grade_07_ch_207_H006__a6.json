@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Kabir orders $5$ identical notebooks and pays a delivery charge of $\\mathrm{Rs}\\,7$. The total bill is $\\mathrm{Rs}\\,42$. Let $n$ be the cost of one notebook in rupees.\n\nWhich two claims model the situation correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Let $n$ be the cost of one notebook; then $5n+7=42$."
+    },
+    {
+      "id": "B",
+      "text": "Write the expression $5n+7$ with no equals $42$."
+    },
+    {
+      "id": "C",
+      "text": "The equation $5n+7=42$ translates the five notebooks, the delivery charge, and the total bill."
+    },
+    {
+      "id": "D",
+      "text": "The unknown $n$ equals $42$, because $42$ is the large printed total."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Five notebooks at n rupees each plus Rs 7 delivery total Rs 42, so 5n+7=42. A and C both state that equation model. B drops the equality to the total. D grabs the printed total as the unknown.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

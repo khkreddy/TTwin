@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Bilal’s known bar magnet with its South pole facing unmarked bar Y. The facing ends push apart.\n\nWhat does this tell him about bar Y?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Bar Y is a magnet; only a magnet can repel another magnet."
+    },
+    {
+      "id": "B",
+      "text": "Bar Y is ordinary iron; attraction alone would already prove it is a magnet."
+    },
+    {
+      "id": "C",
+      "text": "Bar Y is a magnet because both bars are drawn the same length."
+    },
+    {
+      "id": "D",
+      "text": "Bar Y is a magnet only if a North pole attracts it, not if the ends push apart."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% known magnet: N then S facing bar Y\n\\draw[thick,fill=red!30] (0.0,1.6) rectangle (1.5,2.3);\n\\draw[thick,fill=blue!30] (1.5,1.6) rectangle (3.0,2.3);\n\\node at (0.75,1.95) {N};\n\\node at (2.25,1.95) {S};\n\\node at (1.5,2.7) {known magnet};\n% repulsion arrows\n\\draw[thick,<-] (3.15,1.95) -- (3.55,1.95);\n\\draw[thick,->] (3.75,1.95) -- (4.15,1.95);\n\\node at (3.65,2.45) {push apart};\n% unmarked bar Y\n\\draw[thick,fill=gray!30] (4.3,1.6) rectangle (7.3,2.3);\n\\node at (5.8,1.95) {bar Y};\n\\node at (5.8,1.2) {unmarked bar};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repulsion identifies a magnet. Attraction alone cannot, because plain iron is also attracted. Same drawn length is not evidence. Attraction is not the test that settles the question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source force diagram into known magnet (S facing) and unmarked bar Y with repulsion arrows."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "three_statement",
+  "stem": "Nandini draws straight lines $e$ and $f$, each carrying one matching arrow mark. Lines $g$ and $h$ meet, and she marks their meeting with a small square.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The matching single arrow marks show $e \\parallel f$, and the small square shows that $g$ is perpendicular to $h$."
+    },
+    {
+      "id": "2",
+      "text": "The small square marks any sharp corner, not a right angle."
+    },
+    {
+      "id": "3",
+      "text": "Drawing the arrow marks forces lines $e$ and $f$ into existence as a parallel pair."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "term_substitution"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching arrow marks name a parallel set, and a small square marks a right angle, so only statement 1 is true. Statement 2 drops the right-angle meaning. Statement 3 reverses mark and relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

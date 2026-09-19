@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% Branch R — one cell\n\\node[font=\\bfseries] at (1.55,3.4) {Branch R};\n\\draw[thick,fill=white] (0.2,2.45) rectangle (1.2,2.95);\n\\node at (0.7,2.7) {cell};\n\\node[font=\\bfseries] at (0.05,2.7) {$-$};\n\\node[font=\\bfseries] at (1.35,2.7) {$+$};\n\\draw[thick] (1.2,2.7)--(2.0,2.7);\n\\fill (2.0,2.7) circle (1.2pt);\n\\draw[thick] (2.0,2.7)--(2.35,3.0);\n\\fill (2.55,2.7) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.3,3.2) {switch};\n\\draw[thick] (2.55,2.7)--(3.35,2.7)--(3.35,1.55)--(0.2,1.55)--(0.2,2.45);\n\\draw[line width=2.2pt] (0.85,1.55)--(2.55,1.55);\n\\node[font=\\footnotesize] at (1.7,1.25) {same constantan wire};\n% Branch S — two cells\n\\node[font=\\bfseries] at (7.05,3.4) {Branch S};\n\\draw[thick,fill=white] (5.25,2.45) rectangle (6.05,2.95);\n\\node[font=\\footnotesize] at (5.65,2.7) {cell};\n\\draw[thick,fill=white] (6.15,2.45) rectangle (6.95,2.95);\n\\node[font=\\footnotesize] at (6.55,2.7) {cell};\n\\node[font=\\bfseries] at (5.1,2.7) {$-$};\n\\node[font=\\bfseries] at (7.1,2.7) {$+$};\n\\draw[thick] (6.95,2.7)--(7.65,2.7);\n\\fill (7.65,2.7) circle (1.2pt);\n\\draw[thick] (7.65,2.7)--(8.0,3.0);\n\\fill (8.2,2.7) circle (1.2pt);\n\\node[font=\\footnotesize] at (7.95,3.2) {switch};\n\\draw[thick] (8.2,2.7)--(9.05,2.7)--(9.05,1.55)--(5.25,1.55)--(5.25,2.45);\n\\draw[line width=2.2pt] (5.95,1.55)--(7.85,1.55);\n\\node[font=\\footnotesize] at (6.9,1.25) {same constantan wire};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The wire in S heats more than in R over the same 4 minutes."
+    },
+    {
+      "id": "B",
+      "text": "That stronger heating can be useful in a toaster coil but harmful in a shorted lamp flex."
+    },
+    {
+      "id": "C",
+      "text": "The wire in R heats more than in S because one cell always heats a wire more than two cells."
+    },
+    {
+      "id": "D",
+      "text": "Neither branch generates heat because the constantan wire does not glow."
+    }
+  ],
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "The diagram shows two branches Aditya builds with the same constantan wire. Branch R uses one cell. Branch S uses two cells in series. He closes each switch for 4 minutes. He also thinks about heat in a toaster coil and heat in a shorted lamp flex.\n\nWhich claims correctly compare the heating and judge whether it is useful or harmful? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For the same wire and same duration, two cells produce more heat than one. That heating can be useful (toaster) or harmful (shorted flex). Reversing which branch heats more, or judging only from glow, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force-arrow source into Branch R (one cell) vs Branch S (two cells) with the same constantan wire."
+  }
+}

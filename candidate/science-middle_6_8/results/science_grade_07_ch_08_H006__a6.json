@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Zara uses a stopwatch in PE to record a relay split of 150 seconds. She also writes times in minutes and hours in her notebook.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about time units is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The SI unit of time is the second; 150 s = 2.5 min."
+        },
+        {
+          "id": "B",
+          "text": "The SI unit of time is the minute; 150 s = 2.5 min."
+        },
+        {
+          "id": "C",
+          "text": "1 h = 120 s, so 150 s is more than one hour."
+        },
+        {
+          "id": "D",
+          "text": "2 h = 1/30 min."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The SI unit is the second, and 60 s = 1 min, so 150 s = 2.5 min."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "SI unit of time is the second; 60 s = 1 min so 150 s = 2.5 min. B misnames the SI unit; C and D misuse the hour–second and hour–minute relations.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

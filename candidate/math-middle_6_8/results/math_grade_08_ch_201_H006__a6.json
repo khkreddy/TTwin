@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [],
+  "tikz": null,
+  "item_type": "one_or_more",
+  "stem": "Esha knows that $\\mathrm{Rs}\\,60$ is $20\\%$ of an unknown whole amount $W$. She wants $W$ and then the remaining part of the whole.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Set $\\dfrac{20}{100}=\\dfrac{60}{W}$ and solve to get $W=300$."
+    },
+    {
+      "id": "B",
+      "text": "Call $\\mathrm{Rs}\\,60$ the unknown whole and treat that label as $W$."
+    },
+    {
+      "id": "C",
+      "text": "After $W=300$, the remaining part is $300-60=240$."
+    },
+    {
+      "id": "D",
+      "text": "Take $W=20$ because $20$ is the printed percent numeral."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "20/100=60/W gives W=300; remaining 240. A and C. B mislabels the known amount as the whole. D grabs the percent numeral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows a cell, an electric fan, and a switch S. The switch is open, so its contacts do not touch.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The circuit is OFF because the open switch breaks the path, so current cannot reach the fan."
+    },
+    {
+      "id": "B",
+      "text": "The circuit is ON because the cell still pushes current across the open gap to the fan."
+    },
+    {
+      "id": "C",
+      "text": "If Arjun closes switch S, the path is completed and the fan can run."
+    },
+    {
+      "id": "D",
+      "text": "The open switch itself supplies current to the fan."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=white] (0,0) rectangle (1.2,0.55);\n\\node at (0.6,0.275) {cell};\n\\node[font=\\bfseries] at (-0.2,0.275) {$-$};\n\\node[font=\\bfseries] at (1.4,0.275) {$+$};\n\\draw[thick] (1.2,0.275) -- (2.4,0.275) -- (2.4,1.75) -- (4.5,1.75);\n\\draw[thick,fill=white] (4.5,1.45) rectangle (5.7,2.05);\n\\node at (5.1,1.75) {fan};\n\\draw[thick] (5.7,1.75) -- (6.5,1.75) -- (6.5,0.275) -- (4.1,0.275);\n\\fill (4.1,0.275) circle (0.05);\n\\fill (3.0,0.275) circle (0.05);\n\\draw[thick] (3.0,0.275) -- (2.4,0.275);\n\\draw[thick] (3.15,0.45) -- (3.85,0.55);\n\\node at (3.55,0.85) {switch S};\n\\node at (3.55,-0.35) {open};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An open switch breaks the path so the circuit is OFF; closing S completes the path so the fan can run. The cell cannot push current across an open gap, and the switch does not supply current.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Cell, fan, and open switch S in a simple series loop."
+  }
+}

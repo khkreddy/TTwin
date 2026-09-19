@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Twelve lunar months total about 354 days, which is shorter than the roughly 365-day seasonal year, so the lunar months drift through the seasons."
+    },
+    {
+      "id": "B",
+      "text": "A purely lunar calendar stays locked to the seasons because Moon phases and seasons take equal times."
+    },
+    {
+      "id": "C",
+      "text": "The seasons themselves become a little longer each year, so the lunar months can no longer keep pace with them."
+    },
+    {
+      "id": "D",
+      "text": "Any school calendar that names months, even one not based on Moon phases, must drift from the seasons the same way."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Mehak's school fixes its annual day to one month on a purely lunar calendar. Each lunar month begins with a new Moon. Twelve lunar months make about 354 days, while seasons on Earth repeat in about 365 days. After several years the same annual day falls in a different season than it did at first.\n\nWhy does a purely lunar calendar not keep the same months aligned with the same seasons year after year?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar year of about 354 days is shorter than the seasonal year of about 365 days, so lunar months drift relative to seasons. Claiming lock-step equality, blaming seasons for lengthening, or applying the rule to any named-month calendar miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aisha's cousin has asthma, a non-communicable disease. The doctor links flare-up risk to air quality, activity plans, and asks for regular checkups and ongoing care rather than one short course of medicine alone.\n\nWhich approach is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Continuous care, regular checkups, and attention to lifestyle and environment help manage the disease."
+    },
+    {
+      "id": "B",
+      "text": "One short course of medicine gives permanent control, so no further care is needed."
+    },
+    {
+      "id": "C",
+      "text": "Less physical activity always lowers every long-term health risk, so checkups can stop."
+    },
+    {
+      "id": "D",
+      "text": "If the cousin looks well between flare-ups, regular checkups and care plans are unnecessary."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Non-communicable disease control needs ongoing care, checkups, and attention to lifestyle and environment. A one-time medicine course, stopping activity/checkups, or skipping care because someone looks well each miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

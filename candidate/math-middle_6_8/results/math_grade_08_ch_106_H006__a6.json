@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily\\small,line join=round,line cap=round]\n  \\draw[line width=1pt] (0,0) rectangle (5,5);\n  \\draw[line width=0.8pt] (3.6,0) -- (3.6,5);\n  \\draw[line width=0.8pt] (0,3.6) -- (5,3.6);\n  \\node at (1.8,4.3) {$y^{2}$};\n  \\node at (4.3,4.3) {$-4y$};\n  \\node at (1.8,1.8) {$-4y$};\n  \\node at (4.3,1.8) {$16$};\n  \\node[above] at (1.8,5) {$y$};\n  \\node[above] at (4.3,5) {$-4$};\n  \\node[left] at (0,4.3) {$y$};\n  \\node[left] at (0,1.8) {$-4$};\n  \\node[below] at (2.5,-0.35) {side $y-4$};\n\\end{tikzpicture}",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a square of side $y-4$ split into four labelled regions.\n\nWhich expansion of $(y-4)^{2}$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the result negative cross-products and treat that label alone as the expansion."
+    },
+    {
+      "id": "B",
+      "text": "Writing $y^{2}-8y+16$ forces the original factor $(y-4)^{2}$ into place."
+    },
+    {
+      "id": "C",
+      "text": "$(y-4)^{2}=(y-4)(y-4)=y^{2}-4y-4y+16=y^{2}-8y+16$, so the combined cross-term is negative."
+    },
+    {
+      "id": "D",
+      "text": "$(y-4)^{2}=y^{2}-16$, as if the square were a plain difference of squares."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "(y-4)^2 expands as two identical differences: cross-terms -4y and -4y combine to -8y with y^2 and 16. A labels only. B reverses expansion direction. D conflates with difference of squares.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

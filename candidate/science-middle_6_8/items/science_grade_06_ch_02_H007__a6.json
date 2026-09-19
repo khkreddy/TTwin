@@ -1,0 +1,105 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_02/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_02/H007",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "surface_feature_capture",
+      "D": "condition_omission",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_02/H007; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_02:H007:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-LIFE",
+    "chapter_id": "science/grade_06/ch_02",
+    "chapter_label": "Diversity in the living world",
+    "subtopic_id": "science/grade_06/ch_02/H007",
+    "stem": "Bilal watches a duck swim using its webbed feet, a sparrow fly using its wings, and an earthworm crawl using its body.\n\nWhich statements correctly group these animals by type of movement and by the body parts they use?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 and 2 only",
+      "B": "1 and 3 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "The sparrow flies using its wings, so it belongs in a flying group by type of movement and by body part used."
+      },
+      {
+        "id": "2",
+        "text": "The duck swims using its webbed feet, so it belongs in a swimming group by type of movement and by body part used."
+      },
+      {
+        "id": "3",
+        "text": "The earthworm crawls using its wings, so it belongs in a flying group."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_02/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

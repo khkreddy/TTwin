@@ -1,0 +1,108 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_108/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_108/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": "UNRESOLVED",
+      "B": null,
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_108/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_108:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_07/ch_108",
+    "chapter_label": "math/grade_07/ch_108",
+    "subtopic_id": "math/grade_07/ch_108/H006",
+    "stem": "Qasim multiplies $\\dfrac{9}{14} \\times \\dfrac{21}{15}$ and wants to cancel common factors before multiplying.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "marks": 1,
+        "text": "Which claim correctly cancels common factors before multiplying?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Multiply $9 \\times 21$ and $14 \\times 15$ first, leaving every common factor uncancelled."
+          },
+          {
+            "id": "B",
+            "text": "Cancel a common factor $7$ between $21$ and $14$, and a common factor $3$ between $9$ and $15$, then multiply to get $\\dfrac{9}{10}$."
+          },
+          {
+            "id": "C",
+            "text": "Cancel the two numerators $9$ and $21$ with each other before multiplying."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "marks": 1,
+        "text": "Give one reason for your choice."
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_108/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

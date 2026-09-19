@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly identifies the force on the steel paperclip?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A magnetic force pulls the steel paperclip without contact."
+        },
+        {
+          "id": "B",
+          "text": "A magnetic force pulls the cork piece without contact in the same way."
+        },
+        {
+          "id": "C",
+          "text": "The force that pulls a dropped paperclip toward the floor is magnetic force."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Navya holds a fridge magnet a short distance above a steel paperclip, a cork piece, and a brass button on her desk. The steel paperclip lifts toward the magnet before anything touches.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Magnetic force acts without contact on magnetic materials such as steel; cork is not pulled that way, and the pull toward the floor is gravity, not magnetic force."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic force acts without contact on magnets or magnetic materials such as steel. Cork is not magnetic; Earth's pull on a falling object is gravity, not magnetic force.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

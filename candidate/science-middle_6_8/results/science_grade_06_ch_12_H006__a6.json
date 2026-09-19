@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Dev’s model of the Sun and eight planets in order of increasing distance from the Sun, with inner and outer groups marked. A planet is a large, nearly spherical object that revolves around the Sun. He also holds a Moon card.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Inner: Mercury, Venus, Earth, Mars; outer: Jupiter, Saturn, Uranus, Neptune — and the Moon is not a planet."
+    },
+    {
+      "id": "B",
+      "text": "The Moon is a planet because it is nearly spherical."
+    },
+    {
+      "id": "C",
+      "text": "Inner: Jupiter, Saturn, Uranus, Neptune; outer: Mercury, Venus, Earth, Mars."
+    },
+    {
+      "id": "D",
+      "text": "All eight planets are mostly made of gases, so the inner–outer split is only about colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\scriptsize,line cap=round,line join=round]\n% Sun\n\\draw[thick,fill=yellow!60] (0,0) circle (0.45);\n\\node at (0,-0.75) {Sun};\n% planet dots with labels\n\\foreach \\x/\\lab in {1.0/Me,1.7/V,2.4/E,3.1/Ma,4.1/J,5.1/S,6.1/U,7.1/N} {\n  \\draw[thick,fill=gray!40] (\\x,0) circle (0.12);\n  \\node at (\\x,0.45) {\\lab};\n}\n\\draw[thick,->] (0.55,-1.15) -- (7.2,-1.15);\n\\node at (3.9,-1.5) {increasing distance from the Sun};\n\\node[anchor=west] at (0.9,1.0) {inner: Me V E Ma};\n\\node[anchor=west] at (4.0,1.0) {outer: J S U N};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inner rocky Mercury–Mars and outer Jupiter–Neptune; the Moon revolves around Earth, not the Sun as a planet. Reversing groups or calling all planets gas is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source force diagram into Sun-and-planets distance strip with inner/outer labels."
+  }
+}

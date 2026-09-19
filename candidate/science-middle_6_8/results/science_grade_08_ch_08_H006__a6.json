@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Graphite is an element because it is a pure substance made of only one kind of identical particle."
+    },
+    {
+      "id": "B",
+      "text": "Chlorine gas is an element because it is a pure substance made of only one kind of identical particle."
+    },
+    {
+      "id": "C",
+      "text": "Table salt is an element because the crystals look uniform and pure."
+    },
+    {
+      "id": "D",
+      "text": "Rust powder is an element because it is a solid powder used in the lab."
+    }
+  ],
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "item_type": "one_or_more",
+  "stem": "Krish studies four pure samples in the lab: graphite made of only carbon particles; table salt made of particles that each contain sodium and chlorine joined together; chlorine gas made of identical molecules that each contain only chlorine; and rust powder made of particles that each contain iron and oxygen joined together.\n\nWhich claims correctly classify a substance as an element? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An element is a pure substance of one kind of particle. Graphite (carbon) and chlorine fit that; salt and rust each join more than one element and are compounds. Looking uniform or being a solid powder is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

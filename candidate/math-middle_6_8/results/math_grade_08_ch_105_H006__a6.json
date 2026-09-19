@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Tests that together supply $2^{2}$ and $3^{2}$ — for example divisible by $4$ and by $9$ — prove divisibility by $36$, since $\\mathrm{lcm}(4,9)=36$."
+        },
+        {
+          "id": "B",
+          "text": "A check that $360$ is divisible by $2$ alone proves divisibility by $36$."
+        },
+        {
+          "id": "C",
+          "text": "Proving divisibility by $36$ forces the prime factors $2^{2}$ and $3^{2}$ into place, reversing the test direction."
+        },
+        {
+          "id": "D",
+          "text": "Checks that $360$ is divisible by $2$ and by $3$ prove divisibility by $36$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "tikz": null,
+  "item_type": "structured_parts",
+  "stem": "Neel wants to prove that $360$ is divisible by $36$. He knows $36=2^{2}\\times 3^{2}$.",
+  "options": [],
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Because $36=2^{2}\\times 3^{2}$, the combined tests must supply those prime powers; divisible by $4$ and by $9$ does so, and $\\mathrm{lcm}(4,9)=36$."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Need full 2^2 and 3^2. Div by 4 and 9 works (lcm=36). B omits factors. C reverses. D only supplies 2 and 3 once each.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

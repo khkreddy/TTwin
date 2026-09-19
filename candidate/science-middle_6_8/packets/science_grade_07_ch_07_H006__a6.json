@@ -1,0 +1,139 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:30:31.750Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q6",
+    "item_type": "single_mcq",
+    "stem": "The diagram shows the only three forces acting on an object.\nWhat is the resultant force on the object?",
+    "options": [
+      {
+        "id": "A",
+        "text": "0 N"
+      },
+      {
+        "id": "B",
+        "text": "5.0 N towards the left"
+      },
+      {
+        "id": "C",
+        "text": "5.0 N towards the right"
+      },
+      {
+        "id": "D",
+        "text": "10.0 N towards the right"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[>=stealth,font=\\sffamily]\\draw (0,0) rectangle (2.4,1.3);\\draw[->] (-1.4,1.05) -- (0,1.05) node[pos=0,left] {3.0\\,N};\\draw[->] (-1.4,0.25) -- (0,0.25) node[pos=0,left] {2.0\\,N};\\draw[->] (3.85,0.65) -- (2.4,0.65) node[pos=0,right] {5.0\\,N};\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Temperature and heat transfer",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "The Sun heats Earth by conduction."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "The hotter utensil gains heat by radiation from the cooler surroundings and gets hotter."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "A hot, non-glowing utensil cannot cool by radiation."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "The warmth reaching me beside the fire is convection because hot air carries it to me."
+      }
+    ],
+    "enrichment": "Radiation transfers heat directly from a hot object to other objects or surroundings; the Sun's heat and the warmth felt from a fire reach us by radiation, and hot objects cool by radiating heat. A hot object radiates heat outward, which can warm another object or reduce the hot object's own heat as energy goes to the surroundings. The learner correctly applies this rule: Radiation transfers heat directly from a hot object to other objects or surroundings; the Sun's heat and the warmth felt from a fire reach us by radiation, and hot objects cool by radiating heat. Heat can reach a person only by touching the hot object, so warmth near a fire is not heat transfer unless there is contact.",
+    "lbs_recipe": {
+      "unit": "science/grade_07/ch_07/H006",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “5.0 N towards the left” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “5.0 N towards the right” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “10.0 N towards the right” looked possible instead of “0 N”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Heat transfer. The student must decide: Decide when heat reaches a person or object by radiation rather than by touch or moving fluid. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "structured_parts",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_07/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_07/ch_07/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

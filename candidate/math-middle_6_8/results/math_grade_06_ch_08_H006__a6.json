@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Measure the length of segment $MN$; that length changes as $M$ and $N$ move."
+    },
+    {
+      "id": "B",
+      "text": "Track only the position of $N$; the position of $M$ is not needed."
+    },
+    {
+      "id": "C",
+      "text": "Nearness can be decided without placing $M$ on $AB$ and $N$ on $DC$."
+    },
+    {
+      "id": "D",
+      "text": "$M$ and $N$ are near when the printed letters look close on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Priya draws rectangle $ABCD$. Point $M$ moves on side $AB$ and point $N$ moves on side $DC$. She wants to track how near or far $M$ and $N$ are.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Nearness of the moving points is the length of segment MN, which depends on both positions. Tracking one point alone, skipping the side placements, or reading printed letter closeness misses that measure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

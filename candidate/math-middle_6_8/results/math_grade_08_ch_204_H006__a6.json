@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [],
+  "tikz": null,
+  "item_type": "single_mcq",
+  "stem": "Sonia views a cone from above and sees a circular profile. She asks whether only a cone can show that circle from a chosen viewpoint.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Conclude that only the cone works, skipping that the same circular profile can come from more than one solid."
+    },
+    {
+      "id": "B",
+      "text": "Say that the circular profile chooses the above viewpoint on the cone, instead of the viewpoint shaping the profile."
+    },
+    {
+      "id": "C",
+      "text": "A cone can show a circle from above, but more than one solid can fit that same circular profile from a chosen viewpoint."
+    },
+    {
+      "id": "D",
+      "text": "Use the same profile question to compute the cone's volume, beyond identifying possible profiles."
+    }
+  ],
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Viewpoint shapes the profile; a circle from above fits a cone and other solids (e.g. cylinder). A omits multi-solid possibility. B reverses. D leaves the profile hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

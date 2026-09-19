@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "She may rewrite the sum as $6+10+(-4)$ without changing its value."
+    },
+    {
+      "id": "B",
+      "text": "She may rearrange only after leaving a subtraction sign sitting between unsigned parts."
+    },
+    {
+      "id": "C",
+      "text": "The same rearranging rule also covers multiplying grouped sums in this item."
+    },
+    {
+      "id": "D",
+      "text": "The printed numeral $10$ alone is the rearranged value of the expression."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Komal has rewritten an expression as the sum of terms $6+(-4)+10$.\n\nWhich claim about rearranging is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Once the expression is a sum of signed terms, any order or grouping keeps the same value: 6+10+(-4)=12, matching 6+(-4)+10. The rule applies after signed terms are written, does not cover products here, and is not settled by the largest printed numeral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

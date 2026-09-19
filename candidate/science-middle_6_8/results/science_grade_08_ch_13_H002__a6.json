@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best tests Charu's idea?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "She is not fully right: a thick heat-trapping atmosphere can make a planet hotter than one closer to the Sun."
+        },
+        {
+          "id": "B",
+          "text": "She is right: the planet closest to the Sun is always the hottest."
+        },
+        {
+          "id": "C",
+          "text": "She is right: atmosphere never changes a planet's temperature once distance from the Sun is known."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Charu says a planet's temperature can be predicted from its distance from the Sun alone. She notes that Venus is farther from the Sun than Mercury, yet Venus is hotter, and that Venus has a thick carbon-dioxide-rich atmosphere.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Distance from the Sun is a starting guide, but a thick carbon-dioxide atmosphere can trap heat strongly, so Venus is hotter than Mercury even though Mercury is closer."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distance from the Sun matters, but atmosphere also changes temperature; Venus is hotter than Mercury because of its thick CO2 atmosphere. Claiming distance alone always decides, or that atmosphere never matters, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

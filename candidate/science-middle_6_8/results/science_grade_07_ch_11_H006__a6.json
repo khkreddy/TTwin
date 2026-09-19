@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows a narrow beam of light meeting Aarav's polished steel plate. A dull cardboard sheet is also nearby.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The polished steel plate changes the direction of the beam by reflection."
+    },
+    {
+      "id": "B",
+      "text": "The beam bends toward the wall even if it passes beside the steel plate without hitting it."
+    },
+    {
+      "id": "C",
+      "text": "A polished steel plate can reflect light; reflection is not limited to glass mirrors."
+    },
+    {
+      "id": "D",
+      "text": "No reflection can occur at the steel plate unless a bright spot already appears on another surface."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=gray!15] (2.2,0) -- (2.2,3.0) -- (2.35,3.0) -- (2.35,0) -- cycle;\n\\foreach \\y in {0.25,0.65,1.05,1.45,1.85,2.25,2.65} \\draw[thick] (2.35,\\y) -- (2.55,\\y-0.12);\n\\node at (3.15,2.75) {steel plate};\n\\draw[thick,->] (0.15,2.45) -- (2.15,1.55);\n\\node[font=\\small] at (0.55,2.7) {incident};\n\\draw[thick,->] (2.15,1.55) -- (0.15,0.55);\n\\node[font=\\small] at (0.55,0.25) {reflected};\n\\fill (2.15,1.55) circle (1.5pt);\n\\draw[thick,fill=brown!20] (4.0,0.2) rectangle (5.3,2.0);\n\\node[font=\\small,align=center] at (4.65,-0.2) {dull\\\\cardboard};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A shiny steel plate reflects and redirects the beam; glass is not required. Light that misses the plate is not reflected by it, and a prior bright spot is not required for reflection.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": "Incident and reflected rays at a polished steel plate; dull cardboard nearby."
+  }
+}

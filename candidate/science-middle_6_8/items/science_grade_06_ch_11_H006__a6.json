@@ -1,0 +1,112 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_11/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_11/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to science/grade_06/ch_11/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_11:H006:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-EARTH",
+    "chapter_id": "science/grade_06/ch_11",
+    "chapter_label": "Nature's treasures",
+    "subtopic_id": "science/grade_06/ch_11/H006",
+    "stem": "Anaya’s housing society plans one monsoon action that truly conserves freshwater. Freshwater sources are limited, so useful actions reduce wastage, keep trash out of freshwater, or store rainwater for later use.\n\nAnswer both parts.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which plan conserves freshwater?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Channel roof rainwater into a closed tank for later use."
+          },
+          {
+            "id": "B",
+            "text": "Call reusing bucket wash-water ‘rainwater harvesting’."
+          },
+          {
+            "id": "C",
+            "text": "Send roof rainwater straight into the street drain."
+          },
+          {
+            "id": "D",
+            "text": "Throw plastic wrappers into the colony pond so the water still looks clear."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_11/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

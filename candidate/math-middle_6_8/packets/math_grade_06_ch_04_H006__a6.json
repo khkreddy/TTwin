@@ -1,0 +1,126 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T15:29:20.861Z",
+  "source": {
+    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
+    "item_type": "single_mcq",
+    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+      },
+      {
+        "id": "B",
+        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
+      },
+      {
+        "id": "C",
+        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
+      },
+      {
+        "id": "D",
+        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_04/H006",
+      "unit_id": "math/grade_06/ch_04/H006",
+      "title": "decide how a bar graph encodes category values so its comparisons, totals, and extremes can be read accurately",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Bar height is the label that belongs on this item, so 'decide how a bar graph encodes category values so its comparisons' is answered as bar height rather than bar graph."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "bar graph still holds here even though The numerical axis must use equal intervals is missing from the stem — on the item about decide how a bar graph encodes category values so its."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The bar graph rule also covers this: Do not assess decorative artwork unless it changes data interpretation, so it is not an exception — on the item about decide how a bar graph encodes category values so its."
+      }
+    ],
+    "enrichment": "In a bar graph, equal-width bars placed with uniform spacing represent categories, and each bar's length or height measured on the numerical scale gives the category value.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_04. The student must decide: decide how a bar graph encodes category values so its comparisons, totals, and extremes can be read accurately Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. Recalculate the key; do not copy source.key. Every option must be a claim that could answer the stem, and wrong options must be the same kind of answer as the key (a next term, a named process, or a row of the same shape). If the stem continues a number list, every option names a next term. Never write that naming or writing a term is what creates the list. If the stem numbers activities 1..n, every number must appear in an option (or in ",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "add",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_04/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_04/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  }
+}

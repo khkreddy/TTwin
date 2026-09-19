@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "one_or_more",
+  "stem": "The diagram shows the given data for constructing $\\triangle FGH$: included side $FG = 8\\,\\mathrm{cm}$ with $\\angle F = 35^{\\circ}$ and $\\angle G = 55^{\\circ}$.\n\nOne or more options may be correct. Which two claims belong in a correct construction plan?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the finished triangle as the included side $FG$ alone, and stop."
+    },
+    {
+      "id": "B",
+      "text": "Draw $FG = 8\\,\\mathrm{cm}$; mark $35^{\\circ}$ at $F$ and $55^{\\circ}$ at $G$; the arms meet at $H$."
+    },
+    {
+      "id": "C",
+      "text": "A triangle forms because $35^{\\circ}+55^{\\circ}=90^{\\circ}$ leaves a positive third angle of $90^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Copy the printed $8$ alone and treat that numeral as the finished triangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,x=1cm,y=1cm]\n  \\coordinate (F) at (0,0);\n  \\coordinate (G) at (4.0,0);\n  \\coordinate (H) at (2.69,1.88);\n  \\draw[line width=0.9pt] (F)--(G);\n  \\draw[line width=0.7pt,dashed] (F)--(H);\n  \\draw[line width=0.7pt,dashed] (G)--(H);\n  \\fill (F) circle (1.6pt);\n  \\fill (G) circle (1.6pt);\n  \\fill (H) circle (1.6pt);\n  \\node[below left] at (F) {$F$};\n  \\node[below right] at (G) {$G$};\n  \\node[above] at (H) {$H$};\n  \\node[below=3pt] at (2.0,0) {$8\\,\\mathrm{cm}$};\n  \\draw[line width=0.6pt] (0.55,0) arc (0:35:0.55);\n  \\node at (0.95,0.22) {$35^{\\circ}$};\n  \\draw[line width=0.6pt] (3.45,0) arc (180:125:0.55);\n  \\node at (3.05,0.28) {$55^{\\circ}$};\n  \\node[align=center,anchor=west] at (5.2,1.2) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Draw the included side as base, mark the two given angles at its ends, and check that their sum is less than 180° so a third angle remains. Naming FG alone or chasing the printed 8 both miss that plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Base FG with 35° at F and 55° at G; dashed arms meet at H."
+  }
+}

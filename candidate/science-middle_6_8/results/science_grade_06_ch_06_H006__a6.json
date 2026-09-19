@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Farhan holds three sheets up to daylight: a clean window-glass pane, a cloudy plastic bottle wall, and a metal sheet. Through the clean window-glass pane he sees objects clearly. Through the cloudy plastic he sees objects, but not clearly. Through the metal sheet he cannot see objects at all.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The clean window-glass pane is transparent."
+    },
+    {
+      "id": "B",
+      "text": "The cloudy plastic bottle wall is translucent."
+    },
+    {
+      "id": "C",
+      "text": "The metal sheet is transparent."
+    },
+    {
+      "id": "D",
+      "text": "The clean window-glass pane is opaque."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Seen clearly → transparent; seen but not clearly → translucent; not seen → opaque. The metal sheet is opaque, not transparent; clear glass is not opaque.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

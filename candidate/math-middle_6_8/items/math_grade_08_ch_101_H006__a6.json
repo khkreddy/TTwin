@@ -1,0 +1,110 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_101/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_101/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_08/ch_101/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_101:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_101",
+    "chapter_label": "math/grade_08/ch_101",
+    "subtopic_id": "math/grade_08/ch_101/H006",
+    "stem": "Ira tests whether $64$ is a perfect square by subtracting consecutive odd numbers starting from $1$: $64-1=63$, $63-3=60$, $60-5=55$, and so on.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim is correct?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Keep subtracting $1$, $3$, $5$, $\\ldots$, $15$ in order; reaching exactly $0$ after eight steps shows $64=8^{2}$."
+          },
+          {
+            "id": "B",
+            "text": "Call the process a sum of odd numbers and treat that label alone as the decision."
+          },
+          {
+            "id": "C",
+            "text": "Stop after any single subtraction and treat a later nonzero remainder as proof that $64$ is square."
+          },
+          {
+            "id": "D",
+            "text": "Decide from the printed digit $4$ in $64$ alone."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_101/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

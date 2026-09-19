@@ -1,0 +1,105 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_02/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_02/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "UNRESOLVED",
+      "C": "UNRESOLVED",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_02/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H006",
+    "stem": "Dev draws two angles on plain paper. Angle $P$ has short arms and a wide turn about its vertex. Angle $Q$ has long arms and a narrow turn about its vertex.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly decides which angle is larger?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Angle $P$ is larger, because it has the greater amount of turn about the vertex."
+          },
+          {
+            "id": "B",
+            "text": "Angle $Q$ is larger, because its arms are drawn longer."
+          },
+          {
+            "id": "C",
+            "text": "Decorative arrowheads on the rays decide which angle is larger."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

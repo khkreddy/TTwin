@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Its particles move freely in all directions with negligible attractions, so the gas spreads to fill the available space."
+    },
+    {
+      "id": "B",
+      "text": "Its particles stay tightly packed in fixed positions, like particles in a solid rubber balloon skin."
+    },
+    {
+      "id": "C",
+      "text": "The gas fills the room first, and that filling then causes its particles to begin moving freely."
+    },
+    {
+      "id": "D",
+      "text": "The same explanation applies to the solid rubber balloon skin itself, not only to the helium gas."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Ira opens the valve of a helium party balloon in one corner of a closed classroom. Soon the helium spreads through the whole room and fills every part of the available space.\n\nWhy does this gas have no fixed shape or fixed volume?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a gas, particles move freely with negligible attractions, so the gas has no fixed shape or volume and fills available space. Treating the gas like a solid, reversing cause and effect, or applying the rule to the rubber skin miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

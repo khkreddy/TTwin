@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "$581$ works, because $5+8+1=14$."
+    },
+    {
+      "id": "2",
+      "text": "$752$ also works, because $7+5+2=14$."
+    },
+    {
+      "id": "3",
+      "text": "Reading only the leading digit $9$ in $905$ gives digit sum $14$."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "term_substitution"
+  },
+  "item_type": "three_statement",
+  "stem": "Imran wants $3$-digit numbers whose digits add to $14$.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digit sum adds all digits: 5+8+1=14 and 7+5+2=14, so both 581 and 752 work. Reading only a leading digit is not the digit sum. Correct pair is 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

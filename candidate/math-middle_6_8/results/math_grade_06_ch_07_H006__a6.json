@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Divide numerator and denominator by $14$ to obtain $\\dfrac{3}{4}$."
+    },
+    {
+      "id": "2",
+      "text": "$\\dfrac{3}{4}$ is in lowest terms because $3$ and $4$ share no common factor except $1$."
+    },
+    {
+      "id": "3",
+      "text": "Report $14$ alone as the finished reduced fraction."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "term_substitution",
+    "D": "term_substitution"
+  },
+  "item_type": "three_statement",
+  "stem": "Chirag reduces the fraction $\\dfrac{42}{56}$ to lowest terms.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "42 and 56 share the common factor 14; dividing both by 14 gives 3/4, and 3 and 4 share no common factor except 1. The common factor 14 is not itself the reduced fraction. Correct pair is 1 and 2 only.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

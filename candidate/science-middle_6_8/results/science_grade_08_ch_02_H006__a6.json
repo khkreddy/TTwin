@@ -1,0 +1,48 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Vivaan places structures in this order: cell, tissue, organ, organ system, organism. He looks at a skin cell, a sheet of similar skin cells working together, a kidney, and the urinary system that includes the kidneys.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The sheet of similar skin cells working together is a tissue."
+    },
+    {
+      "id": "2",
+      "text": "The kidney is an organ system because it contains many cell types."
+    },
+    {
+      "id": "3",
+      "text": "The urinary system is an organ system in the sequence before the whole organism."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "T"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Similar cells working together form a tissue; a kidney is an organ; the urinary system is an organ system. Calling the kidney an organ system skips a level.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

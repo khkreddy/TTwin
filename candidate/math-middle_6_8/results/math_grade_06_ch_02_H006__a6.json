@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides which angle is larger?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Angle $P$ is larger, because it has the greater amount of turn about the vertex."
+        },
+        {
+          "id": "B",
+          "text": "Angle $Q$ is larger, because its arms are drawn longer."
+        },
+        {
+          "id": "C",
+          "text": "Decorative arrowheads on the rays decide which angle is larger."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Dev draws two angles on plain paper. Angle $P$ has short arms and a wide turn about its vertex. Angle $Q$ has long arms and a narrow turn about its vertex.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Angle size is the amount of turn about the vertex from one ray to the other, so the wider turn at $P$ makes angle $P$ larger."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Size is the amount of turn, not arm length or decoration. Angle P has the wider turn, so it is larger.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

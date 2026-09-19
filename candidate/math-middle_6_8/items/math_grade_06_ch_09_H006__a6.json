@@ -1,0 +1,89 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_09/H006",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_09/H006",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "mechanism_conflation",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_09/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_09:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_09",
+    "chapter_label": "math/grade_06/ch_09",
+    "subtopic_id": "math/grade_06/ch_09/H006",
+    "stem": "Gopal studies the regular octagon in the figure below, with centre $O$ marked.\n\nOne or more options may be correct. Which two claims correctly decide whether the octagon has rotational symmetry?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Yes, because a turn of $45^{\\circ}$ about $O$ makes the octagon coincide with itself, and $45^{\\circ}$ is less than a full turn.",
+      "B": "Call $O$ the name rotational symmetry, without testing any turn of the octagon.",
+      "C": "A fixed centre and a matching turn less than $360^{\\circ}$ are both needed to decide rotational symmetry.",
+      "D": "Counting the eight vertices alone decides that the octagon has rotational symmetry."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9]\n\\foreach \\i in {0,1,...,7} {\n  \\pgfmathsetmacro{\\ang}{22.5+\\i*45}\n  \\coordinate (V\\i) at (\\ang:2.2);\n}\n\\draw[thick] (V0)--(V1)--(V2)--(V3)--(V4)--(V5)--(V6)--(V7)--cycle;\n\\fill (0,0) circle (1.3pt);\n\\node[below left] at (0,0) {$O$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_09/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

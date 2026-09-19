@@ -1,0 +1,98 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_02/H006",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_02/H006",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "mx_allowlist": [
+        "term_substitution",
+        "relationship_reversal",
+        "scope_error",
+        "surface_feature_capture"
+      ],
+      "bind": "wrong_letters_after_result"
+    },
+    "format_rationale": "retarget hinge to science/grade_08/ch_02/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_02:H006:a6",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S3/H-ECO",
+    "chapter_id": "science/grade_08/ch_02",
+    "chapter_label": "Microorganisms: friend and foe",
+    "subtopic_id": "science/grade_08/ch_02/H006",
+    "stem": "Vivaan places structures in this order: cell, tissue, organ, organ system, organism. He looks at a skin cell, a sheet of similar skin cells working together, a kidney, and the urinary system that includes the kidneys.",
+    "item_type": "three_statement",
+    "options": {},
+    "statements": [
+      {
+        "id": "1",
+        "text": "The sheet of similar skin cells working together is a tissue."
+      },
+      {
+        "id": "2",
+        "text": "The kidney is an organ system because it contains many cell types."
+      },
+      {
+        "id": "3",
+        "text": "The urinary system is an organ system in the sequence before the whole organism."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_02/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

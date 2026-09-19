@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kiara compares daytime length around 22 December. Place N is far north of the Equator. Place E is on the Equator. Place S is far south of the Equator.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Around 22 December, place N has its shortest day; place E stays near 12 hours of day and night."
+        },
+        {
+          "id": "B",
+          "text": "Around 22 December, place N has its longest day; place E has almost no daylight."
+        },
+        {
+          "id": "C",
+          "text": "Around 22 December, the Northern Hemisphere's longest day occurs, as at the March equinox."
+        },
+        {
+          "id": "D",
+          "text": "Around 22 December, place S has about 12 hours of daylight, like a pole on 21 June."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In the Northern Hemisphere, about 22 December is the shortest day; near the Equator, day and night stay close to 12 hours."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Northern mid-latitudes have their shortest day around 22 December; the equator stays near 12 h. B reverses season extremes; C confuses solstice with equinox; D misstates southern day length and pole rules.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

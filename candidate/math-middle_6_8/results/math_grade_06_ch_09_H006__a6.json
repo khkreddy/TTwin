@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes, because a turn of $45^{\\circ}$ about $O$ makes the octagon coincide with itself, and $45^{\\circ}$ is less than a full turn."
+    },
+    {
+      "id": "B",
+      "text": "Call $O$ the name rotational symmetry, without testing any turn of the octagon."
+    },
+    {
+      "id": "C",
+      "text": "A fixed centre and a matching turn less than $360^{\\circ}$ are both needed to decide rotational symmetry."
+    },
+    {
+      "id": "D",
+      "text": "Counting the eight vertices alone decides that the octagon has rotational symmetry."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9]\n\\foreach \\i in {0,1,...,7} {\n  \\pgfmathsetmacro{\\ang}{22.5+\\i*45}\n  \\coordinate (V\\i) at (\\ang:2.2);\n}\n\\draw[thick] (V0)--(V1)--(V2)--(V3)--(V4)--(V5)--(V6)--(V7)--cycle;\n\\fill (0,0) circle (1.3pt);\n\\node[below left] at (0,0) {$O$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "one_or_more",
+  "stem": "Gopal studies the regular octagon in the figure below, with centre $O$ marked.\n\nOne or more options may be correct. Which two claims correctly decide whether the octagon has rotational symmetry?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A regular octagon maps onto itself under a 45° turn about its centre O, and 45° is less than 360°, so it has rotational symmetry. Naming O alone or counting vertices without a matching turn angle does not decide the property.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewritten regular octagon with centre O; source right-triangle lengths removed."
+  }
+}

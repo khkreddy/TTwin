@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "plant leaf → caterpillar → sparrow shows who eats whom in one linear sequence."
+    },
+    {
+      "id": "B",
+      "text": "A food chain is a simple linear sequence showing who eats whom, and plant leaf → caterpillar → sparrow fits that."
+    },
+    {
+      "id": "C",
+      "text": "plant leaf → caterpillar → sparrow is a food web because three organisms are shown."
+    },
+    {
+      "id": "D",
+      "text": "plant leaf → caterpillar → sparrow is valid because the sparrow is the largest animal."
+    }
+  ],
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Ojas lists garden organisms: a plant leaf, a caterpillar, and a sparrow. The plant leaf is eaten by the caterpillar, and the caterpillar is eaten by the sparrow.\n\nWhich claims build a valid food chain for this garden? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A food chain is a linear who-eats-whom sequence. plant leaf → caterpillar → sparrow matches the stated feeding links. Calling it a food web or judging by animal size miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

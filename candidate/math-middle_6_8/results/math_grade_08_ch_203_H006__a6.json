@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [
+    {
+      "id": "1",
+      "text": "Treat crews and days as inverse proportion: more crews mean fewer days for the same road."
+    },
+    {
+      "id": "2",
+      "text": "For a fixed road, crews $\\times$ days stays constant, so doubling the crews halves the days."
+    },
+    {
+      "id": "3",
+      "text": "Treat crews and days as direct proportion, because both quantities should rise together."
+    }
+  ],
+  "parts": [],
+  "tikz": null,
+  "item_type": "three_statement",
+  "stem": "Imran has a fixed length of road to pave. He asks how the number of days changes when the number of identical paving crews doubles.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fixed road: crews and days are inverse; product constant so days halve. Statement 3 wrongly treats them as direct. Key A.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Urvashi asks whether $\\dfrac{11}{50}$ can be written as a terminating decimal by finding an equivalent fraction with denominator $10$, $100$, $1000$, and so on.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$\\dfrac{11}{50}$ cannot become a terminating decimal because $50$ is not already $10$, $100$, or $1000$."
+        },
+        {
+          "id": "B",
+          "text": "Yes: multiply numerator and denominator by $2$ to get $\\dfrac{22}{100}=0.22$, a terminating decimal."
+        },
+        {
+          "id": "C",
+          "text": "The terminating decimal $0.22$ must be written first, and only then can the fraction $\\dfrac{11}{50}$ appear."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "An equivalent fraction with denominator 100 is 22/100, which is the terminating decimal 0.22. The denominator need not already be a power of ten before the rewrite."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiply by 2/2 to reach 22/100 = 0.22. Requiring the denominator to already be 10/100/1000, or reversing decimal and fraction order, both miss the equivalent-fraction route.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The sparrow flies using its wings, so it belongs in a flying group by type of movement and by body part used."
+    },
+    {
+      "id": "2",
+      "text": "The duck swims using its webbed feet, so it belongs in a swimming group by type of movement and by body part used."
+    },
+    {
+      "id": "3",
+      "text": "The earthworm crawls using its wings, so it belongs in a flying group."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item_type": "three_statement",
+  "stem": "Bilal watches a duck swim using its webbed feet, a sparrow fly using its wings, and an earthworm crawl using its body.\n\nWhich statements correctly group these animals by type of movement and by the body parts they use?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Grouping by movement type and body part: sparrow flies with wings; duck swims with webbed feet. Statement 3 wrongly gives the earthworm wings and a flying group.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

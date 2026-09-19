@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Kabir melts a piece of chocolate, then cools it until it is solid again. He also burns a strip of paper until only ash remains.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Melting the chocolate is reversible because the solid chocolate can be brought back on cooling."
+    },
+    {
+      "id": "2",
+      "text": "Burning the paper is reversible because the ash can be turned back into the original strip."
+    },
+    {
+      "id": "3",
+      "text": "Burning the paper is not reversible because the original paper strip cannot be brought back."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "T"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A change is reversible when the original substance can be brought back. Solid chocolate returns on cooling; ash cannot become the original paper strip.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

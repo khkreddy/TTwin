@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count the ice-cream sticks that make up each whole shape; repeating that same count gives $5$, $9$, $13$, $\\ldots$."
+    },
+    {
+      "id": "B",
+      "text": "Count the sticks in Shape $1$ only, then reuse that same count for every later shape."
+    },
+    {
+      "id": "C",
+      "text": "The same structural feature — the sticks of each whole frame — must be counted in every shape of the sequence."
+    },
+    {
+      "id": "D",
+      "text": "Pick the printed numeral $13$ alone because it is the largest number shown."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Parth builds a row of pentagon frames with ice-cream sticks. Shape $1$ uses $5$ sticks, Shape $2$ uses $9$ sticks, and Shape $3$ uses $13$ sticks.\n\nWhich two claims correctly name the countable feature that produces the related number sequence $5$, $9$, $13$, $\\ldots$?",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The related sequence is made by counting the same structural feature in every shape: the sticks of each whole pentagon frame (5, then 9, then 13). Reusing only Shape 1's count drops the later shapes. The largest printed numeral is not the countable feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

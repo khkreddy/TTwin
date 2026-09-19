@@ -1,0 +1,53 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [],
+  "parts": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.0,0);\n  \\coordinate (R) at (4.0,4.0);\n  \\coordinate (S) at (0,4.0);\n  \\coordinate (O) at (2.0,2.0);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.9pt] (P)--(R);\n  \\draw[line width=0.9pt] (Q)--(S);\n  \\fill (O) circle (1.4pt);\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above right] at (R) {$R$};\n  \\node[above left] at (S) {$S$};\n  \\node[above right] at (O) {$O$};\n\\end{tikzpicture}",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows quadrilateral $PQRS$ with diagonals $PR$ and $QS$ meeting at $O$. Diya already knows $PR=QS$ and that the diagonals bisect each other, as in a rectangle. She asks what extra diagonal condition makes $PQRS$ a square.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The diagonals must also meet at right angles at $O$, so $PQRS$ is a square."
+    },
+    {
+      "id": "B",
+      "text": "Call the extra condition the word diagonal and treat that label alone as the square test."
+    },
+    {
+      "id": "C",
+      "text": "Equal diagonals that bisect each other and meet at right angles classify $PQRS$ as a square."
+    },
+    {
+      "id": "D",
+      "text": "A kite test with one symmetry diagonal alone turns the rectangle construction into a square."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rectangle diagonals that also meet at right angles give a square; A and C state that extra condition. B substitutes the topic label. D conflates a kite test with the square diagonal condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

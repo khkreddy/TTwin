@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Anaya’s housing society plans one monsoon action that truly conserves freshwater. Freshwater sources are limited, so useful actions reduce wastage, keep trash out of freshwater, or store rainwater for later use.\n\nAnswer both parts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan conserves freshwater?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Channel roof rainwater into a closed tank for later use."
+        },
+        {
+          "id": "B",
+          "text": "Call reusing bucket wash-water ‘rainwater harvesting’."
+        },
+        {
+          "id": "C",
+          "text": "Send roof rainwater straight into the street drain."
+        },
+        {
+          "id": "D",
+          "text": "Throw plastic wrappers into the colony pond so the water still looks clear."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Storing roof rainwater in a tank is rainwater harvesting and conserves limited freshwater."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Storing roof rainwater conserves freshwater. Wash-water reuse is not rainwater harvesting; draining roof water wastes it; trash pollutes freshwater.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

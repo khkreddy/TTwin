@@ -1,0 +1,65 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "equations": [],
+  "tables": [],
+  "learn_by_solve": null,
+  "statements": [
+    {
+      "id": "1",
+      "text": "$7^{2}\\times 3^{2}=(7\\times 3)^{2}=21^{2}$, because the exponents match."
+    },
+    {
+      "id": "2",
+      "text": "$12^{3}\\div 4^{3}=(12\\div 4)^{3}=3^{3}$, because the exponents match."
+    },
+    {
+      "id": "3",
+      "text": "$7^{2}\\times 3^{5}=(7\\times 3)^{7}$, combining bases even though the exponents differ."
+    }
+  ],
+  "parts": [],
+  "tikz": null,
+  "item_type": "three_statement",
+  "stem": "Kabir rewrites products and quotients of powers that share an exponent.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-exponent product and quotient rules give (7*3)^2 and (12/4)^3. Statement 3 drops the same-exponent condition. Key A.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

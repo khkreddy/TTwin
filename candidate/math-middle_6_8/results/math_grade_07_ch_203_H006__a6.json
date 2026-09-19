@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Tejas hears two bells: one every $10$ minutes and one every $15$ minutes. They ring together at $8{:}00$. He wants the next time they ring together.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly finds the next shared ring?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any common multiple such as $60$ minutes is the next shared ring, with no need for the least."
+        },
+        {
+          "id": "B",
+          "text": "The next shared ring is after $\\operatorname{lcm}(10,15)=30$ minutes, so at $8{:}30$."
+        },
+        {
+          "id": "C",
+          "text": "Add $10$ and $15$ to get $25$ minutes, and use $25$ minutes as the wait."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The next shared ring must be a common multiple of 10 and 15, and the earliest is the LCM, which is 30 minutes after 8:00."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "lcm(10,15)=30, so the next shared ring is 8:30. A larger common multiple or a plain sum both miss the earliest common reach.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

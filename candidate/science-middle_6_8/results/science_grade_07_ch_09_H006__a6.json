@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Reyansh traces partly digested food as it enters the small intestine. Basic pancreatic juice arrives there, major food components are digested, and digested nutrients move into the blood.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "Basic pancreatic juice in the small intestine can help neutralise acidic food from the stomach."
+    },
+    {
+      "id": "2",
+      "text": "During absorption, digested nutrients move from blood vessels into the small intestine lining."
+    },
+    {
+      "id": "3",
+      "text": "The small intestine digests major food components and absorbs digested nutrients into the blood."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "T"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Pancreatic juice is basic and can neutralise acidic food; digestion and absorption into blood occur in the small intestine. Absorption is into blood, not from blood into the lining.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

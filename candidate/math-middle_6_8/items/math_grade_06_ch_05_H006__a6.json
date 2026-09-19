@@ -1,0 +1,91 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_05/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_05/H006",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "A": null,
+      "B": "term_substitution",
+      "C": null,
+      "D": "operation_confusion",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_06/ch_05/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_05:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_06/ch_05",
+    "chapter_label": "math/grade_06/ch_05",
+    "subtopic_id": "math/grade_06/ch_05/H006",
+    "stem": "Anaya runs the Sieve of Eratosthenes on the whole numbers from $1$ to $30$.\n\nOne or more options may be correct. Which two claims are correct when the sieve is finished?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$29$ stays circled as prime, while $1$ is crossed out and $27$ is crossed out as composite.",
+      "B": "$1$ is circled as a prime because it is the first label on the list.",
+      "C": "Each next uncrossed number is circled as prime and its later multiples are crossed out.",
+      "D": "$25$ is found by dividing values in the list instead of crossing out multiples of $5$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_05/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

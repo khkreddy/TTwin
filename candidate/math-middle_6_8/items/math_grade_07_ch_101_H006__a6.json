@@ -1,0 +1,103 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_101/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_101/H006",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "mx_allowlist": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "mechanism_conflation",
+      "B": null,
+      "C": "relationship_reversal",
+      "D": "relationship_reversal",
+      "bind": "result"
+    },
+    "format_rationale": "retarget hinge to math/grade_07/ch_101/H006; do not copy source.key",
+    "option_plan_bind": "result"
+  },
+  "mx_option_map": {
+    "A": "mechanism_conflation",
+    "C": "relationship_reversal",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_101:H006:a6",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M2",
+    "chapter_id": "math/grade_07/ch_101",
+    "chapter_label": "math/grade_07/ch_101",
+    "subtopic_id": "math/grade_07/ch_101/H006",
+    "stem": "Jatin's calculator starts at $0$ and has buttons $+1$, $+10$, $+100$, and $+1000$. He wants the display to show exactly $530$.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 only",
+      "B": "1 and 2 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "$5$ presses of $+100$ and $3$ presses of $+10$ make exactly $530$."
+      },
+      {
+        "id": "2",
+        "text": "$4$ presses of $+100$, $12$ presses of $+10$, and $10$ presses of $+1$ also make $530$, because regrouping powers of ten still totals $530$."
+      },
+      {
+        "id": "3",
+        "text": "The place-value buttons exist only after $530$ already appears on the display."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_101/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

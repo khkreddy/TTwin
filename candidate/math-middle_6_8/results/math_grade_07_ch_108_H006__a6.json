@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "structured_parts",
+  "stem": "Qasim multiplies $\\dfrac{9}{14} \\times \\dfrac{21}{15}$ and wants to cancel common factors before multiplying.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim correctly cancels common factors before multiplying?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiply $9 \\times 21$ and $14 \\times 15$ first, leaving every common factor uncancelled."
+        },
+        {
+          "id": "B",
+          "text": "Cancel a common factor $7$ between $21$ and $14$, and a common factor $3$ between $9$ and $15$, then multiply to get $\\dfrac{9}{10}$."
+        },
+        {
+          "id": "C",
+          "text": "Cancel the two numerators $9$ and $21$ with each other before multiplying."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Cancellation pairs a numerator with a denominator that share a factor. Here 21 with 14 (factor 7) and 9 with 15 (factor 3) leave 3/2 × 3/5 = 9/10."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cancel 7 between 21 and 14 and 3 between 9 and 15, then multiply to 9/10. Skipping cancellation or cancelling numerator with numerator both miss the product rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

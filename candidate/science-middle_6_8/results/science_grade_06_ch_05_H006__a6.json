@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nidhi’s 15 cm scale is broken at the zero end. She places one end of a crayon at the 4.0 cm mark; the other end of the crayon is at 12.5 cm.\n\nWhat is the crayon’s length?",
+  "options": [
+    {
+      "id": "A",
+      "text": "8.5 cm"
+    },
+    {
+      "id": "B",
+      "text": "12.5 cm"
+    },
+    {
+      "id": "C",
+      "text": "4.0 cm"
+    },
+    {
+      "id": "D",
+      "text": "4.0 cm − 12.5 cm = −8.5 cm"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Length is the separation of the two clear marks: 12.5 − 4.0 = 8.5 cm. Reading only one mark, or subtracting in reverse, is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}
