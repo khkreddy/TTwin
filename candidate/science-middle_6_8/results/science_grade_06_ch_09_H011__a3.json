@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal is given a mixture of sand, common salt, and water and must collect each part separately for a lab table.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Filter to separate the sand, then evaporate the filtrate to recover the salt; water is removed in that evaporation step."
+    },
+    {
+      "id": "B",
+      "text": "Sand and water alone always need several different separation methods in a long chain."
+    },
+    {
+      "id": "C",
+      "text": "One careful filtration separates sand, salt, and water all at once into three pure parts."
+    },
+    {
+      "id": "D",
+      "text": "Evaporate all the water first, then filter the dry sand-and-salt powder to obtain pure salt."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Insoluble sand is filtered first; dissolved salt is recovered by evaporating water. Sand–water is simpler; filtration alone cannot split dissolved salt; evaporating first strands salt with sand.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

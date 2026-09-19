@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leena has cloudy water with very fine mud after cleaning a courtyard pot. Pouring off the top liquid still leaves the water cloudy.\n\nWhat should she conclude?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Filtration through a fine cloth or filter is needed because many particles are too small to settle and pour off cleanly."
+    },
+    {
+      "id": "B",
+      "text": "A coarse tea strainer alone will catch every mud particle smaller than its holes."
+    },
+    {
+      "id": "C",
+      "text": "She should switch to a filter with larger pores than the mud particles so the water clears faster."
+    },
+    {
+      "id": "D",
+      "text": "Filtering salt water through cloth will remove the dissolved salt as a solid on the cloth."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fine suspended solids need filtration with pores smaller than the particles. Coarse holes miss fines; larger pores worsen separation; dissolved salt passes through filters.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

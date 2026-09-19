@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lavanya helps with three problems: an ant bite that stings from formic acid, soil that tests acidic, and factory wastewater that tests strongly basic before discharge.\n\nWhich set of actions correctly uses opposite natures?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Baking soda paste on the bite, lime on the acidic soil, and a carefully controlled acid treatment of the basic wastewater after testing."
+    },
+    {
+      "id": "B",
+      "text": "Add baking soda to all factory wastewater before discharge, without first checking whether each batch is acidic or basic."
+    },
+    {
+      "id": "C",
+      "text": "Add organic matter to the acidic soil to correct its acidity."
+    },
+    {
+      "id": "D",
+      "text": "Leave neutral soil without any nutrient care forever, because neutral soil never needs fertiliser."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remedies must oppose the identified condition: base for acidic bite/soil, acid for basic waste. Universal baking soda omits diagnosis; organic matter suits basic soil, so using it on acidic soil reverses the relation; claiming neutral soil never needs fertiliser over-extends the scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

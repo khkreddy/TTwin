@@ -135,6 +135,29 @@ const qh = TTwinPaper.itemHTML(q44, 0, {});
 if (qh.includes("\\begin{array}")) throw new Error("q44 still raw array env");
 if (!qh.includes("katex")) throw new Error("q44 not typeset");
 if (!qh.includes("One or more options may be correct")) throw new Error("q44 missing multi-correct note");
+const forceTable = {
+  uid: "candidate:g68:science:grade_08:ch_05:H001:a3",
+  item_type: "mcq_table",
+  stem: "Which row correctly names a force?",
+  options: { A: "Row 1", B: "Row 2", C: "Row 3", D: "Row 4" },
+  tables: [JSON.stringify({
+    headers: ["event", "claimed force"],
+    rows: [
+      ["kicks a football", "a push between foot and ball"],
+      ["ball sits still", "the ball applies a force to itself"],
+      ["pulls a wagon", "unit is the pascal"],
+      ["a leaf falls", "no objects are interacting"],
+    ],
+    row_labels: ["1", "2", "3", "4"],
+    is_option_table: true,
+  })],
+  assessment: { key_source: "none", key_status: "available", mcq_key: "A", examiner_comment: { present: false } },
+};
+const fh = TTwinPaper.itemHTML(forceTable, 0, {});
+if (!fh.includes("<table")) throw new Error("option table missing table");
+if (!fh.includes("kicks a football")) throw new Error("option table missing event text");
+if (fh.includes(">Row 1<") || fh.includes(">Row 1</")) throw new Error("option table still lists Row 1 as choice");
+
 console.log("paper_parts_ok", html.includes("tikz-slot"), html.includes("(a)"));
 console.log("latex_ok", mh.includes("katex"));
 console.log("q44_ok", !qh.includes("\\begin{array}"));

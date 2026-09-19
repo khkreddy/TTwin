@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Eshan notices that daytime sunlight makes everything bright, while at night other stars look like tiny points from his terrace in Indore.\n\nWhich explanation is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Sun is the only star; the night points are planets reflecting moonlight."
+    },
+    {
+      "id": "B",
+      "text": "Other stars look tiny mainly because they are much farther from Earth than the Sun, so their light arrives as points; the Sun is far closer and therefore appears large and bright."
+    },
+    {
+      "id": "C",
+      "text": "An identical star placed farther from Earth would look larger and brighter than a nearer twin."
+    },
+    {
+      "id": "D",
+      "text": "The Sun looks large only because it is physically bigger than every other star in the Universe."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Apparent size and brightness of the Sun versus other stars are dominated by the Sun's much smaller distance to Earth.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

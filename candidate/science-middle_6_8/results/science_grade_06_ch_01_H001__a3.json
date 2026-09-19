@@ -1,60 +1,51 @@
 {
   "schema": "modify_result.v1",
   "status": "OK",
-  "refusal_reason": null,
-  "item_type": "three_statement",
-  "stem": "Meera and Arjun list four things they did during the week.\n\n1  Memorised the names of ten famous scientists for a test.\n2  Wondered why the puddle near the gate dries up by afternoon, and watched it every day for a week.\n3  Copied all the steps of an experiment from the notebook without asking why any step was done.\n4  Asked why ants near the kitchen move in a line, and followed the line to find out.\n\nTheir teacher said that activities 2 and 4 count as science, but 1 and 3 do not.\n\nWhich option correctly explains why activities 2 and 4 count as science?",
+  "item_type": "single_mcq",
+  "stem": "Inder lists four things he did after school in Pune.\n\n1  Recited the names of five planets for a quiz without asking why they move.\n2  Wondered why the chalk dust on the blackboard tray felt dry, then watched how it blew when the fan started.\n3  Copied the steps of a classmate's vinegar-and-baking-soda demo exactly, without any question of his own.\n4  Looked up the boiling point of water so he could write it correctly in his notebook.\n\nWhich activity best counts as doing science?",
   "options": [
     {
       "id": "A",
-      "text": "Because both activities involve remembering correct facts and figures."
+      "text": "Activity 2, because he began with a question and used observing and exploring to understand something around him."
     },
     {
       "id": "B",
-      "text": "Because both activities begin with a question and use observing and exploring to understand the world."
+      "text": "Activity 3, because carefully copying an experiment's steps is enough to count as science."
     },
     {
       "id": "C",
-      "text": "Because both activities must be carried out inside a science laboratory."
+      "text": "Activity 1, because you must already know the answer before a scientific question is worth asking."
     },
     {
       "id": "D",
-      "text": "Because both activities give the correct answer quickly without any effort."
+      "text": "None of them: watching chalk dust on a tray is ordinary and cannot be science."
     }
   ],
-  "statements": [
-    {
-      "id": "1",
-      "text": "Memorised the names of ten famous scientists for a test."
-    },
-    {
-      "id": "2",
-      "text": "Wondered why the puddle near the gate dries up by afternoon, and watched it every day for a week."
-    },
-    {
-      "id": "3",
-      "text": "Copied all the steps of an experiment from the notebook without asking why any step was done."
-    },
-    {
-      "id": "4",
-      "text": "Asked why ants near the kitchen move in a line, and followed the line to find out."
-    }
-  ],
+  "statements": [],
   "parts": [],
   "equations": [],
   "tables": [],
   "tikz": null,
   "answer": {
     "kind": "single_letter",
-    "letter": "B",
+    "letter": "A",
     "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Inverse-flip applied: the source key pair (2 and 4) is now given in the stem, and the student must identify what the source treated as given — the criterion that makes those activities science. Activities 2 and 4 both start with curiosity-driven questions and use observation and exploration to understand the world, matching the definition of science as questioning, observing, exploring and doing, not memorising facts. Option B states this; A, C and D invoke memorisation, laboratory setting, and effortless answers, none of which define science.",
-    "variation_applied": "V6",
+    "key_rationale": "Science is curiosity-driven questioning, observing, and exploring to understand the world. Copying steps without a question omits that condition; requiring a known answer reverses the relation; excluding everyday observation wrongly narrows the scope.",
+    "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
-    "mx_links": [],
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
     "figure_note": null
   }
 }

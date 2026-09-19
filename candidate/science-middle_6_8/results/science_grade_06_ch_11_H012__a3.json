@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Disha's class visits a roadworks site in Pune where crushed rock is used for the road base, and the teacher mentions metals taken from minerals.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rocks are made up of metals such as iron and copper."
+    },
+    {
+      "id": "B",
+      "text": "Minerals are made up of rocks."
+    },
+    {
+      "id": "C",
+      "text": "Rocks are made of minerals; metals such as aluminium, copper and iron are extracted from minerals; rocks and minerals form so slowly that they should be used carefully."
+    },
+    {
+      "id": "D",
+      "text": "Wherever lots of rocks are visible on a hillside, people may use them without any limit."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rocks contain minerals; metals come from minerals; slow formation calls for responsible use. A swaps minerals for metals as rock components; B reverses rocks–minerals; D treats visible abundance as unlimited supply.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

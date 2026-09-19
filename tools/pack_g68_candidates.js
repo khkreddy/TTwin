@@ -43,6 +43,13 @@ function flatten(doc, unit) {
   if (doc.join_status) it.join_status = doc.join_status;
   if (doc.target_unit_id) it.target_unit_id = doc.target_unit_id;
   if (doc.source_ref) it.source_ref = doc.source_ref;
+  if (doc.build_logic || doc.mx_option_map) it.author = "grok";
+  if (Array.isArray(it.tables)) {
+    it.tables = it.tables.map((t) => {
+      if (typeof t !== "string") return t;
+      try { return JSON.parse(t); } catch (e) { return t; }
+    });
+  }
   const chapter = it.chapter_label || (unit && unit.chapter_title) || "";
   if (chapter && !it.chapter_label) it.chapter_label = chapter;
   return it;
@@ -65,6 +72,7 @@ function navRow(it, unit) {
     ncert_family: (it.hinges && it.hinges.primary) || it.subtopic_id || "",
     item_type: it.item_type || "mcq",
     lifecycle: "CANDIDATE",
+    author: it.author || null,
   };
 }
 function pack() {

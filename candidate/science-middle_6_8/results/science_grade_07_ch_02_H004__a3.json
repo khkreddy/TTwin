@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kartik tests a colourless liquid from the kitchen that feels slippery between his fingers. Red litmus paper turns blue in the liquid.\n\nWhich judgement is best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The liquid is likely basic, because slippery feel and turning red litmus blue are evidence for a base."
+    },
+    {
+      "id": "B",
+      "text": "Blue litmus staying blue would have been enough by itself to prove any substance is basic."
+    },
+    {
+      "id": "C",
+      "text": "Every slippery substance must be basic, so no indicator test is needed."
+    },
+    {
+      "id": "D",
+      "text": "A solution that turns red litmus blue but does not feel slippery cannot be basic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bases are identified using slippery feel together with indicator evidence. Treating blue-litmus-staying-blue as proof substitutes the wrong test; calling every slippery substance basic omits indicator evidence; denying basic nature when slippery feel is absent over-narrows the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

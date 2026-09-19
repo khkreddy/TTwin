@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Girish plans to spot Venus from the roof of his flat in Pune at 7:30 p.m. on a Tuesday in March. Venus is above the horizon then, but a thick layer of monsoon-like cloud covers the whole sky and nearby street lamps stay on.\n\nWhich judgment about seeing Venus that evening is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "He will see Venus clearly because it is above the horizon at that clock time."
+    },
+    {
+      "id": "B",
+      "text": "He is unlikely to see Venus because clouds and bright city lights block a clear dark view, even though the planet is above the horizon."
+    },
+    {
+      "id": "C",
+      "text": "Switching on more roof lights will make Venus easier to find against the clouds."
+    },
+    {
+      "id": "D",
+      "text": "Venus can be seen from every place on Earth at 7:30 p.m. that Tuesday, so cloud cover does not matter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Visibility needs the object above the horizon plus clear, sufficiently dark sky. Clouds and light pollution can hide Venus even when the time is right.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

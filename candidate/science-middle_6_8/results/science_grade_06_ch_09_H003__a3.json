@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nikhil's uncle brings harvested wheat stalks from a village field. The grains are still stuck to the stalks.\n\nWhat should they do first before they try to separate grains from husk?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Thresh the stalks to detach the grains, then separate husk from the loose grains."
+    },
+    {
+      "id": "B",
+      "text": "Call the beating of the stalks winnowing, because air will also blow during the work."
+    },
+    {
+      "id": "C",
+      "text": "Skip threshing, because grains still on stalks can go straight into husk separation."
+    },
+    {
+      "id": "D",
+      "text": "Blow hard over the unthreshed stalks so the grains fall off by themselves."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Threshing frees grains from stalks first. That step is not winnowing; husk separation needs loose grains; blowing alone is not the detach-from-stalk method.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

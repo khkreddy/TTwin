@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Jhanvi's teacher writes one answer on the board: \"three\". Pupils must invent a curious situation and a scientific question that this answer could fit, not only the most obvious arithmetic prompt.\n\nWhich response best follows the activity?",
+  "options": [
+    {
+      "id": "A",
+      "text": "She imagines three wet handkerchiefs drying at different speeds on a balcony and asks which factors could explain the differences."
+    },
+    {
+      "id": "B",
+      "text": "She asks, \"Why do leaves change colour?\" without checking whether \"three\" answers that question."
+    },
+    {
+      "id": "C",
+      "text": "She says a scientific question is valid only when its answer is already known, so the activity is impossible."
+    },
+    {
+      "id": "D",
+      "text": "She writes any long, dramatic question about space and says it is valid because it sounds creative, even though \"three\" does not answer it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The activity needs a curious situation whose question is answered by the given answer. An unrelated curious question omits the fit condition; requiring a known answer first mis-scopes inquiry; flashy wording alone captures a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

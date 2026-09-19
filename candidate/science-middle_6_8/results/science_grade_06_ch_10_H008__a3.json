@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Eshan sees wriggling mosquito larvae in stagnant water left in an unused clay pot in his courtyard in Thrissur. His teacher says a thin layer of kerosene on the water surface can stop them becoming adults.\n\nWhy does the kerosene layer work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It makes the water look shiny, so adult mosquitoes refuse to lay more eggs there."
+    },
+    {
+      "id": "B",
+      "text": "Larvae and pupae must reach air at the surface to breathe; the kerosene film blocks that air contact and disrupts development before adulthood."
+    },
+    {
+      "id": "C",
+      "text": "Adult mosquitoes also need to dive under the kerosene to breathe, so the layer kills flying adults in the courtyard."
+    },
+    {
+      "id": "D",
+      "text": "Kerosene is transparent, so air still reaches the larvae and the layer cannot affect breathing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquito larvae and pupae live in water but respire air at the surface. A thin oil/kerosene film separates water from air and blocks that breathing, interrupting the life cycle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

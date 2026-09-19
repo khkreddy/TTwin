@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harsh finds small iron nails mixed with sawdust in the school workshop and wants a quick clean-up without picking each nail by hand.\n\nWhich method is suitable?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a magnet to pull out the iron nails, because iron is magnetic and sawdust is not."
+    },
+    {
+      "id": "B",
+      "text": "Use a magnet to pull out any aluminium scraps mixed the same way, because all metals respond to magnets."
+    },
+    {
+      "id": "C",
+      "text": "Use a magnet on a pile of only iron nails and scrap iron pieces to sort them from each other."
+    },
+    {
+      "id": "D",
+      "text": "Avoid the magnet for tiny iron bits; magnetic separation cannot work unless each piece is large enough to pick by hand."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Magnetic separation needs a magnetic component mixed with a non-magnetic one. Aluminium is not magnetic; sorting iron from iron fails; size for handpicking is not the magnetic limit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

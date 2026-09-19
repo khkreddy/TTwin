@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Girish builds two clay models for a science corner in Rajkot.\n\nModel X: small, rocky, irregular; travels around the Sun; never grows a glowing tail.\nModel Y: mix of ice, dust, and rock; grows a long tail when it comes close to the Sun.\n\nHow should the models be labelled?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Model X: comet; Model Y: asteroid"
+    },
+    {
+      "id": "B",
+      "text": "Model X: asteroid; Model Y: comet"
+    },
+    {
+      "id": "C",
+      "text": "Both models are comets because both orbit the Sun"
+    },
+    {
+      "id": "D",
+      "text": "Both models are asteroids because neither is a planet"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rocky irregular bodies without a near-Sun tail pattern are asteroids; icy-dusty bodies that develop tails near the Sun are comets.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

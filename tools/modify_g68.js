@@ -241,6 +241,24 @@ function sanitizeTikz(raw) {
 function liveItemType(resultType) {
   return FORMAT_MAP[resultType] || null;
 }
+function normalizeResultTables(tables, liveType) {
+  const out = [];
+  (tables || []).forEach((t) => {
+    let obj = t;
+    if (typeof t === "string") {
+      try { obj = JSON.parse(t); } catch (e) { return; }
+    }
+    if (!obj || typeof obj !== "object") return;
+    if (liveType === "mcq_table") obj.is_option_table = true;
+    if (obj.is_option_table) {
+      const labs = obj.row_labels || [];
+      const lettered = labs.some((L) => /^[A-D]$/i.test(String(L || "")));
+      if (!lettered) obj.row_labels = (obj.rows || []).map((_, i) => String.fromCharCode(65 + i));
+    }
+    out.push(obj);
+  });
+  return out;
+}
 function mxIds(packet) {
   return ((packet && packet.intelligence && packet.intelligence.mx) || [])
     .map((m) => m && (m.mx_type || m.name))
@@ -332,6 +350,16 @@ function resultToCandidate(result, packet, source, unit, attempt) {
   if (!live || LIVE_ITEM_TYPES.indexOf(live) < 0) return { ok: false, gate: "G2", keepOriginal: true };
   const options = {};
   (result.options || []).forEach((o) => { if (o && o.id) options[o.id] = o.text || ""; });
+  const tables = normalizeResultTables(result.tables, live);
+  if (live === "mcq_table") {
+    const t = tables.find((x) => x && x.is_option_table);
+    (t && t.rows || []).forEach((row, i) => {
+      const L = String.fromCharCode(65 + i);
+      if (!options[L] || /^Row\s*\d+$/i.test(String(options[L]))) {
+        options[L] = (row || []).map((c) => String(c == null ? "" : c).trim()).filter(Boolean).join(" — ");
+      }
+    });
+  }
   let key = null;
   if (result.answer && result.answer.kind === "letter_set") key = (result.answer.letters || []).join("");
   else if (result.answer && result.answer.letter) key = result.answer.letter;
@@ -377,7 +405,7 @@ function resultToCandidate(result, packet, source, unit, attempt) {
       statements: result.statements || [],
       parts: result.parts || [],
       equations: result.equations || [],
-      tables: result.tables || [],
+      tables: tables,
       tikz: tikz,
       tikz_packages: packages,
       has_figure: !!(tikz && String(tikz).trim()),
@@ -750,6 +778,7 @@ module.exports = {
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
   variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy,
   sanitizeTikz, gateG9, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
+  normalizeResultTables,
   OUT, ROOT,
 };
 

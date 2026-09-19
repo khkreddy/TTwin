@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Chetan's school in Bengaluru asks students to choose travel habits that reduce fossil-fuel use for a 2 km trip to a nearby park.\n\nWhich choice best does that, and why?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use half as much petrol each day so that the remaining petrol will run out twice as fast."
+    },
+    {
+      "id": "B",
+      "text": "Cut back on solar-panel use so that sunlight does not run out."
+    },
+    {
+      "id": "C",
+      "text": "Walk, cycle or share a full public bus for nearby trips, because that lowers petrol or diesel burned per person."
+    },
+    {
+      "id": "D",
+      "text": "Always pick the smallest private car, because the smallest vehicle must use the least fuel per traveller."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lowering fossil-fuel consumption for short trips conserves limited fuels. A reverses consumption–lifetime; B applies exhaustion logic to sunlight; D judges by vehicle size instead of fuel per traveller.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

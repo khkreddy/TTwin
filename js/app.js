@@ -91,14 +91,15 @@
     S.spec = spec;
     if (spec.id === "science" && spec.candidate_overlay) {
       const saved = sessionStorage.getItem(BANK_KEY);
-      S.bankMode = saved === "live" ? "live" : "ai";
+      S.bankMode = (saved === "live" || saved === "ai" || saved === "grok") ? saved : "grok";
     } else {
       S.bankMode = "live";
     }
-    if (spec.id === "science" && spec.candidate_overlay && S.bankMode === "ai") {
+    if (spec.id === "science" && spec.candidate_overlay && (S.bankMode === "ai" || S.bankMode === "grok")) {
       try {
-        S.nav = await jget(spec.candidate_overlay.nav);
-        S.navPack = "ai:" + S.navPack;
+        const rows = await jget(spec.candidate_overlay.nav);
+        S.nav = filterOverlayNav(rows, S.bankMode);
+        S.navPack = S.bankMode + ":" + S.navPack;
       } catch (e) {
         S.bankMode = "live";
       }
@@ -127,25 +128,38 @@
   }
   function bankMode() {
     if (!overlayOf()) return "live";
-    return S.bankMode === "ai" ? "ai" : "live";
+    if (S.bankMode === "grok" || S.bankMode === "ai" || S.bankMode === "live") return S.bankMode;
+    return "grok";
   }
   function setBankMode(mode) {
-    S.bankMode = mode === "ai" ? "ai" : "live";
+    S.bankMode = (mode === "ai" || mode === "live") ? mode : "grok";
     try { sessionStorage.setItem(BANK_KEY, S.bankMode); } catch (e) {}
   }
+  function filterOverlayNav(rows, mode) {
+    const list = rows || [];
+    if (mode === "grok") return list.filter((r) => r && r.author === "grok");
+    if (mode === "ai") return list.filter((r) => !r || r.author !== "grok");
+    return list;
+  }
   function trayNotice() {
-    if (bankMode() !== "ai") return "";
-    return "<div class='notice ai no-print'>These Science items were drafted by AI from the grades 6–8 map. Keys are unverified. They are not in the live exam pool and are not exam-ready.</div>";
+    const m = bankMode();
+    if (m === "grok") {
+      return "<div class='notice ai no-print'>Grok-authored Science 6–8 drafts (new workflow: map hinge + Mx-bound wrong options + build_logic). Keys are unverified. Not exam-ready. Not in the live bank.</div>";
+    }
+    if (m === "ai") {
+      return "<div class='notice ai no-print'>Earlier AI tray drafts from the grades 6–8 map. Keys are unverified. They are not in the live exam pool and are not exam-ready.</div>";
+    }
+    return "";
   }
   async function ensurePackNav(pack) {
     const spec = S.spec || specOf(S.subject);
     const want = pack || (spec && spec.default_pack);
     const ov = overlayOf();
-    if (bankMode() === "ai" && ov && ov.nav) {
-      const tag = "ai:" + want;
+    if ((bankMode() === "ai" || bankMode() === "grok") && ov && ov.nav) {
+      const tag = bankMode() + ":" + want;
       if (S.navPack === tag && S.nav && S.nav.length) return;
       const rows = await jget(ov.nav);
-      S.nav = rows || [];
+      S.nav = filterOverlayNav(rows, bankMode());
       S.navPack = tag;
       return;
     }
@@ -161,7 +175,7 @@
     const spec = S.spec || specOf(S.subject);
     await ensurePackNav(pack);
     const ov = overlayOf();
-    if (bankMode() === "ai" && ov && ov.questions) {
+    if ((bankMode() === "ai" || bankMode() === "grok") && ov && ov.questions) {
       const file = ov.questions;
       if (S.loadedPacks[file]) return;
       try {
@@ -273,7 +287,7 @@
     const want = selected || (S.spec && S.spec.default_pack);
     return packs.map((p) =>
       "<option value='" + esc(p.id) + "'" + (p.id === want ? " selected" : "") + ">" +
-      esc(p.label) + " (" + ((bankMode() === "ai" && S.nav && S.nav.length) ? S.nav.length : p.n) + ")</option>"
+      esc(p.label) + " (" + (((bankMode() === "ai" || bankMode() === "grok") && S.nav && S.nav.length) ? S.nav.length : p.n) + ")</option>"
     ).join("");
   }
 
@@ -296,7 +310,7 @@
       "<p>Use the subject menu for science (grades 6–8), mathematics, chemistry, biology, or physics. It is not tied to one syllabus. You do not need codes or a chapter list in your head.</p>" +
       "<p>The twin is organised around what the student must decide. That decision is the same whether you teach NCERT, Cambridge, or another board.</p>" +
       "<p>AI is optional. Browse, retrieve, and papers work without it. Chemistry has the NCERT hinge map. Physics and biology use the published NCERT chapter list until a complete hinge map exists. Mix-ups stay off the learner paper.</p>" +
-      "<p>Science grades 6–8 has a live bank of 109 items and a separate AI tray of unverified drafts. Open Science, then Browse or Test maker, and pick <b>AI tray · unverified</b> to check those drafts. They are not exam-ready.</p>" +
+      "<p>Science grades 6–8 has a live bank of 109 items, a <b>Grok tray</b> of new-workflow drafts (Mx-bound distractors), and an earlier AI tray. Open Science, then Browse or Test maker, and pick the bank. They are not exam-ready.</p>" +
       "</div>" +
       "<h2 class='modules-head'>What it does</h2>" +
       "<div class='modules'>" +
@@ -319,6 +333,7 @@
     const ov = overlayOf();
     const bank = ov
       ? "<div><label>Bank</label><select id='" + prefix + "-bank'>" +
+        "<option value='grok'" + (bankMode() === "grok" ? " selected" : "") + ">Grok tray · unverified</option>" +
         "<option value='ai'" + (bankMode() === "ai" ? " selected" : "") + ">" +
         esc(ov.label || "AI tray · unverified") + "</option>" +
         "<option value='live'" + (bankMode() === "live" ? " selected" : "") + ">Live · 109</option>" +
@@ -473,7 +488,7 @@
     };
     bindFilters("br", () => { go(); });
     if (spec && spec.default_pack) $("br-pack").value = spec.default_pack;
-    const startNode = (bankMode() === "ai") ? "" : (spec && spec.default_node);
+    const startNode = (bankMode() === "ai" || bankMode() === "grok") ? "" : (spec && spec.default_node);
     $("br-node").innerHTML = "<option value=''>any</option>" + nodeOptions(startNode, $("br-pack").value);
     fillChapters("br");
     go();
@@ -702,7 +717,7 @@
   }
 
   async function itemsForUids(uids) {
-    if (bankMode() === "ai") {
+    if (bankMode() === "ai" || bankMode() === "grok") {
       await ensurePack((S.spec && S.spec.default_pack) || "middle_6_8");
     } else {
       const need = {};
@@ -1273,7 +1288,7 @@
         meta: {
           title: $("tm-title").value,
           subject: (S.spec && S.spec.label) || sel.subject,
-          subtitle: [(sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · "), packLabel(sel.pack), bankMode() === "ai" ? "AI tray · unverified" : ""].filter(Boolean).join(" · "),
+          subtitle: [(sel.nodes || []).map(ideaTitle).filter(Boolean).join(" · "), packLabel(sel.pack), bankMode() === "grok" ? "Grok tray · unverified" : (bankMode() === "ai" ? "AI tray · unverified" : "")].filter(Boolean).join(" · "),
           seed,
         },
         items,

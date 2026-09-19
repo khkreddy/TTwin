@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harsh needs to separate fine atta from larger bran pieces using a kitchen sieve.\n\nWhich choice is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a sieve whose holes are between the sizes of the bran and the fine atta so bran stays on top and atta passes through."
+    },
+    {
+      "id": "B",
+      "text": "Use a sieve with holes larger than both the bran and the atta; both will still separate cleanly."
+    },
+    {
+      "id": "C",
+      "text": "With holes between their sizes, the fine atta stays on the sieve and the bigger bran falls through."
+    },
+    {
+      "id": "D",
+      "text": "Sieving will also remove dissolved sugar from sweetened water poured through the same sieve."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sieving separates by particle size when holes sit between the sizes. Oversized holes let both through; fine particles pass, coarse stay; dissolved solids are not caught by a sieve.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

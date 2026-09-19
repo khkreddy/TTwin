@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kartik starts with lemon juice that turns blue litmus solution red. He adds lime water a little at a time until the mixture is neither acidic nor basic, and the tube feels slightly warm.\n\nWhich explanation is best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Enough base mixed with the acid produced a neutral effect, with salt, water, and heat as the usual companions of that change."
+    },
+    {
+      "id": "B",
+      "text": "One drop of lime water is enough to neutralise any amount of lemon juice."
+    },
+    {
+      "id": "C",
+      "text": "Any glass of plain water that tests neutral must have been made by mixing an acid and a base."
+    },
+    {
+      "id": "D",
+      "text": "At the neutral point the blue-litmus mixture must become colourless."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Neutralisation needs sufficient opposite natures mixed together. One drop for any amount omits quantity; assuming every neutral water came from acid+base reverses the inference; requiring colourlessness captures a surface colour expectation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

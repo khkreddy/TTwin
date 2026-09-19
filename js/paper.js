@@ -49,8 +49,25 @@
       .replace(/&lt;sub&gt;/gi, "<sub>").replace(/&lt;\/sub&gt;/gi, "</sub>")
       .replace(/&lt;sup&gt;/gi, "<sup>").replace(/&lt;\/sup&gt;/gi, "</sup>");
   }
+  function coerceTable(t) {
+    if (!t) return null;
+    if (typeof t === "string") {
+      const s = t.trim();
+      if (!s) return null;
+      try { t = JSON.parse(s); } catch (e) { return null; }
+    }
+    if (typeof t !== "object") return null;
+    const labels = (t.row_labels || []).slice();
+    if (t.is_option_table && labels.length && !labels.some((L) => /^[A-D]$/i.test(String(L || "")))) {
+      t = Object.assign({}, t, {
+        row_labels: (t.rows || []).map((_, i) => String.fromCharCode(65 + i)),
+      });
+    }
+    return t;
+  }
   function optionTableOf(it) {
-    return ((it && it.tables) || []).find((t) => t && t.is_option_table) || null;
+    const tables = ((it && it.tables) || []).map(coerceTable).filter(Boolean);
+    return tables.find((t) => t && t.is_option_table) || null;
   }
   function isFigureGridTable(t) {
     if (!t || t.is_option_table) return false;
@@ -71,6 +88,7 @@
     return blank / cells.length >= 0.7;
   }
   function tableHTML(t, opts) {
+    t = coerceTable(t);
     if (!t) return "";
     opts = opts || {};
     const headers = t.headers || [];
@@ -337,7 +355,7 @@
       correct: extractedKey(it),
     };
     const hasDrawnFig = !!(String(it.figure_src || "").trim() || it.tikz);
-    const stemTables = ((it.tables || []).filter((t) => {
+    const stemTables = ((it.tables || []).map(coerceTable).filter((t) => {
       if (!t || t.is_option_table) return false;
       if (hasDrawnFig && isFigureGridTable(t)) return false;
       return true;

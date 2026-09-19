@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal's mother dissolves rock salt in water for pickling, then wants the dry salt back from the leftover solution left in a steel kadai.\n\nWhat should she do?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Allow the water to evaporate completely so the dissolved salt is left as a solid."
+    },
+    {
+      "id": "B",
+      "text": "Warm the solution only briefly; dry salt appears as soon as the liquid feels warm."
+    },
+    {
+      "id": "C",
+      "text": "Evaporate the water and expect both solid salt and a separate collected jug of pure liquid water from that same simple step alone."
+    },
+    {
+      "id": "D",
+      "text": "Wait for sunlight to make the solution bubble; without bubbles the salt cannot return."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Full evaporation leaves the dissolved solid. Warmth alone is not enough; simple open evaporation does not also bottle the water; bubbling is not required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

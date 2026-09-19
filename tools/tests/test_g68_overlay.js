@@ -54,6 +54,16 @@ const fam = rag.assemble({
   families: ["science/grade_06/ch_01/H001"],
 }, nav, {});
 if (!fam.question_uids.length) throw new Error("family empty");
+const grokNav = nav.filter((r) => r.author === "grok");
+const grokItems = items.filter((it) => it.author === "grok");
+if (grokNav.length < 1) throw new Error("no grok nav");
+if (grokNav.length !== grokItems.length) throw new Error("grok nav/items");
+const force = items.find((it) => it.uid === "candidate:g68:science:grade_08:ch_05:H001:a3");
+if (force) {
+  const t = (force.tables || []).find((x) => x && x.is_option_table);
+  if (!t || !t.rows || t.rows.length < 4) throw new Error("force table rows");
+  if (/^Row\s*1$/i.test(String((force.options || {}).A || ""))) throw new Error("force still Row 1");
+}
 const live = rag.assemble({ pack: "middle_6_8", subject: "science" }, junior.map((it) => ({
   uid: it.uid, subject: it.subject, pack: it.pack, node: it.node, ncert_family: (it.hinges && it.hinges.primary) || "",
 })), {});

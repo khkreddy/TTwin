@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leena helps clean freshly threshed rice outdoors on a breezy afternoon. She wants to separate light husk from heavier rice grains.\n\nWhen can winnowing work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "When moving air carries the lighter husk farther while heavier grains fall closer."
+    },
+    {
+      "id": "B",
+      "text": "In a closed kitchen with still air, if she shakes the mixture hard enough."
+    },
+    {
+      "id": "C",
+      "text": "When the heavier rice grains travel farther in the wind than the light husk."
+    },
+    {
+      "id": "D",
+      "text": "Only when the two parts look different in colour, even if they have the same weight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Winnowing needs moving air and a density/weight difference. Still air blocks it; lighter parts travel farther; colour alone is not enough.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

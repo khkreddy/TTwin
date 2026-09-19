@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Ajay's class in Kochi looks at a globe: nearly three-fourths of Earth's surface is water. Still, his coastal neighbourhood faces drinking-water shortage every summer.\n\nWhich statement best explains this?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Most of Earth's water is freshwater stored in oceans and seas, so shortages should never happen near the coast."
+    },
+    {
+      "id": "B",
+      "text": "Most of Earth's water is salty seawater unfit for drinking, farming or household work, and usable freshwater is limited."
+    },
+    {
+      "id": "C",
+      "text": "Oceans hold so much water that shortages cannot occur, even though that water is salty."
+    },
+    {
+      "id": "D",
+      "text": "Clear seawater from the shore is fit for drinking because it looks clean."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Most surface water is saline and unfit for domestic, agricultural and industrial use; freshwater sources are limited, so shortage can occur despite abundant oceans. A mislabels ocean water as freshwater; C ignores the fitness condition; D judges by appearance instead of salinity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

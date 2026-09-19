@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Falguni’s class in Mysuru discusses what the Moon is. They also mention a human-made weather satellite orbiting Earth.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon is a planet that happens to stay near Earth."
+    },
+    {
+      "id": "B",
+      "text": "Earth is the Moon’s natural satellite."
+    },
+    {
+      "id": "C",
+      "text": "The Moon is Earth’s natural satellite; a human-made craft orbiting Earth is an artificial satellite, not a natural one."
+    },
+    {
+      "id": "D",
+      "text": "Earth is a natural satellite of the Sun, so the Moon cannot also be called a satellite."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Moon is a natural body orbiting Earth, so it is Earth’s natural satellite. Human-made orbiters are artificial satellites; Earth itself is a planet, not a satellite of the Sun in this classification sense used here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

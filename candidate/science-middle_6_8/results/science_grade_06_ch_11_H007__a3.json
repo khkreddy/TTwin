@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Chetan watches a goat eat leaves under a shady neem tree in his school garden in Nagpur and asks how the goat is linked to the Sun's energy.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The leaves use the Sun's heat alone to make food that later supplies energy to the goat."
+    },
+    {
+      "id": "B",
+      "text": "When the goat eats the leaves, energy passes from the goat into the plant."
+    },
+    {
+      "id": "C",
+      "text": "The goat gets energy from the Sun only while it stands in direct sunlight, not while eating in the shade."
+    },
+    {
+      "id": "D",
+      "text": "Sunlight helps plants make food; the goat receives that energy indirectly when it eats the plant."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "D",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "C": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plants capture sunlight to make food; animals receive that energy through the food they eat, even in shade. A swaps heat for light; B reverses the energy direction; C treats visible sunlight on the animal as required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

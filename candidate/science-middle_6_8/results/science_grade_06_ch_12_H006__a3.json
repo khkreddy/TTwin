@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Girish lines up eight planet models for a school fair in Surat in order of increasing distance from the Sun and then splits them into inner and outer groups.\n\nWhich arrangement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Inner: Mercury, Venus, Earth, Mars; outer: Jupiter, Saturn, Uranus, Neptune — with the Moon counted as a ninth planet after Mars."
+    },
+    {
+      "id": "B",
+      "text": "Inner: Jupiter, Saturn, Uranus, Neptune; outer: Mercury, Venus, Earth, Mars."
+    },
+    {
+      "id": "C",
+      "text": "Inner rocky planets Mercury–Mars, then outer gas giants Jupiter–Neptune, and the Moon is not a planet."
+    },
+    {
+      "id": "D",
+      "text": "All eight planets are mostly gas, so the inner–outer split is only about colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Eight planets in order Mercury to Neptune; first four are inner/rocky and last four are outer/gaseous. The Moon is a satellite, not a planet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
