@@ -1,0 +1,133 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m18_qp_12:q31",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:57:58.422Z",
+  "source": {
+    "item_ref": "session:0625_m18_qp_12:q31",
+    "item_type": "single_mcq",
+    "stem": "The diagram shows a circuit containing a cell, an ammeter, a lamp and a variable resistor.\nThe resistance of the variable resistor is increased.\nWhat happens to the ammeter reading and what happens to the brightness of the lamp?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ammeter reading decreases; lamp brightness decreases"
+      },
+      {
+        "id": "B",
+        "text": "ammeter reading decreases; lamp brightness increases"
+      },
+      {
+        "id": "C",
+        "text": "ammeter reading increases; lamp brightness decreases"
+      },
+      {
+        "id": "D",
+        "text": "ammeter reading increases; lamp brightness increases"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"ammeter reading\",\"lamp brightness\"],\"rows\":[[\"decreases\",\"decreases\"],[\"decreases\",\"increases\"],[\"increases\",\"decreases\"],[\"increases\",\"increases\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "\\begin{tikzpicture}[line width=0.8pt,line cap=round,line join=round]\\draw (0,0) -- (0,0.78); \\draw (0,1.22) -- (0,2) -- (1.55,2); \\draw (1.55,2) -- (1.93,2); \\draw (2.12,2) -- (3.5,2) -- (3.5,1.5); \\draw (3.5,0.5) -- (3.5,0) -- (2.15,0); \\draw (1.35,0) -- (0,0); \\draw[fill=white] (0,1) circle (0.22); \\node at (0,1) {A}; \\draw (1.55,1.66) -- (1.55,2.34); \\draw (1.93,1.78) -- (1.93,2.22); \\draw[fill=white] (1.75,0) circle (0.4); \\draw (1.47,-0.28) -- (2.03,0.28); \\draw (1.47,0.28) -- (2.03,-0.28); \\draw[fill=white] (3.36,0.5) rectangle (3.64,1.5); \\draw[->] (3.12,0.55) -- (3.88,1.52);\\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Voltaic cell is the same as its neighbouring term in this chapter, so the decision does not change."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "The decision still holds even if we ignore this condition: The two electrodes must be made of different materials, such as copper and iron in the lemon cell activity."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "electricity is produced -> LED glows happens first, and that produces different metal electrodes placed in an electrolyte and connected in a circuit."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "This rule applies even when The two electrodes must be made of different materials, such as copper and iron in the lemon cell activity is not true."
+      }
+    ],
+    "enrichment": "A Voltaic cell uses two electrodes made of different materials and an electrolyte; the electrolyte helps conduct electricity between the electrodes, and a glowing LED shows that the cell is working. different metal electrodes placed in an electrolyte and connected in a circuit -> electricity is produced -> LED glows The learner correctly applies this rule: A Voltaic cell uses two electrodes made of different materials and an electrolyte; the electrolyte helps conduct electricity between the electrodes, and a glowing LED shows that the cell is working. Putting any two objects into a lemon should make a battery because lemons are electric.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_04/H007",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student reversing the directed relation (lamp brightness increases vs lamp brightness decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student reversing the directed relation (ammeter reading increases vs ammeter reading decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student reversing the directed relation (lamp brightness increases vs lamp brightness decreases). Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Electricity: magnetic and heating effects. The student must decide: Identify whether a setup is a working Voltaic cell by checking for two different metal electrodes and an electrolyte. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m18_qp_12:q31",
+    "hinge": "science/grade_08/ch_04/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H007"
+  }
+}

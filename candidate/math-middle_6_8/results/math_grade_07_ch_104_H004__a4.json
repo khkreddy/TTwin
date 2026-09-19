@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Pihu simplifies $4x + 7 + 3x - 2$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The finished value is the phrase like terms, with no combining done."
+    },
+    {
+      "id": "B",
+      "text": "$4x$ and $3x$ are like terms, so they combine to $7x$."
+    },
+    {
+      "id": "C",
+      "text": "$7$ and $-2$ are like terms, so they combine to $5$."
+    },
+    {
+      "id": "D",
+      "text": "Combine using only the numeral $4$ printed first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like terms share the same letter part: 4x with 3x, and the constants 7 with -2. Naming like terms as the finished value, or combining from the leading numeral alone, misses that pairing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m16_qp_12:q36",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:43:24.114Z",
+  "created_at": "2026-09-19T08:59:31.402Z",
   "source": {
-    "item_ref": "session:0620_m16_qp_12:q36",
-    "item_type": "single_mcq",
-    "stem": "Which bond is not present in the structure of ethanol, CH₃CH₂OH?",
-    "options": [
-      {
-        "id": "A",
-        "text": "C–C"
-      },
-      {
-        "id": "B",
-        "text": "H–H"
-      },
-      {
-        "id": "C",
-        "text": "H–O"
-      },
-      {
-        "id": "D",
-        "text": "O–C"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_07/ch_04/H010",
+      "unit_id": "science/grade_07/ch_04/H010",
+      "title": "When sorting substances and materials, decide whether something is an element classified as a metal or non-metal or an everyday material that is not in either class.",
+      "node_labels": [
+        "Materials and their properties",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -63,27 +51,14 @@
       }
     ],
     "enrichment": "Metals and non-metals are sub-categories of elements, and an element cannot be broken down into simpler substances. Oxygen, hydrogen, nitrogen, and carbon are non-metals; plastic, glass, wood, rubber, and paper are materials that are not classified as metals or non-metals. A substance's status as an element determines whether it can be classified as a metal or non-metal in this chapter. The learner correctly applies this rule: Metals and non-metals are sub-categories of elements, and an element cannot be broken down into simpler substances. Oxygen, hydrogen, nitrogen, and carbon are non-metals; plastic, glass, wood, rubber, and paper are materials that are not classified as metals or non-metals. Anything that is not a metal should be placed in the non-metal category.",
-    "lbs_recipe": {
-      "unit": "science/grade_07/ch_04/H010",
-      "gate_names": [
-        "condition_omission",
-        "condition_omission",
-        "condition_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “C–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “H–O” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “O–C” looked possible instead of “H–H”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When sorting substances and materials, decide whether something is an element classified as a metal or non-metal or an everyday material that is not in either class. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 7 Science question. Chapter: The world of metals and non-metals. The student must decide: When sorting substances and materials, decide whether something is an element classified as a metal or non-metal or an everyday material that is not in either class. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -102,9 +77,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m16_qp_12:q36",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_07/ch_04/H010",
-    "item_type_target": "preserve",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -115,10 +90,9 @@
       "surface_feature_capture"
     ],
     "option_plan": {
-      "A": "condition_omission",
+      "B": "condition_omission",
       "C": "scope_error",
-      "D": "surface_feature_capture",
-      "B": null
+      "D": "surface_feature_capture"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_04/H010"
   }

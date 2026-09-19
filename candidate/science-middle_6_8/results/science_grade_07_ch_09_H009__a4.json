@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Myra watches a breathing model: balloons for the lungs and a rubber sheet for the diaphragm. When the rubber sheet moves down and the rib space widens, the balloons inflate.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "This model step matches inhalation: ribs move up and out, the diaphragm moves down, and air is drawn in."
+    },
+    {
+      "id": "B",
+      "text": "The rubber sheet represents the diaphragm, not the lungs."
+    },
+    {
+      "id": "C",
+      "text": "The rubber sheet represents the lungs."
+    },
+    {
+      "id": "D",
+      "text": "Every breathing animal inhales only by moving ribs up and out and the diaphragm down in this same way."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inhalation widens the chest as ribs rise and the diaphragm descends; in the model the rubber sheet is the diaphragm. Calling the sheet the lungs, or forcing every animal into this exact pattern, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

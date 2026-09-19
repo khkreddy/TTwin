@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "The two similarly charged balloons repel each other."
+    },
+    {
+      "id": "B",
+      "text": "The charged balloon and the woollen cloth attract each other."
+    },
+    {
+      "id": "C",
+      "text": "The two similarly charged balloons attract each other."
+    },
+    {
+      "id": "D",
+      "text": "The balloons repel even if they were never rubbed and carry no static charge."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "Neil rubs two balloons on a woollen cloth so both balloons gain like charges. He brings the balloons near each other, then brings one charged balloon near the cloth.\n\nWhich claims correctly predict the electrostatic forces? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like charges repel, so similarly charged balloons push apart. A charged balloon and the cloth it was rubbed with attract. Attraction of like charges reverses the rule; repulsion without static charge omits the charging condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

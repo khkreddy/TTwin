@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water is a compound — hydrogen and oxygen are chemically joined, and water's properties differ from those of the free elements."
+    },
+    {
+      "id": "B",
+      "text": "Water is a mixture — hydrogen and oxygen can be separated from it by filtering."
+    },
+    {
+      "id": "C",
+      "text": "Water is a compound that still shows the separate properties of free hydrogen and free oxygen."
+    },
+    {
+      "id": "D",
+      "text": "Water is an element because it is a pure substance."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Simran is told that water is made from hydrogen and oxygen. She must classify water.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A compound forms when different elements are chemically joined; its properties differ from those elements and physical methods cannot separate them. Calling water a filterable mixture swaps the term; keeping element properties omits the compound condition; calling water an element conflates purity with being a single element.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ishaan must evaluate the unbracketed expression $8 + 2 \\times 5 - 3$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer multiplication only, and stop before combining the remaining terms."
+    },
+    {
+      "id": "B",
+      "text": "First form the product: compute $2\\times 5=10$."
+    },
+    {
+      "id": "C",
+      "text": "Then evaluate $8+10-3=15$."
+    },
+    {
+      "id": "D",
+      "text": "Work strictly left to right as $((8+2)\\times 5)-3$, as if brackets already fixed the order."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiplication before addition/subtraction: 2*5=10, then 8+10-3=15. A stops after naming multiplication. D pretends left-to-right brackets were given.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

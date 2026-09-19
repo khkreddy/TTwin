@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishaan must construct a square of side $6$ cm with ruler and compass.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which plan forces the square?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Draw base AB of $6$ cm, construct a perpendicular at A and at B, mark $6$ cm on each perpendicular, and join the new ends."
+        },
+        {
+          "id": "B",
+          "text": "Draw a base of $6$ cm and raise perpendiculars at both ends, but mark any new lengths on those uprights."
+        },
+        {
+          "id": "C",
+          "text": "Find the area $36$ cm$^{2}$ first, and treat that area calculation as the construction."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Equal base and upright markings with right angles at both ends force all four sides equal and all angles right, which is a square."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A square needs equal sides and right angles: base 6 cm, perpendiculars at both ends, and 6 cm marked on each. B omits equal-length uprights. C swaps construction for an area calculation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

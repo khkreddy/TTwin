@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Dev needs the additive inverse of $-9$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"opposite integer\" the finished answer, and stop before naming the number that cancels $-9$."
+    },
+    {
+      "id": "B",
+      "text": "Say $+9$ even if the two numbers did not have equal distance from zero."
+    },
+    {
+      "id": "C",
+      "text": "$+9$, because $(-9)+(+9)=0$ (same distance from zero, opposite sign)."
+    },
+    {
+      "id": "D",
+      "text": "Report $9$ alone, because that digit is printed in $-9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Additive inverse cancels to zero: (-9)+(+9)=0. A stops at the label. B drops equal-distance. D grabs the printed digit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

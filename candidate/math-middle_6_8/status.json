@@ -81,14 +81,24 @@
   },
   "last_run": {
     "cmd": "compile",
-    "attempted": 1,
-    "ok": 1,
+    "attempted": 8,
+    "ok": 8,
     "fail_closed": 0,
     "skip": 0,
     "by_node": {
-      "M4": {
+      "M6": {
+        "attempted": 4,
+        "ok": 4,
+        "fail_closed": 0
+      },
+      "B2": {
         "attempted": 1,
         "ok": 1,
+        "fail_closed": 0
+      },
+      "M2": {
+        "attempted": 3,
+        "ok": 3,
         "fail_closed": 0
       }
     },
@@ -96,14 +106,105 @@
       {
         "status": "compiled",
         "gate": null,
-        "unit_id": "math/grade_07/ch_206/H003",
-        "node": "M4",
-        "source_uid": "0580_s10_qp_32:q10",
+        "unit_id": "math/grade_09/ch_01/H001",
+        "node": "M6",
+        "source_uid": "jeebench:srcjson:math:jee_adv_2021_paper_1:q37",
         "join_status": "BOUND",
-        "variation_class": "V1",
+        "variation_class": "V3",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/math_grade_07_ch_206_H003__a4.json",
-        "chars": 6798,
+        "packet": "packets/math_grade_09_ch_01_H001__a1.json",
+        "chars": 3984,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_01/H002",
+        "node": "B2",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_01_H002__a1.json",
+        "chars": 4311,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_01/H003",
+        "node": "M6",
+        "source_uid": "mathnet:0ana",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_01_H003__a1.json",
+        "chars": 3999,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_01/H004",
+        "node": "M6",
+        "source_uid": "0580_m17_qp_42:q3",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_01_H004__a1.json",
+        "chars": 6120,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_01/H006",
+        "node": "M6",
+        "source_uid": "0580_m18_qp_32:q7",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_01_H006__a1.json",
+        "chars": 5316,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_02/H001",
+        "node": "M2",
+        "source_uid": "mathnet:0e8t",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_02_H001__a1.json",
+        "chars": 4064,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_02/H002",
+        "node": "M2",
+        "source_uid": "jeebench:srcjson:math:jee_adv_2022_paper_1:q17",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_02_H002__a1.json",
+        "chars": 5656,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_09/ch_02/H003",
+        "node": "M2",
+        "source_uid": "mathnet:0ecq",
+        "join_status": "BOUND",
+        "variation_class": "V3",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_09_ch_02_H003__a1.json",
+        "chars": 4046,
         "pedagogy": true
       }
     ]

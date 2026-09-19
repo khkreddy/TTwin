@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_s18_qp_23:q28",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:43:23.718Z",
+  "created_at": "2026-09-19T08:57:40.889Z",
   "source": {
-    "item_ref": "session:0620_s18_qp_23:q28",
-    "item_type": "single_mcq",
-    "stem": "Dry air is passed over hot copper until all the oxygen has reacted.\n\nThe volume of gas at the end of the reaction is 120 cm³.\n\nWhat is the starting volume of dry air?",
-    "options": [
-      {
-        "id": "A",
-        "text": "132 cm³"
-      },
-      {
-        "id": "B",
-        "text": "152 cm³"
-      },
-      {
-        "id": "C",
-        "text": "180 cm³"
-      },
-      {
-        "id": "D",
-        "text": "570 cm³"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
-    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,>=Stealth,scale=0.8]\n\\draw (0,1.0) rectangle (4.2,1.8); \\draw (1.55,1.0)--(1.55,1.8);\n\\foreach \\x in {1.75,1.9,...,4.0} \\draw (\\x,1.8)--(\\x,1.68);\n\\draw (-0.2,1.1)--(-0.2,0.75)--(-0.38,0.75)--(-0.38,1.62)--(-0.2,1.62)--(-0.2,1.3)--(0,1.3);\n\\draw (4.2,1.22)--(5.15,1.22) (4.2,1.58)--(5.15,1.58);\n\\fill[gray!55] (5.15,1.05) rectangle (5.55,1.75); \\draw (5.15,1.05) rectangle (5.55,1.75);\n\\draw (5.55,1.15)--(8.0,1.15) (5.55,1.65)--(8.0,1.65);\n\\fill[gray!55] (8.0,1.05) rectangle (8.4,1.75); \\draw (8.0,1.05) rectangle (8.4,1.75);\n\\draw[fill=gray!30] (5.85,1.17)..controls(6.35,1.2)and(6.35,1.48)..(6.75,1.48)..controls(7.15,1.48)and(7.1,1.22)..(7.75,1.17)--cycle;\n\\draw (8.4,1.22)--(9.35,1.22) (8.4,1.58)--(9.35,1.58);\n\\draw (9.35,1.0) rectangle (13.55,1.8); \\foreach \\x in {9.55,9.7,...,11.7} \\draw (\\x,1.8)--(\\x,1.68);\n\\draw (13.55,1.3)--(13.75,1.3)--(13.75,1.62)--(13.93,1.62)--(13.93,0.75)--(13.75,0.75)--(13.75,1.1)--(13.55,1.1);\n\\node at (3.0,2.55) {dry air}; \\draw (3.18,2.35)--(3.35,1.38);\n\\node at (6.75,2.55) {copper}; \\draw (6.65,2.35)--(6.95,1.48);\n\\draw[->] (6.75,0.25)--(6.75,1.02); \\node at (6.75,-0.05) {heat};\n\\end{tikzpicture}",
-    "key": {
-      "kind": "single_letter",
-      "letter": "B"
-    }
+    "tikz": "",
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_12/H011",
+      "unit_id": "science/grade_06/ch_12/H011",
+      "title": "Distinguish asteroids from comets by shape, composition, position, tail, and motion around the Sun.",
+      "node_labels": [
+        "Sun, Moon, stars and time",
+        "Earth, sky, time and resources"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -58,32 +46,19 @@
       }
     ],
     "enrichment": "Asteroids are small rocky, irregular Solar System objects, many of which revolve around the Sun between Mars and Jupiter; comets are objects made of dust, gases, rocks, and ice that can show long tails as they approach close to the Sun. Rocky irregular bodies without the comet tail pattern are classified as asteroids, while icy-dusty bodies that develop long tails near the Sun are classified as comets. The learner correctly applies this rule: Asteroids are small rocky, irregular Solar System objects, many of which revolve around the Sun between Mars and Jupiter; comets are objects made of dust, gases, rocks, and ice that can show long tails as they approach close to the Sun. All small objects in the Solar System are comets if they move around the Sun.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_12/H011",
-      "gate_names": [
-        "intermediate_omission",
-        "intermediate_omission",
-        "intermediate_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “132 cm³” looked possible instead of “152 cm³”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “180 cm³” looked possible instead of “152 cm³”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “570 cm³” looked possible instead of “152 cm³”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Distinguish asteroids from comets by shape, composition, position, tail, and motion around the Sun. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. The new item has no figure. Do not refer to a diagram. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Beyond Earth. The student must decide: Distinguish asteroids from comets by shape, composition, position, tail, and motion around the Sun. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "three_statement",
     "format": {
       "n_options": 4
     },
     "figure": {
-      "mode": "remove",
+      "mode": "preserve",
       "tikz_required": false
     }
   },
@@ -97,11 +72,11 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_s18_qp_23:q28",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_12/H011",
-    "item_type_target": "preserve",
+    "item_type_target": "three_statement",
     "figure_decision": {
-      "mode": "remove",
+      "mode": "preserve",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [
@@ -109,10 +84,9 @@
       "scope_error"
     ],
     "option_plan": {
-      "A": "condition_omission",
+      "B": "condition_omission",
       "C": "scope_error",
-      "D": "UNRESOLVED",
-      "B": null
+      "D": "UNRESOLVED"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_12/H011"
   }

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Myra sorts samples: iron, oxygen, plastic, and glass. Metals and non-metals are classes of elements. Plastic and glass are everyday materials, not elements in those classes.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Iron is a metal element; oxygen is a non-metal element."
+    },
+    {
+      "id": "B",
+      "text": "Plastic and glass are materials that are not classified as metals or non-metals in this sorting."
+    },
+    {
+      "id": "C",
+      "text": "Plastic is a non-metal because it is not a metal."
+    },
+    {
+      "id": "D",
+      "text": "Shiny glass is a metal because it looks shiny."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Metal and non-metal labels apply to elements; iron and oxygen fit those classes, while plastic and glass are materials outside them. Treating plastic as a non-metal or glass as a metal from shine miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "The bacterium is a complete living organism even though it has only one cell."
+    },
+    {
+      "id": "B",
+      "text": "The bacterium can carry out the functions needed for survival in its single cell."
+    },
+    {
+      "id": "C",
+      "text": "The skin cell from her hand is itself a complete organism because it is one cell."
+    },
+    {
+      "id": "D",
+      "text": "Every microorganism must be unicellular."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Ayesha views a bacterium under a microscope. It is one cell and carries out all survival functions in that cell. She also looks at a single skin cell scraped from her own hand.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A unicellular organism such as a bacterium is a complete living organism because one cell carries out all survival functions. An isolated skin cell from a multicellular body is not a complete organism, and not every microorganism is unicellular.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

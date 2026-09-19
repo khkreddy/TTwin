@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows two rays drawn from a common point O on Tara's slate: ray OA and ray OB.\n\nWhich statement correctly describes the angle they form?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The vertex of the angle is arm OA."
+    },
+    {
+      "id": "B",
+      "text": "OA and OB form this angle even if they start at two different points."
+    },
+    {
+      "id": "C",
+      "text": "The rays share starting point O (the vertex); the arms are OA and OB; the angle may be named $\\angle AOB$."
+    },
+    {
+      "id": "D",
+      "text": "The angle is named $\\angle O$ because O is the first letter printed on the slate."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round]\n  \\coordinate (O) at (0,0);\n  \\coordinate (A) at (2.8,0.2);\n  \\coordinate (B) at (1.6,2.2);\n  \\draw[thick,->] (O)--(A);\n  \\draw[thick,->] (O)--(B);\n  \\fill (O) circle (1.3pt);\n  \\node[below left] at (O) {O};\n  \\node[right] at (A) {A};\n  \\node[above] at (B) {B};\n  \\draw[thick] (0.55,0.04) arc[start angle=4,end angle=54,radius=0.55];\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An angle needs two arms from one vertex. C names vertex O and arms OA, OB. A swaps vertex with an arm. B drops the common-point condition. D grabs the printed letter O.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote right triangle into two rays from O with a marked angle; stem refers to the diagram."
+  }
+}

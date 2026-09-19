@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Dev asks how many 2-digit counting numbers there are.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "There are $2$ such numbers, because a 2-digit number is itself called a digit pair."
+    },
+    {
+      "id": "B",
+      "text": "There are $90$ such numbers: $10$ through $99$ each have digit length $2$."
+    },
+    {
+      "id": "C",
+      "text": "The smallest 2-digit counting number is $10$ and the largest is $99$."
+    },
+    {
+      "id": "D",
+      "text": "The same count also settles how many 3-digit numbers there are, with no further work."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2-digit counting numbers run from 10 to 99, so there are 90 of them. A confuses digit length with the count. D over-extends the same count to 3-digit numbers.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% Circuit P — one cell\n\\node[font=\\bfseries] at (1.6,3.35) {Circuit P};\n\\draw[thick,fill=white] (0.2,2.4) rectangle (1.2,2.9);\n\\node at (0.7,2.65) {cell};\n\\node[font=\\bfseries] at (0.05,2.65) {$-$};\n\\node[font=\\bfseries] at (1.35,2.65) {$+$};\n\\draw[thick] (1.2,2.65)--(2.0,2.65);\n\\fill (2.0,2.65) circle (1.2pt);\n\\draw[thick] (2.0,2.65)--(2.35,2.95);\n\\fill (2.55,2.65) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.3,3.15) {switch};\n\\draw[thick] (2.55,2.65)--(3.4,2.65)--(3.4,1.6)--(0.2,1.6)--(0.2,2.4);\n\\draw[line width=2pt] (0.9,1.6)--(2.5,1.6);\n\\node[font=\\footnotesize] at (1.7,1.3) {same wire};\n% Circuit Q — two cells\n\\node[font=\\bfseries] at (7.0,3.35) {Circuit Q};\n\\draw[thick,fill=white] (5.2,2.4) rectangle (6.0,2.9);\n\\node[font=\\footnotesize] at (5.6,2.65) {cell};\n\\draw[thick,fill=white] (6.1,2.4) rectangle (6.9,2.9);\n\\node[font=\\footnotesize] at (6.5,2.65) {cell};\n\\node[font=\\bfseries] at (5.05,2.65) {$-$};\n\\node[font=\\bfseries] at (7.05,2.65) {$+$};\n\\draw[thick] (6.9,2.65)--(7.6,2.65);\n\\fill (7.6,2.65) circle (1.2pt);\n\\draw[thick] (7.6,2.65)--(7.95,2.95);\n\\fill (8.15,2.65) circle (1.2pt);\n\\node[font=\\footnotesize] at (7.9,3.15) {switch};\n\\draw[thick] (8.15,2.65)--(9.0,2.65)--(9.0,1.6)--(5.2,1.6)--(5.2,2.4);\n\\draw[line width=2pt] (5.9,1.6)--(7.7,1.6);\n\\node[font=\\footnotesize] at (6.8,1.3) {same wire};\n% warmth marks on Q\n\\draw[thin] (6.3,1.85) .. controls (6.4,2.05) .. (6.25,2.2);\n\\draw[thin] (6.9,1.85) .. controls (7.0,2.1) .. (6.85,2.25);\n\\draw[thin] (7.4,1.85) .. controls (7.5,2.05) .. (7.35,2.2);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows two circuits Hamza builds with the same nichrome wire. Circuit P uses one cell. Circuit Q uses two cells in series. He closes each switch for the same short time.\n\nWhich claim correctly compares the heating and judges its use?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The wire in Q heats more than in P; that heating can be useful in a heater but harmful if it melts insulation."
+    },
+    {
+      "id": "B",
+      "text": "The wire in P heats more than in Q because one cell always produces more heat than two."
+    },
+    {
+      "id": "C",
+      "text": "Both wires heat equally because the wire is the same, so the number of cells does not matter."
+    },
+    {
+      "id": "D",
+      "text": "Q heats more, so the heating is always useful and never harmful in any situation."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "More cells for the same wire and same time produce more heating. That heating can be useful (heater) or harmful (damaged insulation). Saying one cell heats more, that cell count does not matter, or that extra heat is never harmful, miss the comparison-and-judgement hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source resistance-cylinder circuit into two labelled circuits: one cell vs two cells with the same wire."
+  }
+}

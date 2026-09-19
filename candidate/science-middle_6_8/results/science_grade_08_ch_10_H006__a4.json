@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n% Plane\n\\node[font=\\bfseries] at (1.2,4.0) {plane};\n\\draw[thick] (0,0.4)--(0,3.4);\n\\foreach \\y in {0.7,1.2,1.7,2.2,2.7,3.2} {\\draw[thin] (0,\\y)--(-0.2,\\y-0.15);}\n\\draw[->,thick] (2.4,2.8)--(0.15,2.8);\n\\draw[->,thick] (2.4,2.0)--(0.15,2.0);\n\\draw[->,thick] (2.4,1.2)--(0.15,1.2);\n\\draw[->,thick] (0.15,2.8)--(-1.5,2.8);\n\\draw[->,thick] (0.15,2.0)--(-1.5,2.0);\n\\draw[->,thick] (0.15,1.2)--(-1.5,1.2);\n% Concave\n\\node[font=\\bfseries] at (5.2,4.0) {concave};\n\\draw[thick] (5.8,0.5) .. controls (4.6,1.9) .. (5.8,3.3);\n\\draw[->,thick] (7.6,2.9)--(5.55,2.9);\n\\draw[->,thick] (7.6,1.9)--(5.35,1.9);\n\\draw[->,thick] (7.6,0.9)--(5.55,0.9);\n\\draw[->,thick] (5.55,2.9)--(4.5,1.9);\n\\draw[->,thick] (5.35,1.9)--(4.4,1.9);\n\\draw[->,thick] (5.55,0.9)--(4.5,1.9);\n\\fill (4.45,1.9) circle (1.4pt);\n% Convex\n\\node[font=\\bfseries] at (10.0,4.0) {convex};\n\\draw[thick] (9.0,0.5) .. controls (10.2,1.9) .. (9.0,3.3);\n\\draw[->,thick] (11.4,2.9)--(9.35,2.9);\n\\draw[->,thick] (11.4,1.9)--(9.55,1.9);\n\\draw[->,thick] (11.4,0.9)--(9.35,0.9);\n\\draw[->,thick] (9.35,2.9)--(8.3,3.4);\n\\draw[->,thick] (9.55,1.9)--(8.2,1.9);\n\\draw[->,thick] (9.35,0.9)--(8.3,0.4);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows three parallel light rays heading toward three mirrors Vivaan sets up: a plane mirror, a concave mirror, and a convex mirror.\n\nWhich claim correctly predicts the rays after reflection?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After the plane mirror the rays stay parallel; the concave mirror can bring them together; the convex mirror spreads them apart."
+    },
+    {
+      "id": "B",
+      "text": "After every mirror the rays must meet at one point, including the plane mirror."
+    },
+    {
+      "id": "C",
+      "text": "After the plane mirror the rays must behave exactly like rays through a converging lens."
+    },
+    {
+      "id": "D",
+      "text": "Only the silver paint colour of each mirror decides the ray paths, not the mirror shape."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Parallel rays stay parallel at a plane mirror, can converge after a concave mirror, and diverge after a convex mirror. Forcing every mirror to focus, treating the plane mirror like a converging lens, or judging from paint colour miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source converging-lens ray diagram into three mirrors with parallel incident rays."
+  }
+}

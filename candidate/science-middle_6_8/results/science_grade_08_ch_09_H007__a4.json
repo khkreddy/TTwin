@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Density = mass ÷ volume = 2.7 g/cm³."
+    },
+    {
+      "id": "B",
+      "text": "The unit g/cm³ matches mass in grams and volume in cubic centimetres."
+    },
+    {
+      "id": "C",
+      "text": "Density is 27, because density equals the mass number alone."
+    },
+    {
+      "id": "D",
+      "text": "Density can be found from the mass reading alone, without measuring volume."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "Neil measures an aluminium block. Its mass is 27 g and its volume is 10 cm³.\n\nWhich claims about its density are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Density is mass divided by volume. With 27 g and 10 cm³, density is 2.7 g/cm³. Treating density as the mass number alone swaps the quantity; skipping volume omits a required measurement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

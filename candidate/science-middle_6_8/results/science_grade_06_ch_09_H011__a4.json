@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan correctly separates the mixture?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Filter to remove sand, then evaporate the filtrate to recover salt."
+        },
+        {
+          "id": "B",
+          "text": "Use only filtration once; that alone fully separates sand, salt, and water."
+        },
+        {
+          "id": "C",
+          "text": "Evaporate first to dry everything, then filter the dry sand-and-salt powder to collect pure salt."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Tariq has a mixture of sand, salt, and water. He needs pure sand and pure salt as separate products.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Sand is insoluble so filtration removes it; salt stays dissolved and is recovered by evaporating the filtrate. One method alone cannot give both pure products."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sand, salt, and water need a sequence: filter sand, then evaporate to get salt. Filtration alone leaves salt in water; evaporating first leaves a dry sand–salt mix that filtration cannot purify.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  }
+}

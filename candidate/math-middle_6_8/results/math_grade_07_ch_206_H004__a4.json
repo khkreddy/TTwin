@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya must make an exact copy of $\\angle PQR$ at a new vertex $S$ on a fresh ray.\n\nWhich construction copies the angle?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the new vertex $S$ as the copied angle, and transfer no lengths from $\\angle PQR$."
+    },
+    {
+      "id": "B",
+      "text": "Draw any arc at $S$ only, and leave the chord from $\\angle PQR$ unmatched."
+    },
+    {
+      "id": "C",
+      "text": "From $Q$ and from $S$ draw arcs of the same radius; transfer the chord between the arc hits on $\\angle PQR$ onto the new arc, and join to form the equal angle at $S$."
+    },
+    {
+      "id": "D",
+      "text": "The finished equal angle at $S$ is what produces the matching arc radius and chord."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Copying an angle transfers the same arc radius and the same chord between arc hits onto the new ray. Naming S as the angle, omitting the chord match, or reversing finish-creates-transfer all miss that transfer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

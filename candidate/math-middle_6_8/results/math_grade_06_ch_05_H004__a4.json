@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Tara has two treasure numbers, $20$ and $30$. She may use only one jump size, repeated, and that jump size must land exactly on both treasures.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which list gives every successful jump size?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$1$, $2$, $5$, $10$"
+        },
+        {
+          "id": "B",
+          "text": "$1$, $2$, $5$, $10$, $15$ — including $15$, which reaches $30$ only."
+        },
+        {
+          "id": "C",
+          "text": "The common multiples of $20$ and $30$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A successful jump size must be a common divisor of both treasures; $15$ divides $30$ but not $20$, and common multiples are not jump sizes from zero."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Jump sizes that hit both are the positive common divisors of 20 and 30: 1,2,5,10. Including 15 omits the both-treasures condition. Listing common multiples reverses divisors with multiples.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

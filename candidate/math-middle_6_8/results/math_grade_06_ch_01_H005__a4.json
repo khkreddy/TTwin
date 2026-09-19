@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishaan writes the up-and-down sum $1+2+3+4+3+2+1$ with consecutive counting numbers that climb from $1$ to $4$ and then fall back to $1$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Why does this sum equal $4^{2}$?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The climb from $1$ to $4$ and the fall back to $1$ can be paired to fill a $4$-by-$4$ square of unit tiles."
+        },
+        {
+          "id": "B",
+          "text": "Any climb-and-fall of whole numbers equals a square, even when the steps are not consecutive counting numbers."
+        },
+        {
+          "id": "C",
+          "text": "$4^{2}$ is what produces the up-and-down counting sum."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Pairing the climb $1$ to $4$ with the fall $3$ to $1$ fills four rows of length $4$, so the sum is $4^{2}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Consecutive climb-and-fall pairs fill an n-by-n square. Skipping the consecutive condition over-applies the rule. Saying the square produces the sum reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Sia compares three materials for how fast water seeps through them: gravel with wide connected spaces, sand with narrower connected spaces, and clay with very tiny poorly connected spaces. She also has two sand samples of different colour that have the same space width and connection.\n\nWhich material lets water seep fastest?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Gravel, because its spaces are wider and well connected."
+    },
+    {
+      "id": "B",
+      "text": "Gravel lets water seep fastest even when its wide spaces are not connected."
+    },
+    {
+      "id": "C",
+      "text": "Clay is fastest, sand next, and gravel slowest."
+    },
+    {
+      "id": "D",
+      "text": "The darker sand lets water seep faster than the paler sand, even though their spaces match."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Seepage is fastest when spaces between particles are wider and connected. Gravel fits that; isolating pores, reversing the order, or using colour alone are wrong on the same hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "A lunar eclipse — Earth is blocking sunlight from reaching the Moon."
+    },
+    {
+      "id": "B",
+      "text": "A total lunar eclipse — Earth's shadow need only touch any part of the Moon."
+    },
+    {
+      "id": "C",
+      "text": "A lunar eclipse — the Moon looked round and bright before the shadow arrived."
+    },
+    {
+      "id": "D",
+      "text": "A lunar eclipse — the Moon is blocking sunlight from reaching Earth."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Neil watches a full Moon darken as a curved shadow crosses its disc. His teacher says Earth's shadow is falling on the Moon.\n\nWhich claim correctly describes what is happening?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lunar eclipse occurs when Earth blocks sunlight from reaching the Moon and Earth's shadow falls on the Moon. Totality needs the Moon fully in shadow; a round bright Moon beforehand is not the cause; the Moon blocking sunlight from Earth is a solar eclipse.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

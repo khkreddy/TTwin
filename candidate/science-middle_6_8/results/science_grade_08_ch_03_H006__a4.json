@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kiara's uncle has diabetes. The doctor links his risk to diet, low activity, and asks for regular checkups and ongoing care, not a one-time course of medicine alone.\n\nWhich two claims correctly explain non-communicable disease risk and control?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lifestyle, diet, and environment can raise risk, so healthier habits and early diagnosis help control the disease."
+    },
+    {
+      "id": "B",
+      "text": "One short course of diabetes medicine gives permanent control with no further care needed."
+    },
+    {
+      "id": "C",
+      "text": "Continuous care and monitoring remain important after diagnosis, even when he looks well on some days."
+    },
+    {
+      "id": "D",
+      "text": "A healthy diet and regular exercise prevent every non-communicable disease in every person."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Non-communicable disease risk links to lifestyle, diet, and environment; control needs early diagnosis and continuous care. Ending care after one medicine course, or claiming lifestyle prevents every case, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

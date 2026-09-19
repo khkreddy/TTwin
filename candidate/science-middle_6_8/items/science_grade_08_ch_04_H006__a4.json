@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q29",
+  "target_unit_id": "science/grade_08/ch_04/H006",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q29",
+    "hinge": "science/grade_08/ch_04/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H006"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H006:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H006",
+    "stem": "The diagram shows two circuits Hamza builds with the same nichrome wire. Circuit P uses one cell. Circuit Q uses two cells in series. He closes each switch for the same short time.\n\nWhich claim correctly compares the heating and judges its use?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The wire in Q heats more than in P; that heating can be useful in a heater but harmful if it melts insulation.",
+      "B": "The wire in P heats more than in Q because one cell always produces more heat than two.",
+      "C": "Both wires heat equally because the wire is the same, so the number of cells does not matter.",
+      "D": "Q heats more, so the heating is always useful and never harmful in any situation."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% Circuit P — one cell\n\\node[font=\\bfseries] at (1.6,3.35) {Circuit P};\n\\draw[thick,fill=white] (0.2,2.4) rectangle (1.2,2.9);\n\\node at (0.7,2.65) {cell};\n\\node[font=\\bfseries] at (0.05,2.65) {$-$};\n\\node[font=\\bfseries] at (1.35,2.65) {$+$};\n\\draw[thick] (1.2,2.65)--(2.0,2.65);\n\\fill (2.0,2.65) circle (1.2pt);\n\\draw[thick] (2.0,2.65)--(2.35,2.95);\n\\fill (2.55,2.65) circle (1.2pt);\n\\node[font=\\footnotesize] at (2.3,3.15) {switch};\n\\draw[thick] (2.55,2.65)--(3.4,2.65)--(3.4,1.6)--(0.2,1.6)--(0.2,2.4);\n\\draw[line width=2pt] (0.9,1.6)--(2.5,1.6);\n\\node[font=\\footnotesize] at (1.7,1.3) {same wire};\n% Circuit Q — two cells\n\\node[font=\\bfseries] at (7.0,3.35) {Circuit Q};\n\\draw[thick,fill=white] (5.2,2.4) rectangle (6.0,2.9);\n\\node[font=\\footnotesize] at (5.6,2.65) {cell};\n\\draw[thick,fill=white] (6.1,2.4) rectangle (6.9,2.9);\n\\node[font=\\footnotesize] at (6.5,2.65) {cell};\n\\node[font=\\bfseries] at (5.05,2.65) {$-$};\n\\node[font=\\bfseries] at (7.05,2.65) {$+$};\n\\draw[thick] (6.9,2.65)--(7.6,2.65);\n\\fill (7.6,2.65) circle (1.2pt);\n\\draw[thick] (7.6,2.65)--(7.95,2.95);\n\\fill (8.15,2.65) circle (1.2pt);\n\\node[font=\\footnotesize] at (7.9,3.15) {switch};\n\\draw[thick] (8.15,2.65)--(9.0,2.65)--(9.0,1.6)--(5.2,1.6)--(5.2,2.4);\n\\draw[line width=2pt] (5.9,1.6)--(7.7,1.6);\n\\node[font=\\footnotesize] at (6.8,1.3) {same wire};\n% warmth marks on Q\n\\draw[thin] (6.3,1.85) .. controls (6.4,2.05) .. (6.25,2.2);\n\\draw[thin] (6.9,1.85) .. controls (7.0,2.1) .. (6.85,2.25);\n\\draw[thin] (7.4,1.85) .. controls (7.5,2.05) .. (7.35,2.2);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

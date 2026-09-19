@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Anvi's calculator starts at $0$ and has only a $+1000$ button. She wants the display to show exactly $4000$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "marks": 1,
+      "text": "Which claim is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Press $+1000$ four times, because $4000 \\div 1000 = 4$."
+        },
+        {
+          "id": "B",
+          "text": "Mix $+100$ and $+1000$ taps, even though only the $+1000$ button is available."
+        },
+        {
+          "id": "C",
+          "text": "Call the answer \"presses\" and stop before finding how many $+1000$ taps make $4000$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "marks": 1,
+      "text": "Give one reason for your choice."
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only the $+1000$ button is available, so $4000$ needs exactly four presses of that button."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With only +1000, 4000 needs 4 presses. Mixing other buttons violates the single-button condition. Stopping at the word presses omits the count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

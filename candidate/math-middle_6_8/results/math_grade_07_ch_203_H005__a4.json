@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya has $84 = 2^{2} \\times 3 \\times 7$ and $126 = 2 \\times 3^{2} \\times 7$. She wants their HCF from these prime factorisations.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The HCF is the phrase common primes, with no value written."
+    },
+    {
+      "id": "B",
+      "text": "Keep only primes that appear in both factorisations."
+    },
+    {
+      "id": "C",
+      "text": "Use the smaller power of each shared prime: $2^{1} \\times 3^{1} \\times 7^{1} = 42$."
+    },
+    {
+      "id": "D",
+      "text": "Report $84$, copying the smaller given number because $84$ is printed first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "HCF keeps shared primes at minimum powers: 2¹×3¹×7¹=42. Naming common primes as the answer, or copying the smaller given number, misses that product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

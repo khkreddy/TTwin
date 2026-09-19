@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_04/H004",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H004:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B5",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H004",
+    "stem": "The diagram shows Anvi's pictograph of pencils sold on three days. The key says each circle stands for $5$ pencils.\n\nHow many more pencils were sold on Saturday than on Friday?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$15$ pencils, because Saturday has $3$ more circles than Friday and each circle is $5$ pencils.",
+      "B": "$3$ pencils, equal to the difference in the number of circles.",
+      "C": "$25$ pencils, equal to Saturday's total alone.",
+      "D": "$5/2$ pencils, from dividing Saturday's circle count by Friday's."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}\n  \\node[anchor=west] at (0,2.0) {\\textbf{Pencils sold}};\n  \\node[anchor=east] at (1.2,1.2) {Fri};\n  \\foreach \\i in {0,1} {\\fill (1.6+0.45*\\i,1.2) circle (0.14);}\n  \\node[anchor=east] at (1.2,0.5) {Sat};\n  \\foreach \\i in {0,1,2,3,4} {\\fill (1.6+0.45*\\i,0.5) circle (0.14);}\n  \\node[anchor=east] at (1.2,-0.2) {Sun};\n  \\foreach \\i in {0,1,2} {\\fill (1.6+0.45*\\i,-0.2) circle (0.14);}\n  \\node[anchor=west] at (0,-1.1) {Key: each circle $= 5$ pencils};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

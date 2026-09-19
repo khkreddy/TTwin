@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anvi has the fraction $\\dfrac{3}{4}$ of a roti. She wants another fraction for the same quantity of that roti.\n\nWhich plan gives an equivalent fraction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Change only the numerator to $6$ and keep the denominator $4$."
+    },
+    {
+      "id": "B",
+      "text": "Write $\\dfrac{6}{8}$ even when the new pair is no longer about the same roti."
+    },
+    {
+      "id": "C",
+      "text": "Multiply numerator and denominator by the same nonzero number, for example write $\\dfrac{6}{8}$."
+    },
+    {
+      "id": "D",
+      "text": "First convert $\\dfrac{3}{4}$ into a decimal; equivalence requires that conversion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equivalent fractions keep the same quantity by scaling numerator and denominator by the same nonzero factor. A changes only one part. B drops the same-quantity condition. D adds an unnecessary decimal step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

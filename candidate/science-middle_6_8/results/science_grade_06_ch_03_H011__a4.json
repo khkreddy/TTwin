@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Advik tests a paste of crushed beans. He adds a few drops of copper sulphate solution and then caustic soda solution. The mixture turns violet.\n\nWhich statements correctly read this protein-test result? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The violet colour shows that protein is present in the beans."
+    },
+    {
+      "id": "B",
+      "text": "The protein test used copper sulphate solution and caustic soda solution, and violet means protein is present."
+    },
+    {
+      "id": "C",
+      "text": "The violet colour shows that starch is present in the beans."
+    },
+    {
+      "id": "D",
+      "text": "Protein is absent because any laboratory chemical was added, even though the colour is violet."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Violet after copper sulphate and caustic soda indicates protein. Starch is a different nutrient test; adding chemicals alone does not prove protein is absent when violet appears.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

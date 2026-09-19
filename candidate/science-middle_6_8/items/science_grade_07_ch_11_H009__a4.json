@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_s04_qp_2:q12",
+  "target_unit_id": "science/grade_07/ch_11/H009",
+  "build_logic": {
+    "source_uid": "0625_s04_qp_2:q12",
+    "hinge": "science/grade_07/ch_11/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H009"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H009:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H009",
+    "stem": "The diagram shows Navya facing a plane mirror. She raises her left arm. The dashed figure is the image.\n\nWhich claim correctly applies lateral inversion?",
+    "item_type": "mcq",
+    "options": {
+      "A": "In the image, the raised arm appears on the right side.",
+      "B": "In the image, the raised arm appears to point downward instead of upward.",
+      "C": "Ordinary lettering painted as AMBULANCE on a van would still read as AMBULANCE in a rear-view mirror ahead.",
+      "D": "A photograph of Navya raising her left arm must show her raising her right arm."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\sffamily\\small]\n% plane mirror\n\\draw[line width=1.2pt] (0,-0.2) -- (0,3.4);\n\\foreach \\y in {0.0,0.35,...,3.3} {\\draw[line width=0.45pt] (0,\\y) -- (0.22,\\y-0.16);}\n\\node[above] at (0,3.45) {plane mirror};\n% object (Navya) left of mirror — left arm raised\n\\draw[line width=0.9pt] (-2.4,0.2) -- (-2.4,1.6);\n\\fill (-2.4,1.85) circle (0.18);\n\\draw[line width=0.9pt] (-2.4,1.45) -- (-1.7,1.45);\n\\draw[line width=0.9pt] (-2.4,1.45) -- (-3.1,2.35);\n\\node[font=\\footnotesize] at (-3.15,2.55) {L};\n\\node[below] at (-2.4,0.05) {object};\n\\node[font=\\footnotesize] at (-2.4,-0.35) {left arm up};\n% image (dashed) right of mirror — appears right arm raised\n\\draw[line width=0.9pt,dashed] (2.4,0.2) -- (2.4,1.6);\n\\draw[dashed,fill=white] (2.4,1.85) circle (0.18);\n\\draw[line width=0.9pt,dashed] (2.4,1.45) -- (1.7,1.45);\n\\draw[line width=0.9pt,dashed] (2.4,1.45) -- (3.1,2.35);\n\\node[font=\\footnotesize] at (3.15,2.55) {R};\n\\node[below] at (2.4,0.05) {image};\n\\node[font=\\footnotesize] at (2.4,-0.35) {appears right};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

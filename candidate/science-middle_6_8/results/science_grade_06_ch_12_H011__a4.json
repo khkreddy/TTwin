@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Asteroids are rocky bodies that mostly orbit the Sun between Mars and Jupiter; comets are icy bodies that can grow a bright tail when they come close to the Sun."
+    },
+    {
+      "id": "2",
+      "text": "Comets show long bright tails throughout every part of their orbits around the Sun."
+    },
+    {
+      "id": "3",
+      "text": "Every asteroid must orbit strictly between Mars and Jupiter; none can be found on any other path around the Sun."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Advik sorts notes about asteroids and comets by shape, composition, position, tail, and motion around the Sun.",
+  "options": [],
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Asteroids are mainly rocky and many lie between Mars and Jupiter; comets are icy and grow tails near the Sun, not all along the orbit. Not every asteroid is confined to that belt.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

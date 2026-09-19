@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m19_qp_12:q23",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:56:30.731Z",
+  "source": {
+    "item_ref": "session:0580_m19_qp_12:q23",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a quadrilateral on a 1 cm² grid.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Write down the mathematical name of this quadrilateral. [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Work out the area of this quadrilateral. Give the units of your answer. [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.7cm,y=0.7cm]\\draw[gray!75,densely dashed,line width=0.35pt] (0,0) grid[step=1] (10,8);\\draw[black,line width=1.15pt,line join=round] (5,8)--(8,6)--(5,0)--(2,6)--cycle;\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_06/ch_04/H004",
+      "unit_id": "math/grade_06/ch_04/H004",
+      "title": "decide how to read quantities, differences, maximums, and minimums from a pictograph by using its key",
+      "node_labels": [
+        "Visualization & models"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Visualization & models",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Symbol is the label that belongs on this item, so 'decide how to read quantities, differences, maximums, and minimums' is answered as symbol rather than pictograph."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Symbol is what produces pictograph, so the usual direction of this relation is run backwards — on the item about decide how to read quantities, differences, maximums."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "pictograph is settled by running 'decide whether a frequency table preserves enough information for the': A frequency table preserves how many items fall in each category but removes which — on the item about decide how to read quantities, differences, maximums."
+      },
+      {
+        "mx_type": "operation_confusion",
+        "name": "operation_confusion",
+        "teacher_note": "Pictograph is found by dividing the given values instead of multiplying, giving 41 as the reported result — on the item about decide how to read quantities, differences, maximums."
+      }
+    ],
+    "enrichment": "The quantity in a pictograph row equals the number of whole symbols times the key value, plus any partial symbol's matching fraction of the key value.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_04. The student must decide: decide how to read quantities, differences, maximums, and minimums from a pictograph by using its key Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_04/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H004"
+  }
+}

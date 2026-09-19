@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "During a storm, fast wind blows over Vivaan's flat roof and past a light curtain in an open window.\n\nWhich two claims correctly decide how the fast-moving air changes pressure around nearby objects and roofs?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Faster air above the roof lowers the pressure there compared with the calmer air below, so the roof can be lifted."
+    },
+    {
+      "id": "B",
+      "text": "Faster air above the roof raises the pressure there, pushing the roof more firmly downward."
+    },
+    {
+      "id": "C",
+      "text": "Fast air past the curtain lowers pressure on that side, so the curtain can billow toward the fast air."
+    },
+    {
+      "id": "D",
+      "text": "Fast air changes roof colour only; pressure around the roof stays the same."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fast-moving air lowers pressure beside or above nearby surfaces, so roofs can lift and curtains can move toward the fast stream. Claiming higher pressure from speed, or that only colour changes, reverses or misses the pressure hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

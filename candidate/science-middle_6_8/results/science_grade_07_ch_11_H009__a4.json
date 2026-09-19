@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\sffamily\\small]\n% plane mirror\n\\draw[line width=1.2pt] (0,-0.2) -- (0,3.4);\n\\foreach \\y in {0.0,0.35,...,3.3} {\\draw[line width=0.45pt] (0,\\y) -- (0.22,\\y-0.16);}\n\\node[above] at (0,3.45) {plane mirror};\n% object (Navya) left of mirror — left arm raised\n\\draw[line width=0.9pt] (-2.4,0.2) -- (-2.4,1.6);\n\\fill (-2.4,1.85) circle (0.18);\n\\draw[line width=0.9pt] (-2.4,1.45) -- (-1.7,1.45);\n\\draw[line width=0.9pt] (-2.4,1.45) -- (-3.1,2.35);\n\\node[font=\\footnotesize] at (-3.15,2.55) {L};\n\\node[below] at (-2.4,0.05) {object};\n\\node[font=\\footnotesize] at (-2.4,-0.35) {left arm up};\n% image (dashed) right of mirror — appears right arm raised\n\\draw[line width=0.9pt,dashed] (2.4,0.2) -- (2.4,1.6);\n\\draw[dashed,fill=white] (2.4,1.85) circle (0.18);\n\\draw[line width=0.9pt,dashed] (2.4,1.45) -- (1.7,1.45);\n\\draw[line width=0.9pt,dashed] (2.4,1.45) -- (3.1,2.35);\n\\node[font=\\footnotesize] at (3.15,2.55) {R};\n\\node[below] at (2.4,0.05) {image};\n\\node[font=\\footnotesize] at (2.4,-0.35) {appears right};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Navya facing a plane mirror. She raises her left arm. The dashed figure is the image.\n\nWhich claim correctly applies lateral inversion?",
+  "options": [
+    {
+      "id": "A",
+      "text": "In the image, the raised arm appears on the right side."
+    },
+    {
+      "id": "B",
+      "text": "In the image, the raised arm appears to point downward instead of upward."
+    },
+    {
+      "id": "C",
+      "text": "Ordinary lettering painted as AMBULANCE on a van would still read as AMBULANCE in a rear-view mirror ahead."
+    },
+    {
+      "id": "D",
+      "text": "A photograph of Navya raising her left arm must show her raising her right arm."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Lateral inversion swaps left and right in a plane-mirror image, so a raised left arm appears on the right. Vertical flip, ordinary AMBULANCE reading in a rear-view mirror, or treating a photograph the same way miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Plane mirror with object raising left arm and dashed image appearing to raise the right arm."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Pihu multiplies $\\frac{3}{4} \\times \\frac{5}{7}$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The product is the word denominator, with no multiplications done."
+    },
+    {
+      "id": "B",
+      "text": "The new numerator is $3 \\times 5 = 15$."
+    },
+    {
+      "id": "C",
+      "text": "The new denominator is $4 \\times 7 = 28$, so the product is $\\frac{15}{28}$."
+    },
+    {
+      "id": "D",
+      "text": "Report $7$ alone, because that numeral is printed last."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fraction multiplication multiplies numerators and multiplies denominators: (3×5)/(4×7)=15/28. Renaming the product as denominator, or reporting the last printed numeral, misses that rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

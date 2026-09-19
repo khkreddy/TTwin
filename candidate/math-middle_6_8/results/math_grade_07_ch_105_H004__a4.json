@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows lines $AB$ and $CD$ meeting at $O$. A right-angle mark sits at $O$, and all four angles at $O$ are equal.\n\nWhat can Arnav conclude?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each angle is a right angle, and that label alone is the full conclusion."
+    },
+    {
+      "id": "B",
+      "text": "The lines are perpendicular even when they stay apart and never meet."
+    },
+    {
+      "id": "C",
+      "text": "The lines are perpendicular, because four equal angles at an intersection are each $90^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "The lines are perpendicular because the printed word equal is the standout word."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.4,0) -- (5.4,0);\n  \\draw[line width=1.05pt] (2.5,-1.8) -- (2.5,2.2);\n  \\fill (2.5,0) circle (1.6pt);\n  \\node[above right] at (2.55,0.08) {$O$};\n  \\draw[line width=0.7pt] (2.5,0) -- ++(0.32,0) -- ++(0,0.32) -- ++(-0.32,0);\n  \\node[below left] at (-0.1,-0.15) {$A$};\n  \\node[below right] at (5.1,-0.15) {$B$};\n  \\node[above left] at (2.35,2.0) {$C$};\n  \\node[below left] at (2.35,-1.6) {$D$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Four equal angles at a meeting sum to 360°, so each is 90° and the lines are perpendicular. Stopping at the right-angle label, dropping the meeting condition, or grabbing the word equal alone all miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as intersecting lines AB and CD at O with a right-angle mark."
+  }
+}

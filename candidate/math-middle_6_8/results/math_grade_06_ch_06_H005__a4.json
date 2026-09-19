@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Dev runs on a square track whose perimeter is $200$ m. He runs $650$ m from a start mark that is also the finish line.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"one round\" the leftover distance alone."
+    },
+    {
+      "id": "B",
+      "text": "Full rounds $= 3$ because $650 = 3 \\times 200 + 50$."
+    },
+    {
+      "id": "C",
+      "text": "The leftover distance is $50$ m along the track from the finish line."
+    },
+    {
+      "id": "D",
+      "text": "Report $650$ alone, because that numeral is printed largest."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "650 = 3*200 + 50, so 3 full rounds and 50 m leftover from the common finish. A renames leftover as a round. D grabs the printed distance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

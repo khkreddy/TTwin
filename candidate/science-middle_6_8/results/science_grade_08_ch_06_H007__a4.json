@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Heated land warms moist air; rising air creates low pressure; cooler air flows in, rises, cools, and water vapour condenses into storm clouds and rain."
+    },
+    {
+      "id": "B",
+      "text": "Storm clouds and rain form by the same chain even if the air above the land is dry."
+    },
+    {
+      "id": "C",
+      "text": "Dark storm clouds alone prove the heating-and-rising chain has already finished, with no need to check moist air or pressure."
+    },
+    {
+      "id": "D",
+      "text": "Cool surrounding air must stay still; inflow into the low-pressure area is not part of the storm chain."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Ayesha feels hot, moist air over sun-heated land just before a thunderstorm forms.\n\nWhich claim correctly describes the chain that produces the thunderstorm?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Thunderstorms follow heated land warming moist air, rising that creates low pressure, inflow of cooler air, further rising and cooling, and condensation into clouds and rain. Dry air omits a needed condition; dark clouds alone are a surface cue; blocking inflow mis-scopes the chain.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

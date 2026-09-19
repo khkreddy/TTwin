@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle PQR$ and $\\triangle XYZ$. In both triangles the sides $6\\,\\mathrm{cm}$ and $4\\,\\mathrm{cm}$ meet at a $70^{\\circ}$ angle.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent from the two equal side lengths alone."
+    },
+    {
+      "id": "B",
+      "text": "Congruence is what creates the two equal sides and the equal included angle."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent by SAS: two sides and the included angle match."
+    },
+    {
+      "id": "D",
+      "text": "Two sides and a non-included angle are enough for congruence here."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  % triangle PQR\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (1.1,2.2);\n  \\draw[line width=0.85pt] (P)--(Q)--(R)--cycle;\n  \\draw[line width=0.7pt] (0.28,0)--(0.28,0.28)--(0,0.28);\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node[below=3pt] at (1.6,0) {$6\\,\\mathrm{cm}$};\n  \\node[left] at (0.45,1.1) {$4\\,\\mathrm{cm}$};\n  \\node at (0.55,0.55) {$70^{\\circ}$};\n  % triangle XYZ\n  \\begin{scope}[xshift=5.2cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.2,0);\n    \\coordinate (Z) at (1.1,2.2);\n    \\draw[line width=0.85pt] (X)--(Y)--(Z)--cycle;\n    \\draw[line width=0.7pt] (0.28,0)--(0.28,0.28)--(0,0.28);\n    \\node[below left] at (X) {$X$};\n    \\node[below right] at (Y) {$Y$};\n    \\node[above] at (Z) {$Z$};\n    \\node[below=3pt] at (1.6,0) {$6\\,\\mathrm{cm}$};\n    \\node[left] at (0.45,1.1) {$4\\,\\mathrm{cm}$};\n    \\node at (0.55,0.55) {$70^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.0,1.0) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching two sides and the included angle (SAS) guarantees congruence. Dropping the included-angle condition, reversing congruence-creates-data, or treating SSA as enough all miss that criterion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as two triangles PQR and XYZ with matching 6 cm, 4 cm, and included 70°."
+  }
+}

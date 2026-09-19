@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Grass → hare → fox shows who eats whom in one linear grassland food chain."
+    },
+    {
+      "id": "B",
+      "text": "Fox → hare → grass is equally valid because the same three organisms appear."
+    },
+    {
+      "id": "C",
+      "text": "Any list of grassland organisms in any order is a food chain."
+    },
+    {
+      "id": "D",
+      "text": "Grass → hare → fox is a food web because three organisms are shown."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {
+    "B": "operation_confusion",
+    "C": "scope_error",
+    "D": "term_substitution"
+  },
+  "item_type": "single_mcq",
+  "stem": "Simran lists grassland organisms: grass, hare, and fox. She wants a simple sequence that shows who eats whom in that ecosystem.\n\nWhich claim builds a valid food chain?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A food chain is a linear who-eats-whom sequence in one ecosystem, such as grass eaten by a hare eaten by a fox. Reversing the order, treating any unordered list as a chain, or renaming a chain as a web are incorrect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "operation_confusion",
+      "scope_error",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

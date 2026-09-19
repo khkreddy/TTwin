@@ -1,43 +1,31 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:0620_m15_qp_12:q3",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T08:33:16.691Z",
+  "created_at": "2026-09-19T08:57:38.906Z",
   "source": {
-    "item_ref": "session:0620_m15_qp_12:q3",
-    "item_type": "single_mcq",
-    "stem": "Which statement about bonding is not correct?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Carbon can form four single covalent bonds."
-      },
-      {
-        "id": "B",
-        "text": "Chlorine atoms react to gain a noble gas electronic structure."
-      },
-      {
-        "id": "C",
-        "text": "Covalent bonding involves losing and gaining electrons."
-      },
-      {
-        "id": "D",
-        "text": "Hydrogen molecules have the formula H₂."
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "key": null
   },
   "intelligence": {
-    "join_status": "UNBOUND",
-    "hinge": null,
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "science/grade_06/ch_09/H011",
+      "unit_id": "science/grade_06/ch_09/H011",
+      "title": "Decide when a mixture needs a sequence of several separation methods rather than one method.",
+      "node_labels": [
+        "Mixtures, solutions, pure substances and separation",
+        "Matter: materials, particles, mixtures and change"
+      ]
+    },
     "packed_tags": {
       "pack": "middle_6_8",
       "subject": "science",
@@ -68,27 +56,14 @@
       }
     ],
     "enrichment": "A mixture with more than two components requires a combination of several methods of separation. Each method removes or collects components based on one property difference, so a complex mixture is separated step by step. The learner correctly applies this rule: A mixture with more than two components requires a combination of several methods of separation. One separation method should finish any mixture if it is done carefully enough.",
-    "lbs_recipe": {
-      "unit": "science/grade_06/ch_09/H011",
-      "gate_names": [
-        "intermediate_omission",
-        "intermediate_omission",
-        "intermediate_omission"
-      ],
-      "hint_skeleton": "",
-      "retry_plan": "retry original unaided"
-    },
-    "modify_seeds": [
-      "Rewrite this item so option A remains the trap for a student swapping the sibling term “Carbon can form four single covalent bonds.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option B remains the trap for a student swapping the sibling term “Chlorine atoms react to gain a noble gas electron…” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
-      "Rewrite this item so option D remains the trap for a student swapping the sibling term “Hydrogen molecules have the formula H₂.” for the required “Covalent bonding involves losing and gaining elec…”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
-    ]
+    "lbs_recipe": null,
+    "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when a mixture needs a sequence of several separation methods rather than one method. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Methods of separation. The student must decide: Decide when a mixture needs a sequence of several separation methods rather than one method. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "structured_parts",
     "format": {
       "n_options": 4
     },
@@ -107,9 +82,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "0620_m15_qp_12:q3",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_09/H011",
-    "item_type_target": "preserve",
+    "item_type_target": "structured_parts",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -120,12 +95,7 @@
       "surface_feature_capture",
       "operation_confusion"
     ],
-    "option_plan": {
-      "A": "condition_omission",
-      "B": "relationship_reversal",
-      "D": "surface_feature_capture",
-      "C": null
-    },
+    "option_plan": {},
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_09/H011"
   }
 }

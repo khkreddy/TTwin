@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The air in the balloon has neither a fixed shape nor a fixed volume; it spreads to fill the space it is given."
+    },
+    {
+      "id": "2",
+      "text": "The air keeps a fixed shape like the wooden block, even when the balloon is squeezed into a new outline."
+    },
+    {
+      "id": "3",
+      "text": "The air has a fixed volume equal to the bottle of water, so it cannot change how much space it occupies."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Kiara compares a solid wooden block, water in a bottle, and air pumped into a flexible balloon.",
+  "options": [],
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A gas has neither fixed shape nor fixed volume; it fills the available space. Treating air as shape-fixed like a solid, or volume-fixed like a set liquid amount, misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

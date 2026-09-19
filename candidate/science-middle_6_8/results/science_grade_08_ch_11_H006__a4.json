@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kiara compares a purely lunar calendar, based on Moon phases, with the cycle of seasons on Earth.\n\nWhich two claims correctly explain why that lunar calendar does not keep the same months aligned with the same seasons year after year?",
+  "options": [
+    {
+      "id": "A",
+      "text": "About twelve Moon-phase months total fewer days than one seasonal year, so lunar months drift relative to the seasons."
+    },
+    {
+      "id": "B",
+      "text": "A purely lunar calendar stays locked to the seasons because the Moon and the Sun take equal times for one year."
+    },
+    {
+      "id": "C",
+      "text": "Without extra days or months to catch up with the seasonal year, the same lunar month shifts through different seasons over years."
+    },
+    {
+      "id": "D",
+      "text": "Any calendar that uses months, even one not based on Moon phases, must drift away from the seasons the same way."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Twelve lunar months are shorter than the seasonal year, so months drift through seasons unless adjustments are added. Claiming equal year lengths, or extending the drift rule to calendars that are not lunar, misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
