@@ -211,7 +211,8 @@ function instructionFor(unit, variation, figureMode) {
   if (figureMode === "add" || figureMode === "rewrite") {
     s += "Supply exactly one complete tikzpicture. The stem must refer to that figure. ";
   }
-  s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE.";
+  s += "Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. ";
+  s += "If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Do not nest A/B/C lists inside part text.";
   return s.slice(0, 1000);
 }
 function packetHasPedagogy(packet) {
@@ -264,7 +265,9 @@ function mxIds(packet) {
     .map((m) => m && (m.mx_type || m.name))
     .filter(Boolean);
 }
-function compileMxPlan(unit, keyLetter) {
+function compileMxPlan(unit, keyLetter, itemType) {
+  const live = liveItemType(itemType) || itemType;
+  if (live === "structured" || itemType === "structured_parts") return {};
   const mx = (unit && unit.mx) || [];
   const types = [];
   mx.forEach((m) => {
@@ -281,13 +284,14 @@ function compileMxPlan(unit, keyLetter) {
 }
 function compileBuildLogic(packet, unit, source, spec, figureMode) {
   const mx = mxIds(packet);
+  const targetType = (spec && spec.target_item_type) || "preserve";
   return {
     source_uid: source && source.uid,
     hinge: unit && unit.unit_id,
-    item_type_target: (spec && spec.target_item_type) || "preserve",
+    item_type_target: targetType,
     figure_decision: { mode: figureMode, reason: hingeWantsFigure(unit) ? "hinge_names_visual" : "no_visual_referent" },
     mx_seeds_used: mx.slice(0, 4),
-    option_plan: compileMxPlan(unit, packet && packet.source && packet.source.key && packet.source.key.letter),
+    option_plan: compileMxPlan(unit, packet && packet.source && packet.source.key && packet.source.key.letter, targetType),
     format_rationale: "preserve source skeleton; retarget hinge to " + ((unit && unit.unit_id) || ""),
   };
 }
@@ -314,6 +318,94 @@ function gateG9(result, packet) {
 }
 function optionIdsFromResult(out) {
   return (out.options || []).map((o) => o && o.id).filter(Boolean);
+}
+function stemActivityNumbers(stem) {
+  const s = String(stem || "");
+  const re = /(?:^|\n)\s*(\d+)\s+[A-Za-z]/g;
+  const set = [];
+  let m;
+  while ((m = re.exec(s))) {
+    const n = parseInt(m[1], 10);
+    if (n >= 1 && n <= 12 && set.indexOf(n) < 0) set.push(n);
+  }
+  return set.sort((a, b) => a - b);
+}
+function optionActivityNumbers(result) {
+  const blob = [];
+  (result.options || []).forEach((o) => blob.push(o && o.text));
+  (result.parts || []).forEach((p) => {
+    blob.push(p && p.text);
+    ((p && p.options) || []).forEach((o) => blob.push(typeof o === "string" ? o : (o && o.text)));
+  });
+  const t = blob.join("\n");
+  const set = [];
+  const re = /Activity\s*(\d+)/gi;
+  let m;
+  while ((m = re.exec(t))) {
+    const n = parseInt(m[1], 10);
+    if (n >= 1 && n <= 12 && set.indexOf(n) < 0) set.push(n);
+  }
+  return set.sort((a, b) => a - b);
+}
+function nestedChoiceLetters(text) {
+  const found = [];
+  const re = /(?:^|\n)\s*([A-D])[.)]\s+\S/g;
+  let m;
+  while ((m = re.exec(String(text || "")))) {
+    if (found.indexOf(m[1]) < 0) found.push(m[1]);
+  }
+  return found;
+}
+function gateG10(result) {
+  const stem = String((result && result.stem) || "");
+  const S = stemActivityNumbers(stem);
+  if (S.length < 2) return { ok: true };
+  const optBlob = ((result && result.options) || []).map((o) => (o && o.text) || "").join("\n");
+  if (!/activity/i.test(stem) && !/activity/i.test(optBlob)) return { ok: true };
+  const O = optionActivityNumbers(result);
+  for (let i = 0; i < S.length; i++) {
+    if (O.indexOf(S[i]) < 0) return { ok: false, gate: "G10" };
+  }
+  return { ok: true };
+}
+function gateG11(result) {
+  const live = liveItemType(result && result.item_type);
+  const parts = (result && result.parts) || [];
+  if (live === "structured" || (result && result.item_type === "structured_parts")) {
+    if (!parts.length) return { ok: false, gate: "G11" };
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i] || {};
+      const nested = nestedChoiceLetters(p.text);
+      const hasOpts = Array.isArray(p.options) && p.options.length >= 2;
+      if (nested.length >= 2 && !hasOpts) return { ok: false, gate: "G11" };
+    }
+  }
+  return { ok: true };
+}
+function gateG12(result, packet) {
+  const live = liveItemType(result && result.item_type);
+  const plan = (packet && packet.build_logic && packet.build_logic.option_plan) || {};
+  const ids = optionIdsFromResult(result);
+  const planKeys = Object.keys(plan).filter((k) => plan[k] != null);
+  if (live === "structured" || (result && result.item_type === "structured_parts")) {
+    if (planKeys.length && !ids.length) return { ok: false, gate: "G12" };
+    return { ok: true };
+  }
+  if (live === "mcq" || live === "mcq_diagram" || live === "mcq_table") {
+    for (let i = 0; i < planKeys.length; i++) {
+      if (ids.indexOf(planKeys[i]) < 0) return { ok: false, gate: "G12" };
+    }
+  }
+  return { ok: true };
+}
+function ingestGates(result, packet) {
+  const g9 = gateG9(result, packet);
+  if (!g9.ok) return g9;
+  const g10 = gateG10(result);
+  if (!g10.ok) return g10;
+  const g11 = gateG11(result);
+  if (!g11.ok) return g11;
+  return gateG12(result, packet);
 }
 function compileUnit(K, unit, source, science, spec) {
   spec = spec || {};
@@ -647,10 +739,10 @@ async function runOne(K, unit, source, science, spec, attempt) {
     logLine(row);
     return row;
   }
-  const g9 = gateG9(out, packet);
-  if (!g9.ok) {
+  const extra = ingestGates(out, packet);
+  if (!extra.ok) {
     row.status = "fail_closed";
-    row.gate = g9.gate;
+    row.gate = extra.gate;
     logLine(row);
     return row;
   }
@@ -694,6 +786,36 @@ async function main() {
     console.log(JSON.stringify(c, null, 2));
     return;
   }
+  if (cmd === "audit-grok") {
+    const dir = path.join(OUT, "results");
+    const itemDir = path.join(OUT, "items");
+    const rows = [];
+    if (fs.existsSync(itemDir)) {
+      fs.readdirSync(itemDir).filter((f) => f.endsWith(".json")).forEach((f) => {
+        let doc;
+        try { doc = readJson(path.join(itemDir, f)); } catch (e) { return; }
+        if (!(doc.build_logic || doc.mx_option_map)) return;
+        const resPath = path.join(dir, f);
+        const pktPath = path.join(OUT, "packets", f);
+        if (!fs.existsSync(resPath) || !fs.existsSync(pktPath)) {
+          rows.push({ file: f, status: "skip", gate: "missing_result_or_packet" });
+          return;
+        }
+        const out = readJson(resPath);
+        const packet = readJson(pktPath);
+        const g = ingestGates(out, packet);
+        rows.push({
+          file: f,
+          uid: doc.item && doc.item.uid,
+          status: g.ok ? "ok" : "fail_closed",
+          gate: g.ok ? null : g.gate,
+        });
+      });
+    }
+    const fails = rows.filter((r) => r.status === "fail_closed");
+    console.log(JSON.stringify({ n: rows.length, fail: fails.length, fails: fails }, null, 2));
+    return;
+  }
   if (cmd === "remaining") {
     const n = parseInt(args.limit || "48", 10);
     const units = nextUniformUnits(science, n);
@@ -722,9 +844,9 @@ async function main() {
     writeJson(path.join(OUT, "packets", tag + ".json"), packet);
     writeJson(path.join(OUT, "results", tag + ".json"), out);
     const gate = K.applyModifyOutcome(out, packet, source);
-    const g9 = gate.ok ? gateG9(out, packet) : gate;
-    if (!gate.ok || !g9.ok) {
-      const row = { status: "fail_closed", gate: (g9 && g9.gate) || gate.gate, unit_id: unitId, source_uid: sourceUid };
+    const extra = gate.ok ? ingestGates(out, packet) : gate;
+    if (!gate.ok || !extra.ok) {
+      const row = { status: "fail_closed", gate: (extra && extra.gate) || gate.gate, unit_id: unitId, source_uid: sourceUid };
       logLine(row);
       console.log(JSON.stringify(row));
       return;
@@ -839,7 +961,7 @@ module.exports = {
   loadKimi, compileUnit, pickSource, packetHasPedagogy, instructionFor,
   resultToCandidate, census, uncoveredUnits, deepenUnits, nextAttempt, maxAttempt,
   variationForAttempt, attemptFailed, hingeWantsFigure, pedagogy, hasPedagogy,
-  sanitizeTikz, gateG9, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
+  sanitizeTikz, gateG9, gateG10, gateG11, gateG12, ingestGates, liveItemType, FORMAT_MAP, LIVE_ITEM_TYPES, compileBuildLogic,
   normalizeResultTables, grokCoveredUnits, remainingEligibleUnits, nextUniformUnits, chapterKey,
   OUT, ROOT,
 };

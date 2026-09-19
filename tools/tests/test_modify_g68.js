@@ -120,6 +120,26 @@ if (cand.item.assessment.proposed_key_status !== "UNVERIFIED") throw new Error("
 if (!cand.build_logic) throw new Error("build_logic");
 if (JSON.stringify(cand.item).indexOf("build_logic") >= 0) throw new Error("build_logic leaked into learner item");
 
+const g10 = g68.gateG10({
+  stem: "Which activity?\n1 Recited names.\n2 Watched dust.\n3 Copied steps.\n4 Looked up a fact.\nWhich activity best counts as doing science?",
+  options: [
+    { id: "A", text: "Activity 2, because he observed." },
+    { id: "B", text: "Activity 3, because copying is enough." },
+    { id: "C", text: "Activity 1, because you must know the answer first." },
+    { id: "D", text: "Activity 2 cannot count." },
+  ],
+});
+if (g10.ok || g10.gate !== "G10") throw new Error("listed Activity 4 omitted must fail G10");
+const g11 = g68.gateG11({
+  item_type: "structured_parts",
+  parts: [{ id: "i", text: "Which action?\nA. Measure\nB. Guess\nC. Ignore", marks: 1 }],
+});
+if (g11.ok || g11.gate !== "G11") throw new Error("nested A/B/C in part text must fail G11");
+const forceRes = JSON.parse(fs.readFileSync(path.join(ROOT, "candidate/science-middle_6_8/results/science_grade_08_ch_05_H001__a3.json"), "utf8"));
+const forcePkt = JSON.parse(fs.readFileSync(path.join(ROOT, "candidate/science-middle_6_8/packets/science_grade_08_ch_05_H001__a3.json"), "utf8"));
+const forceGates = g68.ingestGates(forceRes, forcePkt);
+if (!forceGates.ok) throw new Error("force example must pass ingestGates " + forceGates.gate);
+
 const remElig = g68.remainingEligibleUnits(science);
 const nCh = new Set(remElig.map((u) => g68.chapterKey(u))).size;
 const uniform = g68.nextUniformUnits(science, Math.max(nCh * 2, 1));

@@ -8,6 +8,8 @@ Scope: Grok-authored files only (`build_logic` or `mx_option_map` on the wrapper
 
 | uid | Fault | Why it failed the learner |
 |---|---|---|
+| `…ch_01:H001:a3` | Stem lists activities 1–4; options omit 4 | Dead alternative; **G10** |
+| `…ch_01:H001:a4` | Nested A/B/C inside structured part text | Illegal two-tier encoding; **G11** |
 | `…grade_06:ch_05:H003:a3` (before fix) | Option C: `2 m = 0.02 cm, by reversing the 100s.` | Mix-up **recipe** in the option. Gives the construction away. |
 | `…grade_06:ch_07:H001:a3` (before) | Option D: reddish/bluish bowls | Objects **not in the stem**. Surface mix-up invented props. |
 | `…grade_06:ch_07:H003:a3` (before) | “Nalini’s class in Jaipur”; C “meant only for forehead checks” | City padding. Extra clause **disqualifies** C so it is not a real distractor. Options not parallel. |
@@ -19,7 +21,7 @@ Kimi a1 items (no `build_logic`) often keep one grammatical frame across A–D. 
 
 ## What is good now (keep doing this)
 
-**Force table** `candidate:g68:science:grade_08:ch_05:H001:a3` after correction — owner: “the question is actually good in that way.”
+**Force table** `candidate:g68:science:grade_08:ch_05:H001:a3` — owner: good item; **option C is a good distractor** (pull acts only on the wagon — still the interaction hinge). See `EXAMPLES_G68.md`.
 
 - Stem: one idea — force as a push or pull **between two objects**.
 - A (key): kick — push between foot and ball.

@@ -8,8 +8,22 @@
   "parts": [
     {
       "id": "i",
-      "text": "Which action is doing science?\nA. Measuring the puddle each hour and noting the change\nB. Saying puddles always shrink, with no check\nC. Ignoring the puddle because it is ordinary",
-      "marks": 1
+      "text": "Which action is doing science?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Measuring the puddle each hour and noting the change"
+        },
+        {
+          "id": "B",
+          "text": "Saying puddles always shrink, with no check"
+        },
+        {
+          "id": "C",
+          "text": "Ignoring the puddle because it is ordinary"
+        }
+      ]
     },
     {
       "id": "ii",
@@ -36,14 +50,10 @@
   "mx_option_map": {},
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "Science is asking questions, observing, and exploring to understand the world, not skipping checks.",
+    "key_rationale": "Science is asking questions, observing, and exploring, not skipping a check.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
-    "mx_links": [
-      "condition_omission",
-      "relationship_reversal",
-      "scope_error"
-    ],
+    "mx_links": [],
     "figure_note": null
   }
 }

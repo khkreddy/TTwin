@@ -21,11 +21,7 @@
       "relationship_reversal",
       "scope_error"
     ],
-    "option_plan": {
-      "B": "condition_omission",
-      "C": "relationship_reversal",
-      "D": "scope_error"
-    },
+    "option_plan": {},
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_01/H001"
   },
   "mx_option_map": {},
@@ -44,8 +40,22 @@
     "parts": [
       {
         "id": "i",
-        "text": "Which action is doing science?\nA. Measuring the puddle each hour and noting the change\nB. Saying puddles always shrink, with no check\nC. Ignoring the puddle because it is ordinary",
-        "marks": 1
+        "text": "Which action is doing science?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Measuring the puddle each hour and noting the change"
+          },
+          {
+            "id": "B",
+            "text": "Saying puddles always shrink, with no check"
+          },
+          {
+            "id": "C",
+            "text": "Ignoring the puddle because it is ordinary"
+          }
+        ]
       },
       {
         "id": "ii",

@@ -267,7 +267,17 @@
       if (!p || typeof p !== "object") return "";
       const id = p.id != null && String(p.id).trim() !== "" ? String(p.id) : "";
       const lab = id ? "<span class='part-id'>(" + esc(id) + ")</span> " : "";
-      let inner = "<li>" + lab + chem(p.stem || "") + marksHTML(p.marks);
+      let inner = "<li>" + lab + chem(p.stem || p.text || "") + marksHTML(p.marks);
+      const popts = p.options || [];
+      if (popts.length) {
+        inner += "<ol class='options'>";
+        popts.forEach((o) => {
+          const id = (typeof o === "string") ? "" : (o && o.id) || "";
+          const tx = (typeof o === "string") ? o : (o && o.text) || "";
+          inner += "<li>" + (id ? "<span class='opt-id'>" + esc(id) + "</span> " : "") + chem(tx) + "</li>";
+        });
+        inner += "</ol>";
+      }
       const sub = p.subparts || [];
       if (sub.length) {
         inner += "<ol class='subparts'>" + sub.map((sp) => {
