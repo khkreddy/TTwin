@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zara has a wooden cuboid with measurable length, width, and height. Amit has an irregular stone. Each needs the volume of their object. A measuring cylinder with water is available.\n\nWhich choice matches the correct volume method for each object?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cuboid: length × width × height. Stone: final water reading minus initial water reading."
+    },
+    {
+      "id": "B",
+      "text": "Cuboid: final water reading minus initial water reading. Stone: length × width × height."
+    },
+    {
+      "id": "C",
+      "text": "Cuboid: length × width × height, even without measuring length, width, and height."
+    },
+    {
+      "id": "D",
+      "text": "Both objects must use water displacement, because volume is found only that way."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A regular cuboid uses length × width × height after the three edges are measured. An irregular stone needs displacement: final minus initial water reading. Swapping methods, skipping edge measures, or forcing displacement for both is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

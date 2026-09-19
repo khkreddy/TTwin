@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Bela compares birds and most mammals after fertilisation. She asks where the fertilised egg develops into an embryo in each case.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "In birds the fertilised egg is laid and develops during hatching; in most mammals the embryo develops inside the female body until birth."
+    },
+    {
+      "id": "B",
+      "text": "In birds the embryo develops inside the female body until birth; in most mammals the fertilised egg is laid and develops during hatching."
+    },
+    {
+      "id": "C",
+      "text": "The same comparison applies before fertilisation as after fertilisation."
+    },
+    {
+      "id": "D",
+      "text": "Birds and most mammals develop in the same place because both start from a fertilised egg."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After fertilisation, birds lay the egg and development continues during hatching; most mammal embryos develop inside the female body with support until birth. Swapping places, ignoring the after-fertilisation condition, or treating both as the same place is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

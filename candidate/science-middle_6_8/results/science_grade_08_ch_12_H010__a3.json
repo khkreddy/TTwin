@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "In a grass field the feeding links are grass → grasshopper → frog → snake. After large-scale harvesting, many frogs disappear.\n\nWhat is the best prediction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Grasshoppers and snakes are affected in different ways because their feeding links to frogs differ; the change does not stop at frogs."
+    },
+    {
+      "id": "B",
+      "text": "Only the frogs are affected; grasshoppers and snakes stay the same."
+    },
+    {
+      "id": "C",
+      "text": "Grasshoppers and snakes must change in the same direction because both are in the same chain."
+    },
+    {
+      "id": "D",
+      "text": "The field looks unchanged, so no ecosystem change has occurred."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One change spreads through feeding links. Frogs eat grasshoppers and are eaten by snakes, so those populations are affected differently. The effect is not limited to frogs, and appearance alone does not show that nothing changed.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
