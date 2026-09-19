@@ -29,6 +29,7 @@ Grok authors via `node tools/modify_g68.js ingest --unit … --source … --resu
 - **C10** `compileMxPlan` no longer nulls `packet.source.key.letter`. Compile-time `option_plan` is `{ mx_allowlist, bind: "wrong_letters_after_result" }`. After ingest, `stampOptionPlan` binds letters from the *result* key. Why: donor keys (often C from an equations MCQ) were planning the wrong letter; 186 Grok items had plan-key ≠ result-key.
 - **C11** Gates **G13–G16** (g68 ingest only): G13 plan-null / mx map must match the result key; G14 fail-closed on distractor prose `is what creates|is what produces`; G15 numeric-list stems require a digit in every option; G16 grade_06 bans `closed formula` / `triangular numbers` unless the hinge names triangular. Why: relationship_reversal slots were filled with reverse-causation theatre that a Grade 6 child cannot evaluate.
 - **C12** `instructionFor` forbids copying `source.key`, requires options that could answer the stem, and forbids “naming/writing creates the list.” Cap 1600 chars.
+- **C13** G15 tightened (Kimi K3 vs Cambridge 2026-09-19): fire only when the stem both lists numbers *and* asks to continue the list / names a whole-number list. Electron configurations (`2,8,2`) and Rf tables must not fail. G14 regex is `is what (creates|produces)`, grouped, so bare “produces” in biology options is safe. See `harness/modify/REFACTOR_LOG.md`.
 
 ## Grok tray style (2026-09-19 rectification)
 

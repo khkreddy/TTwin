@@ -22,17 +22,25 @@
       "scope_error",
       "mechanism_conflation"
     ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
     "option_plan": {
-      "A": "condition_omission",
-      "B": "relationship_reversal",
+      "A": null,
+      "B": "condition_omission",
+      "C": "mechanism_conflation",
       "D": "scope_error",
-      "C": null
+      "bind": "result"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H002"
+    "format_rationale": "retarget hinge to math/grade_06/ch_01/H002; do not copy source.key",
+    "option_plan_bind": "result"
   },
   "mx_option_map": {
     "B": "condition_omission",
-    "C": "relationship_reversal",
+    "C": "mechanism_conflation",
     "D": "scope_error"
   },
   "item": {
@@ -43,13 +51,13 @@
     "chapter_id": "math/grade_06/ch_01",
     "chapter_label": "math/grade_06/ch_01",
     "subtopic_id": "math/grade_06/ch_01/H002",
-    "stem": "Esha studies the whole-number list $1$, $4$, $9$, $16$, $\\ldots$\n\nWhich claim correctly continues the list using its generative rule?",
+    "stem": "Esha studies the whole-number list $1$, $4$, $9$, $16$, $\\ldots$\n\nWhich claim correctly continues the list?",
     "item_type": "mcq",
     "options": {
       "A": "Each term is the square of $1$, $2$, $3$, $4$, $\\ldots$, so the next term is $25$.",
-      "B": "The list looks neat, so no generative rule is needed to continue it.",
-      "C": "Writing $25$ is what produces the earlier terms $1$, $4$, $9$, $16$.",
-      "D": "The same rule also requires a cube-number formula before the list can continue."
+      "B": "Each term is $4$ more than the one before, so the next term is $20$.",
+      "C": "Each term is double the one before, so the next term is $32$.",
+      "D": "The last term repeats, so the next term is $16$."
     },
     "statements": [],
     "parts": [],

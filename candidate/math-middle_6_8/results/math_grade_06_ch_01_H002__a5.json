@@ -2,7 +2,7 @@
   "schema": "modify_result.v1",
   "status": "OK",
   "item_type": "single_mcq",
-  "stem": "Esha studies the whole-number list $1$, $4$, $9$, $16$, $\\ldots$\n\nWhich claim correctly continues the list using its generative rule?",
+  "stem": "Esha studies the whole-number list $1$, $4$, $9$, $16$, $\\ldots$\n\nWhich claim correctly continues the list?",
   "options": [
     {
       "id": "A",
@@ -10,15 +10,15 @@
     },
     {
       "id": "B",
-      "text": "The list looks neat, so no generative rule is needed to continue it."
+      "text": "Each term is $4$ more than the one before, so the next term is $20$."
     },
     {
       "id": "C",
-      "text": "Writing $25$ is what produces the earlier terms $1$, $4$, $9$, $16$."
+      "text": "Each term is double the one before, so the next term is $32$."
     },
     {
       "id": "D",
-      "text": "The same rule also requires a cube-number formula before the list can continue."
+      "text": "The last term repeats, so the next term is $16$."
     }
   ],
   "statements": [],
@@ -33,17 +33,17 @@
   },
   "mx_option_map": {
     "B": "condition_omission",
-    "C": "relationship_reversal",
+    "C": "mechanism_conflation",
     "D": "scope_error"
   },
   "teacher": {
     "proposed_key_status": "UNVERIFIED",
-    "key_rationale": "The list is square numbers, so the next term after 16 is 25. Neat looks alone omit the generative rule. Saying 25 creates the earlier terms reverses the relation. Requiring a cube formula over-extends the hinge.",
+    "key_rationale": "1, 4, 9, 16 are 1², 2², 3², 4², so the next term is 5² = 25. Adding 4 ignores the growing gaps. Doubling is a different rule. Repeating 16 does not continue the sequence.",
     "variation_applied": "V1",
     "fidelity_selfcheck": "FAITHFUL_TRANSFER",
     "mx_links": [
       "condition_omission",
-      "relationship_reversal",
+      "mechanism_conflation",
       "scope_error"
     ],
     "figure_note": null

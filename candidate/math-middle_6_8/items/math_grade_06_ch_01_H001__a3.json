@@ -21,13 +21,20 @@
       "relationship_reversal",
       "scope_error"
     ],
+    "mx_allowlist": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
     "option_plan": {
       "A": "condition_omission",
       "B": "relationship_reversal",
+      "C": null,
       "D": "scope_error",
-      "C": null
+      "bind": "result"
     },
-    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H001"
+    "format_rationale": "retarget hinge to math/grade_06/ch_01/H001; do not copy source.key",
+    "option_plan_bind": "result"
   },
   "mx_option_map": {
     "A": "condition_omission",
@@ -46,7 +53,7 @@
     "item_type": "mcq",
     "options": {
       "A": "The list looks neat, so it is a pattern even with no rule stated.",
-      "B": "Explaining the list is what creates the even numbers in the first place.",
+      "B": "The list is a pattern of adding 1, because whole numbers always grow by 1.",
       "C": "Each term is 2 more than the one before, because we keep adding 2.",
       "D": "The same list also proves a new theorem about all infinite sequences."
     },
