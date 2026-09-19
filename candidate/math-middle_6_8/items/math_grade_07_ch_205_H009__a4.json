@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m16_qp_12:q24",
+  "target_unit_id": "math/grade_07/ch_205/H009",
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_07/ch_205/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_205/H009"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_205:H009:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_205",
+    "chapter_label": "math/grade_07/ch_205",
+    "subtopic_id": "math/grade_07/ch_205/H009",
+    "stem": "Ritu reads the graph of books borrowed on four days. The vertical axis is labelled books with marks $0,2,4,6,8$, and the bars show Mon $4$, Tue $6$, Wed $3$, Thu $5$.\n\nWhich claim correctly interprets the graph?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer the units on the vertical axis, and stop before reading the bars.",
+      "B": "Read Tue as $6$ books even when that height is not tied to the marked scale.",
+      "C": "First note the axes, scale, and bar heights, then conclude only that Tue is highest at $6$ books and Wed is lowest at $3$ books.",
+      "D": "Conclude that more books were borrowed on Tue because students studied harder that day."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.45cm,line cap=round,line join=round,font=\\small]\n  \\draw[->,thick] (0,0) -- (9.5,0) node[right] {day};\n  \\draw[->,thick] (0,0) -- (0,8.5) node[above] {books};\n  \\foreach \\y in {0,2,4,6,8} \\draw (0,\\y) -- (-0.15,\\y) node[left] {\\y};\n  \\foreach \\x/\\h/\\lab in {1.5/4/Mon,3.5/6/Tue,5.5/3/Wed,7.5/5/Thu} {\n    \\fill[gray!35] (\\x,0) rectangle (\\x+1.2,\\h);\n    \\draw[thick] (\\x,0) rectangle (\\x+1.2,\\h);\n    \\node[below] at (\\x+0.6,0) {\\lab};\n  }\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_205/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

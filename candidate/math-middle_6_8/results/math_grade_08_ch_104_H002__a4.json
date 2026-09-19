@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara looks at the diagram of parallelogram $ABCD$. She measures $\\angle DAB = 68^{\\circ}$ and $\\angle ABC = 112^{\\circ}$ and notices the opposite angles match in this drawing. She wonders whether opposite angles of every parallelogram are equal.\n\nWhich claim correctly decides what her measurements justify?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The matching angles in this one drawing prove the property for every parallelogram."
+    },
+    {
+      "id": "B",
+      "text": "Equal opposite angles are what create the parallelogram sides in the diagram."
+    },
+    {
+      "id": "C",
+      "text": "The measurements support the pattern in this parallelogram; a general property still needs geometric reasoning from known facts."
+    },
+    {
+      "id": "D",
+      "text": "Any four-sided shape on the page has equal opposite angles once two angles are measured."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (5.4,2.2);\n  \\coordinate (D) at (1.2,2.2);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\draw[line width=0.6pt] (0.55,0) arc (0:61:0.55);\n  \\node[above right] at (0.7,0.25) {$68^{\\circ}$};\n  \\draw[line width=0.6pt] (4.65,0) arc (180:119:0.55);\n  \\node[above left] at (4.5,0.25) {$112^{\\circ}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One measured parallelogram shows a useful pattern for that figure; a property for every parallelogram needs geometric deduction. Treating the sample as a full proof, reversing cause, or widening to every four-sided shape leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as parallelogram ABCD with measured angles 68° and 112° at A and B."
+  }
+}

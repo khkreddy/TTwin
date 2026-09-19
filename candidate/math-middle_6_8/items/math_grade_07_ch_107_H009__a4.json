@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_107/H009",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H009"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H009:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H009",
+    "stem": "Avni looks at the diagram of triangle $ABC$. Segment $AD$ meets side $BC$ at $D$, and the right-angle mark at $D$ is shown.\n\nWhich claim correctly names $AD$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call $AD$ an altitude even when $AD$ need not be perpendicular to $BC$.",
+      "B": "Say the same segment also settles the area formula for every triangle, with no further check.",
+      "C": "$AD$ is an altitude from $A$ to base $BC$, because it is perpendicular to $BC$.",
+      "D": "Find $AD$ by using only that the three angles of triangle $ABC$ add to $180^{\\circ}$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (B) at (0,0);\n  \\coordinate (C) at (4.2,0);\n  \\coordinate (A) at (1.4,2.6);\n  \\coordinate (D) at (1.4,0);\n  \\draw[thick] (A)--(B)--(C)--cycle;\n  \\draw[thick] (A)--(D);\n  \\draw (1.4,0.22)--(1.62,0.22)--(1.62,0);\n  \\node[above] at (A) {$A$};\n  \\node[below left] at (B) {$B$};\n  \\node[below right] at (C) {$C$};\n  \\node[below] at (D) {$D$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

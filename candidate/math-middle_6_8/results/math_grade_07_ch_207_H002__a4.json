@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows a growing dot pattern. Position $1$ has $4$ dots, Position $2$ has $7$ dots, and Position $3$ has $10$ dots. Rohan wants the position where the pattern has $25$ dots.\n\nWhich two claims correctly form the rule and the equation?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The number of dots at Position $n$ is $3n + 1$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer matchstick arrangement, and stop with no rule in $n$."
+    },
+    {
+      "id": "C",
+      "text": "Set $3n + 1 = 25$ to find the needed position."
+    },
+    {
+      "id": "D",
+      "text": "The number of dots at Position $n$ is $25$, because $25$ is the printed target."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.85cm,y=0.85cm,line cap=round,line join=round,font=\\small]\n  % Position 1: 4 dots\n  \\begin{scope}[shift={(0,0)}]\n    \\foreach \\p in {(0,0),(1,0),(0,1),(1,1)} {\\fill \\p circle (2.2pt);}\n    \\node at (0.5,-0.7) {Position $1$};\n  \\end{scope}\n  % Position 2: 7 dots\n  \\begin{scope}[shift={(3.2,0)}]\n    \\foreach \\p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1),(1,2)} {\\fill \\p circle (2.2pt);}\n    \\node at (1.0,-0.7) {Position $2$};\n  \\end{scope}\n  % Position 3: 10 dots\n  \\begin{scope}[shift={(7.0,0)}]\n    \\foreach \\p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1),(1,2),(2,2)} {\\fill \\p circle (2.2pt);}\n    \\node at (1.5,-0.7) {Position $3$};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The pattern adds 3 dots each step from 4, so dots=3n+1. Setting 3n+1=25 finds the position for 25 dots. Naming matchstick arrangement alone substitutes a label. Treating the printed 25 as the rule is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote hexagon-stick sequence as a three-position growing dot pattern with 4, 7, and 10 dots."
+  }
+}

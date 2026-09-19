@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m16_qp_12:q24",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:23:20.512Z",
+  "source": {
+    "item_ref": "session:0580_m16_qp_12:q24",
+    "item_type": "structured_parts",
+    "stem": "Some children were asked to choose their favourite type of pet.\nThe pie chart shows the results.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "41 children chose Cat. Work out how many children were asked altogether. [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Work out how many children chose Hamster. [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\small,line cap=round,line join=round]\\def\\R{3}\\draw[line width=0.7pt] (0,0) circle (\\R);\\foreach \\a in {15,90,111,234}{\\draw[line width=0.7pt] (0,0)--(\\a:\\R);}\\node at (100.5:2.35) {Fish};\\node at (52.5:1.85) {Hamster};\\node at (304.5:1.85) {Rabbit};\\node at (172.5:2.05) {Cat};\\draw[line width=0.55pt] (111:0.58) arc[start angle=111,end angle=234,radius=0.58];\\node[fill=white,inner sep=1pt] at (180:0.33) {$123^{\\circ}$};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_205/H002",
+      "unit_id": "math/grade_08/ch_205/H002",
+      "title": "When locating the mean on a dot plot, decide whether the proposed location balances total distance on the left and right, rather than just sitting halfway between the extremes.",
+      "node_labels": [
+        "Chance, data and statistical reduction"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Chance, data and statistical reduction",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "mean still holds here even though Use signed or side-by-side distances from the proposed mean to the data values, counting is missing from the stem — on the item about When locating the mean on a dot plot, decide whether."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Balance point is what produces mean, so the usual direction of this relation is run backwards — on the item about When locating the mean on a dot plot, decide whether."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The mean rule also covers this: {'excluded_case': 'Do not use only the endpoints of the dot plot to locate the mean.', 'reason': 'This would, so it is not an exception — on the item about When locating the mean on a dot plot, decide whether."
+      }
+    ],
+    "enrichment": "The mean is the unique balance point of the data: the total distances from values below it equal the total distances from values above it. It is not always the midpoint of the smallest and largest values.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_205. The student must decide: When locating the mean on a dot plot, decide whether the proposed location balances total distance on the left and right, rather than just sitting halfway between the extremes. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_08/ch_205/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H002"
+  }
+}

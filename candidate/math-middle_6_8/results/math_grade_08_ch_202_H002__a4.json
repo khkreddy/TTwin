@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ishaan studies the diagram of square $PQRS$. Dashed segment $PR$ is a diagonal. Grey points $M$, $N$, $O$, $T$ are the midpoints of the sides, joined to form square $MNOT$.\n\nWhich plan correctly doubles the area of $PQRS$ and which plan halves it?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Join the midpoints to double the area, and build on diagonal $PR$ to halve it."
+    },
+    {
+      "id": "B",
+      "text": "Build a new square on diagonal $PR$ to double the area; join midpoints $M$, $N$, $O$, $T$ to halve it."
+    },
+    {
+      "id": "C",
+      "text": "Use either construction for either goal, because the starting figure need not be a square."
+    },
+    {
+      "id": "D",
+      "text": "Treat every inscribed quadrilateral inside $PQRS$ as a half-area square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (3.2,3.2);\n  \\coordinate (S) at (0,3.2);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.9pt,dashed] (P)--(R);\n  \\fill (P) circle (1.6pt); \\fill (Q) circle (1.6pt);\n  \\fill (R) circle (1.6pt); \\fill (S) circle (1.6pt);\n  \\coordinate (M) at (1.6,0);\n  \\coordinate (N) at (3.2,1.6);\n  \\coordinate (O) at (1.6,3.2);\n  \\coordinate (T) at (0,1.6);\n  \\fill[gray] (M) circle (1.6pt); \\fill[gray] (N) circle (1.6pt);\n  \\fill[gray] (O) circle (1.6pt); \\fill[gray] (T) circle (1.6pt);\n  \\draw[line width=0.85pt,gray] (M)--(N)--(O)--(T)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above right] at (R) {$R$};\n  \\node[above left] at (S) {$S$};\n  \\node[below] at (M) {$M$};\n  \\node[right] at (N) {$N$};\n  \\node[above] at (O) {$O$};\n  \\node[left] at (T) {$T$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A square on the diagonal has twice the area; the midpoint square has half. Swapping the two plans reverses the constructions; dropping the square start or accepting any inscribed quadrilateral leave the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as square PQRS with diagonal PR and midpoint square MNOT."
+  }
+}

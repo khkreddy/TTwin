@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sia multiplies $\\dfrac{2}{3}$ by $\\dfrac{5}{7}$.\n\nWhich claim about the product is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer fraction factors, and stop with no product written."
+    },
+    {
+      "id": "B",
+      "text": "Writing $\\dfrac{2}{3} \\times \\dfrac{5}{7}$ is what creates the order of the factors."
+    },
+    {
+      "id": "C",
+      "text": "$\\dfrac{2}{3} \\times \\dfrac{5}{7} = \\dfrac{5}{7} \\times \\dfrac{2}{3}$, because the order of the factors does not change the product."
+    },
+    {
+      "id": "D",
+      "text": "The product equals $\\dfrac{2}{3}$, because $2$ and $3$ are the first numerals printed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiplication of fractions is commutative, so swapping the factors leaves the product unchanged. Naming fraction factors alone substitutes a label. Saying the product writing creates the order reverses the relation. Grabbing the first printed numerals is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

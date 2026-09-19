@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vihaan divides $8.4$ by $3$.\n\nWhich claim keeps the quotient decimal point in the correct place?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer counting-number divisor, and stop with no quotient written."
+    },
+    {
+      "id": "B",
+      "text": "$8.4 \\div 3 = 84$, moving past the tenths with no decimal point in the quotient."
+    },
+    {
+      "id": "C",
+      "text": "$8.4 \\div 3 = 2.8$, placing the decimal point in the quotient before dividing the tenths."
+    },
+    {
+      "id": "D",
+      "text": "$8.4 \\div 3 = 8.4$, because $8.4$ is already printed in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place the quotient decimal point in line with the dividend’s point before dividing tenths: 8.4÷3=2.8. Naming the divisor type alone substitutes a label. Dropping the point omits place-value placement. Echoing the printed 8.4 is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

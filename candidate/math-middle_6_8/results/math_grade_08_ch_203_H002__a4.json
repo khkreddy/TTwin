@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya reads a map with representative fraction $1 : 50{,}000$. The measured map distance between two towns is $3\\,\\mathrm{cm}$.\n\nWhich two claims correctly convert that map distance into ground distance?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the measured map distance $3\\,\\mathrm{cm}$, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Ground distance $= 3 \\times 50{,}000 = 1{,}50{,}000\\,\\mathrm{cm}$, which is $1.5\\,\\mathrm{km}$."
+    },
+    {
+      "id": "C",
+      "text": "The representative fraction links $1\\,\\mathrm{cm}$ on the map to $50{,}000\\,\\mathrm{cm}$ on the ground, so multiply the map length by $50{,}000$."
+    },
+    {
+      "id": "D",
+      "text": "Divide $50{,}000$ by $3$ to undo the representative fraction."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "RF 1:50000 means multiply map cm by 50000: 3×50000=150000 cm=1.5 km. Naming only the map length, or dividing instead of multiplying, miss the conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

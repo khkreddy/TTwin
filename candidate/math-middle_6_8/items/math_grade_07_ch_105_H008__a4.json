@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m25_qp_32:q7",
+  "target_unit_id": "math/grade_07/ch_105/H008",
+  "build_logic": {
+    "source_uid": "0580_m25_qp_32:q7",
+    "hinge": "math/grade_07/ch_105/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H008"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H008",
+    "stem": "The diagram shows transversal $t$ crossing lines $p$ and $q$. Angle $1$ sits above $p$ and to the right of $t$. Angle $2$ sits above $q$ and to the right of $t$.\n\nWhich claim about angles $1$ and $2$ is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Angles $1$ and $2$ are corresponding angles, because each sits in the same matching position at its crossing.",
+      "B": "Angles $1$ and $2$ are corresponding angles even when both are taken from the crossing with $p$ alone.",
+      "C": "Angles $1$ and $2$ are same-side interior angles, so their measures must sum to $180^{\\circ}$.",
+      "D": "Angles $1$ and $2$ are corresponding angles only because the printed labels are $1$ and $2$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.4,2.4)--(5.6,2.4);\n  \\draw[line width=1.05pt] (-0.4,0.5)--(5.6,0.5);\n  \\node[right] at (5.65,2.4) {$p$};\n  \\node[right] at (5.65,0.5) {$q$};\n  \\draw[line width=1.05pt] (1.2,-0.4)--(3.8,3.3);\n  \\node[above] at (3.75,3.25) {$t$};\n  \\coordinate (X) at (2.05,2.4);\n  \\coordinate (Y) at (1.55,0.5);\n  \\fill (X) circle (1.4pt);\n  \\fill (Y) circle (1.4pt);\n  \\node[above right] at (2.15,2.45) {$1$};\n  \\node[above right] at (1.65,0.55) {$2$};\n  \\node[align=center,anchor=west] at (6.3,1.5) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

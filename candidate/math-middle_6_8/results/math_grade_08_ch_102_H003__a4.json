@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya has the prime factorisation $2 \\times 2 \\times 3 \\times 3 \\times 3$ and wants it in exponential form.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $2 \\times 3$ only, dropping the repeated factors instead of grouping them as exponents."
+    },
+    {
+      "id": "B",
+      "text": "Write $2^2 \\times 3^3$, grouping two factors of 2 and three factors of 3."
+    },
+    {
+      "id": "C",
+      "text": "Each repeated prime becomes a base, and the count of repeats becomes its exponent."
+    },
+    {
+      "id": "D",
+      "text": "Start from $2^2 \\times 3^3$ to invent the product, as if the exponential form produced the primes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Grouping repeats gives $2^2\\times3^3$; bases and exponents record that grouping. Writing only $2\\times3$ drops the counts. Treating the exponential form as what creates the primes reverses the direction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

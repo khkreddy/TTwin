@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash must construct rectangle $ABCD$ so that diagonal $AC$ divides $\\angle DAB$ into $60^{\\circ}$ and $30^{\\circ}$. The diagram shows the right angle at $A$ and those parts along diagonal $AC$.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the finished figure diagonal $AC$ only."
+    },
+    {
+      "id": "B",
+      "text": "Say that drawing diagonal $AC$ is what creates rectangle $ABCD$."
+    },
+    {
+      "id": "C",
+      "text": "Use $\\angle DAB=90^{\\circ}$, so the $60^{\\circ}$ part leaves $30^{\\circ}$; then place sides and vertex $D$ from that split."
+    },
+    {
+      "id": "D",
+      "text": "Choose the plan only because $60$ is the largest printed angle number among $60$, $30$, and $90$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.0]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (4.2,2.6);\n  \\coordinate (D) at (0,2.6);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=1.0pt] (A)--(C);\n  \\draw[line width=0.65pt] (0.55,0) arc (0:90:0.55);\n  \\node at (0.78,0.78){$90^{\\circ}$};\n  \\draw[line width=0.65pt] (0.7,0) arc (0:32:0.7);\n  \\node at (1.35,0.28){$30^{\\circ}$};\n  \\draw[line width=0.65pt] (0.55,0) arc (0:58:0.9);\n  \\node at (1.05,0.95){$60^{\\circ}$};\n  \\node[below left] at (A){$A$};\n  \\node[below right] at (B){$B$};\n  \\node[above right] at (C){$C$};\n  \\node[above left] at (D){$D$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A rectangle corner is 90°, so a 60° part of the diagonal split leaves 30°, locating the next sides and D. Naming only the diagonal substitutes a label. Saying the diagonal creates the rectangle reverses construction. Picking the largest print is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "figure add: rectangle with 60°/30° diagonal split at A"
+  }
+}

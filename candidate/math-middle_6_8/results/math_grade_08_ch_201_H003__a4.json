@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anvi's book costs ₹450. A discount is given at 8% of the book cost.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only the multiplier $8/100$ matters; no whole in rupees is needed."
+    },
+    {
+      "id": "B",
+      "text": "The whole is ₹450, so the discount is $(8/100)\\times 450$."
+    },
+    {
+      "id": "C",
+      "text": "The same 8% gives a different rupee amount if the book cost changes."
+    },
+    {
+      "id": "D",
+      "text": "Start from a guessed discount amount and reverse to invent both the cost and the percent."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "8% of ₹450 uses that cost as the whole; a different whole changes the amount. Dropping the whole swaps in the bare multiplier. Working backwards from a guessed amount reverses the calculation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

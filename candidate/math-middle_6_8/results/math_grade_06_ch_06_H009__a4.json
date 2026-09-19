@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adil's rectangular courtyard is $10$ m by $6$ m. A rectangular flower bed $4$ m by $2$ m lies inside it.\n\nWhich two claims find the uncovered area correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find only the courtyard area $10\\times 6$, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Uncovered area $=10\\times 6-4\\times 2=60-8=52$ square metres."
+    },
+    {
+      "id": "C",
+      "text": "Subtract the flower-bed area from the courtyard area because the bed lies inside and is not part of the uncovered region."
+    },
+    {
+      "id": "D",
+      "text": "Say that the uncovered area is what creates the courtyard and flower-bed rectangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remaining area is whole minus the inner bed: 60−8=52. Omitting the subtraction drops the inside-bed condition. Saying remaining area creates the rectangles reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

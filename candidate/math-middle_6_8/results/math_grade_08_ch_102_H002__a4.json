@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya writes the product $4 \\times 4 \\times 4 \\times 4 \\times 4$ and wants exponential notation with the correct base and exponent.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The exponent is $4$, because $4$ is the number being multiplied."
+    },
+    {
+      "id": "B",
+      "text": "The base is $4$, the repeated factor in the product."
+    },
+    {
+      "id": "C",
+      "text": "The exponent is $5$, because $4$ appears as a factor five times."
+    },
+    {
+      "id": "D",
+      "text": "The notation $4^5$ means $4$ multiplied by $5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "4×4×4×4×4 is 4^5: base 4 (the repeated factor) and exponent 5 (five equal factors). Calling the exponent 4 swaps labels; reading 4^5 as 4×5 drops the equal-factor meaning.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Diya starts with the product $8 \\times 11$. The factors are then changed to $10 \\times 13$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "By how much does the product increase?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "By $16$, from the $8\\times2$ change term alone."
+        },
+        {
+          "id": "B",
+          "text": "By the adjustments $+2$ and $+2$ to the factors."
+        },
+        {
+          "id": "C",
+          "text": "By $42$, because $(8+2)(11+2)=8\\times11 + 8\\times2 + 11\\times2 + 2\\times2$ and the change is $16+22+4=42$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Expand the new product and separate $8\\times11$ from the change $16+22+4=42$. Check: $10\\times13=130$ and $130-88=42$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The change is $an+bm+mn=42$. Quoting only one cross term or only the factor adjustments misses the full expansion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

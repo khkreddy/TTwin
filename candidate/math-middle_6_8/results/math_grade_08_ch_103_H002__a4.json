@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Farhan compares three counting plans for a large bag of marbles: the spoken list one, two, three, … ; a fixed list that stops at thirty; and a single chalk mark for each marble with no number words.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly judges those plans for a large collection?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer the phrase unending sequence, and stop there."
+        },
+        {
+          "id": "B",
+          "text": "The spoken list keeps going and stays usable; the list that stops at thirty is finite; chalk marks alone can continue but become cumbersome."
+        },
+        {
+          "id": "C",
+          "text": "Prefer chalk marks because each mark is the largest printed symbol on the board."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A useful count needs an unending standard sequence that stays easy to use; stopping at thirty fails for larger bags, and bare marks grow too hard to read."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Usability needs both an unending sequence and a compact standard form. Naming the phrase alone, or picking chalk marks for size, miss that joint test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

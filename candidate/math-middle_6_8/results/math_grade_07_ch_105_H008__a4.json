@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows transversal $t$ crossing lines $p$ and $q$. Angle $1$ sits above $p$ and to the right of $t$. Angle $2$ sits above $q$ and to the right of $t$.\n\nWhich claim about angles $1$ and $2$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angles $1$ and $2$ are corresponding angles, because each sits in the same matching position at its crossing."
+    },
+    {
+      "id": "B",
+      "text": "Angles $1$ and $2$ are corresponding angles even when both are taken from the crossing with $p$ alone."
+    },
+    {
+      "id": "C",
+      "text": "Angles $1$ and $2$ are same-side interior angles, so their measures must sum to $180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Angles $1$ and $2$ are corresponding angles only because the printed labels are $1$ and $2$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.4,2.4)--(5.6,2.4);\n  \\draw[line width=1.05pt] (-0.4,0.5)--(5.6,0.5);\n  \\node[right] at (5.65,2.4) {$p$};\n  \\node[right] at (5.65,0.5) {$q$};\n  \\draw[line width=1.05pt] (1.2,-0.4)--(3.8,3.3);\n  \\node[above] at (3.75,3.25) {$t$};\n  \\coordinate (X) at (2.05,2.4);\n  \\coordinate (Y) at (1.55,0.5);\n  \\fill (X) circle (1.4pt);\n  \\fill (Y) circle (1.4pt);\n  \\node[above right] at (2.15,2.45) {$1$};\n  \\node[above right] at (1.65,0.55) {$2$};\n  \\node[align=center,anchor=west] at (6.3,1.5) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Corresponding angles occupy matching positions at the two crossings of a transversal. Taking both from one line omits that pair condition. Treating them as same-side interior angles conflates a different pair. Echoing the printed labels alone is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote parallel-lines source as transversal t on lines p and q with angles 1 and 2 in matching upper-right positions."
+  }
+}

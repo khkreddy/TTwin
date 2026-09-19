@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Meher starts with the $2$-digit number $47$. She reverses the digits and adds, then repeats reverse-and-add until she should stop.\n\nWhich two claims apply the process correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Form $47+74=121$, notice $121$ reads the same both ways, and keep reverse-and-adding past $121$."
+    },
+    {
+      "id": "B",
+      "text": "Form $47+74=121$; $121$ is a palindrome, so stop at $121$."
+    },
+    {
+      "id": "C",
+      "text": "The process stops as soon as the current result is a palindrome."
+    },
+    {
+      "id": "D",
+      "text": "Say that reaching a palindrome is what creates the starting number $47$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reverse-and-add stops at the first palindrome: 47+74=121. Continuing past that omits the stop rule. Saying the palindrome creates the start reverses the process.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya multiplies any integer $a$ by $1$ or by $-1$.\n\nWhich two claims are always true?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer $-1$, and stop with no product stated for either factor."
+    },
+    {
+      "id": "B",
+      "text": "$1 \\times a = a$ for every integer $a$."
+    },
+    {
+      "id": "C",
+      "text": "$-1 \\times a = -a$, where $-a$ is the additive inverse of $a$."
+    },
+    {
+      "id": "D",
+      "text": "$-1 \\times a = a$, because the printed numeral $1$ is kept and the minus is dropped."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For every integer a, 1×a=a and (−1)×a=−a (the additive inverse). Naming −1 alone substitutes a label. Keeping the printed 1 and dropping the minus is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

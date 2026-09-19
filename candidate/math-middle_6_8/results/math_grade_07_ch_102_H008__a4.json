@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitya evaluates the expression $8+5+3$. She then increases the term $5$ by $2$.\n\nWhich claim correctly states how the expression's value changes?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The value becomes $8$ only, because increase is just a label on the page."
+    },
+    {
+      "id": "B",
+      "text": "The value stays $16$, because changing one term never changes a sum."
+    },
+    {
+      "id": "C",
+      "text": "The value increases by $2$ to $18$, matching the increase in that term."
+    },
+    {
+      "id": "D",
+      "text": "The value becomes $2$, because the printed increase $2$ replaces the whole sum."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Viewed as a sum of terms, increasing one term by 2 increases the total by 2: 16→18.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

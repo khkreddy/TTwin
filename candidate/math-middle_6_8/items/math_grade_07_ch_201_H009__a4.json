@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H009",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H009"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H009:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H009",
+    "stem": "Ritu studies the diagram of right-angled triangles $PQR$ and $XYZ$, each with a right angle marked. The hypotenuses $QR$ and $YZ$ are equal, and legs $PQ$ and $XY$ are equal.\n\nWhich claim correctly decides congruence?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the triangles congruent even when either triangle need not be right-angled.",
+      "B": "Say the same RHS match also settles congruence for non-right SSA pairs in general.",
+      "C": "The triangles are congruent by RHS: right angle, equal hypotenuses, and one equal corresponding leg.",
+      "D": "Require two equal angles and the included side (ASA) before congruence can be decided here."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (0,2.2);\n  \\coordinate (R) at (3.0,0);\n  \\coordinate (X) at (4.2,0);\n  \\coordinate (Y) at (4.2,2.2);\n  \\coordinate (Z) at (7.2,0);\n  \\draw[thick] (P)--(Q)--(R)--cycle;\n  \\draw[thick] (X)--(Y)--(Z)--cycle;\n  \\draw (0,0.25)--(0.25,0.25)--(0.25,0);\n  \\draw (4.2,0.25)--(4.45,0.25)--(4.45,0);\n  \\node[left] at (Q) {$Q$};\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (R) {$R$};\n  \\node[left] at (Y) {$Y$};\n  \\node[below left] at (X) {$X$};\n  \\node[below right] at (Z) {$Z$};\n  \\node[left] at (0,1.1) {$5$};\n  \\node[below] at (1.5,0) {$13$};\n  \\node[left] at (4.2,1.1) {$5$};\n  \\node[below] at (5.7,0) {$13$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

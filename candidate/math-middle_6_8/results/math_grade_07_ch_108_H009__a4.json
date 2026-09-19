@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sameer must compute $\\dfrac{3}{4} \\div \\dfrac{2}{5}$.\n\nWhich two claims correctly carry out the division?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep $\\dfrac{3}{4}$ and multiply by $\\dfrac{2}{5}$ directly, with no reciprocal of the divisor."
+    },
+    {
+      "id": "B",
+      "text": "Replace the divisor $\\dfrac{2}{5}$ by its reciprocal $\\dfrac{5}{2}$, then multiply $\\dfrac{3}{4} \\times \\dfrac{5}{2}$."
+    },
+    {
+      "id": "C",
+      "text": "The product is $\\dfrac{15}{8}$, which equals $\\dfrac{3}{4} \\div \\dfrac{2}{5}$."
+    },
+    {
+      "id": "D",
+      "text": "Say the reciprocal $\\dfrac{5}{2}$ is what creates the original divisor $\\dfrac{2}{5}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dividing by 2/5 means multiplying by 5/2, giving 15/8. Skipping the reciprocal omits the required step. Saying the reciprocal creates the divisor reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

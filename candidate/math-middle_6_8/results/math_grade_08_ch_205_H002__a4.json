@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tara's diagram is a dot plot of the values $2$, $2$, $3$, $6$. A classmate marks $4$, halfway between the smallest value $2$ and the largest value $6$, and calls that mark the mean.\n\nWhich claim correctly decides whether $4$ is the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mean is whatever balance point the classmate marks first; that mark creates the mean."
+    },
+    {
+      "id": "B",
+      "text": "$4$ is the mean once the endpoints $2$ and $6$ are known, so the inner dots can be ignored."
+    },
+    {
+      "id": "C",
+      "text": "$4$ is not the mean: the mean balances total distance on the left and right, and $\\dfrac{2+2+3+6}{4} = 3.25$."
+    },
+    {
+      "id": "D",
+      "text": "Use only the endpoints of the dot plot to locate the mean."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=0.9pt] (0,0)--(8.5,0);\n  \\foreach \\x/\\lab in {1/1,2/2,3/3,4/4,5/5,6/6,7/7} {\n    \\draw[line width=0.7pt] (\\x,0.12)--(\\x,-0.12);\n    \\node[below] at (\\x,-0.18) {$\\lab$};\n  }\n  \\foreach \\y in {0.35,0.7} {\\fill (2,\\y) circle (2.2pt);}\n  \\fill (3,0.35) circle (2.2pt);\n  \\fill (6,0.35) circle (2.2pt);\n  \\draw[line width=0.85pt,dashed] (4,0)--(4,1.2);\n  \\node[above] at (4,1.25) {proposed $4$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mean is the balance point: (2+2+3+6)/4=3.25, not the midpoint 4 of the extremes. Saying the mark creates the mean reverses the relation; ignoring inner dots or using only endpoints omit the full distance balance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source pie chart as a dot plot of values 2,2,3,6 with proposed midpoint mark at 4."
+  }
+}

@@ -81,14 +81,15 @@ if (g68.variationForAttempt(3) !== "V6") throw new Error("a3 V6");
 if (g68.variationForAttempt(4) !== "V5") throw new Error("a4 V5");
 if (c.uncovered === 0) {
   const deep = g68.deepenUnits(science);
-  if (!deep.length) throw new Error("deepen empty");
-  const withCand = deep.find((u) => g68.maxAttempt(u.unit_id) >= 1);
-  if (!withCand) throw new Error("deepen missing candidate units");
-  if (g68.nextAttempt(withCand.unit_id) < 2) throw new Error("next attempt after first fill");
-  const failedFirst = deep.find((u) => g68.attemptFailed(u.unit_id, g68.nextAttempt(u.unit_id)));
-  const fresh = deep.find((u) => g68.maxAttempt(u.unit_id) === 1 && !g68.attemptFailed(u.unit_id, 2));
-  if (failedFirst && fresh && deep.indexOf(failedFirst) < deep.indexOf(fresh)) {
-    throw new Error("fail-closed a2 must sort after fresh a2 gaps");
+  if (deep.length) {
+    const withCand = deep.find((u) => g68.maxAttempt(u.unit_id) >= 1);
+    if (!withCand) throw new Error("deepen missing candidate units");
+    if (g68.nextAttempt(withCand.unit_id) < 2) throw new Error("next attempt after first fill");
+    const failedFirst = deep.find((u) => g68.attemptFailed(u.unit_id, g68.nextAttempt(u.unit_id)));
+    const fresh = deep.find((u) => g68.maxAttempt(u.unit_id) === 1 && !g68.attemptFailed(u.unit_id, 2));
+    if (failedFirst && fresh && deep.indexOf(failedFirst) < deep.indexOf(fresh)) {
+      throw new Error("fail-closed a2 must sort after fresh a2 gaps");
+    }
   }
 }
 

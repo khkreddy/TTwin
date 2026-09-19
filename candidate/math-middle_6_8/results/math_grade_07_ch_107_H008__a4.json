@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle ABC$ with $\\angle A = 50^{\\circ}$ and $\\angle ABC = 60^{\\circ}$. Side $AB$ is extended to $D$, so $\\angle CBD = x$.\n\nWhich claim finds $x$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x = 120^{\\circ}$, because $\\angle ABC = 60^{\\circ}$ and $x$ forms a straight line with that interior angle."
+    },
+    {
+      "id": "B",
+      "text": "$x = 60^{\\circ}$, treating the interior $\\angle ABC$ as if it were already the exterior angle."
+    },
+    {
+      "id": "C",
+      "text": "Extending $AB$ to $D$ is what creates $\\angle A = 50^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "$x = 120^{\\circ}$ by naming the triangle vertices alone, with no straight-angle step."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (1.4,2.4);\n  \\coordinate (D) at (5.5,0);\n  \\draw[line width=0.9pt] (A)--(B)--(C)--cycle;\n  \\draw[line width=0.9pt] (B)--(D);\n  \\node[below left] at (A) {$A$};\n  \\node[below] at (B) {$B$};\n  \\node[above] at (C) {$C$};\n  \\node[below right] at (D) {$D$};\n  \\node at (0.85,0.35) {$50^{\\circ}$};\n  \\node at (3.35,0.35) {$60^{\\circ}$};\n  \\node at (4.55,0.35) {$x$};\n  \\node[align=center,anchor=west] at (6.0,1.4) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Exterior ∠CBD and interior ∠ABC form a straight line, so x=180°−60°=120°. Taking 60° as the exterior omits the straight-angle step. Saying the extension creates ∠A reverses cause. Naming vertices alone conflates a different task.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote right-triangle source as △ABC with AB extended to D and exterior angle x at B."
+  }
+}

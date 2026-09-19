@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Aarav must cover a rectangular desk top that is $6$ units long and $4$ units wide with square tiles of side $1$ unit. He also has a square tray of side $5$ units.\n\nWhich two claims correctly use area in square units?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The desk needs $6+4=10$ square tiles, counting length and width as the covered region."
+    },
+    {
+      "id": "B",
+      "text": "The desk area is $6\\times4=24$ square units."
+    },
+    {
+      "id": "C",
+      "text": "The square tray area is $5\\times5=25$ square units."
+    },
+    {
+      "id": "D",
+      "text": "Area is the distance around the desk edge, so the tray and desk share one perimeter rule for covering."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area of a rectangle is length×width; area of a square is side×side. Sum of sides or perimeter is not area.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

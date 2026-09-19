@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kabir records how many stickers each friend traded. The table shows outcome values and how often each occurred:\n\n$2$ stickers — frequency $4$;\n$5$ stickers — frequency $3$;\n$8$ stickers — frequency $1$.\n\nHe wants the total number of stickers traded.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states how to find that total?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Add the distinct outcome labels $2+5+8$."
+        },
+        {
+          "id": "B",
+          "text": "Multiply each outcome by its frequency, then add those products."
+        },
+        {
+          "id": "C",
+          "text": "Add only the frequencies $4+3+1$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Each outcome value must be counted once for every time it occurred, so the total is $2\\times4+5\\times3+8\\times1$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Total amount from a numerical frequency table is sum of (value × frequency), not the sum of labels or of frequencies alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

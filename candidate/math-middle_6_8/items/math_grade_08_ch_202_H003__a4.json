@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_202/H003",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_202/H003",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H003"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H003:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H003",
+    "stem": "The diagram shows right triangle PQR with right angle at P. Imran measures $PQ = PR = 6$ cm and wants the relation for the hypotenuse $c$.\n\nWhich statement is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$c^2 = 2 \\times 6^2 = 72$, because for equal perpendicular sides $a$, $c^2 = 2a^2$.",
+      "B": "The hypotenuse equals 6 cm, renaming the equal legs as if they were already the hypotenuse.",
+      "C": "Equal legs are produced only after $c^2 = 2a^2$ is known, so the side lengths cannot start the relation.",
+      "D": "Choose $c = 6$ because 6 is the number printed on both legs."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (0,3.2);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\draw (P)--++(0.35,0)--++(0,0.35);\n  \\node[below left] at (P) {P};\n  \\node[below right] at (Q) {Q};\n  \\node[above left] at (R) {R};\n  \\node[below] at (1.6,-0.15) {6 cm};\n  \\node[left] at (-0.15,1.6) {6 cm};\n  \\node[above right] at (1.7,1.7) {$c$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

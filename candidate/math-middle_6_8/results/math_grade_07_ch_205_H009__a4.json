@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu reads the graph of books borrowed on four days. The vertical axis is labelled books with marks $0,2,4,6,8$, and the bars show Mon $4$, Tue $6$, Wed $3$, Thu $5$.\n\nWhich claim correctly interprets the graph?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the units on the vertical axis, and stop before reading the bars."
+    },
+    {
+      "id": "B",
+      "text": "Read Tue as $6$ books even when that height is not tied to the marked scale."
+    },
+    {
+      "id": "C",
+      "text": "First note the axes, scale, and bar heights, then conclude only that Tue is highest at $6$ books and Wed is lowest at $3$ books."
+    },
+    {
+      "id": "D",
+      "text": "Conclude that more books were borrowed on Tue because students studied harder that day."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.45cm,line cap=round,line join=round,font=\\small]\n  \\draw[->,thick] (0,0) -- (9.5,0) node[right] {day};\n  \\draw[->,thick] (0,0) -- (0,8.5) node[above] {books};\n  \\foreach \\y in {0,2,4,6,8} \\draw (0,\\y) -- (-0.15,\\y) node[left] {\\y};\n  \\foreach \\x/\\h/\\lab in {1.5/4/Mon,3.5/6/Tue,5.5/3/Wed,7.5/5/Thu} {\n    \\fill[gray!35] (\\x,0) rectangle (\\x+1.2,\\h);\n    \\draw[thick] (\\x,0) rectangle (\\x+1.2,\\h);\n    \\node[below] at (\\x+0.6,0) {\\lab};\n  }\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two-step reading: identify axes, scale, and bar heights, then state only conclusions the graph supports (Tue 6 highest, Wed 3 lowest). Naming units alone substitutes a label. Untying heights from the scale omits a condition. A causal story about studying is outside the displayed data.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source pie chart as a bar graph of books vs day with labelled scale and four bars."
+  }
+}

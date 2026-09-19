@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya may use only the digits $2$, $5$ and $7$. She wants 3-digit numbers that read the same forwards and backwards.\n\nWhich two claims correctly describe such palindromes?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any arrangement of $2$, $5$ and $7$ is a palindrome."
+    },
+    {
+      "id": "B",
+      "text": "A 3-digit palindrome must have the same hundreds digit and ones digit."
+    },
+    {
+      "id": "C",
+      "text": "$252$ and $575$ are palindromes Diya can make from the allowed digits."
+    },
+    {
+      "id": "D",
+      "text": "The middle digit alone decides whether the number is a palindrome."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 3-digit palindrome needs matching first and last digits; 252 and 575 fit. Any arrangement is too broad; the middle digit alone is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

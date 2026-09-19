@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Neil must rewrite $4 \\times (7 + 5)$ as a sum of products that keeps the same value.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer a multiple of a sum, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Write $4 \\times 7 + 5$, so only $7$ is multiplied by $4$."
+    },
+    {
+      "id": "C",
+      "text": "Write $4 \\times 7 + 4 \\times 5$, multiplying each part of the sum by $4$."
+    },
+    {
+      "id": "D",
+      "text": "Say the expanded sum $4 \\times 7 + 4 \\times 5$ is what creates the factored form $4 \\times (7 + 5)$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "operation_confusion",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The distributive property expands 4×(7+5) as 4×7+4×5. Naming only \"multiple of a sum\" substitutes a label. Leaving 5 unmultiplied confuses the operation on each part. Saying the expansion creates the factored form reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "operation_confusion",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

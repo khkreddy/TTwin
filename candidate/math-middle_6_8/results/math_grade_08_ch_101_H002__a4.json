@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ishaan studies school lockers numbered $1$ to $15$. A locker is touched exactly twice when its number has exactly two factors, $1$ and itself.\n\nWhich list shows only lockers touched exactly twice?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The list of every locker number that has a factor other than $1$."
+    },
+    {
+      "id": "B",
+      "text": "$1$, $2$, $3$, $5$, $7$, $11$, $13$"
+    },
+    {
+      "id": "C",
+      "text": "$2$, $3$, $5$, $7$, $11$, $13$"
+    },
+    {
+      "id": "D",
+      "text": "$2$, $4$, $6$, $8$, $10$, $12$, $14$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Touched exactly twice means exactly two factors: prime numbers. Among 1–15 those are 2,3,5,7,11,13. Naming any factor list, including 1, or taking even numbers alone miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sameer must compute $126 \\div 2.5$ by making the divisor a counting number.\n\nWhich two claims correctly carry out the plan?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the dividend $126$, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "Multiply both $126$ and $2.5$ by $10$, giving the equivalent division $1260 \\div 25$."
+    },
+    {
+      "id": "C",
+      "text": "Then $1260 \\div 25 = 50.4$, which equals $126 \\div 2.5$."
+    },
+    {
+      "id": "D",
+      "text": "Say the counting-number divisor $25$ is what creates the original decimal divisor $2.5$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scaling dividend and divisor by the same power of 10 (here ×10) yields 1260÷25=50.4. Naming the dividend alone substitutes the wrong label. Saying 25 creates 2.5 reverses the scaling relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

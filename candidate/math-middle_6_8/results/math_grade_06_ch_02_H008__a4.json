@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav looks at the diagram. Points $B$, $O$ and $A$ lie on one straight line, and ray $OC$ meets line $BA$ at $O$. The marked angle at $O$ between $OC$ and $OA$ is $90^{\\circ}$.\n\nWhich claim about the figure is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ray $OC$ is perpendicular to line $BA$, and $\\angle COA$ is a right angle."
+    },
+    {
+      "id": "B",
+      "text": "$\\angle BOA$ is a right angle because ray $OC$ is drawn."
+    },
+    {
+      "id": "C",
+      "text": "Every angle drawn on line $BA$ must be a straight angle."
+    },
+    {
+      "id": "D",
+      "text": "Angle $\\angle COA$ is right because the letter $C$ is printed highest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.0]\n  \\draw[line width=1.05pt] (-0.2,0)--(5.2,0) node[right]{$A$};\n  \\node[left] at (-0.2,0){$B$};\n  \\coordinate (O) at (2.5,0);\n  \\fill (O) circle (1.3pt);\n  \\node[below] at (O){$O$};\n  \\draw[line width=1.05pt] (O)--(2.5,2.4) node[above]{$C$};\n  \\draw[line width=0.8pt] (2.5,0.35)--(2.85,0.35)--(2.85,0);\n  \\node[above right] at (2.55,0.55){$90^{\\circ}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A straight angle is half a turn along BA. Splitting with a 90° ray makes OC perpendicular to BA; the right angle is the marked half, not BOA or letter height.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as straight line BA with perpendicular ray OC and a marked 90° corner."
+  }
+}

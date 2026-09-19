@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Avni looks at the diagram of triangle $ABC$. Segment $AD$ meets side $BC$ at $D$, and the right-angle mark at $D$ is shown.\n\nWhich claim correctly names $AD$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $AD$ an altitude even when $AD$ need not be perpendicular to $BC$."
+    },
+    {
+      "id": "B",
+      "text": "Say the same segment also settles the area formula for every triangle, with no further check."
+    },
+    {
+      "id": "C",
+      "text": "$AD$ is an altitude from $A$ to base $BC$, because it is perpendicular to $BC$."
+    },
+    {
+      "id": "D",
+      "text": "Find $AD$ by using only that the three angles of triangle $ABC$ add to $180^{\\circ}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (B) at (0,0);\n  \\coordinate (C) at (4.2,0);\n  \\coordinate (A) at (1.4,2.6);\n  \\coordinate (D) at (1.4,0);\n  \\draw[thick] (A)--(B)--(C)--cycle;\n  \\draw[thick] (A)--(D);\n  \\draw (1.4,0.22)--(1.62,0.22)--(1.62,0);\n  \\node[above] at (A) {$A$};\n  \\node[below left] at (B) {$B$};\n  \\node[below right] at (C) {$C$};\n  \\node[below] at (D) {$D$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An altitude from A to BC is the perpendicular segment from A to line BC. Dropping perpendicularity omits the defining condition. Extending the claim to every area formula over-scopes. Angle sum alone is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source right triangle as triangle ABC with perpendicular AD from A to BC marked as altitude."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Krish's 5-by-3 grid of unit squares. He wants to cover it with 2-by-1 tiles. Tiles must not overlap and must not leave gaps.\n\nCan the grid be tiled?",
+  "options": [
+    {
+      "id": "A",
+      "text": "No. The grid has 15 unit squares, so 2-by-1 tiles cannot cover it."
+    },
+    {
+      "id": "B",
+      "text": "The tiling decision is the label \"unit squares\" on the grid."
+    },
+    {
+      "id": "C",
+      "text": "Yes. Any block of 15 cells can be paired into 2-by-1 tiles."
+    },
+    {
+      "id": "D",
+      "text": "Pairing tiles along rows is what creates the 5-by-3 grid size."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.42cm,y=0.42cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,line width=0.55pt,gray!70] (0,0) grid (5,3);\n  \\draw[line width=1.05pt] (0,0) rectangle (5,3);\n  \\node[below] at (2.5,-0.35) {5};\n  \\node[left] at (-0.35,1.5) {3};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 2-by-1 tile covers two unit squares, so an odd total of 15 cannot be tiled. Calling the label the answer swaps the decision. Claiming any 15 cells tile drops the rectangular even-parity need. Saying pairing creates the grid reverses size and strategy.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a labelled 5-by-3 rectangular unit grid."
+  }
+}

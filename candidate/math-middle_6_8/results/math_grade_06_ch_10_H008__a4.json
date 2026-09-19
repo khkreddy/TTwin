@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya models $5+(-3)$ with tokens: five positive tokens and three negative tokens.\n\nWhich two claims correctly describe the sum after cancelling zero pairs?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sum is $-8$ because negative tokens always dominate the total."
+    },
+    {
+      "id": "B",
+      "text": "Each positive token paired with a negative token cancels as a zero pair."
+    },
+    {
+      "id": "C",
+      "text": "After three zero pairs cancel, two positive tokens remain, so the sum is $+2$."
+    },
+    {
+      "id": "D",
+      "text": "The sum is $5$ because the printed digit $5$ is the largest on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Zero pairs cancel + with −. Three negatives cancel three positives, leaving two positives: +2.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

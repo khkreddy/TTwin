@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows six triangles meeting at centre $O$.\n\nWhich claim explains why these triangles form a regular hexagon?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Six congruent equilateral triangles fit around $O$ because six $60^{\\circ}$ angles sum to $360^{\\circ}$, so the outer boundary has equal sides and equal $120^{\\circ}$ angles."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer regular hexagon, and stop with no angle sum at $O$."
+    },
+    {
+      "id": "C",
+      "text": "Any six triangles around $O$ form a regular hexagon, even when the triangles are not congruent and not equilateral."
+    },
+    {
+      "id": "D",
+      "text": "The same assembly also builds a regular pentagon from five such triangles around $O$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\foreach \\k in {0,1,2,3,4,5} {\n    \\draw[line width=0.85pt,fill=gray!15]\n      (0,0)--({60*\\k}:2.2)--({60*(\\k+1)}:2.2)--cycle;\n  }\n  \\node at (0,0) {$O$};\n  \\node at (30:1.25) {$60^{\\circ}$};\n  \\node[align=center,anchor=west] at (3.2,0.4) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Six 60° angles fill 360° at the centre; congruent equilateral triangles give equal outer sides and 120° hexagon angles. Naming regular hexagon alone substitutes a label. Dropping congruence/equilateral omits the needed conditions. Extending the rule to a pentagon is out of scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote inscribed-hexagon source as six equilateral triangles meeting at O with a marked 60° angle."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Farhan records juice and water. At first, juice is $2$ cups and water is $5$ cups. Later, juice is $6$ cups and water is $15$ cups.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly decides whether the change is proportional?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The change is proportional: both quantities are multiplied by the same factor $3$."
+        },
+        {
+          "id": "B",
+          "text": "The change is proportional because each quantity grew by adding $4$ cups."
+        },
+        {
+          "id": "C",
+          "text": "Call the answer corresponding quantities, and stop there."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Juice $2\\to 6$ and water $5\\to 15$ share the common multiplicative factor $3$, so the change is proportional."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Proportional change needs one common multiplicative factor on both quantities. Equal additive growth is a different test; naming the label alone is not a decision.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_22:q7",
+  "target_unit_id": "math/grade_07/ch_201/H008",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_22:q7",
+    "hinge": "math/grade_07/ch_201/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H008",
+    "stem": "The diagram shows $\\triangle PQR$ and $\\triangle XYZ$. In both triangles $\\angle P = \\angle X = 40^{\\circ}$ and $\\angle Q = \\angle Y = 70^{\\circ}$, and $QR = YZ = 6\\,\\mathrm{cm}$ is a corresponding side that does not lie between those two angles.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The triangles are congruent by AAS: the third angles are each $70^{\\circ}$ by the angle sum, so two angles and a non-included corresponding side match.",
+      "B": "Call the answer non-included side, and stop with no congruence decision.",
+      "C": "The non-included side $QR = YZ$ is what produces the $40^{\\circ}$ and $70^{\\circ}$ angles.",
+      "D": "The triangles are congruent because the three corresponding side lengths are equal."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (1.1,2.2);\n  \\draw[line width=0.85pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node at (0.7,0.35) {$40^{\\circ}$};\n  \\node at (2.55,0.35) {$70^{\\circ}$};\n  \\node[right] at (2.3,1.05) {$6\\,\\mathrm{cm}$};\n  \\begin{scope}[xshift=5.2cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.2,0);\n    \\coordinate (Z) at (1.1,2.2);\n    \\draw[line width=0.85pt] (X)--(Y)--(Z)--cycle;\n    \\node[below left] at (X) {$X$};\n    \\node[below right] at (Y) {$Y$};\n    \\node[above] at (Z) {$Z$};\n    \\node at (0.7,0.35) {$40^{\\circ}$};\n    \\node at (2.55,0.35) {$70^{\\circ}$};\n    \\node[right] at (2.3,1.05) {$6\\,\\mathrm{cm}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.0,1.2) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Adil measures $\\angle AOB$ in the diagram. The marked size is $135^{\\circ}$.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call it acute, treating $135^{\\circ}$ as less than $90^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "First study the decorative history of angle names before classifying $135^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "It is obtuse, because $90^{\\circ} < 135^{\\circ} < 180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "It is \"$135$\", because that numeral is printed largest in the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  \\coordinate (O) at (0,0);\n  \\coordinate (A) at (3.2,0);\n  \\coordinate (B) at (-2.1,2.0);\n  \\draw[line width=1.05pt] (A)--(O)--(B);\n  \\draw[line width=0.7pt] (0.85,0) arc (0:136:0.85);\n  \\node at (0.55,0.72){$135^{\\circ}$};\n  \\node[below] at (A){$A$};\n  \\node[below left] at (O){$O$};\n  \\node[above left] at (B){$B$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Obtuse means greater than 90° and less than 180°. Calling 135° acute omits the size bands. Decorative history is outside the classification. Picking the printed numeral alone is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "figure add: marked 135° angle"
+  }
+}

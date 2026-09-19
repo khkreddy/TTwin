@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ishaan checks which expressions must always be even when the letter-numbers are integers. He compares $4m + 2q$ with $x^{2} + 2$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$4m + 2q$ is always even, because $4m + 2q = 2(2m + q)$ for every integer $m$ and $q$."
+    },
+    {
+      "id": "B",
+      "text": "$x^{2} + 2$ is always even, because the added constant $2$ is even."
+    },
+    {
+      "id": "C",
+      "text": "$x^{2} + 2$ is not always even: when $x$ is odd, $x^{2}$ is odd, so $x^{2} + 2$ is odd."
+    },
+    {
+      "id": "D",
+      "text": "Integer values of the letters are what the even-or-odd conclusion creates."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "4m+2q factors as 2(2m+q), so it is always even for integers. x^2+2 fails when x is odd. Claiming x^2+2 is always even from the constant alone overreaches; saying integers are created by the parity conclusion reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

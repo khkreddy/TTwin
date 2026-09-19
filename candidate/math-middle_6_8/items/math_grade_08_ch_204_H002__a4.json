@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_204/H002",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_204/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H002"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "operation_confusion",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H002",
+    "stem": "Farhan builds a Sierpinski Carpet. The diagram shows step $1$, where the starting square is divided into $9$ equal squares and the centre square is removed, leaving $8$ remaining squares. Each later step replaces every remaining square by $8$ smaller remaining squares, so $R_{n+1} = 8 R_n$ with $R_0 = 1$.\n\nHow many remaining squares are there at step $3$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$24$, adding $8$ three times from the step-$1$ count.",
+      "B": "$9^{3} = 729$, squaring-style growth on the $9$-way split.",
+      "C": "$8^{3} = 512$",
+      "D": "$8^{2} = 64$, stopping at the formula for a different removal count."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.55]\n  % step-1 outline: 3x3 with centre removed\n  \\draw[line width=1.0pt] (0,0) rectangle (9,9);\n  \\fill[white] (3,3) rectangle (6,6);\n  \\draw[line width=0.7pt,gray] (3,0)--(3,9) (6,0)--(6,9) (0,3)--(9,3) (0,6)--(9,6);\n  \\draw[line width=0.9pt] (3,3) rectangle (6,6);\n  \\node[below] at (4.5,-0.35) {step $1$: $8$ remaining squares};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

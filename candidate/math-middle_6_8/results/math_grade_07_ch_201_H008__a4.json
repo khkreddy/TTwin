@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle PQR$ and $\\triangle XYZ$. In both triangles $\\angle P = \\angle X = 40^{\\circ}$ and $\\angle Q = \\angle Y = 70^{\\circ}$, and $QR = YZ = 6\\,\\mathrm{cm}$ is a corresponding side that does not lie between those two angles.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent by AAS: the third angles are each $70^{\\circ}$ by the angle sum, so two angles and a non-included corresponding side match."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer non-included side, and stop with no congruence decision."
+    },
+    {
+      "id": "C",
+      "text": "The non-included side $QR = YZ$ is what produces the $40^{\\circ}$ and $70^{\\circ}$ angles."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent because the three corresponding side lengths are equal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (1.1,2.2);\n  \\draw[line width=0.85pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node at (0.7,0.35) {$40^{\\circ}$};\n  \\node at (2.55,0.35) {$70^{\\circ}$};\n  \\node[right] at (2.3,1.05) {$6\\,\\mathrm{cm}$};\n  \\begin{scope}[xshift=5.2cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.2,0);\n    \\coordinate (Z) at (1.1,2.2);\n    \\draw[line width=0.85pt] (X)--(Y)--(Z)--cycle;\n    \\node[below left] at (X) {$X$};\n    \\node[below right] at (Y) {$Y$};\n    \\node[above] at (Z) {$Z$};\n    \\node at (0.7,0.35) {$40^{\\circ}$};\n    \\node at (2.55,0.35) {$70^{\\circ}$};\n    \\node[right] at (2.3,1.05) {$6\\,\\mathrm{cm}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.0,1.2) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two equal angles force the third angles equal (180°−40°−70°=70°), so AAS with non-included side QR=YZ reduces to ASA. Naming non-included side alone substitutes a label. Saying the side produces the angles reverses the relation. Claiming SSS conflates a different congruence path.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote right-triangle source as a pair of triangles with 40°, 70°, and a 6 cm non-included corresponding side QR=YZ."
+  }
+}

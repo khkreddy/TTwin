@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adil models $(+5)-(+8)$ with tokens. He may add zero pairs (one positive with one negative), then remove the requested tokens.\n\nWhich two claims carry out the model correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer zero pair only, and stop with that label."
+    },
+    {
+      "id": "B",
+      "text": "Add three zero pairs so eight positives are available, remove those eight positives, and leave three negatives, giving $-3$."
+    },
+    {
+      "id": "C",
+      "text": "Zero pairs are added when there are not enough positives to remove, then the requested positives are removed."
+    },
+    {
+      "id": "D",
+      "text": "Say that the result $-3$ is what creates the need for zero pairs."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "To remove eight positives from five, add three zero pairs, remove eight positives, leave −3. Naming only the pair label substitutes a term. Saying the result creates the pairs reverses the model.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

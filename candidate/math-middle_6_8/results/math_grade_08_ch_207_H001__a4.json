@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira cuts a paper rectangle into pieces $P$ and $Q$ and rearranges them into a new outline with no gaps and no overlaps. The diagram shows the original rectangle and the rearranged outline.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The new outline must have smaller area because its outer path looks different."
+    },
+    {
+      "id": "B",
+      "text": "Equal area is what forces the rearranged outline to be a rectangle again."
+    },
+    {
+      "id": "C",
+      "text": "The rearranged outline has the same area as the original rectangle."
+    },
+    {
+      "id": "D",
+      "text": "Area stays equal even if she throws piece $Q$ away before rearranging."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\draw[line width=1.05pt,fill=gray!15] (0,0) rectangle (4.0,2.4);\n  \\draw[line width=1.0pt,dashed] (0,0)--(4.0,2.4);\n  \\node at (1.2,1.55){$P$};\n  \\node at (2.9,0.7){$Q$};\n  \\begin{scope}[shift={(5.4,0.2)}]\n    \\draw[line width=1.05pt,fill=gray!15] (0,0)--(4.0,0)--(4.0,1.2)--(2.0,2.4)--(0,1.2)--cycle;\n    \\draw[line width=1.0pt,dashed] (0,1.2)--(4.0,1.2);\n    \\node at (1.1,0.55){$P$};\n    \\node at (3.0,1.55){$Q$};\n  \\end{scope}\n  \\node[below] at (2.0,-0.35){original};\n  \\node[below] at (7.4,-0.15){rearranged};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cutting and rearranging with no gaps or overlaps preserves area. A different outline does not change that. Saying equal area forces a rectangle reverses the relation. Dropping a piece leaves the equal-area condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "figure add: cut-and-rearrange area preservation"
+  }
+}

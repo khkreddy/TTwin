@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan fills a $3 \\times 3$ magic square using each of $1$ through $9$ once.\n\nWhich two claims correctly state the magic sum and the centre cell?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the answer magic sum, and stop with no value for the sum or the centre."
+    },
+    {
+      "id": "B",
+      "text": "Every row, column, and diagonal adds to $15$."
+    },
+    {
+      "id": "C",
+      "text": "The centre cell must be $5$."
+    },
+    {
+      "id": "D",
+      "text": "Only the three rows need to add to the same total; columns and diagonals may differ."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With 1–9, the common sum of all rows, columns, and diagonals is 15, and the centre must be 5. Naming magic sum alone substitutes a label for the values. Requiring only rows equal omits columns and diagonals.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

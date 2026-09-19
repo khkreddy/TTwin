@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir adds the lengths $1.25\\,\\mathrm{m}$ and $0.87\\,\\mathrm{m}$ by place value.\n\nWhich two claims correctly describe the addition?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the digit strings as whole numbers $125+87$ and place a decimal point at the end."
+    },
+    {
+      "id": "B",
+      "text": "Add hundredths to hundredths and tenths to tenths, regrouping when a place reaches ten."
+    },
+    {
+      "id": "C",
+      "text": "$1.25+0.87=2.12$ after regrouping $12$ hundredths as $1$ tenth and $2$ hundredths."
+    },
+    {
+      "id": "D",
+      "text": "Only the whole-metre parts $1$ and $0$ may be added; tenths are ignored."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like place values add together with regrouping. 5+7 hundredths make 12 hundredths → 1 tenth + 2 hundredths, giving 2.12 m.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

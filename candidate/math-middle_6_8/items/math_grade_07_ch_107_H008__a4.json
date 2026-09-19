@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_107/H008",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H008"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H008",
+    "stem": "The diagram shows $\\triangle ABC$ with $\\angle A = 50^{\\circ}$ and $\\angle ABC = 60^{\\circ}$. Side $AB$ is extended to $D$, so $\\angle CBD = x$.\n\nWhich claim finds $x$ correctly?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$x = 120^{\\circ}$, because $\\angle ABC = 60^{\\circ}$ and $x$ forms a straight line with that interior angle.",
+      "B": "$x = 60^{\\circ}$, treating the interior $\\angle ABC$ as if it were already the exterior angle.",
+      "C": "Extending $AB$ to $D$ is what creates $\\angle A = 50^{\\circ}$.",
+      "D": "$x = 120^{\\circ}$ by naming the triangle vertices alone, with no straight-angle step."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (1.4,2.4);\n  \\coordinate (D) at (5.5,0);\n  \\draw[line width=0.9pt] (A)--(B)--(C)--cycle;\n  \\draw[line width=0.9pt] (B)--(D);\n  \\node[below left] at (A) {$A$};\n  \\node[below] at (B) {$B$};\n  \\node[above] at (C) {$C$};\n  \\node[below right] at (D) {$D$};\n  \\node at (0.85,0.35) {$50^{\\circ}$};\n  \\node at (3.35,0.35) {$60^{\\circ}$};\n  \\node at (4.55,0.35) {$x$};\n  \\node[align=center,anchor=west] at (6.0,1.4) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

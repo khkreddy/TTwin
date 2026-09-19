@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir turns a circular paper disc about its centre and also folds it along diameters.\n\nWhich claim correctly explains why the circle is a special limiting case for symmetry?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The circle has symmetry only for a $180^{\\circ}$ turn, like a parallelogram."
+    },
+    {
+      "id": "B",
+      "text": "The circle matches itself after any turn about its centre, and every diameter is a line of symmetry."
+    },
+    {
+      "id": "C",
+      "text": "Symmetry holds for the circle only when the fold misses the centre."
+    },
+    {
+      "id": "D",
+      "text": "The circle has exactly four symmetry lines, matching a square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A circle coincides with itself under any rotation about the centre, and every diameter is a symmetry line—infinitely many of each. Finite-order or off-centre claims miss that limit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

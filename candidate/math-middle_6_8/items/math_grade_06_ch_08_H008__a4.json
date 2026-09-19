@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_08/H008",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_08/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_08/H008"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H008",
+    "stem": "Nitya explores the diagram of rectangle $PQRS$. She wants to study its diagonals.\n\nWhich claim correctly says which corners to join and what to compare?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Join opposite corners $P$ to $R$ and $Q$ to $S$, then compare those diagonal lengths and the angles they form.",
+      "B": "Join adjacent corners $P$ to $Q$ only, because a diagonal is any side of the rectangle.",
+      "C": "Join $P$ to $S$ and call that the only diagonal, reversing which corners count as opposite.",
+      "D": "Compare only the labels $P$ and $R$ printed on the page as if they were the diagonals."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.2,0);\n  \\coordinate (R) at (4.2,2.6);\n  \\coordinate (S) at (0,2.6);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[line width=0.95pt,dashed] (P)--(R);\n  \\draw[line width=0.95pt,dashed] (Q)--(S);\n  \\foreach \\pt/\\lab/\\pos in {P/P/below left,Q/Q/below right,R/R/above right,S/S/above left} {\n    \\fill (\\pt) circle (1.3pt);\n    \\node[\\pos] at (\\pt) {$\\lab$};\n  }\n  \\node at (2.1,-0.55) {rectangle $PQRS$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m20_qp_22:q7",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:28:38.430Z",
+  "source": {
+    "item_ref": "session:0580_m20_qp_22:q7",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3] ⁻³ + ⁻⁴",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line width=0.8pt]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.2);\\coordinate (C) at (3.2,0);\\draw (A)--(B)--(C)--cycle;\\draw (0,0.25)--(0.25,0.25)--(0.25,0);\\node[anchor=east] at (-0.15,1.05) {$8.5\\,\\mathrm{cm}$};\\node[anchor=north] at (1.6,-0.12) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (4.0,1.25) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_201/H008",
+      "unit_id": "math/grade_07/ch_201/H008",
+      "title": "Decide that two corresponding angles and a non-included corresponding side are sufficient to guarantee triangle congruence by deriving the third angle.",
+      "node_labels": [
+        "Geometric proof, congruence and similarity criteria",
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Geometric proof, congruence and similarity criteria",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Non-included side is the label that belongs on this item, so 'Decide that two corresponding angles and a non-included corresponding' is answered as non-included side rather than two angles."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Non-included side is what produces two angles, so the usual direction of this relation is run backwards — on the item about Decide that two corresponding angles and a non-included."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is two angles because of the most obvious label, colour, size or printed number in the stem, without using 'Decide that two corresponding angles and a non-included corresponding' as the operative test."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "two angles is settled by running 'Decide that three corresponding side lengths are sufficient to': If two triangles have the same corresponding side lengths, then they are congruent; this — on the item about Decide that two corresponding angles and a non-included."
+      }
+    ],
+    "enrichment": "The AAS condition guarantees congruence: two equal angles and a corresponding non-included side determine the third angle using the 180-degree angle sum and then satisfy ASA.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_201. The student must decide: Decide that two corresponding angles and a non-included corresponding side are sufficient to guarantee triangle congruence by deriving the third angle. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m20_qp_22:q7",
+    "hinge": "math/grade_07/ch_201/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H008"
+  }
+}

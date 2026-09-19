@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Avni writes the numbers $14 \\times 6$ and $14 \\times 9$. She wants their highest common factor.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the common multiplier $14$, and stop with HCF $= 14$."
+    },
+    {
+      "id": "B",
+      "text": "Say HCF $= 14$ even when the remaining factors $6$ and $9$ still share a common factor."
+    },
+    {
+      "id": "C",
+      "text": "HCF $= 14 \\times \\mathrm{HCF}(6, 9) = 14 \\times 3 = 42$, because $14$ joins any leftover shared factor."
+    },
+    {
+      "id": "D",
+      "text": "Choose $14$ only because $14$ is the largest printed number among $14$, $6$, and $9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A shared multiplier enters the HCF, and shared factors in the remaining multipliers can remain: HCF(14×6,14×9)=14×3=42. Stopping at 14 alone substitutes the visible multiplier for the full HCF. Ignoring leftover shared factors omits a needed check. Grabbing the largest print is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

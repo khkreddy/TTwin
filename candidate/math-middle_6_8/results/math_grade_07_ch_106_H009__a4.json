@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Neil has a $3$ by $3$ magic square whose magic sum is $15$. He adds $2$ to every entry.\n\nWhich claim correctly states what happens?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer an entry, and stop at that single cell."
+    },
+    {
+      "id": "B",
+      "text": "Say the new magic sum $21$ is what creates the add-$2$ change on every entry."
+    },
+    {
+      "id": "C",
+      "text": "The grid stays a magic square and the magic sum becomes $15 + 3 \\times 2 = 21$."
+    },
+    {
+      "id": "D",
+      "text": "Fill or reject the grid by checking only one row sum of $1$ through $9$, ignoring the add-$2$ transform."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adding the same number k to every entry keeps a magic square and raises the magic sum by 3k; here 15+6=21. Naming one entry substitutes the wrong object. Saying the new sum creates the add-2 change reverses the relation. Checking a raw 1–9 fill conflates a different magic-square task.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

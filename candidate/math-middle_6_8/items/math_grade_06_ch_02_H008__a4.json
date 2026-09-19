@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_06/ch_02/H008",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_06/ch_02/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H008"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H008",
+    "stem": "Aarav looks at the diagram. Points $B$, $O$ and $A$ lie on one straight line, and ray $OC$ meets line $BA$ at $O$. The marked angle at $O$ between $OC$ and $OA$ is $90^{\\circ}$.\n\nWhich claim about the figure is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Ray $OC$ is perpendicular to line $BA$, and $\\angle COA$ is a right angle.",
+      "B": "$\\angle BOA$ is a right angle because ray $OC$ is drawn.",
+      "C": "Every angle drawn on line $BA$ must be a straight angle.",
+      "D": "Angle $\\angle COA$ is right because the letter $C$ is printed highest on the page."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.0]\n  \\draw[line width=1.05pt] (-0.2,0)--(5.2,0) node[right]{$A$};\n  \\node[left] at (-0.2,0){$B$};\n  \\coordinate (O) at (2.5,0);\n  \\fill (O) circle (1.3pt);\n  \\node[below] at (O){$O$};\n  \\draw[line width=1.05pt] (O)--(2.5,2.4) node[above]{$C$};\n  \\draw[line width=0.8pt] (2.5,0.35)--(2.85,0.35)--(2.85,0);\n  \\node[above right] at (2.55,0.55){$90^{\\circ}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Neil multiplies the integers $(-2) \\times (-3) \\times 4$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states what regrouping or reordering does to the product?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer the product alone, with no check that the factors stay the same integers."
+        },
+        {
+          "id": "B",
+          "text": "$(-2) \\times \\bigl((-3) \\times 4\\bigr)$ and $\\bigl((-2) \\times (-3)\\bigr) \\times 4$ both equal $24$, and any order of these factors keeps that product."
+        },
+        {
+          "id": "C",
+          "text": "Treat the product as unchanged even when the factors are no longer these integers."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Integer multiplication is associative and commutative, so regrouping or reordering these factors keeps the product $24$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Associativity and commutativity keep the product of these integers the same under regrouping. Naming \"product\" alone substitutes a label. Dropping the integer-factor condition omits when the property applies.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

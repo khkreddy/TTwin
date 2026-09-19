@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows right triangle PQR with right angle at P. Imran measures $PQ = PR = 6$ cm and wants the relation for the hypotenuse $c$.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$c^2 = 2 \\times 6^2 = 72$, because for equal perpendicular sides $a$, $c^2 = 2a^2$."
+    },
+    {
+      "id": "B",
+      "text": "The hypotenuse equals 6 cm, renaming the equal legs as if they were already the hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "Equal legs are produced only after $c^2 = 2a^2$ is known, so the side lengths cannot start the relation."
+    },
+    {
+      "id": "D",
+      "text": "Choose $c = 6$ because 6 is the number printed on both legs."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.2,0);\n  \\coordinate (R) at (0,3.2);\n  \\draw[line width=1.05pt] (P)--(Q)--(R)--cycle;\n  \\draw (P)--++(0.35,0)--++(0,0.35);\n  \\node[below left] at (P) {P};\n  \\node[below right] at (Q) {Q};\n  \\node[above left] at (R) {R};\n  \\node[below] at (1.6,-0.15) {6 cm};\n  \\node[left] at (-0.15,1.6) {6 cm};\n  \\node[above right] at (1.7,1.7) {$c$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal perpendicular sides give $c^2=2a^2=72$. Calling a leg the hypotenuse swaps terms. Requiring the formula before the legs reverses the relation. Picking 6 from the print captures a surface number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as isosceles right triangle PQR with equal legs 6 cm and hypotenuse c."
+  }
+}

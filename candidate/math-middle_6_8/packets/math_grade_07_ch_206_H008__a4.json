@@ -1,0 +1,140 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_s12_qp_33:q9",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:28:40.806Z",
+  "source": {
+    "item_ref": "session:0580_s12_qp_33:q9",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a regular hexagon inside a circle, centre O and radius 8 cm.\nEach vertex of the hexagon is on the circumference of the circle.\nA B M AB\nand are two vertices of the hexagon and is the midpoint of .",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Calculate",
+        "marks": 0
+      },
+      {
+        "id": "i",
+        "text": "angle AOB,",
+        "marks": 0
+      },
+      {
+        "id": "i",
+        "text": "Angle AOB = [1]",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "angle AOM.",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "Angle AOM = [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Write down the length AB. AB = cm [1]",
+        "marks": 0
+      },
+      {
+        "id": "c",
+        "text": "Show that the length of OM = 6.93 cm, correct to 3 significant figures. [2]",
+        "marks": 0
+      },
+      {
+        "id": "d",
+        "text": "Calculate the area of triangle AOB. ² cm [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=1,line cap=round,line join=round]\\coordinate (O) at (0,0);\\coordinate (A) at (-1.5,-2.598);\\coordinate (B) at (1.5,-2.598);\\coordinate (M) at (0,-2.598);\\coordinate (R) at (3,0);\\coordinate (TR) at (1.5,2.598);\\coordinate (TL) at (-1.5,2.598);\\coordinate (L) at (-3,0);\\fill[gray!35] (O) circle[radius=3];\\fill[white] (A)--(B)--(R)--(TR)--(TL)--(L)--cycle;\\draw[thick] (O) circle[radius=3];\\draw[thick] (A)--(B)--(R)--(TR)--(TL)--(L)--cycle;\\draw[thick] (A)--(O)--(B);\\draw[dashed] (O)--(M);\\draw (M)++(-0.18,0)--++(0,0.18)--++(0.18,0);\\node[above left=1pt] at (O) {$O$};\\node[below left=2pt] at (A) {$A$};\\node[below right=2pt] at (B) {$B$};\\node[below=2pt] at (M) {$M$};\\node[left=5pt] at (-0.75,-1.30) {$8\\,\\mathrm{cm}$};\\node[align=left] at (4.15,1.05) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_206/H008",
+      "unit_id": "math/grade_07/ch_206/H008",
+      "title": "Decide why six congruent equilateral triangles can be assembled to construct a regular hexagon.",
+      "node_labels": [
+        "Geometric proof, congruence and similarity criteria",
+        "Euclidean geometry, congruence, similarity and proof"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Geometric proof, congruence and similarity criteria",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Regular hexagon is the label that belongs on this item, so 'Decide why six congruent equilateral triangles can be assembled to' is answered as regular hexagon rather than regular polygon."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "regular polygon still holds here even though The six triangles must be congruent and equilateral is missing from the stem — on the item about Decide why six congruent equilateral triangles can be."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The regular polygon rule also covers this: regular pentagon construction, so it is not an exception — on the item about Decide why six congruent equilateral triangles can be."
+      }
+    ],
+    "enrichment": "Six congruent equilateral triangles fit around a common point because their 60 degree angles add to 360 degrees; the resulting outside boundary has equal sides and each hexagon angle is 60 degrees plus 60 degrees, or 120 degrees.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_206. The student must decide: Decide why six congruent equilateral triangles can be assembled to construct a regular hexagon. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_s12_qp_33:q9",
+    "hinge": "math/grade_07/ch_206/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_206/H008"
+  }
+}
