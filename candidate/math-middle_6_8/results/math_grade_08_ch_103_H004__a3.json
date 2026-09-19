@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit writes numbers with Roman landmarks: I $=1$, V $=5$, X $=10$, L $=50$. He wants to represent $48$.\n\nWhich plan follows landmark decomposition?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Answer \"Roman numerals\", naming the system instead of building $48$ from landmarks."
+    },
+    {
+      "id": "B",
+      "text": "String any mix of I, V, X, L without taking as many of the largest useful landmark as possible first."
+    },
+    {
+      "id": "C",
+      "text": "Take one XL for $40$ (the largest useful landmark not past $48$), then VIII for the remaining $8$, writing XLVIII."
+    },
+    {
+      "id": "D",
+      "text": "Copy the Hindu–Arabic digits $4$ and $8$ as shapes, and treat those drawn shapes as the Roman form."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Landmark systems take as many copies as possible of the largest useful landmark, then smaller ones for the remainder: 48 = XL + VIII = XLVIII.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

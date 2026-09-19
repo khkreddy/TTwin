@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit measures a ribbon as $45$ millimetres long. He needs the length in centimetres. There are $10$ millimetres in $1$ centimetre.\n\nWhich conversion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the answer as \"centimetre\", naming the unit instead of writing the decimal length."
+    },
+    {
+      "id": "B",
+      "text": "Say that centimetres are what produce millimetres, so he must invent $45$ mm from a finished centimetre reading."
+    },
+    {
+      "id": "C",
+      "text": "$45$ mm $= 4.5$ cm, because each millimetre is $0.1$ of a centimetre."
+    },
+    {
+      "id": "D",
+      "text": "Write $45$ cm, copying the printed digits $45$ without shifting by the $10$-to-$1$ place relation."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When 10 smaller units make 1 larger unit, each smaller unit is 0.1 of the larger: 45 mm = 4.5 cm. Naming the unit, reversing the conversion, or copying 45 without the place shift all miss the decimal link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

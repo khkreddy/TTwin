@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier has a $5$ by $4$ rectangular grid of small squares. He wants to know whether the total number of small squares is even or odd without multiplying $5 \\times 4$.\n\nWhat can he decide?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the row count $5$ the parity answer, without using both dimensions."
+    },
+    {
+      "id": "B",
+      "text": "Ignore that one side is even, and treat the parity as unknown until the product is formed."
+    },
+    {
+      "id": "C",
+      "text": "The total is even, because at least one side length is even."
+    },
+    {
+      "id": "D",
+      "text": "Say the even-or-odd decision is what creates the $5$ by $4$ grid sizes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A rectangular grid has an odd number of small squares only when both side lengths are odd. Here 4 is even, so the total is even without multiplying.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

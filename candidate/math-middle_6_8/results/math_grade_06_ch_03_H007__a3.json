@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Qadir lists every whole number from $10$ to $19$. He wants the number of times the digit $1$ is written in that list.\n\nWhich count is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count $10$, $11$, $12$, $13$, $14$, $15$, $16$, $17$, $18$, and $19$ as ten hits, treating each number that contains a $1$ as a single hit."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing the digit $1$ is what creates the list from $10$ to $19$."
+    },
+    {
+      "id": "C",
+      "text": "Count every written $1$: one in $10$, two in $11$, and one each in $12$ through $19$, for $11$ written ones."
+    },
+    {
+      "id": "D",
+      "text": "Use the same $11$ also as the count of how many times $1$ appears from $1$ to $100$, with no further check."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each written appearance of the digit counts, so $11$ contributes two ones and the range yields eleven written ones. Counting numbers that contain a $1$ once each omits repeated digits. Reversing digit and list, or extending the same total to $1$–$100$, leaves this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

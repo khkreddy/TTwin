@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Uma models integers with tokens. She has $2$ positive tokens and must subtract $3$ positive tokens.\n\nWhich move lets her complete the subtraction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rename her $2$ positive tokens as negative tokens, and remove nothing."
+    },
+    {
+      "id": "B",
+      "text": "Try to remove $3$ positive tokens at once, skipping any zero pairs, even though only $2$ positive tokens are present."
+    },
+    {
+      "id": "C",
+      "text": "Add one zero pair (one positive and one negative token), then remove $3$ positive tokens; $1$ negative token remains."
+    },
+    {
+      "id": "D",
+      "text": "Say the finished difference is what creates the need for zero pairs, instead of adding zero pairs before removal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When the tokens to remove are not present, add zero pairs first so the value is unchanged, then remove the subtrahend tokens. Here one zero pair allows removal of 3 positives and leaves 1 negative.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

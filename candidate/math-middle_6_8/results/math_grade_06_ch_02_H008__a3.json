@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Lalit looks at the figure: line AOB is straight through O, and ray OC meets AOB so that angle $1$ equals angle $2$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $1$ is a right angle for any split of AOB, even when angle $1$ is not half of the straight angle."
+    },
+    {
+      "id": "B",
+      "text": "He should first study the decorative history of the diagram before classifying any angle."
+    },
+    {
+      "id": "C",
+      "text": "AOB is a straight angle (a half turn); because angle $1$ equals angle $2$, each is a right angle, so OC is perpendicular to AOB."
+    },
+    {
+      "id": "D",
+      "text": "The answer is \"straight angle\", because those words are printed beside AOB, without using the equal split."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=1.0]\n\\draw[thick] (-2.2,0) -- (2.2,0);\n\\draw[thick] (0,0) -- (0,2.0);\n\\node[below left] at (-2.0,0) {A};\n\\node[below right] at (2.0,0) {B};\n\\node[below] at (0,-0.15) {O};\n\\node[above] at (0,2.0) {C};\n\\node at (-0.55,0.35) {$1$};\n\\node at (0.55,0.35) {$2$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A straight angle is a half turn; an equal split makes two right angles; lines meeting at right angles are perpendicular. Skipping the half-turn condition, citing history, or grabbing the printed label miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Straight line AOB with ray OC upright; angles 1 and 2 marked equal."
+  }
+}

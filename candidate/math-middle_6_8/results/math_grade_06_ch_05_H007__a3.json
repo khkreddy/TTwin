@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Walia checks whether $8$ and $9$ are co-prime by looking at their common factors.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call them a safe pair as a name only, without checking common factors of $8$ and $9$."
+    },
+    {
+      "id": "B",
+      "text": "Say the co-prime decision is what creates the absence of a common factor greater than $1$, instead of checking factors first."
+    },
+    {
+      "id": "C",
+      "text": "They are co-prime, because their only common factor is $1$."
+    },
+    {
+      "id": "D",
+      "text": "Decide from the final digit alone, as in a divisibility-by-$2$ or $5$ check, without listing common factors of $8$ and $9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two numbers are co-prime when they share no common factor other than 1. The factors of 8 and 9 meet only at 1.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

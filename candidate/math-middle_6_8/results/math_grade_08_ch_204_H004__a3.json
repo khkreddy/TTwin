@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin builds a Sierpinski Triangle. He starts with one filled equilateral triangle. At each step he joins the midpoints of every remaining filled triangle and removes the open middle triangle.\n\nAfter step $1$, how many filled triangles remain?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$1$, keeping the original triangle without removing the open middle."
+    },
+    {
+      "id": "B",
+      "text": "Say that removing the middle is what creates the midpoints, so he skips joining midpoints first."
+    },
+    {
+      "id": "C",
+      "text": "$3$, because joining the midpoints makes four congruent small triangles and the open middle is removed."
+    },
+    {
+      "id": "D",
+      "text": "Count holes with the Sierpinski Carpet square-hole rule instead of midpoint removal on triangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Midpoint joins split one triangle into four congruent small ones; removing the open middle leaves three filled triangles. Skipping removal, reversing removal and midpoints, or switching to the carpet hole rule all break the step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

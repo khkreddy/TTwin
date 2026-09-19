@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona has two card angles. She wants to know which is larger by overlaying them.\n\nWhich method decides correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lay them so the vertices miss each other, and still claim the overlay compares the angles."
+    },
+    {
+      "id": "B",
+      "text": "Say that the larger angle is what produces a successful overlay, instead of using overlay to compare."
+    },
+    {
+      "id": "C",
+      "text": "Place both vertices together and match one arm; the angle whose other arm lies outside is larger (they match if equal)."
+    },
+    {
+      "id": "D",
+      "text": "Use the same overlay test to decide which decorative colour on the card is brighter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Overlay compares turn only when vertices coincide and one arm is matched. Missing vertices, reversing cause and test, or scoring colour all miss that comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

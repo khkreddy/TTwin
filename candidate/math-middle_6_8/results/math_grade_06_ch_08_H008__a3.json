@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tanya draws rectangle PQRS. She wants to explore its diagonals by length and by the angles they make.\n\nWhich plan starts the comparison correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Compare side PQ with side QR only, without joining any opposite corners."
+    },
+    {
+      "id": "B",
+      "text": "Say that drawing the diagonals is what creates rectangle PQRS."
+    },
+    {
+      "id": "C",
+      "text": "Join opposite corners to form diagonals PR and QS, then compare those lengths and the angles they form."
+    },
+    {
+      "id": "D",
+      "text": "Also prove the general diagonal laws for every parallelogram, as if that proof were required for this exploration."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Diagonals join opposite corners; the exploration compares those segments and the angles they form. Skipping the joins, reversing diagonals and the rectangle, or expanding into a full parallelogram proof all leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

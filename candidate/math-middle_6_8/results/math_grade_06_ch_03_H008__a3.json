@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Omkar wants a $3$-digit palindrome using digits from $1$ to $9$ only.\n\nWhich number is a $3$-digit palindrome?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$123$, claiming it is a palindrome even though the hundreds digit $1$ and the units digit $3$ differ."
+    },
+    {
+      "id": "B",
+      "text": "Say that digits are what the palindrome label produces, so any $3$-digit number he likes counts."
+    },
+    {
+      "id": "C",
+      "text": "$454$, because it reads the same forwards and backwards (hundreds digit equals units digit)."
+    },
+    {
+      "id": "D",
+      "text": "Treat $45$ as a $3$-digit palindrome by the same rule."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A $3$-digit palindrome has equal hundreds and units digits: $454$ works. Dropping that match, reversing digits and the label, or accepting a $2$-digit string all miss the palindrome rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_01/H004",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_01/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "remove",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "scope_error",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_01/H004"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_01:H004:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_01",
+    "chapter_label": "math/grade_06/ch_01",
+    "subtopic_id": "math/grade_06/ch_01/H004",
+    "stem": "Isha builds an $n$-by-$n$ square of unit tiles. She peels it into $n$ nested L-shaped layers: the outermost L uses $2n-1$ tiles, then $2n-3$, and so on down to $1$.\n\nWhy does the sum of the first $n$ odd numbers equal $n^{2}$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Any collection of odd numbers sums to a square, even if the odds are not the first $n$ consecutive odds starting at $1$.",
+      "B": "The same L-layer story also explains the up-and-down sum of ordinary counting numbers, so that sum must equal $n^{2}$ too.",
+      "C": "The $n$-by-$n$ square can be partitioned into those $n$ nested odd L-layers, so $1+3+\\cdots+(2n-1)=n^{2}$.",
+      "D": "The answer is \"odd numbers\", because that phrase is printed most often in the problem."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_01/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

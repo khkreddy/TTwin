@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Xavier asks why a circle is a special limiting case for line symmetry and rotational symmetry.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Say the circle matches itself after some turn, but skip that the turn is about the centre and that every diameter is a symmetry line."
+    },
+    {
+      "id": "B",
+      "text": "Say the centre is what the circle creates, instead of using the centre to test turns and diameters."
+    },
+    {
+      "id": "C",
+      "text": "A circle matches itself after a turn by any angle about its centre, and every diameter is a line of symmetry, so it has infinitely many rotational symmetries and infinitely many symmetry lines."
+    },
+    {
+      "id": "D",
+      "text": "Require group-theory language about symmetry groups, beyond line and turn matching for the circle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A circle is invariant under any rotation about its centre and under reflection in every diameter, so both kinds of symmetry occur infinitely often.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

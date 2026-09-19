@@ -3,62 +3,62 @@
   "science_units": 1877,
   "junior_live": 804,
   "live_distinct_primaries": 8,
-  "candidates": 92,
-  "uncovered": 1779,
+  "candidates": 137,
+  "uncovered": 1734,
   "by_node": {
     "B2": {
       "units": 308,
       "live": 2,
-      "candidate": 35,
-      "uncovered": 271
+      "candidate": 51,
+      "uncovered": 255
     },
     "M3": {
       "units": 81,
       "live": 0,
-      "candidate": 4,
-      "uncovered": 77
+      "candidate": 5,
+      "uncovered": 76
     },
     "M4": {
       "units": 207,
       "live": 3,
-      "candidate": 9,
-      "uncovered": 195
+      "candidate": 17,
+      "uncovered": 187
     },
     "B5": {
       "units": 9,
       "live": 0,
-      "candidate": 3,
-      "uncovered": 6
+      "candidate": 4,
+      "uncovered": 5
     },
     "M8": {
       "units": 219,
       "live": 1,
-      "candidate": 4,
-      "uncovered": 214
+      "candidate": 6,
+      "uncovered": 212
     },
     "M1": {
       "units": 300,
       "live": 2,
-      "candidate": 20,
-      "uncovered": 278
+      "candidate": 32,
+      "uncovered": 266
     },
     "M5": {
       "units": 171,
       "live": 0,
-      "candidate": 6,
-      "uncovered": 165
+      "candidate": 8,
+      "uncovered": 163
     },
     "M2": {
       "units": 280,
       "live": 0,
-      "candidate": 8,
-      "uncovered": 272
+      "candidate": 9,
+      "uncovered": 271
     },
     "B1": {
       "units": 9,
       "live": 0,
-      "candidate": 1,
-      "uncovered": 8
+      "candidate": 3,
+      "uncovered": 6
     },
     "M6": {
       "units": 116,
@@ -81,12 +81,27 @@
   },
   "last_run": {
     "cmd": "compile",
-    "attempted": 1,
-    "ok": 1,
+    "attempted": 12,
+    "ok": 12,
     "fail_closed": 0,
     "skip": 0,
     "by_node": {
-      "M3": {
+      "B2": {
+        "attempted": 2,
+        "ok": 2,
+        "fail_closed": 0
+      },
+      "M1": {
+        "attempted": 6,
+        "ok": 6,
+        "fail_closed": 0
+      },
+      "M4": {
+        "attempted": 3,
+        "ok": 3,
+        "fail_closed": 0
+      },
+      "M5": {
         "attempted": 1,
         "ok": 1,
         "fail_closed": 0
@@ -96,14 +111,157 @@
       {
         "status": "compiled",
         "gate": null,
-        "unit_id": "math/grade_06/ch_01/H003",
-        "node": "M3",
+        "unit_id": "math/grade_06/ch_01/H004",
+        "node": "B2",
         "source_uid": "math_7b_rjb_ch8_s1_t122",
         "join_status": "BOUND",
         "variation_class": "V1",
         "fidelity_mode": "FAITHFUL_TRANSFER",
-        "packet": "packets/math_grade_06_ch_01_H003__a1.json",
-        "chars": 4769,
+        "packet": "packets/math_grade_06_ch_01_H004__a1.json",
+        "chars": 4455,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_06/ch_05/H005",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_06_ch_05_H005__a1.json",
+        "chars": 4285,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_06/ch_09/H007",
+        "node": "M4",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_06_ch_09_H007__a1.json",
+        "chars": 4475,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_07/ch_103/H004",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_07_ch_103_H004__a1.json",
+        "chars": 4712,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_07/ch_107/H004",
+        "node": "M4",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_07_ch_107_H004__a1.json",
+        "chars": 4170,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_07/ch_203/H004",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_07_ch_203_H004__a1.json",
+        "chars": 4473,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_07/ch_207/H004",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_07_ch_207_H004__a1.json",
+        "chars": 4356,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_08/ch_103/H004",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_08_ch_103_H004__a1.json",
+        "chars": 4518,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_08/ch_107/H004",
+        "node": "M1",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_08_ch_107_H004__a1.json",
+        "chars": 4231,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_08/ch_203/H004",
+        "node": "B2",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_08_ch_203_H004__a1.json",
+        "chars": 4169,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_08/ch_207/H004",
+        "node": "M5",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_08_ch_207_H004__a1.json",
+        "chars": 4253,
+        "pedagogy": true
+      },
+      {
+        "status": "compiled",
+        "gate": null,
+        "unit_id": "math/grade_06/ch_02/H008",
+        "node": "M4",
+        "source_uid": "math_7b_rjb_ch8_s1_t122",
+        "join_status": "BOUND",
+        "variation_class": "V1",
+        "fidelity_mode": "FAITHFUL_TRANSFER",
+        "packet": "packets/math_grade_06_ch_02_H008__a1.json",
+        "chars": 4605,
         "pedagogy": true
       }
     ]

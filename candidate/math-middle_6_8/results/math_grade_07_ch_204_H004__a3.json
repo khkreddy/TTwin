@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nitin multiplies $1.2 \\times 0.4$.\n\nWhich method is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $12$ the finished product, without placing any decimal point."
+    },
+    {
+      "id": "B",
+      "text": "Multiply $12 \\times 4 = 48$, then place the decimal using only one decimal place, skipping that $1.2$ and $0.4$ contribute $1+1=2$ places."
+    },
+    {
+      "id": "C",
+      "text": "Multiply $12 \\times 4 = 48$, then place the decimal point so the product has $2$ decimal places: $0.48$."
+    },
+    {
+      "id": "D",
+      "text": "Say the decimal places in the product are what create the factors $1.2$ and $0.4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiply without decimals, then place the point using the total number of decimal places in the factors: $1+1=2$, so $48$ becomes $0.48$. Dropping the point, undercounting places, or reversing product into factors all miss that placement rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ritu records runs in five matches: $12$, $0$, $8$, dash (did not play), and $10$. She wants the mean runs per match played.\n\nHow should she form the mean?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Drop both the observed $0$ and the dash, treating each as a no-value label."
+    },
+    {
+      "id": "B",
+      "text": "Average five entries by counting the dash as a played match with blank score."
+    },
+    {
+      "id": "C",
+      "text": "Sum $12+0+8+10=30$ over the four played matches, so the mean is $30/4$; exclude the dash."
+    },
+    {
+      "id": "D",
+      "text": "Replace the dash with a guessed score and average all five numbers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An observed $0$ is a real score and enters the mean; a non-played dash is excluded from the count. So $30/4$. Treating $0$ as missing, counting the dash as played, or imputing a fill-in all leave this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

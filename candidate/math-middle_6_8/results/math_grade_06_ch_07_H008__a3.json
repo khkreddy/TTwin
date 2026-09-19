@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parul adds $\\frac{2}{7}$ and $\\frac{3}{7}$.\n\nHow should she find the sum?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the shared denominator the sum, without adding the numerator counts."
+    },
+    {
+      "id": "B",
+      "text": "Say that adding the fractions is what creates the common denominator after the fact."
+    },
+    {
+      "id": "C",
+      "text": "Keep the denominator $7$ and add the numerators: $\\frac{2}{7} + \\frac{3}{7} = \\frac{5}{7}$."
+    },
+    {
+      "id": "D",
+      "text": "Report $3$ alone because that numeral is printed largest in the second fraction."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-denominator fractions add by adding numerator counts on the shared unit: $2+3=5$, so $\\frac{5}{7}$. Reporting the denominator, reversing sum into the denominator, or grabbing a printed numeral all miss that count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

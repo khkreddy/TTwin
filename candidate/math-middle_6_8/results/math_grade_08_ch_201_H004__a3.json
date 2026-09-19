@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Mona scores $18$ marks out of $20$ on one test and $22$ marks out of $25$ on another.\n\nWhich claim about comparing her percentages is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$22$ is larger than $18$, so the second score is the higher percent even without comparing the different wholes."
+    },
+    {
+      "id": "B",
+      "text": "Fair comparison is what produces the different wholes, so she skips making the bases comparable."
+    },
+    {
+      "id": "C",
+      "text": "Convert both to percentages first ($90\\%$ and $88\\%$), because the wholes $20$ and $25$ differ."
+    },
+    {
+      "id": "D",
+      "text": "Compare the raw scores on a third unrelated whole of $100$ marks she did not take."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Percentages with different wholes are not compared by raw marks alone. $18/20=90\\%$ and $22/25=88\\%$. Ignoring bases, reversing comparison into the wholes, or inventing a third whole all skip comparable bases.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

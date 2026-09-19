@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Parul asks whether calling a quadrilateral a rectangle is the same as saying its diagonals are equal and bisect each other.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a rectangle from equal diagonals alone, skipping that the diagonals must also bisect each other in the parallelogram setting."
+    },
+    {
+      "id": "B",
+      "text": "Equal bisecting diagonals are produced by the rectangle name after the fact, so either label invents the other without checking."
+    },
+    {
+      "id": "C",
+      "text": "Among parallelograms, equal diagonals (which already bisect) make a rectangle; outside that setting the two statuses are not freely interchangeable."
+    },
+    {
+      "id": "D",
+      "text": "The same claim also makes any two equal crossing sticks on the desk a rectangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal diagonals characterise a rectangle among parallelograms, where diagonals already bisect. Dropping a required diagonal condition, reversing name and property, or applying the claim to loose sticks all misuse interchangeability.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

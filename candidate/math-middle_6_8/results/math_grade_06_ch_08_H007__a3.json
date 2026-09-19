@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Vivek must divide a $6$ cm by $4$ cm rectangle into identical squares that fill the rectangle with no gaps.\n\nWhich claim correctly plans the equal segments?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark any set of cuts across the $6$ cm side alone, and skip making every square side equal."
+    },
+    {
+      "id": "B",
+      "text": "First draw the finished identical squares, and say those squares are what create the $6$ cm and $4$ cm sides."
+    },
+    {
+      "id": "C",
+      "text": "Choose a common side length that divides both $6$ cm and $4$ cm, then cut so every square has all four sides equal to that length."
+    },
+    {
+      "id": "D",
+      "text": "First find the rectangle's area $24$ cm$^{2}$, and treat that area formula as the tiling into identical squares."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Identical squares that fill a rectangle need a common side length that divides both sides, and every side of each square equals that length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

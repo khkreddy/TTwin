@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sahil simplifies $3^{4}\\times 3^{3}$.\n\nWhich step is valid?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write $3^{4}\\times 5^{3}=3^{7}$, adding the exponents even though the bases are not the same."
+    },
+    {
+      "id": "B",
+      "text": "Write $3^{4}+3^{3}=3^{7}$, extending the product rule to a sum of powers."
+    },
+    {
+      "id": "C",
+      "text": "Write $3^{4}\\times 3^{3}=3^{7}$, adding the exponents because the bases are the same."
+    },
+    {
+      "id": "D",
+      "text": "Choose $3^{7}$ only because $7$ is the largest single digit printed among $3$, $4$, and $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-base products add exponents: $3^{4}\\times 3^{3}=3^{7}$. Adding exponents with different bases omits the same-base condition. Extending the rule to a sum, or picking the largest printed digit, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
