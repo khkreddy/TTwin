@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows sun-heated land warming the moist air above a school playground. Siddharth watches the air rise and a dark cloud form before a thunderstorm begins.\n\nWhich claim correctly describes the chain that produces the thunderstorm?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Warm moist air rises over the heated land, leaving a low-pressure area; cooler air then flows in and the rising moist air forms the cloud."
+    },
+    {
+      "id": "B",
+      "text": "Cool dry air sinks first over the heated land and that sinking alone forms the thunderstorm cloud."
+    },
+    {
+      "id": "C",
+      "text": "Warm moist air need not rise; a thunderstorm cloud still forms over the heated land."
+    },
+    {
+      "id": "D",
+      "text": "The dark cloud forms only because the cloud shape in the diagram looks dark."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,>=stealth]\n% heated land\n\\fill[brown!35] (0,0) rectangle (6.2,0.55);\n\\draw[thick] (0,0.55)--(6.2,0.55);\n\\node[font=\\footnotesize] at (3.1,0.25) {heated land};\n% rising moist air\n\\draw[->,thick] (2.0,0.7)--(2.0,2.2);\n\\draw[->,thick] (3.1,0.7)--(3.1,2.4);\n\\draw[->,thick] (4.2,0.7)--(4.2,2.2);\n\\node[font=\\footnotesize] at (5.35,1.5) {rising};\n\\node[font=\\footnotesize] at (5.35,1.15) {moist air};\n% cloud\n\\draw[thick,fill=gray!25] (1.4,2.55) .. controls (1.1,3.2) and (1.9,3.55) .. (2.7,3.35)\n  .. controls (3.2,3.85) and (4.2,3.75) .. (4.6,3.25)\n  .. controls (5.3,3.45) and (5.5,2.85) .. (4.9,2.55)\n  .. controls (4.2,2.35) and (2.2,2.35) .. (1.4,2.55);\n\\node[font=\\footnotesize] at (3.2,3.05) {cloud};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heated land warms moist air so it rises and leaves low pressure; cooler air flows in and the rising moist air builds the cloud. Cool dry air sinking first swaps the chain; skipping rise omits the needed condition; judging from paint colour is a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote force-on-object diagram into heated land, rising moist air, and a cloud."
+  }
+}

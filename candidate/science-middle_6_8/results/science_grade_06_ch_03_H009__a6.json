@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Nidhi adds a few drops of iodine solution to a piece of boiled corn. The corn turns blue-black.\n\nWhat does the colour show?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Starch is present in the corn."
+    },
+    {
+      "id": "B",
+      "text": "Protein is present in the corn."
+    },
+    {
+      "id": "C",
+      "text": "Starch is present even if the corn had not turned blue-black."
+    },
+    {
+      "id": "D",
+      "text": "Every part of the corn cob, including the hard outer husk, must contain starch."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Blue-black with iodine indicates starch. Protein swaps the nutrient term; claiming starch without the colour omits the test result; extending starch to every part including the husk over-widens the claim.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

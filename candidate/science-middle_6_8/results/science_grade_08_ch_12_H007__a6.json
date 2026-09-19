@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ojas studies this paddy-field food chain: paddy plants → rat → snake → eagle.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which statement correctly assigns the trophic levels?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Paddy plants are first (producers); the rat is second; the snake is third; the eagle is later."
+        },
+        {
+          "id": "B",
+          "text": "The eagle is first because it is the largest animal in the chain."
+        },
+        {
+          "id": "C",
+          "text": "The rat is first even though it does not make its own food from sunlight."
+        },
+        {
+          "id": "D",
+          "text": "Every animal in the chain is at the first trophic level."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Producers come first; the herbivore rat is second; the snake is a small carnivore at the third level; the eagle is a larger carnivore later."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Producers are first, herbivores second, small carnivores third, larger carnivores later. Ranking by size is a surface feature; putting the rat first omits the producer rule; placing every animal first over-widens the first level.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Aditya fills a small plastic cup with vinegar. He dips one aluminium strip and one copper strip into the vinegar so the strips do not touch, then joins both strips with wires to a small LED. The LED glows.\n\nWhich claims correctly judge this setup? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a working Voltaic cell because the aluminium and copper strips are different metals in the vinegar electrolyte."
+    },
+    {
+      "id": "B",
+      "text": "It is a working Voltaic cell because the glowing LED shows that a circuit can carry current from this cell."
+    },
+    {
+      "id": "C",
+      "text": "It is a working Voltaic cell even if both strips were copper."
+    },
+    {
+      "id": "D",
+      "text": "It is a working electromagnet because the LED glows."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A Voltaic cell needs two different metal electrodes and an electrolyte; aluminium and copper in vinegar meet that test, and the glowing LED shows current. Same-metal electrodes omit the different-metal condition; calling it an electromagnet swaps the term.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

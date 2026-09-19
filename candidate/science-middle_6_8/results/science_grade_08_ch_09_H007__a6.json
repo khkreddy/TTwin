@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Leela measures a small plastic bead. Its mass is 15 g and its volume is 20 cm³.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What is the density of the bead?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The density of the bead is 0.75 g/cm³."
+        },
+        {
+          "id": "B",
+          "text": "The mass of the bead is 0.75 g/cm³."
+        },
+        {
+          "id": "C",
+          "text": "The density of the bead is 15 g/cm³ because volume need not be used."
+        },
+        {
+          "id": "D",
+          "text": "The density is 0.75 g/cm³ for any plastic object of any size."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "State the relationship you used to find the density.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Density equals mass divided by volume: 15 g / 20 cm³ = 0.75 g/cm³."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Density is mass divided by volume, so 15/20 = 0.75 g/cm³ for this bead. Calling that value the mass swaps the term; omitting volume, or applying the same density to every plastic object, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

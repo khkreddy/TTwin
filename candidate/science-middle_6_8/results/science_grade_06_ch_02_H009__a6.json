@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Bilal notes that a cactus in a hot dry region has a thick stem that stores water and spines instead of broad leaves.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The thick water-storing stem is an adaptation that helps the cactus survive in that dry region."
+    },
+    {
+      "id": "2",
+      "text": "The spines instead of broad leaves are an adaptation that helps reduce water loss in that dry region."
+    },
+    {
+      "id": "3",
+      "text": "Every feature of the cactus, including any accidental scratch mark on one spine, is an adaptation for the dry region."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "T",
+      "F"
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Thick water-storing stems and spines that reduce water loss are desert adaptations. Treating every feature, including an accidental scratch, as an adaptation over-claims the idea (condition_omission / scope).",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

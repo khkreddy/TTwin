@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Charu compares three planet cards on her desk: one for a planet much closer to the Sun than Earth, one for Earth, and one for a planet much farther out. Her teacher asks why Earth's place around the Sun matters for liquid water and habitability.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly answers the teacher?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Earth is at a distance where temperatures allow water to stay liquid, which helps make Earth habitable."
+        },
+        {
+          "id": "B",
+          "text": "Earth's place for liquid water does not depend on its distance from the Sun."
+        },
+        {
+          "id": "C",
+          "text": "Liquid water would still be as easy on Earth if Earth orbited as close as the nearer planet or as far as the farther planet."
+        },
+        {
+          "id": "D",
+          "text": "Habitable conditions on Earth first create the right distance from the Sun."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "At Earth's distance the temperature range lets water stay liquid; much closer or farther orbits would be too hot or too cold for that liquid water."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's orbital distance gives a temperature range for liquid water and habitability. Dropping distance omits the condition; treating Venus-like or Mars-like orbits as equally easy over-widens the rule; putting habitability before distance reverses the relationship.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}
