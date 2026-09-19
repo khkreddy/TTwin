@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Damini asks whether $(x+5)^{2}=x^{2}+10x+25$ is an identity.\n\nWhich claim correctly decides?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Expand the left-hand side: $(x+5)^{2}=x^{2}+10x+25$, matching the right-hand side for every permitted $x$, so the equality is an identity."
+    },
+    {
+      "id": "B",
+      "text": "The work is only about naming the left-hand side, so no expansion is needed."
+    },
+    {
+      "id": "C",
+      "text": "The left-hand side is what produces an identity, so matching simplified forms is unnecessary."
+    },
+    {
+      "id": "D",
+      "text": "It is an identity because the printed constant $25$ looks like a perfect square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expanding (x+5)^2 gives x^2+10x+25 for every x, so the equality is an identity. Naming the LHS alone or treating the LHS as producing identity without matching forms misses the test. Choosing 25 for its look is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

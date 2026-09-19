@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bhavna adds $\\dfrac{3}{10}$ and $\\dfrac{2}{5}$ of a juice bottle she shares with her brother.\n\nOne or more options may be correct. Which two claims correctly describe the sum?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Same denominator means writing the sum as $\\dfrac{3+2}{10+5}=\\dfrac{5}{15}$."
+    },
+    {
+      "id": "B",
+      "text": "Rewrite $\\dfrac{2}{5}$ as $\\dfrac{4}{10}$, then add numerators over $10$ to get $\\dfrac{7}{10}$."
+    },
+    {
+      "id": "C",
+      "text": "Both fractions must be expressed with denominator $10$ before the numerators are added."
+    },
+    {
+      "id": "D",
+      "text": "A common denominator is produced by already knowing that the sum equals $\\dfrac{7}{10}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "2/5=4/10, so 3/10+4/10=7/10. Adding numerators and denominators swaps the aligned-unit rule for a false 'same denominator' recipe. Saying the known sum creates the common denominator reverses the plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

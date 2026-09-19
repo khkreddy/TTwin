@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya rinses chalk dust from a duster into a bucket. After standing, some chalk settles, but fine particles still make the water cloudy. She can pour off (decant) the upper liquid or filter it through a fine cloth. The cloth has small pores. She also has a coarse tea strainer.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Fine chalk particles that keep the water cloudy need filtration through a fine cloth, not decantation alone."
+    },
+    {
+      "id": "2",
+      "text": "A coarse tea strainer will remove chalk particles smaller than its holes."
+    },
+    {
+      "id": "3",
+      "text": "The fine cloth holds back solid particles and lets the liquid pass through its small pores."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Decantation alone leaves fine suspended particles. Filtration through a fine cloth separates them because small pores hold solids back. A coarse strainer cannot remove particles smaller than its holes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

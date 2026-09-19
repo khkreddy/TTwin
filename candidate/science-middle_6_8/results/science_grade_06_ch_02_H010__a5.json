@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ojas watches a toad that lives in a wet ditch and also hops onto the dry garden path. Habitats may be called terrestrial, aquatic, or amphibian. Waste oil later spoils the ditch. He knows some animals live in the ocean.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The toad's habitat is amphibian, and spoiling the ditch can threaten living things that need that place."
+    },
+    {
+      "id": "B",
+      "text": "The toad's habitat is aquatic, and spoiling the ditch can threaten living things that need that place."
+    },
+    {
+      "id": "C",
+      "text": "The toad's habitat is amphibian, and if a living thing is at risk its habitat must already have been spoiled."
+    },
+    {
+      "id": "D",
+      "text": "The toad's habitat is amphibian, and an ocean is not a habitat, so spoiling the ditch cannot threaten living things."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A toad that uses both wet ditch and dry path has an amphibian habitat. Damage to that place can threaten living things that need it. Calling it only aquatic omits the land part. Risk alone does not prove the habitat was spoiled. Oceans are habitats, and that does not cancel ditch damage.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

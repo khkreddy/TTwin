@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows quadrilateral $PQRS$ with both pairs of opposite sides parallel. Bina asks how rectangles and squares relate to parallelograms.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$PQRS$ is a parallelogram; rectangles and squares are special parallelograms because their opposite sides are parallel."
+    },
+    {
+      "id": "B",
+      "text": "$PQRS$ is a parallelogram only if all four angles are $90^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "Every parallelogram is a square."
+    },
+    {
+      "id": "D",
+      "text": "The same rule classifies any open path of four segments as a parallelogram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.5,0);\n  \\coordinate (R) at (5.7,2.4);\n  \\coordinate (S) at (1.2,2.4);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\node[below left] at (P) {P};\n  \\node[below right] at (Q) {Q};\n  \\node[above right] at (R) {R};\n  \\node[above left] at (S) {S};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Both pairs of opposite sides parallel make a parallelogram; rectangles and squares sit inside that set. Requiring four right angles adds an unneeded condition. Saying every parallelogram is a square reverses the inclusion. Open paths are outside the closed-quadrilateral scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source as parallelogram PQRS with opposite sides parallel."
+  }
+}

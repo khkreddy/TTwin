@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Falguni spins a round steel plate about its centre and also folds it along diameters through that centre.\n\nWhich claim correctly explains why the circle is a special limiting case for symmetry?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The plate matches itself after any turn about its centre, and every diameter is a line of symmetry."
+    },
+    {
+      "id": "B",
+      "text": "Symmetry holds for the plate only when the fold misses the centre."
+    },
+    {
+      "id": "C",
+      "text": "The centre is produced by already knowing the plate has infinitely many symmetries."
+    },
+    {
+      "id": "D",
+      "text": "The plate has exactly four symmetry lines, matching a square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Any rotation about the centre and every diameter as a mirror make the circle a limiting case. Requiring folds that miss the centre omits the centre condition. Saying the centre is produced by knowing infinite symmetries reverses the relation. Limiting to four lines over-scopes like a square.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

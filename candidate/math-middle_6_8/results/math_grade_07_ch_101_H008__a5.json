@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema must order notebooks for $33$ students when notebooks are sold only in packs of $5$. She also keeps a separate inventory tally that must record the exact student count.\n\nOne or more options may be correct. Which two claims fit these needs?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call both answers \"approximate value\" only, without choosing exact, round-up, round-down, or nearest-place for each need."
+    },
+    {
+      "id": "B",
+      "text": "Order $35$ notebooks (round up in packs of $5$ so every student has one)."
+    },
+    {
+      "id": "C",
+      "text": "Keep $33$ exact in the inventory tally."
+    },
+    {
+      "id": "D",
+      "text": "Say that writing a rounded notebook order is what creates the exact tally of $33$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Packs of 5 force a round-up order to 35; the inventory tally must stay exactly 33. Labelling both as approximate value only swaps the decision for a term. Saying the rounded order creates the exact tally reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

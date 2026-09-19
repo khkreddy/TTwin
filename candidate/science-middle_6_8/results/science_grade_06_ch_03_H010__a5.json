@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Charu rubs crushed mustard seeds on paper. A lasting oily patch shows when she holds the paper against the light. She also knows a starch test can give a blue-black colour.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lasting oily patch shows that fat is present in the mustard seeds."
+    },
+    {
+      "id": "B",
+      "text": "Starch is present in the mustard seeds because of the oily patch."
+    },
+    {
+      "id": "C",
+      "text": "The oily patch is evidence of fat; a blue-black colour is not required for this paper test."
+    },
+    {
+      "id": "D",
+      "text": "Fat is absent because there is no blue-black colour."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A lasting oily patch on paper shows fat. The starch blue-black test is a different test and is not required here. The oily patch does not show starch, and missing blue-black does not mean fat is absent.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

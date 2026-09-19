@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Esha has a solid with two parallel triangle faces joined by three rectangular faces. She wants its type and its face, edge, and vertex counts.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names the solid and counts its faces, edges, and vertices?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a triangular prism with $5$ faces, $9$ edges, and $6$ vertices."
+        },
+        {
+          "id": "B",
+          "text": "The solid is named from its edges alone, so call it a $9$-edge solid and skip the face count."
+        },
+        {
+          "id": "C",
+          "text": "The face–edge–vertex counts produce the triangle bases, so start from $5$, $9$, and $6$ without reading the faces."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Two parallel triangular bases joined by three rectangles make a triangular prism: n=3 gives n+2=5 faces, 3n=9 edges, and 2n=6 vertices."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Face arrangement shows a triangular prism; for n=3, faces=5, edges=9, vertices=6. Naming from edges alone swaps the classifying hinge. Saying counts produce the bases reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

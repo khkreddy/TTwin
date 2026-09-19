@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz's school bag cost $\\mathrm{Rs}\\,800$. Its price rises to $\\mathrm{Rs}\\,920$.\n\nWhat is the percentage increase?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$15\\%$, because the increase $120$ is taken over the original amount $800$."
+    },
+    {
+      "id": "B",
+      "text": "$13.04\\%$ approximately, because the increase $120$ is taken over the new amount $920$."
+    },
+    {
+      "id": "C",
+      "text": "$115\\%$, because $920$ as a percent of $800$ is the percentage increase."
+    },
+    {
+      "id": "D",
+      "text": "$920\\%$, because $920$ is the largest rupee amount printed in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Percentage increase is 120/800×100=15% using the original base. Using 920 as denominator omits the original-amount condition. Treating final-as-percent-of-original as the increase is a different scope. Grabbing 920 is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

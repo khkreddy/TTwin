@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohit finds mosquito larvae in rainwater collected in an unused bucket. A thin, transparent layer of kerosene covers the water surface and blocks contact between the water and air. He also thinks about mosquito eggs and about adult mosquitoes flying above the bucket. The layer looks shiny.\n\nWhy does the kerosene layer stop the larvae becoming adults?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Larvae need air at the water surface; the kerosene layer stops them obtaining air."
+    },
+    {
+      "id": "B",
+      "text": "Larvae and eggs repeatedly rise to the surface for air, and kerosene stops both from breathing."
+    },
+    {
+      "id": "C",
+      "text": "Adult mosquitoes must return to the water surface to breathe, so the kerosene layer suffocates them too."
+    },
+    {
+      "id": "D",
+      "text": "A transparent kerosene layer will not stop larvae breathing because air can pass through it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquito larvae live in water but need air at the surface. A kerosene layer blocks that air. Eggs are not the breathing stage described here, adults fly in air, and transparency does not mean air passes through the layer.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

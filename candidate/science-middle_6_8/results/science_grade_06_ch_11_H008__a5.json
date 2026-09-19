@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Anaya's terrace in sunlight: wet clothes drying on a line and a small solar panel. The clothes dry using heat from the Sun. The panel makes electricity from sunlight. Later there is no sunlight.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Drying the wet clothes uses heat from the Sun, so without sunlight that drying weakens or stops."
+    },
+    {
+      "id": "B",
+      "text": "With everything else unchanged, the solar panel produces more electricity when less sunlight reaches it."
+    },
+    {
+      "id": "C",
+      "text": "The solar panel needs sunlight to make electricity, so without sunlight it cannot make electricity."
+    },
+    {
+      "id": "D",
+      "text": "The wet clothes dry equally well in full sunlight and with no sunlight."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round,x=1cm,y=1cm]\n\\fill[yellow!75!orange] (0,2.6) circle (0.45);\n\\foreach \\a in {0,45,90,135,180,225,270,315} {\n  \\draw[orange!70,thick] (0,2.6) ++(\\a:0.5) -- ++(\\a:0.28);\n}\n\\node at (0,1.85) {Sun};\n\\draw[thick] (2.0,2.8) -- (5.2,2.8);\n\\draw[thick,fill=cyan!15] (2.3,1.6) rectangle (3.1,2.8);\n\\draw[thick,fill=cyan!15] (3.5,1.6) rectangle (4.3,2.8);\n\\node at (3.3,1.25) {wet clothes};\n\\draw[thick,fill=blue!25] (2.4,0.2) rectangle (4.6,1.0);\n\\draw[thin] (2.4,0.6) -- (4.6,0.6);\n\\draw[thin] (3.5,0.2) -- (3.5,1.0);\n\\node at (3.5,-0.15) {solar panel};\n\\draw[->,thick,orange!80] (0.5,2.4) -- (2.5,2.3);\n\\draw[->,thick,orange!80] (0.55,2.1) -- (2.6,0.8);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Clothes drying and the panel both depend on the Sun. Less sunlight does not give more electricity. Drying does not work equally with no sunlight.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote IGCSE optics figure into Sun, wet clothes, and solar panel."
+  }
+}

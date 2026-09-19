@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zubin simplifies $\\dfrac{3^{9}}{3^{4}}$ for counting-number exponents with the same nonzero base.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\dfrac{2^{9}}{3^{4}}$ also equals a single power by subtracting the exponents $9-4$."
+    },
+    {
+      "id": "B",
+      "text": "$\\dfrac{3^{9}}{3^{4}}=3^{9-4}=3^{5}$."
+    },
+    {
+      "id": "C",
+      "text": "The bases match and are nonzero, so subtracting the exponents is allowed."
+    },
+    {
+      "id": "D",
+      "text": "The answer is $3^{9}$ because $9$ is the largest exponent printed in the fraction."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same nonzero base 3 with counting exponents gives 3^(9−4)=3^5. Different bases omit the same-base condition. Picking the larger printed exponent is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

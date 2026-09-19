@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Pihu starts with vinegar that turns blue litmus red. She adds baking soda solution a little at a time until the mixture is neither acidic nor basic, and the tube feels slightly warm.",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Enough baking soda solution mixed with the vinegar can make a solution that is neither acidic nor basic."
+    },
+    {
+      "id": "2",
+      "text": "One drop of baking soda solution is enough to neutralise any amount of vinegar."
+    },
+    {
+      "id": "3",
+      "text": "Heat can be produced when enough acid and base are mixed in this way."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Neutralisation needs enough acid and base and can produce heat. One drop is not enough for any amount of vinegar.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

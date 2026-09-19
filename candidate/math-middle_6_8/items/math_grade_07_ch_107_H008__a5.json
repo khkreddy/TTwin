@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_107/H008",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H008"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H008:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H008",
+    "stem": "Omar looks at the diagram of $\\triangle PQR$ with $\\angle P = 55^{\\circ}$ and $\\angle PQR = 65^{\\circ}$. Side $PQ$ is extended to $S$, so $\\angle RQS = x$.\n\nWhich claim finds $x$ correctly?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$x = 115^{\\circ}$, because $\\angle PQR = 65^{\\circ}$ and $x$ forms a straight line with that interior angle.",
+      "B": "$x = 65^{\\circ}$, treating the interior $\\angle PQR$ as if it were already the exterior angle.",
+      "C": "Extending $PQ$ to $S$ is what creates $\\angle P = 55^{\\circ}$.",
+      "D": "$x = 115^{\\circ}$ by naming the triangle vertices alone, with no straight-angle step."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (4.4,0);\n  \\coordinate (R) at (1.6,2.6);\n  \\coordinate (S) at (5.8,0);\n  \\draw[line width=0.95pt] (P)--(Q)--(R)--cycle;\n  \\draw[line width=0.95pt] (Q)--(S);\n  \\node[below left] at (P) {$P$};\n  \\node[below] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node[below right] at (S) {$S$};\n  \\node at (0.85,0.35) {$55^{\\circ}$};\n  \\node at (3.45,0.35) {$65^{\\circ}$};\n  \\node at (4.85,0.35) {$x$};\n  \\node[align=center,anchor=west] at (6.3,1.5) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

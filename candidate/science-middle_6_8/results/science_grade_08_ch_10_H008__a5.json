@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which classification is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "X is a convex lens and Y is a concave lens."
+        },
+        {
+          "id": "B",
+          "text": "X is a concave lens and Y is a convex lens."
+        },
+        {
+          "id": "C",
+          "text": "Both are convex lenses because both outlines look curved."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% X: thicker in middle (convex)\n\\draw[thick,fill=gray!10] (-3.6,0.15) .. controls (-2.9,1.05) and (-1.7,1.05) .. (-1.0,0.15) -- (-1.0,-0.15) .. controls (-1.7,-1.05) and (-2.9,-1.05) .. (-3.6,-0.15) -- cycle;\n\\node at (-2.3,1.45) {X};\n\\draw[<->,thin] (-2.3,0.15)--(-2.3,-0.15);\n\\node[font=\\footnotesize,right] at (-2.25,0) {thicker middle};\n% Y: thicker at edges (concave)\n\\draw[thick,fill=gray!10] (1.0,1.05) .. controls (1.7,0.2) and (2.9,0.2) .. (3.6,1.05) -- (3.6,-1.05) .. controls (2.9,-0.2) and (1.7,-0.2) .. (1.0,-1.05) -- cycle;\n\\node at (2.3,1.45) {Y};\n\\draw[<->,thin] (1.25,0)--(1.25,0.85);\n\\node[font=\\footnotesize,right] at (1.3,0.4) {thicker edge};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "The diagram shows cross-sections of two transparent curved glass pieces, X and Y. Harsh compares thickness at the middle with thickness near the edges of each piece.",
+  "options": [],
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A convex lens is thicker in the middle than at the edges (X); a concave lens is thicker at the edges than in the middle (Y)."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Thickness pattern classifies the lenses: thicker middle is convex (X); thicker edges is concave (Y). Swapping names or judging only from a curved outline is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source converging-lens ray diagram into two labelled lens cross-sections X (thicker middle) and Y (thicker edges)."
+  }
+}

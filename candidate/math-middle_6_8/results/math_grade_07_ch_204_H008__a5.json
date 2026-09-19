@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Tejas divides $7.5$ by $5$.\n\nWhich claim keeps the quotient decimal point in the correct place?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$7.5\\div 5=1.5$, placing the decimal point in the quotient before dividing the tenths."
+    },
+    {
+      "id": "B",
+      "text": "The answer is counting-number divisor, with no quotient written."
+    },
+    {
+      "id": "C",
+      "text": "$7.5\\div 5=75$, moving past the tenths with no decimal point in the quotient."
+    },
+    {
+      "id": "D",
+      "text": "$7.5\\div 5=7.5$, because $7.5$ is already printed in the stem."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place the quotient decimal point in line with the dividend’s point before dividing tenths: 7.5÷5=1.5. Naming the divisor type alone substitutes a label. Dropping the point omits place-value placement. Echoing the printed 7.5 is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

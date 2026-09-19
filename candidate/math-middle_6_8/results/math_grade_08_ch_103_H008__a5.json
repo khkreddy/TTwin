@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Abhay reads the base-ten numeral $405$. He compares giving every digit a fixed value with reading each digit by its place.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly explains how place value reads $405$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$405$ means $4\\times100+0\\times10+5\\times1$, so the digit $4$ counts hundreds because of its position."
+        },
+        {
+          "id": "B",
+          "text": "Each digit always means the same absolute amount, so the $4$ in $405$ equals the $4$ in $4$."
+        },
+        {
+          "id": "C",
+          "text": "Position is ignored; the numeral is read by adding the digit symbols $4$, $0$, and $5$ alone."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In place value, a digit's value depends on its position, so 4 in the hundreds place means 400, not 4."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Place value reads 405 as 4 hundreds + 0 tens + 5 ones. Treating digits as fixed absolute values or ignoring position reverses or drops how place value works.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

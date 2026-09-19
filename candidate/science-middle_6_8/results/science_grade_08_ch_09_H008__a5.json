@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Leela wants the density of a small glass marble. She will measure its mass on a digital balance and its volume with a measuring cylinder partly filled with water.\n\nWhich claims about the correct procedure are true? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "If the digital balance does not show zero, she must bring it to zero before measuring the mass of the marble."
+    },
+    {
+      "id": "B",
+      "text": "She should find the volume of the marble from the rise in water level in the measuring cylinder."
+    },
+    {
+      "id": "C",
+      "text": "She can skip bringing the digital balance to zero because the mass of the marble does not depend on the starting reading."
+    },
+    {
+      "id": "D",
+      "text": "She should estimate the volume of the marble from its outline alone, without using the measuring cylinder."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mass needs a zeroed digital balance; volume needs the water-level rise in a measuring cylinder. Skipping zero or guessing volume from the outline alone is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

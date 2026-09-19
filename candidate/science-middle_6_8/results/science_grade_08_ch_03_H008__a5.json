@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Antibiotics kill bacteria that cause disease, so they suit bacterial infections when a doctor prescribes them."
+    },
+    {
+      "id": "2",
+      "text": "A fever alone means an antibiotic from leftover tablets is needed."
+    },
+    {
+      "id": "3",
+      "text": "Careless antibiotic use can help resistant bacteria develop and make later bacterial infections harder to treat."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Aisha has an earache and mild fever. A relative offers leftover antibiotic tablets from an old prescription. The doctor says not to take them unless a bacterial infection is diagnosed.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Antibiotics target bacteria and should follow a doctor's diagnosis; fever alone does not justify leftovers, and careless use can increase resistance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

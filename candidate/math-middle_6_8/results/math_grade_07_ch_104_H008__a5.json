@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Lalit stamps gift tags in a repeating cycle of length $3$: star, heart, moon, then the same three stamps again. He wants the stamp at position $17$.\n\nWhich claim correctly decides that stamp?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divide $17$ by the cycle length $3$: remainder $2$, so position $17$ matches position $2$ — heart."
+    },
+    {
+      "id": "B",
+      "text": "The stamp at position $17$ is the position number $17$."
+    },
+    {
+      "id": "C",
+      "text": "Naming the stamp heart is what creates remainder $2$ for position $17$."
+    },
+    {
+      "id": "D",
+      "text": "A growing-pattern formula $3n+1$ gives the stamp at every position $n$."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "17÷3 leaves remainder 2, which is heart in the star–heart–moon cycle. Calling the stamp the position number substitutes a label. Saying the stamp creates the remainder reverses the relation. A growing-pattern formula conflates a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Qasim compares $\\triangle LMN$ and $\\triangle STU$. Angle $L$ equals angle $S$, angle $M$ equals angle $T$, and side $LN$ equals side $SU$. Side $LN$ is not between angles $L$ and $M$, and side $SU$ is not between angles $S$ and $T$.\n\nOne or more options may be correct. Which two claims correctly decide congruence?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The third angles are equal by the $180^{\\circ}$ angle sum, so the triangles satisfy ASA and are congruent."
+    },
+    {
+      "id": "B",
+      "text": "Two equal angles and a matching non-included side are enough to guarantee congruence for these triangles."
+    },
+    {
+      "id": "C",
+      "text": "The triangles are congruent because $LN$ equals $SU$ alone."
+    },
+    {
+      "id": "D",
+      "text": "The equal non-included sides are what produce the two pairs of equal angles."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two equal angles force the third by the angle sum; with the matching non-included side the data become ASA, so AAS guarantees congruence. Claiming congruence from the sides alone substitutes a partial label. Saying the sides produce the equal angles reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

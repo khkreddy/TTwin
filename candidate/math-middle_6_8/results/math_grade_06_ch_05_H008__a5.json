@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia ties thread on a circular board with $10$ pegs, stepping a fixed gap of $4$ pegs each time. She asks whether the thread will eventually reach every peg.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Answer with the phrase thread-gap alone, instead of checking whether $10$ and $4$ share a common factor."
+    },
+    {
+      "id": "B",
+      "text": "Say that reaching every peg is what creates the co-primality of $10$ and $4$."
+    },
+    {
+      "id": "C",
+      "text": "No: $10$ and $4$ share common factor $2$, so stepping by $4$ repeats a smaller cycle and misses some pegs."
+    },
+    {
+      "id": "D",
+      "text": "Treat the question as only asking whether $10$ and $4$ are co-prime, without linking that fact to the cyclic peg walk."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "gcd(10,4)=2>1, so the walk cycles on a proper subset and misses pegs. Naming thread-gap alone swaps the decision for a label. Saying reach creates co-primality reverses the prediction. Checking co-primality with no link to the peg walk conflates a different task.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

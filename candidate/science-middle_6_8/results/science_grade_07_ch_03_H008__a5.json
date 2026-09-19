@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=gray!12] (0,0) rectangle (1.4,0.55);\n\\node at (0.7,0.28) {cell};\n\\node[font=\\bfseries] at (-0.25,0.28) {$-$};\n\\node[font=\\bfseries] at (1.65,0.28) {$+$};\n\\draw[thick] (1.4,0.28) -- (2.5,0.28) -- (2.5,1.5) -- (3.6,1.5);\n\\fill (3.6,1.5) circle (1.5pt);\n\\fill (4.3,1.5) circle (1.5pt);\n\\draw[thick] (3.6,1.5) -- (4.3,1.5);\n\\node at (3.95,1.9) {switch};\n\\draw[thick] (4.3,1.5) -- (5.6,1.5) -- (5.6,0.28) -- (4.9,0.28);\n\\draw[thick,fill=white] (3.7,0.05) rectangle (4.9,0.5);\n\\node at (4.3,0.28) {lamp};\n\\draw[thick] (3.7,0.28) -- (2.2,0.28);\n\\fill (2.2,0.28) circle (1.5pt);\n\\fill (1.55,0.28) circle (1.5pt);\n\\node at (1.9,-0.25) {gap};\n\\draw[thick,dashed] (1.55,0.28) -- (2.2,0.28);\n\\node[anchor=west] at (5.8,0.9) {test piece};\n\\draw[thick,->] (5.7,0.7) -- (1.95,0.45);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The figure shows Arjun's loop: a cell, a lamp, a closed switch, and a gap. He places a test piece across that gap. He tries a copper wire and then a plastic ruler.\n\nWhen does the lamp glow?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp glows when the test piece is a copper wire, because copper closes a conducting path."
+    },
+    {
+      "id": "B",
+      "text": "The lamp glows when the test piece is a plastic ruler, because the cell is still in the loop."
+    },
+    {
+      "id": "C",
+      "text": "The lamp does not glow with a copper wire, because current cannot pass through metal."
+    },
+    {
+      "id": "D",
+      "text": "The lamp glows with a plastic ruler and stays dark with a copper wire."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "relationship_reversal"
+  },
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Copper is a conductor, so a copper wire across the gap completes the path and the lamp glows; plastic is an insulator, so the lamp stays dark.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source circuitikz as a simple series cell–switch–lamp loop with a labelled gap for a test piece."
+  }
+}

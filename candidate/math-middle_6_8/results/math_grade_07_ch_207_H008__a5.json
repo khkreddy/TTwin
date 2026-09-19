@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Wafa knows that $x=6$ satisfies $x-2=4$. She wants a new equation that still has solution $x=6$.\n\nWhich equation works?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$2(x-2)=8$, multiplying both sides of $x-2=4$ by $2$."
+    },
+    {
+      "id": "B",
+      "text": "$2x-2=8$, multiplying only the left side of $x-2=4$ by $2$."
+    },
+    {
+      "id": "C",
+      "text": "$x-2=4$ itself is the only allowed equation, because $4$ is already printed."
+    },
+    {
+      "id": "D",
+      "text": "$x+2=4$, reversing the subtraction into addition on the left side only."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The same operation on both sides preserves the solution: multiply both sides of x−2=4 by 2 to get 2(x−2)=8. Multiplying only the left omits the both-sides condition. Keeping only the printed original is surface capture. Reversing the operation on one side conflates a different solving move.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

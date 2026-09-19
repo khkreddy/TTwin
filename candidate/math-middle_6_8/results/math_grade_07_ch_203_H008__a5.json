@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Sagar notices that $9$ is a factor of $36$.\n\nWhich claim about HCF and LCM is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Their HCF is $9$ and their LCM is $36$."
+    },
+    {
+      "id": "B",
+      "text": "$36$ is a common multiple of $9$ and $36$, so $36$ must be their HCF."
+    },
+    {
+      "id": "C",
+      "text": "Their HCF is $9$ and their LCM is $36$, even if $9$ did not divide $36$."
+    },
+    {
+      "id": "D",
+      "text": "$9$ is a factor of $36$, so $9$ is their LCM."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "When 9 divides 36, the smaller number is the HCF and the larger is the LCM. Calling 36 the HCF mixes HCF with multiple. Dropping the divides condition, or swapping HCF with LCM, all miss that factor-pair rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states the magic sum and the centre cell?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Every row, column, and diagonal adds to $15$, and the centre cell is $5$."
+        },
+        {
+          "id": "B",
+          "text": "The magic sum is the only label needed; no value for the sum or the centre is required."
+        },
+        {
+          "id": "C",
+          "text": "Only the three rows need to add to the same total; columns and diagonals may differ."
+        },
+        {
+          "id": "D",
+          "text": "The magic sum is what produces the $3$ by $3$ grid of tiles."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Nandini arranges tiles numbered $1$ through $9$, each used once, into a $3$ by $3$ magic square for a puzzle board.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "With $1$ through $9$ each used once, every row, column, and diagonal must add to $15$, and the centre cell must be $5$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For 1–9 in a 3×3 magic square the common sum is 15 and the centre is 5. Naming magic sum alone substitutes a label. Requiring only rows equal omits columns and diagonals. Saying the sum produces the grid reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

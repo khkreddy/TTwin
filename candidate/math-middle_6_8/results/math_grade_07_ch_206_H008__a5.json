@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim explains why the assembly forms a regular hexagon?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Six congruent equilateral triangles fit around a common point because six $60^{\\circ}$ angles sum to $360^{\\circ}$, so the outer boundary has equal sides and equal $120^{\\circ}$ angles."
+        },
+        {
+          "id": "B",
+          "text": "The answer is the name regular hexagon, with no angle sum at the common point."
+        },
+        {
+          "id": "C",
+          "text": "Any six triangles around a common point form a regular hexagon, even when the triangles are not congruent and not equilateral."
+        },
+        {
+          "id": "D",
+          "text": "The same assembly also builds a regular pentagon from five such triangles around a common point."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Vikram cuts six congruent equilateral paper triangles and joins them at a common point to build a regular hexagon.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Six $60^{\\circ}$ angles fill $360^{\\circ}$ at the common point; congruent equilateral triangles give equal outer sides and $120^{\\circ}$ hexagon angles."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Six 60° angles fill 360° at the centre; congruent equilateral triangles give equal outer sides and 120° angles. Naming regular hexagon alone substitutes a label. Dropping congruence/equilateral omits needed conditions. Extending the rule to a pentagon is out of scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

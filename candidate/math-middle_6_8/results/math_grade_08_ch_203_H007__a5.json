@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Hemant knows the number of taps and the time to fill a fixed tank are inversely proportional. With $5$ taps the job takes $12$ hours. He needs the time when $8$ taps work on the same tank.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Keep the product constant: $5\\times12=8\\times t$, so $t=\\dfrac{60}{8}=7.5$ hours."
+    },
+    {
+      "id": "B",
+      "text": "The constant product is only a label, so ignore the fixed tank and pick any time."
+    },
+    {
+      "id": "C",
+      "text": "Scale time the same way as taps: $t=12\\times\\dfrac{8}{5}=19.2$ hours, as if the tank size need not stay fixed."
+    },
+    {
+      "id": "D",
+      "text": "The answer is $12$ hours because $12$ is the only time printed in the stem."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inverse proportion keeps the product fixed for the same tank: 5×12=8×t gives t=7.5 h. Treating 'constant product' as a mere label swaps the hinge. Direct scaling omits the fixed-tank condition. Reusing the printed 12 is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

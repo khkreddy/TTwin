@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_07/H008",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_07/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_07/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_07:H008:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_06/ch_07",
+    "chapter_label": "Temperature and its measurement",
+    "subtopic_id": "science/grade_06/ch_07/H008",
+    "stem": "Kavya measures the temperature of cool water in a beaker with a laboratory thermometer. The thermometer has a bulb and a stem with a liquid column. She must place the bulb, keep the thermometer vertical, wait, and read at eye level.\n\nWhich method is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Immerse the bulb without touching the beaker, keep the thermometer vertical, wait until the liquid column stops rising or falling, then read at eye level.",
+      "B": "Immerse the stem and leave the bulb above the water, then read at eye level.",
+      "C": "Rest the bulb on the beaker bottom to keep the thermometer steady, then read at eye level.",
+      "D": "Wait until the liquid column stops, remove the thermometer from the water, then read it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_07/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

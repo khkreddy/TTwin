@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar must cover a rectangular garden bed that is $7$ m long and $3$ m wide with grass. The problem asks how much ground the grass covers.\n\nWhich plan matches the request?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add $7+3$ and report $10$ m for the ground covered."
+    },
+    {
+      "id": "B",
+      "text": "Saying the grass covers the bed is what creates the product $7\\times3$."
+    },
+    {
+      "id": "C",
+      "text": "Compute area as $7\\times3=21$ square metres."
+    },
+    {
+      "id": "D",
+      "text": "Use the same area rule to find only the length of one diagonal of the bed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Covering ground asks for area: 7×3=21 m². Adding length and width omits that the request is enclosed region, not perimeter. Saying coverage creates the product reverses the plan. Finding a diagonal conflates a different measure.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

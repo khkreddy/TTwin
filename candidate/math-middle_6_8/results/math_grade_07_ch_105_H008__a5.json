@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Madhav draws transversal $n$ across lines $u$ and $v$. Angle $P$ sits below $u$ and to the left of $n$. Angle $Q$ sits below $v$ and to the left of $n$.\n\nOne or more options may be correct. Which two claims about angles $P$ and $Q$ are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angles $P$ and $Q$ are corresponding angles, because each sits in the same matching position at its crossing."
+    },
+    {
+      "id": "B",
+      "text": "Corresponding angles need one angle from the crossing with $u$ and one from the crossing with $v$."
+    },
+    {
+      "id": "C",
+      "text": "Angles $P$ and $Q$ are corresponding angles even when both are taken from the crossing with $u$ alone."
+    },
+    {
+      "id": "D",
+      "text": "Angles $P$ and $Q$ are same-side interior angles, so their measures must sum to $180^{\\circ}$."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "P and Q occupy matching lower-left positions at the two crossings, so they are corresponding; the pair needs one angle from each intersection. Taking both from u alone omits that condition. Treating them as same-side interior angles conflates a different pair.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

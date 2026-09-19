@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Dev compares two planet cards. Planet R is nearer the Sun than planet S. Planet R has a thin atmosphere. Planet S has a thick heat-trapping atmosphere. Planet S looks reddish and planet R looks bluish.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which statement is the best guide to their temperatures?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Planets farther from the Sun are generally colder, but a thick heat-trapping atmosphere can change that."
+        },
+        {
+          "id": "B",
+          "text": "Planet R must be hotter than planet S because it is closer to the Sun, regardless of atmosphere."
+        },
+        {
+          "id": "C",
+          "text": "With atmospheres set aside, planet S should be generally hotter than planet R because it is farther from the Sun."
+        },
+        {
+          "id": "D",
+          "text": "Planet S is hotter because it looks reddish, and planet R is colder because it looks bluish."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Distance from the Sun sets a general temperature trend, but a planet's atmosphere can trap heat and change that trend."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Farther planets are generally colder, yet atmosphere can trap heat. Closeness alone does not decide when atmospheres differ. Colour is not a temperature rule here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

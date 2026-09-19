@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ishaan wets a cotton handkerchief and places it on his forehead on a hot afternoon. As the water disappears, his forehead feels cooler. He also thinks about water vapour in the air and about simply wetting the cloth.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Why does his forehead feel cooler as the water disappears?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Evaporation of the water takes heat from the skin."
+        },
+        {
+          "id": "B",
+          "text": "Water vapour condenses into water on the skin, and this condensation cools the skin."
+        },
+        {
+          "id": "C",
+          "text": "Wetting the handkerchief cools the forehead even if none of the water evaporates."
+        },
+        {
+          "id": "D",
+          "text": "The water evaporates because the skin becomes cooler."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Evaporation produces a cooling effect on the nearby skin as water changes to vapour and heat leaves the surface."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation cools the remaining surface. Condensation is the opposite process. Wetting alone without evaporation does not explain the cooling as the water disappears. Cooling does not cause the evaporation here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

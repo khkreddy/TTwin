@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Yamini's square garden patch with area $121\\,\\mathrm{m}^{2}$. She needs the side length of the patch.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The side length is $11\\,\\mathrm{m}$, the positive square root of $121$."
+    },
+    {
+      "id": "B",
+      "text": "The square roots of $121$ are $+11$ and $-11$, and $-11\\,\\mathrm{m}$ can be used as the side length."
+    },
+    {
+      "id": "C",
+      "text": "The side length produces the perfect square, so the side length is $121\\,\\mathrm{m}$."
+    },
+    {
+      "id": "D",
+      "text": "A negative number is an allowed physical side length for this patch."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick] (0,0) rectangle (3.2,3.2);\n  \\node at (1.6,1.6) {area $121\\,\\mathrm{m}^{2}$};\n  \\node[below] at (1.6,0) {side $?$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "121=11², and a geometric side length is the positive root 11 m. Using −11 omits the positive-length condition. Setting the side equal to the area reverses the square relation. A negative length is outside physical side length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source as a labelled square garden patch with area 121 m²."
+  }
+}
