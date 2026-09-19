@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Qasim has $36$ marbles. He wants $\\dfrac{5}{9}$ of them for a game.\n\nWhich two claims correctly find how many marbles he needs?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Split $36$ into $9$ equal parts of $4$ marbles each, then take $5$ of those parts to get $20$."
+    },
+    {
+      "id": "B",
+      "text": "Take $5$ marbles out of $36$, because the numerator is $5$."
+    },
+    {
+      "id": "C",
+      "text": "$\\dfrac{5}{9}$ of $36$ is $20$ marbles."
+    },
+    {
+      "id": "D",
+      "text": "Divide $36$ by $5$ and ignore the $9$, getting about $7$ marbles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partition 36 into 9 equal parts of 4 and take 5 parts: 20. That is 5/9 of 36. Taking only the numerator 5, or dividing by 5 and dropping the 9, miss the fraction-of-a-whole step.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

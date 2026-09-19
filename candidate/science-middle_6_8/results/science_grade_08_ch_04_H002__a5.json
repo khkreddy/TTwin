@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% cell\n\\draw[thick] (0,0) rectangle (1.1,0.65);\n\\node at (0.55,0.32) {cell};\n\\node[font=\\bfseries] at (-0.25,0.32) {$-$};\n\\node[font=\\bfseries] at (1.35,0.32) {$+$};\n% wires\n\\draw[thick] (1.1,0.32) -- (1.9,0.32) -- (1.9,1.55);\n\\draw[thick] (0,0.32) -- (-0.55,0.32) -- (-0.55,1.55) -- (1.9,1.55);\n% iron nail\n\\draw[thick,fill=gray!30] (2.1,1.3) rectangle (5.1,1.8);\n\\node at (3.6,2.1) {iron nail};\n% coil\n\\foreach \\x in {2.35,2.65,2.95,3.25,3.55,3.85,4.15,4.45} {\n  \\draw[thick] (\\x,1.2) arc (240:-60:0.2 and 0.4);\n}\n\\node at (3.6,0.8) {coil};\n% clips\n\\draw[thick] (5.15,1.4) -- (5.55,1.2) -- (5.55,1.6) -- cycle;\n\\draw[thick] (5.15,1.65) -- (5.5,1.5) -- (5.5,1.85) -- cycle;\n\\node at (6.05,1.5) {clips};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The current-carrying coil acts as a temporary magnet, and the iron nail makes it stronger."
+    },
+    {
+      "id": "B",
+      "text": "The clips keep clinging after the current stops."
+    },
+    {
+      "id": "C",
+      "text": "Putting the iron nail inside makes the electromagnet weaker."
+    },
+    {
+      "id": "D",
+      "text": "The cold electromagnet cannot pick up clips until its nail heats up."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ira's coil of insulated copper wire wound on an iron nail and joined to a cell. Steel paper clips cling to the nail tip.\n\nWhich claim about this arrangement is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A powered coil behaves as a temporary magnet; an iron nail core strengthens it. Clips stop clinging when current stops; heating is not required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Coil on iron nail joined to a cell; clips at the tip."
+  }
+}

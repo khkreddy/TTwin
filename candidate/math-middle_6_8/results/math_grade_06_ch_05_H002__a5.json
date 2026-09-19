@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar lists multiples of $6$ as $6$, $12$, $18$, $24$, $30$, $36$, $\\ldots$ and multiples of $8$ as $8$, $16$, $24$, $32$, $\\ldots$\n\nWhat is the smallest common multiple of $6$ and $8$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$48$"
+    },
+    {
+      "id": "B",
+      "text": "$24$"
+    },
+    {
+      "id": "C",
+      "text": "$6$"
+    },
+    {
+      "id": "D",
+      "text": "$14$"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Shared multiples begin at 24, so the smallest common multiple is 24. 48 is a later common multiple (nth vs smallest). 6 grabs the smaller starter. 14 is 6+8 and skips the multiple lists.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan best supports good health?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Skipping sleep to finish more videos each night."
+        },
+        {
+          "id": "B",
+          "text": "Eating balanced meals, sleeping on time, playing outdoors, and keeping his desk area clean and safe."
+        },
+        {
+          "id": "C",
+          "text": "Choosing only the sweetest snacks because they taste best."
+        },
+        {
+          "id": "D",
+          "text": "Cleaning the classroom floor while leaving broken, unsafe furniture in place."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Siddharth wants daily habits and surroundings that support a healthy body and a healthy mind. He compares four plans for the school week.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Health needs food, sleep, activity, and clean safe surroundings together, not late screens, sweets alone, or cleaning that ignores unsafe places."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Balanced food, rest, activity, and clean safe surroundings support body and mind. Late videos, sweets alone, or ignoring unsafe furniture do not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

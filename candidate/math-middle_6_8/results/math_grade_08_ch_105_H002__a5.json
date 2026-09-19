@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Damini checks which expression must always be even for integer values of the letters. She compares $6a + 2b$ with $n^{2} + 1$.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$6a + 2b$ is always even only when $a$ and $b$ are even."
+    },
+    {
+      "id": "B",
+      "text": "Integer values of the letters are produced by an expression being even."
+    },
+    {
+      "id": "C",
+      "text": "$6a + 2b$ must always be even, while $n^{2} + 1$ is not always even."
+    },
+    {
+      "id": "D",
+      "text": "$n^{2} + 1$ must always be even because the constant $1$ sits next to a square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "6a+2b=2(3a+b) is always even for integers a,b. n^2+1 is odd when n is even, so it is not always even. Restricting to even letters, reversing cause, or trusting the constant beside a square, miss the factor-of-2 test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

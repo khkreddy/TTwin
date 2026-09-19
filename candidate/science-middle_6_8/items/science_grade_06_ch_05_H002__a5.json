@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_05/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_05/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_05/H002"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_05:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MOTION",
+    "chapter_id": "science/grade_06/ch_05",
+    "chapter_label": "Measurement of length and motion",
+    "subtopic_id": "science/grade_06/ch_05/H002",
+    "stem": "The figure shows two length tools Farhan's class considers for measuring the same classroom board: a metre scale and one student's handspan. Someone also names the centimetre as the SI unit of length.\n\nWhich claim correctly decides whether a length unit is suitable as a standard unit?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The SI unit of length is the centimetre.",
+      "B": "The metre is suitable as a shared standard length unit.",
+      "C": "Each student's own handspan is a standard length unit.",
+      "D": "The centimetre is not a standard length unit at all."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% metre scale\n\\draw[thick,fill=gray!10] (0,2.2) rectangle (5.0,2.7);\n\\foreach \\x in {0,1,2,3,4,5} {\n  \\draw[thick] (\\x,2.2) -- (\\x,2.45);\n  \\node[below] at (\\x,2.15) {\\x};\n}\n\\node at (2.5,3.05) {metre scale};\n% handspan mark\n\\draw[thick] (0.5,0.9) -- (2.3,0.9);\n\\draw[thick] (0.5,0.75) -- (0.5,1.05);\n\\draw[thick] (2.3,0.75) -- (2.3,1.05);\n\\node at (1.4,0.45) {one handspan};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_05/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

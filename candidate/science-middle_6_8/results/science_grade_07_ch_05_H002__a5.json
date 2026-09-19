@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Carbon dioxide reacted with calcium hydroxide to form insoluble calcium carbonate."
+    },
+    {
+      "id": "B",
+      "text": "The new white solid is calcium hydroxide."
+    },
+    {
+      "id": "C",
+      "text": "Calcium carbonate makes lime water milky even when it is dissolved."
+    },
+    {
+      "id": "D",
+      "text": "Bubbling the same gas into plain water also turns the water milky."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Vihaan mixes baking soda with vinegar. A gas forms. He bubbles the gas through clear lime water. Lime water is calcium hydroxide in water. The lime water turns milky.\n\nWhich claim correctly explains the milky appearance?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Carbon dioxide from the baking soda–vinegar mix reacts with lime water to form insoluble calcium carbonate, which makes the liquid look milky. The solid is not calcium hydroxide; dissolved carbonate would not cloud it the same way; plain water does not turn milky.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Read the section, then dissolve sugar in warm water and in cool water and note which dissolves faster while thinking about what he sees."
+    },
+    {
+      "id": "B",
+      "text": "Skip the book and only stir sugar in water with no reading."
+    },
+    {
+      "id": "C",
+      "text": "Take the book outdoors and reread the same page, because reading outside is better science learning than a kitchen test."
+    },
+    {
+      "id": "D",
+      "text": "Memorise every bold word in the section and stop there."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "UNRESOLVED"
+  },
+  "item_type": "single_mcq",
+  "stem": "Arjun has finished reading a short section about dissolving. He wants a plan that matches this chapter's view of learning science.\n\nWhich plan best matches that view?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Learning science should move beyond only reading into observing, doing, and careful thinking. Dissolving sugar in two conditions checks an idea from the book; skipping the book, only reading outdoors, or memorising alone miss that view.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=orange!35] (0,2.0) rectangle (1.5,2.7);\n\\draw[thick,fill=cyan!35] (1.5,2.0) rectangle (3.0,2.7);\n\\node at (0.75,2.35) {N};\n\\node at (2.25,2.35) {S};\n\\node at (1.5,3.1) {bar magnet};\n% paper clips denser at poles\n\\foreach \\x in {0.2,0.5,0.8,2.2,2.5,2.8} {\n  \\draw[thick] (\\x,1.55) -- ++(0.15,0.35);\n  \\draw[thick] (\\x,1.55) arc (200:340:0.12);\n}\n% few in middle\n\\draw[thick] (1.4,1.55) -- ++(0.12,0.28);\n\\draw[thick] (1.4,1.55) arc (200:340:0.10);\n\\node at (1.5,0.85) {paper clips};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Nidhi's bar magnet held above a tray of paper clips. One half of the magnet is painted orange and labelled N; the other half is painted blue and labelled S.\n\nWhere does the magnet attract the paper clips most strongly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Equally at every part of the bar magnet."
+    },
+    {
+      "id": "B",
+      "text": "Near the two poles at the ends."
+    },
+    {
+      "id": "C",
+      "text": "Most strongly in the middle and least at the ends."
+    },
+    {
+      "id": "D",
+      "text": "Only at the orange-painted end."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A bar magnet attracts magnetic materials most strongly near its two poles. Attraction is not equal along the bar, not strongest in the middle, and not limited to the painted colour alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source force diagram into a labelled N/S bar magnet with paper clips denser at the poles."
+  }
+}

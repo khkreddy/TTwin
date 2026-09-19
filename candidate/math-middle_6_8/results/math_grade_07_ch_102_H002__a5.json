@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal writes the two expressions $8 + 7$ and $5 \\times 3$.\n\nWhich claim correctly compares them?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the phrase expression value, and stop there."
+    },
+    {
+      "id": "B",
+      "text": "$8 + 7 = 15$ and $5 \\times 3 = 15$, so $8 + 7 = 5 \\times 3$."
+    },
+    {
+      "id": "C",
+      "text": "The comparison sign can be decided from the printed symbols alone, even when the expressions are not evaluated."
+    },
+    {
+      "id": "D",
+      "text": "The comparison is settled only after converting both expressions to decimals."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaluate then compare: both equal 15, so the expressions are equal. Naming expression value alone substitutes a label. Skipping evaluation omits the comparison step. Decimal conversion is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

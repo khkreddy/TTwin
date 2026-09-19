@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Wafa looks at the diagram. Point $R$ lies on a straight line, and a right angle is to be built at $R$.\n\nWhich plan correctly constructs the $90^\\circ$ angle at $R$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mark $X$ and $Y$ on the line with $XR = RY$, then draw the perpendicular bisector of $XY$ through $R$."
+    },
+    {
+      "id": "B",
+      "text": "Mark any point $P$ above the line and join $P$ to $R$, without making $R$ the midpoint of a segment on the line."
+    },
+    {
+      "id": "C",
+      "text": "First draw a $60^\\circ$ angle at $R$ by an equilateral triangle, then halve it to get $30^\\circ$."
+    },
+    {
+      "id": "D",
+      "text": "Treat the finished right angle at $R$ as what chooses the equal points $X$ and $Y$ on the line."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[line width=1.05pt] (-3.2,0)--(3.2,0);\n  \\coordinate (R) at (0,0);\n  \\coordinate (X) at (-1.8,0);\n  \\coordinate (Y) at (1.8,0);\n  \\fill (R) circle (1.5pt);\n  \\fill (X) circle (1.5pt);\n  \\fill (Y) circle (1.5pt);\n  \\node[below] at (R){$R$};\n  \\node[below] at (X){$X$};\n  \\node[below] at (Y){$Y$};\n  \\draw[line width=0.7pt,dashed] (X) ++(50:1.5) arc (50:130:1.5);\n  \\draw[line width=0.7pt,dashed] (Y) ++(130:1.5) arc (130:50:1.5);\n  \\coordinate (P) at (0,1.55);\n  \\fill (P) circle (1.4pt);\n  \\draw[line width=1.05pt] (R)--(P);\n  \\draw[line width=0.7pt] (0,0)--(0.28,0)--(0.28,0.28)--(0,0.28)--cycle;\n  \\node[above] at (P){$P$};\n  \\node[align=center] at (0,-1.15){$XR = RY$; perpendicular through $R$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Make R the midpoint of XY on the line, then the perpendicular bisector of XY is the 90° line at R. Skipping equal distances omits the midpoint step; building 60°/30° conflates another construction; saying the right angle chooses X and Y reverses the plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source triangle as a line with point R, equal points X and Y, and a perpendicular through R."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% Tank P narrow\n\\draw[thick] (0,0) -- (0,3.2) -- (1.2,3.2) -- (1.2,0) -- cycle;\n\\fill[blue!25] (0,0) rectangle (1.2,2.6);\n\\draw[thick,blue!60] (0,2.6) -- (1.2,2.6);\n\\node at (0.6,3.5) {Tank P};\n\\node[font=\\footnotesize] at (0.6,2.9) {narrow};\n% tap P\n\\draw[thick] (1.2,0.3) -- (1.6,0.3);\n\\draw[thick] (1.6,0.15) -- (1.6,0.45);\n\\node[font=\\footnotesize] at (1.9,0.0) {tap};\n% Tank Q wide\n\\draw[thick] (3.2,0) -- (3.2,3.2) -- (6.0,3.2) -- (6.0,0) -- cycle;\n\\fill[blue!25] (3.2,0) rectangle (6.0,2.6);\n\\draw[thick,blue!60] (3.2,2.6) -- (6.0,2.6);\n\\node at (4.6,3.5) {Tank Q};\n\\node[font=\\footnotesize] at (4.6,2.9) {wide};\n% tap Q\n\\draw[thick] (6.0,0.3) -- (6.4,0.3);\n\\draw[thick] (6.4,0.15) -- (6.4,0.45);\n\\node[font=\\footnotesize] at (6.7,0.0) {tap};\n% height marks\n\\draw[<->] (-0.45,0.3) -- (-0.45,2.6);\n\\node[font=\\footnotesize,left] at (-0.5,1.45) {3.0 m};\n\\draw[<->] (6.85,0.3) -- (6.85,2.6);\n\\node[font=\\footnotesize,right] at (6.9,1.45) {3.0 m};\n\\node[font=\\footnotesize] at (4.6,-0.55) {Q holds more water in total};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Both taps have equal pressure, because the height of water above each tap is the same."
+    },
+    {
+      "id": "B",
+      "text": "The tap from tank Q has greater pressure, because tank Q holds more water in total."
+    },
+    {
+      "id": "C",
+      "text": "The tap from tank P has greater pressure, because a narrower tank always gives greater pressure."
+    },
+    {
+      "id": "D",
+      "text": "Both taps have equal pressure only if the tanks hold equal amounts of water."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Leela's two overhead tanks. Tank P is tall and narrow; Tank Q is short and wide and holds more water in total. In both tanks the water surface is 3.0 m above an identical ground-floor tap.\n\nBoth taps are opened fully. Which claim about the water pressure at the taps is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquid pressure at a bottom tap depends on the height of liquid above the point. Equal heights give equal pressure even when one tank holds more water because it is wider.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": "Two tanks, equal 3.0 m water height above taps; Q wider with more total water."
+  }
+}

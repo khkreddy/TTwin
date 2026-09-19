@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Urvashi divides $37.5$ by $1000$ by moving the decimal point.\n\nWhich two claims correctly state the result?\n\nOne or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Move the decimal point three places to the left to get $0.0375$."
+    },
+    {
+      "id": "B",
+      "text": "Move the decimal point three places to the right to get $37500$."
+    },
+    {
+      "id": "C",
+      "text": "$37.5 \\div 1000 = 0.0375$."
+    },
+    {
+      "id": "D",
+      "text": "Move the decimal point one place to the left to get $3.75$, because $1000$ starts with $1$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1000 has three zeroes, so move the decimal three places left: 0.0375. Moving right swaps multiply for divide; moving only one place omits the three-zero count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

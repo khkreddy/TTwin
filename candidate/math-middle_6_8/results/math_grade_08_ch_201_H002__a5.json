@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri scores $18$ marks out of $25$ on a test. She wants this result as a percentage.\n\nWhich claim correctly converts the fraction to a percentage?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ratio $18:25$ is already the percentage $18\\%$."
+    },
+    {
+      "id": "B",
+      "text": "$\\frac{18}{25} = 18\\%$ with no change of denominator."
+    },
+    {
+      "id": "C",
+      "text": "$\\frac{18}{25} = \\frac{72}{100} = 72\\%$."
+    },
+    {
+      "id": "D",
+      "text": "$\\frac{18}{25} = 25\\%$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiply numerator and denominator by 4 to reach denominator 100: 72/100 = 72%. Treating the raw ratio or numerator as a percentage, or reading the denominator as the percentage, skips that conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

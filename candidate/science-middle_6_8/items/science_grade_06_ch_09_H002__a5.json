@@ -1,0 +1,80 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_09/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_09/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "scope_error",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_09/H002"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "scope_error",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_09:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MIXTURE",
+    "chapter_id": "science/grade_06/ch_09",
+    "chapter_label": "Methods of separation",
+    "subtopic_id": "science/grade_06/ch_09/H002",
+    "stem": "Rohit has a small handful of rice mixed with a few small pebbles. The pebbles differ in size, colour, and shape from the rice grains, and he can pick them out by hand.\n\nIs handpicking suitable for this sample?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Yes, because the pebbles differ from the rice and can be picked out by hand in this small sample.",
+      "B": "No, handpicking is unsuitable for any solid mixture that contains rice.",
+      "C": "Yes, but only if the pebbles look identical to the rice in size and colour.",
+      "D": "No, because handpicking never works when pieces differ in colour."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_09/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

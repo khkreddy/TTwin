@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan draws several rhombi, measures their opposite sides, and sees they match each time. He wonders whether opposite sides of every rhombus are equal.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The matching measures on his drawings prove the property for every rhombus."
+    },
+    {
+      "id": "B",
+      "text": "Measuring produces the general property, so geometric reasoning is not needed."
+    },
+    {
+      "id": "C",
+      "text": "A general property needs geometric reasoning from known facts, not only the measured pattern."
+    },
+    {
+      "id": "D",
+      "text": "The property checked on these rhombi also covers every quadrilateral."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Measurements can suggest a pattern, but a property for every rhombus is established by geometric reasoning. Treating a few drawings as a proof, reversing measure and deduction, or extending the claim to every quadrilateral, miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

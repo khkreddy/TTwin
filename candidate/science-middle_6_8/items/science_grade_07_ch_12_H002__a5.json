@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_12/H002",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_12/H002",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "mechanism_conflation",
+      "D": "UNRESOLVED"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_12/H002"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H002",
+    "stem": "Aisha notices it can be daytime where she is while it is night in another place on Earth at the same moment.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 and 2 only",
+      "B": "1 and 3 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "The side of Earth facing the Sun has daytime."
+      },
+      {
+        "id": "2",
+        "text": "Earth's rotation moves each place into and out of the side facing the Sun."
+      },
+      {
+        "id": "3",
+        "text": "Day and night are caused by Earth completing one orbit around the Sun each day."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

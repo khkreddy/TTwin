@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Firoz records paint and thinner. At first, paint is $3$ litres and thinner is $4$ litres. Later, paint is $9$ litres and thinner is $12$ litres.\n\nIs the change proportional?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes, because each quantity increased by adding the same number of litres."
+    },
+    {
+      "id": "B",
+      "text": "No, because a common factor of $3$ is larger than $1$."
+    },
+    {
+      "id": "C",
+      "text": "Yes, because paint and thinner are both multiplied by the same factor $3$."
+    },
+    {
+      "id": "D",
+      "text": "Yes, because the later thinner amount is $12$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "3→9 and 4→12 share the multiplicative factor 3, so the change is proportional. Equal additive change is false here, rejecting factors greater than 1 is a scope error, and naming 12 alone is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

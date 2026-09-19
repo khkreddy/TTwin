@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best explains why holding the breath soon becomes difficult?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The body needs oxygen from the air we breathe, so holding the breath cannot continue for long."
+        },
+        {
+          "id": "B",
+          "text": "The body needs nitrogen from the air, so holding the breath soon fails."
+        },
+        {
+          "id": "C",
+          "text": "The body stops all of its functions the instant Dev holds his breath."
+        },
+        {
+          "id": "D",
+          "text": "Humans die within a few minutes without food or water, which is why he surfaces."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Dev tries to swim a few strokes underwater in the school pool without breathing. After a short time he has to come up for air.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Breathing brings oxygen the body needs. Without a fresh supply, breath-holding quickly becomes difficult; nitrogen, instant total shutdown, or lack of food/water are not the reason he surfaces so soon."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air we breathe supplies oxygen the body needs, so breath-holding soon becomes difficult. The need is oxygen, not nitrogen; functions do not stop instantly; and food or water last far longer than a few minutes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

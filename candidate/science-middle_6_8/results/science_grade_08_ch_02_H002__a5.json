@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "All living organisms are made of cells, whether they have one cell or many cells."
+    },
+    {
+      "id": "B",
+      "text": "A unicellular organism such as Paramecium is still made of a cell."
+    },
+    {
+      "id": "C",
+      "text": "A unicellular organism is not made of cells."
+    },
+    {
+      "id": "D",
+      "text": "Every microscopic organism consists of exactly one cell."
+    }
+  ],
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "one_or_more",
+  "stem": "Navya looks at a Paramecium under a microscope. It is a single cell. She also draws a mango sapling made of many cells.\n\nWhich claims about living organisms are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Living beings are built from cells whether unicellular or multicellular. Paramecium is one cell; not every microscopic organism is unicellular.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

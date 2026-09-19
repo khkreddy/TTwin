@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_06/ch_04/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_06/ch_04/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_04/H002"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_04:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-MAGNET",
+    "chapter_id": "science/grade_06/ch_04",
+    "chapter_label": "Exploring magnets",
+    "subtopic_id": "science/grade_06/ch_04/H002",
+    "stem": "The diagram shows Nidhi's bar magnet held above a tray of paper clips. One half of the magnet is painted orange and labelled N; the other half is painted blue and labelled S.\n\nWhere does the magnet attract the paper clips most strongly?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Equally at every part of the bar magnet.",
+      "B": "Near the two poles at the ends.",
+      "C": "Most strongly in the middle and least at the ends.",
+      "D": "Only at the orange-painted end."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% bar magnet\n\\draw[thick,fill=orange!35] (0,2.0) rectangle (1.5,2.7);\n\\draw[thick,fill=cyan!35] (1.5,2.0) rectangle (3.0,2.7);\n\\node at (0.75,2.35) {N};\n\\node at (2.25,2.35) {S};\n\\node at (1.5,3.1) {bar magnet};\n% paper clips denser at poles\n\\foreach \\x in {0.2,0.5,0.8,2.2,2.5,2.8} {\n  \\draw[thick] (\\x,1.55) -- ++(0.15,0.35);\n  \\draw[thick] (\\x,1.55) arc (200:340:0.12);\n}\n% few in middle\n\\draw[thick] (1.4,1.55) -- ++(0.12,0.28);\n\\draw[thick] (1.4,1.55) arc (200:340:0.10);\n\\node at (1.5,0.85) {paper clips};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_04/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "B",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

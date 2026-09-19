@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows Imran's number grid. Immediate neighbours are only left, right, top, and bottom. A supercell is greater than every immediate neighbour.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly names a supercell in the grid?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The cell $8$ is a supercell, because it is greater than $6$, $5$, $4$, and $7$."
+        },
+        {
+          "id": "B",
+          "text": "The cell $6$ is a supercell, because it is the largest number in the top row."
+        },
+        {
+          "id": "C",
+          "text": "Calling a cell a supercell is what makes its neighbours smaller."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,font=\\sffamily\\small]\n  \\draw[thick] (0,0) grid (3,3);\n  \\node at (0.5,2.5) {3};\n  \\node at (1.5,2.5) {6};\n  \\node at (2.5,2.5) {2};\n  \\node at (0.5,1.5) {5};\n  \\node at (1.5,1.5) {8};\n  \\node at (2.5,1.5) {4};\n  \\node at (0.5,0.5) {1};\n  \\node at (1.5,0.5) {7};\n  \\node at (2.5,0.5) {0};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A supercell must beat every immediate neighbour; 8 beats 6, 5, 4, and 7, while 6 loses to 8 below it."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cell 8 is greater than all four immediate neighbours. Treating the top-row maximum as enough omits the full neighbour test. Saying the supercell label creates smaller neighbours reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a 3-by-3 number grid for the supercell hinge."
+  }
+}

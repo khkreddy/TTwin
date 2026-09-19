@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Kavya sorts a glass jar, a steel key, a rubber eraser, a wooden pencil, and a plastic comb on her desk. She tries grouping by material, by shine or dullness, and by hardness or softness.\n\nWhich claims correctly decide the common property used for a classification? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Putting the steel key alone in a metals group uses the material the object is made from."
+    },
+    {
+      "id": "B",
+      "text": "Putting the glass jar in a shiny group uses shine as the common property."
+    },
+    {
+      "id": "C",
+      "text": "A colour group is valid only if it holds one red, one blue, and one green object."
+    },
+    {
+      "id": "D",
+      "text": "The rubber eraser and the steel key make a valid soft group because the eraser is soft."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Classification groups objects by a shared property such as material or shine. A colour group does not need one of each colour, and a soft group requires every member to be soft.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

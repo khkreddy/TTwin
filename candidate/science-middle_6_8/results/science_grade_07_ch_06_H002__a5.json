@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "These are common visible adolescent changes."
+    },
+    {
+      "id": "B",
+      "text": "The same change need not appear at the same age or to the same extent for every classmate."
+    },
+    {
+      "id": "C",
+      "text": "A classmate whose voice changes later than others is developing abnormally."
+    },
+    {
+      "id": "D",
+      "text": "A swollen ankle after a fall is a normal adolescent growth change."
+    }
+  ],
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Zara notes visible changes among classmates over several months: increased height for many, broader shoulders for some, a deeper voice for one friend, a few pimples, and new underarm hair for some.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Height, body structure, voice, pimples, and new body hair are common adolescent changes, and timing and extent vary. Later voice change is still normal variation; an injury swelling is not an adolescent growth change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

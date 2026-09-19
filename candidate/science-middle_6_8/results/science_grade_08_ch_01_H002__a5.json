@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The type of flour (atta or maida) is a possible factor."
+    },
+    {
+      "id": "B",
+      "text": "How high a puri rises in the hot oil is a possible factor he sets before frying."
+    },
+    {
+      "id": "C",
+      "text": "Smoke noticed above the oil is a factor, even when he does not choose to change it."
+    },
+    {
+      "id": "D",
+      "text": "Oil temperature is not a possible factor because temperature itself cannot be seen."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Aditya fries puris for a class investigation. Some puff; others stay flat. A factor is something that can be changed and may change the result.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Flour type can be changed and may change puffing, so it is a possible factor. Rise height and colour-like outcomes are results; smoke is not a deliberate factor; oil temperature can still be a factor even if it is not seen.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

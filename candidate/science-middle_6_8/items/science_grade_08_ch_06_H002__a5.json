@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_08/ch_06/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_08/ch_06/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_06/H002"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_06:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_06",
+    "chapter_label": "Pressure",
+    "subtopic_id": "science/grade_08/ch_06/H002",
+    "stem": "The diagram shows Leela's two overhead tanks. Tank P is tall and narrow; Tank Q is short and wide and holds more water in total. In both tanks the water surface is 3.0 m above an identical ground-floor tap.\n\nBoth taps are opened fully. Which claim about the water pressure at the taps is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Both taps have equal pressure, because the height of water above each tap is the same.",
+      "B": "The tap from tank Q has greater pressure, because tank Q holds more water in total.",
+      "C": "The tap from tank P has greater pressure, because a narrower tank always gives greater pressure.",
+      "D": "Both taps have equal pressure only if the tanks hold equal amounts of water."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% Tank P narrow\n\\draw[thick] (0,0) -- (0,3.2) -- (1.2,3.2) -- (1.2,0) -- cycle;\n\\fill[blue!25] (0,0) rectangle (1.2,2.6);\n\\draw[thick,blue!60] (0,2.6) -- (1.2,2.6);\n\\node at (0.6,3.5) {Tank P};\n\\node[font=\\footnotesize] at (0.6,2.9) {narrow};\n% tap P\n\\draw[thick] (1.2,0.3) -- (1.6,0.3);\n\\draw[thick] (1.6,0.15) -- (1.6,0.45);\n\\node[font=\\footnotesize] at (1.9,0.0) {tap};\n% Tank Q wide\n\\draw[thick] (3.2,0) -- (3.2,3.2) -- (6.0,3.2) -- (6.0,0) -- cycle;\n\\fill[blue!25] (3.2,0) rectangle (6.0,2.6);\n\\draw[thick,blue!60] (3.2,2.6) -- (6.0,2.6);\n\\node at (4.6,3.5) {Tank Q};\n\\node[font=\\footnotesize] at (4.6,2.9) {wide};\n% tap Q\n\\draw[thick] (6.0,0.3) -- (6.4,0.3);\n\\draw[thick] (6.4,0.15) -- (6.4,0.45);\n\\node[font=\\footnotesize] at (6.7,0.0) {tap};\n% height marks\n\\draw[<->] (-0.45,0.3) -- (-0.45,2.6);\n\\node[font=\\footnotesize,left] at (-0.5,1.45) {3.0 m};\n\\draw[<->] (6.85,0.3) -- (6.85,2.6);\n\\node[font=\\footnotesize,right] at (6.9,1.45) {3.0 m};\n\\node[font=\\footnotesize] at (4.6,-0.55) {Q holds more water in total};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_06/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

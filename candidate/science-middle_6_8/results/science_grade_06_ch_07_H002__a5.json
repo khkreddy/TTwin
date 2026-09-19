@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which bowl is the hottest?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Bowl X"
+        },
+        {
+          "id": "B",
+          "text": "Bowl Y"
+        },
+        {
+          "id": "C",
+          "text": "Bowl Z"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Ishaan measures three bowls of soup. Bowl X reads 63 °C. Bowl Y reads 49 °C. Bowl Z reads 57 °C. Bowl Y looks the darkest.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "On the same Celsius scale, the highest reading is hottest, so Bowl X at 63 °C is hotter than Y and Z. Colour of the soup does not decide hotness."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Higher temperature on the same scale means hotter. Bowl X at 63 °C is hottest. Darker appearance does not override the reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

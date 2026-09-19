@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "On the glazed tile, the water mainly disappears by evaporating into water vapour."
+    },
+    {
+      "id": "2",
+      "text": "On the dry sand, seepage into the sand and evaporation can both make the wet patch smaller."
+    },
+    {
+      "id": "3",
+      "text": "Seepage alone explains both patches, and seepage turns liquid water into water vapour inside the sand."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "three_statement",
+  "stem": "Tanya spills the same small amount of water on a glazed bathroom tile and on dry sand in a tray. After some time both wet patches look smaller.\n\nWhich statements are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A glazed tile does not take in water, so disappearance there is evaporation. Dry sand allows both seepage and evaporation. Statement 3 wrongly treats seepage as the only process and as turning liquid into vapour.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

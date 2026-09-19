@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_08/H002",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_08/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_08/H002"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H002",
+    "stem": "The diagram shows Falguni's square sheet of side $12\\,\\mathrm{cm}$ with centre marked $O$. She wants a circular arc of radius $3\\,\\mathrm{cm}$ with centre $O$, drawn with a compass.\n\nWhich claim correctly states where the compass point must be placed and what radius is needed?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Place the compass point at $O$ and open the compass to radius $3\\,\\mathrm{cm}$.",
+      "B": "Place the compass point at a corner of the square and open it to $12\\,\\mathrm{cm}$.",
+      "C": "Opening the compass to $3\\,\\mathrm{cm}$ is what creates the centre $O$.",
+      "D": "Freehand sketch quality settles the arc, so the compass point may be anywhere."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.45,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick] (0,0) rectangle (12,12);\n  \\fill (6,6) circle (2.5pt);\n  \\node[above right] at (6,6) {$O$};\n  \\draw[thick,dashed] (6,6) circle (3);\n  \\draw[thick] (6,6)--(9,6);\n  \\node[below] at (7.5,6) {$3\\,\\mathrm{cm}$};\n  \\node[below] at (6,0) {$12\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

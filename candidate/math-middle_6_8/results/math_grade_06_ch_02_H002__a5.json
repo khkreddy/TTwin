@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Alok's straight path through points $R$ and $S$. Arrowheads mark both ends, so the path continues forever past $R$ and forever past $S$.\n\nWhat has he drawn?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A line segment $RS$, because $R$ and $S$ are the only points named."
+    },
+    {
+      "id": "B",
+      "text": "A ray that starts at $R$ and stops at $S$."
+    },
+    {
+      "id": "C",
+      "text": "A line through $R$ and $S$ that extends forever in both directions."
+    },
+    {
+      "id": "D",
+      "text": "A ray, because any straight path with two named points must be a ray."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick,<->] (-0.5,0)--(5.5,0);\n  \\fill (1.5,0) circle (2pt);\n  \\fill (4,0) circle (2pt);\n  \\node[above] at (1.5,0) {$R$};\n  \\node[above] at (4,0) {$S$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Arrowheads both ways mean a line through R and S. Calling it a segment omits the forever ends. Calling it a ray that stops at S substitutes the wrong term. Treating every two-point path as a ray over-extends the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle into a labelled line through R and S with both-way arrows."
+  }
+}

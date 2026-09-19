@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yamini stacks paper cups for a display. Position $1$ uses $5$ cups, position $2$ uses $8$ cups, and position $3$ uses $11$ cups. She wants the position number $n$ whose arrangement uses $32$ cups.\n\nWhich approach is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Solve $5n = 32$ for the position number."
+    },
+    {
+      "id": "B",
+      "text": "Solve $n + 3 = 32$ for the position number."
+    },
+    {
+      "id": "C",
+      "text": "Solve $3n + 2 = 32$ for the position number."
+    },
+    {
+      "id": "D",
+      "text": "The position number is $32$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cups increase by 3 each position: 5, 8, 11 fit 3n+2. Set 3n+2=32 to get n=10. 5n uses the first count as a multiplier, n+3 drops the full rule, and 32 copies the target total as the position.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

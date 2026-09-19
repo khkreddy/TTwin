@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Salt stirred completely into water until nothing separate can be seen is a uniform mixture."
+    },
+    {
+      "id": "2",
+      "text": "Roasted chana mixed with raisins and curry leaves is a non-uniform mixture."
+    },
+    {
+      "id": "3",
+      "text": "Mustard oil floating as a layer on water is a uniform mixture."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Mehak prepares mixtures at home. In a uniform mixture the components are spread so evenly that they cannot be seen separately.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fully dissolved salt water is uniform; chana with separate pieces is non-uniform; oil floating on water still shows separate parts, so it is not uniform.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

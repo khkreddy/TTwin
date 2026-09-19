@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_107/H002",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_107/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_107/H002"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_107:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_107",
+    "chapter_label": "math/grade_07/ch_107",
+    "subtopic_id": "math/grade_07/ch_107/H002",
+    "stem": "Pallavi looks at the diagram. She has drawn base $DE$ of length $7\\,\\mathrm{cm}$. She must build triangle $DEF$ with $DF = 6\\,\\mathrm{cm}$ and $EF = 5\\,\\mathrm{cm}$.\n\nWhere should she place point $F$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "At a meeting point of an arc from $D$ of radius $6\\,\\mathrm{cm}$ and an arc from $E$ of radius $5\\,\\mathrm{cm}$.",
+      "B": "Anywhere on the dashed arc drawn from $D$, because that arc is labelled first.",
+      "C": "On the midpoint of segment $DE$, because $DE$ is the drawn base.",
+      "D": "At endpoint $E$, because $E$ already sits on the base."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (4.2,0);\n  \\draw[line width=1.05pt] (D)--(E);\n  \\fill (D) circle (1.5pt); \\fill (E) circle (1.5pt);\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (E){$E$};\n  \\node[below] at (2.1,-0.35){$7\\,\\mathrm{cm}$};\n  \\draw[line width=0.7pt,dashed] (D) ++(0:2.4) arc (0:75:2.4);\n  \\draw[line width=0.7pt,dashed] (E) ++(180:1.8) arc (180:105:1.8);\n  \\coordinate (F) at (1.85,1.95);\n  \\fill (F) circle (1.5pt);\n  \\node[above] at (F){$F$};\n  \\node[align=center] at (2.1,-1.15){arc from $D$ radius $6\\,\\mathrm{cm}$;\\\\ arc from $E$ radius $5\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_107/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

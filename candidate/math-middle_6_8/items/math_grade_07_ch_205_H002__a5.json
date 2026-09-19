@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_205/H002",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_205/H002",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_205/H002"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_205:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_07/ch_205",
+    "chapter_label": "math/grade_07/ch_205",
+    "subtopic_id": "math/grade_07/ch_205/H002",
+    "stem": "Vikram compares two class teams. Team P has $6$ players and scored $48$ points in all. Team Q has $8$ players and scored $56$ points in all. He wants a fair comparison of typical scoring when the teams have different sizes.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly chooses a fair basis for the comparison?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Compare the per-player averages: Team P averages $8$ points and Team Q averages $7$ points."
+          },
+          {
+            "id": "B",
+            "text": "Compare the totals only: Team Q scored $56$ and Team P scored $48$."
+          },
+          {
+            "id": "C",
+            "text": "Compare the team sizes only: Team Q has $8$ players and Team P has $6$."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_205/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

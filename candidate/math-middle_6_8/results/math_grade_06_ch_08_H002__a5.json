@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Falguni's square sheet of side $12\\,\\mathrm{cm}$ with centre marked $O$. She wants a circular arc of radius $3\\,\\mathrm{cm}$ with centre $O$, drawn with a compass.\n\nWhich claim correctly states where the compass point must be placed and what radius is needed?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place the compass point at $O$ and open the compass to radius $3\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "B",
+      "text": "Place the compass point at a corner of the square and open it to $12\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "C",
+      "text": "Opening the compass to $3\\,\\mathrm{cm}$ is what creates the centre $O$."
+    },
+    {
+      "id": "D",
+      "text": "Freehand sketch quality settles the arc, so the compass point may be anywhere."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.45,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick] (0,0) rectangle (12,12);\n  \\fill (6,6) circle (2.5pt);\n  \\node[above right] at (6,6) {$O$};\n  \\draw[thick,dashed] (6,6) circle (3);\n  \\draw[thick] (6,6)--(9,6);\n  \\node[below] at (7.5,6) {$3\\,\\mathrm{cm}$};\n  \\node[below] at (6,0) {$12\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An arc with centre O and radius 3 cm needs the compass point at O opened to 3 cm. A corner with opening 12 cm omits the intended centre and radius. Saying the opening creates O reverses the relation. Freehand quality is outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle into a labelled square with centre O and dashed arc of radius 3 cm."
+  }
+}

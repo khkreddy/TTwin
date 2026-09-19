@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Saliva breaks starch in the chapati into sugar, so the chewed chapati gives a weaker blue-black iodine colour than the unchewed chapati."
+    },
+    {
+      "id": "B",
+      "text": "Unchewed chapati also gives little or no blue-black colour with iodine."
+    },
+    {
+      "id": "C",
+      "text": "Saliva changes sugar into starch, so iodine turns darker after chewing."
+    },
+    {
+      "id": "D",
+      "text": "Saliva changes the protein in egg white into sugar."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "Aarav chews a piece of plain chapati for about one minute. It begins to taste sweet. He places iodine on unchewed chapati and on the chewed chapati. He also has egg white as a protein food that is not starch. Iodine can give a blue-black colour with starch.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Saliva acts on starch in chapati to form sugar, so sweetness rises and the iodine starch colour weakens after chewing. Unchewed chapati still has starch; saliva does not reverse sugar to starch or digest egg-white protein into sugar.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

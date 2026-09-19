@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nandini looks at the diagram. Straight lines $p$ and $q$ meet at $M$. One angle at $M$ is marked $55^\\circ$, and the adjacent angle on the same straight line is marked $x$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which measure of $x$ is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$x = 125^\\circ$"
+        },
+        {
+          "id": "B",
+          "text": "$x = 55^\\circ$"
+        },
+        {
+          "id": "C",
+          "text": "$x = 35^\\circ$"
+        },
+        {
+          "id": "D",
+          "text": "$x = 110^\\circ$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (O) at (0,0);\n  \\draw[line width=1.05pt] (-2.8,0)--(2.8,0) node[right]{$p$};\n  \\draw[line width=1.05pt] (-2.2,-1.6)--(2.2,1.6) node[right]{$q$};\n  \\fill (O) circle (1.5pt);\n  \\node[below left] at (-0.15,-0.1){$M$};\n  \\draw[line width=0.65pt] (0.7,0) arc (0:36:0.7);\n  \\node at (1.05,0.28){$55^\\circ$};\n  \\draw[line width=0.65pt] (0.55,0) arc (0:-144:0.55);\n  \\node at (0.95,-0.55){$x$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The $55^\\circ$ angle and $x$ form a linear pair on the same straight line, so $x = 180^\\circ - 55^\\circ = 125^\\circ$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adjacent angles on a straight line add to 180°, so x = 125°. Copying 55° treats the angles as equal; 35° and 110° leave the linear-pair sum.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle as lines p and q meeting at M with 55° and adjacent x on a straight line."
+  }
+}

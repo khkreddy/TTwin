@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_202/H002",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_202/H002",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H002"
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H002",
+    "stem": "Hemant studies the diagram of square $ABCD$. Dashed segment $AC$ is a diagonal. Grey points $W$, $X$, $Y$, $Z$ are the midpoints of the sides, joined to form square $WXYZ$.\n\nOne or more options may be correct. Which two claims are correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Build a new square on diagonal $AC$ to double the area of $ABCD$.",
+      "B": "Join midpoints $W$, $X$, $Y$, $Z$ to form square $WXYZ$ and halve the area of $ABCD$.",
+      "C": "Join the midpoints to double the area, and build on diagonal $AC$ to halve it.",
+      "D": "Treat every inscribed quadrilateral inside $ABCD$ as a half-area square."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.2,0);\n  \\coordinate (C) at (3.2,3.2);\n  \\coordinate (D) at (0,3.2);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=0.9pt,dashed] (A)--(C);\n  \\fill (A) circle (1.6pt); \\fill (B) circle (1.6pt);\n  \\fill (C) circle (1.6pt); \\fill (D) circle (1.6pt);\n  \\coordinate (W) at (1.6,0);\n  \\coordinate (X) at (3.2,1.6);\n  \\coordinate (Y) at (1.6,3.2);\n  \\coordinate (Z) at (0,1.6);\n  \\fill[gray] (W) circle (1.6pt); \\fill[gray] (X) circle (1.6pt);\n  \\fill[gray] (Y) circle (1.6pt); \\fill[gray] (Z) circle (1.6pt);\n  \\draw[line width=0.95pt] (W)--(X)--(Y)--(Z)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node[below] at (W) {$W$};\n  \\node[right] at (X) {$X$};\n  \\node[above] at (Y) {$Y$};\n  \\node[left] at (Z) {$Z$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AB",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

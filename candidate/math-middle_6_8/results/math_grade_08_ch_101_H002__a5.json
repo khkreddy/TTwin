@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Zubin studies classroom lockers numbered $1$ to $20$. A locker is touched exactly twice when its number has exactly two factors, $1$ and itself.\n\nOne or more options may be correct. Which two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Lockers $1$, $2$, $3$, $5$ and $7$ are all touched exactly twice."
+    },
+    {
+      "id": "B",
+      "text": "Lockers $2$, $3$, $5$, $7$, $11$, $13$, $17$ and $19$ are touched exactly twice."
+    },
+    {
+      "id": "C",
+      "text": "Locker $1$ is not touched exactly twice."
+    },
+    {
+      "id": "D",
+      "text": "Locker $20$ is touched exactly twice because $20$ is the last locker number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Touched exactly twice means prime: 2,3,5,7,11,13,17,19 within 1..20. Locker 1 has only one factor, so it is excluded. Listing 1 with primes, or choosing 20 for being last, miss that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

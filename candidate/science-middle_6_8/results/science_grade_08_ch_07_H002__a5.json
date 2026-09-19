@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim best explains this?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Sugar particles spread into the spaces between water particles, so sugar is present throughout the water."
+        },
+        {
+          "id": "B",
+          "text": "The sugar is gone; only its sweetness remains in the water."
+        },
+        {
+          "id": "C",
+          "text": "Each water particle takes a sugar particle inside itself, which makes that water particle sweet."
+        },
+        {
+          "id": "D",
+          "text": "The sugar melts into liquid sugar that sits only at the bottom of the cup."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Harsh stirs a spoon of sugar into a cup of warm water. Soon no sugar grains can be seen, yet the water tastes sweet throughout the cup.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Tiny sugar particles separate and occupy spaces between water particles, so the sweet taste is present throughout even when grains are not visible."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Dissolved sugar particles spread among water particles. Sugar is not destroyed, melted into a bottom layer, or placed inside each water particle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

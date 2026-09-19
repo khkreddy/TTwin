@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pallavi looks at the diagram. She has drawn base $DE$ of length $7\\,\\mathrm{cm}$. She must build triangle $DEF$ with $DF = 6\\,\\mathrm{cm}$ and $EF = 5\\,\\mathrm{cm}$.\n\nWhere should she place point $F$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "At a meeting point of an arc from $D$ of radius $6\\,\\mathrm{cm}$ and an arc from $E$ of radius $5\\,\\mathrm{cm}$."
+    },
+    {
+      "id": "B",
+      "text": "Anywhere on the dashed arc drawn from $D$, because that arc is labelled first."
+    },
+    {
+      "id": "C",
+      "text": "On the midpoint of segment $DE$, because $DE$ is the drawn base."
+    },
+    {
+      "id": "D",
+      "text": "At endpoint $E$, because $E$ already sits on the base."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (4.2,0);\n  \\draw[line width=1.05pt] (D)--(E);\n  \\fill (D) circle (1.5pt); \\fill (E) circle (1.5pt);\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (E){$E$};\n  \\node[below] at (2.1,-0.35){$7\\,\\mathrm{cm}$};\n  \\draw[line width=0.7pt,dashed] (D) ++(0:2.4) arc (0:75:2.4);\n  \\draw[line width=0.7pt,dashed] (E) ++(180:1.8) arc (180:105:1.8);\n  \\coordinate (F) at (1.85,1.95);\n  \\fill (F) circle (1.5pt);\n  \\node[above] at (F){$F$};\n  \\node[align=center] at (2.1,-1.15){arc from $D$ radius $6\\,\\mathrm{cm}$;\\\\ arc from $E$ radius $5\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "F must be 6 cm from D and 5 cm from E, so it lies at an intersection of those two arcs. Using only one arc omits the second distance; the midpoint or endpoint E grab the base instead of the third vertex.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "term_substitution"
+    ],
+    "figure_note": "Rewrote source triangle as base DE with dashed arcs of radii 6 cm and 5 cm meeting at F."
+  }
+}

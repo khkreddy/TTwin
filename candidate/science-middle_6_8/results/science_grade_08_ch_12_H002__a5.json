@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Anvi's frog count can be a population if she counts only frogs in that pond that morning."
+    },
+    {
+      "id": "2",
+      "text": "Counting frogs and fish together in the same pond still counts as one population."
+    },
+    {
+      "id": "3",
+      "text": "A count of frogs of the same kind in the pond at one time is a population count."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "item_type": "three_statement",
+  "stem": "Anvi counts the frogs in the school pond one morning. A classmate says this count is a population. A population is a group of the same kind of organisms in the same habitat at a given place and time.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A population is one kind of organism in one habitat at one time. Frogs alone in the pond that morning qualify; frogs mixed with fish do not make one population.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

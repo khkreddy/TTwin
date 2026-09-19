@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Abhay writes the product $6 \\times 6 \\times 6$ and wants exponential notation with the correct base and exponent.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which notation is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$6^{3}$"
+        },
+        {
+          "id": "B",
+          "text": "$3^{6}$"
+        },
+        {
+          "id": "C",
+          "text": "$6 \\times 3$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The base is the repeated factor $6$, and the exponent $3$ counts how many factors of $6$ appear in the product."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three factors of 6 give base 6 and exponent 3, written 6^3. Swapping to 3^6 or writing 6×3 confuses base with exponent count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

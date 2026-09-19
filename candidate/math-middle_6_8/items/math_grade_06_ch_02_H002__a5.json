@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_06/ch_02/H002",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_06/ch_02/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H002"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H002:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H002",
+    "stem": "The diagram shows Alok's straight path through points $R$ and $S$. Arrowheads mark both ends, so the path continues forever past $R$ and forever past $S$.\n\nWhat has he drawn?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A line segment $RS$, because $R$ and $S$ are the only points named.",
+      "B": "A ray that starts at $R$ and stops at $S$.",
+      "C": "A line through $R$ and $S$ that extends forever in both directions.",
+      "D": "A ray, because any straight path with two named points must be a ray."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,font=\\sffamily\\small]\n  \\draw[thick,<->] (-0.5,0)--(5.5,0);\n  \\fill (1.5,0) circle (2pt);\n  \\fill (4,0) circle (2pt);\n  \\node[above] at (1.5,0) {$R$};\n  \\node[above] at (4,0) {$S$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

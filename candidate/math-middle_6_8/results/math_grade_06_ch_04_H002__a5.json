@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia records favourite sports from her row: cricket, football, cricket, kabaddi, football, cricket.\n\nWhich claim correctly converts that unordered list into frequencies that show the most common sport?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count each sport: cricket $3$, football $2$, kabaddi $1$; cricket is most common."
+    },
+    {
+      "id": "B",
+      "text": "Pick the first sport named and call it most common."
+    },
+    {
+      "id": "C",
+      "text": "The frequency counts are what create the sports the children named."
+    },
+    {
+      "id": "D",
+      "text": "Add the letter counts of the sport names to find which sport is most common."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Frequencies count each category once per observation: cricket 3 is most common. Taking the first name omits counting. Saying counts create the sports reverses the relation. Letter totals swap in a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

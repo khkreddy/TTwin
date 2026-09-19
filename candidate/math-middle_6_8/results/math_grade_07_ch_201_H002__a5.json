@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rachna studies the diagram of triangles $DEF$ and $LMN$. Matching tick marks show $DE = LM$, $EF = MN$, and $FD = NL$.\n\nWhich claim correctly decides congruence from those side lengths?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The three matching side lengths are enough: triangles $DEF$ and $LMN$ are congruent by SSS."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent because each figure is called a triangle."
+    },
+    {
+      "id": "C",
+      "text": "Congruence here also needs a right angle and hypotenuse before the side lengths can be used."
+    },
+    {
+      "id": "D",
+      "text": "Matching side lengths are what the congruence statement creates after the triangles are already named congruent."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,scale=0.95]\n  % triangle DEF\n  \\coordinate (D) at (0,0);\n  \\coordinate (E) at (3.2,0);\n  \\coordinate (F) at (1.1,2.2);\n  \\draw[line width=1.05pt] (D)--(E)--(F)--cycle;\n  \\node[below left] at (D){$D$};\n  \\node[below right] at (E){$E$};\n  \\node[above] at (F){$F$};\n  \\draw[line width=0.8pt] (1.5,-0.12)--(1.7,-0.12);\n  \\draw[line width=0.8pt] (2.35,0.95)--(2.5,1.05);\n  \\draw[line width=0.8pt] (2.45,1.0)--(2.6,1.1);\n  \\draw[line width=0.8pt] (0.45,1.0)--(0.55,1.15);\n  \\draw[line width=0.8pt] (0.55,0.95)--(0.65,1.1);\n  \\draw[line width=0.8pt] (0.5,1.05)--(0.6,1.2);\n  % triangle LMN\n  \\begin{scope}[xshift=5.0cm]\n    \\coordinate (L) at (0,0);\n    \\coordinate (M) at (3.2,0);\n    \\coordinate (N) at (1.1,2.2);\n    \\draw[line width=1.05pt] (L)--(M)--(N)--cycle;\n    \\node[below left] at (L){$L$};\n    \\node[below right] at (M){$M$};\n    \\node[above] at (N){$N$};\n    \\draw[line width=0.8pt] (1.5,-0.12)--(1.7,-0.12);\n    \\draw[line width=0.8pt] (2.35,0.95)--(2.5,1.05);\n    \\draw[line width=0.8pt] (2.45,1.0)--(2.6,1.1);\n    \\draw[line width=0.8pt] (0.45,1.0)--(0.55,1.15);\n    \\draw[line width=0.8pt] (0.55,0.95)--(0.65,1.1);\n    \\draw[line width=0.8pt] (0.5,1.05)--(0.6,1.2);\n  \\end{scope}\n  \\node[align=center] at (4.0,-1.0){tick marks: $DE=LM$, $EF=MN$, $FD=NL$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three pairs of equal corresponding sides guarantee congruence (SSS). Calling both triangles is only a label; requiring RHS conflates another test; saying congruence creates the equal sides reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source triangle as triangles DEF and LMN with three corresponding sides tick-marked."
+  }
+}

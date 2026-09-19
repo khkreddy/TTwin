@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q6",
+  "target_unit_id": "science/grade_07/ch_07/H002",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q6",
+    "hinge": "science/grade_07/ch_07/H002",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_07/H002"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_07:H002:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-HEAT",
+    "chapter_id": "science/grade_07/ch_07",
+    "chapter_label": "Heat transfer",
+    "subtopic_id": "science/grade_07/ch_07/H002",
+    "stem": "The diagram shows Reyansh's metal pan on a flame, its wooden handle, and a woollen wrap he can place around a hot metal mug.\n\nAnswer both parts.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which material choice matches the heat-flow need?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Metal for the pan, because easy heat flow from the flame to the food is wanted."
+          },
+          {
+            "id": "B",
+            "text": "Metal for the handle, because reduced heat flow to the hand is wanted."
+          },
+          {
+            "id": "C",
+            "text": "Wood for the pan, because easy heat flow from the flame to the food is wanted."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Why does a dry woollen wrap slow heat loss from the hot mug better than the same wrap soaked with water?",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=gray!35] (0,0.3) rectangle (2.8,1.5);\n\\node at (1.4,0.9) {metal pan};\n\\draw[thick,fill=brown!40] (2.8,0.7) rectangle (4.4,1.1);\n\\node at (3.6,1.4) {wooden};\n\\node at (3.6,0.35) {handle};\n\\draw[thick,fill=orange!30] (0.3,-0.2) -- (1.0,-0.55) -- (1.7,-0.2) -- cycle;\n\\node at (1.0,-0.85) {flame};\n\\draw[thick,fill=gray!20] (5.2,0.4) rectangle (6.4,1.4);\n\\node at (5.8,1.7) {mug};\n\\draw[thick,fill=blue!15] (5.0,0.2) rectangle (6.6,0.55);\n\\draw[thick,fill=blue!15] (5.0,1.25) rectangle (6.6,1.6);\n\\node at (5.8,-0.15) {woollen wrap};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_07/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

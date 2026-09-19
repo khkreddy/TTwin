@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "The side of Earth facing the Sun has daytime."
+    },
+    {
+      "id": "2",
+      "text": "Earth's rotation moves each place into and out of the side facing the Sun."
+    },
+    {
+      "id": "3",
+      "text": "Day and night are caused by Earth completing one orbit around the Sun each day."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "three_statement",
+  "stem": "Aisha notices it can be daytime where she is while it is night in another place on Earth at the same moment.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Day and night happen because rotation carries each place into and out of the Sun-facing side. An orbit each day is the wrong mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}
