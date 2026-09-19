@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ovi dips turmeric paper into soap solution, lemon juice, and sugar solution. Only the soap solution changes the paper's colour.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What can she correctly conclude?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Soap solution is basic; the unchanged papers do not tell which of lemon juice and sugar solution is acidic and which is neutral."
+        },
+        {
+          "id": "B",
+          "text": "Lemon juice is neutral because it does not change turmeric paper's colour."
+        },
+        {
+          "id": "C",
+          "text": "A colour change on turmeric paper could mean the sample is acid, base, or neutral."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Turmeric paper changes colour with bases, so soap is basic; no change leaves acid versus neutral undecided."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Turmeric indicates bases by a colour change. No change does not prove neutral and does not separate acid from neutral. A colour change does not mean acid or neutral.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

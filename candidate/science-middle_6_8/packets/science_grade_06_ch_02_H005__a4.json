@@ -1,39 +1,19 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:biology_7a_rjb_exe15",
+  "packet_id": "session:biology_7a_rjb_exe1",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T07:51:14.368Z",
+  "created_at": "2026-09-19T08:29:09.412Z",
   "source": {
-    "item_ref": "session:biology_7a_rjb_exe15",
-    "item_type": "single_mcq",
-    "stem": "Multiple choice question: Which of the following statements about gymnosperms and angiosperms is correct ( )\nA. The seeds of gymnosperms are covered with pericarp.\nB. The seeds of angiosperms are exposed\nC. Gymnosperm seeds are exposed\nD. The cones of gymnosperms are fruits",
-    "options": [
-      {
-        "id": "A",
-        "text": "The seeds of gymnosperms are covered by a pericarp"
-      },
-      {
-        "id": "B",
-        "text": "The seeds of angiosperms are exposed"
-      },
-      {
-        "id": "C",
-        "text": "Gymnosperm seeds are exposed"
-      },
-      {
-        "id": "D",
-        "text": "The cones of gymnosperms are fruits"
-      }
-    ],
+    "item_ref": "session:biology_7a_rjb_exe1",
+    "item_type": "open_response",
+    "stem": "Decide whether the following statements are correct. Mark “√” for correct answers and “×” for wrong answers. (1) Objects that can move must be living things.",
+    "options": [],
     "statements": [],
     "parts": [],
     "equations": [],
     "tables": [],
     "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "key": null
   },
   "intelligence": {
     "join_status": "BOUND",
@@ -65,10 +45,10 @@
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Science question. Chapter: Diversity in the living world. The student must decide: Identify whether a plant has a taproot or a fibrous root system from root evidence or connected plant features. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
-    "variation_class": "V5",
+    "instruction": "Write one new grades 6 Science question. Chapter: Diversity in the living world. The student must decide: Identify whether a plant has a taproot or a fibrous root system from root evidence or connected plant features. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "preserve",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -87,9 +67,9 @@
     "slim_map_ref": "data/maps/science.json"
   },
   "build_logic": {
-    "source_uid": "biology_7a_rjb_exe15",
+    "source_uid": "biology_7a_rjb_exe1",
     "hinge": "science/grade_06/ch_02/H005",
-    "item_type_target": "preserve",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"
@@ -98,10 +78,9 @@
       "relationship_reversal"
     ],
     "option_plan": {
-      "A": "relationship_reversal",
-      "B": "UNRESOLVED",
-      "D": "UNRESOLVED",
-      "C": null
+      "B": "relationship_reversal",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_02/H005"
   }

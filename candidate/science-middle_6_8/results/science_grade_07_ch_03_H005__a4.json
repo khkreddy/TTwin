@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick] (0,0) rectangle (1.4,0.8);\n\\node at (0.7,0.4) {cell};\n\\node[font=\\bfseries] at (-0.3,0.4) {$-$};\n\\node[font=\\bfseries] at (1.7,0.4) {$+$};\n\\draw[thick] (1.4,0.4) -- (2.3,0.4);\n\\draw[thick] (0,0.4) -- (-0.7,0.4) -- (-0.7,-1.0) -- (3.4,-1.0) -- (3.4,0.4) -- (3.0,0.4);\n\\draw[thick,fill=red!25] (2.3,0.1) -- (3.0,0.4) -- (2.3,0.7) -- cycle;\n\\draw[thick] (3.0,0.15) -- (3.0,0.65);\n\\node at (2.65,1.05) {LED};\n\\node[font=\\small] at (2.15,-0.25) {longer};\n\\node[font=\\small] at (3.35,-0.25) {shorter};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Gita's LED and a cell. The LED has a longer leg and a shorter leg. The cell has a positive terminal and a negative terminal.\n\nWhich connection makes the LED glow?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Longer leg to the negative terminal; shorter leg to the positive terminal."
+    },
+    {
+      "id": "B",
+      "text": "Longer leg to the positive terminal; shorter leg to the negative terminal."
+    },
+    {
+      "id": "C",
+      "text": "Both legs joined only to the positive terminal."
+    },
+    {
+      "id": "D",
+      "text": "Either way round, because an LED glows in both directions."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An LED glows when its longer leg joins the positive terminal and its shorter leg joins the negative terminal. Reversing the legs, joining both to one terminal, or treating the LED as two-way all fail that connection rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": "Cell with +/− terminals and LED with longer and shorter legs labelled."
+  }
+}

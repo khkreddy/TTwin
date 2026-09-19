@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Vihan lists three cell jobs: letting useful materials in and wastes out while separating cells; housing many life processes; and regulating the cell’s activities and growth.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cell membrane does the first job: it controls what enters and leaves and separates cells."
+    },
+    {
+      "id": "B",
+      "text": "The cytoplasm does the second job: many life processes occur there."
+    },
+    {
+      "id": "C",
+      "text": "The nucleus does the first job: it controls what enters and leaves and separates cells."
+    },
+    {
+      "id": "D",
+      "text": "The cell membrane does the third job as well, because controlling materials in and out means it regulates growth."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "UNRESOLVED",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Membrane handles exchange and separation; cytoplasm houses many life processes; the nucleus regulates activities and growth. Assigning membrane exchange to the nucleus, or saying exchange equals growth control, conflates those jobs.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

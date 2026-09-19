@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yuvraj presses and gently scratches a rubber eraser and a steel spoon edge. Soft materials change shape or scratch easily; hard materials resist both.\n\nWhich judgement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The eraser that dents and scratches easily is soft; the steel edge that resists both is hard."
+    },
+    {
+      "id": "B",
+      "text": "The eraser is hard because it changed shape when pressed."
+    },
+    {
+      "id": "C",
+      "text": "He can call the steel edge soft without pressing or scratching it."
+    },
+    {
+      "id": "D",
+      "text": "Soft and hard apply only to the steel edge, not to the rubber eraser."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Hardness is judged from how easily pressing or scratching changes the material. Easy change means soft; resistance means hard. Skipping the test or limiting the idea to steel alone is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Danish sorts picture cards for a class display: a rocky asteroid orbiting between Mars and Jupiter, the Moon, and the bright star Sirius far beyond the planets.",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The asteroid belongs to the Solar System and shines by reflecting sunlight."
+    },
+    {
+      "id": "2",
+      "text": "Sirius belongs to the Solar System because it looks very bright from Earth."
+    },
+    {
+      "id": "3",
+      "text": "The Moon is outside the Solar System and makes its own light."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "mx_option_map": {},
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Asteroids in the Solar System reflect sunlight. Distant stars like Sirius are outside the Solar System. The Moon belongs to the Solar System and reflects sunlight; it does not make its own light.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

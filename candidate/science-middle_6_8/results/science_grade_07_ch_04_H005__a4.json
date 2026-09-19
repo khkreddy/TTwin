@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Rakesh chooses materials for heating water and for a handle on a hot copper pot. He may use copper, wood, or shiny plastic.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A copper vessel is suitable for heating water because copper conducts heat well."
+    },
+    {
+      "id": "B",
+      "text": "A wooden handle is safer on a hot copper pot because wood is a poor heat conductor."
+    },
+    {
+      "id": "C",
+      "text": "A copper handle is safer than a wooden handle on the hot copper pot."
+    },
+    {
+      "id": "D",
+      "text": "Shiny plastic is suitable for a heating vessel because it looks like metal and conducts heat well."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Good heating vessels need materials that conduct heat well, such as copper. Safe handles need poor conductors such as wood. Copper as a handle is unsafe; shiny look alone does not make plastic a good heating vessel.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

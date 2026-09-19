@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Noor lists four jobs in the stomach: churning food, breaking proteins into simpler components, killing many harmful bacteria, and protecting the stomach lining from acid. The agents she may match are wall movements, digestive juice, acid, and mucus.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Churning is done by wall movements, and protein breakdown is done by digestive juice."
+    },
+    {
+      "id": "B",
+      "text": "Acid kills many harmful bacteria, and mucus protects the stomach lining."
+    },
+    {
+      "id": "C",
+      "text": "Protein breakdown is done by mucus, and protecting the lining is done by digestive juice."
+    },
+    {
+      "id": "D",
+      "text": "Mucus kills many harmful bacteria, and acid protects the stomach lining."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wall movements churn; digestive juice breaks proteins; acid kills many bacteria; mucus protects the lining. Swapping mucus with digestive juice, or reversing acid and mucus roles, mismatches those jobs.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

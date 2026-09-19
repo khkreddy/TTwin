@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H005",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H005"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H005:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H005",
+    "stem": "The diagram shows Gita holding a cardboard cut-out between a torch and a white wall. Light from the torch is blocked by the cut-out before it reaches the wall.\n\nWhich change makes the shadow on the wall smaller?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Moving the cut-out closer to the wall.",
+      "B": "Moving the cut-out closer to the torch.",
+      "C": "Switching the torch off.",
+      "D": "Using a brighter torch in the same places."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.28);\n\\node at (0,0.55) {torch};\n\\draw[thick,dashed,->] (0.35,1.45) -- (1.9,1.95);\n\\draw[thick,dashed,->] (0.35,1.2) -- (1.9,1.2);\n\\draw[thick,dashed,->] (0.35,0.95) -- (1.9,0.45);\n\\draw[thick,fill=brown!55] (2.05,0.35) rectangle (2.4,2.05);\n\\node at (2.225,2.35) {cut-out};\n\\draw[thick,fill=gray!50] (4.15,0.55) rectangle (4.35,1.85);\n\\node at (4.25,2.25) {shadow};\n\\draw[thick] (4.55,0.15) -- (4.55,2.25);\n\\node at (5.05,1.2) {wall};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

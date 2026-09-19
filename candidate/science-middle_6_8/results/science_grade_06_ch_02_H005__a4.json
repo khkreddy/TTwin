@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Yuvraj digs up a mustard plant and a grass plant. The mustard plant has one thick main root with thinner side roots. The grass plant has many thin roots of nearly the same size and no single main root.\n\nWhich claims correctly identify the root systems? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The mustard plant has a taproot system."
+    },
+    {
+      "id": "B",
+      "text": "The grass plant has a fibrous root system."
+    },
+    {
+      "id": "C",
+      "text": "The mustard plant has a fibrous root system because both plants have roots in soil."
+    },
+    {
+      "id": "D",
+      "text": "The grass plant has a taproot system because it was pulled from the ground."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A single main root with side roots is a taproot (mustard). Many similar thin roots with no main root is fibrous (grass). Soil presence or being pulled up does not flip those labels.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

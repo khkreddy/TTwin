@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which set could count as evidence of what happened during the experiment?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2 and 3"
+        },
+        {
+          "id": "B",
+          "text": "1, 3 and 4"
+        },
+        {
+          "id": "C",
+          "text": "2 and 4 only"
+        },
+        {
+          "id": "D",
+          "text": "3 only"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Noor fries puris in hot oil and wants evidence to make sense of the changes she sees.\n\nShe considers four possible records:\n1  the time each puri takes to puff up\n2  the brand name printed on the oil bottle\n3  whether each puri puffed up or stayed flat\n4  how many times the oil spluttered during frying",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Times, puff outcomes, and splutter counts are observations from the frying; the brand name on the bottle is not evidence of what happened in the experiment."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evidence is what was observed or measured during the frying: puff times, puff outcomes, and splutter counts. The printed brand name is not experimental evidence of those changes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

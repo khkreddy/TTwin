@@ -1,0 +1,99 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_01/H003",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_01/H003",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_01/H003"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_01:H003:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S1/H-INQUIRY",
+    "chapter_id": "science/grade_08/ch_01",
+    "chapter_label": "Exploring the inquisitive mind",
+    "subtopic_id": "science/grade_08/ch_01/H003",
+    "stem": "Noor fries puris in hot oil and wants evidence to make sense of the changes she sees.\n\nShe considers four possible records:\n1  the time each puri takes to puff up\n2  the brand name printed on the oil bottle\n3  whether each puri puffed up or stayed flat\n4  how many times the oil spluttered during frying",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which set could count as evidence of what happened during the experiment?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "1, 2 and 3"
+          },
+          {
+            "id": "B",
+            "text": "1, 3 and 4"
+          },
+          {
+            "id": "C",
+            "text": "2 and 4 only"
+          },
+          {
+            "id": "D",
+            "text": "3 only"
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_01/H003",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

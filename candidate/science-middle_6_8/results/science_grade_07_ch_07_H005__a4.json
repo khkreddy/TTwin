@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Gita stands on a shore. On a hot afternoon the sand is hotter than the sea. At night the land cools faster than the sea.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "In the hot afternoon, the breeze near the shore blows from the sea toward the land."
+    },
+    {
+      "id": "B",
+      "text": "At night, the breeze near the shore blows from the land toward the sea."
+    },
+    {
+      "id": "C",
+      "text": "In the hot afternoon, the breeze near the shore blows from the land toward the sea."
+    },
+    {
+      "id": "D",
+      "text": "A sea breeze blows from the sea toward the land only when the sand and the sea are at the same temperature."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Land heats and cools faster than water. By day, cooler air moves from sea to land (sea breeze). By night, cooler air moves from land to sea (land breeze). Same temperature is not the daytime condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}
