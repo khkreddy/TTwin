@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_12/H007",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_12/H007",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_12/H007"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_12:H007:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S6/H-SKY",
+    "chapter_id": "science/grade_07/ch_12",
+    "chapter_label": "Earth, Sun and the apparent motion of the sky",
+    "subtopic_id": "science/grade_07/ch_12/H007",
+    "stem": "The diagram shows Kiara's model of a solar eclipse: the Moon between the Sun and Earth, with the Moon's shadow covering only a small area of Earth. She notes that from Earth the Moon and Sun look about the same size in the sky, though the Moon is much smaller and closer.\n\nWhich claims are correct? One or more options may be correct.",
+    "item_type": "mcq",
+    "options": {
+      "A": "The Moon comes between the Sun and Earth and blocks sunlight from reaching a small area of Earth.",
+      "B": "Earth comes between the Sun and the Moon, so Earth's shadow falls on the Moon.",
+      "C": "The Moon can cover the Sun's disk as seen from Earth because they look about the same size in the sky, even though the Moon is much smaller and closer.",
+      "D": "A total solar eclipse is visible everywhere on Earth's sunlit half at once."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-4.2,0) circle (0.55);\n\\node at (-4.2,-0.95) {Sun};\n\\fill[gray!55] (-1.2,0) circle (0.28);\n\\node at (-1.2,-0.7) {Moon};\n\\draw[thick,fill=blue!12] (1.6,0) circle (0.7);\n\\node at (1.6,0) {Earth};\n\\draw[thick,dashed] (-4.2,0) -- (-1.2,0) -- (1.6,0);\n\\fill[gray!35] (1.05,0.15) -- (1.35,-0.05) -- (1.15,-0.25) -- cycle;\n\\node at (2.9,-0.15) {small shadowed area};\n\\draw[->,thick] (2.35,-0.15) -- (1.45,-0.05);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_12/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "AC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

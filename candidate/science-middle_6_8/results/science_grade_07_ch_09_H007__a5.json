@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What happens to the remaining undigested food?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "It moves into the large intestine."
+        },
+        {
+          "id": "B",
+          "text": "It moves from the large intestine into the small intestine."
+        },
+        {
+          "id": "C",
+          "text": "The digested nutrients move into the large intestine after absorption."
+        },
+        {
+          "id": "D",
+          "text": "It passes through the small-intestine wall into blood vessels."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Reyansh traces food after most nutrients have been digested and absorbed in the small intestine. He considers the remaining undigested food, the large intestine, and blood vessels in the small-intestine wall.\n\nAnswer both parts.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "After most nutrients are absorbed in the small intestine, the remaining undigested food moves on into the large intestine; it does not re-enter the small intestine or pass into blood as undigested food."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Undigested remains continue into the large intestine after small-intestine digestion and absorption; digested nutrients do not head to the large intestine for absorption, and undigested food does not enter blood vessels.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

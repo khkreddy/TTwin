@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "For the hot sunny match he should wear the white shirt because light colours reflect most of the heat; for the cold morning walk the black shirt absorbs more heat."
+    },
+    {
+      "id": "B",
+      "text": "For the hot sunny match he should wear the black shirt; for the cold morning walk he should wear the white shirt."
+    },
+    {
+      "id": "C",
+      "text": "Even with no heat falling on either shirt, the black shirt gains more heat."
+    },
+    {
+      "id": "D",
+      "text": "The black cotton shirt traps body heat better than the white cotton shirt because dark colour is a better insulator."
+    }
+  ],
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "item_type": "single_mcq",
+  "stem": "Vihaan has a white cotton shirt and a black cotton shirt of the same thickness. He packs for a cold early-morning walk and for a hot sunny cricket match later the same day.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light colours reflect most incoming heat and dark colours absorb more; colour is not insulation, and with no heat falling there is no colour-based gain to compare.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

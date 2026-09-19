@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_07/ch_02/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_07/ch_02/H007",
+    "item_type_target": "three_statement",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "relationship_reversal",
+      "C": "surface_feature_capture",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_02/H007"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_02:H007:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-MATERIAL",
+    "chapter_id": "science/grade_07/ch_02",
+    "chapter_label": "Acids, bases and salts",
+    "subtopic_id": "science/grade_07/ch_02/H007",
+    "stem": "Pihu cannot tell indicator colours apart clearly. Her teacher asks her to test vinegar and soap solution using a change she can notice without colour. Crushed garlic cloves can change smell in acid or base. Red litmus paper is also on the bench.\n\nWhich statements are correct?",
+    "item_type": "three_statement",
+    "options": {
+      "A": "1 and 2 only",
+      "B": "1 and 3 only",
+      "C": "2 and 3 only",
+      "D": "1, 2 and 3"
+    },
+    "statements": [
+      {
+        "id": "1",
+        "text": "Crushed garlic can serve as an olfactory indicator for the vinegar and soap solution."
+      },
+      {
+        "id": "2",
+        "text": "An olfactory indicator gives evidence through a change in odour."
+      },
+      {
+        "id": "3",
+        "text": "Red litmus paper is suitable for Pihu because it avoids relying on colour."
+      }
+    ],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_02/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

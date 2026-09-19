@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Farhan stirs salt and sawdust into separate glasses of water and waits. The salt disappears completely. The sawdust stays as bits you can still see.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Salt is soluble in water. Sawdust is insoluble in water."
+    },
+    {
+      "id": "B",
+      "text": "Salt is insoluble in water. Sawdust is soluble in water."
+    },
+    {
+      "id": "C",
+      "text": "Salt and sawdust are neither soluble nor insoluble, because those labels apply only to liquids."
+    },
+    {
+      "id": "D",
+      "text": "Sawdust is soluble because some bits float on the water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A material that disappears completely in water is soluble; one that remains as solid bits is insoluble. The labels apply to solids here; floating bits are not dissolving.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

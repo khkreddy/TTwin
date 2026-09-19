@@ -1,0 +1,94 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_04/H007",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_04/H007",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_04/H007"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_04:H007:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_04",
+    "chapter_label": "math/grade_06/ch_04",
+    "subtopic_id": "math/grade_06/ch_04/H007",
+    "stem": "Imran records craft-club stock as Beads $10$, Buttons $6$, and Ribbons $4$. The figure shows the bar graph he wants to match that table.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly constructs a valid bar graph from that category-value table?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Put categories on one axis and counts on the other, use one uniform scale, and draw equal-width bars of heights $10$, $6$, and $4$."
+          },
+          {
+            "id": "B",
+            "text": "The vertical axis label is the bar graph itself."
+          },
+          {
+            "id": "C",
+            "text": "Draw bars of any widths, as long as the Beads bar is the tallest."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[->] (0,0) -- (5.4,0) node[right] {Category};\n  \\draw[->] (0,0) -- (0,4.6) node[above] {Count};\n  \\foreach \\y/\\lab in {0.8/2,1.6/4,2.4/6,3.2/8,4.0/10} {\n    \\draw (0,\\y) -- (0.12,\\y) node[left] {\\lab};\n  }\n  \\fill[gray!45] (0.6,0) rectangle (1.5,4.0);\n  \\node at (1.05,-0.35) {Beads};\n  \\fill[gray!45] (2.1,0) rectangle (3.0,2.4);\n  \\node at (2.55,-0.35) {Buttons};\n  \\fill[gray!45] (3.6,0) rectangle (4.5,1.6);\n  \\node at (4.05,-0.35) {Ribbons};\n  \\node[anchor=west] at (0,4.85) {Craft-club stock};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_04/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_08/H007",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_08/H007",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_08/H007"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_08:H007:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_06/ch_08",
+    "chapter_label": "math/grade_06/ch_08",
+    "subtopic_id": "math/grade_06/ch_08/H007",
+    "stem": "Chirag must divide the $12$ cm by $9$ cm rectangle in the diagram into identical squares that fill it with no gaps and no overlaps.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which claim correctly plans the equal segments?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Mark equal $3$ cm segments along the $12$ cm and $9$ cm sides so squares of side $3$ cm fill the rectangle."
+          },
+          {
+            "id": "B",
+            "text": "Mark segments of length $12$ cm only, and ignore making the $9$ cm side match equal square sides."
+          },
+          {
+            "id": "C",
+            "text": "The rough diagram of the rectangle produces identical squares even when corresponding sides are unequal."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.35,font=\\sffamily\\small,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (12,9);\n  \\node[below] at (6,0) {$12\\,\\mathrm{cm}$};\n  \\node[left] at (0,4.5) {$9\\,\\mathrm{cm}$};\n  \\draw[densely dashed] (3,0)--(3,9) (6,0)--(6,9) (9,0)--(9,9);\n  \\draw[densely dashed] (0,3)--(12,3) (0,6)--(12,6);\n  \\node[anchor=west] at (12.4,8) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_08/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

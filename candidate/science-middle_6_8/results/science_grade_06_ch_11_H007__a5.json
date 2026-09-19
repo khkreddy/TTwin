@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya watches a rabbit eat cabbage leaves under a shady verandah. She asks how the rabbit is linked to the Sun's energy.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cabbage leaves use sunlight to make food that supplies energy to the rabbit."
+    },
+    {
+      "id": "B",
+      "text": "The rabbit gets the Sun's energy indirectly by eating the cabbage leaves."
+    },
+    {
+      "id": "C",
+      "text": "When the rabbit eats cabbage, energy passes from the rabbit to the cabbage."
+    },
+    {
+      "id": "D",
+      "text": "The rabbit eating cabbage in the shade gets no energy linked to the Sun."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plants make food using sunlight; animals get that energy by eating plants. Energy does not flow from rabbit to cabbage. Shade does not cut the link through plant food.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

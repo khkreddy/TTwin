@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Qasim has $\\triangle LMN$ and $\\triangle RST$. He knows $\\angle L=\\angle R$, $\\angle M=\\angle S$, and side $LM=RS$ lies between those equal angles in each triangle.\n\nOne or more options may be correct. Which two claims correctly decide congruence from that information?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The triangles are congruent by ASA: two angles and the included side $LM=RS$ match."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent from $\\angle L=\\angle R$ and $\\angle M=\\angle S$ alone."
+    },
+    {
+      "id": "C",
+      "text": "Side $LM$ lies between $\\angle L$ and $\\angle M$, matching included side $RS$ between $\\angle R$ and $\\angle S$."
+    },
+    {
+      "id": "D",
+      "text": "Congruence of the triangles is what creates the equal angles and the included equal sides."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "ASA needs two angles and the included side; LM=RS is that included side, so the triangles are congruent. Congruence from the angles alone omits the included-side condition. Saying congruence creates the equal parts reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

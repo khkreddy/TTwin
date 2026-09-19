@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Daily washing of the armpits and pubic region during adolescence may help protect from infections."
+    },
+    {
+      "id": "2",
+      "text": "Wrapping used sanitary pads before putting them in the dustbin is proper disposal that helps protect the shared environment."
+    },
+    {
+      "id": "3",
+      "text": "Perfume on unwashed armpits provides the same protection from infection as washing."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "three_statement",
+  "stem": "Diya washes her armpits and pubic region daily, keeps clean during her menstrual cycle, and wraps used sanitary pads before putting them in the dustbin. A classmate says perfume on unwashed armpits is enough.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Washing and wrapped pad disposal protect body and environment; perfume on unwashed skin is not the same protection as washing.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

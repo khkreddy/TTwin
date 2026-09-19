@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ojas notes that a pine tree on a cold mountain has a conical shape and sloping branches. Snow slides off the branches in winter.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Are the conical shape and sloping branches adaptations for survival on the mountain?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes — they help the pine tree survive heavy snow in that region."
+        },
+        {
+          "id": "B",
+          "text": "No — only animals have adaptations."
+        },
+        {
+          "id": "C",
+          "text": "Yes — every feature of every tree is an adaptation for snow."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Name one way those features help the pine tree on the mountain.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Snow slides off the sloping branches so the branches are less likely to break."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Special features that help survival in a region are adaptations; conical shape and sloping branches help mountain pines shed snow. Limiting adaptations to animals or treating every feature as a snow adaptation miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

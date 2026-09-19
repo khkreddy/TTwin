@@ -1,0 +1,68 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The Paramecium is a complete living organism even though it is one cell; the muscle cell from the human body chart is not itself a complete organism."
+        },
+        {
+          "id": "B",
+          "text": "The Paramecium is an incomplete living organism because it has only one cell."
+        },
+        {
+          "id": "C",
+          "text": "The muscle cell from the human body chart is itself a complete organism."
+        },
+        {
+          "id": "D",
+          "text": "All microorganisms are unicellular."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [],
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Vivaan watches a Paramecium under the school microscope. It swims, takes in food, and divides on its own. A classmate says it cannot be a complete living organism because it has only one cell. Vivaan also studies one muscle cell on a chart of the human body, and recalls that some microorganisms such as bacteria are unicellular.\n\nAnswer both parts.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A unicellular microorganism such as Paramecium carries out all survival functions in one cell, so it is a complete organism; a muscle cell is only one part of a multicellular body."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Unicellular microbes can be complete organisms; a single cell taken from a multicellular body is not, and not every microorganism is unicellular.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

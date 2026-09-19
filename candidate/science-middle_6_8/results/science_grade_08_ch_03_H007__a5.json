@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Immunity is the body's ability to fight disease."
+    },
+    {
+      "id": "2",
+      "text": "Vaccines help the immune system develop protection against serious infections."
+    },
+    {
+      "id": "3",
+      "text": "Children living on the same street have the same immunity and will fall ill equally often."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item_type": "three_statement",
+  "stem": "Aisha's clinic offers polio vaccine drops. Her uncle asks how immunity and vaccination reduce serious infections such as polio and measles. They also talk about children living on the same street.\n\nWhich statements are correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Immunity is the ability to fight disease and vaccines train that protection; street neighbours do not share identical immunity or illness rates.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

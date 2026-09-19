@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_08/ch_06/H007",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_08/ch_06/H007",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_06/H007"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_06:H007:a5",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S4/H-FORCE",
+    "chapter_id": "science/grade_08/ch_06",
+    "chapter_label": "Pressure",
+    "subtopic_id": "science/grade_08/ch_06/H007",
+    "stem": "Siddharth stands on a flat concrete rooftop on a hot afternoon. The rooftop has heated the air above it, and that air is warm and moist. Soon dark clouds build and rain begins.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "What happens first in the chain that produces the thunderstorm?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "Warm moist air rises and creates a low-pressure area above the rooftop."
+          },
+          {
+            "id": "B",
+            "text": "Cool air rises first and creates a high-pressure area above the rooftop."
+          },
+          {
+            "id": "C",
+            "text": "Rain falls first and then heats the rooftop."
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason that explains why cooler air then flows in toward the rooftop.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_06/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

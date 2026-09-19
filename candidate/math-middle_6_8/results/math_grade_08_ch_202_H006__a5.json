@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gauri has $\\triangle PQR$ with a right angle at $P$, $PQ=6$, and $PR=8$. She wants the length of $QR$.\n\nWhich claim correctly applies $a^{2}+b^{2}=c^{2}$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$6^{2}+8^{2}=QR^{2}$ even if angle $P$ were not a right angle."
+    },
+    {
+      "id": "B",
+      "text": "The hypotenuse $QR$ is what creates the right angle at $P$."
+    },
+    {
+      "id": "C",
+      "text": "$PQ$ and $PR$ are the perpendicular sides, so $6^{2}+8^{2}=QR^{2}$ and $QR=10$."
+    },
+    {
+      "id": "D",
+      "text": "Treat $PQ$ as the hypotenuse, so $8^{2}+QR^{2}=6^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Right angle at P makes PQ and PR the legs and QR the hypotenuse: 36+64=100 so QR=10. Applying the relation without a right angle omits the condition. Saying the hypotenuse creates the right angle reverses the relation. Calling PQ the hypotenuse mis-identifies c.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

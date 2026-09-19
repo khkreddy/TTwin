@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Alok lists every whole number from $30$ to $39$. He wants the number of times the digit $3$ is written in that list.\n\nWhich count is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The digit $3$ is written $10$ times, once for each number from $30$ to $39$."
+    },
+    {
+      "id": "B",
+      "text": "Writing the digit $3$ eleven times is what produces the list from $30$ to $39$."
+    },
+    {
+      "id": "C",
+      "text": "The digit $3$ is written $11$ times, because $33$ contributes two written $3$s."
+    },
+    {
+      "id": "D",
+      "text": "The count $11$ also covers every digit written in $30$ to $39$, not only the digit $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "From 30 to 39 the tens digit is 3 ten times and 33 adds a second 3, so the digit is written 11 times. Counting one per number omits the double occurrence in 33. Saying eleven writings produce the list reverses the relation. Extending 11 to every digit over-scopes the chosen-digit count.",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

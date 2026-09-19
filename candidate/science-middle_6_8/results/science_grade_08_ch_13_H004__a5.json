@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sanya models Earth with a clay ball. Her teacher asks whether Earth could stay habitable if the planet were much larger and its gravity much stronger.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth's present size helps it hold an atmosphere that living beings can use."
+    },
+    {
+      "id": "B",
+      "text": "A much larger planet with much stronger gravity could pull living beings down with crushing force."
+    },
+    {
+      "id": "C",
+      "text": "Planet size does not affect gravity or the support of an atmosphere."
+    },
+    {
+      "id": "D",
+      "text": "Habitability depends only on having oceans, whatever the planet's size and gravity."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's size helps support an atmosphere; much stronger gravity on a much larger planet could crush living beings. Saying size does not matter reverses the link; pinning habitability only on oceans ignores size and gravity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

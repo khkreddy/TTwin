@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Eklavya shares 72 stickers in the ratio $4:5$ between two folders. The ratio terms count equal-sized groups.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim divides the whole correctly?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "One group is $72/(4+5)=8$ stickers, so the parts are $4\\times8=32$ and $5\\times8=40$."
+        },
+        {
+          "id": "B",
+          "text": "The answer is only the pair of ratio parts $4$ and $5$, so the whole 72 is unused."
+        },
+        {
+          "id": "C",
+          "text": "Split 72 into 4 and 5 stickers, ignoring that the parts must use all 72."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The whole is split into 4+5=9 equal groups of 8, then rebuilt as 32 and 40, which add back to 72."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partitive ratio uses 72/(4+5)=8 then multiplies by each term to get 32 and 40. Naming only 4 and 5 swaps the whole for the ratio labels. Writing parts 4 and 5 stickers drops the requirement that the parts rebuild the whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Bina's quadrilateral $PQRS$ with right-angle marks at $P$, $Q$, and $R$, and with the remaining interior angle at $S$ labelled $x$.\n\nWhich claim about $x$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x$ must be $90^\\circ$, because the four interior angles of a quadrilateral sum to $360^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "$x$ is only an interior-angle label, so the quadrilateral sum does not constrain it."
+    },
+    {
+      "id": "C",
+      "text": "Drawing the four sides is what forces $x=90^\\circ$, rather than the $360^\\circ$ angle sum."
+    },
+    {
+      "id": "D",
+      "text": "$x$ can be any size, because the diagram prints three right-angle marks."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round,font=\\sffamily\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.4,0);\n  \\coordinate (R) at (3.1,2.2);\n  \\coordinate (S) at (0.4,2.0);\n  \\draw[thick] (P)--(Q)--(R)--(S)--cycle;\n  \\draw[thick] (P)--++(0.28,0)--++(0,0.28)--++(-0.28,0)--cycle;\n  \\draw[thick] (Q)--++(-0.28,0)--++(0,0.28)--++(0.28,0)--cycle;\n  \\draw[thick] (R)--++(-0.28,0)--++(0,-0.28)--++(0.28,0)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above right] at (R) {$R$};\n  \\node[above left] at (S) {$S$};\n  \\node at (1.6,1.0) {$x$};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interior angles of a quadrilateral sum to 360°, so three right angles force x=90°. Treating x as a free label swaps the idea. Saying the drawn sides create the measure reverses the relation. Ignoring the sum because three marks are printed is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source into PQRS with three right-angle marks and x at S; stem refers to the diagram."
+  }
+}

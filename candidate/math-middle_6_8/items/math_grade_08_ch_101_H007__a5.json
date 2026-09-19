@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_101/H007",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_101/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_101/H007"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_101:H007:a5",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_101",
+    "chapter_label": "math/grade_08/ch_101",
+    "subtopic_id": "math/grade_08/ch_101/H007",
+    "stem": "The diagram shows Yamini's triangular dot pattern with rows of 1, then 2, then 3, then 4 dots, and a square 4-by-4 dot array.\n\nWhich claim connects the triangular pattern to the square pattern?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Two adjacent triangular totals join into a square: $6+10=16$, matching the 4-by-4 array.",
+      "B": "The whole display is only a square-number pattern, so the triangular rows need no role.",
+      "C": "The square 4-by-4 array is what creates the triangular rows of 1, 2, 3, and 4 dots.",
+      "D": "The answer is 16 only because 16 is the largest count printed beside the arrays."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.65,line cap=round,line join=round,font=\\sffamily\\small]\n  \\foreach \\i in {0,1,2,3} {\n    \\foreach \\j in {0,...,\\i} {\n      \\fill (0.5*\\j, -0.5*\\i) circle (2pt);\n    }\n  }\n  \\node[anchor=north] at (0.75,-2.3) {triangular};\n  \\begin{scope}[shift={(4.0,0)}]\n    \\foreach \\i in {0,1,2,3} {\n      \\foreach \\j in {0,1,2,3} {\n        \\fill (0.5*\\j, -0.5*\\i) circle (2pt);\n      }\n    }\n    \\node[anchor=north] at (0.75,-2.3) {square};\n  \\end{scope}\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_101/H007",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

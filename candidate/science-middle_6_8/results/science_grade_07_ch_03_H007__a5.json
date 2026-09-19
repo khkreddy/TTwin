@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n\\draw[thick,fill=gray!12] (0,0) rectangle (1.4,0.6);\n\\node at (0.7,0.3) {cell};\n\\node[font=\\bfseries] at (-0.25,0.3) {$-$};\n\\node[font=\\bfseries] at (1.65,0.3) {$+$};\n\\draw[thick] (1.4,0.3) -- (2.6,0.3) -- (2.6,1.6) -- (4.0,1.6);\n\\fill (4.0,1.6) circle (1.6pt);\n\\fill (4.7,1.6) circle (1.6pt);\n\\draw[thick] (4.0,1.6) -- (4.7,1.6);\n\\node at (4.35,2.0) {switch};\n\\draw[thick] (4.7,1.6) -- (5.8,1.6) -- (5.8,0.3) -- (5.0,0.3);\n\\draw[thick,fill=white] (3.8,0.05) rectangle (5.0,0.55);\n\\node at (4.4,0.3) {buzzer};\n\\draw[thick] (3.8,0.3) -- (0,0.3);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The buzzer may be drawn as a circle with a cross inside, because any neat symbol for a sound-maker is fine."
+    },
+    {
+      "id": "B",
+      "text": "The cell should be drawn with two parallel buzzer branches leaving it, so the switch and the buzzer each get their own loop."
+    },
+    {
+      "id": "C",
+      "text": "Each part must use its standard symbol: the cell as a long line and a short line, the closed switch as a joined break in the wire, and the buzzer as its standard symbol."
+    },
+    {
+      "id": "D",
+      "text": "The diagram is incorrect if the buzzer is drawn on the left of the cell, even when its connections match the loop."
+    }
+  ],
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "single_mcq",
+  "stem": "The figure shows Arjun's working loop: one cell, a closed switch, and a buzzer joined in a single series path. He wants a circuit diagram of the same loop using standard symbols.\n\nWhich claim about that circuit diagram is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A circuit diagram must use standard symbols for each component; a circle with a cross is the lamp symbol, not the buzzer, and layout side alone does not make a correctly connected diagram wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source circuitikz as a simple series cell–switch–buzzer loop."
+  }
+}

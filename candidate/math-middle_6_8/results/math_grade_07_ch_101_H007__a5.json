@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Hema's calculator starts at $0$ and has only $+1$, $+10$, $+100$, and $+1000$ buttons. She wants the display to show exactly $1506$ with the fewest clicks.\n\nOne or more options may be correct. Which two claims are both correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Press $+1000$ once, $+100$ five times, and $+1$ six times — twelve clicks in all."
+    },
+    {
+      "id": "B",
+      "text": "A path that uses more than twelve clicks still counts as fewest clicks for $1506$."
+    },
+    {
+      "id": "C",
+      "text": "The fewest click count is the digit sum $1+5+0+6=12$."
+    },
+    {
+      "id": "D",
+      "text": "The fewest click count is $1506$, the number printed as the display target."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "Place-value decomposition 1×1000+5×100+6×1 needs 12 clicks, equal to the digit sum of 1506. Treating a longer path as fewest over-scopes the minimum-click rule. Taking the printed target 1506 as the click count is surface capture.",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Ira compares honey poured from a jar, steam rising from a kettle, and a steel spoon on her desk. Fluids are materials that flow and do not keep a fixed shape.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Honey is a fluid because it flows and does not keep a fixed shape."
+    },
+    {
+      "id": "2",
+      "text": "Steam is a fluid because it flows and does not keep a fixed shape."
+    },
+    {
+      "id": "3",
+      "text": "The steel spoon is a fluid because it can be carried from place to place."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Liquids and gases are fluids because they flow and lack a fixed shape; a steel spoon is a solid that keeps its shape. Treating the spoon as a fluid or accepting all three statements misses that test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

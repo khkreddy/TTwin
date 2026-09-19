@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Zubin designs a school badge in two stages: first he picks one of 5 colours, then one of 3 pin shapes. Every colour–shape pair is allowed.\n\nWhich plan gives the total number of badges?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count only the 5 colours, because the pin shapes do not change the total."
+    },
+    {
+      "id": "B",
+      "text": "The 3 pin shapes produce the 5 colours, so start from shapes and ignore colour choices."
+    },
+    {
+      "id": "C",
+      "text": "Multiply the stage counts: $5\\times3=15$ badges."
+    },
+    {
+      "id": "D",
+      "text": "Count only badges that use the first colour, so the total is $1\\times3=3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two-stage choices multiply: 5 colours times 3 shapes gives 15 badges. Dropping the shape stage omits a required condition. Treating shapes as producing colours reverses the relation. Counting only the first colour excludes the other stated colour choices.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

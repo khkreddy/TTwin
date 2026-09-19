@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Esha views a cylinder from the side and sees a rectangular profile. She asks whether only a cylinder can show that rectangle from a chosen viewpoint.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "A rectangular side profile can come from more than one solid, not only from a cylinder."
+        },
+        {
+          "id": "B",
+          "text": "Any solid shows a rectangle from the side, so the viewpoint need not be checked."
+        },
+        {
+          "id": "C",
+          "text": "The rectangular outline is what chooses the viewpoint, rather than the viewpoint shaping the profile."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A profile depends on the viewpoint, and the same rectangular outline can fit more than one solid, not only a cylinder."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A requested outline may be produced by more than one solid; a cylinder’s side rectangle is not unique to cylinders. Ignoring the viewpoint omits a required condition. Saying the outline chooses the viewpoint reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small,x=1cm,y=1cm]\n\\fill[yellow!70!orange] (-4.2,0) circle (0.55);\n\\node at (-4.2,-0.95) {Sun};\n\\fill[gray!55] (-1.2,0) circle (0.28);\n\\node at (-1.2,-0.7) {Moon};\n\\draw[thick,fill=blue!12] (1.6,0) circle (0.7);\n\\node at (1.6,0) {Earth};\n\\draw[thick,dashed] (-4.2,0) -- (-1.2,0) -- (1.6,0);\n\\fill[gray!35] (1.05,0.15) -- (1.35,-0.05) -- (1.15,-0.25) -- cycle;\n\\node at (2.9,-0.15) {small shadowed area};\n\\draw[->,thick] (2.35,-0.15) -- (1.45,-0.05);\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The Moon comes between the Sun and Earth and blocks sunlight from reaching a small area of Earth."
+    },
+    {
+      "id": "B",
+      "text": "Earth comes between the Sun and the Moon, so Earth's shadow falls on the Moon."
+    },
+    {
+      "id": "C",
+      "text": "The Moon can cover the Sun's disk as seen from Earth because they look about the same size in the sky, even though the Moon is much smaller and closer."
+    },
+    {
+      "id": "D",
+      "text": "A total solar eclipse is visible everywhere on Earth's sunlit half at once."
+    }
+  ],
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "The diagram shows Kiara's model of a solar eclipse: the Moon between the Sun and Earth, with the Moon's shadow covering only a small area of Earth. She notes that from Earth the Moon and Sun look about the same size in the sky, though the Moon is much smaller and closer.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In a solar eclipse the Moon lies between Sun and Earth and shades a small region; similar apparent sizes allow a total cover from Earth's view. Earth's shadow on the Moon is a lunar eclipse, and totality is not worldwide on the day side.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote lens ray diagram as Sun–Moon–Earth solar eclipse alignment."
+  }
+}

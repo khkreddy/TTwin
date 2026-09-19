@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya finds a laboratory thermometer. Its scale runs from −20 °C to 120 °C. Between the 40 °C and 50 °C marks there are 10 equal small divisions.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The range is −20 °C to 120 °C."
+    },
+    {
+      "id": "B",
+      "text": "The value of the smallest division is 1 °C."
+    },
+    {
+      "id": "C",
+      "text": "With 10 divisions between 40 °C and 50 °C, each division measures 10 °C."
+    },
+    {
+      "id": "D",
+      "text": "The smallest division is 10 °C."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Range is the lowest to highest marked temperature: −20 °C to 120 °C. Smallest division is (50 − 40) ÷ 10 = 1 °C, not 10 °C.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

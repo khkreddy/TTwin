@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Urvashi has daily scores $6,8,6,10,8$ for days $1$ through $5$ in that order. She builds a dot plot of those scores on a number line.\n\nOne or more options may be correct. Which two claims about the dot plot are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "From the dots she can read values and frequencies (two $6$s, two $8$s, one $10$), min $6$, max $10$, and range $4$."
+    },
+    {
+      "id": "B",
+      "text": "The display is a number line only, so the dots are optional."
+    },
+    {
+      "id": "C",
+      "text": "The dot plot does not keep which day each score came from."
+    },
+    {
+      "id": "D",
+      "text": "Writing the frequencies is what creates the dots on the number line."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The dots show values, frequencies, min 6, max 10, range 4, but lose day order. Calling it a number line only swaps the term. Saying frequencies create the dots reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

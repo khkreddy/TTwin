@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rohit finds wriggling forms in a flower-pot saucer of stagnant water near his house. He wants the mosquito stage order.\n\nWhich description is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Egg → larva → pupa → adult mosquito."
+    },
+    {
+      "id": "B",
+      "text": "Egg → pupa → larva → adult mosquito."
+    },
+    {
+      "id": "C",
+      "text": "The adult mosquito stays in the stagnant water throughout its life."
+    },
+    {
+      "id": "D",
+      "text": "The larva and the pupa belong to different species sharing the saucer."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquitoes develop egg → larva → pupa → adult. The adult does not remain in water for life. Larva and pupa are stages of the same species, not different species.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

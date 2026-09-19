@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Esha holds two cardboard corner pieces. The diagram shows angle $R$ and angle $S$ drawn from those corners.\n\nWhich claim correctly decides which angle is larger by overlaying?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Match the vertices and align one arm of each; the free arm of angle $R$ opens farther, so angle $R$ is larger."
+    },
+    {
+      "id": "B",
+      "text": "Leave the vertices apart on the desk and judge the openings from separate places."
+    },
+    {
+      "id": "C",
+      "text": "Knowing that angle $R$ is larger is what creates the overlay of the cardboard corners."
+    },
+    {
+      "id": "D",
+      "text": "Any two cardboard corner pieces must be equal angles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=1.0,font=\\sffamily\\small,line cap=round,line join=round]\n  % angle R (wider)\n  \\draw[thick] (2.2,0)--(0,0)--(1.6,1.5);\n  \\fill (0,0) circle (1.4pt);\n  \\node[below left] at (0,0) {$R$};\n  \\draw (0.55,0) arc (0:43:0.55);\n  % angle S (narrower)\n  \\begin{scope}[shift={(4.2,0)}]\n    \\draw[thick] (2.0,0)--(0,0)--(1.85,0.7);\n    \\fill (0,0) circle (1.4pt);\n    \\node[below left] at (0,0) {$S$};\n    \\draw (0.55,0) arc (0:21:0.55);\n  \\end{scope}\n  \\node[anchor=west] at (7.0,0.9) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "Overlaying requires coinciding vertices and one aligned arm; the free arm then shows R is larger. Judging with vertices apart omits that condition. Saying knowledge of size creates the overlay reverses the relation. Treating every cardboard corner as equal over-extends the comparison rule.",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as two cardboard corner angles R (wider) and S (narrower) for overlay comparison."
+  }
+}

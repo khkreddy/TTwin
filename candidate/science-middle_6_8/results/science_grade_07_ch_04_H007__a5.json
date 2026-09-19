@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "The iron paper clip in the open saucer of water can rust because air and water both reach the iron."
+    },
+    {
+      "id": "B",
+      "text": "The iron paper clip on the dry shelf will rust because air alone is enough."
+    },
+    {
+      "id": "C",
+      "text": "The aluminium paper clip in the open saucer will develop brown rust like iron."
+    },
+    {
+      "id": "D",
+      "text": "The oil coating on the third iron paper clip is itself rust."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Sana keeps one iron paper clip on a dry indoor shelf. She leaves a second iron paper clip in a saucer of water open to air. She coats a third iron paper clip with oil. She also has an aluminium paper clip in the same open saucer.\n\nWhich claim is correct?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Iron rusts only when both air and water contact it; dry air alone is not enough, aluminium does not form brown iron rust, and oil is a coating that can block air and water, not rust.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

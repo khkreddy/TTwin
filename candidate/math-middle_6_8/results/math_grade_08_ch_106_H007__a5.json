@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Damini wants to expand $(z+9)(z-9)$ by recognising a conjugate pair.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(z+9)(z-9)=z^{2}+81$, keeping both signs as addition in the product."
+    },
+    {
+      "id": "B",
+      "text": "The expanded difference $z^{2}-81$ is what creates the factors $(z+9)$ and $(z-9)$."
+    },
+    {
+      "id": "C",
+      "text": "$(z+9)(z-9)=z^{2}-81$, because the factors share the same terms with opposite signs."
+    },
+    {
+      "id": "D",
+      "text": "$(z+9)(z-9)=z^{2}+18z-81$, as if both middle terms stay after expansion."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Conjugate factors (z+9)(z-9) expand to z²−81 with cross-terms cancelling. Dropping the opposite-sign condition yields z²+81. Saying the difference creates the factors reverses the recognition direction. Keeping a middle ±18z uses a different expansion identity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Nidhi must find the length of a curved rim on a metal bowl. She has a thread and a metre scale.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "She can lay the thread along the curved rim, straighten the thread, and measure it with the metre scale."
+    },
+    {
+      "id": "2",
+      "text": "She can run a flexible measuring tape along the curved rim."
+    },
+    {
+      "id": "3",
+      "text": "The thicker part of the rim is longer, so she should measure only the thick side."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A curved length is measured with thread straightened against a scale or with a flexible tape. Thickness of the rim is not the curved length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Farhan is faster than Zara because 8 m each second is greater than 6 m each second."
+    },
+    {
+      "id": "B",
+      "text": "Zara is faster than Farhan because 90 m is farther than 80 m."
+    },
+    {
+      "id": "C",
+      "text": "2 m each second is faster than 20 m each minute."
+    },
+    {
+      "id": "D",
+      "text": "Zara and Farhan cannot be compared because their times differ."
+    }
+  ],
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Zara cycles 90 m in 15 s on the school track. Farhan cycles 80 m in 10 s. Zara also compares 2 m/s with 20 m/min on a speed chart.\n\nWhich claims are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Farhan's speed is 8 m/s versus Zara's 6 m/s; 2 m/s equals 120 m/min, which is greater than 20 m/min. Distance alone or unequal times do not block a speed comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

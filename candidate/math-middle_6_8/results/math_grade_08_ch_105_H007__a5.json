@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Chetan works with whole numbers that leave remainder $4$ when divided by $7$. He writes them as $7k+4$ with whole number $k$, and keeps the remainder strictly between $0$ and $6$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any form $7k+r$ is fine even when $r$ is 7 or larger, because the $7k$ part is present."
+    },
+    {
+      "id": "B",
+      "text": "The divisor $7$ is produced by the remainder $4$, so start from $4$ and ignore the $7k$ term."
+    },
+    {
+      "id": "C",
+      "text": "Numbers of that kind are $7k+4$, and the remainder stays less than the divisor $7$."
+    },
+    {
+      "id": "D",
+      "text": "Write every such number as $4k+7$, swapping the places of the remainder $4$ and the divisor $7$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remainder form is 7k+4 with 0≤r<7. Allowing r≥7 drops the standard remainder condition. Treating the remainder as producing the divisor reverses the relation. Writing 4k+7 swaps divisor and remainder outside the allowed representation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

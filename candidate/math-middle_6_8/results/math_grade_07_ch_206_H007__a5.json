@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which first step is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Construct an equilateral triangle from equal-radius arcs to obtain a $60^{\\circ}$ angle at $P$."
+        },
+        {
+          "id": "B",
+          "text": "Name ray $PQ$ as the finished $15^{\\circ}$ angle."
+        },
+        {
+          "id": "C",
+          "text": "Draw a $45^{\\circ}$ angle at $P$ as the starting angle."
+        },
+        {
+          "id": "D",
+          "text": "Bisect a $15^{\\circ}$ angle to create the equal-radius arcs."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Vikram must construct an exact $15^{\\circ}$ angle at point $P$ on ray $PQ$, using equal-radius arcs and angle bisection.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Equal-radius arcs make an equilateral triangle, so a $60^{\\circ}$ angle appears at $P$; that angle is then bisected to $30^{\\circ}$ and again to $15^{\\circ}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Start with a 60° equilateral construction at P, then bisect twice to 15°. Naming ray PQ as 15° swaps the term. Starting at 45° leaves the 60–30–15 path. Bisecting 15° to create the arcs reverses the construction order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

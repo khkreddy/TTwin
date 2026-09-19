@@ -1,0 +1,64 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "three_statement",
+  "stem": "Tanya washes rice in a tall glass of water. She leaves the cloudy water undisturbed. Fine sand settles at the bottom. She then carefully pours off the clearer water.\n\nWhich statements are correct?",
+  "statements": [
+    {
+      "id": "1",
+      "text": "Settling of the sand at the bottom is sedimentation."
+    },
+    {
+      "id": "2",
+      "text": "Pouring off the clearer water is decantation."
+    },
+    {
+      "id": "3",
+      "text": "Settling of the sand at the bottom is decantation."
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "text": "1 and 2 only"
+    },
+    {
+      "id": "B",
+      "text": "1 and 3 only"
+    },
+    {
+      "id": "C",
+      "text": "2 and 3 only"
+    },
+    {
+      "id": "D",
+      "text": "1, 2 and 3"
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heavier insoluble sand settling is sedimentation; pouring off the clearer liquid is decantation. Settling is not decantation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

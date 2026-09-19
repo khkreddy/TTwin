@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Tushar has two $5$ cm by $1$ cm rectangles. He joins them along a shared $1$ cm edge and asks how the perimeter changes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The joined perimeter is the area $10$ square centimetres of the joined strip."
+    },
+    {
+      "id": "B",
+      "text": "The joined perimeter is $12+12=24$ cm, the sum of the separate perimeters."
+    },
+    {
+      "id": "C",
+      "text": "The joined perimeter is $22$ cm, because the two touching $1$ cm edges are inside and not on the outside boundary."
+    },
+    {
+      "id": "D",
+      "text": "The new outside boundary is what creates the two separate $5$ cm by $1$ cm rectangles."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "Each strip has perimeter 12 cm. Joining along 1 cm removes 2 cm from the boundary, so the outside perimeter is 22 cm (a 10 by 1 rectangle). Calling perimeter the area swaps terms. Keeping 24 omits that touching edges leave the boundary. Saying the new boundary creates the separate pieces reverses the cut-and-join relation.",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Siddharth stands on a flat concrete rooftop on a hot afternoon. The rooftop has heated the air above it, and that air is warm and moist. Soon dark clouds build and rain begins.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "What happens first in the chain that produces the thunderstorm?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Warm moist air rises and creates a low-pressure area above the rooftop."
+        },
+        {
+          "id": "B",
+          "text": "Cool air rises first and creates a high-pressure area above the rooftop."
+        },
+        {
+          "id": "C",
+          "text": "Rain falls first and then heats the rooftop."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason that explains why cooler air then flows in toward the rooftop.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Surrounding higher-pressure cooler air flows toward the low-pressure area above the rooftop."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Heated land warms moist air so it rises and leaves a low-pressure region; cooler air from surrounding higher pressure then flows in. Reversing rise/pressure or putting rain first breaks the chain.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

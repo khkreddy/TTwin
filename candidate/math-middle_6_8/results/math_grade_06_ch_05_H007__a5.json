@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sonia checks whether $15$ and $28$ are co-prime by looking at their common factors before calling them a safe treasure pair.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Safe treasure pair is another name for the larger number $28$."
+    },
+    {
+      "id": "B",
+      "text": "Calling them a safe treasure pair is what creates the absence of a common factor greater than $1$."
+    },
+    {
+      "id": "C",
+      "text": "$15$ and $28$ are co-prime, because their only common factor is $1$."
+    },
+    {
+      "id": "D",
+      "text": "$15$ and $28$ are co-prime, because $28$ ends with the digit $8$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "15=3×5 and 28=2×2×7 share only the factor 1, so they are co-prime and a safe pair. Renaming 28 as 'safe pair' swaps terms. Saying the safe-pair label creates the factor condition reverses the relation. Using the last digit of 28 conflates a divisibility shortcut with the co-prime test.",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Jatin must remove the brackets in $12-(7-3)$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which rewrite is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$12-7+3$"
+        },
+        {
+          "id": "B",
+          "text": "Negative sign before brackets means the word \"brackets\" alone."
+        },
+        {
+          "id": "C",
+          "text": "$12-7-3$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A minus before the brackets changes the signs inside, so $-(7-3)$ becomes $-7+3$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "Removing brackets after a minus flips inner signs: 12-(7-3)=12-7+3. Calling the minus the word 'brackets' swaps terms. Writing 12-7-3 omits the sign-change condition.",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

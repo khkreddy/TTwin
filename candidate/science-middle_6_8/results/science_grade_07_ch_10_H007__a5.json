@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "options": [
+    {
+      "id": "A",
+      "text": "Stomata on the leaf surfaces."
+    },
+    {
+      "id": "B",
+      "text": "Guard cells alone, without any pores."
+    },
+    {
+      "id": "C",
+      "text": "Stomata only on the lower surface of leaves."
+    },
+    {
+      "id": "D",
+      "text": "Chloroplasts."
+    }
+  ],
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Myra holds a leaf from the school garden. She names stomata, guard cells, chloroplasts, and xylem tubes. During photosynthesis the leaf exchanges carbon dioxide and oxygen.\n\nWhich structures help that gas exchange?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Stomata are the tiny pores on leaf surfaces that help exchange carbon dioxide and oxygen; guard cells regulate them, chloroplasts run photosynthesis, and stomata are not limited to the lower surface only in this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

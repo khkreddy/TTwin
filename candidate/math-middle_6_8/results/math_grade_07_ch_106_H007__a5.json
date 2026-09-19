@@ -1,0 +1,69 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which total must the three row sums give together?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$45$"
+        },
+        {
+          "id": "B",
+          "text": "$36$"
+        },
+        {
+          "id": "C",
+          "text": "$54$"
+        },
+        {
+          "id": "D",
+          "text": "$9$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "structured_parts",
+  "stem": "Nandini fills a $3$ by $3$ grid using each of $1$ through $9$ once. Each outside number is the sum of its row or column.",
+  "options": [],
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Because $1+2+\\cdots+9=45$ and each digit is used once, the three row sums together equal $45$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digits 1–9 sum to 45 and each appears once, so the three row sums total 45 (and likewise the three column sums). Other totals break that combined-sum check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

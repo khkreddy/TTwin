@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Komal must choose which of $3.2$, $3.6$, and $3.9$ is closest to the target $3.45$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Distance means the target $3.45$ itself."
+    },
+    {
+      "id": "B",
+      "text": "The smallest distance is produced by already naming $3.6$ as closest, with no comparison of distances."
+    },
+    {
+      "id": "C",
+      "text": "$3.6$ is closest, because its distance $0.15$ is smaller than $0.25$ and $0.45$."
+    },
+    {
+      "id": "D",
+      "text": "$3.45$ is closest, because that number is the printed target."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "key_rationale": "Distances are 0.25, 0.15, and 0.45, so 3.6 is closest. Calling distance the target swaps terms. Saying naming 3.6 creates the smallest distance reverses the comparison. Picking the printed target is surface capture.",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}
