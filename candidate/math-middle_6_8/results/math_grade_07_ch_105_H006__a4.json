@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows lines $p$ and $q$ each marked with one matching arrow, and lines $r$ and $s$ meeting with a small square at their intersection.\n\nWhich reading of the marks is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$p$ is parallel to $q$ from the matching arrow marks, and $r$ is perpendicular to $s$ from the square mark."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the word arrow, and stop with no parallel or perpendicular claim."
+    },
+    {
+      "id": "C",
+      "text": "$p$ is parallel to $q$ even when the arrow marks on $p$ and $q$ do not match."
+    },
+    {
+      "id": "D",
+      "text": "The parallel relation is what creates the matching arrow marks on $p$ and $q$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.2,2.6) -- (5.8,2.6);\n  \\draw[line width=1.05pt] (-0.2,0.6) -- (5.8,0.6);\n  \\node[right] at (5.85,2.6) {$p$};\n  \\node[right] at (5.85,0.6) {$q$};\n  \\draw[line width=0.85pt] (1.4,2.6) -- ++(0.35,0.18);\n  \\draw[line width=0.85pt] (1.4,0.6) -- ++(0.35,0.18);\n  \\draw[line width=1.05pt] (3.2,-0.5) -- (3.2,3.4);\n  \\draw[line width=1.05pt] (1.0,-0.5) -- (5.4,3.2);\n  \\fill (3.2,0.6) circle (1.5pt);\n  \\draw[line width=0.7pt] (3.2,0.6) -- ++(0.28,0) -- ++(0,0.28) -- ++(-0.28,0);\n  \\node[above left] at (3.15,3.25) {$r$};\n  \\node[above right] at (5.2,3.05) {$s$};\n  \\node[align=center,anchor=west] at (6.6,1.8) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching arrow marks name parallel lines; a square at an intersection names perpendicular lines. Stopping at the word arrow, dropping matching marks, or reversing marks-as-result all miss the notation reading.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source triangle rods as lines p,q with matching arrows and lines r,s with a square at their meeting point."
+  }
+}

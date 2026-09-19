@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Harsh hears two bells: one every $8$ minutes and one every $12$ minutes. They ring together at $9{:}00$. He wants the next time they ring together.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add $8$ and $12$ to get $20$, and use $20$ minutes as the wait."
+    },
+    {
+      "id": "B",
+      "text": "The wait is a common multiple of $8$ and $12$."
+    },
+    {
+      "id": "C",
+      "text": "The least common multiple is $24$, so they next ring together at $9{:}24$."
+    },
+    {
+      "id": "D",
+      "text": "Report $8$ alone, because $8$ is the smaller printed interval."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "First common ring uses the LCM of 8 and 12, which is 24 minutes, so 9:24. Adding the intervals, or copying the smaller printed 8, miss common multiples.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

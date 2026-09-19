@@ -1,0 +1,84 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m17_qp_12:q23",
+  "target_unit_id": "science/grade_08/ch_10/H009",
+  "build_logic": {
+    "source_uid": "0625_m17_qp_12:q23",
+    "hinge": "science/grade_08/ch_10/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_10/H009"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_10:H009:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_08/ch_10",
+    "chapter_label": "Light: mirrors and lenses",
+    "subtopic_id": "science/grade_08/ch_10/H009",
+    "stem": "The diagram shows three transparent pieces Zoya holds close to a printed letter: a convex lens, a concave lens, and a flat glass piece.\n\nWhich claim about how the letter appears is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "Through the convex lens the letter looks larger; through the concave lens it looks smaller; through the flat glass it looks about the same size.",
+      "B": "Through the convex lens the letter looks smaller; through the concave lens it looks larger.",
+      "C": "All three pieces make the letter look larger because each is transparent.",
+      "D": "Only the flat glass can change the letter's apparent size; both lenses leave it unchanged."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% convex lens (thicker in the middle)\n\\draw[thick,fill=cyan!15] (0.0,0.0) .. controls (-0.45,0.7) and (-0.45,1.5) .. (0.0,2.2)\n  .. controls (0.45,1.5) and (0.45,0.7) .. (0.0,0.0) -- cycle;\n\\node at (0.0,-0.35) {convex};\n% concave lens (thinner in the middle)\n\\fill[cyan!15] (2.3,0.0) -- (2.55,0.0) .. controls (2.35,0.7) and (2.35,1.5) .. (2.55,2.2)\n  -- (2.3,2.2) .. controls (2.5,1.5) and (2.5,0.7) .. (2.3,0.0) -- cycle;\n\\fill[cyan!15] (3.05,0.0) -- (2.8,0.0) .. controls (3.0,0.7) and (3.0,1.5) .. (2.8,2.2)\n  -- (3.05,2.2) .. controls (2.85,1.5) and (2.85,0.7) .. (3.05,0.0) -- cycle;\n\\draw[thick] (2.3,0.0) -- (2.55,0.0) .. controls (2.35,0.7) and (2.35,1.5) .. (2.55,2.2)\n  -- (2.3,2.2) .. controls (2.5,1.5) and (2.5,0.7) .. (2.3,0.0);\n\\draw[thick] (3.05,0.0) -- (2.8,0.0) .. controls (3.0,0.7) and (3.0,1.5) .. (2.8,2.2)\n  -- (3.05,2.2) .. controls (2.85,1.5) and (2.85,0.7) .. (3.05,0.0);\n\\node at (2.67,-0.35) {concave};\n% flat glass slab\n\\draw[thick,fill=cyan!15] (4.6,0.0) rectangle (5.2,2.2);\n\\node at (4.9,-0.35) {flat glass};\n\\node[font=\\bfseries] at (0.0,2.55) {A};\n\\node[font=\\bfseries] at (2.67,2.55) {A};\n\\node[font=\\bfseries] at (4.9,2.55) {A};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_10/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m16_qp_32:q6",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:07:13.540Z",
+  "source": {
+    "item_ref": "session:0625_m16_qp_32:q6",
+    "item_type": "structured_parts",
+    "stem": "(a) Fig. 6.1 shows a plane mirror reflecting a ray of light.",
+    "options": [
+      {
+        "id": "A",
+        "text": "spectrum of colours can be seen on the screen between S and T."
+      }
+    ],
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "There is a dashed line drawn at right angles to the mirror.\nState the name of this line.\n[1]",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "State which angle, w , x , y , or z , is the angle of reflection.\n[1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Fig. 6.2 shows a ray of white light entering a semi-circular glass block. The ray of light emerges\nat point R and travels alongside the flat surface.\nscreen\nS\nR\nT\nglass\nwhite\nlight\nFig. 6.2\nA spectrum of colours can be seen on the screen between S and T.",
+        "marks": 0
+      },
+      {
+        "id": "i",
+        "text": "State the colours in the correct order. One has been done for you.\nred\ncolour at S\ncolour at T [1]\n13",
+        "marks": 0
+      },
+      {
+        "id": "ii",
+        "text": "The angle of the ray is changed.\nOn Fig. 6.3, complete the path of the ray of light. Explain your answer.\nair\nglass\nwhite\nlight\nFig. 6.3\n[3]\n[Total: 6]\n14",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily,line cap=round,line join=round,>=latex,scale=1]\\begin{scope}[shift={(0,0)}]\\draw (0,0)--(5.2,0);\\foreach \\x in {0.15,0.35,...,5.0}{\\draw (\\x,0)--++(-0.16,-0.18);}\\draw[dashed] (2.6,0)--(2.6,2.55);\\draw[->,thick] (0.45,2.55)--(2.55,0.08);\\draw[->,thick] (2.65,0.08)--(4.75,2.55);\\draw (2.6,0)++(138:0.78) arc (138:180:0.78);\\draw (2.6,0)++(90:0.78) arc (90:138:0.78);\\draw (2.6,0)++(42:0.78) arc (42:90:0.78);\\draw (2.6,0)++(0:0.78) arc (0:42:0.78);\\node at (1.95,0.33){$w$};\\node at (2.32,0.72){$x$};\\node at (2.90,0.72){$y$};\\node at (3.43,0.33){$z$};\\node[right] at (4.75,0.72){mirror};\\node[font=\\bfseries] at (2.6,-0.95){Fig. 6.1};\\end{scope}\\begin{scope}[shift={(0,-4.15)}]\\draw (0.4,1.55)--(4.65,1.55);\\draw (0.4,1.55) arc (180:360:2.125);\\draw[dashed] (2.525,0.15)--(2.525,3.25);\\node at (0.95,1.28){glass};\\draw[->,thick] (0.18,-0.65)--(2.25,1.52);\\node[align=left] at (-0.18,-0.28){white\\\\light};\\draw[->,thick] (2.2,1.55)--(4.85,1.67);\\draw[->,thick] (2.2,1.55)--(4.85,1.82);\\draw[thick] (4.95,0.78)--(4.95,3.25);\\node[right] at (5.08,3.12){screen};\\node[left] at (2.50,1.73){R};\\node[right] at (4.98,1.86){S};\\node[right] at (4.98,1.52){T};\\node[font=\\bfseries] at (2.6,-1.35){Fig. 6.2};\\end{scope}\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 7",
+      "topic": "Light, mirrors and seeing",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Refraction at both mirrors guides the light to the observer."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "One plane mirror is enough for this Z-shaped periscope to work."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "My eye sends light through the two mirrors to the object, which lets me see it."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Yes, the periscope can see the object even when an opaque wall completely blocks its light from entering."
+      }
+    ],
+    "enrichment": "A simple periscope uses two plane mirrors in a Z-shaped box so reflection from the two mirrors enables us to see objects that are not directly visible. Each plane mirror changes the direction of light; two such reflections guide light through the periscope to the observer. The learner correctly applies this rule: A simple periscope uses two plane mirrors in a Z-shaped box so reflection from the two mirrors enables us to see objects that are not directly visible. A periscope works because the observer looks harder through a tube, not because mirrors redirect light.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 7 Science question. Chapter: Light. The student must decide: Use reflection from two plane mirrors to decide how a simple periscope lets us see an object that is not directly visible. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 2
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m16_qp_32:q6",
+    "hinge": "science/grade_07/ch_11/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H011"
+  }
+}

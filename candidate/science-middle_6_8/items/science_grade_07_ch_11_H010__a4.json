@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_22:q4",
+  "target_unit_id": "science/grade_07/ch_11/H010",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_22:q4",
+    "hinge": "science/grade_07/ch_11/H010",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H010"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H010:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H010",
+    "stem": "The diagram shows a pinhole camera. Farhan points the tiny hole at a bright lamp and looks at the screen at the back.\n\nWhat image should form on the screen?",
+    "item_type": "mcq",
+    "options": {
+      "A": "An upside-down image of the lamp, also reversed left to right.",
+      "B": "An upright image of the lamp, reversed left to right.",
+      "C": "A bright patch with the same shape as the pinhole, not an image of the lamp.",
+      "D": "An upside-down image of the lamp even if the pinhole faces away from the lamp."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% camera box\n\\draw[thick] (0,0) rectangle (4.2,2.4);\n% pinhole\n\\fill (0,1.2) circle (1.5pt);\n\\node[left] at (-0.05,1.2) {pinhole};\n% screen\n\\draw[thick] (4.2,0.2) -- (4.2,2.2);\n\\node[right] at (4.35,1.2) {screen};\n% lamp\n\\draw[thick,fill=yellow!35] (-1.8,1.85) circle (0.32);\n\\node at (-1.8,2.45) {lamp};\n% rays crossing at pinhole\n\\draw[->,thick] (-1.5,2.0) -- (0,1.2);\n\\draw[->,thick] (0,1.2) -- (4.2,0.55);\n\\draw[->,thick] (-1.5,1.7) -- (0,1.2);\n\\draw[->,thick] (0,1.2) -- (4.2,1.85);\n\\node at (2.1,-0.35) {pinhole camera};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H010",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Imtiaz compares photosynthesis and respiration in green plants. He tracks glucose, oxygen, carbon dioxide, and energy.\n\nWhich claims keep the two processes distinct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Photosynthesis makes glucose and oxygen from carbon dioxide and water using light energy."
+    },
+    {
+      "id": "B",
+      "text": "Respiration breaks down glucose with oxygen to release energy, carbon dioxide, and water."
+    },
+    {
+      "id": "C",
+      "text": "Photosynthesis and respiration are the same process written with the arrow reversed for convenience."
+    },
+    {
+      "id": "D",
+      "text": "Respiration is the process that builds glucose in the leaf using sunlight."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Photosynthesis builds glucose and oxygen; respiration breaks glucose with oxygen to release energy. They are opposite in role, not the same process.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

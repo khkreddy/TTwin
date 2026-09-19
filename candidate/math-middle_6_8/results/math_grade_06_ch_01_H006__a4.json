@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aryan builds a growing triangle pattern with toothpicks. Shape $1$ uses $3$ toothpicks, Shape $2$ uses $5$ toothpicks, and Shape $3$ uses $7$ toothpicks.\n\nWhich countable feature produces the related number sequence $3$, $5$, $7$, $\\ldots$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count the toothpicks in Shape $1$ only, then reuse that same count for every later shape."
+    },
+    {
+      "id": "B",
+      "text": "Count every interior angle in any polygon from the chapter, as if that also made this sequence."
+    },
+    {
+      "id": "C",
+      "text": "Count the toothpicks that make up each whole shape; repeating that same count gives $3$, $5$, $7$, $\\ldots$."
+    },
+    {
+      "id": "D",
+      "text": "Pick the printed numeral $7$ alone because it is the largest number shown."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The related sequence comes from counting the same structural feature—toothpicks—in each whole figure. Counting only Shape 1, counting angles from elsewhere, or grabbing the printed 7 miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

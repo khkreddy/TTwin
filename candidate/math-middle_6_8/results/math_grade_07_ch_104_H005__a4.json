@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Avni simplifies $3(2x + 5) - (x - 4)$.\n\nWhich two claims correctly remove the brackets before combining like terms?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rewrite as $3 \\cdot 2x + 5 - x - 4$, leaving the $5$ unscaled by $3$."
+    },
+    {
+      "id": "B",
+      "text": "Replace $3(2x + 5)$ with $6x + 15$."
+    },
+    {
+      "id": "C",
+      "text": "Replace $-(x - 4)$ with $-x + 4$."
+    },
+    {
+      "id": "D",
+      "text": "Keep only the printed $3$ and treat that numeral as the simplified value."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distribute 3 across (2x+5) to get 6x+15, and distribute the minus across (x-4) to get -x+4. Leaving 5 unscaled, or grabbing the printed 3 alone, miss correct bracket removal.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

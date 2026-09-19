@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Krish's family wants to use less petrol, diesel, and coal this month.\n\nWhich claims correctly reduce fossil-fuel use? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Walk or cycle for nearby trips instead of taking a short car ride."
+    },
+    {
+      "id": "B",
+      "text": "Share a bus or train for longer trips so fewer cars burn petrol."
+    },
+    {
+      "id": "C",
+      "text": "Cut back on solar-panel use so that sunlight does not run out."
+    },
+    {
+      "id": "D",
+      "text": "Always pick the smallest car, because the smallest vehicle must use the least fossil fuel for every trip."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Walking, cycling, and shared public transport cut petrol and diesel use. Limiting solar use mistakes a renewable source for a fossil fuel, and size alone does not prove lower fuel use for every trip.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

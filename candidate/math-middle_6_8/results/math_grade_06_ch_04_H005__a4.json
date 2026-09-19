@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sara is drawing a pictograph of plants watered by four friends: $6$, $9$, $12$, and $15$. She wants fewer symbols on the page, but every count must still be shown exactly with whole symbols.\n\nWhich key should she choose?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write the data values $6$, $9$, $12$, and $15$ as the pictograph key itself."
+    },
+    {
+      "id": "B",
+      "text": "First invent a key, and say that key is what creates the four plant counts."
+    },
+    {
+      "id": "C",
+      "text": "Let each plant symbol stand for $3$ plants, because then $6$, $9$, $12$, and $15$ need $2$, $3$, $4$, and $5$ whole symbols."
+    },
+    {
+      "id": "D",
+      "text": "Replace the pictograph with a frequency table alone, and treat that table as the finished pictograph key."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scale 1 symbol = 3 plants shows each value exactly with whole symbols and shortens the drawing. Using the data as the key, reversing key and data, or swapping in a table alone miss the scale hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rudra multiplies $\\dfrac{6}{35} \\times \\dfrac{14}{9}$ and wants to cancel common factors before multiplying.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply $6 \\times 14$ and $35 \\times 9$ first, and leave every common factor uncancelled."
+    },
+    {
+      "id": "B",
+      "text": "Cancel a common factor $7$ between $14$ and $35$, leaving $\\dfrac{6}{5} \\times \\dfrac{2}{9}$."
+    },
+    {
+      "id": "C",
+      "text": "Cancel a common factor $3$ between $6$ and $9$, leaving $\\dfrac{2}{5} \\times \\dfrac{2}{3} = \\dfrac{4}{15}$."
+    },
+    {
+      "id": "D",
+      "text": "Treat the product as a sum of the two fractions instead of a product."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Cancel 7 from 14 and 35, then 3 from 6 and 9, to reach 4/15. Skipping all cancellation, or switching to addition, miss simplify-before-multiply.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

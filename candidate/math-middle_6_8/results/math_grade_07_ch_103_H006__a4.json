@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a number line from $0.0$ to $1.0$ with equal tenth marks. Point $P$ is at $0.47$ and point $Q$ is at $0.5$. Rudra must decide which decimal is greater.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$0.5$ is greater than $0.47$, because the tenths digit $5$ is greater than the tenths digit $4$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the phrase first unequal digit, and stop with no place compared."
+    },
+    {
+      "id": "C",
+      "text": "$0.47$ is greater than $0.5$, because $0.47$ has more digits after the decimal point."
+    },
+    {
+      "id": "D",
+      "text": "Round both decimals to the nearest whole number first, then compare those whole numbers only."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,x=1.0cm,y=1cm]\n  \\draw[line width=0.9pt,->] (-0.3,0) -- (10.8,0);\n  \\foreach \\x in {0,1,2,3,4,5,6,7,8,9,10} {\n    \\draw[line width=0.7pt] (\\x,0.14) -- (\\x,-0.14);\n  }\n  \\node[below=4pt] at (0,0) {$0.0$};\n  \\node[below=4pt] at (5,0) {$0.5$};\n  \\node[below=4pt] at (10,0) {$1.0$};\n  \\fill[black] (4.7,0) circle (2.2pt);\n  \\node[above=5pt] at (4.7,0) {$P$};\n  \\fill[black] (5.0,0) circle (2.2pt);\n  \\node[above=5pt] at (5.3,0.35) {$Q$};\n  \\node[align=center,anchor=west] at (11.2,0.6) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Compare place by place: tenths 5 > 4, so 0.5 > 0.47. Naming first unequal digit alone, treating more digits as larger, or rounding to wholes first all miss place-value order.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as a 0.0–1.0 number line with equal tenths and points P at 0.47 and Q at 0.5."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Sameer has a wooden cube with clear edges and an irregular stone. He needs the volume of each.\n\nWhich claim about how to find the volumes is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use a shape formula for the cube; use water displacement for the irregular stone."
+    },
+    {
+      "id": "B",
+      "text": "Use water displacement for both, because a formula never works for a cube."
+    },
+    {
+      "id": "C",
+      "text": "Use a shape formula for the stone, because any solid has a simple length × breadth × height."
+    },
+    {
+      "id": "D",
+      "text": "Skip measuring volume for the stone; only the cube can have a volume."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "C": "condition_omission",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A regular cube has a shape formula; an irregular stone needs water displacement. Denying the cube formula or forcing a formula on the stone misses that choice.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

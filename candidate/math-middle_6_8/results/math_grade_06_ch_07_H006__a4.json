@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir reduces the fraction $\\dfrac{24}{36}$ to lowest terms.\n\nWhich two claims correctly describe that reduction?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report $12$ alone as the finished reduced fraction."
+    },
+    {
+      "id": "B",
+      "text": "Divide numerator and denominator by $12$ to obtain $\\dfrac{2}{3}$."
+    },
+    {
+      "id": "C",
+      "text": "$\\dfrac{2}{3}$ is in lowest terms because $2$ and $3$ share no common factor except $1$."
+    },
+    {
+      "id": "D",
+      "text": "Say that writing $\\dfrac{2}{3}$ is what creates the common factor $12$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Reduce by dividing both parts by the common factor 12 to get 2/3, which has no further common factor except 1. Reporting 12 alone, or reversing reduced form as the source of the factor, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

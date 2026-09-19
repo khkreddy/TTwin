@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leela asks whether $\\dfrac{7}{20}$ can be written as a terminating decimal by finding an equivalent fraction with denominator $10$, $100$, $1000$, and so on.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$\\dfrac{7}{20}$ cannot become a terminating decimal, even though an equivalent fraction $\\dfrac{35}{100}$ exists."
+    },
+    {
+      "id": "B",
+      "text": "Writing the terminating decimal $0.35$ is what creates the equivalent fraction $\\dfrac{35}{100}$."
+    },
+    {
+      "id": "C",
+      "text": "Yes: $\\dfrac{7}{20} = \\dfrac{35}{100} = 0.35$, a terminating decimal."
+    },
+    {
+      "id": "D",
+      "text": "Rewrite $\\dfrac{7}{20}$ as a continuing never-ending decimal only, and stop."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multiply numerator and denominator by 5 to reach 35/100 = 0.35. Denying the equivalent fraction, reversing decimal-creates-fraction, or forcing a never-ending form all miss that conversion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

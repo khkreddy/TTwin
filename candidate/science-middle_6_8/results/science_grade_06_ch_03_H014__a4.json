@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Rhea compares two packaged snacks using their nutrition labels.\n\nSnack P: high calories, high fat, low protein, low dietary fibre.\nSnack Q: fewer calories, lower fat, more protein, more dietary fibre.\n\nWhich claim correctly identifies the junk-food pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Snack P better fits the junk-food pattern because it is high in calories and fat and low in protein and fibre."
+    },
+    {
+      "id": "B",
+      "text": "Snack Q better fits the junk-food pattern because it has more protein and fibre."
+    },
+    {
+      "id": "C",
+      "text": "Snack P cannot be junk food because it is sold in a packet."
+    },
+    {
+      "id": "D",
+      "text": "Both snacks fit the junk-food pattern equally because both list calories."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Junk-food pattern on labels: high calories/fats with low protein and dietary fibre. Snack P matches; Snack Q does not.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

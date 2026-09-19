@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aryan studies a square with centre $O$ marked at the meeting point of the diagonals.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Does the square have rotational symmetry?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call $O$ the name rotational symmetry."
+        },
+        {
+          "id": "B",
+          "text": "Yes, because a turn of $90^{\\circ}$ about $O$ makes the square coincide with itself, and $90^{\\circ}$ is less than a full turn."
+        },
+        {
+          "id": "C",
+          "text": "Say the centre $O$ is what the matching turn creates."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A $90^{\\circ}$ turn about centre $O$ maps the square onto itself, and that angle is less than $360^{\\circ}$, so the square has rotational symmetry."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rotational symmetry needs a centre and a matching angle less than a full turn. Naming O as the symmetry, or saying the turn creates the centre, miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H006",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H006"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H006",
+    "stem": "Nitya looks at the diagram of polygon $PQRS$ on square-grid paper. Sides $PQ$ and $QR$ run along the grid lines. Side $PS$ cuts diagonally across grid squares.\n\nWhich claim about the boundary length is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer grid path only, with one shared length label for every side.",
+      "B": "Count the diagonal side $PS$ as $1$ grid unit, the same as a straight grid side.",
+      "C": "Measure the straight sides in grid units and treat diagonal side $PS$ as longer than one straight grid unit, then add those lengths.",
+      "D": "Say that calling the diagonal longer is what creates polygon $PQRS$ on the grid."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[gray!70,densely dashed,line width=0.35pt] (0,0) grid[step=1] (6,5);\n  \\draw[black,line width=1.15pt] (1,1)--(4,1)--(4,3)--(1,4)--cycle;\n  \\node[below] at (2.5,1) {straight};\n  \\node[right] at (4,2) {straight};\n  \\node[above left] at (2.2,3.6) {diagonal};\n  \\node[below left] at (1,1) {$P$};\n  \\node[below right] at (4,1) {$Q$};\n  \\node[above right] at (4,3) {$R$};\n  \\node[above left] at (1,4) {$S$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

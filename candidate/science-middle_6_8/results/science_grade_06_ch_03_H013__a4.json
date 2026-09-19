@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ishan lists what he ate today: white rice, fried snacks, and sweetened juice. There are no dal, fruit, vegetables, or drinking water on his list. His younger sister needs different amounts of the same kinds of food than he does.\n\nWhich claims about a balanced diet are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "A balanced diet includes the essential nutrients, roughage, and water in amounts that support growth and development."
+    },
+    {
+      "id": "B",
+      "text": "How much of each kind of food is needed can change with age."
+    },
+    {
+      "id": "C",
+      "text": "Rice and fried snacks alone make a balanced diet because they fill the stomach."
+    },
+    {
+      "id": "D",
+      "text": "Water and roughage can be ignored if energy foods are present."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A balanced diet needs essential nutrients, roughage, and water in suitable amounts; needs also vary with age. Filling the stomach with energy foods alone is not enough, and water and roughage are not optional extras.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

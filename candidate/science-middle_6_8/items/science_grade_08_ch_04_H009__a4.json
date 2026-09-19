@@ -1,0 +1,81 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m15_qp_12:q32",
+  "target_unit_id": "science/grade_08/ch_04/H009",
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q32",
+    "hinge": "science/grade_08/ch_04/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H009"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "UNRESOLVED",
+    "D": "UNRESOLVED"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_08:ch_04:H009:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-CIRCUIT",
+    "chapter_id": "science/grade_08/ch_04",
+    "chapter_label": "Electricity: magnetic and heating effects",
+    "subtopic_id": "science/grade_08/ch_04/H009",
+    "stem": "The diagram shows Anika's battery pack connected to a charger plug. After charging, she uses the same pack in her toy car many times, then charges it again.\n\nWhich claim about this battery is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "It is rechargeable because it can be charged again and reused many times.",
+      "B": "It is rechargeable because it ran the toy several times before going flat, even with no charging.",
+      "C": "It is single-use because any battery that powers a toy must be thrown away after one day.",
+      "D": "It is single-use because the diagram shows wires, so charging cannot restore it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% battery pack\n\\draw[thick,fill=gray!12] (0,0.6) rectangle (2.4,1.8);\n\\node at (1.2,1.2) {battery};\n\\node[font=\\bfseries] at (-0.25,1.2) {$-$};\n\\node[font=\\bfseries] at (2.65,1.2) {$+$};\n% charger block\n\\draw[thick,fill=white] (4.0,0.5) rectangle (5.6,1.9);\n\\node at (4.8,1.2) {charger};\n% leads\n\\draw[thick] (2.4,1.5) -- (4.0,1.5);\n\\draw[thick] (2.4,0.9) -- (4.0,0.9);\n\\node at (3.2,1.85) {leads};\n% wall plug mark\n\\draw[thick] (5.6,1.2) -- (6.2,1.2);\n\\draw[thick] (6.2,0.95) rectangle (6.55,1.45);\n\\node at (6.4,0.55) {plug};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_08/ch_04/H009",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

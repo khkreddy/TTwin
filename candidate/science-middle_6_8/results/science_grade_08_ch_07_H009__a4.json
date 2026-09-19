@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Vihaan stirs a spoon of sugar into a glass of water. In another glass he stirs the same amount of sand into water.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sugar mixes into the water to make a solution; the sugar particles are no longer seen as separate grains."
+    },
+    {
+      "id": "B",
+      "text": "Sand does not dissolve; grains stay separate and can settle."
+    },
+    {
+      "id": "C",
+      "text": "Sand dissolves just as sugar does because both were stirred into water."
+    },
+    {
+      "id": "D",
+      "text": "Every solid added to water dissolves, so sand must dissolve just as sugar does."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Sugar dissolves to form a solution; sand does not dissolve and remains as separate grains. Treating stirred sand as dissolved, or expanding dissolve to every solid in water, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

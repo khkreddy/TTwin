@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Vihaan lists five microscopic things: Amoeba, bread mould, a bacterium, a tiny alga, and a virus.\n\nWhich claims classify them correctly? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Amoeba, bread mould, the bacterium, and the tiny alga are living microorganisms of different kinds."
+    },
+    {
+      "id": "B",
+      "text": "A virus is not placed with ordinary cellular microorganisms because it is acellular."
+    },
+    {
+      "id": "C",
+      "text": "Amoeba is a bacterium because both are microscopic."
+    },
+    {
+      "id": "D",
+      "text": "Every alga, including large seaweeds, must be counted as a microorganism."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Microorganisms include several cellular groups; viruses sit outside that cellular set. Shared tiny size does not make Amoeba a bacterium, and not every alga is microscopic.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

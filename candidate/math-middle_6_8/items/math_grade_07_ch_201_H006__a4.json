@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_07/ch_201/H006",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_07/ch_201/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "scope_error",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_201/H006"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_201:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4/H-PROOF",
+    "chapter_id": "math/grade_07/ch_201",
+    "chapter_label": "math/grade_07/ch_201",
+    "subtopic_id": "math/grade_07/ch_201/H006",
+    "stem": "The diagram shows $\\triangle PQR$ and $\\triangle XYZ$. Each triangle has sides $7\\,\\mathrm{cm}$ and $5\\,\\mathrm{cm}$ and a $40^{\\circ}$ angle that is not between those two sides.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The matching sides and non-included angle do not always make the triangles congruent.",
+      "B": "The triangles are congruent from the two equal side lengths alone.",
+      "C": "SSA is a congruence rule that covers every triangle pair with those matching parts.",
+      "D": "The triangles are congruent because $40$ is the standout printed number in the diagram."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.4,0);\n  \\coordinate (R) at (2.6,2.1);\n  \\draw[line width=0.85pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n  \\node[right] at (3.05,1.0) {$5\\,\\mathrm{cm}$};\n  \\node at (2.55,0.55) {$40^{\\circ}$};\n  \\begin{scope}[xshift=5.6cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.4,0);\n    \\coordinate (Z) at (0.9,2.1);\n    \\draw[line width=0.85pt] (X)--(Y)--(Z)--cycle;\n    \\node[below left] at (X) {$X$};\n    \\node[below right] at (Y) {$Y$};\n    \\node[above] at (Z) {$Z$};\n    \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n    \\node[left] at (0.35,1.0) {$5\\,\\mathrm{cm}$};\n    \\node at (2.55,0.55) {$40^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.8,1.1) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_201/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

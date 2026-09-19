@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[font=\\sffamily\\small,line cap=round,line join=round]\n% camera box\n\\draw[thick] (0,0) rectangle (4.2,2.4);\n% pinhole\n\\fill (0,1.2) circle (1.5pt);\n\\node[left] at (-0.05,1.2) {pinhole};\n% screen\n\\draw[thick] (4.2,0.2) -- (4.2,2.2);\n\\node[right] at (4.35,1.2) {screen};\n% lamp\n\\draw[thick,fill=yellow!35] (-1.8,1.85) circle (0.32);\n\\node at (-1.8,2.45) {lamp};\n% rays crossing at pinhole\n\\draw[->,thick] (-1.5,2.0) -- (0,1.2);\n\\draw[->,thick] (0,1.2) -- (4.2,0.55);\n\\draw[->,thick] (-1.5,1.7) -- (0,1.2);\n\\draw[->,thick] (0,1.2) -- (4.2,1.85);\n\\node at (2.1,-0.35) {pinhole camera};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a pinhole camera. Farhan points the tiny hole at a bright lamp and looks at the screen at the back.\n\nWhat image should form on the screen?",
+  "options": [
+    {
+      "id": "A",
+      "text": "An upside-down image of the lamp, also reversed left to right."
+    },
+    {
+      "id": "B",
+      "text": "An upright image of the lamp, reversed left to right."
+    },
+    {
+      "id": "C",
+      "text": "A bright patch with the same shape as the pinhole, not an image of the lamp."
+    },
+    {
+      "id": "D",
+      "text": "An upside-down image of the lamp even if the pinhole faces away from the lamp."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "mechanism_conflation",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Light from the lamp passes through the tiny hole and falls on the screen, forming an inverted image of the lamp (upside down and left-right reversed). The hole must face the lamp, and the image is of the lamp, not of the hole's shape.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "mechanism_conflation",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source converging-lens ray diagram into a labelled pinhole camera with lamp, hole, and screen."
+  }
+}

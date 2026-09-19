@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H006",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H006"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H006",
+    "stem": "The diagram shows lines $p$ and $q$ each marked with one matching arrow, and lines $r$ and $s$ meeting with a small square at their intersection.\n\nWhich reading of the marks is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$p$ is parallel to $q$ from the matching arrow marks, and $r$ is perpendicular to $s$ from the square mark.",
+      "B": "Call the answer the word arrow, and stop with no parallel or perpendicular claim.",
+      "C": "$p$ is parallel to $q$ even when the arrow marks on $p$ and $q$ do not match.",
+      "D": "The parallel relation is what creates the matching arrow marks on $p$ and $q$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.2,2.6) -- (5.8,2.6);\n  \\draw[line width=1.05pt] (-0.2,0.6) -- (5.8,0.6);\n  \\node[right] at (5.85,2.6) {$p$};\n  \\node[right] at (5.85,0.6) {$q$};\n  \\draw[line width=0.85pt] (1.4,2.6) -- ++(0.35,0.18);\n  \\draw[line width=0.85pt] (1.4,0.6) -- ++(0.35,0.18);\n  \\draw[line width=1.05pt] (3.2,-0.5) -- (3.2,3.4);\n  \\draw[line width=1.05pt] (1.0,-0.5) -- (5.4,3.2);\n  \\fill (3.2,0.6) circle (1.5pt);\n  \\draw[line width=0.7pt] (3.2,0.6) -- ++(0.28,0) -- ++(0,0.28) -- ++(-0.28,0);\n  \\node[above left] at (3.15,3.25) {$r$};\n  \\node[above right] at (5.2,3.05) {$s$};\n  \\node[align=center,anchor=west] at (6.6,1.8) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

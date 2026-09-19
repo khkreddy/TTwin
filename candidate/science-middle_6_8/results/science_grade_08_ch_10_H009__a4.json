@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\sffamily\\small]\n% convex lens (thicker in the middle)\n\\draw[thick,fill=cyan!15] (0.0,0.0) .. controls (-0.45,0.7) and (-0.45,1.5) .. (0.0,2.2)\n  .. controls (0.45,1.5) and (0.45,0.7) .. (0.0,0.0) -- cycle;\n\\node at (0.0,-0.35) {convex};\n% concave lens (thinner in the middle)\n\\fill[cyan!15] (2.3,0.0) -- (2.55,0.0) .. controls (2.35,0.7) and (2.35,1.5) .. (2.55,2.2)\n  -- (2.3,2.2) .. controls (2.5,1.5) and (2.5,0.7) .. (2.3,0.0) -- cycle;\n\\fill[cyan!15] (3.05,0.0) -- (2.8,0.0) .. controls (3.0,0.7) and (3.0,1.5) .. (2.8,2.2)\n  -- (3.05,2.2) .. controls (2.85,1.5) and (2.85,0.7) .. (3.05,0.0) -- cycle;\n\\draw[thick] (2.3,0.0) -- (2.55,0.0) .. controls (2.35,0.7) and (2.35,1.5) .. (2.55,2.2)\n  -- (2.3,2.2) .. controls (2.5,1.5) and (2.5,0.7) .. (2.3,0.0);\n\\draw[thick] (3.05,0.0) -- (2.8,0.0) .. controls (3.0,0.7) and (3.0,1.5) .. (2.8,2.2)\n  -- (3.05,2.2) .. controls (2.85,1.5) and (2.85,0.7) .. (3.05,0.0);\n\\node at (2.67,-0.35) {concave};\n% flat glass slab\n\\draw[thick,fill=cyan!15] (4.6,0.0) rectangle (5.2,2.2);\n\\node at (4.9,-0.35) {flat glass};\n\\node[font=\\bfseries] at (0.0,2.55) {A};\n\\node[font=\\bfseries] at (2.67,2.55) {A};\n\\node[font=\\bfseries] at (4.9,2.55) {A};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows three transparent pieces Zoya holds close to a printed letter: a convex lens, a concave lens, and a flat glass piece.\n\nWhich claim about how the letter appears is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Through the convex lens the letter looks larger; through the concave lens it looks smaller; through the flat glass it looks about the same size."
+    },
+    {
+      "id": "B",
+      "text": "Through the convex lens the letter looks smaller; through the concave lens it looks larger."
+    },
+    {
+      "id": "C",
+      "text": "All three pieces make the letter look larger because each is transparent."
+    },
+    {
+      "id": "D",
+      "text": "Only the flat glass can change the letter's apparent size; both lenses leave it unchanged."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A close convex lens magnifies; a concave lens makes the letter look smaller; flat glass leaves size about the same. Swapping lens roles or treating transparency alone as magnification misses the shapes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": "Three labelled pieces: convex lens, concave lens, flat glass, each under letter A."
+  }
+}

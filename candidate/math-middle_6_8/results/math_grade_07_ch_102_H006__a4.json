@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sara has rewritten an expression as the sum of terms $7+(-2)+9$.\n\nWhich claim about rearranging is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Swap and group freely while a subtraction sign still sits between unsigned parts."
+    },
+    {
+      "id": "B",
+      "text": "Also claim that regrouping $(7+(-2))+9$ changes products such as $7\\times(-2)\\times 9$ the same way."
+    },
+    {
+      "id": "C",
+      "text": "Once the expression is a sum of terms, any order or grouping of $7$, $-2$, and $9$ keeps the same value, such as $(-2)+9+7$."
+    },
+    {
+      "id": "D",
+      "text": "Decide only because $9$ is the largest printed number among $7$, $-2$, and $9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After the expression is a sum of terms, order and grouping may change without changing the value. Rearranging before it is written as a sum, extending the claim to products, or choosing by the largest print miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

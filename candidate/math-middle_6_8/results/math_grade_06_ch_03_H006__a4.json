@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir wants 3-digit numbers whose digits add to $12$.\n\nWhich two claims correctly use digit sums for that target?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Reading only the leading digit $9$ in $903$ gives digit sum $12$."
+    },
+    {
+      "id": "B",
+      "text": "$453$ works, because $4+5+3=12$."
+    },
+    {
+      "id": "C",
+      "text": "$390$ also works, because $3+9+0=12$."
+    },
+    {
+      "id": "D",
+      "text": "$453$ works because $453$ looks neat and large on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Digit sum adds every digit: 4+5+3=12 and 3+9+0=12. Using only a leading digit, or choosing by how a number looks, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

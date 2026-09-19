@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Leela is given included side $BC = 6\\,\\mathrm{cm}$ with $\\angle B = 50^{\\circ}$ and $\\angle C = 70^{\\circ}$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Name the finished triangle as the included side $BC$ alone, and stop."
+    },
+    {
+      "id": "B",
+      "text": "Drawing the finished triangle is what creates the given angles and the included side."
+    },
+    {
+      "id": "C",
+      "text": "A triangle can be formed: $\\angle A = 60^{\\circ}$, so draw $BC = 6\\,\\mathrm{cm}$, mark $50^{\\circ}$ at $B$ and $70^{\\circ}$ at $C$, and join the new arms at $A$."
+    },
+    {
+      "id": "D",
+      "text": "Copy the printed $70$ alone and treat that numeral as the finished triangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Angles 50° and 70° leave 60° at A, so ASA with included BC works: draw BC, mark the angles, join at A. Naming BC as the triangle, reversing finish-creates-data, or grabbing 70 alone all miss that construction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

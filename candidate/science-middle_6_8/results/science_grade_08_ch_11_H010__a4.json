@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ira sees tiny star-like points moving steadily across the night sky. They are not the Moon.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Those moving points may be artificial satellites orbiting Earth."
+    },
+    {
+      "id": "B",
+      "text": "Artificial satellites can be used for mapping, and old satellites or rocket parts can become space debris."
+    },
+    {
+      "id": "C",
+      "text": "Every moving speck in the sky must be the Moon, Earth's only satellite."
+    },
+    {
+      "id": "D",
+      "text": "Seeing a moving speck creates the satellite; the object does not need to orbit Earth first."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Moving night-sky specks can be artificial satellites that orbit Earth and serve uses such as mapping; debris can remain. Treating every speck as the Moon, or saying seeing a speck creates the satellite without an orbit, misses that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

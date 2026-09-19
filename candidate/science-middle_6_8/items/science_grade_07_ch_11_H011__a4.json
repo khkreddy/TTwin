@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "UNBOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0625_m16_qp_32:q6",
+  "target_unit_id": "science/grade_07/ch_11/H011",
+  "build_logic": {
+    "source_uid": "0625_m16_qp_32:q6",
+    "hinge": "science/grade_07/ch_11/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_07/ch_11/H011"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_07:ch_11:H011:a4",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S5/H-LIGHT",
+    "chapter_id": "science/grade_07/ch_11",
+    "chapter_label": "Light",
+    "subtopic_id": "science/grade_07/ch_11/H011",
+    "stem": "The diagram shows a simple periscope with two plane mirrors. Rhea stands so the object is not directly visible to her eye. Light from the object reaches her eye after meeting both mirrors.\n\nWhich claim correctly explains how she sees the object?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Each plane mirror reflects the light so the ray path turns and reaches her eye around the barrier.",
+      "B": "The mirrors bend the light by refraction through glass, not by reflection.",
+      "C": "Only the lower mirror works; the upper mirror is decorative and unused.",
+      "D": "She sees the object because the periscope tube itself glows and sends light to her eye."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95]\n% tube\n\\draw[thick] (0,0) rectangle (1.2,3.2);\n\\draw[thick] (0,3.2) rectangle (3.4,4.2);\n% mirrors at 45 deg\n\\draw[very thick] (0.15,3.35)--(1.05,4.05);\n\\node[font=\\footnotesize] at (1.35,3.9) {mirror 1};\n\\draw[very thick] (0.15,0.15)--(1.05,0.85);\n\\node[font=\\footnotesize] at (1.45,0.35) {mirror 2};\n% object left of top\n\\draw[thick,fill=gray!20] (3.7,3.5) rectangle (4.2,4.1);\n\\node[font=\\footnotesize] at (3.95,4.35) {object};\n% rays\n\\draw[->,thick] (3.7,3.8)--(1.0,3.8);\n\\draw[->,thick] (0.6,3.7)--(0.6,0.5);\n\\draw[->,thick] (0.7,0.5)--(2.0,0.5);\n% eye\n\\draw[thick] (2.0,0.5) circle (0.18);\n\\node[font=\\footnotesize] at (2.5,0.15) {eye};\n\\node[font=\\small] at (1.7,2.0) {periscope};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_07/ch_11/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

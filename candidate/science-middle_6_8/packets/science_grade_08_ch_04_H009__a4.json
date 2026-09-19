@@ -1,0 +1,113 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0625_m15_qp_12:q32",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:09:31.428Z",
+  "source": {
+    "item_ref": "session:0625_m15_qp_12:q32",
+    "item_type": "single_mcq",
+    "stem": "In the circuit shown, the switch is closed for a long time, then opened.\nresistor capacitor\nvoltmeter 2 voltmeter 3\nImmediately after the switch is opened, which of the voltmeters reads zero?",
+    "options": [
+      {
+        "id": "A",
+        "text": "voltmeter 1 only"
+      },
+      {
+        "id": "B",
+        "text": "voltmeter 2 only"
+      },
+      {
+        "id": "C",
+        "text": "voltmeter 3 only"
+      },
+      {
+        "id": "D",
+        "text": "voltmeter 1, voltmeter 2 and voltmeter 3"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line width=0.8pt,font=\\sffamily] \\coordinate (L) at (0,0); \\coordinate (TL) at (0,2); \\coordinate (A) at (2.4,2); \\coordinate (B) at (3.4,2); \\coordinate (R) at (5.7,0); \\draw (L)--(TL)--(A); \\draw (A)--(2.85,2); \\draw (2.85,1.70)--(2.85,2.30); \\draw (3.05,1.82)--(3.05,2.18); \\draw (3.05,2)--(B)--(3.75,2)--(4.28,1.72); \\draw (4.48,2)--(5.7,2)--(R); \\fill (A) circle (2pt) (B) circle (2pt); \\draw (A)--(A |- 0,3.0)--(2.62,3.0); \\draw (3.18,3.0)--(B |- 0,3.0)--(B); \\draw (2.90,3.0) circle (0.28) node {V}; \\node[above=5pt] at (2.90,3.28) {voltmeter 1}; \\draw (L)--(0.72,0); \\draw (0.72,-0.14) rectangle (1.52,0.14); \\draw (1.52,0)--(3.50,0); \\draw (3.50,-0.31)--(3.50,0.31); \\draw (3.69,-0.31)--(3.69,0.31); \\draw (3.69,0)--(R); \\fill (0.72,0) circle (2pt) (1.52,0) circle (2pt) (3.50,0) circle (2pt) (3.69,0) circle (2pt); \\node[above=8pt] at (1.12,0.14) {resistor}; \\node[above=9pt] at (3.595,0.31) {capacitor}; \\draw (0.72,0)--(0.72,-1.0)--(0.84,-1.0); \\draw (1.40,-1.0)--(1.52,-1.0)--(1.52,0); \\draw (1.12,-1.0) circle (0.28) node {V}; \\node[below=5pt] at (1.12,-1.28) {voltmeter 2}; \\draw (3.50,0)--(3.50,-1.0)--(3.62,-1.0); \\draw (4.18,-1.0)--(4.30,-1.0)--(4.30,0); \\draw (3.90,-1.0) circle (0.28) node {V}; \\node[below=5pt] at (3.90,-1.28) {voltmeter 3}; \\end{tikzpicture}",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Cells, current and magnetic/heating effects",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Rechargeable"
+      }
+    ],
+    "enrichment": "Rechargeable batteries can be recharged and reused multiple times, unlike dry cells that are single-use. battery designed for recharge -> charging restores use for multiple cycles -> less wastage and money saved over time; dry cell used up -> disposal is required The learner correctly applies this rule: Rechargeable batteries can be recharged and reused multiple times, unlike dry cells that are single-use. Any battery can be charged again if it is put into a charger for long enough.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_04/H009",
+      "gate_names": [
+        "intermediate_omission",
+        "intermediate_omission",
+        "intermediate_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student dropping a stated condition so “voltmeter 1 only” looked possible instead of “voltmeter 2 only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “voltmeter 3 only” looked possible instead of “voltmeter 2 only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “voltmeter 1, voltmeter 2 and voltmeter 3” looked possible instead of “voltmeter 2 only”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Electricity: magnetic and heating effects. The student must decide: Classify a battery as rechargeable rather than single-use by whether it can be recharged and reused multiple times. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0625_m15_qp_12:q32",
+    "hinge": "science/grade_08/ch_04/H009",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "UNRESOLVED",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_04/H009"
+  }
+}

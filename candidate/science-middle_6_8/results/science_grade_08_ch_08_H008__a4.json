@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Saanvi passes an electric current through water with a little dilute acid. She collects two gases. One gives a pop with a burning splinter (hydrogen test). The other relights a glowing splinter (oxygen test).\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The two gas tests show that water yields hydrogen and oxygen, so water is a compound of those elements."
+    },
+    {
+      "id": "B",
+      "text": "Because electrolysis separates water into two different elemental gases, water cannot be an element itself."
+    },
+    {
+      "id": "C",
+      "text": "The pop test alone proves that water is an element made only of hydrogen."
+    },
+    {
+      "id": "D",
+      "text": "Relighting the glowing splinter proves that water is pure oxygen in liquid form."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Electrolysis and the two gas tests show water breaks into hydrogen and oxygen, so water is a compound of both, not a single element.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

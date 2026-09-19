@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle PQR$ and $\\triangle XYZ$. Each triangle has sides $7\\,\\mathrm{cm}$ and $5\\,\\mathrm{cm}$ and a $40^{\\circ}$ angle that is not between those two sides.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The matching sides and non-included angle do not always make the triangles congruent."
+    },
+    {
+      "id": "B",
+      "text": "The triangles are congruent from the two equal side lengths alone."
+    },
+    {
+      "id": "C",
+      "text": "SSA is a congruence rule that covers every triangle pair with those matching parts."
+    },
+    {
+      "id": "D",
+      "text": "The triangles are congruent because $40$ is the standout printed number in the diagram."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (P) at (0,0);\n  \\coordinate (Q) at (3.4,0);\n  \\coordinate (R) at (2.6,2.1);\n  \\draw[line width=0.85pt] (P)--(Q)--(R)--cycle;\n  \\node[below left] at (P) {$P$};\n  \\node[below right] at (Q) {$Q$};\n  \\node[above] at (R) {$R$};\n  \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n  \\node[right] at (3.05,1.0) {$5\\,\\mathrm{cm}$};\n  \\node at (2.55,0.55) {$40^{\\circ}$};\n  \\begin{scope}[xshift=5.6cm]\n    \\coordinate (X) at (0,0);\n    \\coordinate (Y) at (3.4,0);\n    \\coordinate (Z) at (0.9,2.1);\n    \\draw[line width=0.85pt] (X)--(Y)--(Z)--cycle;\n    \\node[below left] at (X) {$X$};\n    \\node[below right] at (Y) {$Y$};\n    \\node[above] at (Z) {$Z$};\n    \\node[below=3pt] at (1.7,0) {$7\\,\\mathrm{cm}$};\n    \\node[left] at (0.35,1.0) {$5\\,\\mathrm{cm}$};\n    \\node at (2.55,0.55) {$40^{\\circ}$};\n  \\end{scope}\n  \\node[align=center,anchor=west] at (9.8,1.1) {NOT TO\\\\SCALE};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two sides and a non-included angle (SSA) do not always force congruence; the diagram can show two different shapes with those parts. Dropping the angle condition, treating SSA as always enough, or grabbing printed 40 all miss that limit.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source right triangle as triangles PQR and XYZ with 7 cm, 5 cm, and a non-included 40° angle."
+  }
+}

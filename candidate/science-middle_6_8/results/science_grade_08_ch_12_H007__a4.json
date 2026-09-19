@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Saanvi studies this garden food chain: grass → grasshopper → frog → snake.\n\nWhich claims correctly assign trophic levels? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Grass is the producer at the first trophic level."
+    },
+    {
+      "id": "B",
+      "text": "The grasshopper is a herbivore at the second trophic level."
+    },
+    {
+      "id": "C",
+      "text": "The frog is the producer because it starts the animal part of the chain."
+    },
+    {
+      "id": "D",
+      "text": "The snake is at the second trophic level because it is larger than the frog."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Producers are first; herbivores that eat them are second. The frog is a small carnivore at the third level; the snake is later, not second.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

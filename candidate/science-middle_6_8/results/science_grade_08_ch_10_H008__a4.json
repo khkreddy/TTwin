@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% L: thicker in middle (convex)\n\\draw[thick,fill=gray!10] (-3.5,0.15) .. controls (-2.8,1.0) and (-1.6,1.0) .. (-0.9,0.15) -- (-0.9,-0.15) .. controls (-1.6,-1.0) and (-2.8,-1.0) .. (-3.5,-0.15) -- cycle;\n\\node[font=\\small] at (-2.2,1.4) {L};\n\\draw[<->,thin] (-2.2,0.15)--(-2.2,-0.15);\n\\node[font=\\footnotesize,right] at (-2.15,0) {thicker middle};\n% M: thicker at edges (concave)\n\\draw[thick,fill=gray!10] (1.0,1.0) .. controls (1.7,0.2) and (2.9,0.2) .. (3.6,1.0) -- (3.6,-1.0) .. controls (2.9,-0.2) and (1.7,-0.2) .. (1.0,-1.0) -- cycle;\n\\node[font=\\small] at (2.3,1.4) {M};\n\\draw[<->,thin] (1.25,0)--(1.25,0.8);\n\\node[font=\\footnotesize,right] at (1.3,0.4) {thicker edge};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows cross-sections of two transparent curved glass pieces, L and M. Rhea compares thickness at the middle with thickness near the edges of each piece.\n\nWhich classification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "L is a convex lens and M is a concave lens."
+    },
+    {
+      "id": "B",
+      "text": "L is a concave lens and M is a convex lens."
+    },
+    {
+      "id": "C",
+      "text": "Both are concave lenses because both outlines look curved."
+    },
+    {
+      "id": "D",
+      "text": "M is a convex lens because it is made of transparent glass."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A convex lens is thicker in the middle; a concave lens is thicker at the edges. L matches convex; M matches concave.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "condition_omission"
+    ],
+    "figure_note": "Rewrote source ray/mirror figure into two lens cross-sections labelled by thickness pattern."
+  }
+}

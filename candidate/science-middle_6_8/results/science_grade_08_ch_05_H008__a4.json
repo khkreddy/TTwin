@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Farhan throws a ball straight up. The ball slows, stops briefly, then falls and speeds up as it comes down.\n\nWhich claims correctly explain the motion? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth pulls the ball toward itself while the ball goes up and while it comes down."
+    },
+    {
+      "id": "B",
+      "text": "Earth's pull makes the ball slow on the way up and speed up on the way down."
+    },
+    {
+      "id": "C",
+      "text": "An upward force from the throw stays inside the ball until it runs out; Earth pulls only after the ball starts falling."
+    },
+    {
+      "id": "D",
+      "text": "Earth pushes the ball upward the whole time the ball is rising."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's gravitational pull acts toward Earth throughout the flight, so the ball slows going up and speeds up coming down. The throw does not leave a lasting upward force inside the ball, and Earth does not push the ball upward while it rises.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

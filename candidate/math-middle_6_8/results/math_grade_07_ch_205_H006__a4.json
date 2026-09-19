@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rudra's scores are $5$, $6$, $7$, $8$, and $30$. He wants a typical value for the main cluster.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly chooses the better typical value?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The mean is better even when $30$ pulls the mean far from $5$, $6$, $7$, and $8$."
+        },
+        {
+          "id": "B",
+          "text": "The median $7$ represents the main cluster better, because $30$ pulls the mean away from that cluster."
+        },
+        {
+          "id": "C",
+          "text": "Choosing the median is what creates the outlier score $30$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The sorted middle score is 7, which sits with 5, 6, 7, and 8, while the mean is lifted toward 30 by that outlier."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With outlier 30, the mean is pulled up; the median 7 stays with the main cluster. Keeping the mean despite the pull, or reversing median-creates-outlier, miss that choice.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95]\n% tube\n\\draw[thick] (0,0) rectangle (1.2,3.2);\n\\draw[thick] (0,3.2) rectangle (3.4,4.2);\n% mirrors at 45 deg\n\\draw[very thick] (0.15,3.35)--(1.05,4.05);\n\\node[font=\\footnotesize] at (1.35,3.9) {mirror 1};\n\\draw[very thick] (0.15,0.15)--(1.05,0.85);\n\\node[font=\\footnotesize] at (1.45,0.35) {mirror 2};\n% object left of top\n\\draw[thick,fill=gray!20] (3.7,3.5) rectangle (4.2,4.1);\n\\node[font=\\footnotesize] at (3.95,4.35) {object};\n% rays\n\\draw[->,thick] (3.7,3.8)--(1.0,3.8);\n\\draw[->,thick] (0.6,3.7)--(0.6,0.5);\n\\draw[->,thick] (0.7,0.5)--(2.0,0.5);\n% eye\n\\draw[thick] (2.0,0.5) circle (0.18);\n\\node[font=\\footnotesize] at (2.5,0.15) {eye};\n\\node[font=\\small] at (1.7,2.0) {periscope};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a simple periscope with two plane mirrors. Rhea stands so the object is not directly visible to her eye. Light from the object reaches her eye after meeting both mirrors.\n\nWhich claim correctly explains how she sees the object?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each plane mirror reflects the light so the ray path turns and reaches her eye around the barrier."
+    },
+    {
+      "id": "B",
+      "text": "The mirrors bend the light by refraction through glass, not by reflection."
+    },
+    {
+      "id": "C",
+      "text": "Only the lower mirror works; the upper mirror is decorative and unused."
+    },
+    {
+      "id": "D",
+      "text": "She sees the object because the periscope tube itself glows and sends light to her eye."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A simple periscope uses reflection at two plane mirrors so light from a hidden object is redirected to the eye.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source plane-mirror ray figure into a labelled two-mirror periscope with object and eye."
+  }
+}

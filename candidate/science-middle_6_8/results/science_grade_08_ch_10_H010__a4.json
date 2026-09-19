@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "Krish sends several parallel light beams through three transparent objects in turn: a thin glass plate, a convex lens, and a concave lens.\n\nWhich claim correctly predicts what happens to the beams?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The thin glass plate lets the beams pass as they are; the convex lens converges them; the concave lens diverges them."
+    },
+    {
+      "id": "B",
+      "text": "The thin glass plate converges the beams; the convex lens lets them pass unchanged; the concave lens also converges them."
+    },
+    {
+      "id": "C",
+      "text": "These shapes matter only for a single beam, not when several parallel beams are used."
+    },
+    {
+      "id": "D",
+      "text": "Any transparent object diverges parallel beams, whatever its shape."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plate passes beams unchanged; convex converges; concave diverges. Swapping those roles, saying shape only matters for one beam, or claiming every transparent object diverges beams all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

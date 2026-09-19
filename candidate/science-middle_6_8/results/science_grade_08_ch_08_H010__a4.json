@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Adil compares a mixture of iron filings and sulfur with iron sulfide formed by heating them.\n\nWhich claims correctly describe the mixture before heating? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yellow sulfur grains and dark iron particles can both still be seen."
+    },
+    {
+      "id": "B",
+      "text": "A magnet can attract the iron from the mixture."
+    },
+    {
+      "id": "C",
+      "text": "The mixture is already a compound because two substances sit together."
+    },
+    {
+      "id": "D",
+      "text": "The mixture has one uniform black colour and is never magnetic."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Before heating, iron and sulfur keep separate appearance and magnetism. Calling any two substances together a compound, or giving the mixture the compound's uniform non-magnetic look, misses the mixture-versus-compound hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

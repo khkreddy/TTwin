@@ -1,0 +1,133 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q17",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:02:58.684Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q17",
+    "item_type": "single_mcq",
+    "stem": "Which structures in plants and in humans normally carry amino acids?",
+    "options": [
+      {
+        "id": "A",
+        "text": "arteries ✓; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "B",
+        "text": "arteries ✓; phloem ✗; ureters ✓"
+      },
+      {
+        "id": "C",
+        "text": "arteries ✗; phloem ✓; ureters ✗"
+      },
+      {
+        "id": "D",
+        "text": "arteries ✗; phloem ✗; ureters ✓"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [
+      "{\"headers\":[\"arteries\",\"phloem\",\"ureters\"],\"rows\":[[\"✓\",\"✓\",\"✗\"],[\"✓\",\"✗\",\"✓\"],[\"✗\",\"✓\",\"✗\"],[\"✗\",\"✗\",\"✓\"]],\"row_labels\":[\"A\",\"B\",\"C\",\"D\"],\"caption\":\"\",\"is_option_table\":true}"
+    ],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 8",
+      "topic": "Habitats, microbes and ecosystems",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Lukewarm milk turns into curd immediately when the starter is mixed in."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Only the cold bowl forms curd; the lukewarm bowl stays liquid because warmth inhibits the starter."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Milk kept boiling hot after adding the starter will form curd just as lukewarm milk does."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "Both bowls have formed curd because both taste sour."
+      }
+    ],
+    "enrichment": "When a small spoonful of curd is mixed into lukewarm milk and left for a few hours, the milk turns into curd and becomes a little sour. Cold milk with the same curd starter does not curdle in the same way, although it may become a little sour. Curd starter plus lukewarm milk and time -> curd formation; curd starter plus cold milk -> little or no curdling. The learner correctly applies this rule: When a small spoonful of curd is mixed into lukewarm milk and left for a few hours, the milk turns into curd and becomes a little sour. Cold milk with the same curd starter does not curdle in the same way, although it may become a little sour. Any milk with a spoonful of curd will become curd equally fast, whether it is cold or lukewarm.",
+    "lbs_recipe": {
+      "unit": "science/grade_08/ch_02/H013",
+      "gate_names": [
+        "condition_omission",
+        "condition_omission",
+        "condition_omission"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student dropping a stated condition so “arteries ✗” looked possible instead of “arteries ✓”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student dropping a stated condition so “ureters ✓” looked possible instead of “ureters ✗”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 8 Science question. Chapter: Microorganisms: friend and foe. The student must decide: Decide why lukewarm milk with a curd starter forms curd while cold milk with the same starter does not curdle in the same way. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q17",
+    "hinge": "science/grade_08/ch_02/H013",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_08/ch_02/H013"
+  }
+}

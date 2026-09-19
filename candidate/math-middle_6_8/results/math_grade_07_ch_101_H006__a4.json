@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir's calculator starts at $0$ and has buttons $+1$, $+10$, $+100$, and $+1000$. He wants the display to show exactly $350$.\n\nWhich two claims correctly state a valid way to make $350$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer place-value buttons only."
+    },
+    {
+      "id": "B",
+      "text": "Press $+100$ three times and $+10$ five times."
+    },
+    {
+      "id": "C",
+      "text": "Press $+100$ twice, $+10$ fourteen times, and $+1$ ten times, because regrouping powers of ten still totals $350$."
+    },
+    {
+      "id": "D",
+      "text": "Say that reaching $350$ is what creates the $+100$ and $+10$ buttons."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Many click mixes of powers of ten can total 350, including 3×100+5×10 and regroupings such as 2×100+14×10+10×1. Naming buttons alone, or reversing the target as the cause of the buttons, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}
