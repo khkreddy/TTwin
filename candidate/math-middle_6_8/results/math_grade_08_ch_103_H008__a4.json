@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Avni compares writing large numbers with a new landmark symbol for every power, versus using place value.\n\nWhich two claims correctly explain place-value numerals?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Place value still works if each digit keeps a fixed absolute value in every position."
+    },
+    {
+      "id": "B",
+      "text": "The same digit can mean ones or sixties depending on its position, so no new symbol is needed for each landmark."
+    },
+    {
+      "id": "C",
+      "text": "Place value uses position to decide a symbol's value rather than inventing a separate symbol for every landmark number."
+    },
+    {
+      "id": "D",
+      "text": "Place value is found by squaring a digit's position number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Position decides value, so one digit set covers many landmarks. Fixed absolute digit values omit the position condition. Squaring position numbers is outside this place-value hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

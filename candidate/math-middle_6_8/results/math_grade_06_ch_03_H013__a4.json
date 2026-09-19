@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Diya compares the calendar for year Y with the calendar for year Z. She wants to reuse year Y's calendar in year Z.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Matching only one date's weekday is enough to reuse the whole calendar."
+    },
+    {
+      "id": "B",
+      "text": "Year Y's calendar can be reused when every date falls on the same weekday in year Z."
+    },
+    {
+      "id": "C",
+      "text": "Year Y's calendar can be reused when all dates and days match exactly across the year."
+    },
+    {
+      "id": "D",
+      "text": "The calendar can be reused because year Z is written with larger digits than year Y."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A reusable calendar needs every date-to-weekday match across the year. One date alone omits the rest. Larger printed digits are a surface feature, not the calendar match.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

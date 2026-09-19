@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Meher's quadrilateral $ABCD$ with right-angle marks at $A$, $B$, and $D$, and with the remaining interior angle at $C$ labelled $x$.\n\nWhich claim about $x$ is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$x$ must be $90^\\circ$, because the four interior angles of a quadrilateral sum to $360^\\circ$."
+    },
+    {
+      "id": "B",
+      "text": "$x$ is only an interior-angle label, so the quadrilateral sum does not constrain it."
+    },
+    {
+      "id": "C",
+      "text": "Drawing the four sides is what forces $x=90^\\circ$, rather than the $360^\\circ$ angle sum."
+    },
+    {
+      "id": "D",
+      "text": "$x$ can be any size, because the diagram prints three right-angle marks."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.2,0);\n  \\coordinate (C) at (2.4,2.1);\n  \\coordinate (D) at (0.3,2.0);\n  \\draw[thick] (A)--(B)--(C)--(D)--cycle;\n  \\draw[thick] (A)--++(0.28,0)--++(0,0.28)--++(-0.28,0)--cycle;\n  \\draw[thick] (B)--++(-0.28,0)--++(0,0.28)--++(0.28,0)--cycle;\n  \\draw[thick] (D)--++(0.28,0)--++(0,-0.28)--++(-0.28,0)--cycle;\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n  \\node[above left] at (1.7,1.05) {$x$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Interior angles of a quadrilateral sum to 360°, so three right angles force the fourth to 90°. Treating x as a free label swaps the idea. Saying the drawn sides create the measure reverses the relation. Ignoring the sum because three marks are printed is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote grid-quadrilateral source into ABCD with three right-angle marks and x; stem refers to the diagram."
+  }
+}

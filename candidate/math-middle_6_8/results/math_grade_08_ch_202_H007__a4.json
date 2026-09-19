@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Yash's right-angled triangle $ABC$ with right angle at $A$, legs $AB=5$ and $AC=12$, and hypotenuse $BC=c$.\n\nWhich plan finds $c$ correctly?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Rearrange $a^2+b^2=c^2$ to $c=\\sqrt{5^2+12^2}=\\sqrt{25+144}=\\sqrt{169}=13$."
+    },
+    {
+      "id": "B",
+      "text": "Use $c=\\sqrt{5^2+12^2}$ even when $c$ is treated as a leg rather than the hypotenuse."
+    },
+    {
+      "id": "C",
+      "text": "Find a missing leg by adding the known squares the same way as for the hypotenuse."
+    },
+    {
+      "id": "D",
+      "text": "Compute $c=5^2+12^2=169$ and leave the answer squared."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (0,2.4);\n  \\coordinate (C) at (3.2,0);\n  \\draw[thick] (A)--(B)--(C)--cycle;\n  \\draw[thick] (A)--++(0.28,0)--++(0,0.28)--++(-0.28,0)--cycle;\n  \\node[left] at (B) {$B$};\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (C) {$C$};\n  \\node[left] at (0,1.2) {$5$};\n  \\node[below] at (1.6,0) {$12$};\n  \\node[above right] at (1.7,1.3) {$c$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With both legs known on a right triangle, c=√(a²+b²)=13. Dropping that c is the hypotenuse breaks the rearrangement. Adding squares to find a leg over-extends the hypotenuse case. Stopping at 169 leaves the square root unused.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source right triangle into 5-12-c with right angle at A; stem refers to the diagram."
+  }
+}

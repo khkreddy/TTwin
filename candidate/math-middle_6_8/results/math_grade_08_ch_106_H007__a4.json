@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira expands $(y+7)(y-7)$ by looking for conjugate factors.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$(y+7)(y+7)$ is the conjugate pair for this expansion."
+    },
+    {
+      "id": "B",
+      "text": "The factors use the same terms $y$ and $7$ with opposite connecting signs, so the cross-terms cancel."
+    },
+    {
+      "id": "C",
+      "text": "The product is $y^2-49$."
+    },
+    {
+      "id": "D",
+      "text": "The same cross-term cancel also applies to the sum $(y+7)+(y-7)$ in place of the product."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Conjugates need opposite signs on the same terms, giving y^2-49. Same-sign factors drop that condition. Moving the cancel rule onto a sum over-extends the identity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

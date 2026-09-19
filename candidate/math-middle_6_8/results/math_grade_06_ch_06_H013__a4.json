@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The figure shows Nitya's garden plot: rectangle ABCD is $6\\ \\mathrm{cm}$ by $4\\ \\mathrm{cm}$, and right triangle AEB has base $6\\ \\mathrm{cm}$ and height $3\\ \\mathrm{cm}$ on top of the rectangle.\n\nHow should she find the area of the figure?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add the rectangle area $6 \\times 4$ and the triangle area $\\frac{1}{2} \\times 6 \\times 3$."
+    },
+    {
+      "id": "B",
+      "text": "Use only the rectangle area $6 \\times 4$, because the triangle sits on the rectangle."
+    },
+    {
+      "id": "C",
+      "text": "The triangle area produces the rectangle area, so multiply those two part areas."
+    },
+    {
+      "id": "D",
+      "text": "Any closed garden plot has area $6 \\times 4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (6,4);\n  \\draw[thick] (0,4) -- (3,7) -- (6,4);\n  \\node[below] at (3,0) {6 cm};\n  \\node[left] at (0,2) {4 cm};\n  \\node[above left] at (1.2,5.2) {3 cm};\n  \\node[above right] at (0,4) {A};\n  \\node[above left] at (6,4) {B};\n  \\node[below left] at (0,0) {D};\n  \\node[below right] at (6,0) {C};\n  \\node[above] at (3,7) {E};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partition into rectangle and triangle, then add part areas: 24 + 9 = 33. Omitting the triangle drops a part. Multiplying part areas reverses add-for-composite. Treating every closed shape as 6×4 over-scopes the rectangle rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote rectangle-triangle source into a labeled 6-by-4 rectangle with a height-3 triangle on top; stem refers to the figure."
+  }
+}

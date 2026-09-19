@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Yash's triangular dot pattern with rows of 1, then 2, then 3 dots, and a square 3-by-3 dot array.\n\nWhich claim connects the triangular pattern to the square pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Two adjacent triangular totals join into a square: $3+6=9$, matching the 3-by-3 array."
+    },
+    {
+      "id": "B",
+      "text": "The whole display is only a square-number pattern, so the triangular rows need no role."
+    },
+    {
+      "id": "C",
+      "text": "The square 3-by-3 array is what creates the triangular rows of 1, 2, and 3 dots."
+    },
+    {
+      "id": "D",
+      "text": "The answer is 9 only because 9 is the largest count printed beside the arrays."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.7,line cap=round,line join=round]\n  \\foreach \\i in {0,1,2} {\n    \\foreach \\j in {0,...,\\i} {\n      \\fill (0.55*\\j, -0.55*\\i) circle (2.2pt);\n    }\n  }\n  \\node[anchor=north] at (0.55,-1.85) {triangular};\n  \\begin{scope}[shift={(3.6,0)}]\n    \\foreach \\i in {0,1,2} {\n      \\foreach \\j in {0,1,2} {\n        \\fill (0.55*\\j, -0.55*\\i) circle (2.2pt);\n      }\n    }\n    \\node[anchor=north] at (0.55,-1.85) {square};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adjacent triangular totals 3 and 6 make the square total 9, so the triangular pattern builds the related square array. Calling everything a square number swaps the label. Saying the square creates the triangular rows reverses the relation. Choosing 9 for its printed size is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote right-triangle source into triangular and square dot arrays; stem refers to the diagram."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0606_m22_qp_22:q12",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:44:22.028Z",
+  "source": {
+    "item_ref": "session:0606_m22_qp_22:q12",
+    "item_type": "structured_parts",
+    "stem": "In this question all lengths are in centimetres.\nThe diagram shows a right triangular prism of height h inside a right pyramid.\nThe pyramid has a height of 12 and a base that is an equilateral triangle, ABC, of side 8.\nThe base of the prism sits on the base of the pyramid.\nPoints P, Q and R lie on the edges OA, OB and OC, respectively, of the pyramid OABC.\nPyramids OABC and OPQR are similar.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "Show that the volume, V, of the triangular prism is given by V = (ah³ + bh² + ch) where a, 9 b and c are integers to be found. [4]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "It is given that, as h varies, V has a maximum value. Find the value of h that gives this maximum value of V. [3]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\small]\\coordinate (A) at (-3,0);\\coordinate (B) at (3,0);\\coordinate (O) at (0,7.1);\\coordinate (C) at (0,2.3);\\coordinate (P) at (-1.9,2.5);\\coordinate (Q) at (1.9,2.5);\\coordinate (R) at (0,4.05);\\coordinate (D) at (-1.9,0.3);\\coordinate (E) at (1.9,0.3);\\coordinate (F) at (0,1.85);\\fill[gray!55] (P)--(R)--(Q)--cycle;\\fill[gray!55] (D)--(F)--(E)--cycle;\\draw (A)--(O)--(B)--cycle;\\draw (A)--(C)--(B);\\draw (O)--(R)--(C);\\draw (P)--(R)--(Q)--(P);\\draw (P)--(D)--(E)--(Q);\\draw (D)--(F)--(E);\\draw (C)--(F);\\draw[dashed] (O)--(4.55,7.1);\\draw[<->] (4.45,0.85)--node[right] {$12$} (4.45,7.1);\\draw[dashed] (C)--(3.75,2.3);\\draw[<->] (3.75,0.85)--node[right] {$h$} (3.75,2.3);\\draw[dashed] (0,4.05)--(0,0.85)--(4.55,0.85);\\draw (0,0.85)--(0.32,0.85)--(0.32,1.17)--(0,1.17);\\draw[<->] (-3,-0.25)--node[fill=white,inner sep=1pt] {$8$} (3,-0.25);\\node[below left] at (A) {$A$};\\node[below right] at (B) {$B$};\\node[above] at (O) {$O$};\\node[left] at (P) {$P$};\\node[right] at (Q) {$Q$};\\node[above right] at (R) {$R$};\\node[above right] at (C) {$C$};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_204/H007",
+      "unit_id": "math/grade_08/ch_204/H007",
+      "title": "Classify prisms and pyramids from their faces and count their faces, edges, and vertices in the n-sided case.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Edge is the label that belongs on this item, so 'Classify prisms and pyramids from their faces and count their faces' is answered as edge rather than face."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Solid name and face-edge-vertex structure is what produces face arrangement and base shape, so the usual direction of this relation is run backwards — on the item about Classify prisms and pyramids from their faces and count."
+      },
+      {
+        "mx_type": "mechanism_conflation",
+        "name": "mechanism_conflation",
+        "teacher_note": "face is settled by running 'Construct and reason with perpendicular projections of points, lines': A point projects to a plane at the foot of a perpendicular from the point to the plane — on the item about Classify prisms and pyramids from their faces and count."
+      }
+    ],
+    "enrichment": "Faces are flat boundary surfaces, edges are line segments where faces meet, and vertices are points where edges meet; an n-gonal prism has n+2 faces, 3n edges, and 2n vertices, while an n-gonal pyramid has n+1 faces, 2n edges, and n+1 vertices.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_204. The student must decide: Classify prisms and pyramids from their faces and count their faces, edges, and vertices in the n-sided case. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0606_m22_qp_22:q12",
+    "hinge": "math/grade_08/ch_204/H007",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H007"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H014",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H014",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H014"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H014:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H014",
+    "stem": "Kavya looks at the diagram of Shape $P$ and Shape $Q$. Both are built from the same $8$ unit squares, side-aligned with no gaps. Shape $P$ is a $2$-by-$4$ rectangle. Shape $Q$ is an L-shape made by moving squares.\n\nWhich claim correctly compares area and perimeter?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Area and perimeter both stay the same for every rearrangement of the $8$ squares.",
+      "B": "Changing the arrangement creates the $8$ unit squares.",
+      "C": "Area stays the same because both shapes use $8$ unit squares, but the perimeter can change.",
+      "D": "Only Shape $P$ has an area, because it is a rectangle."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.48cm,y=0.48cm,line cap=round,line join=round,font=\\small]\n  % Shape P: 2-by-4\n  \\draw[line width=1.0pt,fill=blue!8] (0,0) grid (4,2);\n  \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n  \\node[below] at (2,-0.55){Shape $P$};\n  % Shape Q: L from same 8 squares\n  \\begin{scope}[xshift=7.2cm]\n    \\fill[orange!12] (0,0) rectangle (3,2);\n    \\fill[orange!12] (0,2) rectangle (1,4);\n    \\draw[step=1,line width=0.7pt,gray!65] (0,0) grid (3,2);\n    \\draw[step=1,line width=0.7pt,gray!65] (0,2) grid (1,4);\n    \\draw[line width=1.05pt] (0,0)--(3,0)--(3,2)--(1,2)--(1,4)--(0,4)--cycle;\n    \\node[below] at (1.5,-0.55){Shape $Q$};\n  \\end{scope}\n  \\node[align=center] at (5.2,-1.6){Both shapes use the same $8$ unit squares.};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

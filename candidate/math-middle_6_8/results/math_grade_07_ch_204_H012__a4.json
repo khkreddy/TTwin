@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir knows a common calendar year has $365$ days and Earth's revolution is about $365.2422$ days.\n\nWhich two claims correctly reason about leap-day adjustments?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth revolution is the calendar rule's name, so divisibility need not be checked."
+    },
+    {
+      "id": "B",
+      "text": "The extra about $0.2422$ day accumulates, so about every $4$ years an extra day is added."
+    },
+    {
+      "id": "C",
+      "text": "Under the usual rules, a year divisible by $4$ is a leap year, with century-year exceptions."
+    },
+    {
+      "id": "D",
+      "text": "A year is a leap year when the digits of the year look symmetric."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The 0.2422-day gap accumulates to about one day every four years, and divisibility rules (by 4, with century exceptions) assign leap days. Renaming the topic \"Earth revolution\" skips those rules. Symmetric-looking digits are a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

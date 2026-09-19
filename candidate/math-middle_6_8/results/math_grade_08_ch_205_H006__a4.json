@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Meher's four quiz scores are 6, 8, 10, and 12. Their mean is 9. Every score is then multiplied by 3.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the new mean is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The new mean is $9\\times3=27$, because every value was multiplied by 3."
+        },
+        {
+          "id": "B",
+          "text": "The old mean 9 is what creates the multiplier 3, rather than scaling the mean by 3."
+        },
+        {
+          "id": "C",
+          "text": "Multiply only the score 12 by 3 and keep mean 9, as if one value were enough."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "When every value is multiplied by the same fixed number, the mean is multiplied by that number too."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scaling every value by 3 scales the mean by 3. Saying the mean creates the multiplier reverses the relation. Scaling only one value drops the every-value condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

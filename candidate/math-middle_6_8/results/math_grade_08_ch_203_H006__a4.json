@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya compares two situations before calculating a missing value.\nSituation 1: more identical taps fill a tank in less time.\nSituation 2: more notebooks at the same price cost more money.\n\nWhich two claims correctly classify the relationships?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call Situation 1 inverse proportion as a label and Situation 2 the same label."
+    },
+    {
+      "id": "B",
+      "text": "Situation 1 is inverse proportion, because taps and time move in opposite directions."
+    },
+    {
+      "id": "C",
+      "text": "Situation 2 is direct proportion, because notebooks and cost increase together."
+    },
+    {
+      "id": "D",
+      "text": "Inverse proportion is what creates more taps finishing the tank sooner."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Taps vs time is inverse; notebooks vs cost is direct. One shared inverse label for both, or saying inverse creates the tap story, miss the classify-first hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

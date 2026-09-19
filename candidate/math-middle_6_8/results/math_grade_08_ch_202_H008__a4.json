@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a ladder leaning from the ground to a wall, forming a right triangle.\n\nBefore writing an $a^{2}+b^{2}=c^{2}$ equation, what must Diya identify?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ground distance and the wall height as the two legs, and the ladder as the hypotenuse opposite the right angle."
+    },
+    {
+      "id": "B",
+      "text": "Perpendicular distances as the answer label on the diagram."
+    },
+    {
+      "id": "C",
+      "text": "Write $a^{2}+b^{2}=c^{2}$ first; checking that the lengths form a right triangle can wait."
+    },
+    {
+      "id": "D",
+      "text": "Form the equation for any three lengths nearby, even if they do not make a right triangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95,font=\\small]\n  \\coordinate (G) at (0,0);\n  \\coordinate (W) at (0,3.2);\n  \\coordinate (B) at (2.4,0);\n  \\draw[line width=0.8pt] (G)--(W)--(B)--cycle;\n  \\draw[line width=0.55pt] (G)--++(0.28,0)--++(0,0.28)--++(-0.28,0);\n  \\node[below] at (1.2,-0.28) {ground};\n  \\node[left] at (-0.28,1.6) {wall};\n  \\node[above right] at (1.35,1.7) {ladder};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A Baudhayana-Pythagoras equation needs a right-triangle model: two perpendicular legs and the hypotenuse opposite the right angle. Naming the label alone swaps the model. Writing the equation before confirming the right angle drops the geometric condition. Using any three lengths stretches the rule past right triangles.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as a labelled ladder-wall-ground right triangle."
+  }
+}

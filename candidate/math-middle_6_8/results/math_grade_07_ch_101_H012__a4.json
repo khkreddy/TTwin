@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Aarav's school stores $1500$ litres of water for a $5$-day camp with $80$ students. He assumes each student needs about $4$ litres per day.\n\nWhich two claims correctly check whether the water is enough?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Converting the $1500$ litres count is the method; the assumption of $4$ litres per student per day is not used."
+    },
+    {
+      "id": "B",
+      "text": "Assume about $4$ litres per student per day, then compute $80 \\times 4 \\times 5$ and compare with $1500$."
+    },
+    {
+      "id": "C",
+      "text": "Compute $80 \\times 4 \\times 5 = 1600$ and compare with $1500$: the store is short."
+    },
+    {
+      "id": "D",
+      "text": "Comparing $1500$ with $80$ alone decides whether the water lasts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Feasibility needs the stated daily assumption, the product 80×4×5=1600, and comparison with 1500 (short). Treating conversion of the litre count as the whole method mislabels the hinge. Comparing store size with headcount alone conflates unrelated quantities.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

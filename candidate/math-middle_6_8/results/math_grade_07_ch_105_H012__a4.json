@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "In the diagram, lines $p$ and $q$ are parallel and transversal $t$ crosses them. Angle $a$ measures $70^{\\circ}$. Angle $b$ is alternate to angle $a$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Angle $b$ equals $70^{\\circ}$ because alternate angles are equal when the lines are parallel."
+    },
+    {
+      "id": "B",
+      "text": "Angle $b$ equals $70^{\\circ}$ even if $p$ and $q$ are not parallel."
+    },
+    {
+      "id": "C",
+      "text": "Parallel lines are produced by equal alternate angles, so the equality creates the parallel pair."
+    },
+    {
+      "id": "D",
+      "text": "The same equality holds for any two lines cut by a transversal, parallel or not."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\draw[thick] (-3.2,1.4) -- (3.2,1.4) node[right] {$p$};\n  \\draw[thick] (-3.2,-1.4) -- (3.2,-1.4) node[right] {$q$};\n  \\draw[thick] (-2.2,-2.4) -- (2.2,2.4) node[above right] {$t$};\n  \\node at (-0.55,1.05) {$a$};\n  \\node at (0.55,-1.05) {$b$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With p ∥ q, alternate angles are equal, so b = a = 70°. Dropping parallelism omits the needed condition. Saying equality creates parallelism reverses the relation. Extending the equality to non-parallel lines over-scopes the theorem.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote parallel-lines source into transversal t across parallel lines p and q with alternate angles a and b; stem refers to the diagram."
+  }
+}

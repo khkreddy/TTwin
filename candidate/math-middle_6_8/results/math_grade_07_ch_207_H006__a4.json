@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Nitya's number machine multiplies an unknown start by $4$ and then subtracts $3$; the display shows $17$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which equation models the situation?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$4x - 3 = 17$"
+        },
+        {
+          "id": "B",
+          "text": "$4x - 3$, with no equals $17$"
+        },
+        {
+          "id": "C",
+          "text": "$4 \\times 17 - 3 = x$"
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Let x be the start value. Multiplying by 4 and subtracting 3 gives the display, so 4x − 3 = 17."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Assign x to the unknown start, express 4x − 3, and equate to the stated display 17. Omitting the equals drops the total. Using 17 as the input swaps the unknown with the given display.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

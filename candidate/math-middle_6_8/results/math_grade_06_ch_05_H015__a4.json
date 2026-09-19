@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Imran looks at the number $250$ and checks divisibility using only its final digit.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Divisibility by $10$ is the only rule that applies, so skip checks for $5$ and $2$."
+    },
+    {
+      "id": "B",
+      "text": "$250$ is divisible by $10$, by $5$, and by $2$, because it ends in $0$."
+    },
+    {
+      "id": "C",
+      "text": "A number ending in $0$ meets the final-digit tests for $10$, for $5$, and for $2$."
+    },
+    {
+      "id": "D",
+      "text": "Use the divisibility rules for $4$ and $8$ on the last digit alone for this check."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ending in 0 means divisible by 10, 5, and 2. Naming only the by-10 rule swaps the full final-digit test. Rules for 4 and 8 need more than the single final digit and are outside this hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

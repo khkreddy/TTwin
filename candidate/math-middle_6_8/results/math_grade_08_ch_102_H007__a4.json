@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira builds a 2-stage snack code: first she picks one of 4 chutneys, then one of 3 breads. Every chutney–bread pair is allowed.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "There are only 3 codes, because the bread count alone is the total."
+    },
+    {
+      "id": "B",
+      "text": "The total number of codes is $4\\times3=12$, the product of the choices at each stage."
+    },
+    {
+      "id": "C",
+      "text": "Equal choice counts across stages can be written with powers; here the stages differ, so the product $4\\times3$ is the right form."
+    },
+    {
+      "id": "D",
+      "text": "Any meal price list is also counted by this same $4\\times3$ product."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Multi-stage codes multiply the per-stage choices: 4 then 3 gives 12. Using only the bread count drops a stage. Stretching the same product onto unrelated price lists over-extends the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

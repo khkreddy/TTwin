@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0607_w22_qp_23:q8",
+  "target_unit_id": "math/grade_07/ch_105/H012",
+  "build_logic": {
+    "source_uid": "0607_w22_qp_23:q8",
+    "hinge": "math/grade_07/ch_105/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H012"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H012:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H012",
+    "stem": "In the diagram, lines $p$ and $q$ are parallel and transversal $t$ crosses them. Angle $a$ measures $70^{\\circ}$. Angle $b$ is alternate to angle $a$.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Angle $b$ equals $70^{\\circ}$ because alternate angles are equal when the lines are parallel.",
+      "B": "Angle $b$ equals $70^{\\circ}$ even if $p$ and $q$ are not parallel.",
+      "C": "Parallel lines are produced by equal alternate angles, so the equality creates the parallel pair.",
+      "D": "The same equality holds for any two lines cut by a transversal, parallel or not."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round]\n  \\draw[thick] (-3.2,1.4) -- (3.2,1.4) node[right] {$p$};\n  \\draw[thick] (-3.2,-1.4) -- (3.2,-1.4) node[right] {$q$};\n  \\draw[thick] (-2.2,-2.4) -- (2.2,2.4) node[above right] {$t$};\n  \\node at (-0.55,1.05) {$a$};\n  \\node at (0.55,-1.05) {$b$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

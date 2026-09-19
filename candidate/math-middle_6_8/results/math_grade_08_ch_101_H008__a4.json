@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "A square floor tile has area $64$ cm$^{2}$. Ritu needs the side length of the tile.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The side length produces the perfect square, so the side length is $64$ cm."
+        },
+        {
+          "id": "B",
+          "text": "The side length is $8$ cm, the positive square root of $64$."
+        },
+        {
+          "id": "C",
+          "text": "A side length of $-8$ cm is allowed for this tile."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "If the area is $64$, the side length is the positive square root $8$ cm. A physical length cannot be negative."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Side length is the positive square root of the area. Setting the side equal to the area reverses the square relation. A negative root is outside the physical side-length scope.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

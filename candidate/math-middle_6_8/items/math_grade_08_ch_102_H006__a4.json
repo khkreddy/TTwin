@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_102/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_102/H006",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_102/H006"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_102:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_102",
+    "chapter_label": "math/grade_08/ch_102",
+    "subtopic_id": "math/grade_08/ch_102/H006",
+    "stem": "Anaya rewrites products and quotients of powers that share an exponent.\n\nWhich two claims correctly combine powers with the same exponent?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the rewrite a base product and treat that label alone as the simplification.",
+      "B": "$2^{5}\\times 3^{5}=6^{5}$, because five copies of $2$ times five copies of $3$ regroup as five copies of $6$.",
+      "C": "$8^{4}\\div 2^{4}=4^{4}$, because four copies of $8$ divided by four copies of $2$ regroup as four copies of $4$.",
+      "D": "Combine $5^{3}\\times 2^{4}$ the same way even though the exponents differ."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_102/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

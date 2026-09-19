@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Neil's three-row number pyramid. Each box is the sum of the two boxes directly below it. The bottom row is $3$, $5$, $4$.\n\nHow can he express the top directly from the bottom row?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the top-row label."
+    },
+    {
+      "id": "B",
+      "text": "The top is $3+5+4=12$."
+    },
+    {
+      "id": "C",
+      "text": "The top is $3+2\\times5+4=17$, because the middle bottom value feeds both middle boxes."
+    },
+    {
+      "id": "D",
+      "text": "Solve a full linear system with a named unknown for every box."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (2.0,3.2) -- (3.6,3.2) -- (3.6,4.2) -- (2.0,4.2) -- cycle;\n  \\node at (2.8,3.7) {?};\n  \\draw[thick] (0.8,1.6) -- (2.4,1.6) -- (2.4,2.6) -- (0.8,2.6) -- cycle;\n  \\draw[thick] (3.2,1.6) -- (4.8,1.6) -- (4.8,2.6) -- (3.2,2.6) -- cycle;\n  \\node at (1.6,2.1) {};\n  \\node at (4.0,2.1) {};\n  \\draw[thick] (0.0,0.0) -- (1.6,0.0) -- (1.6,1.0) -- (0.0,1.0) -- cycle;\n  \\draw[thick] (2.0,0.0) -- (3.6,0.0) -- (3.6,1.0) -- (2.0,1.0) -- cycle;\n  \\draw[thick] (4.0,0.0) -- (5.6,0.0) -- (5.6,1.0) -- (4.0,1.0) -- cycle;\n  \\node at (0.8,0.5) {3};\n  \\node at (2.8,0.5) {5};\n  \\node at (4.8,0.5) {4};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each middle box is a sum of two bottom entries, so the middle bottom value is used twice: top $=3+2\\times5+4=17$. Naming the top-row label swaps the decision. Adding once omits the double count. A full system goes beyond expressing the top from the bottom row.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Added a three-row number pyramid with bottom entries 3, 5, 4 and blank upper boxes."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Anvi solves $2(x+3)=14$. A classmate writes the next line as $2x+3=14$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Is that step correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Incorrect: distributing $2$ must give $2x+6=14$, so the $+3$ was left undoubled."
+        },
+        {
+          "id": "B",
+          "text": "Correct, because the final answer might still be checked later."
+        },
+        {
+          "id": "C",
+          "text": "Correct, because the handwriting looks neat."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Multiplying through the bracket doubles every term inside: $2(x+3)=2x+6$. Leaving $+3$ unchanged does not preserve equality."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A valid step must preserve equality and handle brackets. $2(x+3)$ becomes $2x+6$, not $2x+3$. Checking only later or judging handwriting misses the step test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

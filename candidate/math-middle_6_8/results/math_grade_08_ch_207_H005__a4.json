@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows triangle $XYZ$ with $XY=10$ cm. From $Z$, Avni draws a perpendicular to the line through $XY$, meeting it at $H$, and measures $ZH=6$ cm.\n\nWhich pair correctly gives the area of $\\triangle XYZ$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Take base $XY=10$ cm and perpendicular height $ZH=6$ cm, so area $=\\frac{1}{2}\\times10\\times6=30$ cm$^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "Report the word base as the area of $\\triangle XYZ$."
+    },
+    {
+      "id": "C",
+      "text": "Use $XY=10$ cm with a slanted side from $Z$ that is not perpendicular to the line through $XY$."
+    },
+    {
+      "id": "D",
+      "text": "Find the perimeter of $\\triangle XYZ$ from its three side lengths."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,font=\\small]\n  \\coordinate (X) at (0,0);\n  \\coordinate (Y) at (5.0,0);\n  \\coordinate (Z) at (1.8,3.2);\n  \\coordinate (H) at (1.8,0);\n  \\draw[thick] (X)--(Y)--(Z)--cycle;\n  \\draw[dashed] (Z)--(H);\n  \\draw (H)--++(0.28,0)--++(0,0.28)--++(-0.28,0);\n  \\node[below left] at (X) {X};\n  \\node[below right] at (Y) {Y};\n  \\node[above] at (Z) {Z};\n  \\node[below] at (H) {H};\n  \\node[below] at (2.5,-0.35) {$XY=10$ cm};\n  \\node[right] at (1.95,1.5) {$ZH=6$ cm};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Area needs a base and the matching perpendicular height: $\\frac12\\times10\\times6=30$. Naming \"base\" swaps the quantity. A non-perpendicular slant omits the height condition. Perimeter is outside this area hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source figure as triangle XYZ with base XY=10 cm and perpendicular ZH=6 cm."
+  }
+}

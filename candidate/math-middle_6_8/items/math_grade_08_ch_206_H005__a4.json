@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_206/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_206/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_206/H005"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_206:H005:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "B2",
+    "chapter_id": "math/grade_08/ch_206",
+    "chapter_label": "math/grade_08/ch_206",
+    "subtopic_id": "math/grade_08/ch_206/H005",
+    "stem": "The diagram shows Neil's three-row number pyramid. Each box is the sum of the two boxes directly below it. The bottom row is $3$, $5$, $4$.\n\nHow can he express the top directly from the bottom row?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer the top-row label.",
+      "B": "The top is $3+5+4=12$.",
+      "C": "The top is $3+2\\times5+4=17$, because the middle bottom value feeds both middle boxes.",
+      "D": "Solve a full linear system with a named unknown for every box."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (2.0,3.2) -- (3.6,3.2) -- (3.6,4.2) -- (2.0,4.2) -- cycle;\n  \\node at (2.8,3.7) {?};\n  \\draw[thick] (0.8,1.6) -- (2.4,1.6) -- (2.4,2.6) -- (0.8,2.6) -- cycle;\n  \\draw[thick] (3.2,1.6) -- (4.8,1.6) -- (4.8,2.6) -- (3.2,2.6) -- cycle;\n  \\node at (1.6,2.1) {};\n  \\node at (4.0,2.1) {};\n  \\draw[thick] (0.0,0.0) -- (1.6,0.0) -- (1.6,1.0) -- (0.0,1.0) -- cycle;\n  \\draw[thick] (2.0,0.0) -- (3.6,0.0) -- (3.6,1.0) -- (2.0,1.0) -- cycle;\n  \\draw[thick] (4.0,0.0) -- (5.6,0.0) -- (5.6,1.0) -- (4.0,1.0) -- cycle;\n  \\node at (0.8,0.5) {3};\n  \\node at (2.8,0.5) {5};\n  \\node at (4.8,0.5) {4};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_206/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

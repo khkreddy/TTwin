@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya looks at the diagram of Shape $P$ and Shape $Q$. Both are built from the same $8$ unit squares, side-aligned with no gaps. Shape $P$ is a $2$-by-$4$ rectangle. Shape $Q$ is an L-shape made by moving squares.\n\nWhich claim correctly compares area and perimeter?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Area and perimeter both stay the same for every rearrangement of the $8$ squares."
+    },
+    {
+      "id": "B",
+      "text": "Changing the arrangement creates the $8$ unit squares."
+    },
+    {
+      "id": "C",
+      "text": "Area stays the same because both shapes use $8$ unit squares, but the perimeter can change."
+    },
+    {
+      "id": "D",
+      "text": "Only Shape $P$ has an area, because it is a rectangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.48cm,y=0.48cm,line cap=round,line join=round,font=\\small]\n  % Shape P: 2-by-4\n  \\draw[line width=1.0pt,fill=blue!8] (0,0) grid (4,2);\n  \\draw[line width=1.05pt] (0,0) rectangle (4,2);\n  \\node[below] at (2,-0.55){Shape $P$};\n  % Shape Q: L from same 8 squares\n  \\begin{scope}[xshift=7.2cm]\n    \\fill[orange!12] (0,0) rectangle (3,2);\n    \\fill[orange!12] (0,2) rectangle (1,4);\n    \\draw[step=1,line width=0.7pt,gray!65] (0,0) grid (3,2);\n    \\draw[step=1,line width=0.7pt,gray!65] (0,2) grid (1,4);\n    \\draw[line width=1.05pt] (0,0)--(3,0)--(3,2)--(1,2)--(1,4)--(0,4)--cycle;\n    \\node[below] at (1.5,-0.55){Shape $Q$};\n  \\end{scope}\n  \\node[align=center] at (5.2,-1.6){Both shapes use the same $8$ unit squares.};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same 8 unit squares keep the same area; rearranging changes how many outer edges are exposed, so perimeter can change. Claiming both stay fixed, reversing cause, or restricting area to rectangles miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as Shape P 2-by-4 rectangle and Shape Q L-shape from the same 8 unit squares."
+  }
+}

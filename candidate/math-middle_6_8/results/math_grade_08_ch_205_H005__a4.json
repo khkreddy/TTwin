@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Sia's quiz scores are $4$, $6$, and $8$, so the mean is $6$. She adds $3$ to every score.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly states what happens to the mean?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The new mean is $9$, because every score rose by $3$ and the mean rises by the same $3$."
+        },
+        {
+          "id": "B",
+          "text": "Call the change a fixed subtraction and treat that label as the new mean rule."
+        },
+        {
+          "id": "C",
+          "text": "Keep the mean at $6$, because only one score needs to move for the mean rule to apply."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Adding the same number to every value adds that same number to the mean, so $6+3=9$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A uniform +3 on every score shifts the mean by +3 to 9. A subtraction label or shifting only some scores miss the translation rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

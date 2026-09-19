@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_202/H008",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_202/H008",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H008"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H008:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H008",
+    "stem": "The diagram shows a ladder leaning from the ground to a wall, forming a right triangle.\n\nBefore writing an $a^{2}+b^{2}=c^{2}$ equation, what must Diya identify?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The ground distance and the wall height as the two legs, and the ladder as the hypotenuse opposite the right angle.",
+      "B": "Perpendicular distances as the answer label on the diagram.",
+      "C": "Write $a^{2}+b^{2}=c^{2}$ first; checking that the lengths form a right triangle can wait.",
+      "D": "Form the equation for any three lengths nearby, even if they do not make a right triangle."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.95,font=\\small]\n  \\coordinate (G) at (0,0);\n  \\coordinate (W) at (0,3.2);\n  \\coordinate (B) at (2.4,0);\n  \\draw[line width=0.8pt] (G)--(W)--(B)--cycle;\n  \\draw[line width=0.55pt] (G)--++(0.28,0)--++(0,0.28)--++(-0.28,0);\n  \\node[below] at (1.2,-0.28) {ground};\n  \\node[left] at (-0.28,1.6) {wall};\n  \\node[above right] at (1.35,1.7) {ladder};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H008",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

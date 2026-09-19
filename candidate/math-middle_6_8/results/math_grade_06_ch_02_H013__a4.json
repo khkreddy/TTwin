@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav draws ray OC from the vertex of angle AOB.\n\nWhen does ray OC bisect angle AOB?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The word ray on OC is what shows that OC bisects angle AOB."
+    },
+    {
+      "id": "B",
+      "text": "OC bisects angle AOB whenever OC lies somewhere between OA and OB."
+    },
+    {
+      "id": "C",
+      "text": "OC bisects angle AOB when angle AOC equals angle COB."
+    },
+    {
+      "id": "D",
+      "text": "Angle AOB produces the equal halves, so the halves create ray OC."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A bisector splits angle AOB into two equal angles, so angle AOC must equal angle COB. The label ray alone does not settle equality. Lying between the sides omits equal measures. Saying the angle produces the halves reverses the bisector relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

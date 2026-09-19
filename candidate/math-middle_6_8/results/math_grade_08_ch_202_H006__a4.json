@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows $\\triangle ABC$ with a right angle at $B$, $AB=5$, and $BC=12$. Vihaan wants the length of $AC$.\n\nWhich claim correctly applies $a^{2}+b^{2}=c^{2}$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$AC$ is the hypotenuse opposite the right angle, so $5^{2}+12^{2}=AC^{2}$ and $AC=13$."
+    },
+    {
+      "id": "B",
+      "text": "Apply $5^{2}+12^{2}=AC^{2}$ even when the right-angle mark at $B$ is removed."
+    },
+    {
+      "id": "C",
+      "text": "The right angle at $B$ is produced only after $5^{2}+12^{2}=AC^{2}$ is written."
+    },
+    {
+      "id": "D",
+      "text": "Treat $AC$ as a leg and set $AC^{2}+5^{2}=12^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.9]\n  \\coordinate (B) at (0,0);\n  \\coordinate (C) at (3.6,0);\n  \\coordinate (A) at (0,2.7);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\draw (B)--++(0.32,0)--++(0,0.32)--++(-0.32,0);\n  \\node[below left] at (B) {$B$};\n  \\node[below right] at (C) {$C$};\n  \\node[above left] at (A) {$A$};\n  \\node[left] at (-0.12,1.35) {$5$};\n  \\node[below] at (1.8,-0.12) {$12$};\n  \\node[above right] at (2.0,1.5) {$AC$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In right triangle ABC with right angle at B, AC is the hypotenuse, so 25+144=AC^2 and AC=13. Dropping the right angle, reversing the relation, or mis-identifying the hypotenuse are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right-triangle figure to ABC right-angled at B with legs 5 and 12 for the hypotenuse hinge."
+  }
+}

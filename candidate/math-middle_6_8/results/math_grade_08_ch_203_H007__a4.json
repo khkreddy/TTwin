@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira's pump empties a fixed tank. With 6 workers the job takes 10 hours. The work rate is inversely proportional to the time, and the tank size stays fixed.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The needed idea is only the phrase constant product, so the inverse link between workers and hours can be ignored."
+    },
+    {
+      "id": "B",
+      "text": "Keep the product of workers and hours constant: $6\\times10=60$."
+    },
+    {
+      "id": "C",
+      "text": "With 4 workers the time is $60/4=15$ hours."
+    },
+    {
+      "id": "D",
+      "text": "The same 60 also settles a changing tank size mid-job."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Inverse proportion keeps the product of the paired quantities fixed for a fixed tank, so 4 workers need 15 hours. Treating 'constant product' as a mere label swaps the idea. Reusing 60 when the tank changes grabs a printed number beyond the setup.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

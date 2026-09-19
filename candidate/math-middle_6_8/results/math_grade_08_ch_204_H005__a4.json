@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a Koch Snowflake at step $0$ (one equilateral triangle) and at step $1$ after the side-replacement rule. Rohan predicts step $2$ from step $1$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Replace every current side of the step-$1$ boundary with the same bump-shaped structure."
+    },
+    {
+      "id": "B",
+      "text": "Call the next figure an equilateral triangle and treat that starting label as step $2$."
+    },
+    {
+      "id": "C",
+      "text": "Update only the original three sides from step $0$, leaving the new bump edges unchanged."
+    },
+    {
+      "id": "D",
+      "text": "A more jagged snowflake boundary is what produces the choice to bump every current side."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  % step 0 equilateral\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.5,0);\n  \\coordinate (C) at (2.25,3.897);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\node[below] at (2.25,-0.35) {step $0$};\n  % step 1 small sketch to the right\n  \\begin{scope}[shift={(6.2,0.55)},scale=0.55]\n    \\coordinate (P0) at (0,0);\n    \\coordinate (P1) at (1.5,0);\n    \\coordinate (P2) at (2.25,1.299);\n    \\coordinate (P3) at (3.0,0);\n    \\coordinate (P4) at (4.5,0);\n    \\coordinate (Q0) at (4.5,0);\n    \\coordinate (Q1) at (3.75,1.299);\n    \\coordinate (Q2) at (4.5,2.598);\n    \\coordinate (Q3) at (3.0,2.598);\n    \\coordinate (Q4) at (2.25,3.897);\n    \\coordinate (R0) at (2.25,3.897);\n    \\coordinate (R1) at (1.5,2.598);\n    \\coordinate (R2) at (0,2.598);\n    \\coordinate (R3) at (0.75,1.299);\n    \\coordinate (R4) at (0,0);\n    \\draw[line width=1.1pt] (P0)--(P1)--(P2)--(P3)--(P4)--(Q1)--(Q2)--(Q3)--(Q4)--(R1)--(R2)--(R3)--(R4)--cycle;\n  \\end{scope}\n  \\node[below] at (8.45,-0.35) {step $1$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Each Koch step applies the same bump replacement to every current side, including sides created in step 1. Relabelling as the starter triangle, updating only the original three sides, or reversing the relation are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source grid quadrilateral into Koch step 0 triangle and step 1 bumped boundary for the side-replacement hinge."
+  }
+}

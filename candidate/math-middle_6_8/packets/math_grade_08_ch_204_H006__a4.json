@@ -1,0 +1,124 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_m16_qp_32:q5",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:45:19.124Z",
+  "source": {
+    "item_ref": "session:0580_m16_qp_32:q5",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a solid in the shape of a triangular prism.\nAC = 5 cm, BC = 4 cm and CD = 7 cm.\nAngle ABC = 90°.",
+    "options": [],
+    "statements": [],
+    "parts": [
+      {
+        "id": "a",
+        "text": "What does the word prism tell you about the solid in the diagram? [1]",
+        "marks": 0
+      },
+      {
+        "id": "b",
+        "text": "Show that AB = 3 cm. [2]",
+        "marks": 0
+      },
+      {
+        "id": "c",
+        "text": "Calculate the volume of the prism. Give the units of your answer. [4]",
+        "marks": 0
+      },
+      {
+        "id": "d",
+        "text": "On the 1 cm² grid, complete the net of the prism. Two faces have been drawn for you. [3]",
+        "marks": 0
+      },
+      {
+        "id": "e",
+        "text": "Calculate the surface area of the prism. cm² [2]",
+        "marks": 0
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,font=\\small] \\coordinate (A) at (0,1.45); \\coordinate (B) at (0,0); \\coordinate (C) at (3.2,0); \\coordinate (E) at (2.25,3.55); \\coordinate (F) at (2.25,2.10); \\coordinate (D) at (5.45,2.10); \\draw (A)--(B)--(C)--(A); \\draw (A)--(E)--(D)--(C); \\draw[dashed,gray] (B)--(F)--(E); \\draw[dashed,gray] (F)--(D); \\draw (0,0.23)--(0.23,0.23)--(0.23,0); \\node[left] at (A) {$A$}; \\node[below left] at (B) {$B$}; \\node[below] at (C) {$C$}; \\node[above] at (E) {$E$}; \\node[left] at (F) {$F$}; \\node[right] at (D) {$D$}; \\node[below] at (1.60,-0.02) {$4\\,\\mathrm{cm}$}; \\node[fill=white,inner sep=1pt] at (1.95,0.78) {$5\\,\\mathrm{cm}$}; \\node[fill=white,inner sep=1pt] at (4.28,1.12) {$7\\,\\mathrm{cm}$}; \\node[align=center] at (6.65,1.25) {NOT TO\\\\SCALE}; \\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_204/H006",
+      "unit_id": "math/grade_08/ch_204/H006",
+      "title": "Decide which profile a solid can show from a chosen viewpoint, and whether more than one solid can fit the same profile condition.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "solid still holds here even though Use this when reasoning from a front, side, top, or imagined viewpoint to a is missing from the stem — on the item about Decide which profile a solid can show from a chosen."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Observed outline profile is what produces chosen viewpoint relative to solid, so the usual direction of this relation is run backwards — on the item about Decide which profile a solid can show from a chosen."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The solid rule also covers this: {'excluded_case': 'Do not ignore the stated viewpoint when naming a profile.', 'reason': 'The same solid can, so it is not an exception — on the item about Decide which profile a solid can show from a chosen."
+      }
+    ],
+    "enrichment": "A solid's visible profile depends on the viewpoint, so the same solid can have different outlines from different viewpoints and a requested outline may be produced by more than one possible solid.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_204. The student must decide: Decide which profile a solid can show from a chosen viewpoint, and whether more than one solid can fit the same profile condition. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_m16_qp_32:q5",
+    "hinge": "math/grade_08/ch_204/H006",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H006"
+  }
+}

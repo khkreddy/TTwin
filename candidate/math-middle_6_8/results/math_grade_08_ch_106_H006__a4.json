@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anaya expands $(8-3)^{2}$.\n\nWhich expansion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the result negative cross-products and treat that label alone as the expansion."
+    },
+    {
+      "id": "B",
+      "text": "Negative cross-products are what produce the squared difference $(8-3)^{2}$."
+    },
+    {
+      "id": "C",
+      "text": "$(8-3)^{2}=8^{2}-2\\cdot 8\\cdot 3+3^{2}=64-48+9=25$."
+    },
+    {
+      "id": "D",
+      "text": "$(8-3)^{2}=8^{2}-3^{2}=55$, as if the square were a plain difference of squares."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "(a-b)^2=a^2-2ab+b^2, so (8-3)^2=64-48+9=25. A label alone, reversing the relation, or dropping the middle term into a^2-b^2 are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

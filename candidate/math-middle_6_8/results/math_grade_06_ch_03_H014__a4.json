@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Tara's addition-only number-box activity allows the middle numbers $3$, $4$, and $7$ to be used as many times as needed. The side target is $14$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan correctly builds the target $14$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Add $3$ and $4$ only, then stop at $7$."
+        },
+        {
+          "id": "B",
+          "text": "Add $7$ and $7$, using the allowed middle number $7$ twice."
+        },
+        {
+          "id": "C",
+          "text": "Treat the target $14$ as already giving the middle numbers, so no adding is needed."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Addition only with $3$, $4$, and $7$ reused as needed reaches $14$ as $7+7$. Stopping at $3+4$ or treating $14$ as already solved skips the allowed adding plan."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The activity allows repeated use of the middle numbers under addition. 7+7 meets the target 14; 3+4 alone stops short; treating 14 as given reverses the build.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher's water tank holds 40 litres when full. Today's reading is 120% of that full amount.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "120% is meaningful even if no base amount is named."
+    },
+    {
+      "id": "B",
+      "text": "Being above 100% is what creates the 40 litre base, rather than comparing with that base."
+    },
+    {
+      "id": "C",
+      "text": "120% of the full tank means the quantity is more than the 40 litre base: $1.2\\times40=48$ litres."
+    },
+    {
+      "id": "D",
+      "text": "120% always means a 20 litre increase, for every tank size."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Percent above 100 means the quantity exceeds the named base; 120% of 40 L is 48 L. Dropping the base empties the meaning. Saying the percent creates the base reverses the relation. Fixing a 20 L increase for every tank over-extends the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

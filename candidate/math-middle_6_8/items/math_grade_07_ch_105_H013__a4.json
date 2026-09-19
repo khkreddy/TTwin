@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H013",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H013"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H013:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H013",
+    "stem": "Tara looks at the diagram. Parallel lines $m$ and $n$ are cut by transversal $t$. One same-side interior angle is marked $75^{\\circ}$.\n\nWhich claim correctly gives the other same-side interior angle?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the answer the transversal $t$, and stop.",
+      "B": "The other same-side interior angle is $75^{\\circ}$, because those angles are equal.",
+      "C": "The other same-side interior angle is $105^{\\circ}$, because same-side interior angles on parallel lines add to $180^{\\circ}$.",
+      "D": "The other same-side interior angle is $150^{\\circ}$, from doubling $75^{\\circ}$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.3,2.5)--(6.4,2.5) node[right]{$m$};\n  \\draw[line width=1.05pt] (-0.3,0.5)--(6.4,0.5) node[right]{$n$};\n  \\draw[line width=1.0pt] (1.2,-0.4)--(4.8,3.4);\n  \\node[above left] at (4.7,3.3){$t$};\n  % same-side interior: above n to the left of t, and below m to the left of t\n  \\draw[line width=0.7pt] (2.55,0.5) arc (0:48:0.6);\n  \\node[right] at (3.15,0.85){$75^{\\circ}$};\n  \\draw[line width=0.7pt] (2.9,2.5) arc (180:228:0.6);\n  \\node[left] at (2.35,2.05){$?$};\n  \\node[below left] at (1.8,2.45){$A$};\n  \\node[below right] at (3.6,2.45){$B$};\n  \\node[above left] at (2.1,0.45){$C$};\n  \\node[above right] at (3.9,0.45){$D$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

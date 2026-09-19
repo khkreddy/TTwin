@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0607_s24_qp_11:q3",
+  "target_unit_id": "math/grade_06/ch_06/H013",
+  "build_logic": {
+    "source_uid": "0607_s24_qp_11:q3",
+    "hinge": "math/grade_06/ch_06/H013",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H013"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H013:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H013",
+    "stem": "The figure shows Nitya's garden plot: rectangle ABCD is $6\\ \\mathrm{cm}$ by $4\\ \\mathrm{cm}$, and right triangle AEB has base $6\\ \\mathrm{cm}$ and height $3\\ \\mathrm{cm}$ on top of the rectangle.\n\nHow should she find the area of the figure?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Add the rectangle area $6 \\times 4$ and the triangle area $\\frac{1}{2} \\times 6 \\times 3$.",
+      "B": "Use only the rectangle area $6 \\times 4$, because the triangle sits on the rectangle.",
+      "C": "The triangle area produces the rectangle area, so multiply those two part areas.",
+      "D": "Any closed garden plot has area $6 \\times 4$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.55,line cap=round,line join=round]\n  \\draw[thick] (0,0) rectangle (6,4);\n  \\draw[thick] (0,4) -- (3,7) -- (6,4);\n  \\node[below] at (3,0) {6 cm};\n  \\node[left] at (0,2) {4 cm};\n  \\node[above left] at (1.2,5.2) {3 cm};\n  \\node[above right] at (0,4) {A};\n  \\node[above left] at (6,4) {B};\n  \\node[below left] at (0,0) {D};\n  \\node[below right] at (6,0) {C};\n  \\node[above] at (3,7) {E};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H013",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

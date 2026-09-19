@@ -1,0 +1,95 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_07/ch_207/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_07/ch_207/H006",
+    "item_type_target": "structured_parts",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "option_plan": {},
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_207/H006"
+  },
+  "mx_option_map": {},
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_207:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M2/H-EQUATION",
+    "chapter_id": "math/grade_07/ch_207",
+    "chapter_label": "math/grade_07/ch_207",
+    "subtopic_id": "math/grade_07/ch_207/H006",
+    "stem": "Nitya's number machine multiplies an unknown start by $4$ and then subtracts $3$; the display shows $17$.",
+    "item_type": "structured",
+    "options": {},
+    "statements": [],
+    "parts": [
+      {
+        "id": "i",
+        "text": "Which equation models the situation?",
+        "marks": 1,
+        "options": [
+          {
+            "id": "A",
+            "text": "$4x - 3 = 17$"
+          },
+          {
+            "id": "B",
+            "text": "$4x - 3$, with no equals $17$"
+          },
+          {
+            "id": "C",
+            "text": "$4 \\times 17 - 3 = x$"
+          }
+        ]
+      },
+      {
+        "id": "ii",
+        "text": "Give one reason for your choice.",
+        "marks": 1
+      }
+    ],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_207/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": null,
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

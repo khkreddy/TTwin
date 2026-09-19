@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rohan adds in a base-$5$ landmark system. In the ones place he holds $5$ copies of the $1$-landmark.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct before he reads the sum?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Leave the $5$ ones unexchanged and read five ones as the ones digit."
+        },
+        {
+          "id": "B",
+          "text": "Exchange the $5$ ones for one copy of the $5$-landmark, then read the sum."
+        },
+        {
+          "id": "C",
+          "text": "Call the step regrouping and stop after naming that label."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In base 5, five copies of one landmark equal one copy of the next landmark, so the ones must be exchanged before the sum is read."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Base-5 addition regroups 5 ones into one five-landmark. Leaving them unexchanged or stopping at the regrouping label misses that exchange.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

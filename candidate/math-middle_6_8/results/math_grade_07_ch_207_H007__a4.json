@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Tara knows two numbers sum to $48$, and the larger is $10$ more than the smaller. She wants one equation in one unknown.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which plan correctly reduces the two unknowns to one variable?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep both unknowns separate and write two unrelated equations with no link between them."
+        },
+        {
+          "id": "B",
+          "text": "Let the smaller be $x$ and the larger be $x+10$, then write $x+(x+10)=48$."
+        },
+        {
+          "id": "C",
+          "text": "Say that forming the equation is what creates the sum $48$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Expressing the larger as $x+10$ ties both quantities to one variable, so the sum becomes the single equation $x+(x+10)=48$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One variable via larger=smaller+10 yields x+(x+10)=48. Unlinked equations omit the relation; reversing equation as cause of the sum misses the reduction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

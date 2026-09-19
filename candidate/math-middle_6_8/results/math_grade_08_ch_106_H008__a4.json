@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Krish asks whether $(2x-1)(x+4)=2x^{2}+7x-4$ is an identity.\n\nWhich two claims correctly decide?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the left-hand side the identity, because that is the printed first expression."
+    },
+    {
+      "id": "B",
+      "text": "Expand both sides and simplify; they match for every permitted $x$, so the equality is an identity."
+    },
+    {
+      "id": "C",
+      "text": "Matching simplified forms on both sides settles the identity question for all permitted values."
+    },
+    {
+      "id": "D",
+      "text": "Try $x=1$ only; agreement at that one value proves the equality is an identity."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Expanding and simplifying both sides shows they agree for every permitted x, which is the identity test. Labelling the LHS as the answer swaps the decision for a printed side. One example cannot prove an always-true identity.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Vihaan wants to prove a whole number is divisible by $24$. He knows $24=2^{3}\\times 3$.\n\nWhich two claims correctly choose factor tests whose combined force proves divisibility by $24$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Checks by $4$ and by $6$ together prove divisibility by $24$."
+    },
+    {
+      "id": "B",
+      "text": "Checks by $8$ and by $3$ together prove divisibility by $24$, because $\\operatorname{lcm}(8,3)=24$."
+    },
+    {
+      "id": "C",
+      "text": "The tests by $8$ and by $3$ work because their prime powers together supply $2^{3}\\times 3$."
+    },
+    {
+      "id": "D",
+      "text": "Divisibility by $24$ is what produces the separate checks by $8$ and by $3$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "lcm(8,3)=24 and the primes 2^3 and 3 cover 24, so those two tests prove it. lcm(4,6)=12 omits a factor of 2, and saying 24 creates the checks reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

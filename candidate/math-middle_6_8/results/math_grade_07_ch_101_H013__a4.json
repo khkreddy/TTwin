@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Farhan may use each of the digits $8$, $3$, $0$, and $5$ exactly once. He wants the largest possible $4$-digit even number.\n\nWhich two claims correctly build that number?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Put the largest digit $8$ in the ones place to make the number large."
+    },
+    {
+      "id": "B",
+      "text": "Choose an even digit for the ones place; among $8$ and $0$, place $0$ in ones so larger digits stay left."
+    },
+    {
+      "id": "C",
+      "text": "Arrange the remaining digits $8$, $5$, and $3$ in descending order in the thousands, hundreds, and tens places to get $8530$."
+    },
+    {
+      "id": "D",
+      "text": "Largest even means the product of the four digits is maximised first."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Largest even 4-digit uses each digit once: ones must be even, so 0 in ones frees 8,5,3 for 8530. Putting 8 in ones, or maximising a product, miss the place-value plan.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

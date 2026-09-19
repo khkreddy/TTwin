@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows quadrilateral $ABCD$ with diagonals $AC$ and $BD$ meeting at $O$. Sia already knows the diagonals are equal and bisect each other, as in a rectangle. She asks what extra diagonal condition makes $ABCD$ a square.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The diagonals also meet at right angles at $O$, so $ABCD$ is a square."
+    },
+    {
+      "id": "B",
+      "text": "Call the figure a diagonal construction and treat that label alone as the square test."
+    },
+    {
+      "id": "C",
+      "text": "Meeting at right angles is what produces equal diagonals that bisect each other."
+    },
+    {
+      "id": "D",
+      "text": "Treat $ABCD$ as a kite whose one symmetry diagonal alone settles the square test."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.85]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (C) at (4.2,3.0);\n  \\coordinate (D) at (0,3.0);\n  \\coordinate (O) at (2.1,1.5);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=0.9pt] (A)--(C);\n  \\draw[line width=0.9pt] (B)--(D);\n  \\fill (O) circle (1.2pt);\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node[right] at (O) {$O$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal diagonals that bisect each other give a rectangle; right angles between the diagonals supply the extra square condition. A label alone, reversing the relation, or a kite test miss that extra condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source square midpoints figure into rectangle ABCD with equal bisecting diagonals at O for the square-extra-condition hinge."
+  }
+}

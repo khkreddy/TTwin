@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Imran's cricket bat cost $\\mathrm{Rs}\\,500$. Its price rises to $\\mathrm{Rs}\\,575$.\n\nWhat is the percentage increase?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The increase is $15\\%$, found by dividing $75$ by the new price $575$."
+    },
+    {
+      "id": "B",
+      "text": "$575$ as a percent of $500$ is the percentage increase."
+    },
+    {
+      "id": "C",
+      "text": "The increase is $15\\%$, because $75$ divided by the original price $500$, times $100$, is $15$."
+    },
+    {
+      "id": "D",
+      "text": "The percentage increase is $75$, the printed rise in rupees."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Percentage increase uses change over original: 75/500*100=15%. Using 575 as base drops the original-amount rule. Final-as-percent-of-original is a different quantity. Reporting 75 swaps the percent for the rupee change.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

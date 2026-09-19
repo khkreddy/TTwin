@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sameer adds two 3-digit numbers.\n\nWhich two claims about the number of digits in the sum are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The sum is always a 4-digit number."
+    },
+    {
+      "id": "B",
+      "text": "The sum is sometimes a 4-digit number."
+    },
+    {
+      "id": "C",
+      "text": "The sum is sometimes a 3-digit number."
+    },
+    {
+      "id": "D",
+      "text": "The sum is a 3-digit number because each addend shows the digit count 3."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two 3-digit numbers can sum to a 3-digit result (100+100=200) or a 4-digit result (500+500=1000), so both \"sometimes\" claims hold. \"Always 4-digit\" omits the small cases. Reading the printed 3 as the sum's digit count captures a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

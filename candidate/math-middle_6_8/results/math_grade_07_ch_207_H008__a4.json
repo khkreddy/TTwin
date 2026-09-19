@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sameer knows that $x=4$ satisfies $x+6=10$. He wants new equations that still have solution $x=4$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$3x+6=30$ works, multiplying only the left side of $x+6=10$ by $3$."
+    },
+    {
+      "id": "B",
+      "text": "$3(x+6)=30$ works, multiplying both sides of $x+6=10$ by $3$."
+    },
+    {
+      "id": "C",
+      "text": "$(x+6)+2=12$ works, adding $2$ to both sides of $x+6=10$."
+    },
+    {
+      "id": "D",
+      "text": "$x+6=10$ itself is the only allowed equation, because $10$ is already printed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The same operation on both sides preserves the solution: multiply by 3 or add 2. Multiplying only the left omits the both-sides condition. Keeping only the printed original captures a surface feature.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Rohan knows a job takes $6$ workers $8$ days. He wants how many days $12$ workers need for the same job.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct before any Rule-of-Three calculation?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Treat workers and days as directly proportional and scale $8$ days by $12/6$."
+        },
+        {
+          "id": "B",
+          "text": "Reject direct proportion here, because more workers must shorten the time for the same job."
+        },
+        {
+          "id": "C",
+          "text": "Call the method the Rule of Three and apply it as a direct scale because that label fits."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Workers and days move in opposite directions for a fixed job, so a direct Rule-of-Three scale does not apply."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "More workers shorten days for the same job, so the situation is not direct proportion. A direct scale or the Rule-of-Three label alone is wrong here.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

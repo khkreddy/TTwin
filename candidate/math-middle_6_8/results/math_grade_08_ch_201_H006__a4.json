@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sia knows that $\\mathrm{Rs}\\,120$ is $15\\%$ of an unknown whole bill $W$. She wants $W$.\n\nWhich plan is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call $\\mathrm{Rs}\\,120$ the unknown whole and treat that label as $W$."
+    },
+    {
+      "id": "B",
+      "text": "Set $15$ equal to $120/W$ and solve, dropping the percent-to-hundredths step."
+    },
+    {
+      "id": "C",
+      "text": "Set $\\dfrac{15}{100}=\\dfrac{120}{W}$ and solve to get $W=800$."
+    },
+    {
+      "id": "D",
+      "text": "Take $W=120$ because $120$ is the large printed amount on the bill."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "p% of W means p/100=known/W, so 15/100=120/W and W=800. Relabelling 120 as W, dropping /100, or using the printed amount alone are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

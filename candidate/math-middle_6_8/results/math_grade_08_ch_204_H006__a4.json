@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Adil's cube and the square profile seen from the front view.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A cube can show that square from the front, and more than one solid can fit the same square profile from some viewpoint."
+    },
+    {
+      "id": "B",
+      "text": "Only the cube works for that square, because the viewpoint may be ignored when naming the profile."
+    },
+    {
+      "id": "C",
+      "text": "The square front profile is what creates the front viewpoint on the cube."
+    },
+    {
+      "id": "D",
+      "text": "Use the same square-profile question to compute the cube's volume."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (0,0)--(2.2,0)--(2.2,2.2)--(0,2.2)--cycle;\n  \\draw[thick] (0,2.2)--(0.7,2.9)--(2.9,2.9)--(2.2,2.2);\n  \\draw[thick] (2.2,0)--(2.9,0.7)--(2.9,2.9);\n  \\draw[thick,dashed] (0,0)--(0.7,0.7)--(0.7,2.9);\n  \\draw[thick,dashed] (0.7,0.7)--(2.9,0.7);\n  \\node[anchor=north] at (1.1,-0.15) {cube};\n  \\begin{scope}[shift={(5.0,0.2)}]\n    \\draw[thick] (0,0)--(2.0,0)--(2.0,2.0)--(0,2.0)--cycle;\n    \\node[anchor=north] at (1.0,-0.15) {front view};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Profile depends on viewpoint; a cube can show a square from the front, and other solids can match that outline from some view. Ignoring viewpoint drops the condition. Saying the profile creates the viewpoint reverses the relation. Jumping to volume leaves the profile question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote triangular-prism source into a cube with square front view; stem refers to the diagram."
+  }
+}

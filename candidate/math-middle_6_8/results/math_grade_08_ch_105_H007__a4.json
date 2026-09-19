@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash says a whole number leaves remainder 3 when divided by 5. He writes numbers of that kind as $5k+3$ with whole number $k$, and keeps the remainder strictly between 0 and 4.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Every such number may also be written as $5k+5$, because remainder size does not matter."
+    },
+    {
+      "id": "B",
+      "text": "The divisor 5 is produced by the remainder 3, rather than 5 and $k$ producing remainder 3."
+    },
+    {
+      "id": "C",
+      "text": "Numbers leaving remainder 3 on division by 5 are exactly those of the form $5k+3$ with $0\\le3<5$."
+    },
+    {
+      "id": "D",
+      "text": "The same $5k+3$ form also covers numbers that leave remainder 4 when divided by 5."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remainder form needs 0 ≤ r < divisor, so remainder 3 on division by 5 is 5k+3. Writing 5k+5 drops the remainder bound. Saying the remainder produces the divisor reverses the relation. Extending 5k+3 to remainder 4 over-extends the form.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

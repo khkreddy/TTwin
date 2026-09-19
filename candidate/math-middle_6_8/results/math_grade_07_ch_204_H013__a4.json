@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A rope is $15.6\\,\\mathrm{m}$ long. Farhan cuts it into pieces of $1.2\\,\\mathrm{m}$ each with no rope left over.\n\nWhich claim correctly finds how many pieces he gets?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Add $15.6$ and $1.2$ to get the number of pieces."
+    },
+    {
+      "id": "B",
+      "text": "The number of pieces is $15.6$, because that is the longer printed measure."
+    },
+    {
+      "id": "C",
+      "text": "Divide $15.6$ by $1.2$ to get $13$ pieces."
+    },
+    {
+      "id": "D",
+      "text": "The number of pieces is $1.2$, because that is the piece length printed on the rope."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-unit quotient: 15.6÷1.2=13 pieces. Adding the lengths, grabbing 15.6, or treating the piece length as the count miss the division in context.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

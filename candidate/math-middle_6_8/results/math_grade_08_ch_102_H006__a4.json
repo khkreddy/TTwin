@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anaya rewrites products and quotients of powers that share an exponent.\n\nWhich two claims correctly combine powers with the same exponent?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the rewrite a base product and treat that label alone as the simplification."
+    },
+    {
+      "id": "B",
+      "text": "$2^{5}\\times 3^{5}=6^{5}$, because five copies of $2$ times five copies of $3$ regroup as five copies of $6$."
+    },
+    {
+      "id": "C",
+      "text": "$8^{4}\\div 2^{4}=4^{4}$, because four copies of $8$ divided by four copies of $2$ regroup as four copies of $4$."
+    },
+    {
+      "id": "D",
+      "text": "Combine $5^{3}\\times 2^{4}$ the same way even though the exponents differ."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Matching exponents let bases multiply or divide under the shared power: 2^5*3^5=(2*3)^5 and 8^4/2^4=(8/2)^4. A bare label is not the rewrite, and unequal exponents are outside the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

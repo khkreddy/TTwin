@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Krish fills $\\dfrac{1}{8}$ of a tank in one hour. Anvi fills $\\dfrac{1}{4}$ of the same tank in one hour. They work together.\n\nWhich two claims correctly combine their work?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The combined answer is Krish's individual rate $\\dfrac{1}{8}$ alone."
+    },
+    {
+      "id": "B",
+      "text": "In one hour they fill $\\dfrac{1}{8}+\\dfrac{1}{4}=\\dfrac{3}{8}$ of the tank."
+    },
+    {
+      "id": "C",
+      "text": "Their combined rate is the sum of the fractions of the tank each fills in one hour."
+    },
+    {
+      "id": "D",
+      "text": "Treat the times as inversely proportional constants and solve $8\\times4=k$ for the joint time."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Add the hourly work fractions to get the combined rate 3/8 tank per hour. Naming only Krish's rate swaps the combined unit of work for one label. Inverse-proportion constant products are a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

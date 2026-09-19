@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_105/H006",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_105/H006",
+    "item_type_target": "one_or_more",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "B": "relationship_reversal",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_105/H006"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_105:H006:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1",
+    "chapter_id": "math/grade_08/ch_105",
+    "chapter_label": "math/grade_08/ch_105",
+    "subtopic_id": "math/grade_08/ch_105/H006",
+    "stem": "Vihaan wants to prove a whole number is divisible by $24$. He knows $24=2^{3}\\times 3$.\n\nWhich two claims correctly choose factor tests whose combined force proves divisibility by $24$?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Checks by $4$ and by $6$ together prove divisibility by $24$.",
+      "B": "Checks by $8$ and by $3$ together prove divisibility by $24$, because $\\operatorname{lcm}(8,3)=24$.",
+      "C": "The tests by $8$ and by $3$ work because their prime powers together supply $2^{3}\\times 3$.",
+      "D": "Divisibility by $24$ is what produces the separate checks by $8$ and by $3$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_105/H006",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "BC",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": true,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

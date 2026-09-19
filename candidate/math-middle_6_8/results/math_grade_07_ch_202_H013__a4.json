@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya rewrites the product $6\\times(9+4)$.\n\nWhich two claims correctly use the distributive property?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the sum $9+4$ alone."
+    },
+    {
+      "id": "B",
+      "text": "$6\\times(9+4)=6\\times 9+6\\times 4$."
+    },
+    {
+      "id": "C",
+      "text": "Expanding gives $54+24$, which equals $78$, matching $6\\times 13$."
+    },
+    {
+      "id": "D",
+      "text": "Distribution means $6\\times 9+4$, keeping the $4$ outside the product."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distributive property: 6×(9+4)=6×9+6×4=54+24=78. Naming only the inner sum, or leaving 4 undistributed, miss the full expand.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

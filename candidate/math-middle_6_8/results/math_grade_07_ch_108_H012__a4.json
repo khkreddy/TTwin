@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aarav starts with a full bottle. He pours out $\\dfrac{1}{5}$ of the bottle, then pours out $\\dfrac{1}{4}$ of what remains.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly tracks the amount poured the second time?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The second pour is $\\dfrac{1}{4}$ of the original full bottle."
+        },
+        {
+          "id": "B",
+          "text": "After the first pour, $\\dfrac{4}{5}$ remains; the second pour is $\\dfrac{1}{4} \\times \\dfrac{4}{5} = \\dfrac{1}{5}$ of the original."
+        },
+        {
+          "id": "C",
+          "text": "The remaining part produces the original whole, so the second pour is $\\dfrac{1}{4} \\div \\dfrac{4}{5}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The second fraction applies to the current remaining amount 4/5, not to the original full bottle."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "After removing 1/5, 4/5 remains; the next \"of\" multiplies that current whole: (1/4)×(4/5)=1/5. Taking 1/4 of the original omits the updated whole. Dividing by 4/5 reverses the remaining-part relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

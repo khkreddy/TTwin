@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavya looks at the diagram of a rectangle $10\\,\\mathrm{cm}$ by $6\\,\\mathrm{cm}$ with a rectangular hole $4\\,\\mathrm{cm}$ by $3\\,\\mathrm{cm}$ cut from its interior. The hole does not meet the outer edge.\n\nWhich claim correctly finds the remaining area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the outer length $10\\,\\mathrm{cm}$ alone."
+    },
+    {
+      "id": "B",
+      "text": "Add the outer rectangle area to the hole area."
+    },
+    {
+      "id": "C",
+      "text": "Subtract the hole area from the outer rectangle area: $10\\times 6 - 4\\times 3$."
+    },
+    {
+      "id": "D",
+      "text": "Use only the printed $4\\times 3$ label as the remaining area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (0,0) rectangle (10,6);\n  \\draw[line width=1.05pt,fill=gray!20] (3,2) rectangle (7,5);\n  \\node[below] at (5,-0.45){$10\\,\\mathrm{cm}$};\n  \\node[left] at (-0.45,3){$6\\,\\mathrm{cm}$};\n  \\node at (5,3.5){$4\\times 3$};\n  \\node[align=center] at (5,-1.4){Outer rectangle $10\\,\\mathrm{cm}$ by $6\\,\\mathrm{cm}$;\\\\inner hole $4\\,\\mathrm{cm}$ by $3\\,\\mathrm{cm}$.};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Remaining area is outer minus hole: 60−12=48. Naming length alone, adding instead of subtracting, or grabbing the hole label miss the decomposition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as outer 10-by-6 rectangle with inner 4-by-3 rectangular hole."
+  }
+}

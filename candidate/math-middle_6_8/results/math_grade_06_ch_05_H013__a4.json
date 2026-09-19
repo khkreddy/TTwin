@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ishaan has $21=3\\times 7$ and $22=2\\times 11$. He wants to decide whether $21$ and $22$ are co-prime from those prime factorisations.\n\nWhich two claims correctly settle that decision?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The factorisations share no common prime factor, so $21$ and $22$ are co-prime."
+    },
+    {
+      "id": "B",
+      "text": "Co-prime status also covers every pair that merely ends with different digits."
+    },
+    {
+      "id": "C",
+      "text": "Because the listed primes $3$, $7$, $2$, and $11$ are all distinct across the two factorisations, the numbers are co-prime."
+    },
+    {
+      "id": "D",
+      "text": "Call them co-prime only because $22$ is the larger printed number."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Co-prime means no shared prime factors: 3×7 and 2×11 share none. Final-digit differences or size labels are not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

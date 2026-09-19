@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Nitya solves this digit-in-disguise addition. Each letter stands for one digit, and different letters stand for different digits.\n\n$$\\begin{array}{c@{}c@{}c} & A & B \\\\ + & A & B \\\\ \\hline & C & A \\end{array}$$\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Letter is only a name for the sum; the digit values need not fit the addition."
+    },
+    {
+      "id": "B",
+      "text": "Each letter stands for one fixed digit from $0$ to $9$, and different letters stand for different digits."
+    },
+    {
+      "id": "C",
+      "text": "Units and tens columns must add with carries exactly as in ordinary addition."
+    },
+    {
+      "id": "D",
+      "text": "The largest-looking letter must be digit $9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A cryptarithm assigns one digit per letter and must satisfy place-value column addition with carries. Treating \"letter\" as the answer label skips the digit model. Picking 9 from how large a letter looks is surface capture.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

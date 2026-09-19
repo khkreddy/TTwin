@@ -1,0 +1,62 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Adil shares 48 laddoos in the ratio $5:3$ between two boxes. The ratio terms count equal-sized groups.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim divides the whole correctly?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "One group is $48/(5+3)=6$ laddoos, so the parts are $5\\times6=30$ and $3\\times6=18$."
+        },
+        {
+          "id": "B",
+          "text": "The answer is only the pair of ratio parts $5$ and $3$, so the whole 48 is unused."
+        },
+        {
+          "id": "C",
+          "text": "Split 48 into 5 and 3 laddoos, ignoring that the parts must use all 48."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The whole is split into 5+3=8 equal groups of 6, then rebuilt as 30 and 18, which add back to 48."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partitive ratio uses x/(m+n) then multiplies by each term. Naming only 5 and 3 swaps the whole for the ratio labels. Writing parts 5 and 3 laddoos drops the requirement that the parts rebuild the whole.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

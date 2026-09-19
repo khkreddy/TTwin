@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H014",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H014",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H014"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H014:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H014",
+    "stem": "The diagram shows parallel lines $p$ and $q$ cut by transversal $t$. Angle $a=125^{\\circ}$. Angle $x$ is marked between the parallels.\n\nWhich claim about angle $x$ is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Angle $x$ equals $55^{\\circ}$, from the linear pair with angle $a$ and then equal alternate angles on the parallel lines.",
+      "B": "Report the words parallel lines as the measure of angle $x$.",
+      "C": "Angle $x$ equals $55^{\\circ}$, and that is only the angle next to angle $a$ on the straight line.",
+      "D": "Angle $x$ equals $125^{\\circ}$, the printed measure of angle $a$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95,line cap=round,line join=round,font=\\small]\n  \\draw[thick] (0,2.6) -- (6.5,2.6) node[right] {$p$};\n  \\draw[thick] (0,0.5) -- (6.5,0.5) node[right] {$q$};\n  \\draw[thick] (1.0,3.3) -- (5.2,-0.3) node[below right] {$t$};\n  \\node[above left] at (1.55,2.95) {$a=125^{\\circ}$};\n  \\draw (2.05,2.6) arc[start angle=180,end angle=238,radius=0.42];\n  \\node at (4.55,0.95) {$x$};\n  \\draw (4.15,0.5) arc[start angle=0,end angle=58,radius=0.42];\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}
