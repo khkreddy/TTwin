@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "During a Solar System lesson in Surat, Gauri says a planet's temperature can be known from its distance from the Sun alone. Which statement best tests her idea?",
+  "options": [
+    {
+      "id": "A",
+      "text": "She is right: the planet closest to the Sun is always the hottest."
+    },
+    {
+      "id": "B",
+      "text": "She is not fully right: a thick heat-trapping atmosphere can make a planet hotter than one closer to the Sun."
+    },
+    {
+      "id": "C",
+      "text": "She is wrong: distance from the Sun has no effect at all on temperature."
+    },
+    {
+      "id": "D",
+      "text": "She is right: a planet's atmosphere cannot change its temperature."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Distance from the Sun is a starting expectation, not the only rule; Venus shows that a thick CO2-rich atmosphere can trap heat strongly. A overgeneralises distance; C denies distance entirely; D drops atmospheric heat trapping.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

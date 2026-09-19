@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha compares how fast equal amounts of water dry under different conditions in her courtyard.\n\nWhich prediction is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "With the same amount, temperature, and humidity, water in a shallow wide plate evaporates faster than in a narrow-necked bottle."
+    },
+    {
+      "id": "B",
+      "text": "A wide plate always finishes drying before a bottle cap, even if the plate holds much more water."
+    },
+    {
+      "id": "C",
+      "text": "With temperature and exposed area equal, water evaporates faster in humid monsoon air than in dry air."
+    },
+    {
+      "id": "D",
+      "text": "Water at about 30°C cannot evaporate at all until it reaches its boiling point."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Larger exposed area speeds evaporation when amount and other conditions match. Unequal amounts break the plate-versus-cap rule; humidity slows evaporation; boiling is not required for evaporation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

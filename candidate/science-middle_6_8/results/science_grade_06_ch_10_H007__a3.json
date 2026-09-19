@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Tanya watches mosquitoes in a tub of stagnant water behind her house.\n\nWhich description of the stages is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Egg → pupa → larva → adult mosquito."
+    },
+    {
+      "id": "B",
+      "text": "Egg → larva → pupa → adult mosquito; watching over time shows larvae become pupae."
+    },
+    {
+      "id": "C",
+      "text": "The adult mosquito stays in stagnant water throughout its life."
+    },
+    {
+      "id": "D",
+      "text": "Larva and pupa belong to different mosquito species."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Mosquitoes develop egg → larva → pupa → adult. Observation over time shows that order; adults leave the water; larva and pupa are stages of one life cycle, not different species.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

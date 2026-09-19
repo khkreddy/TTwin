@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sneha pours water into two glass tumblers that are the same shape and size. Tumbler P has water up to a higher mark than tumbler Q.\n\nWhich conclusion about volume is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Tumbler P contains a larger volume of water because the water occupies more space."
+    },
+    {
+      "id": "B",
+      "text": "Both tumblers contain equal volumes of water because they have the same capacity."
+    },
+    {
+      "id": "C",
+      "text": "A tall narrow bottle with a higher water level than P must hold more water than P, even though it is much thinner."
+    },
+    {
+      "id": "D",
+      "text": "Tumbler Q holds more water than P because more empty space remains above its lower water level."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In identical containers, higher water level means larger occupied volume. Capacity is not the same as the volume currently held; level comparisons need matching width; lower level does not mean more water.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

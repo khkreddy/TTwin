@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Ishaan fills a balloon with air from the school playground in Pune and asks what that air is made of.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The balloon holds only oxygen, because living things need oxygen to breathe."
+    },
+    {
+      "id": "B",
+      "text": "The balloon holds a mixture of gases, including nitrogen, oxygen, argon, and carbon dioxide."
+    },
+    {
+      "id": "C",
+      "text": "The balloon holds a single gas, because the air looks the same wherever he stands."
+    },
+    {
+      "id": "D",
+      "text": "Every planet's air must contain the same gases as Earth's air in the same amounts."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "surface_feature_capture",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Air around Earth is a mixture of several gases (nitrogen, oxygen, argon, carbon dioxide, and others in small amounts). A replaces air with oxygen alone; C judges from uniform appearance; D over-extends Earth's mixture to every planet.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

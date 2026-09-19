@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish presses and gently scratches four classroom materials to decide whether each is hard or soft. A material is soft if it changes shape or scratches easily, and hard if it resists both.\n\nWhich judgement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The steel desk edge that neither dents nor scratches easily is hard."
+    },
+    {
+      "id": "B",
+      "text": "The stone tile is soft because it finally dented when he pressed with all his strength."
+    },
+    {
+      "id": "C",
+      "text": "The soft rubber eraser that flattens easily is hard, and the steel edge is soft."
+    },
+    {
+      "id": "D",
+      "text": "He cannot decide about the wooden ruler because a scratch test cannot show hardness or softness."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Hardness follows from resisting easy pressing or scratching. Strong-force denting does not make a stone soft; reversing hard/soft labels is wrong; scratching is a valid test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

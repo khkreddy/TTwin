@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Soham's school kitchen uses jowar, bajra, ragi, and sanwa in midday meals.\n\nHow should he classify these grains?",
+  "options": [
+    {
+      "id": "A",
+      "text": "As nutritious pulses, like dal."
+    },
+    {
+      "id": "B",
+      "text": "As nutrition-rich cereals (millets) that are native crops of India."
+    },
+    {
+      "id": "C",
+      "text": "As ordinary rice, because rice is also a millet."
+    },
+    {
+      "id": "D",
+      "text": "As low-nutrition grains, because their seeds are small."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Jowar, bajra, ragi, and sanwa are millets: nutrition-rich cereals and native Indian crops. They are not pulses; rice is not a millet; small grain size does not mean low nutrition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

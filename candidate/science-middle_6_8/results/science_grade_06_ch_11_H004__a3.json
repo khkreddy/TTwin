@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "On a windy morning in Ahmedabad, Gauri hangs a paper firki from a stick near an open window. The firki begins to spin.\n\nWhat best explains why the firki spins?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Still air around the firki is enough to make it turn."
+    },
+    {
+      "id": "B",
+      "text": "The firki must spin first, and that spinning creates the breeze at the window."
+    },
+    {
+      "id": "C",
+      "text": "Moving air pushes on the firki blades and makes them turn."
+    },
+    {
+      "id": "D",
+      "text": "A soft breeze is not wind, so it cannot turn a firki."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Wind is moving air; it can turn a firki or windmill. A omits the need for moving air; B reverses cause and effect; D wrongly excludes a gentle breeze from being wind.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "During a morning health check at Padma’s school in Nagpur, four healthy students have these body temperatures: 36.6 °C, 36.9 °C, 37.1 °C, and 37.3 °C.\n\nWhat is the best conclusion?",
+  "options": [
+    {
+      "id": "A",
+      "text": "All four can be healthy; 37.0 °C is an average, so small differences around it are usual"
+    },
+    {
+      "id": "B",
+      "text": "Anyone below 37.0 °C has an abnormally low temperature"
+    },
+    {
+      "id": "C",
+      "text": "41.5 °C could also be normal for a healthy student"
+    },
+    {
+      "id": "D",
+      "text": "Every healthy student’s reading must be exactly 37.0 °C"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "37.0 °C is an average normal value, so healthy readings may sit a little above or below it. Calling every lower value abnormal, treating fever-level 41.5 °C as normal, or demanding exact 37.0 °C for all are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

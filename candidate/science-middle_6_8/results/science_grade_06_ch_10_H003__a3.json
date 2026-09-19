@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Mitali keeps dry moong seeds in a jar. Later she soaks some on moist cotton and they sprout.\n\nWhat is the best way to classify a seed?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A living seed will germinate even when water, air, and warmth are unsuitable."
+    },
+    {
+      "id": "B",
+      "text": "A seed can be classed with living things because under suitable conditions it germinates and grows into a young plant."
+    },
+    {
+      "id": "C",
+      "text": "A wooden pencil is living because it came from a plant that grew from a seed."
+    },
+    {
+      "id": "D",
+      "text": "A dry seed that has not yet sprouted must be non-living."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Germination under suitable conditions links a seed to living processes. Seeds do not germinate in unsuitable conditions; origin from a plant does not make a pencil living; a dry ungerminated seed is not thereby non-living.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

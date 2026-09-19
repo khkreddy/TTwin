@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Manav plants a vertical stick on the playground in Indore and marks the tip of its shadow through two school days. His teacher asks how to measure one day of nearly 24 hours from these marks.\n\nWhich method is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Find the time from the longest shadow on day 1 to the longest shadow on day 2."
+    },
+    {
+      "id": "B",
+      "text": "Find the time from the shortest shadow (Sun highest) on day 1 to the shortest shadow on day 2."
+    },
+    {
+      "id": "C",
+      "text": "Double the time from sunrise to sunset on a single day."
+    },
+    {
+      "id": "D",
+      "text": "Count how many shadow marks he made between morning and evening on one day."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A mean solar day is the interval from the Sun's highest position one day to the next; the shortest shadow of a vertical stick marks that highest position. A uses longest shadows; C and D do not use successive highest-Sun times.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Kunal sets up pots of bean seeds for a class experiment.\n\nIn which case should the bean seeds germinate?",
+  "options": [
+    {
+      "id": "A",
+      "text": "In waterlogged soil in sunlight, even though air spaces are almost gone."
+    },
+    {
+      "id": "B",
+      "text": "In moist, aerated soil kept in the dark."
+    },
+    {
+      "id": "C",
+      "text": "In dry soil with plenty of air and bright light."
+    },
+    {
+      "id": "D",
+      "text": "They will not germinate in moist, aerated soil in the dark, because beans need light to sprout."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "mechanism_conflation",
+    "C": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Bean seeds need suitable water and air; light is not essential. Waterlogging blocks air; dry soil lacks water; darkness alone does not prevent bean germination.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Gauri reads that Earth behaves like a giant magnet. In her Jaipur homework she must explain why that magnetic field matters for sustaining life.\n\nWhich reason is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It mainly helps compasses point north for travellers."
+    },
+    {
+      "id": "B",
+      "text": "It deflects many harmful cosmic-ray and solar-wind particles, protecting the atmosphere and life."
+    },
+    {
+      "id": "C",
+      "text": "Harmful particles are first deflected by living things, and that later creates Earth's magnetic field."
+    },
+    {
+      "id": "D",
+      "text": "It pulls rain clouds over farmland so crops always get water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's magnetic field shields life by deflecting harmful charged particles from space and the solar wind. A substitutes a familiar compass use for the life-protection role; C reverses the causal order; D invents an unrelated weather effect.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

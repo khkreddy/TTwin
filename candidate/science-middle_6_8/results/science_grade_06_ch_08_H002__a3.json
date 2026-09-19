@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Divya spills a little water on a polished steel plate and the same amount on dry garden soil. After some time both wet patches look smaller.\n\nWhat best explains the disappearing water?",
+  "options": [
+    {
+      "id": "A",
+      "text": "On steel the water mainly evaporates; on soil it can both seep in and evaporate."
+    },
+    {
+      "id": "B",
+      "text": "On steel the water must have seeped into the metal, just as it seeps into soil."
+    },
+    {
+      "id": "C",
+      "text": "Neither case involves evaporation because no white mist or cloud was visible."
+    },
+    {
+      "id": "D",
+      "text": "Water that seeps into soil turns into water vapour inside the soil as soon as it goes below the surface."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "surface_feature_capture",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Impermeable steel blocks seepage, so drying there is evaporation; soil allows both. Mist is not required to call evaporation; seepage keeps water liquid below the surface.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "surface_feature_capture",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

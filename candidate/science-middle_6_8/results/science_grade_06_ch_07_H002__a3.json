@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Chirag measures the temperature of four cups of tea left in different rooms of his house in Pune.\n\nCup P reads 42 °C, Cup Q reads 55 °C, Cup R reads 38 °C, and Cup S reads 47 °C.\n\nWhich cup of tea is the hottest?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Cup Q"
+    },
+    {
+      "id": "B",
+      "text": "Cup P, because 42 is closer to body temperature"
+    },
+    {
+      "id": "C",
+      "text": "Cup R, because a lower reading means hotter tea"
+    },
+    {
+      "id": "D",
+      "text": "Cup S, because its cup is the darkest brown"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On the same Celsius scale, the highest reading is hottest. Cup Q at 55 °C is hottest. Closeness to body temperature, reversing high/low, or cup colour do not decide hotness.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

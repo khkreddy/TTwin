@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Vivek lists stages of a frog's life after a pond visit.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "As a froglet becomes an adult, its tail grows longer."
+    },
+    {
+      "id": "B",
+      "text": "Eggs → tadpole → froglet → adult frog; the tail shortens as the froglet becomes an adult."
+    },
+    {
+      "id": "C",
+      "text": "Froglets live only in water and never come onto land."
+    },
+    {
+      "id": "D",
+      "text": "Adult frogs begin life already with four legs and no tadpole stage."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "relationship_reversal",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Frogs develop from eggs through tadpole and froglet to adult; the tail shortens rather than grows longer, and froglets are not restricted to water-only life.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

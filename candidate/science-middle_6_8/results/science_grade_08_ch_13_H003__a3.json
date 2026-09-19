@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "At a science fair in Mysuru, Tushar builds a simple Solar System model. His teacher asks why Earth's distance from the Sun matters for life.\n\nWhich answer is best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Earth is the largest planet, so it can hold more water."
+    },
+    {
+      "id": "B",
+      "text": "Earth is at a distance where temperatures allow water to stay liquid."
+    },
+    {
+      "id": "C",
+      "text": "Earth is the fastest planet, so its water never freezes."
+    },
+    {
+      "id": "D",
+      "text": "Any distance from the Sun would still keep water liquid on Earth."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Earth's orbital distance gives a temperature range where liquid water can exist, which supports habitability. A and C replace that reason with unrelated properties; D drops the too-hot/too-cold boundary.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

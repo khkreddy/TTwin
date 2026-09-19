@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pooja stirs kitchen samples into separate glasses of water and waits until the water settles.\n\nWhich statement correctly classifies solubility?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Sugar that disappears completely is soluble; sand that remains at the bottom is insoluble."
+    },
+    {
+      "id": "B",
+      "text": "Sugar that disappears completely is insoluble; sand that remains undissolved is soluble."
+    },
+    {
+      "id": "C",
+      "text": "Cooking oil cannot be called soluble or insoluble because solubility applies only to solids."
+    },
+    {
+      "id": "D",
+      "text": "Any powder that makes the water look cloudy must be more soluble than clear sugar water."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "relationship_reversal",
+    "C": "scope_error",
+    "D": "UNRESOLVED"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Complete dissolution means soluble; undissolved material means insoluble. Reversing those labels is wrong, and solubility is not limited to solids alone.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:biology_7a_rjb_exe1",
+  "target_unit_id": "science/grade_06/ch_08/H004",
+  "build_logic": {
+    "source_uid": "biology_7a_rjb_exe1",
+    "hinge": "science/grade_06/ch_08/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_08/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:science:grade_06:ch_08:H004:a3",
+    "subject": "science",
+    "pack": "middle_6_8",
+    "node": "S2/H-STATES",
+    "chapter_id": "science/grade_06/ch_08",
+    "chapter_label": "A journey through states of water",
+    "subtopic_id": "science/grade_06/ch_08/H004",
+    "stem": "Pooja takes a steel tumbler of chilled lemonade out of the fridge on a humid afternoon. Small water droplets soon form on the outside of the tumbler.\n\nWhere do those outside droplets come from?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Water vapour from the surrounding air cools on the tumbler and turns into liquid water.",
+      "B": "Water vapour from the air turns into droplets on the tumbler by evaporation.",
+      "C": "Water vapour forms outside droplets on any tumbler it touches, even a warm one fresh from washing.",
+      "D": "The tumbler becomes cold because vapour turns into droplets on it."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": null,
+    "tikz_packages": [],
+    "has_figure": false,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "science/grade_06/ch_08/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

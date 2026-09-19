@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pooja takes a steel tumbler of chilled lemonade out of the fridge on a humid afternoon. Small water droplets soon form on the outside of the tumbler.\n\nWhere do those outside droplets come from?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Water vapour from the surrounding air cools on the tumbler and turns into liquid water."
+    },
+    {
+      "id": "B",
+      "text": "Water vapour from the air turns into droplets on the tumbler by evaporation."
+    },
+    {
+      "id": "C",
+      "text": "Water vapour forms outside droplets on any tumbler it touches, even a warm one fresh from washing."
+    },
+    {
+      "id": "D",
+      "text": "The tumbler becomes cold because vapour turns into droplets on it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Outside droplets are condensation of airborne vapour on a cold surface. That change is not evaporation; a warm glass will not collect them the same way; coldness enables condensation rather than resulting from it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

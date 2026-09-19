@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Naveen sprinkles a few drops of water on a hot dosa tawa. The drops disappear quickly.\n\nWhat has the liquid water become?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Invisible water vapour in the air."
+    },
+    {
+      "id": "B",
+      "text": "Ordinary air, so the water has changed into oxygen and nitrogen."
+    },
+    {
+      "id": "C",
+      "text": "Liquid water again, because evaporation turns vapour into liquid."
+    },
+    {
+      "id": "D",
+      "text": "Water vapour only if the water first boiled with big bubbles; otherwise it vanished into nothing."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Evaporation turns liquid water into water vapour, which can be invisible. It does not become air; the process is not vapour-to-liquid; boiling is not required for evaporation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

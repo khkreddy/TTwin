@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Tanya buys apples grown in a nearby orchard instead of apples trucked from far away.\n\nWhy can eating more local food help?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any food labelled local always has fewer food miles, even if it went through a distant warehouse."
+    },
+    {
+      "id": "B",
+      "text": "Shorter producer-to-consumer travel means fewer food miles, which can cut cost and pollution."
+    },
+    {
+      "id": "C",
+      "text": "Putting the same distant apples on sale reduces their food miles even if the delivery route is unchanged."
+    },
+    {
+      "id": "D",
+      "text": "Food miles stop at the shop, so carrying food home does not count."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Food miles are the full distance from producer to consumer; choosing nearby food shortens that path and can lower cost and pollution. Labels, sale prices, and stopping the count at the shop do not redefine the travel distance.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Harish takes an ice cube from the freezer onto a warm kitchen plate. After a few minutes he has a puddle of liquid water.\n\nWhich description of the change is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The ice melted: solid water changed into liquid water because it was warmed."
+    },
+    {
+      "id": "B",
+      "text": "The ice changed from solid to liquid by evaporation."
+    },
+    {
+      "id": "C",
+      "text": "The ice would melt even if the kitchen air were at −10°C, simply because it left the freezer."
+    },
+    {
+      "id": "D",
+      "text": "Warming the liquid water on the plate would make it freeze back into ice."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Warming ice causes melting to liquid. Melting is not evaporation; leaving the freezer is not enough if surroundings stay below freezing; heating liquid does not freeze it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

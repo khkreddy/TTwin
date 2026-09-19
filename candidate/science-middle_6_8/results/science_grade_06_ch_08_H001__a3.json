@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kavita notices ice cubes in the freezer, liquid water in a steel glass, and steam rising from a boiling kettle.\n\nWhich statement is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ice, liquid water, and steam are the same substance—water—in different states."
+    },
+    {
+      "id": "B",
+      "text": "Liquid water left on the table will turn into ice without any cooling."
+    },
+    {
+      "id": "C",
+      "text": "The freezer becomes cold because the water turns into ice inside it."
+    },
+    {
+      "id": "D",
+      "text": "Ice and liquid water are the same substance, but steam is a different substance."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Ice, liquid water, and vapour are states of the same substance. Freezing needs cooling; the freezer does not become cold because water freezes; vapour is still water.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

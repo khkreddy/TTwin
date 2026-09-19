@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "In a Pune classroom, Rekha asks what Earth's atmosphere does for life besides simply surrounding the planet.\n\nWhich statement is best?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It only gives living things a place to float; its gases do not matter for life."
+    },
+    {
+      "id": "B",
+      "text": "It supplies oxygen for respiration and traps some heat so water can stay liquid."
+    },
+    {
+      "id": "C",
+      "text": "Life is supported first, and that later creates the atmosphere's useful gases."
+    },
+    {
+      "id": "D",
+      "text": "Oxygen in the air is unused by plants, so composition does not matter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The atmosphere supports life through oxygen for respiration and mild heat trapping that helps keep water liquid. A reduces atmosphere to empty space; C reverses cause and effect; D drops the oxygen-for-respiration condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

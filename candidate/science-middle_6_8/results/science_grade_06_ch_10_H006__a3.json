@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Soham draws the life cycle of a bean plant for homework.\n\nWhich sequence and idea are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "New bean seeds form inside the leaves after flowering."
+    },
+    {
+      "id": "B",
+      "text": "Seed → germination → leaves → flowers → pods with seeds; those seeds can start a new generation."
+    },
+    {
+      "id": "C",
+      "text": "Seed → germination → leaves → pods → flowers → death."
+    },
+    {
+      "id": "D",
+      "text": "Seed → germination → leaves → flowers; the cycle is then complete with no pods needed."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B",
+    "letters": null
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The bean cycle runs seed to germination, leaves, flowers, then fruits/pods with seeds that can grow into new plants. Seeds do not form in leaves; flowers come before pods; stopping at flowers omits seed formation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

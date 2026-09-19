@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "refusal_reason": null,
+  "item_type": "single_mcq",
+  "stem": "Padma stands at the same small distance in front of three mirrors at a science exhibition. The diagram summarises the image of her face in each mirror.\n\nWhich identification is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "P is plane, Q is concave, R is convex"
+    },
+    {
+      "id": "B",
+      "text": "P is convex, Q is plane, R is concave"
+    },
+    {
+      "id": "C",
+      "text": "All three must be plane mirrors because every image is erect"
+    },
+    {
+      "id": "D",
+      "text": "Q is convex because a larger image always means a wider view"
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=1.0]\n% three panels\n\\draw[thick] (-4.2,-1.6) rectangle (-1.4,1.6);\n\\draw[thick] (-1.0,-1.6) rectangle (1.8,1.6);\n\\draw[thick] (2.2,-1.6) rectangle (5.0,1.6);\n\\node[font=\\small] at (-2.8,1.85) {Mirror P};\n\\node[font=\\small] at (0.4,1.85) {Mirror Q};\n\\node[font=\\small] at (3.6,1.85) {Mirror R};\n% P: same-size erect stick figure (plane)\n\\draw[thick] (-3.5,0.2)--(-3.5,-0.9); \\fill (-3.5,0.35) circle (0.12);\n\\node[font=\\footnotesize] at (-2.8,-1.35) {image = object size, erect};\n% Q: enlarged erect (concave, close)\n\\draw[thick] (-0.1,0.4)--(-0.1,-1.0); \\fill (-0.1,0.55) circle (0.16);\n\\node[font=\\footnotesize] at (0.4,-1.35) {larger, erect};\n% R: diminished erect (convex)\n\\draw[thick] (3.3,0.05)--(3.3,-0.55); \\fill (3.3,0.15) circle (0.08);\n\\node[font=\\footnotesize] at (3.6,-1.35) {smaller, erect};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A",
+    "letters": null
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same-size erect → plane; larger erect when close → concave; smaller erect → convex. Swapping names, treating erect-only as proof of plane, or linking larger image to convex wide-view are wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Three panels: same-size erect, enlarged erect, diminished erect images."
+  }
+}
