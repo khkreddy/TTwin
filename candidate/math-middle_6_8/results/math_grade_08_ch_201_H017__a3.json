@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pia is told that length $A$ is $40\\%$ of length $B$.\n\nWhich claim correctly states what percent $B$ is of $A$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$B$ is $60\\%$ of $A$."
+    },
+    {
+      "id": "B",
+      "text": "$B$ is $250\\%$ of $A$."
+    },
+    {
+      "id": "C",
+      "text": "Saying $B$ is $250\\%$ of $A$ is what creates the fact that $A$ is $40\\%$ of $B$."
+    },
+    {
+      "id": "D",
+      "text": "Reverse the comparison by multiplying successive percentage changes $0.4$ and $0.6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "If A = 0.4 B, then B/A = 1/0.4 = 2.5, so B is 250% of A. Using 100−40, reversing cause, or successive-change multiplication all miss the reversed-base hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

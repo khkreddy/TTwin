@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Bela invests $\\mathrm{Rs}\\,800$ in goods and sells them for $\\mathrm{Rs}\\,1000$. The profit amount is $\\mathrm{Rs}\\,200$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words investment cost as the profit amount $\\mathrm{Rs}\\,200$."
+    },
+    {
+      "id": "B",
+      "text": "Profit percentage on cost is $25\\%$, using the investment $\\mathrm{Rs}\\,800$ as the base."
+    },
+    {
+      "id": "C",
+      "text": "Profit percentage on sales is $20\\%$, using the revenue $\\mathrm{Rs}\\,1000$ as the base."
+    },
+    {
+      "id": "D",
+      "text": "Profit percentage is $200\\%$, reading the printed profit $200$ as the percentage."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Profit on cost uses investment 800: 200/800=25%. Profit on sales uses revenue 1000: 200/1000=20%. Naming cost as the profit amount, or reading 200 as a percent, each miss the base choice.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

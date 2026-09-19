@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Gopal multiplies $(-2)\\times 3\\times(-5)\\times(-1)$.\n\nWhich two claims about the sign of this product are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The product is negative because the factor 3 is odd."
+    },
+    {
+      "id": "B",
+      "text": "The product is negative because there are three negative factors."
+    },
+    {
+      "id": "C",
+      "text": "The product equals $-30$."
+    },
+    {
+      "id": "D",
+      "text": "The product is positive because there are three negative factors."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Three negative factors make the product negative, and $2\\times3\\times5\\times1=30$, so the product is $-30$. Oddness of 3 is not the sign rule, and three negatives do not make a positive product.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

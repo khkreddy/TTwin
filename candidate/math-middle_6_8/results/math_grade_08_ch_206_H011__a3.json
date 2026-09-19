@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Gopal looks at the even sums $2+4+6$, then $2+4+6+8$, then $2+4+6+8+10$.\n\nWhich claim correctly explains the pattern by rewriting the terms?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each sum equals the square of the number of terms."
+    },
+    {
+      "id": "B",
+      "text": "Each sum equals half the last term alone."
+    },
+    {
+      "id": "C",
+      "text": "Each sum rewrites as $2(1+2+\\cdots+k)$ where $2k$ is the last term, so the sum equals $k(k+1)$."
+    },
+    {
+      "id": "D",
+      "text": "Each sum equals the last term times the number of terms."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Factoring out 2 rewrites $2+4+\\cdots+2k$ as $2(1+2+\\cdots+k)=k(k+1)$. The odd-number square rule, using only half the last term, or last-term times count are different mechanisms.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

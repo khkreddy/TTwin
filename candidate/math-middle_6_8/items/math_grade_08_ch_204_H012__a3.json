@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_08/ch_204/H012",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_08/ch_204/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error",
+      "operation_confusion"
+    ],
+    "option_plan": {
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_204/H012"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_204:H012:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_204",
+    "chapter_label": "math/grade_08/ch_204",
+    "subtopic_id": "math/grade_08/ch_204/H012",
+    "stem": "The diagram shows a $2$ by $1$ by $1$ solid of unit cubes on an isometric grid. Komal wants to read its length, depth, and height from the grid.\n\nWhich claim is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Count $2$ units along length, $1$ along depth, and $1$ along height using the three isometric grid directions.",
+      "B": "Count the solid on a square grid only; the three isometric directions are not needed.",
+      "C": "The three isometric grid directions are produced by the $2$ by $1$ by $1$ solid.",
+      "D": "The same three isometric directions also serve for every flat square-grid drawing of a rectangle."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line join=round,scale=0.95]\\coordinate (O) at (0,0);\\coordinate (A) at (2.4,0);\\coordinate (B) at (1.8,0.42);\\coordinate (C) at (-0.6,0.42);\\coordinate (Ot) at (0,1.1);\\coordinate (At) at (2.4,1.1);\\coordinate (Bt) at (1.8,1.52);\\coordinate (Ct) at (-0.6,1.52);\\draw[gray!55,line width=0.35pt] (-1.2,-0.2)--(3.0,-0.2);\\draw[gray!55,line width=0.35pt] (-1.5,0.2)--(2.7,0.2);\\draw[gray!55,line width=0.35pt] (-1.8,0.6)--(2.4,0.6);\\draw[gray!55,line width=0.35pt] (0,-0.3)--(0,2.0);\\draw[gray!55,line width=0.35pt] (1.2,-0.3)--(1.2,2.0);\\draw[gray!55,line width=0.35pt] (2.4,-0.3)--(2.4,2.0);\\draw[thick,fill=gray!12] (O)--(A)--(At)--(Ot)--cycle;\\draw[thick,fill=gray!22] (A)--(B)--(Bt)--(At)--cycle;\\draw[thick,fill=gray!32] (Ot)--(At)--(Bt)--(Ct)--cycle;\\draw[thick] (1.2,0)--(1.2,1.1);\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_204/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

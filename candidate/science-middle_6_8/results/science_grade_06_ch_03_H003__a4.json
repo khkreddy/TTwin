@@ -1,0 +1,49 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only frying is a cooking practice, so steaming cannot count."
+    },
+    {
+      "id": "B",
+      "text": "Both are cooking practices; culinary practices can differ and change over time."
+    },
+    {
+      "id": "C",
+      "text": "Cooking practices never change, so both must cook the greens in the same way."
+    },
+    {
+      "id": "D",
+      "text": "The shinier pan is always the healthier practice."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "scope_error",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Salim's grandmother steams greens. His uncle fries the same greens for a long time in a modern pan.\n\nHow should Salim think about these cooking practices?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Steaming and frying are both cooking practices. Culinary practices can differ from each other and can change over time. Shine of the pan is not the practice test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

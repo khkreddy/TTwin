@@ -1,0 +1,43 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick,fill=yellow!70] (0,1.2) circle (0.22);\n\\node at (0,0.55) {torch};\n% P transparent\n\\draw[thick,fill=cyan!8] (1.4,0.2) rectangle (1.7,2.2);\n\\node at (1.55,2.45) {P};\n\\draw[thick,dashed,->] (0.25,1.2) -- (1.35,1.2);\n\\draw[thick,dashed,->] (1.75,1.2) -- (2.55,1.2);\n\\node[font=\\small] at (1.55,-0.15) {clear};\n% Q translucent\n\\draw[thick,fill=orange!25] (3.0,0.2) rectangle (3.3,2.2);\n\\node at (3.15,2.45) {Q};\n\\draw[thick,dashed,->] (2.7,1.2) -- (2.95,1.2);\n\\draw[thick,dashed,->] (3.35,1.35) -- (4.1,1.55);\n\\draw[thick,dashed,->] (3.35,1.05) -- (4.1,0.85);\n\\node[font=\\small] at (3.15,-0.15) {unclear};\n% R opaque\n\\draw[thick,fill=gray!55] (4.7,0.2) rectangle (5.0,2.2);\n\\node at (4.85,2.45) {R};\n\\draw[thick,dashed,->] (4.4,1.2) -- (4.65,1.2);\n\\node[font=\\small] at (5.35,1.2) {blocked};\n\\node[font=\\small] at (4.85,-0.15) {none};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ajay shining a torch at three sheets P, Q and R. Through P almost all the light passes and shapes look clear. Through Q only some light passes and shapes look unclear. Through R no light passes.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Q is translucent because only some light passes and shapes look unclear."
+    },
+    {
+      "id": "B",
+      "text": "Q is transparent because some light passes through it."
+    },
+    {
+      "id": "C",
+      "text": "Q is opaque because shapes look unclear."
+    },
+    {
+      "id": "D",
+      "text": "P is translucent because almost all the light passes through it."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Partial passage of light with unclear shapes means translucent, so Q is translucent.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Torch light through sheets P (clear), Q (unclear/partial), R (blocked)."
+  }
+}

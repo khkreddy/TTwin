@@ -1,0 +1,63 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Is he working like a scientist on this daily-life problem?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because he observes, tries a change, and can check whether the drip slows."
+        },
+        {
+          "id": "B",
+          "text": "No, because a dripping tap is not a problem science can touch."
+        },
+        {
+          "id": "C",
+          "text": "Yes only if he already knows the exact name of every part of the tap."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "item_type": "structured_parts",
+  "stem": "Dhruv's tap drips. He puts a bowl under it, notes how fast it fills, and tries tightening the handle.",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "He observes, tries a change, and can check the result, so he is using the scientific method on a daily-life problem."
+      }
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Working like a scientist means using the scientific method — observe, try a change, check the result — even on a household drip. Naming every part or writing a report first is not required.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

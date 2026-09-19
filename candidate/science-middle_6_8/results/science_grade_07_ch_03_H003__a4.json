@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,x=1cm,y=1cm]\n\\draw[thick] (0,0) -- (0,2.4);\n\\draw[thick] (0,2.4) .. controls (-0.85,2.9) and (-0.85,3.9) .. (0,4.4)\n  .. controls (0.85,3.9) and (0.85,2.9) .. (0,2.4);\n\\draw[thick] (-0.35,2.55) -- (-0.35,3.55);\n\\draw[thick] (0.35,2.55) -- (0.35,3.15);\n\\draw[thick] (0.35,3.45) -- (0.35,3.55);\n\\node at (0.95,3.30) {X};\n\\draw[thick,->] (0.75,3.30) -- (0.42,3.30);\n\\node at (0,-0.35) {torch lamp};\n\\node at (0,1.1) {base};\n\\node at (-1.55,3.2) {filament};\n\\end{tikzpicture}",
+  "learn_by_solve": null,
+  "item_type": "single_mcq",
+  "stem": "The diagram shows Ajay's incandescent torch lamp. The thin wire inside the glass bulb is broken at the gap marked X.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The lamp cannot glow, because the broken filament stops the current."
+    },
+    {
+      "id": "B",
+      "text": "The lamp can glow, because the glass bulb is unbroken."
+    },
+    {
+      "id": "C",
+      "text": "The lamp can glow without a cell, because its filament was once intact."
+    },
+    {
+      "id": "D",
+      "text": "The filament is broken because the lamp is not glowing."
+    }
+  ],
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "An unbroken filament path is needed for current. A break at X stops the current, so the lamp cannot glow.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Torch lamp bulb with filament broken at gap X."
+  }
+}

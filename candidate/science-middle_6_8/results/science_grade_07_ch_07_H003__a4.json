@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Ajay heats a pot of water from below.\n\nWhich claims about the heated water are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "The heated water expands and becomes lighter."
+    },
+    {
+      "id": "B",
+      "text": "The heated water rises, and cooler water moves down to take its place."
+    },
+    {
+      "id": "C",
+      "text": "The heated water becomes heavier and sinks; cooler water rises."
+    },
+    {
+      "id": "D",
+      "text": "The heated water stays at the bottom, and the rest of the water heats with no movement."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "relationship_reversal",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Water heated from below expands, becomes lighter, and rises while cooler water moves down to replace it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "relationship_reversal",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

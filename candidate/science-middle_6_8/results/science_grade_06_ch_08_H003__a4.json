@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Invisible water vapour."
+    },
+    {
+      "id": "B",
+      "text": "Water vapour formed by evaporation, even without big boiling bubbles."
+    },
+    {
+      "id": "C",
+      "text": "Ordinary air."
+    },
+    {
+      "id": "D",
+      "text": "Liquid water again, because evaporation turns vapour into liquid."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "item_type": "one_or_more",
+  "stem": "Rupa sprinkles a few drops of water on a hot pan. The drops disappear quickly.\n\nWhich claims correctly say what the liquid water has become? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Disappearing liquid water on a hot pan has evaporated into invisible water vapour. Evaporation does not require big boiling bubbles. The vapour is not ordinary air, and evaporation does not turn vapour back into liquid.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

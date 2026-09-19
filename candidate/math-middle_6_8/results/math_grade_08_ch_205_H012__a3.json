@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The graph shows afternoon temperature in $^{\\circ}$C over six days.\n\nWhich claim is supported by the graph?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Temperature peaks on Day $4$ at $36^{\\circ}$C, and the steepest rise is from Day $2$ to Day $3$."
+    },
+    {
+      "id": "B",
+      "text": "Report the word trend as the Day $4$ temperature."
+    },
+    {
+      "id": "C",
+      "text": "Temperature on Day $7$ is $40^{\\circ}$C."
+    },
+    {
+      "id": "D",
+      "text": "The peak on Day $4$ is what creates the day labels on the axis."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.85,line cap=round,line join=round]\n  \\draw[->,thick] (0,0)--(7.2,0) node[right] {Day};\n  \\draw[->,thick] (0,0)--(0,4.4) node[above] {$^{\\circ}$C};\n  \\foreach \\x/\\lab in {1/1,2/2,3/3,4/4,5/5,6/6} {\n    \\draw (\\x,0.08)--(\\x,-0.08) node[below] {\\lab};\n  }\n  \\foreach \\y/\\lab in {1/10,2/20,3/30,4/40} {\n    \\draw (0.08,\\y)--(-0.08,\\y) node[left] {\\lab};\n  }\n  \\draw[thick] (1,2.0)--(2,2.2)--(3,3.4)--(4,3.6)--(5,2.8)--(6,2.5);\n  \\foreach \\p in {(1,2.0),(2,2.2),(3,3.4),(4,3.6),(5,2.8),(6,2.5)} {\n    \\fill \\p circle (2.2pt);\n  }\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Plotted points give a peak of 36°C on Day 4; the largest rise on the shown intervals is Day 2 to Day 3 (22°C to 34°C). Naming trend as a temperature, inventing Day 7, or reversing peak and labels each go beyond the graph.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote pie-chart source into a six-day temperature line graph with a clear peak and unequal slopes."
+  }
+}

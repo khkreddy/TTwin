@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The graph shows rainfall in millimetres for City P and City Q across four months.\n\nWhich claim about this display is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "A line graph with two lines shows how each city's rainfall changes across the months and makes the comparison clear."
+    },
+    {
+      "id": "B",
+      "text": "The graph is a pie chart of the rainfall totals."
+    },
+    {
+      "id": "C",
+      "text": "Clustered bars for every month are required, because a line graph cannot show two cities."
+    },
+    {
+      "id": "D",
+      "text": "Only the tallest plotted point matters for comparing the two cities."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.95, font=\\small]\n  \\draw[->,thick] (0,0) -- (5.2,0) node[right] {Month};\n  \\draw[->,thick] (0,0) -- (0,3.4) node[above] {Rain (mm)};\n  \\foreach \\x/\\lab in {1/Jan,2/Feb,3/Mar,4/Apr}\n    \\draw (\\x,0.08) -- (\\x,-0.08) node[below] {\\lab};\n  \\foreach \\y in {1,2,3}\n    \\draw (0.08,\\y) -- (-0.08,\\y) node[left] {\\y0};\n  \\draw[thick,blue] (1,1.2) -- (2,2.0) -- (3,1.5) -- (4,2.6);\n  \\draw[thick,orange] (1,0.8) -- (2,1.1) -- (3,2.2) -- (4,1.8);\n  \\fill[blue] (1,1.2) circle (1.5pt);\n  \\fill[blue] (2,2.0) circle (1.5pt);\n  \\fill[blue] (3,1.5) circle (1.5pt);\n  \\fill[blue] (4,2.6) circle (1.5pt);\n  \\fill[orange] (1,0.8) circle (1.5pt);\n  \\fill[orange] (2,1.1) circle (1.5pt);\n  \\fill[orange] (3,2.2) circle (1.5pt);\n  \\fill[orange] (4,1.8) circle (1.5pt);\n  \\node[anchor=west] at (3.3,3.1) {\\textcolor{blue}{City P}};\n  \\node[anchor=west] at (3.3,2.7) {\\textcolor{orange}{City Q}};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two time series are compared clearly by two lines across months. The display is not a pie chart, line graphs can show two cities, and the full paths matter—not only the single tallest point.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Line graph of rainfall for City P and City Q over Jan–Apr."
+  }
+}

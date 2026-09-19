@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Malini's school laptop costs $\\mathrm{Rs}\\,10000$. It depreciates by $10\\%$ of its current value at the end of each year for $2$ years.\n\nWhich two claims correctly model that decline?",
+  "options": [
+    {
+      "id": "A",
+      "text": "After $2$ years the value is $\\mathrm{Rs}\\,10000 \\times 0.9 = \\mathrm{Rs}\\,9000$, using one $10\\%$ decrease only."
+    },
+    {
+      "id": "B",
+      "text": "After $1$ year the value is $\\mathrm{Rs}\\,10000 \\times 0.9 = \\mathrm{Rs}\\,9000$."
+    },
+    {
+      "id": "C",
+      "text": "After $2$ years the value is $\\mathrm{Rs}\\,9000 \\times 0.9 = \\mathrm{Rs}\\,8100$."
+    },
+    {
+      "id": "D",
+      "text": "Each year subtract $\\mathrm{Rs}\\,1000$ from $\\mathrm{Rs}\\,10000$ as if interest were taken on a fixed original principal."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repeated 10% depreciation multiplies current value by 0.9 each year: 10000→9000→8100. One-shot ×0.9 for two years, or fixed-principal simple subtraction, miss the current-value decline model.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

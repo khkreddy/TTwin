@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Pia's classroom floor plan is a large rectangle $10\\,\\mathrm{m}$ by $6\\,\\mathrm{m}$. It is split into Room L and Room R that share a straight side parallel to the $6\\,\\mathrm{m}$ sides. Room L has area $24\\,\\mathrm{m}^{2}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly finds the width of Room L along the $10\\,\\mathrm{m}$ side?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Width $= 24 \\div 6 = 4\\,\\mathrm{m}$."
+        },
+        {
+          "id": "B",
+          "text": "Width $= 24\\,\\mathrm{m}$, taking the printed area as the width."
+        },
+        {
+          "id": "C",
+          "text": "Width $= 24 \\times 6 = 144\\,\\mathrm{m}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Room L uses the shared $6\\,\\mathrm{m}$ side as one dimension, so width $= \\mathrm{area} \\div 6 = 24 \\div 6 = 4\\,\\mathrm{m}$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In the subdivision, area = length × width with the shared 6 m side. So Room L width is 24÷6=4 m. Taking 24 as a length or multiplying 24×6 ignores that shared-side relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

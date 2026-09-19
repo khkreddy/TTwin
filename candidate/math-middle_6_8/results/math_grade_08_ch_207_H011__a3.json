@@ -1,0 +1,60 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Arjun's rhombus has diagonals $6\\ \\mathrm{cm}$ and $8\\ \\mathrm{cm}$. Each side is $5\\ \\mathrm{cm}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which area claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Area $=\\tfrac{1}{2}\\times 6\\times 8=24\\ \\mathrm{cm}^{2}$."
+        },
+        {
+          "id": "B",
+          "text": "Area $=6\\times 8=48\\ \\mathrm{cm}^{2}$."
+        },
+        {
+          "id": "C",
+          "text": "Area $=5\\times 5=25\\ \\mathrm{cm}^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses the diagonals or base and height.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The diagonals of a rhombus are perpendicular, so area equals one-half the product of the diagonals: $\\tfrac{1}{2}\\times 6\\times 8=24$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With diagonals given, area = ½×d1×d2 = 24. Dropping the ½ doubles the area. Side×side uses the side length as if it alone were an area formula here. Base×height also works when height is known; here the diagonal product is the direct route.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

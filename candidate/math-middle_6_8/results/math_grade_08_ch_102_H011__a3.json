@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sameer compares the powers $3^{7}$ and $3^{4}$ with the same positive base.\n\nWhich claim correctly compares them?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words exponent difference as the value of $3^{7}$."
+    },
+    {
+      "id": "B",
+      "text": "The larger exponent is what creates the base $3$."
+    },
+    {
+      "id": "C",
+      "text": "$3^{7}\\div 3^{4}=3^{3}=27$, so $3^{7}$ is $27$ times $3^{4}$."
+    },
+    {
+      "id": "D",
+      "text": "$3^{7}$ is larger because $7$ is the digit printed largest."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "For the same positive base, dividing powers subtracts exponents: 3^7/3^4=3^3=27, so 3^7 is 27 times 3^4. Naming the difference as a value, reversing cause, or reading the largest printed digit each miss that comparison.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

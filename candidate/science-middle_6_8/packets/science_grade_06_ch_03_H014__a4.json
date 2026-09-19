@@ -1,0 +1,131 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q10",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:03:44.988Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q10",
+    "item_type": "single_mcq",
+    "stem": "By which process does oxygen pass out of a leaf?",
+    "options": [
+      {
+        "id": "A",
+        "text": "diffusion"
+      },
+      {
+        "id": "B",
+        "text": "osmosis"
+      },
+      {
+        "id": "C",
+        "text": "translocation"
+      },
+      {
+        "id": "D",
+        "text": "transpiration"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "A"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Dietary fibre (g) = total carbohydrate (g)."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "For the same amount of food, roasted chana has more calories than potato wafers."
+      },
+      {
+        "mx_type": "relationship_reversal",
+        "name": "relationship_reversal",
+        "teacher_note": "Roasted chana fits the junk-food pattern more strongly than potato wafers."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "Two nutrition labels both given per 50 g cannot be compared."
+      }
+    ],
+    "enrichment": "Foods with high calories due to high sugar and fat and very low amounts of proteins, minerals, vitamins, and dietary fibres are called junk foods; potato wafers have 536 kcal, 35.0 g fat, 7.0 g protein, and 4.8 g dietary fibre per 100 g, while roasted chana has 355 kcal, 6.26 g fat, 18.64 g protein, and 16.8 g dietary fibre per 100 g. higher energy and fat with lower protein and dietary fibre on the label -> stronger match to the junk-food pattern The learner correctly applies this rule: Foods with high calories due to high sugar and fat and very low amounts of proteins, minerals, vitamins, and dietary fibres are called junk foods; potato wafers have 536 kcal, 35.0 g fat, 7.0 g protein, and 4.8 g dietary fibre per 100 g, while roasted chana has 355 kcal, 6.26 g fat, 18.64 g protein, and 16.8 g dietary fibre per 100 g. The food with the biggest single number on the label is automatically the junk food.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H014",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option B remains the trap for a student swapping the sibling term “osmosis” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “translocation” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “transpiration” for the required “diffusion”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Compare nutrition labels to decide which packaged food better fits the junk-food pattern, using calories, fats, proteins, and dietary fibre. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q10",
+    "hinge": "science/grade_06/ch_03/H014",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal",
+      "A": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H014"
+  }
+}

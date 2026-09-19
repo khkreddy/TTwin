@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A bag is marked $\\mathrm{Rs}\\,800$. Sana gets a $10\\%$ discount on the marked price.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The discount amount can be found with no reference to the marked price $\\mathrm{Rs}\\,800$."
+    },
+    {
+      "id": "B",
+      "text": "The same $10\\%$ discount settles every other tag in the shop with no further base."
+    },
+    {
+      "id": "C",
+      "text": "Discount $=10\\%$ of $800=\\mathrm{Rs}\\,80$, so the selling price is $\\mathrm{Rs}\\,720$."
+    },
+    {
+      "id": "D",
+      "text": "Read the digit $8$ in $800$ alone to decide the discount."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A discount is a percentage of the marked price: 10% of 800 is 80, so selling price is 720. Omitting the marked base, widening to every tag, or reading a single digit all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ritu draws parallelogram $ABCD$ with diagonals $AC$ and $BD$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The diagonals must be equal in length and must bisect each other."
+        },
+        {
+          "id": "B",
+          "text": "The diagonals must bisect each other, but they need not be equal."
+        },
+        {
+          "id": "C",
+          "text": "The diagonals must be equal in length, but they need not bisect each other."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses a property of the diagonals.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "In a parallelogram the diagonals bisect each other; they are equal only in special cases such as a rectangle."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Parallelogram diagonals always bisect each other. Equal diagonals need a stronger shape such as a rectangle, so equality is not required for every parallelogram.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

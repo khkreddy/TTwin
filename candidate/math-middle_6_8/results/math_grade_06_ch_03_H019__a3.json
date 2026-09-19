@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Neel and Asha take turns adding 1, 2, or 3 to a running total that starts at 0. The player who makes the total exactly 21 wins.\n\nWhich claim about the winning totals is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The winning totals are every total from 18 to 21."
+    },
+    {
+      "id": "B",
+      "text": "The only winning total is 21; earlier totals do not form a pattern."
+    },
+    {
+      "id": "C",
+      "text": "The winning totals are 1, 5, 9, 13, 17, and 21."
+    },
+    {
+      "id": "D",
+      "text": "The winning totals are the multiples of 3 up to 21."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With adds of 1, 2, or 3 the control gap is 4, so the forced winning totals are 1, 5, 9, 13, 17, and 21. Totals from 18 to 20 do not win, 21 alone is not the full pattern, and multiples of 3 track the largest add rather than the gap of 4.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

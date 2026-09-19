@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a $2$ by $1$ by $1$ solid of unit cubes on an isometric grid. Komal wants to read its length, depth, and height from the grid.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Count $2$ units along length, $1$ along depth, and $1$ along height using the three isometric grid directions."
+    },
+    {
+      "id": "B",
+      "text": "Count the solid on a square grid only; the three isometric directions are not needed."
+    },
+    {
+      "id": "C",
+      "text": "The three isometric grid directions are produced by the $2$ by $1$ by $1$ solid."
+    },
+    {
+      "id": "D",
+      "text": "The same three isometric directions also serve for every flat square-grid drawing of a rectangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line join=round,scale=0.95]\\coordinate (O) at (0,0);\\coordinate (A) at (2.4,0);\\coordinate (B) at (1.8,0.42);\\coordinate (C) at (-0.6,0.42);\\coordinate (Ot) at (0,1.1);\\coordinate (At) at (2.4,1.1);\\coordinate (Bt) at (1.8,1.52);\\coordinate (Ct) at (-0.6,1.52);\\draw[gray!55,line width=0.35pt] (-1.2,-0.2)--(3.0,-0.2);\\draw[gray!55,line width=0.35pt] (-1.5,0.2)--(2.7,0.2);\\draw[gray!55,line width=0.35pt] (-1.8,0.6)--(2.4,0.6);\\draw[gray!55,line width=0.35pt] (0,-0.3)--(0,2.0);\\draw[gray!55,line width=0.35pt] (1.2,-0.3)--(1.2,2.0);\\draw[gray!55,line width=0.35pt] (2.4,-0.3)--(2.4,2.0);\\draw[thick,fill=gray!12] (O)--(A)--(At)--(Ot)--cycle;\\draw[thick,fill=gray!22] (A)--(B)--(Bt)--(At)--cycle;\\draw[thick,fill=gray!32] (Ot)--(At)--(Bt)--(Ct)--cycle;\\draw[thick] (1.2,0)--(1.2,1.1);\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "On an isometric grid, length, depth, and height align with the three grid directions; count 2, 1, and 1 along those axes. Dropping the isometric directions, reversing solid and grid, or applying isometric axes to ordinary square-grid flats all miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote the square-grid kite into a 2×1×1 rectangular solid on an isometric-style grid."
+  },
+  "learn_by_solve": null
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rehan studies a quadrilateral whose four sides are equal. Right angles are not required.\n\nWhich claim correctly classifies this quadrilateral?",
+  "options": [
+    {
+      "id": "A",
+      "text": "It is a rhombus even when the four sides are not equal."
+    },
+    {
+      "id": "B",
+      "text": "Being a parallelogram is what forces all four sides to be equal."
+    },
+    {
+      "id": "C",
+      "text": "It is a rhombus because all sides are equal, and every rhombus is a parallelogram."
+    },
+    {
+      "id": "D",
+      "text": "Every parallelogram is a rhombus."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal sides define a rhombus; every rhombus is a parallelogram. Dropping the equal-sides condition, reversing parallelogram→equal sides, or calling every parallelogram a rhombus all miss the classification hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

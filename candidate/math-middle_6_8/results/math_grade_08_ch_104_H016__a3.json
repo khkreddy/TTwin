@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sameer has trapezium $PQRS$ with $PQ\\parallel SR$ and $\\angle P=75^{\\circ}$. Angle $S$ lies on the same non-parallel side $PS$.\n\nWhich claim correctly gives $\\angle S$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words parallel sides as the measure of $\\angle S$."
+    },
+    {
+      "id": "B",
+      "text": "$\\angle S$ equals $75^{\\circ}$."
+    },
+    {
+      "id": "C",
+      "text": "$\\angle S$ equals $105^{\\circ}$, because the angles on the same non-parallel side between the parallel sides add to $180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "The parallel sides $PQ\\parallel SR$ are produced by the $105^{\\circ}$ angle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Between parallel sides, co-interior angles on leg PS are supplementary: 75°+∠S=180°, so ∠S=105°. Copying 75°, naming parallel sides as a measure, or reversing cause each miss that pair.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

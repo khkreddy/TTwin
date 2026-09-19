@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Tanvi studies kite $ABCD$ with $AB=AD$ and $CB=CD$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report the words adjacent equal sides as diagonal $AC$."
+    },
+    {
+      "id": "B",
+      "text": "$ABCD$ is a kite because $AB=AD$ and $CB=CD$."
+    },
+    {
+      "id": "C",
+      "text": "Diagonal $AC$ bisects diagonal $BD$ at right angles."
+    },
+    {
+      "id": "D",
+      "text": "Bisecting $BD$ at right angles is what creates the equal sides $AB=AD$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal adjacent pairs AB=AD and CB=CD make ABCD a kite. In that kite the symmetry diagonal AC bisects BD at right angles. Naming adjacent equal sides as AC, or reversing the bisector into the side equalities, each miss the kite facts.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

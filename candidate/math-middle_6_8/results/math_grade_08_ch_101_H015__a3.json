@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sana works with the perfect cube $27=3^{3}$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The cube root of $27$ can be decided with no link to a number that cubes to $27$."
+    },
+    {
+      "id": "B",
+      "text": "The cube root of $27$ is $3$."
+    },
+    {
+      "id": "C",
+      "text": "The cube root of $3^{3}$ is $3$."
+    },
+    {
+      "id": "D",
+      "text": "The cube root of $27$ is $27\\div 3=9$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "If 27=3³, the cube root of 27 is 3, and the cube root of 3³ is 3. Omitting the cubing link, or dividing 27 by 3, misses the cube-root hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "operation_confusion"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

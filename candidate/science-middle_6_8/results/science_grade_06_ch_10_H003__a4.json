@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "A seed can be classed with living things: under suitable conditions it germinates and grows."
+    },
+    {
+      "id": "B",
+      "text": "A dry seed that later sprouts under suitable conditions was living while dry."
+    },
+    {
+      "id": "C",
+      "text": "A wooden pencil is living because it came from a plant that grew from a seed."
+    },
+    {
+      "id": "D",
+      "text": "A dry seed that has not yet sprouted must be non-living."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item_type": "one_or_more",
+  "stem": "Anika keeps dry moong seeds in a jar. Later she soaks some on moist cotton and they sprout.\n\nWhich claims correctly classify a seed after considering germination? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A seed that can germinate under suitable conditions is living, including while dry. A wooden pencil is not living. Lack of sprouting yet does not prove a seed is non-living.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yogesh invests $\\mathrm{Rs}\\,5000$ at $10\\%$ per year, compounded annually, for $2$ years.\n\nWhich claim correctly gives the amount after $2$ years?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Each year adds $\\mathrm{Rs}\\,500$ on the original $\\mathrm{Rs}\\,5000$ only, so the amount is $\\mathrm{Rs}\\,6000$."
+    },
+    {
+      "id": "B",
+      "text": "Compounding also covers interest paid out each year with the principal kept fixed at $\\mathrm{Rs}\\,5000$."
+    },
+    {
+      "id": "C",
+      "text": "After year $1$ the amount is $\\mathrm{Rs}\\,5500$; year $2$ interest on $\\mathrm{Rs}\\,5500$ gives amount $\\mathrm{Rs}\\,6050$."
+    },
+    {
+      "id": "D",
+      "text": "The amount is $10\\%$, the printed rate."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "With compounding, year 2 uses the updated amount: 5000→5500→6050. Keeping the original principal each year, treating paid-out interest as compounding, or reading the rate as the amount each miss the updated base.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

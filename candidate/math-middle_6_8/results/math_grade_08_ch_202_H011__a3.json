@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kunal knows that $(3, 4, 5)$ and $(6, 8, 10)$ both satisfy $a^{2} + b^{2} = c^{2}$.\n\nWhich two claims correctly distinguish a primitive Baudhāyana triple from a scaled triple?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer for $(6, 8, 10)$ is the label non-primitive triple, with no common-factor check."
+    },
+    {
+      "id": "B",
+      "text": "$(3, 4, 5)$ is primitive because $3$, $4$, and $5$ have no common factor greater than $1$."
+    },
+    {
+      "id": "C",
+      "text": "$(6, 8, 10)$ is not primitive because $2$ divides $6$, $8$, and $10$."
+    },
+    {
+      "id": "D",
+      "text": "$(6, 8, 10)$ must be primitive because scaling $(3, 4, 5)$ by $2$ still gives $a^{2} + b^{2} = c^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Primitive means gcd of the three entries is 1: (3,4,5) is primitive; (6,8,10) shares factor 2 so it is scaled/non-primitive. Naming the label without the gcd test, or treating a²+b²=c² preservation as proof of primitivity, miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

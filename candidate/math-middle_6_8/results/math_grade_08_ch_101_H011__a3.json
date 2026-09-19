@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Megha checks which of these whole numbers are perfect cubes and computes simple cubes.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$8$ is a perfect cube because $2 \\times 2 \\times 2 = 8$."
+    },
+    {
+      "id": "B",
+      "text": "$9$ is a perfect cube because $3 \\times 3 = 9$."
+    },
+    {
+      "id": "C",
+      "text": "$27$ is a perfect cube because $3 \\times 3 \\times 3 = 27$."
+    },
+    {
+      "id": "D",
+      "text": "Every odd whole number is a perfect cube because $1$ and $27$ are cubes."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A cube multiplies a number by itself three times: 2³=8 and 3³=27. Treating 3×3=9 as a cube swaps square for cube. Reading 1 and 27 as proof that every odd number is a cube is a surface grab.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

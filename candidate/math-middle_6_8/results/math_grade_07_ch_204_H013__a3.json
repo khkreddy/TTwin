@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "A rope is $12.6\\ \\mathrm{m}$ long. Vimal cuts it into pieces of $0.9\\ \\mathrm{m}$ each.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Ignore the piece length $0.9\\ \\mathrm{m}$ and report $12.6$ as the number of pieces."
+    },
+    {
+      "id": "B",
+      "text": "The same count also covers every rope length, not only $12.6\\ \\mathrm{m}$ with $0.9\\ \\mathrm{m}$ pieces."
+    },
+    {
+      "id": "C",
+      "text": "The number of pieces is $12.6 \\div 0.9 = 14$."
+    },
+    {
+      "id": "D",
+      "text": "Read only the digit $6$ in $12.6$ to decide the number of pieces."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "In common units of metres, the number of pieces is the quotient 12.6÷0.9=14. Omitting the piece length, widening the claim to every rope, or reading only the digit 6 all miss that hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

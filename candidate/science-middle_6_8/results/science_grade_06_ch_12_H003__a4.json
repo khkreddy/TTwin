@@ -1,0 +1,46 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [],
+  "statements": [
+    {
+      "id": "1",
+      "text": "The Pole Star belongs to the Little Dipper and appears nearly fixed, so it marks North."
+    },
+    {
+      "id": "2",
+      "text": "The Pole Star is a member of the Big Dipper and slowly circles the sky each night."
+    },
+    {
+      "id": "3",
+      "text": "The Big Dipper itself always sits due South, so it cannot help locate North."
+    }
+  ],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {},
+  "item_type": "three_statement",
+  "stem": "Rupa wants to find North using familiar star patterns. She knows the Big Dipper, the Little Dipper, and the Pole Star.",
+  "answer": {
+    "kind": "statement_pattern",
+    "pattern": [
+      "T",
+      "F",
+      "F"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The Pole Star is in the Little Dipper and stays nearly fixed, marking North. It is not in the Big Dipper. The Big Dipper helps point toward the Pole Star; it does not sit fixed due South.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

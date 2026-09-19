@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kunal buys a bag with marked price $\\mathrm{Rs}\\,1000$. The shop gives a $20\\%$ discount, then a further $10\\%$ discount on the reduced price.\n\nWhich claim correctly finds the final price?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Final price $= \\mathrm{Rs}\\,1000 \\times 0.7 = \\mathrm{Rs}\\,700$, adding the $20\\%$ and $10\\%$ labels."
+    },
+    {
+      "id": "B",
+      "text": "Final price $= \\mathrm{Rs}\\,1000 \\times 0.8 \\times 0.9 = \\mathrm{Rs}\\,720$, applying $20\\%$ then $10\\%$ on the new base."
+    },
+    {
+      "id": "C",
+      "text": "The same successive-base calculation is required when the shop gives only a single $20\\%$ discount."
+    },
+    {
+      "id": "D",
+      "text": "Final price $= \\mathrm{Rs}\\,1000$ because $20$ and $10$ are the printed percent labels."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Successive discounts use the changed amount as the next base: 1000×0.8×0.9=720. Adding percent labels, applying successive logic to a single discount, or reading the printed percents as the price miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

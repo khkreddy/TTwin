@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "2 m = 2 cm."
+    },
+    {
+      "id": "B",
+      "text": "2 m = 200 cm."
+    },
+    {
+      "id": "C",
+      "text": "3 km = 3000 m."
+    },
+    {
+      "id": "D",
+      "text": "5 cm = 500 mm."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "item_type": "one_or_more",
+  "stem": "Dhruv converts lengths among kilometre, metre, centimetre, and millimetre.\n\nWhich conversions are correct? One or more options may be correct.",
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "1 m = 100 cm so 2 m = 200 cm. 1 km = 1000 m so 3 km = 3000 m. 2 m is not 2 cm. 5 cm = 50 mm, not 500 mm.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

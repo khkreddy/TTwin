@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Megha compares two savings plans that both start with ₹100. Plan P adds ₹100 each month. Plan Q doubles the amount each month.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Both plans are linear growth because both use the number $100$."
+    },
+    {
+      "id": "B",
+      "text": "Doubling each month is what creates the starting amount ₹100."
+    },
+    {
+      "id": "C",
+      "text": "Plan P shows linear growth; Plan Q shows exponential growth."
+    },
+    {
+      "id": "D",
+      "text": "The linear and exponential labels also classify every pair of school marks as growth types."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Adding a fixed amount repeatedly is linear; multiplying by a fixed factor repeatedly is exponential. Shared starting number 100 is not enough. Doubling does not create the start. Growth labels do not cover arbitrary school marks.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Sameer writes $45200$ in scientific notation.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$45200=452\\times 10^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "The form $10^{4}\\times 4.52$ is what creates the rule $1\\le x<10$."
+    },
+    {
+      "id": "C",
+      "text": "$45200=4.52\\times 10^{4}$, with coefficient $4.52$ satisfying $1\\le x<10$."
+    },
+    {
+      "id": "D",
+      "text": "$4.52\\times 10^{4}$ is also the scientific form of $0.452$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scientific notation needs coefficient x with 1≤x<10 and integer exponent: 45200=4.52×10^4. 452×10^2 breaks the coefficient bound; reversing cause or applying the same form to 0.452 each miss the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

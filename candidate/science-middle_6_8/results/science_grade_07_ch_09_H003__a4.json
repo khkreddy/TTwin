@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Firoz studies how teeth, saliva, and the tongue prepare food in the mouth before it enters the food pipe. Softened food must be ready for swallowing.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Teeth crush the food into smaller pieces."
+    },
+    {
+      "id": "B",
+      "text": "Saliva moistens the food, and the tongue helps mix it and push it so it can be swallowed."
+    },
+    {
+      "id": "C",
+      "text": "Chewing alone prepares the food for swallowing; saliva and the tongue are not needed."
+    },
+    {
+      "id": "D",
+      "text": "The tongue chews the food into smaller pieces, and the teeth mix it with saliva."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Teeth crush food; saliva moistens and the tongue mixes and pushes softened food for swallowing. Roles must not be swapped or dropped.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  }
+}

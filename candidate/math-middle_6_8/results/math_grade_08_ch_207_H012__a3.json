@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Pia finds the area of trapezium $ABCD$ in the diagram. Sides $AB = 14\\,\\mathrm{cm}$ and $DC = 8\\,\\mathrm{cm}$ are parallel. The height between those parallel sides is $5\\,\\mathrm{cm}$. The non-parallel sides are $10\\,\\mathrm{cm}$ and $6\\,\\mathrm{cm}$.\n\nWhich claim correctly finds the area?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Area $= \\dfrac{1}{2} \\times 5 \\times (14 + 8) = 55\\,\\mathrm{cm}^{2}$."
+    },
+    {
+      "id": "B",
+      "text": "Area $= \\dfrac{1}{2} \\times 5 \\times (10 + 6)$, adding the non-parallel sides."
+    },
+    {
+      "id": "C",
+      "text": "The parallel sides $14\\,\\mathrm{cm}$ and $8\\,\\mathrm{cm}$ are produced by the area formula."
+    },
+    {
+      "id": "D",
+      "text": "Area $= (14 + 8) \\div (2 \\times 5) = 2.2\\,\\mathrm{cm}^{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,scale=0.85]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (8,0);\n  \\coordinate (C) at (6.2,3.5);\n  \\coordinate (D) at (1.8,3.5);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=0.7pt] (1.8,0)--(1.8,3.5);\n  \\draw[line width=0.55pt] (1.8,0.35)--(2.15,0.35)--(2.15,0);\n  \\node[below] at (4,0){$14\\,\\mathrm{cm}$};\n  \\node[above] at (4,3.5){$8\\,\\mathrm{cm}$};\n  \\node[left] at (1.8,1.75){$5\\,\\mathrm{cm}$};\n  \\node[below right] at (7.1,1.6){$6\\,\\mathrm{cm}$};\n  \\node[below left] at (0.9,1.6){$10\\,\\mathrm{cm}$};\n  \\node[above left] at (0.1,0.1){A};\n  \\node[above right] at (7.9,0.1){B};\n  \\node[below right] at (6.2,3.5){C};\n  \\node[below left] at (1.8,3.5){D};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "operation_confusion"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Trapezium area is ½ × height × sum of the parallel sides: ½×5×(14+8)=55. Adding non-parallel sides, reversing formula as cause of the parallels, or dividing instead of multiplying miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "operation_confusion"
+    ],
+    "figure_note": "Rewrote source grid kite as trapezium ABCD with parallel sides 14 and 8, height 5, and non-parallel sides 10 and 6 labelled."
+  }
+}

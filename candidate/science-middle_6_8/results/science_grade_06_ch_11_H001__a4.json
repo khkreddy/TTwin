@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Air in the room is a natural resource because nature provides it and it helps meet needs."
+    },
+    {
+      "id": "B",
+      "text": "A plastic chair is a natural resource because it is useful in the classroom."
+    },
+    {
+      "id": "C",
+      "text": "Only rocks underground count as natural resources; air does not."
+    },
+    {
+      "id": "D",
+      "text": "Anything shiny on the desk is a natural resource."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "surface_feature_capture"
+  },
+  "item_type": "single_mcq",
+  "stem": "Salim sorts classroom objects. He asks whether each is a natural resource.\n\nWhich claim uses the correct test?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A natural resource is provided by nature and helps meet needs. Air fits. A plastic chair is made by people. Usefulness or shine alone is not the test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

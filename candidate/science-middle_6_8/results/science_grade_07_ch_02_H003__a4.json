@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "learn_by_solve": null,
+  "item_type": "one_or_more",
+  "stem": "Namrata learns that lemon juice contains citric acid and that such foods taste sour. Later she finds an unlabelled bottle of pale liquid in the storeroom.\n\nWhich claims are correct? One or more options may be correct.",
+  "options": [
+    {
+      "id": "A",
+      "text": "Foods with acids such as citric acid in lemon often taste sour."
+    },
+    {
+      "id": "B",
+      "text": "She must not taste the unknown liquid to test whether it is an acid."
+    },
+    {
+      "id": "C",
+      "text": "The main acid in lemon is acetic acid, which is why lemon tastes sour."
+    },
+    {
+      "id": "D",
+      "text": "She should taste a drop of the unknown liquid; if it is sour, it is safely identified as an acid."
+    }
+  ],
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "term_substitution",
+    "D": "condition_omission"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Citric acid in lemon links to sour taste, but tasting an unknown liquid is unsafe and must not be used as a test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

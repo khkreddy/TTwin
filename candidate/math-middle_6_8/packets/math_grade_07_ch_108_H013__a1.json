@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:jeebench:srcjson:math:jee_adv_2016_paper_1:q41",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:03:39.926Z",
+  "source": {
+    "item_ref": "session:jeebench:srcjson:math:jee_adv_2016_paper_1:q41",
+    "item_type": "single_mcq",
+    "stem": "The least value of $\\alpha \\in \\mathbb{R}$ for which $4 \\alpha x^{2}+\\frac{1}{x} \\geq 1$, for all $x>0$, is\n\n(A) $\\frac{1}{64}$\n\n(B) $\\frac{1}{32}$\n\n(C) $\\frac{1}{27}$\n\n(D) $\\frac{1}{25}$",
+    "options": [
+      {
+        "id": "A",
+        "text": "$\\frac{1}{64}$"
+      },
+      {
+        "id": "B",
+        "text": "$\\frac{1}{32}$"
+      },
+      {
+        "id": "C",
+        "text": "$\\frac{1}{27}$"
+      },
+      {
+        "id": "D",
+        "text": "$\\frac{1}{25}$"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "C"
+    }
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_07/ch_108/H013",
+      "unit_id": "math/grade_07/ch_108/H013",
+      "title": "Combine fractional filling times by converting each time into a one-day filling rate, adding the rates, and then converting the combined rate back to time.",
+      "node_labels": [
+        "Practical & laboratory technique"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Practical & laboratory technique",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "One-day rate is the label that belongs on this item, so 'Combine fractional filling times by converting each time into a' is answered as one-day rate rather than filling time."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "filling time still holds here even though Use this when all fountains or workers act on the same whole cistern or task at the same is missing from the stem — on the item about Combine fractional filling times by converting each."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "The filling time rule also covers this: fountains working one after another, so it is not an exception — on the item about Combine fractional filling times by converting each."
+      }
+    ],
+    "enrichment": "If a fountain fills one cistern in t days, then in one day it fills 1 ÷ t cisterns; combined one-day filling rates add, and the time for one full cistern is the reciprocal of the combined rate.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_07/ch_108. The student must decide: Combine fractional filling times by converting each time into a one-day filling rate, adding the rates, and then converting the combined rate back to time. Use an Indian school or home setting and Indian names. Keep the source language register. Retarget the source onto this Science decision. Keep the source item type. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V3",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "jeebench:srcjson:math:jee_adv_2016_paper_1:q41",
+    "hinge": "math/grade_07/ch_108/H013",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "scope_error",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_108/H013"
+  }
+}

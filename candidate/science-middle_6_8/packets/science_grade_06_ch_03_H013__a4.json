@@ -1,0 +1,119 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0610_m15_qp_12:q1",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T08:03:44.942Z",
+  "source": {
+    "item_ref": "session:0610_m15_qp_12:q1",
+    "item_type": "single_mcq",
+    "stem": "What is not a characteristic of all living organisms?",
+    "options": [
+      {
+        "id": "A",
+        "text": "excretion"
+      },
+      {
+        "id": "B",
+        "text": "photosynthesis"
+      },
+      {
+        "id": "C",
+        "text": "reproduction"
+      },
+      {
+        "id": "D",
+        "text": "respiration"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "",
+    "key": {
+      "kind": "single_letter",
+      "letter": "B"
+    }
+  },
+  "intelligence": {
+    "join_status": "UNBOUND",
+    "hinge": null,
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "science",
+      "level": "grade 6",
+      "topic": "Food, digestion, growth and health",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "Balanced diet."
+      },
+      {
+        "mx_type": "scope_error",
+        "name": "scope_error",
+        "teacher_note": "A child and a grandparent require exactly the same types and amounts of nutrients."
+      }
+    ],
+    "enrichment": "A balanced diet has all essential nutrients, roughage, and water in the right amount for proper growth and development, and nutrient requirements may vary according to age. right amounts of essential nutrients, roughage, and water matched to need -> balanced diet for proper growth and development The learner correctly applies this rule: A balanced diet has all essential nutrients, roughage, and water in the right amount for proper growth and development, and nutrient requirements may vary according to age. A diet is balanced if it fills the stomach or has many food items, even without checking roughage, water, or age needs.",
+    "lbs_recipe": {
+      "unit": "science/grade_06/ch_03/H013",
+      "gate_names": [
+        "term_substitution",
+        "term_substitution",
+        "term_substitution"
+      ],
+      "hint_skeleton": "",
+      "retry_plan": "retry original unaided"
+    },
+    "modify_seeds": [
+      "Rewrite this item so option A remains the trap for a student swapping the sibling term “excretion” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option C remains the trap for a student swapping the sibling term “reproduction” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key.",
+      "Rewrite this item so option D remains the trap for a student swapping the sibling term “respiration” for the required “photosynthesis”. Change the numbers, species or wording; rewrite the stem and all four options as one coherent item. Do not print mix-up labels on the learner stem. Recalculate the key."
+    ]
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Science question. Chapter: Mindful eating: a path to a healthy body. The student must decide: Decide whether a diet is balanced by checking for all essential nutrients, roughage, and water in the right amounts for growth and development, while allowing needs to vary with age. Use an Indian school or home setting and Indian names. Keep the source language register. Rewrite the figure and the stem so they agree. Exactly one visual. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V5",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "preserve",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "preserve",
+      "tikz_required": false
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/science.json"
+  },
+  "build_logic": {
+    "source_uid": "0610_m15_qp_12:q1",
+    "hinge": "science/grade_06/ch_03/H013",
+    "item_type_target": "preserve",
+    "figure_decision": {
+      "mode": "preserve",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "A": "condition_omission",
+      "C": "scope_error",
+      "D": "UNRESOLVED",
+      "B": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to science/grade_06/ch_03/H013"
+  }
+}

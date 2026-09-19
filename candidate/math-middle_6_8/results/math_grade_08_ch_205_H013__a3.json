@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Rehan reads a bar chart titled \"Favourite sports in Class 8A, 2024 school survey of $40$ students.\" Cricket has the tallest bar.\n\nWhich claim correctly limits what the display allows him to conclude?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The bars report Class 8A survey choices in $2024$; they do not by themselves prove why cricket is most popular."
+    },
+    {
+      "id": "B",
+      "text": "Treat the bars as nationwide sports facts for every class, with no use of the Class 8A $2024$ survey source."
+    },
+    {
+      "id": "C",
+      "text": "Cricket causes more students to join Class 8A."
+    },
+    {
+      "id": "D",
+      "text": "Insert cricket into a sorted list and read the median as the conclusion from the bars."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "scope_error",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scope is the stated Class 8A 2024 survey of 40 students; popularity ranks are shown, but causes are not. Ignoring source/scope, inventing causes, or swapping in median machinery miss the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

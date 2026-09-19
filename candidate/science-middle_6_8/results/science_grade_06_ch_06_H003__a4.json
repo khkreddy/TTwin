@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "options": [
+    {
+      "id": "A",
+      "text": "Whether the material looks shiny."
+    },
+    {
+      "id": "B",
+      "text": "Whether its properties fit the use, such as conducting heat poorly."
+    },
+    {
+      "id": "C",
+      "text": "Whether it is a metal, because every metal handle stays cool."
+    },
+    {
+      "id": "D",
+      "text": "Whether material properties matter for objects — they do not."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "mx_option_map": {
+    "A": "surface_feature_capture",
+    "C": "scope_error",
+    "D": "condition_omission"
+  },
+  "item_type": "single_mcq",
+  "stem": "Anika needs a pan handle that will not get too hot.\n\nWhat should she check in the material?",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Choose a material whose properties fit the purpose. A cool handle needs poor heat conduction. Shine alone and 'every metal stays cool' are not the fit test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "scope_error",
+      "condition_omission"
+    ],
+    "figure_note": null
+  }
+}

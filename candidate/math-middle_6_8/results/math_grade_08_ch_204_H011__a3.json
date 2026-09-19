@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows the front, top, and side views of a solid.\n\nWhich claim correctly tells how to identify the solid?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Use the front, top, and side views together, because a single projection does not fix a unique solid."
+    },
+    {
+      "id": "B",
+      "text": "The front view alone names the solid."
+    },
+    {
+      "id": "C",
+      "text": "Naming the solid is what creates the front, top, and side views."
+    },
+    {
+      "id": "D",
+      "text": "Any one of the three views is enough for every solid in this topic."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.75,line join=round]\n  \\begin{scope}\n    \\draw[thick] (0,0)--(0,2)--(1,2)--(1,1)--(2,1)--(2,0)--cycle;\n    \\node at (1,-0.45) {front};\n  \\end{scope}\n  \\begin{scope}[xshift=3.8cm]\n    \\draw[thick] (0,0)--(0,1)--(2,1)--(2,0)--cycle;\n    \\draw[thick] (1,0)--(1,1);\n    \\node at (1,-0.45) {top};\n  \\end{scope}\n  \\begin{scope}[xshift=7.6cm]\n    \\draw[thick] (0,0)--(0,2)--(1,2)--(1,0)--cycle;\n    \\node at (0.5,-0.45) {side};\n  \\end{scope}\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One projection is not unique, so the solid is matched from the three mutually perpendicular views together. Using only the front view, reversing cause, or treating any single view as always enough each miss that requirement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote grid-quadrilateral source into labelled front/top/side orthographic views of an L-solid."
+  }
+}

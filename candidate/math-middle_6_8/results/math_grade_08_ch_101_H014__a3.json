@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Neel knows that some cubes equal a block of consecutive odd numbers.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$8=3+5$, so $8$ is $2^{3}$ written as two consecutive odd numbers."
+    },
+    {
+      "id": "B",
+      "text": "Every sum of consecutive odd numbers is a cube."
+    },
+    {
+      "id": "C",
+      "text": "$27=7+9+11$, so $27$ is $3^{3}$ written as three consecutive odd numbers."
+    },
+    {
+      "id": "D",
+      "text": "$9=1+3+5$, so $9$ is a cube."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "scope_error",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "$2^{3}=8=3+5$ and $3^{3}=27=7+9+11$ are cubes as consecutive-odd blocks. Not every consecutive-odd sum is a cube, and $1+3+5=9=3^{2}$ is a square, not a cube.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "scope_error",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

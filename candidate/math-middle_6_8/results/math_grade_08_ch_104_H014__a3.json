@@ -1,0 +1,52 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Komal studies the diagonals of a rhombus.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The diagonals of a rhombus meet at $90^{\\circ}$."
+    },
+    {
+      "id": "B",
+      "text": "The diagonals of a rhombus are always equal in length."
+    },
+    {
+      "id": "C",
+      "text": "The diagonals of a rhombus bisect each other."
+    },
+    {
+      "id": "D",
+      "text": "Each diagonal of a rhombus equals a side of the rhombus."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "D": "term_substitution"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rhombus diagonals are perpendicular and bisect each other. Equal diagonals need the extra square condition. Equating a diagonal to a side swaps diagonal for side length.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "term_substitution"
+    ],
+    "figure_note": null
+  },
+  "learn_by_solve": null
+}

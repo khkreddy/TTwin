@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m16_qp_12:q24",
+  "target_unit_id": "math/grade_08/ch_205/H014",
+  "build_logic": {
+    "source_uid": "0580_m16_qp_12:q24",
+    "hinge": "math/grade_08/ch_205/H014",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "hinge_names_visual"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_205/H014"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_205:H014:a3",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M3",
+    "chapter_id": "math/grade_08/ch_205",
+    "chapter_label": "math/grade_08/ch_205",
+    "subtopic_id": "math/grade_08/ch_205/H014",
+    "stem": "The graph shows rainfall in millimetres for City P and City Q across four months.\n\nWhich claim about this display is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "A line graph with two lines shows how each city's rainfall changes across the months and makes the comparison clear.",
+      "B": "The graph is a pie chart of the rainfall totals.",
+      "C": "Clustered bars for every month are required, because a line graph cannot show two cities.",
+      "D": "Only the tallest plotted point matters for comparing the two cities."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[scale=0.95, font=\\small]\n  \\draw[->,thick] (0,0) -- (5.2,0) node[right] {Month};\n  \\draw[->,thick] (0,0) -- (0,3.4) node[above] {Rain (mm)};\n  \\foreach \\x/\\lab in {1/Jan,2/Feb,3/Mar,4/Apr}\n    \\draw (\\x,0.08) -- (\\x,-0.08) node[below] {\\lab};\n  \\foreach \\y in {1,2,3}\n    \\draw (0.08,\\y) -- (-0.08,\\y) node[left] {\\y0};\n  \\draw[thick,blue] (1,1.2) -- (2,2.0) -- (3,1.5) -- (4,2.6);\n  \\draw[thick,orange] (1,0.8) -- (2,1.1) -- (3,2.2) -- (4,1.8);\n  \\fill[blue] (1,1.2) circle (1.5pt);\n  \\fill[blue] (2,2.0) circle (1.5pt);\n  \\fill[blue] (3,1.5) circle (1.5pt);\n  \\fill[blue] (4,2.6) circle (1.5pt);\n  \\fill[orange] (1,0.8) circle (1.5pt);\n  \\fill[orange] (2,1.1) circle (1.5pt);\n  \\fill[orange] (3,2.2) circle (1.5pt);\n  \\fill[orange] (4,1.8) circle (1.5pt);\n  \\node[anchor=west] at (3.3,3.1) {\\textcolor{blue}{City P}};\n  \\node[anchor=west] at (3.3,2.7) {\\textcolor{orange}{City Q}};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_205/H014",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

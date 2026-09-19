@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Yogesh draws parallelogram $ABCD$ with base $AB=12\\,\\mathrm{cm}$ and corresponding perpendicular height $5\\,\\mathrm{cm}$. Side $AD$ measures $6\\,\\mathrm{cm}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly gives the area of parallelogram $ABCD$?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The area is $12\\times 5=60\\,\\mathrm{cm}^{2}$."
+        },
+        {
+          "id": "B",
+          "text": "The area is $12\\times 6=72\\,\\mathrm{cm}^{2}$."
+        },
+        {
+          "id": "C",
+          "text": "The area is $5\\times 6=30\\,\\mathrm{cm}^{2}$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice that uses the base and its corresponding height.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Area equals base times corresponding perpendicular height: use AB=12 cm with height 5 cm, not the slanted side 6 cm."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Any side may be the base only with its perpendicular height. Here AB=12 cm pairs with height 5 cm, so area=60 cm². Using AD=6 cm as height is wrong.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}
