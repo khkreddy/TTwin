@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ira looks at the diagram. Points $B$ and $C$ are fixed. She needs every point that is $5\\,\\mathrm{cm}$ from $B$ and also $5\\,\\mathrm{cm}$ from $C$.\n\nWhich claim correctly locates those points?",
+  "options": [
+    {
+      "id": "A",
+      "text": "They are the intersection points of the circle of radius $5\\,\\mathrm{cm}$ centered at $B$ with the circle of radius $5\\,\\mathrm{cm}$ centered at $C$."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the single label midpoint of $BC$."
+    },
+    {
+      "id": "C",
+      "text": "Say that the finished intersection points are what create the equal $5\\,\\mathrm{cm}$ distances."
+    },
+    {
+      "id": "D",
+      "text": "Choose the points only because the printed $5$ is the largest number on the page."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (B) at (0,0);\n  \\coordinate (C) at (4.2,0);\n  \\fill (B) circle (1.5pt);\n  \\fill (C) circle (1.5pt);\n  \\node[below left] at (B){$B$};\n  \\node[below right] at (C){$C$};\n  \\draw[line width=0.95pt] (B) circle (2.6);\n  \\draw[line width=0.95pt] (C) circle (2.6);\n  \\coordinate (P) at (2.1,1.55);\n  \\coordinate (Q) at (2.1,-1.55);\n  \\fill (P) circle (1.5pt);\n  \\fill (Q) circle (1.5pt);\n  \\node[above] at (P){$P$};\n  \\node[below] at (Q){$Q$};\n  \\node[align=center] at (2.1,-3.35){each circle has radius $5\\,\\mathrm{cm}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal distance 5 cm from B and from C means the intersection of the two radius-5 circles. Naming midpoint alone, reversing intersections as the cause of the distances, or grabbing the printed 5 miss that locus.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Rewrote source triangle rods as two equal-radius circles about B and C with intersection points P and Q."
+  }
+}

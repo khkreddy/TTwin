@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m20_qp_12:q14",
+  "target_unit_id": "math/grade_08/ch_202/H004",
+  "build_logic": {
+    "source_uid": "0580_m20_qp_12:q14",
+    "hinge": "math/grade_08/ch_202/H004",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "relationship_reversal"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_202/H004"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_202:H004:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M1/H-PLACEVALUE",
+    "chapter_id": "math/grade_08/ch_202",
+    "chapter_label": "math/grade_08/ch_202",
+    "subtopic_id": "math/grade_08/ch_202/H004",
+    "stem": "The diagram shows a number line with $\\sqrt{2}$ marked. Farhan checks $1.4^{2}=1.96$ and $1.5^{2}=2.25$.\n\nWhich conclusion is correct?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Because $1.96<2<2.25$, it follows that $1.4<\\sqrt{2}<1.5$.",
+      "B": "Report $1.4$ and $1.5$ themselves as the value of $\\sqrt{2}$.",
+      "C": "Write $1.4<\\sqrt{2}<1.5$ using $-1.4$ and $-1.5$ as the trial bounds as well.",
+      "D": "Say that choosing the decimals $1.4$ and $1.5$ is what creates the number $\\sqrt{2}$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=2.4cm,y=1cm,font=\\small,line cap=round]\n  \\draw[line width=1pt,->] (1.1,0)--(1.7,0);\n  \\foreach \\x/\\lab in {1.2/1.2,1.3/1.3,1.4/1.4,1.5/1.5,1.6/1.6} {\n    \\draw[line width=0.8pt] (\\x,0.12)--(\\x,-0.12);\n    \\node[below] at (\\x,-0.18) {\\lab};\n  }\n  \\fill (1.414,0) circle (1.6pt);\n  \\node[above] at (1.414,0.18) {$\\sqrt{2}$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_202/H004",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

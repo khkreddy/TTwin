@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sia builds a $5$-digit palindrome. Its ten-thousands digit is $8$ and its hundreds digit is $3$. The thousands digit is $2$ more than the hundreds digit.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The units digit must be $8$ to match the ten-thousands digit."
+    },
+    {
+      "id": "B",
+      "text": "The tens digit must be $5$ to match the thousands digit $5$."
+    },
+    {
+      "id": "C",
+      "text": "The units digit must be $3$ because $3$ is the hundreds digit printed in the middle."
+    },
+    {
+      "id": "D",
+      "text": "Matching the units digit to $8$ is what creates the ten-thousands digit $8$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "surface_feature_capture",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A 5-digit palindrome has form ABCBA. Ten-thousands 8 forces units 8. Thousands is 3+2=5, so tens is 5, giving 85358. Taking the middle 3 as units captures a surface digit. Saying the match creates the leading 8 reverses the place-value link.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "surface_feature_capture",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

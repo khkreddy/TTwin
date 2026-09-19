@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows quadrilateral ABCD with diagonals AC and BD meeting at O. Kavya measures $AC = BD$, $AO = OC$, and $BO = OD$.\n\nWhich claim about ABCD is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "ABCD is a rectangle, because its diagonals are equal and bisect each other."
+    },
+    {
+      "id": "B",
+      "text": "ABCD is a rectangle from $AC = BD$ alone."
+    },
+    {
+      "id": "C",
+      "text": "The rectangle name is what creates equal bisecting diagonals, so the measurements cannot start the claim."
+    },
+    {
+      "id": "D",
+      "text": "The same measurements also make any two equal crossing sticks on the desk a rectangle."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[scale=0.72,line cap=round,line join=round,font=\\small]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (5.0,0);\n  \\coordinate (C) at (5.0,3.0);\n  \\coordinate (D) at (0,3.0);\n  \\coordinate (O) at (2.5,1.5);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=0.9pt] (A)--(C);\n  \\draw[line width=0.9pt] (B)--(D);\n  \\fill (O) circle (1.4pt);\n  \\node[below left] at (A) {A};\n  \\node[below right] at (B) {B};\n  \\node[above right] at (C) {C};\n  \\node[above left] at (D) {D};\n  \\node[above right] at (O) {O};\n  \\node[below] at (2.5,-0.55) {$AC=BD$, $AO=OC$, $BO=OD$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal diagonals that bisect each other force a rectangle. Equality alone drops bisection. Saying the name creates the diagonals reverses the relation. Extending the rule to loose sticks over-scopes it.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source triangle rods as quadrilateral ABCD with equal bisecting diagonals marked at O."
+  }
+}

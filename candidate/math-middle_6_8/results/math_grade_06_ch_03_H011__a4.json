@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Ira starts Kaprekar's routine with the 4-digit number $3524$, which has at least two different digits. She forms the largest and smallest numbers from those digits, subtracts, and repeats.\n\nWhich two claims correctly describe the routine?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any single rearrangement of $3524$ is already the finished Kaprekar result."
+    },
+    {
+      "id": "B",
+      "text": "From $3524$ she computes $5432 - 2345 = 3087$, then continues the same largest-minus-smallest step on $3087$."
+    },
+    {
+      "id": "C",
+      "text": "When a step reaches $6174$, the next largest-minus-smallest step stays at $6174$."
+    },
+    {
+      "id": "D",
+      "text": "The routine also settles every 3-digit starter by the same $6174$ stop."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Kaprekar's 4-digit step is largest minus smallest from the same digits, repeated until 6174, which then repeats. One rearrangement alone is not the routine; extending the 6174 stop to every 3-digit starter overreaches the rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

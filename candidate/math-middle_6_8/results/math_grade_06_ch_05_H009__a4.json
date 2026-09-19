@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav writes $48 = 12 \\times 4$ and $90 = 15 \\times 6$. He asks whether that single pair of factorisations proves that $48$ and $90$ have no common factor other than $1$.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Yes, because those written factor pairs show no matching factor on the page."
+    },
+    {
+      "id": "B",
+      "text": "No, because another factorisation can still reveal a common factor such as $6$."
+    },
+    {
+      "id": "C",
+      "text": "An incomplete factor listing is what creates the claim that the numbers share a factor."
+    },
+    {
+      "id": "D",
+      "text": "The same single-pair check also settles every later prime-factorisation question about these numbers."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "One chosen factorisation can miss a shared factor. Here $48=6\\times8$ and $90=6\\times15$, so $6$ is common. Matching factors on one writing is not a full search. The incomplete listing does not create the shared factor. A single pair does not replace full prime-factor work.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

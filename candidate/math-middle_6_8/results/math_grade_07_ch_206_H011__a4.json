@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a $4$-by-$4$ block of square tiles on Sameer's classroom floor. He asks which claim about tiling is correct.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the word tiling printed near the square tiles."
+    },
+    {
+      "id": "B",
+      "text": "Repeated copies of a square can tile the entire plane, covering without gaps or overlaps."
+    },
+    {
+      "id": "C",
+      "text": "Covering only the classroom floor with squares proves those squares tile the entire plane."
+    },
+    {
+      "id": "D",
+      "text": "Plane tiling is what creates the square shape of each tile."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.42cm,y=0.42cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,line width=0.55pt,gray!70] (0,0) grid (4,4);\n  \\draw[line width=1.05pt] (0,0) rectangle (4,4);\n  \\node[below] at (2,-0.4) {square tiles};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "mechanism_conflation",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Squares tile the whole plane by repetition. Naming the word tiling swaps the decision for a label. Equating a finite floor cover with plane tiling conflates mechanisms. Saying tiling creates the square reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "mechanism_conflation",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source kite-on-grid as a labelled 4-by-4 square-tile block."
+  }
+}

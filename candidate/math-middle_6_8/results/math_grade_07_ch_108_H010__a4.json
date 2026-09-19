@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Vihaan writes division for two juice problems.\nProblem 1: Share $\\frac{2}{3}$ litre equally among 4 cups.\nProblem 2: How many $\\frac{1}{6}$ litre servings are in $\\frac{2}{3}$ litre?\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Problem 1 is answered by the phrase total amount, not by a division expression."
+    },
+    {
+      "id": "B",
+      "text": "Problem 1 is $\\frac{2}{3} \\div 4$."
+    },
+    {
+      "id": "C",
+      "text": "Problem 2 is $\\frac{2}{3} \\div \\frac{1}{6}$."
+    },
+    {
+      "id": "D",
+      "text": "The division expressions are what create the sharing and serving stories."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal shares use total ÷ number of cups; how-many-groups uses total ÷ serving size. Naming total amount as the answer swaps the expression for a label. Saying expressions create the stories reverses story-to-expression.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

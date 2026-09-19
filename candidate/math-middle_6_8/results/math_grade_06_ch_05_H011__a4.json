@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Krish writes $84 = 2\\times 2\\times 3\\times 7$ and also $84 = 2^{2}\\times 3\\times 7$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly compares those two prime factorisations?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer order of factors and stop there."
+        },
+        {
+          "id": "B",
+          "text": "Having the same product $84$ is what creates the matching primes with the same repetitions."
+        },
+        {
+          "id": "C",
+          "text": "$2\\times 2\\times 3\\times 7$ and $2^{2}\\times 3\\times 7$ are the same prime factorisation; order and grouping do not change it."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Both writings list the same primes with the same repetitions, so they are one prime factorisation of $84$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Unique prime factorisation cares about primes and multiplicities, not order or exponent notation. Naming order alone or reversing product as cause miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

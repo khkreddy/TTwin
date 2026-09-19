@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Ritu looks at landmarks $1$, $4$, $16$, $64$, where each new landmark is $4$ times the previous one.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Does this sequence form a base-$n$ system, and which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the answer a fixed-multiplier label only, with no check that landmarks are powers of one base."
+        },
+        {
+          "id": "B",
+          "text": "Yes: the first landmark is $1$ and each next landmark is the previous times the same fixed $n=4$, so the landmarks are powers of $4$."
+        },
+        {
+          "id": "C",
+          "text": "Yes, even when the multipliers jump as $4$, then $3$, then $7$, with no single fixed $n$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A base-$n$ landmark list starts at $1$ and multiplies by the same fixed $n$ each time; here $n=4$, so the landmarks are powers of $4$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Fixed multiplier $4$ from $1$ makes base-$4$ landmarks. Quoting only the multiplier label drops the powers check. Allowing changing multipliers drops the fixed-$n$ condition.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

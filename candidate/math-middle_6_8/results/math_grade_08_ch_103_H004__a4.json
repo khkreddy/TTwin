@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Ishaan writes numbers with Roman landmarks: I $=1$, V $=5$, X $=10$, L $=50$. He wants to represent $39$.\n\nWhich plan follows landmark decomposition?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Answer \"Roman numerals\", naming the writing system instead of building $39$ from landmarks."
+    },
+    {
+      "id": "B",
+      "text": "Place any mix of I, V, X, and L in any order until the symbols look long enough."
+    },
+    {
+      "id": "C",
+      "text": "Take one XXX for $30$ (the largest useful landmark not past $39$), then IX for the remaining $9$."
+    },
+    {
+      "id": "D",
+      "text": "Copy the digits $3$ and $9$ as drawn shapes and treat those shapes as the Roman form."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Largest useful landmark first: XXX for 30, then IX for 9. Naming the system swaps the task. Any-order symbols drop the largest-first rule. Copying printed digits captures surface shapes.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

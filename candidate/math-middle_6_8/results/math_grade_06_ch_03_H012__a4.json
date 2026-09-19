@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Imran searches 12-hour clock times for a digit pattern: the four digits read the same forward and backward, and the time must be valid on a 12-hour clock.\n\nWhich two claims correctly identify a time that fits?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Accept $15$:$51$ as a palindrome time even though $15$ is not a valid hour on a 12-hour clock."
+    },
+    {
+      "id": "B",
+      "text": "$12$:$21$ has digits $1$, $2$, $2$, $1$ reading the same both ways."
+    },
+    {
+      "id": "C",
+      "text": "$12$:$21$ is a valid 12-hour clock time."
+    },
+    {
+      "id": "D",
+      "text": "Also require every calendar date in the same list to be a perfect square."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "12:21 is a digit palindrome and a valid 12-hour time. 15:51 fails the valid-hour condition; requiring perfect-square dates leaves the clock-pattern hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

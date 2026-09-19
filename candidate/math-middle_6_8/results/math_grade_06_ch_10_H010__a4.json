@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Aarav compares a bank credit of $+25$, a temperature of $-3^{\\circ}\\mathrm{C}$, and a game move of $-3$ points.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Only the word credit matters; temperature and game moves do not share the same signed structure."
+    },
+    {
+      "id": "B",
+      "text": "Each context uses a zero reference and a positive or negative direction for the same signed-number structure."
+    },
+    {
+      "id": "C",
+      "text": "The credit amount $+25$ is what creates the signed-number structure used in the other contexts."
+    },
+    {
+      "id": "D",
+      "text": "The shared structure is found by rewriting each example as subtraction of an inverse only."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "B"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Credits, temperatures, and game moves all use a zero reference with signed direction. The word credit is not the whole idea. One credit amount does not create the structure elsewhere. Inverse-subtraction rewrite is a different mechanism.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": null
+  }
+}

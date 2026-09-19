@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan must solve $4x + 7 = 23$ by isolating $x$. The two sides are already equal.\n\nWhich two claims correctly describe equality-preserving moves?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Write inverse operations as the solution, naming the phrase instead of changing both sides."
+    },
+    {
+      "id": "B",
+      "text": "Subtract $7$ from both sides to get $4x = 16$."
+    },
+    {
+      "id": "C",
+      "text": "Then divide both sides by $4$ to get $x = 4$."
+    },
+    {
+      "id": "D",
+      "text": "Take $x = 23$, because $23$ is the largest number printed on the right-hand side."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same operation on both sides preserves equality: subtract 7, then divide by 4. Naming the phrase inverse operations swaps the moves for a label. Picking printed 23 captures a surface number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

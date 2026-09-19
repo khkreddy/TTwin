@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Avni takes the two numbers $8$ and $12$. Their HCF is $4$ and their LCM is $24$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "The product $8\\times12$ equals the LCM $24$ alone."
+        },
+        {
+          "id": "B",
+          "text": "HCF $\\times$ LCM equals the product: $4\\times24=8\\times12=96$, and the LCM $24$ is not greater than that product."
+        },
+        {
+          "id": "C",
+          "text": "The LCM $24$ is greater than the product $8\\times12=96$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "For two numbers, HCF$\\times$LCM equals the product, so $4\\times24=96=8\\times12$. The LCM $24$ cannot exceed that product."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "HCF$\\times$LCM matches the product and the LCM stays at most that product. Equating the product to the LCM alone drops the HCF factor. Claiming LCM exceeds the product reverses the size relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

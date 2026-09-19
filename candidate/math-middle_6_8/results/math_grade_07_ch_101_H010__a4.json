@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Sia wants a quicker way to compute $24 \\times 25$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Replace $25$ with $\\dfrac{100}{4}$, divide $24$ by $4$, then multiply by $100$ to get $600$."
+    },
+    {
+      "id": "B",
+      "text": "The shortcut fits here because $25$ has a simple relationship to $100$."
+    },
+    {
+      "id": "C",
+      "text": "The same power-of-ten rewrite works for every factor, even when it has no simple link to $10$, $100$, or $1000$."
+    },
+    {
+      "id": "D",
+      "text": "Start from $600$ and reverse to invent both factors $24$ and $25$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "25=100/4, so 24×25=(24/4)×100=600. The method needs a simple link to a power of ten. Extending it to arbitrary factors drops that condition. Working backwards from 600 reverses the calculation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

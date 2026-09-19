@@ -1,0 +1,115 @@
+{
+  "schema": "modify_packet.v1",
+  "packet_id": "session:0580_s23_qp_31:q4",
+  "slot": "T-MOD",
+  "created_at": "2026-09-19T09:37:09.815Z",
+  "source": {
+    "item_ref": "session:0580_s23_qp_31:q4",
+    "item_type": "options_are_figure",
+    "stem": "(a) The diagram shows the net of a solid on a 1 cm² grid.\nA N\nB M\nC L\nD K E J\nF I\nG H\n(i) When the net is folded to make the solid, point C will join with point A.\nWrite down which other point will join with point A.\n[1]\n(ii) Calculate the total surface area of the solid.\ncm² [3]\n(iii) Complete this statement.\nThe solid is a with the cross-section in the shape of a [2]\n(iv) Draw a sketch of the solid.\n[1]\n(b)\nNOT TO SCALE\n6 cm x cm\n6 cm\nThe diagram shows a cuboid.\nThe volume of the cuboid is 540 cm³.\nCalculate the value of x.\nx = [2]",
+    "options": [
+      {
+        "id": "A",
+        "text": "N"
+      },
+      {
+        "id": "B",
+        "text": "M"
+      },
+      {
+        "id": "C",
+        "text": "L"
+      },
+      {
+        "id": "D",
+        "text": "K E J F I G H (i) When the net is folded to make the solid, point C will join with point A. Write down which other point will join with point A. [1] (ii) Calculate the total surface area of the solid. cm² [3] (iii) Complete this statement. The solid is a with the cross-section in the shape of a [2] (iv) Draw a sketch of the solid. [1] (b) NOT TO SCALE 6 cm x cm 6 cm The diagram shows a cuboid. The volume of the cuboid is 540 cm³. Calculate the value of x. x = [2]"
+      }
+    ],
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.45cm,y=0.45cm,font=\\small]\\draw[gray!75,densely dotted,line width=0.35pt] (0,0) grid[step=1] (16,24);\\draw[line width=0.8pt] (5,1)--(5,23)--(11,23)--(11,1)--cycle;\\draw[line width=0.8pt] (5,18)--(11,18) (5,9)--(11,9) (5,4)--(11,4);\\draw[line width=0.8pt] (5,18)--(1,15)--(1,12)--(5,9);\\draw[line width=0.8pt] (11,18)--(15,15)--(15,12)--(11,9);\\node[anchor=south east] at (5,23) {$A$};\\node[anchor=north east] at (5,18) {$B$};\\node[anchor=east] at (1,15) {$C$};\\node[anchor=east] at (1,12) {$D$};\\node[anchor=north east] at (5,9) {$E$};\\node[anchor=east] at (5,4) {$F$};\\node[anchor=east] at (5,1) {$G$};\\node[anchor=west] at (11,1) {$H$};\\node[anchor=west] at (11,4) {$I$};\\node[anchor=north west] at (11,9) {$J$};\\node[anchor=west] at (15,12) {$K$};\\node[anchor=west] at (15,15) {$L$};\\node[anchor=south west] at (11,18) {$M$};\\node[anchor=south west] at (11,23) {$N$};\\end{tikzpicture}",
+    "key": null
+  },
+  "intelligence": {
+    "join_status": "BOUND",
+    "hinge": {
+      "primary": "math/grade_08/ch_207/H002",
+      "unit_id": "math/grade_08/ch_207/H002",
+      "title": "Decide how to measure or compare rectangular areas using unit squares and side lengths.",
+      "node_labels": [
+        "Measure, mensuration and trigonometric ratio"
+      ]
+    },
+    "packed_tags": {
+      "pack": "middle_6_8",
+      "subject": "maths",
+      "level": "SECONDARY",
+      "topic": "Measure, mensuration and trigonometric ratio",
+      "paper_hint": ""
+    },
+    "mx": [
+      {
+        "mx_type": "term_substitution",
+        "name": "term_substitution",
+        "teacher_note": "Unit square is the label that belongs on this item, so 'Decide how to measure or compare rectangular areas using unit squares' is answered as unit square rather than area."
+      },
+      {
+        "mx_type": "condition_omission",
+        "name": "condition_omission",
+        "teacher_note": "area still holds here even though Use square units such as sq. cm or cm^2 when reporting area is missing from the stem — on the item about Decide how to measure or compare rectangular areas."
+      },
+      {
+        "mx_type": "surface_feature_capture",
+        "name": "surface_feature_capture",
+        "teacher_note": "The answer is area because of the most obvious label, colour, size or printed number in the stem, without using 'Decide how to measure or compare rectangular areas using unit squares' as the operative test."
+      }
+    ],
+    "enrichment": "Area measures the number of unit squares, possibly fractional, whose area equals the region; for a rectangle, area equals length multiplied by width.",
+    "lbs_recipe": null,
+    "modify_seeds": []
+  },
+  "spec": {
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_207. The student must decide: Decide how to measure or compare rectangular areas using unit squares and side lengths. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "variation_class": "V1",
+    "fidelity_mode": "FAITHFUL_TRANSFER",
+    "target_item_type": "single_mcq",
+    "format": {
+      "n_options": 4
+    },
+    "figure": {
+      "mode": "rewrite",
+      "tikz_required": true
+    }
+  },
+  "caps": {
+    "hard_total_chars": 16000,
+    "tightened_from": "40_PACKETS"
+  },
+  "assembly": {
+    "builder": "assembleModifyPacket",
+    "trimmed": [],
+    "slim_map_ref": "data/maps/maths.json"
+  },
+  "build_logic": {
+    "source_uid": "0580_s23_qp_31:q4",
+    "hinge": "math/grade_08/ch_207/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_207/H002"
+  }
+}

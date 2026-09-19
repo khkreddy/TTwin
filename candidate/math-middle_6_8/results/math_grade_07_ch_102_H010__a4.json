@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Kabir wants to compute $47 \\times 36$ by rewriting one factor and using the distributive property.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which rewrite keeps the product unchanged?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Write $47$ as $50 - 3$, then compute $50 \\times 36 - 3 \\times 36$."
+        },
+        {
+          "id": "B",
+          "text": "Write $47$ as $50 + 3$, then compute $50 \\times 36 + 3 \\times 36$."
+        },
+        {
+          "id": "C",
+          "text": "Treat the word product alone as the answer, with no rewrite of $47$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "$47 = 50 - 3$ exactly, so $47 \\times 36 = 50 \\times 36 - 3 \\times 36 = 1800 - 108 = 1692$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "The decomposition must equal the original factor. 50+3 is not 47. Naming the product label swaps the task for a term.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Anvi draws rectangle $ABCD$ with diagonal $AC$, as in the diagram. Triangle $ABC$ uses three corners of the rectangle.\n\nWhich claim about the areas is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Triangle $ABC$ has half the area of rectangle $ABCD$."
+    },
+    {
+      "id": "B",
+      "text": "The area of triangle $ABC$ equals the length of diagonal $AC$."
+    },
+    {
+      "id": "C",
+      "text": "Rectangle $ABCD$ has half the area of triangle $ABC$."
+    },
+    {
+      "id": "D",
+      "text": "Triangle $ABC$ and rectangle $ABCD$ have the same area."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.9]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (4.5,0);\n  \\coordinate (C) at (4.5,2.8);\n  \\coordinate (D) at (0,2.8);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--(D)--cycle;\n  \\draw[line width=1.05pt,fill=gray!25] (A)--(B)--(C)--cycle;\n  \\node[below left] at (A) {$A$};\n  \\node[below right] at (B) {$B$};\n  \\node[above right] at (C) {$C$};\n  \\node[above left] at (D) {$D$};\n  \\node at (3.1,0.85) {$\\triangle ABC$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Diagonal AC splits rectangle ABCD into two congruent triangles, so triangle ABC is half the rectangle. Equating area to diagonal length, reversing the half relation, or equating the areas all miss that.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Added rectangle ABCD with shaded triangle ABC on diagonal AC."
+  }
+}

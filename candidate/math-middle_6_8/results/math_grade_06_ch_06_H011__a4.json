@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Meher looks at the diagram. Pieces $A$ and $B$ cover a region in Arrangement 1. The same pieces $A$ and $B$ are moved to Arrangement 2 with no overlaps and no gaps left between them.\n\nWhich claim correctly compares the total areas?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The total area of $A$ and $B$ in Arrangement 2 equals the total area in Arrangement 1."
+    },
+    {
+      "id": "B",
+      "text": "Call the answer the label Arrangement 2 alone."
+    },
+    {
+      "id": "C",
+      "text": "Say that equal total area is what creates the two arrangements on the grid."
+    },
+    {
+      "id": "D",
+      "text": "Find the area of Arrangement 1 by treating only the outer rectangle perimeter as the area measure."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,gray!55,line width=0.4pt] (0,0) grid (5,4);\n  \\draw[line width=1.0pt] (0,0) rectangle (5,4);\n  \\fill[blue!15] (0,0)--(3,0)--(3,2)--(0,2)--cycle;\n  \\fill[orange!20] (3,0)--(5,0)--(5,2)--(3,2)--cycle;\n  \\draw[line width=0.95pt] (0,0)--(3,0)--(3,2)--(0,2)--cycle;\n  \\draw[line width=0.95pt] (3,0)--(5,0)--(5,2)--(3,2)--cycle;\n  \\node at (1.5,1){A};\n  \\node at (4,1){B};\n  \\begin{scope}[shift={(7,0)}]\n    \\draw[step=1,gray!55,line width=0.4pt] (0,0) grid (5,4);\n    \\draw[line width=1.0pt] (0,0) rectangle (5,4);\n    \\fill[blue!15] (0,2)--(3,2)--(3,4)--(0,4)--cycle;\n    \\fill[orange!20] (3,2)--(5,2)--(5,4)--(3,4)--cycle;\n    \\draw[line width=0.95pt] (0,2)--(3,2)--(3,4)--(0,4)--cycle;\n    \\draw[line width=0.95pt] (3,2)--(5,2)--(5,4)--(3,4)--cycle;\n    \\node at (1.5,3){A};\n    \\node at (4,3){B};\n  \\end{scope}\n  \\node[below] at (2.5,-0.7){Arrangement 1};\n  \\node[below] at (9.5,-0.7){Arrangement 2};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Rearranging the same pieces with no overlap or gaps keeps total area. Naming Arrangement 2 alone, reversing area as the cause of the layouts, or swapping area for perimeter miss the conservation hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "figure_note": "Rewrote source grid quadrilateral as two grid arrangements of the same pieces A and B."
+  }
+}

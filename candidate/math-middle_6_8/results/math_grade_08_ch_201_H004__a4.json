@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya scores $16$ marks out of $20$ on one test and $21$ marks out of $25$ on another.\n\nWhich two claims about comparing her percentages are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$21$ is larger than $16$, so the second score is the higher percent."
+    },
+    {
+      "id": "B",
+      "text": "Convert both to percentages first ($80\\%$ and $84\\%$), because the wholes $20$ and $25$ differ."
+    },
+    {
+      "id": "C",
+      "text": "A larger raw score need not be a larger percent when the totals differ."
+    },
+    {
+      "id": "D",
+      "text": "Compare the raw scores on a third unrelated whole of $100$ marks she did not take."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Different wholes require percentage (or common-base) comparison; raw marks alone are not enough. Ranking by raw marks, or inventing a third whole, breaks the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

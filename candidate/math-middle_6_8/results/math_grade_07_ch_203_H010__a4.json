@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Rohan writes this common-division table for $18$ and $30$:\n\n$2 \\mid 18\\quad 30$\n\n$3 \\mid 9\\quad 15$\n\n$\\phantom{2\\mid} 3\\quad 5$\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The HCF is the phrase common division, so that label replaces any product of factors."
+    },
+    {
+      "id": "B",
+      "text": "The HCF is $2 \\times 3 = 6$, the product of the common divisors removed."
+    },
+    {
+      "id": "C",
+      "text": "The LCM is $2 \\times 3 \\times 3 \\times 5 = 90$, the common divisors times the leftover factors."
+    },
+    {
+      "id": "D",
+      "text": "Choose $18$ as the HCF because $18$ is the first number printed in the table."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "HCF multiplies the common divisors 2 and 3; LCM multiplies those with leftovers 3 and 5. Naming common division as the answer swaps a label for the product. Picking printed 18 captures a surface number.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

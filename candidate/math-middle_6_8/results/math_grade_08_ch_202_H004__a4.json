@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a number line with $\\sqrt{2}$ marked. Farhan checks $1.4^{2}=1.96$ and $1.5^{2}=2.25$.\n\nWhich conclusion is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Because $1.96<2<2.25$, it follows that $1.4<\\sqrt{2}<1.5$."
+    },
+    {
+      "id": "B",
+      "text": "Report $1.4$ and $1.5$ themselves as the value of $\\sqrt{2}$."
+    },
+    {
+      "id": "C",
+      "text": "Write $1.4<\\sqrt{2}<1.5$ using $-1.4$ and $-1.5$ as the trial bounds as well."
+    },
+    {
+      "id": "D",
+      "text": "Say that choosing the decimals $1.4$ and $1.5$ is what creates the number $\\sqrt{2}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=2.4cm,y=1cm,font=\\small,line cap=round]\n  \\draw[line width=1pt,->] (1.1,0)--(1.7,0);\n  \\foreach \\x/\\lab in {1.2/1.2,1.3/1.3,1.4/1.4,1.5/1.5,1.6/1.6} {\n    \\draw[line width=0.8pt] (\\x,0.12)--(\\x,-0.12);\n    \\node[below] at (\\x,-0.18) {\\lab};\n  }\n  \\fill (1.414,0) circle (1.6pt);\n  \\node[above] at (1.414,0.18) {$\\sqrt{2}$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Squares bracketing 2 place nonnegative bounds around √2. Calling the bounds √2 swaps the target. Dropping nonnegativity, or saying the decimals create √2, reverses or breaks the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Rewrote source right triangle as a number-line mark for √2 between 1.4 and 1.5."
+  }
+}

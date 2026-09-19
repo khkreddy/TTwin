@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Neil asks what integer $q$ satisfies $(-6)\\times q = 42$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$q = 7$, because the product $42$ is positive so the missing factor must be positive."
+    },
+    {
+      "id": "B",
+      "text": "$q = -7$, because $(-6)\\times(-7) = 42$."
+    },
+    {
+      "id": "C",
+      "text": "Division finds the missing factor in $(-6)\\times q = 42$, so $q = 42\\div(-6) = -7$."
+    },
+    {
+      "id": "D",
+      "text": "Division asks for $q$ in $q\\div(-6) = 42$, reversing the missing-factor layout."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Unlike signs give a negative quotient: $q=-7$, and that $q$ is the missing factor in $(-6)\\times q=42$. Claiming $q$ must be positive drops the sign rule. Writing $q\\div(-6)=42$ reverses the layout.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

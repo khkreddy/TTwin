@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows a $4$-by-$4$ grid coloured in checkerboard black and white. Nitya removes the two opposite white corner squares marked in the figure. She wants to cover the remaining region with $2 \\times 1$ tiles that do not overlap and leave no gaps.\n\nWhich claim is correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The answer is the word checkerboard, because that colouring word is printed with the grid."
+    },
+    {
+      "id": "B",
+      "text": "Yes: the remaining region has $14$ squares, an even count, so $2 \\times 1$ tiles can cover it."
+    },
+    {
+      "id": "C",
+      "text": "No: each $2 \\times 1$ tile covers one black and one white square, but the remaining region has unequal black and white counts."
+    },
+    {
+      "id": "D",
+      "text": "The same colouring argument also settles tiling of every even-area shape, including shapes with no grid colouring."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,font=\\scriptsize]\n  \\fill[black!18] (0,0) rectangle (1,1);\n  \\fill[black!18] (2,0) rectangle (3,1);\n  \\fill[black!18] (1,1) rectangle (2,2);\n  \\fill[black!18] (3,1) rectangle (4,2);\n  \\fill[black!18] (0,2) rectangle (1,3);\n  \\fill[black!18] (2,2) rectangle (3,3);\n  \\fill[black!18] (1,3) rectangle (2,4);\n  \\fill[black!18] (3,3) rectangle (4,4);\n  \\draw[step=1,line width=0.7pt,gray!75] (0,0) grid (4,4);\n  \\draw[line width=1.05pt] (0,0) rectangle (4,4);\n  \\fill[white] (0,3) rectangle (1,4);\n  \\fill[white] (3,0) rectangle (4,1);\n  \\draw[line width=1.15pt,red!70!black] (0,3)--(1,3)--(1,4)--(0,4)--cycle;\n  \\draw[line width=1.15pt,red!70!black] (3,0)--(4,0)--(4,1)--(3,1)--cycle;\n  \\node at (0.5,3.5) {X};\n  \\node at (3.5,0.5) {X};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Removing two white corners leaves 8 black and 6 white; a domino covers one of each, so tiling is impossible despite even area. Naming checkerboard swaps the decision for a label. Using even area alone omits the colour balance. Extending the invariant to every even shape overscopes the coloured grid.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Added 4-by-4 checkerboard with two opposite white corners marked removed."
+  }
+}

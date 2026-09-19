@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kabir rewrites $\\dfrac{3}{4}$ so that its denominator is $12$, in order to add it to $\\dfrac{5}{12}$.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Multiply numerator and denominator by the same factor $3$, giving $\\dfrac{9}{12}$."
+    },
+    {
+      "id": "B",
+      "text": "Once both fractions use denominator $12$, their numerators can be added."
+    },
+    {
+      "id": "C",
+      "text": "Change only the denominator to $12$ and leave the numerator as $3$."
+    },
+    {
+      "id": "D",
+      "text": "Writing $\\dfrac{9}{12}$ is what creates the original fraction $\\dfrac{3}{4}$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "A",
+      "B"
+    ]
+  },
+  "mx_option_map": {
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equivalent rewrite multiplies both parts by 3 to get 9/12; then numerators add on a common denominator. Changing only the denominator drops the equal-factor condition. The equivalent form does not create the original fraction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

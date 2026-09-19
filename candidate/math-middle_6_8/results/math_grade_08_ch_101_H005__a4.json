@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Avni looks at the consecutive squares $9^{2}=81$ and $10^{2}=100$.\n\nWhich two claims about the gap are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the gap the label $100$, with no subtraction of the consecutive squares."
+    },
+    {
+      "id": "B",
+      "text": "The gap is $19$, because consecutive squares differ by consecutive odd numbers and $100-81=19$."
+    },
+    {
+      "id": "C",
+      "text": "There are $18$ whole numbers strictly between $81$ and $100$, one less than the gap $19$."
+    },
+    {
+      "id": "D",
+      "text": "The gap $19$ is what produces the squares $81$ and $100$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Consecutive squares differ by an odd gap $19$, and the count of whole numbers between them is $18$. Treating $100$ as the gap swaps a label for the difference. Saying the gap produces the squares reverses the relation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

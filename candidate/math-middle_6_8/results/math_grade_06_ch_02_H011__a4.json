@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash looks at the diagram of $\\angle PQR$. He will measure $\\theta$ with a protractor.\n\nWhich claim correctly states how he must place the protractor?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Put the protractor center on vertex $Q$, align ray $QP$ with the zero-degree line, and read the scale reached by ray $QR$."
+    },
+    {
+      "id": "B",
+      "text": "Rest the protractor anywhere on ray $QP$ and read a scale mark for $\\theta$."
+    },
+    {
+      "id": "C",
+      "text": "Say that reading a degree number is what creates $\\angle PQR$ on the page."
+    },
+    {
+      "id": "D",
+      "text": "After reading $\\theta$, treat that same reading as also fixing every unmarked angle at $Q$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  \\coordinate (Q) at (0,0);\n  \\coordinate (P) at (3.2,0);\n  \\coordinate (R) at (2.2,2.4);\n  \\draw[line width=1.05pt] (P)--(Q)--(R);\n  \\fill (Q) circle (1.4pt);\n  \\node[below left] at (Q){$Q$};\n  \\node[below right] at (P){$P$};\n  \\node[above] at (R){$R$};\n  \\draw[line width=0.7pt] (0.7,0) arc (0:47:0.7);\n  \\node[right] at (0.85,0.35){$\\theta$};\n  \\node[align=center] at (1.6,-0.85){protractor center goes on $Q$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "condition_omission",
+    "C": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Measuring angle PQR needs the protractor center on Q, one arm on the zero line, and the other arm read on the same scale. Resting anywhere on a ray, reversing reading as what creates the angle, or extending one reading to every angle at Q all miss that placement.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as angle PQR with marked theta and a note that the protractor center goes on Q."
+  }
+}

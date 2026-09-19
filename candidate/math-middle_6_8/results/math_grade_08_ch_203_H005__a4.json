@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya draws the pie chart in the diagram for class votes: cricket $8$, football $12$, kabaddi $4$.\n\nHow many degrees should the football category occupy?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report $12^{\\circ}$, taking the football count itself as the degree measure."
+    },
+    {
+      "id": "B",
+      "text": "Treat $360$ as the category total and compute $\\dfrac{12}{360}\\times 24$ degrees."
+    },
+    {
+      "id": "C",
+      "text": "The whole is $8+12+4=24$, so football occupies $\\dfrac{12}{24}\\times 360^{\\circ}=180^{\\circ}$."
+    },
+    {
+      "id": "D",
+      "text": "Choose $4^{\\circ}$ because $4$ is the smallest printed count among $8$, $12$ and $4$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (O) at (0,0);\n  \\draw[line width=1.05pt] (O) circle (2.2);\n  % sectors: cricket 8/24=120°, football 12/24=180°, kabaddi 4/24=60°\n  \\draw[line width=1.0pt,fill=gray!15] (O) -- (90:2.2) arc (90:270:2.2) -- cycle;\n  \\draw[line width=1.0pt,fill=gray!35] (O) -- (270:2.2) arc (270:330:2.2) -- cycle;\n  \\draw[line width=1.0pt,fill=gray!55] (O) -- (330:2.2) arc (330:450:2.2) -- cycle;\n  \\node at (180:1.15) {football};\n  \\node at (30:1.25) {cricket};\n  \\node at (300:1.35) {kabaddi};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Categories form one whole of 24 votes. Football is 12/24 of 360°, which is 180°. Using the count as degrees, swapping the whole, or grabbing the smallest print miss the proportion.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "figure_note": "Added a three-sector pie chart labelled cricket, football, kabaddi matching counts 8, 12, 4."
+  }
+}

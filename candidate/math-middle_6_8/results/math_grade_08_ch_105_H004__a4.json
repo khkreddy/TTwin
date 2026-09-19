@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Farhan knows that $4$ divides $12$ and $4$ divides $20$.\n\nWhich two claims keep the direction of the divisibility rule straight?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Then $4$ divides $12+20$ even if $4$ divides only one of $12$ or $20$."
+    },
+    {
+      "id": "B",
+      "text": "Then $4$ divides $12+20$ and $4$ divides $20-12$."
+    },
+    {
+      "id": "C",
+      "text": "If $4$ divides a total such as $32$, a split into two addends need not make both addends multiples of $4$."
+    },
+    {
+      "id": "D",
+      "text": "The same closure holds when $3$ divides $12$ and $5$ divides $20$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Same divisor on both starting numbers closes under sum and difference; the reverse split is not forced. Claiming closure from one multiple, or mixing two different divisors, breaks the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

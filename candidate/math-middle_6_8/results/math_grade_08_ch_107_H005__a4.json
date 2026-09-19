@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Krish compares two paint mixes. Mix $P$ uses $4$ cups colour in $10$ cups water. Mix $Q$ uses $3$ cups colour in $6$ cups water. He wants the stronger colour mix.\n\nWhich claim correctly ranks the mixes?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Mix $P$ is stronger because its colour count $4$ is greater than $3$."
+    },
+    {
+      "id": "B",
+      "text": "A fair strength ranking is what creates the matching water amounts."
+    },
+    {
+      "id": "C",
+      "text": "Rewrite both on equal water: $P$ is $4:10=2:5$ and $Q$ is $3:6=1:2$, so $Q$ is stronger."
+    },
+    {
+      "id": "D",
+      "text": "Rank the mixes by the average of the four printed cup counts $4$, $10$, $3$ and $6$."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Strength is colour per the same water amount. P is 2:5 and Q is 1:2, so Q is stronger. Absolute colour counts, reversing cause, or averaging all four cups miss that common-reference test.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

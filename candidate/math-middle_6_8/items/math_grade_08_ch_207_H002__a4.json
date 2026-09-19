@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s23_qp_31:q4",
+  "target_unit_id": "math/grade_08/ch_207/H002",
+  "build_logic": {
+    "source_uid": "0580_s23_qp_31:q4",
+    "hinge": "math/grade_08/ch_207/H002",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "surface_feature_capture"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_207/H002"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_207:H002:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_08/ch_207",
+    "chapter_label": "math/grade_08/ch_207",
+    "subtopic_id": "math/grade_08/ch_207/H002",
+    "stem": "The diagram shows a rectangle covered by $1$ cm by $1$ cm unit squares. Tara counts $4$ squares along the length and $3$ along the width.\n\nWhich statement is correct?",
+    "item_type": "mcq_diagram",
+    "options": {
+      "A": "The area is $12$ square centimetres, because $4\\times 3$ unit squares fill the rectangle.",
+      "B": "The area is $1$ square centimetre, because that is the size of one unit square.",
+      "C": "The area is $7$ cm, by adding $4$ and $3$ and dropping square units.",
+      "D": "The area is $4$ square centimetres, because $4$ is the longer side printed on the card."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,line width=0.55pt,gray!65] (0,0) grid (4,3);\n  \\draw[line width=1.1pt] (0,0) rectangle (4,3);\n  \\node[below] at (2,-0.45) {4};\n  \\node[left] at (-0.4,1.5) {3};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_207/H002",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Anvi finds $35\\%$ of $60$ mentally by splitting into benchmark percentages.\n\nWhich two claims correctly compute that value?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call \"same whole\" the finished answer and stop, with no percent of $60$ computed."
+    },
+    {
+      "id": "B",
+      "text": "$10\\%$ of $60$ is $6$, so $30\\%$ is $18$ and $5\\%$ is $3$; therefore $35\\%$ of $60$ is $18+3=21$."
+    },
+    {
+      "id": "C",
+      "text": "Each benchmark piece is taken of the same whole $60$ before the pieces are added."
+    },
+    {
+      "id": "D",
+      "text": "Use the same benchmark story to compare lengths on an unrelated map scale."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "35% of 60 is 30%+5% of the same whole: 18+3=21. Naming \"same whole\" alone or exporting the method to map scales miss the benchmark computation.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

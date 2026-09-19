@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "The diagram shows lines $PQ$ and $RS$ cut by transversal $AC$. Triangles $PAC$ and $RCA$ are congruent, and that congruence makes one pair of alternate interior angles equal.\n\nWhich claim correctly concludes that $PQ \\parallel RS$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "$PQ \\parallel RS$, because the congruent triangles make a pair of alternate interior angles equal for transversal $AC$."
+    },
+    {
+      "id": "B",
+      "text": "Lines $PQ$ and $RS$ are the alternate interior angles on transversal $AC$."
+    },
+    {
+      "id": "C",
+      "text": "$PQ \\parallel RS$, because the triangles are congruent, even when those alternate interior angles are unequal."
+    },
+    {
+      "id": "D",
+      "text": "$PQ \\parallel RS$, because matching sides of the triangles are equal, and equal sides alone settle parallelism."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.95]\n  \\coordinate (P) at (0,2.8);\n  \\coordinate (Q) at (5.2,2.8);\n  \\coordinate (R) at (0,0.4);\n  \\coordinate (S) at (5.2,0.4);\n  \\coordinate (A) at (1.2,3.4);\n  \\coordinate (C) at (4.0,-0.2);\n  \\draw[line width=1.05pt] (P)--(Q);\n  \\draw[line width=1.05pt] (R)--(S);\n  \\draw[line width=1.05pt] (A)--(C);\n  \\fill (A) circle (1.3pt);\n  \\fill (C) circle (1.3pt);\n  \\node[above left] at (P) {P};\n  \\node[above right] at (Q) {Q};\n  \\node[below left] at (R) {R};\n  \\node[below right] at (S) {S};\n  \\node[above] at (A) {A};\n  \\node[below] at (C) {C};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal alternate interior angles from the congruence force $PQ\\parallel RS$. Renaming the lines as the angles swaps terms. Dropping the equal-angle step, or treating equal sides alone as enough, misses the parallel hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": "Rewrote source right triangle as lines PQ and RS cut by transversal AC."
+  }
+}

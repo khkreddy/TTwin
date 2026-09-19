@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash measures a ribbon using the fractional unit $\\dfrac{1}{8}$ metre. Exactly $5$ of those units cover the ribbon end to end.\n\nWhich claim correctly writes the ribbon length?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The length is $5$ metres, taking only the count of units."
+    },
+    {
+      "id": "B",
+      "text": "Say that writing $\\dfrac{5}{8}$ is what creates the unit size $\\dfrac{1}{8}$."
+    },
+    {
+      "id": "C",
+      "text": "The length is $\\dfrac{5}{8}$ metre, because $5$ copies of $\\dfrac{1}{8}$ make $\\dfrac{5}{8}$."
+    },
+    {
+      "id": "D",
+      "text": "The same reading $\\dfrac{5}{8}$ also fixes the length when a different unit such as $\\dfrac{1}{10}$ is chosen instead."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "n copies of unit 1/d make length n/d, so 5 copies of 1/8 make 5/8 metre. Dropping the unit size, reversing length as what creates the unit, or carrying the reading to a different unit all miss that count.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

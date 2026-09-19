@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:36.448Z",
+  "created_at": "2026-09-19T09:35:55.606Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -79,7 +79,7 @@
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_204. The student must decide: Apply the midpoint-removal rule to predict the Sierpinski Triangle steps and counts. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_204. The student must decide: Apply the midpoint-removal rule to predict the Sierpinski Triangle steps and counts. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
     "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
     "target_item_type": "single_mcq",
@@ -87,8 +87,8 @@
       "n_options": 4
     },
     "figure": {
-      "mode": "preserve",
-      "tikz_required": false
+      "mode": "add",
+      "tikz_required": true
     }
   },
   "caps": {
@@ -105,7 +105,7 @@
     "hinge": "math/grade_08/ch_204/H004",
     "item_type_target": "single_mcq",
     "figure_decision": {
-      "mode": "preserve",
+      "mode": "add",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [

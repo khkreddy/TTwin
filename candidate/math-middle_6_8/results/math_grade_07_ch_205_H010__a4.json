@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Diya records that two classmates each read about $20$ pages on a school night. She wants a claim about reading for all children in the city.\n\nWhich claim is warranted?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Two classmates are enough for a citywide claim once the page counts are written down."
+    },
+    {
+      "id": "B",
+      "text": "Citywide reading is what produces the two classmates' page counts, so the city average must be $20$."
+    },
+    {
+      "id": "C",
+      "text": "The two classmates give a local note, but not a citywide reading claim."
+    },
+    {
+      "id": "D",
+      "text": "Any pair of page counts may be used as a city estimate for every school subject, not only reading."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "B": "relationship_reversal",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Two local cases do not warrant a citywide claim. Treating any written sample as enough omits sample limits. Saying the city produces the two readings reverses evidence direction. Extending to every subject overscopes the reading note.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "relationship_reversal",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

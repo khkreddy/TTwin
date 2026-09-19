@@ -1,39 +1,30 @@
 {
   "schema": "modify_packet.v1",
-  "packet_id": "session:math_7b_rjb_ch8_s1_t122",
+  "packet_id": "session:0580_m20_qp_12:q14",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:52.040Z",
+  "created_at": "2026-09-19T09:36:48.185Z",
   "source": {
-    "item_ref": "session:math_7b_rjb_ch8_s1_t122",
-    "item_type": "single_mcq",
-    "stem": "Multiple choice questions.\n\nSystem of equations\n\n$$\n\\left\\{ \\begin{array}{l} 3 x + 4 y = 5, \\\\ - 7 x + 9 y = - \\frac {5}{2} \\end{array} \\right.\n$$\n\nThe solution is ( ).\n\n(A) $\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$\n\n(B) $\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$\n\n(C) $\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$\n\n(D) $\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$",
-    "options": [
+    "item_ref": "session:0580_m20_qp_12:q14",
+    "item_type": "structured_parts",
+    "stem": "The diagram shows a right-angled triangle.",
+    "options": [],
+    "statements": [],
+    "parts": [
       {
-        "id": "A",
-        "text": "$\\left\\{ \\begin{array}{l}x = 2,\\\\ y = -0.25 \\end{array} \\right.$"
+        "id": "a",
+        "text": "Calculate the area. cm² [2]",
+        "marks": 0
       },
       {
-        "id": "B",
-        "text": "$\\left\\{ \\begin{array}{l}x = -5.5,\\\\ y = 4 \\end{array} \\right.$"
-      },
-      {
-        "id": "C",
-        "text": "$\\left\\{ \\begin{array}{l}x = 1,\\\\ y = 0.5 \\end{array} \\right.$"
-      },
-      {
-        "id": "D",
-        "text": "$\\left\\{ \\begin{array}{l}x = -1,\\\\ y = -0.5 \\end{array} \\right.$"
+        "id": "b",
+        "text": "Calculate the perimeter. cm [3]",
+        "marks": 0
       }
     ],
-    "statements": [],
-    "parts": [],
     "equations": [],
     "tables": [],
-    "tikz": "",
-    "key": {
-      "kind": "single_letter",
-      "letter": "C"
-    }
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round]\\coordinate (A) at (0,0);\\coordinate (B) at (0,2.45);\\coordinate (C) at (3.55,0);\\draw[line width=0.7pt] (A)--(B)--(C)--cycle;\\draw[line width=0.55pt] (0,0.28)--(0.28,0.28)--(0.28,0);\\node[left=6pt] at (0,1.225) {$8.5\\,\\mathrm{cm}$};\\node[below=5pt] at (1.775,0) {$10.8\\,\\mathrm{cm}$};\\node[align=center,anchor=west] at (5.0,1.5) {NOT TO\\\\SCALE};\\end{tikzpicture}",
+    "key": null
   },
   "intelligence": {
     "join_status": "BOUND",
@@ -79,7 +70,7 @@
     "modify_seeds": []
   },
   "spec": {
-    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_02. The student must decide: Decide how to use a protractor to measure an angle correctly. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
+    "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_06/ch_02. The student must decide: Decide how to use a protractor to measure an angle correctly. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Supply exactly one complete tikzpicture. The stem must refer to that figure. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
     "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
     "target_item_type": "single_mcq",
@@ -87,8 +78,8 @@
       "n_options": 4
     },
     "figure": {
-      "mode": "preserve",
-      "tikz_required": false
+      "mode": "rewrite",
+      "tikz_required": true
     }
   },
   "caps": {
@@ -101,11 +92,11 @@
     "slim_map_ref": "data/maps/maths.json"
   },
   "build_logic": {
-    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "source_uid": "0580_m20_qp_12:q14",
     "hinge": "math/grade_06/ch_02/H011",
     "item_type_target": "single_mcq",
     "figure_decision": {
-      "mode": "preserve",
+      "mode": "rewrite",
       "reason": "no_visual_referent"
     },
     "mx_seeds_used": [
@@ -115,10 +106,9 @@
       "mechanism_conflation"
     ],
     "option_plan": {
-      "A": "condition_omission",
-      "B": "relationship_reversal",
-      "D": "scope_error",
-      "C": null
+      "B": "condition_omission",
+      "C": "relationship_reversal",
+      "D": "scope_error"
     },
     "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H011"
   }

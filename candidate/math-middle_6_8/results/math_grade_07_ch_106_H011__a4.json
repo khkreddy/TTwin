@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Adil works with the Virahanka sequence that begins $1$, $2$, $3$, $5$, $8$, $13$. Each next term is the sum of the two previous terms.\n\nWhich two claims correctly extend the sequence and its parity pattern?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Any single listed term already fixes every later term with no sum rule."
+    },
+    {
+      "id": "B",
+      "text": "The next term after $8$ and $13$ is $8+13=21$, which is odd."
+    },
+    {
+      "id": "C",
+      "text": "From $1$ (odd), $2$ (even), $3$ (odd), the parity pattern odd, even, odd continues, so the term $21$ is odd."
+    },
+    {
+      "id": "D",
+      "text": "The same forward sum rule also covers every unrelated arithmetic sequence in the chapter."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "condition_omission",
+    "D": "scope_error"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Next Virahanka term is the sum of the previous two, and parity cycles odd, even, odd. Skipping the sum rule, or stretching it to every arithmetic sequence, leaves the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "condition_omission",
+      "scope_error"
+    ],
+    "figure_note": null
+  }
+}

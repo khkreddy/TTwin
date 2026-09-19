@@ -1,0 +1,51 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "one_or_more",
+  "stem": "Kavya's list has mean $12$. She inserts one new value, $9$, into the list.\n\nWhich two claims are correct?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Report $9$ as the new mean, using only the inserted value."
+    },
+    {
+      "id": "B",
+      "text": "The mean decreases, because $9$ is less than the current mean $12$."
+    },
+    {
+      "id": "C",
+      "text": "Comparing the inserted value with the current mean decides whether the mean rises, falls, or stays."
+    },
+    {
+      "id": "D",
+      "text": "The mean increases because $9$ is the number printed next to the insert."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "letter_set",
+    "letters": [
+      "B",
+      "C"
+    ]
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "D": "surface_feature_capture"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A value below the current mean pulls the mean down; the comparison is with that current mean. Replacing the mean by the inserted value, or judging from print alone, misses the hinge.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "surface_feature_capture"
+    ],
+    "figure_note": null
+  }
+}

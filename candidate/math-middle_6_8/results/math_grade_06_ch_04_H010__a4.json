@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Anvi sees a poster: Class 6 has $30$ students drawn as a tall tower icon, and Class 7 has $60$ students drawn as a tower only a little taller than the Class 6 icon.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the poster is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Trust the poster sizes, because the Class 7 icon looks appealing."
+        },
+        {
+          "id": "B",
+          "text": "Do not trust the sizes: Class 7 has twice as many students, but its icon is not twice as tall."
+        },
+        {
+          "id": "C",
+          "text": "Treat every decorative mark on the poster as a data claim, even marks that leave the student counts unchanged."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Accurate visuals must keep the intended numerical ratios. Twice the students should look about twice as tall; a barely taller icon distorts the data."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Scale must preserve the $30:60$ ratio. Appeal does not create accuracy. Pure decoration that does not change interpretation is not the data question.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

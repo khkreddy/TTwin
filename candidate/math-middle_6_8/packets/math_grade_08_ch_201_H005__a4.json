@@ -2,7 +2,7 @@
   "schema": "modify_packet.v1",
   "packet_id": "session:math_7b_rjb_ch8_s1_t122",
   "slot": "T-MOD",
-  "created_at": "2026-09-19T09:31:35.048Z",
+  "created_at": "2026-09-19T09:36:16.702Z",
   "source": {
     "item_ref": "session:math_7b_rjb_ch8_s1_t122",
     "item_type": "single_mcq",
@@ -78,7 +78,7 @@
     "instruction": "Write one new grades 6 Mathematics question. Chapter: math/grade_08/ch_201. The student must decide: Decide when a percentage can be computed mentally by using benchmark percentages and decomposing the percent. Use an Indian school or home setting and Indian names. Keep the source language register. Change the numbers, materials, or everyday situation. Do not copy the source stem. Recalculate the key. Do not print mix-up labels, hinge codes, node codes, or the word CANDIDATE. If the stem numbers activities 1..n, every number must appear in an option (or in a structured part's first-class options). Two-tier (choose, then reason) is welcome: put A/B/C on part.options, not typed into part text.",
     "variation_class": "V1",
     "fidelity_mode": "FAITHFUL_TRANSFER",
-    "target_item_type": "single_mcq",
+    "target_item_type": "one_or_more",
     "format": {
       "n_options": 4
     },
@@ -99,7 +99,7 @@
   "build_logic": {
     "source_uid": "math_7b_rjb_ch8_s1_t122",
     "hinge": "math/grade_08/ch_201/H005",
-    "item_type_target": "single_mcq",
+    "item_type_target": "one_or_more",
     "figure_decision": {
       "mode": "preserve",
       "reason": "no_visual_referent"

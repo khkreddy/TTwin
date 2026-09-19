@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Yash computes $12.8 + 7.3$. Before trusting a written sum, he uses a place-value estimate.\n\nWhich claim correctly checks whether a proposed sum is reasonable?",
+  "options": [
+    {
+      "id": "A",
+      "text": "Call the answer the word range alone."
+    },
+    {
+      "id": "B",
+      "text": "Treat the estimate as the exact place-value sum and stop."
+    },
+    {
+      "id": "C",
+      "text": "The whole-number parts give about $12+7=19$, and the tenths $0.8+0.3=1.1$, so a reasonable sum lies near $20.1$, not near $10$ or near $30$."
+    },
+    {
+      "id": "D",
+      "text": "Say that a finished exact sum is what creates the place-value estimate he uses to check it."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "single_letter",
+    "letter": "C"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Whole parts and tenths narrow where the sum must lie, near 20.1. Naming range alone, replacing the exact sum with the estimate, or reversing estimate as caused by the finished sum miss the check.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": null
+  }
+}

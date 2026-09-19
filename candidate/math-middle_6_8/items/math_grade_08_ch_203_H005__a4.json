@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_08/ch_203/H005",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_08/ch_203/H005",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_08/ch_203/H005"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_08:ch_203:H005:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_08/ch_203",
+    "chapter_label": "math/grade_08/ch_203",
+    "subtopic_id": "math/grade_08/ch_203/H005",
+    "stem": "Diya draws the pie chart in the diagram for class votes: cricket $8$, football $12$, kabaddi $4$.\n\nHow many degrees should the football category occupy?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Report $12^{\\circ}$, taking the football count itself as the degree measure.",
+      "B": "Treat $360$ as the category total and compute $\\dfrac{12}{360}\\times 24$ degrees.",
+      "C": "The whole is $8+12+4=24$, so football occupies $\\dfrac{12}{24}\\times 360^{\\circ}=180^{\\circ}$.",
+      "D": "Choose $4^{\\circ}$ because $4$ is the smallest printed count among $8$, $12$ and $4$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (O) at (0,0);\n  \\draw[line width=1.05pt] (O) circle (2.2);\n  % sectors: cricket 8/24=120°, football 12/24=180°, kabaddi 4/24=60°\n  \\draw[line width=1.0pt,fill=gray!15] (O) -- (90:2.2) arc (90:270:2.2) -- cycle;\n  \\draw[line width=1.0pt,fill=gray!35] (O) -- (270:2.2) arc (270:330:2.2) -- cycle;\n  \\draw[line width=1.0pt,fill=gray!55] (O) -- (330:2.2) arc (330:450:2.2) -- cycle;\n  \\node at (180:1.15) {football};\n  \\node at (30:1.25) {cricket};\n  \\node at (300:1.35) {kabaddi};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_08/ch_203/H005",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

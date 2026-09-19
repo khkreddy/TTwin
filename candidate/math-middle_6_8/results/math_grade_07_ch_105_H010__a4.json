@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Aarav must draw a line through point $P$ that is parallel to a given line $AB$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly describes the construction?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Keep the same angle relationship to $AB$ with a set square or matching right-angle creases so the new line through $P$ does not meet $AB$."
+        },
+        {
+          "id": "B",
+          "text": "The given point $P$ is already the name of the parallel line, so no construction at $P$ is needed."
+        },
+        {
+          "id": "C",
+          "text": "Drawing a line through $P$ is what creates the given line $AB$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A parallel through $P$ is made by copying the angle relationship to $AB$ so the new line never meets $AB$. Point $P$ alone is not the parallel line, and the new line does not create $AB$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Equal corresponding angles (or matched right angles) keep the lines parallel. Treating P as the line swaps the task for a label. Saying the new line creates AB reverses the given-to-constructed direction.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

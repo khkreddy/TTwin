@@ -1,0 +1,50 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "single_mcq",
+  "stem": "Kabir looks at the diagram. Ray $OA$ and ray $OB$ meet at $O$ and form $\\angle AOB$. A full turn around $O$ is split into $360$ equal parts.\n\nWhich claim correctly assigns a degree measure to $\\angle AOB$?",
+  "options": [
+    {
+      "id": "A",
+      "text": "The measure is the count of those equal one-degree parts that lie between ray $OA$ and ray $OB$."
+    },
+    {
+      "id": "B",
+      "text": "The measure is the printed letter $O$ at the vertex, read as the degree number."
+    },
+    {
+      "id": "C",
+      "text": "Any count of parts between the rays is a degree measure, even if the parts of the full turn are unequal."
+    },
+    {
+      "id": "D",
+      "text": "Counting one-degree parts between the rays is what creates the full $360$-part turn."
+    }
+  ],
+  "statements": [],
+  "parts": [],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=1.05]\n  \\coordinate (O) at (0,0);\n  \\coordinate (A) at (3.6,0);\n  \\coordinate (B) at (2.2,2.6);\n  \\draw[line width=1.05pt,->] (O)--(A) node[right]{$A$};\n  \\draw[line width=1.05pt,->] (O)--(B) node[above]{$B$};\n  \\fill (O) circle (1.3pt);\n  \\node[below left] at (O){$O$};\n  \\draw[line width=0.8pt] (0.55,0) arc[start angle=0,end angle=50,radius=0.55];\n  \\node[above right] at (0.7,0.25){$\\angle AOB$};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "single_letter",
+    "letter": "A"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "relationship_reversal"
+  },
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "A degree is one of 360 equal parts of a full turn; the angle measure is how many of those equal parts fit between the arms. Letter height is not a measure. Unequal parts break the unit. The turn definition is not produced by counting one angle.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [
+      "term_substitution",
+      "condition_omission",
+      "relationship_reversal"
+    ],
+    "figure_note": "Added angle AOB at O with rays OA, OB and an arc mark for the interior angle."
+  }
+}

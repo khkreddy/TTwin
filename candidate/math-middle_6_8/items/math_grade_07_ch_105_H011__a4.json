@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_s10_qp_32:q10",
+  "target_unit_id": "math/grade_07/ch_105/H011",
+  "build_logic": {
+    "source_uid": "0580_s10_qp_32:q10",
+    "hinge": "math/grade_07/ch_105/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "scope_error"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "condition_omission",
+      "D": "scope_error"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_07/ch_105/H011"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "condition_omission",
+    "D": "scope_error"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_07:ch_105:H011:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_07/ch_105",
+    "chapter_label": "math/grade_07/ch_105",
+    "subtopic_id": "math/grade_07/ch_105/H011",
+    "stem": "Ira looks at the diagram. On the same flat page, lines $\\ell$ and $m$ are each perpendicular to line $n$.\n\nWhich claim correctly decides how $\\ell$ and $m$ relate?",
+    "item_type": "mcq",
+    "options": {
+      "A": "$\\ell$ is parallel to $m$, because both are perpendicular to the same line $n$ on the same flat page.",
+      "B": "Call the answer the shared reference line $n$ itself.",
+      "C": "Call $\\ell$ and $m$ parallel even if they need not stay on the same flat page.",
+      "D": "Treat the right-angle marks as also proving that $n$ is parallel to $\\ell$."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\draw[line width=1.05pt] (-0.3,0)--(5.8,0) node[right]{$n$};\n  \\draw[line width=1.05pt] (1.2,-0.2)--(1.2,3.4) node[above]{$\\ell$};\n  \\draw[line width=1.05pt] (4.0,-0.2)--(4.0,3.4) node[above]{$m$};\n  \\draw[line width=0.7pt] (1.2,0)--(1.45,0)--(1.45,0.25)--(1.2,0.25)--cycle;\n  \\draw[line width=0.7pt] (4.0,0)--(4.25,0)--(4.25,0.25)--(4.0,0.25)--cycle;\n  \\node[below left] at (1.15,-0.05){$E$};\n  \\node[below right] at (4.05,-0.05){$F$};\n  \\node[align=center] at (2.6,-0.85){$\\ell \\perp n$ and $m \\perp n$};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_07/ch_105/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Tara expands and then simplifies $3b^{2} + 4b + 2b^{2}$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Call the variable part $b$ the whole simplified result."
+        },
+        {
+          "id": "B",
+          "text": "Combine $3b^{2}$ with $4b$ into one term."
+        },
+        {
+          "id": "C",
+          "text": "Combine $3b^{2}$ with $2b^{2}$ to get $5b^{2}$, leave $4b$ as it is, and report $5b^{2} + 4b$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "C"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Only identical variable parts combine: $3b^{2}+2b^{2}=5b^{2}$, while $4b$ stays separate, so $5b^{2}+4b$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Like terms share the same variable part including exponents. Renaming the variable part as the whole answer swaps the task. Merging $b^{2}$ with $b$ drops the identical-part rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

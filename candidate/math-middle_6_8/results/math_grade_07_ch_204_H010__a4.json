@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Vihaan carries out the long division $1 \\div 3$. After the decimal point, each new digit leaves remainder $1$, then again remainder $1$, and the pattern continues.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim about the decimal quotient is correct?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Because remainder $1$ repeats, the decimal quotient does not end."
+        },
+        {
+          "id": "B",
+          "text": "The decimal quotient ends after a few digits even while remainder $1$ keeps returning."
+        },
+        {
+          "id": "C",
+          "text": "The answer is remainder, because $1$ is the standout printed leftover."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "A repeating nonzero remainder means the decimal digits keep repeating, so the quotient does not terminate."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Repeating remainder 1 forces a non-ending repeating decimal. Claiming it ends while remainders repeat drops the repeating-remainder rule. Treating remainder as the answer label captures a surface word.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:math_7b_rjb_ch8_s1_t122",
+  "target_unit_id": "math/grade_06/ch_02/H012",
+  "build_logic": {
+    "source_uid": "math_7b_rjb_ch8_s1_t122",
+    "hinge": "math/grade_06/ch_02/H012",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "add",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "condition_omission",
+      "surface_feature_capture"
+    ],
+    "option_plan": {
+      "A": "term_substitution",
+      "B": "condition_omission",
+      "D": "surface_feature_capture",
+      "C": null
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_02/H012"
+  },
+  "mx_option_map": {
+    "A": "term_substitution",
+    "B": "condition_omission",
+    "D": "surface_feature_capture"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_02:H012:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M4",
+    "chapter_id": "math/grade_06/ch_02",
+    "chapter_label": "math/grade_06/ch_02",
+    "subtopic_id": "math/grade_06/ch_02/H012",
+    "stem": "Diya must construct a $70^{\\circ}$ angle with ruler and protractor, as suggested by the diagram.\n\nWhich plan correctly builds that angle?",
+    "item_type": "mcq",
+    "options": {
+      "A": "Call the finished drawing the vertex and stop there.",
+      "B": "Seat the protractor centre on the vertex but leave the base arm off the $0^{\\circ}$ mark before marking $70^{\\circ}$.",
+      "C": "Choose a vertex and one base arm, seat the protractor centre on the vertex, align the base arm with $0^{\\circ}$, mark $70^{\\circ}$, and draw the second arm through that mark.",
+      "D": "Mark $70$ only because that number is printed largest in the stem."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small]\n  \\coordinate (V) at (0,0);\n  \\coordinate (B) at (4.2,0);\n  \\coordinate (R) at ({4.2*cos(70)},{4.2*sin(70)});\n  \\draw[line width=1.05pt] (B)--(V)--(R);\n  \\draw[line width=0.7pt] (0.85,0) arc (0:70:0.85);\n  \\node[right] at (1.05,0.55) {$70^{\\circ}$};\n  \\node[below left] at (V) {$V$};\n  \\node[below] at (B) {base arm};\n  \\node[above left] at (R) {second arm};\n  % small protractor hint arc\n  \\draw[line width=0.55pt,gray] (-0.15,0) arc (180:0:0.15);\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_02/H012",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "C",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

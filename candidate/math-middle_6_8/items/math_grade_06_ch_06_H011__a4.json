@@ -1,0 +1,82 @@
+{
+  "schema": "ttwin.candidate.v1",
+  "lifecycle": "CANDIDATE",
+  "serve_eligible": false,
+  "owner_ratified": false,
+  "join_status": "BOUND",
+  "variation_class": "V1",
+  "fidelity_mode": "FAITHFUL_TRANSFER",
+  "source_ref": "session:0580_m19_qp_12:q23",
+  "target_unit_id": "math/grade_06/ch_06/H011",
+  "build_logic": {
+    "source_uid": "0580_m19_qp_12:q23",
+    "hinge": "math/grade_06/ch_06/H011",
+    "item_type_target": "single_mcq",
+    "figure_decision": {
+      "mode": "rewrite",
+      "reason": "no_visual_referent"
+    },
+    "mx_seeds_used": [
+      "term_substitution",
+      "relationship_reversal",
+      "mechanism_conflation"
+    ],
+    "option_plan": {
+      "B": "term_substitution",
+      "C": "relationship_reversal",
+      "D": "mechanism_conflation"
+    },
+    "format_rationale": "preserve source skeleton; retarget hinge to math/grade_06/ch_06/H011"
+  },
+  "mx_option_map": {
+    "B": "term_substitution",
+    "C": "relationship_reversal",
+    "D": "mechanism_conflation"
+  },
+  "item": {
+    "uid": "candidate:g68:math:grade_06:ch_06:H011:a4",
+    "subject": "maths",
+    "pack": "middle_6_8",
+    "node": "M5",
+    "chapter_id": "math/grade_06/ch_06",
+    "chapter_label": "math/grade_06/ch_06",
+    "subtopic_id": "math/grade_06/ch_06/H011",
+    "stem": "Meher looks at the diagram. Pieces $A$ and $B$ cover a region in Arrangement 1. The same pieces $A$ and $B$ are moved to Arrangement 2 with no overlaps and no gaps left between them.\n\nWhich claim correctly compares the total areas?",
+    "item_type": "mcq",
+    "options": {
+      "A": "The total area of $A$ and $B$ in Arrangement 2 equals the total area in Arrangement 1.",
+      "B": "Call the answer the label Arrangement 2 alone.",
+      "C": "Say that equal total area is what creates the two arrangements on the grid.",
+      "D": "Find the area of Arrangement 1 by treating only the outer rectangle perimeter as the area measure."
+    },
+    "statements": [],
+    "parts": [],
+    "equations": [],
+    "tables": [],
+    "tikz": "\\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round,font=\\small]\n  \\draw[step=1,gray!55,line width=0.4pt] (0,0) grid (5,4);\n  \\draw[line width=1.0pt] (0,0) rectangle (5,4);\n  \\fill[blue!15] (0,0)--(3,0)--(3,2)--(0,2)--cycle;\n  \\fill[orange!20] (3,0)--(5,0)--(5,2)--(3,2)--cycle;\n  \\draw[line width=0.95pt] (0,0)--(3,0)--(3,2)--(0,2)--cycle;\n  \\draw[line width=0.95pt] (3,0)--(5,0)--(5,2)--(3,2)--cycle;\n  \\node at (1.5,1){A};\n  \\node at (4,1){B};\n  \\begin{scope}[shift={(7,0)}]\n    \\draw[step=1,gray!55,line width=0.4pt] (0,0) grid (5,4);\n    \\draw[line width=1.0pt] (0,0) rectangle (5,4);\n    \\fill[blue!15] (0,2)--(3,2)--(3,4)--(0,4)--cycle;\n    \\fill[orange!20] (3,2)--(5,2)--(5,4)--(3,4)--cycle;\n    \\draw[line width=0.95pt] (0,2)--(3,2)--(3,4)--(0,4)--cycle;\n    \\draw[line width=0.95pt] (3,2)--(5,2)--(5,4)--(3,4)--cycle;\n    \\node at (1.5,3){A};\n    \\node at (4,3){B};\n  \\end{scope}\n  \\node[below] at (2.5,-0.7){Arrangement 1};\n  \\node[below] at (9.5,-0.7){Arrangement 2};\n\\end{tikzpicture}",
+    "tikz_packages": [],
+    "has_figure": true,
+    "options_are_figure": false,
+    "complete_exam": false,
+    "serve_eligible": false,
+    "hinges": {
+      "primary": "math/grade_06/ch_06/H011",
+      "supporting": [],
+      "binder": {
+        "method": "modify_g68_named_gap"
+      }
+    },
+    "assessment": {
+      "key_source": "none",
+      "key_status": "available",
+      "mcq_key": "A",
+      "proposed_key_status": "UNVERIFIED",
+      "examiner_comment": {
+        "present": false
+      },
+      "one_or_more": false,
+      "learn_by_solve": null,
+      "mark_scheme": null
+    }
+  }
+}

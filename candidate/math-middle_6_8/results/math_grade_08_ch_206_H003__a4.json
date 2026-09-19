@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "Diya fills a number pyramid. Each box is the sum of the two boxes directly below it. The top box is $18$ and the lower-left box touching it is $5$. The lower-right box touching the top is missing.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which value belongs in the missing box?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "$18$, copying the top label into the missing entry."
+        },
+        {
+          "id": "B",
+          "text": "$13$, because the missing lower box is $18-5$."
+        },
+        {
+          "id": "C",
+          "text": "$23$, because the missing lower box is $18+5$."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": null,
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "B"
+      },
+      {
+        "part_id": "ii",
+        "answer": "The top box equals the sum of the two touching lower boxes, so the missing box is $18-5=13$."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "Top = sum of two touching lower boxes, so missing = 18−5 = 13. Copying 18 or adding 18+5 mishandles the adjacent-sum rule.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": null
+  }
+}

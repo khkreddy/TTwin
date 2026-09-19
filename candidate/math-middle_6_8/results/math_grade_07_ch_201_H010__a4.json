@@ -1,0 +1,59 @@
+{
+  "schema": "modify_result.v1",
+  "status": "OK",
+  "item_type": "structured_parts",
+  "stem": "The diagram shows isosceles triangle PQR with $PR = QR$ and midpoint M of base PQ. Rohan has already shown $\\triangle PRM \\cong \\triangle QRM$.",
+  "options": [],
+  "statements": [],
+  "parts": [
+    {
+      "id": "i",
+      "text": "Which claim correctly uses that congruence?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Corresponding parts are equal, so $\\angle PRM = \\angle QRM$."
+        },
+        {
+          "id": "B",
+          "text": "Equal angles at R are what create the congruence of $\\triangle PRM$ and $\\triangle QRM$."
+        },
+        {
+          "id": "C",
+          "text": "Congruence applies to every triangle pair in the figure, including ones that were not matched."
+        }
+      ]
+    },
+    {
+      "id": "ii",
+      "text": "Give one reason for your choice.",
+      "marks": 1
+    }
+  ],
+  "equations": [],
+  "tables": [],
+  "tikz": "\\begin{tikzpicture}[line cap=round,line join=round,font=\\small,scale=0.9]\n  \\coordinate (A) at (0,0);\n  \\coordinate (B) at (3.4,0);\n  \\coordinate (C) at (1.7,2.6);\n  \\draw[line width=1.05pt] (A)--(B)--(C)--cycle;\n  \\draw[line width=0.9pt] (1.7,0)--(C);\n  \\node[below left] at (A) {P};\n  \\node[below right] at (B) {Q};\n  \\node[above] at (C) {R};\n  \\node[below] at (1.7,-0.28) {M};\n  \\node[below] at (0.85,-0.05) {};\n\\end{tikzpicture}",
+  "answer": {
+    "kind": "part_answers",
+    "part_answers": [
+      {
+        "part_id": "i",
+        "answer": "A"
+      },
+      {
+        "part_id": "ii",
+        "answer": "Corresponding parts of congruent triangles are equal, so the matched angles at R are equal."
+      }
+    ]
+  },
+  "mx_option_map": {},
+  "teacher": {
+    "proposed_key_status": "UNVERIFIED",
+    "key_rationale": "CPCTC gives equal corresponding angles once congruence is known. Saying the angles create the congruence reverses the inference. Extending congruence to unmatched pairs overscopes the established match.",
+    "variation_applied": "V1",
+    "fidelity_selfcheck": "FAITHFUL_TRANSFER",
+    "mx_links": [],
+    "figure_note": "Added isosceles triangle PQR with median RM to base midpoint M."
+  }
+}
